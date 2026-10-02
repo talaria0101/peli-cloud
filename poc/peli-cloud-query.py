@@ -1,24 +1,19 @@
 #!/usr/bin/env python3
 """peli-cloud-query.py — PROOF OF CONCEPT, ONE QUESTION:
 
-    Given a monthly budget and a shape, which providers in the catalogue can
-    actually run it, and what stops the ones that cannot?
+    At a given duty cycle and shape, what does each provider cost per hour,
+    per day, per week and per month, and which is cheapest?
 
-This is a proof of concept, not a product. It answers one question and stops.
-It does not re-price anything, does not retry, does not handle a provider whose
-card changes shape, and must never be imported by anything else.
+This is a proof of concept, not a product. It reads
+data/period-model.json, which experiments/70-period-model.py produces. It does
+NOT recompute prices: doing so would make the answer depend on this file rather
+than on the instrument that measured it.
 
-It reads data/ranking-cheapest-first.json, which is produced by
-experiments/30-rank-providers.py. It does NOT recompute prices: doing so would
-make the answer depend on this file rather than on the instrument that measured
-it.
-
-Exit codes: 0 it ran (whether or not anything matched), 1 it ran and the
-catalogue is missing or empty, 2 it could not run.
+Exit codes: 0 it ran, 1 it ran and the catalogue is empty, 2 could not run.
 
 Usage:
-    python3 poc/peli-cloud-query.py --budget 5
-    python3 poc/peli-cloud-query.py --budget 5 --vcpu 4 --ram 8 --tier self-serve
+    python3 poc/peli-cloud-query.py --hours 10
+    python3 poc/peli-cloud-query.py --hours 4 --shape agent --limit 15
 """
 
 import argparse
@@ -28,102 +23,85 @@ import sys
 
 
 def main():
-    ap = argparse.ArgumentParser(add_help=True)
-    ap.add_argument("--budget", type=float, required=True,
-                    help="max all-in dollars per month")
-    ap.add_argument("--vcpu", type=int, default=None,
-                    help="required vCPU; providers whose smallest usable machine is "
-                         "bigger are excluded and listed separately")
-    ap.add_argument("--ram", type=float, default=None, help="required GiB")
-    ap.add_argument("--tier", choices=["self-serve", "any"], default="self-serve",
-                    help="self-serve excludes rows whose cheapest regime is spot, "
-                         "negotiated or a term commit")
-    ap.add_argument("--category", default=None, help="exact category, e.g. agent-sandbox")
-    ap.add_argument("--catalogue", default=None, help="path to the ranking JSON")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--hours", type=float, default=10,
+                    help="hours per day you hold the machine (default 10)")
+    ap.add_argument("--shape", default="agent", choices=["tiny", "agent", "devbox"])
+    ap.add_argument("--limit", type=int, default=20)
+    ap.add_argument("--budget", type=float, default=None,
+                    help="only show providers whose month is at or under this")
+    ap.add_argument("--category", default=None, help="exact category filter")
     args = ap.parse_args()
 
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    cat_path = args.catalogue or os.path.join(root, "data", "ranking-cheapest-first.json")
-    if not os.path.exists(cat_path):
-        print("could not run: %s missing; run experiments/30-rank-providers.py first"
-              % cat_path, file=sys.stderr)
+    path = os.path.join(root, "data", "period-model.json")
+    if not os.path.exists(path):
+        print("could not run: %s missing; run experiments/70-period-model.py" % path,
+              file=sys.stderr)
         return 2
-    with open(cat_path, encoding="utf-8") as fh:
+    with open(path, encoding="utf-8") as fh:
         doc = json.load(fh)
-    ranked = doc.get("ranked") or []
-    if not ranked:
-        print("ran, but the catalogue has no ranked rows", file=sys.stderr)
+    if not doc.get("providers"):
+        print("ran, but the period model is empty", file=sys.stderr)
         return 1
 
+    shape_label = doc["shapes"][args.shape]["label"]
+    # Snap to the duty cycles actually priced, and say so rather than guessing.
+    cycles = doc.get("duty_cycles_h_per_day") or [1, 4, 10, 24]
+    nearest = min(cycles, key=lambda c: abs(c - args.hours))
+    dkey = "%dh" % nearest
+
+    rows = []
+    for p in doc["providers"]:
+        s = p.get("shapes", {}).get(args.shape)
+        if not s or dkey not in s["periods"]:
+            continue
+        if args.category and p.get("category") != args.category:
+            continue
+        pd = s["periods"][dkey]
+        if args.budget is not None and pd["billed_month_no_credit"] > args.budget:
+            continue
+        if pd["billed_month_no_credit"] <= 0.004:
+            continue
+        rows.append((p, s, pd))
+    rows.sort(key=lambda r: r[2]["billed_month_no_credit"])
+
     print("== conditions ==")
-    print("catalogue  : %s" % os.path.relpath(cat_path, root))
-    print("catalogue at: %s" % doc.get("ranked_at"))
-    print("workload in catalogue: %s" % doc.get("workload_label"))
-    print("query      : budget <= $%.2f/mo, %s vCPU, %s GiB, tier=%s, category=%s"
-          % (args.budget,
-             args.vcpu if args.vcpu else doc["workload"]["vcpu"],
-             args.ram if args.ram else doc["workload"]["ram_gib"],
-             args.tier, args.category or "any"))
-    print()
-    print("NOTE the catalogue was priced at ONE workload. --vcpu/--ram here only")
-    print("filter on the shape each row was actually priced at; they do not re-price.")
+    print("catalogue   : %s at %s" % (os.path.relpath(path, root), doc.get("at")))
+    print("shape       : %s" % shape_label)
+    print("duty cycle  : %d h/day (%d machine-hours a month at 30 days)"
+          % (nearest, nearest * 30))
+    if nearest != args.hours:
+        print("             (you asked for %g h/day; the model prices %d, used that)"
+              % (args.hours, nearest))
+    print("ordering    : by month BEFORE credits, so a credit cannot buy the top row")
     print()
 
-    fit, too_small, too_dear = [], [], []
-    for r in ranked:
-        if args.tier == "self-serve" and r.get("tier") == "not-self-serve-only":
-            continue
-        if args.category and r.get("category") != args.category:
-            continue
-        shape = r.get("entry_shape") or {}
-        if args.vcpu and isinstance(shape, dict) and shape.get("vcpu") is not None:
-            if shape["vcpu"] < args.vcpu:
-                too_small.append(r)
-                continue
-        if args.ram and isinstance(shape, dict) and shape.get("ram_gib") is not None:
-            if shape["ram_gib"] < args.ram:
-                too_small.append(r)
-                continue
-        if r["all_in_month_usd"] <= args.budget:
-            fit.append(r)
-        else:
-            too_dear.append(r)
+    print("== %d providers, cheapest first ==" % len(rows))
+    print("%-4s %-32s %8s %8s %9s %9s %8s %s" %
+          ("#", "provider", "$/hour", "$/day", "$/week", "$/month", "keep", "category"))
+    for i, (p, s, pd) in enumerate(rows[:args.limit], 1):
+        print("%-4d %-32s %8.4f %8.2f %9.2f %9.2f %8.2f %s" % (
+            i, (p["name"] or p["id"])[:32], s["hourly"], pd["compute_day"],
+            pd["compute_week"], pd["billed_month_no_credit"], s["keep_rate"],
+            p.get("category") or "-"))
 
-    print("== %d provider(s) at or under budget ==" % len(fit))
-    print("%-4s %-30s %-14s %8s  %s" % ("rank", "provider", "category", "$/mo", "free"))
-    for r in fit[:40]:
-        free = []
-        if r.get("free_monthly_credit"):
-            free.append("$%g/mo" % r["free_monthly_credit"])
-        if r.get("free_one_time_credit"):
-            free.append("$%g once" % r["free_one_time_credit"])
-        print("%-4d %-30s %-14s %8.2f  %s" %
-              (r["rank"], (r["name"] or r["id"])[:30], (r["category"] or "-")[:14],
-               r["all_in_month_usd"], ", ".join(free)))
-    if len(fit) > 40:
-        print("  ... and %d more" % (len(fit) - 40))
-
-    print()
-    print("== nearest 10 above budget (the ones you would otherwise have picked) ==")
-    for r in sorted(too_dear, key=lambda x: x["all_in_month_usd"])[:10]:
-        print("%-4d %-30s %8.2f  (%+.2f over)"
-              % (r["rank"], (r["name"] or r["id"])[:30], r["all_in_month_usd"],
-                 r["all_in_month_usd"] - args.budget))
-
-    if too_small:
+    credited = [(p, pd) for p, s, pd in rows
+                if p.get("free_monthly_credit") and pd["billed_month_with_credit"] > 0.004]
+    if credited:
         print()
-        print("== %d excluded for being smaller than the requested shape ==" % len(too_small))
-        for r in too_small[:10]:
-            print("%-4d %-30s smallest usable %s" %
-                  (r["rank"], (r["name"] or r["id"])[:30],
-                   (r.get("entry_shape") or {}).get("vcpu")))
+        print("== credits that would reduce these ==")
+        for p, pd in sorted(credited, key=lambda r: r[1]["billed_month_with_credit"])[:8]:
+            print("%-32s $%.2f -> $%.2f  ($%g/mo credit)"
+                  % ((p["name"] or p["id"])[:32], pd["billed_month_no_credit"],
+                     pd["billed_month_with_credit"], p["free_monthly_credit"]))
 
     print()
     print("== what this does not handle ==")
-    print("  * egress, storage overage, IPv4, seats and 24/7 cost are not priced here")
-    print("  * region availability and network allowlists are not re-checked")
-    print("  * a provider whose card changed after the catalogue date is not re-read")
+    print("  * egress, storage overage, IPv4 and seats are not in these figures")
+    print("  * a plan floor IS included where the card says the fee is a usage credit")
     print("  * free credit is as published, never redeemed")
+    print("  * 'keep' is read from published features; 1.00 means billed for uptime")
     return 0
 
 

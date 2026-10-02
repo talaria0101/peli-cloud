@@ -1,10 +1,9 @@
-# peli-cloud — findings
+# peli-cloud — findings (revision 2)
 
 **Question.** Every cloud sandbox, VM, dev-env and agent-runtime provider a buyer
-can actually reach, catalogued and sorted cheapest-first, with the caveats that
-stand between the headline price and the workload: prepay minimums, tier
-ladders, stock limits, free-credit structure, and the two providers the operator
-named that the corpus may not carry.
+can actually reach, catalogued and sorted cheapest-first **at every usage
+period**, with free tiers, subscription floors and prepay minimums left visible
+instead of folded into one number.
 
 **Date of pass.** 2026-10-02 (UTC). Machine: Linux x86_64, Python 3.14, Node
 v26.8.1. Corpus commit: `f6a71ab09fef` (battleships, 2026-10-01). First-party
@@ -27,115 +26,122 @@ in `experiments/`.
 - **Prices are a snapshot.** They are as published on the vendor page on the
   corpus's check date (mostly 2026-09-28..30) and as re-confirmed by my
   first-party audit on 2026-10-02 for a 19-provider sample. Providers move.
-- **The ranking model is mine, and it is a simplification.** It prices one
-  stated workload (below). It excludes always-on cost, egress, storage beyond
-  what a card bundles, IPv4, and team seats. A provider cheap on this workload
-  can be dear on another. The full corpus cards carry those fields; this table
-  does not price them.
-- **"Cheapest" means cheapest for the stated workload only**, not cheapest
-  provider, best provider, or best value.
-- **A previous revision's error rate is unknown to me** because this is revision
-  one. Assume more remain. I found and fixed **four** real measurement defects
-  in my own first run (two `$0/hour` bugs at different layers, a shape mismatch,
-  and a regression I introduced while fixing the second), all described in
-  section 5. That is the honest estimate of how many are still wrong: four were
-  found by reading the output and by planting one case, so more are likely.
+- **The keep rate is read from published features, not measured.** A provider that
+  publishes `auto_stop_idle: true` is recorded as suspending on idle; a provider
+  that publishes nothing is recorded as `1.00`, billed for uptime, because a
+  plain VM is. **No sandbox was created and stopped**, so no keep rate in this
+  document is observed behaviour. It is a reading of the vendor's own feature
+  list. Only 28 of 366 cards publish `auto_stop_idle` at all.
+- **The period model excludes egress, storage beyond what a card bundles, IPv4
+  and team seats.** A provider cheap here can be dear there. The full corpus
+  cards carry those fields; these tables do not price them.
+- **Duty cycles are arithmetic, not measured profiles.** 1, 4, 10 and 24 hours
+  per day are chosen round numbers. A real agent's distribution is not uniform,
+  and a provider with a high minimum billable unit may bill far more than
+  `hours x rate` for a bursty agent. The `min_billed_seconds` column in
+  `data/period-model.json` carries that, and nothing in the tables adjusts for it.
+- **This is revision 2, and revision 1 was wrong in seven documented ways**
+  (section 3). The largest: it priced stoppable sandboxes as fixed monthly hosts,
+  which is the VPS comparison this task is not asking for. Revision 1 had also
+  fixed four of its own measurement defects before publication (section 5).
+  **That is the honest estimate of what is still wrong here:** at least seven
+  things were wrong in a document that read as finished, cited and reviewed, and
+  I found them only when the model itself was questioned. Assume more remain.
 
 ---
 
 ## 1. The workload the ranking is priced against
 
-    2 vCPU / 4 GiB RAM / 20 GiB disk
-    300 sessions a month, 10 minutes each   (= 50 machine-hours)
-    nothing running 24/7, one seat, no GPU, open internet
+Three shapes:
 
-This is stated because "cheapest provider" has no answer on its own. Change the
-workload and the ranking changes: a 24/7 workload is dominated by different
-plans, a 100-concurrency workload by fleet caps, a GPU workload by a different
-table entirely.
+| key | shape | what it is for |
+|---|---|---|
+| `tiny` | 1 vCPU / 1 GiB | a shell, a build step, a short tool call |
+| `agent` | 2 vCPU / 4 GiB | the normal agent sandbox |
+| `devbox` | 4 vCPU / 8 GiB | a developer box you keep around |
+
+Four duty cycles per shape: **1, 4, 10 and 24 hours per day**, which is 30, 120,
+300 and 720 machine-hours a month at 30 days.
+
+These are stated because "cheapest provider" has no answer on its own. Change the
+shape and the ranking changes; change the duty cycle and it changes again, and
+sometimes the *kind* of provider that wins changes with it. Concurrency, GPU,
+region and egress are not priced in these tables; the corpus cards carry them
+and the upstream engine models them, which is what the cross-check in section 6
+compares against.
 
 ---
 
 ## 2. The honest answer first
 
-**The single cheapest thing to run that workload is not an agent-sandbox
-provider; it is Scaleway's Stardust instance at about $0.03 a month** — a
-1 vCPU / 1 GiB shared "tiny" VM, stock-limited, with no sandbox API. It is the
-right answer only if you can live with 1 GiB, an always-on hourly meter and no
-agent-sandbox ergonomics.
+**A cloud sandbox is not a VPS, and revision 1 of this document priced it like
+one.** That was the central error and it is corrected here. A sandbox bills while
+it runs and most of them stop billing when they are stopped, so **the price is a
+function of how long you hold it**. One monthly number cannot rank this market:
+the cheapest provider at 2 hours/day is not the cheapest at 24/7.
 
-**The cheapest actual agent-sandbox on this workload is about $0.30 a month
-(Agent 37) and $0.69 (zipbox); Lizard and boat both come out at about $0.90.**
-The big-name per-resource sandboxes (E2B, Daytona) price at about $8.28 a month
-for the same 50 hours, because they bill $0.0504 per vCPU-hour and $0.0162 per
-GiB-hour, which is roughly 9x the effective rate of the size-based sandboxes for
-a 2-vCPU box.
+Everything below is therefore published as a function of hours, at three shapes
+and four duty cycles, in [docs/CATALOGUE.md](CATALOGUE.md).
 
-That gap is the single most useful thing in this pass: **per-resource pricing
-and preset-size pricing are different products with very different totals at
-small shapes.** The size-based vendors win on a small box; the per-resource
-vendors win when the shape is big, when you burst, or when you need fine RAM
-granularity.
+### At 10 hours/day, 2 vCPU / 4 GiB, before credits
 
-**There is no large recurring free-credit tier anywhere in the corpus.** 13 of
-366 cards publish any recurring monthly credit, and the largest is Modal at
-$30/month. The operator's caveat ("some are expensive but offer large free
-monthly credits") does not survive contact with the corpus as *recurring* credit:
-the large credits ($200-$300) are all **one-time signup credits** that never
-recur. A buyer who treats a $300 Google/AWS/Azure signup credit as "free
-forever" is wrong; it is free once.
+| # | provider | $/hour | $/day | $/week | $/month |
+|---|---|---|---|---|---|
+| 1 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.06 | 0.42 | **1.81** |
+| 2 | [Oracle Cloud](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.09 | 0.64 | **2.74** |
+| 3 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | **3.12** |
+| 4 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.11 | 0.77 | **3.29** |
+| 5 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.14 | 0.96 | **4.11** |
+| 6 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.15 | 1.04 | **4.44** |
+| 7 | [Lizard](https://lizard.build/pricing) | 0.0180 | 0.18 | 1.26 | **5.40** |
+| 8 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.20 | 1.40 | **6.00** |
 
-**The cheapest rows are full of trial-tier prices, and that is the biggest trap
-in the table.** boat's $0.90 is the arithmetic of its **Trial** plan: $0 fee,
-2 concurrent sandboxes, a one-time $0.90 credit, and the card's own condition
-reads "auto-converts to the chosen paid plan after 7 days unless cancelled".
-The next tier up is **$20/month** for 100 concurrent. So the operator's "$20
-subscription upfront" instinct is right about boat, and the $0.90 in this table
-is a seven-day number wearing a monthly label. The same pattern runs through the
-rows above it: read `entry fee` and `tier`, not just the all-in column.
+At **24/7** the same shape costs roughly 2.4x more and the order barely
+changes; Agent 37's own page states *"From $4.76/month, 2 vCPU, 4 GB RAM and
+4 GB persistent disk at 730 running hours"*, which is $4.34 of compute plus
+$0.36 of disk.
 
-**What a prepay or minimum actually costs, per row,** is carried in
-`data/ranking-cheapest-first.json` as `platform_fee_month_usd`,
-`min_commit_month_usd` and `entry_plan`. For the rows where the cheapest
-published regime is a prepay, a minimum top-up or a negotiated contract, the
-`compromises` column says so in words. Three tiers exist and never blend: a
-`self-serve` row is one a new account can buy at that price with no
-negotiation; a `not-self-serve-only` row means the cheapest published regime is
-spot, a term commit or a sales conversation.
+### The three things that actually decide the bill
 
----
+1. **A subscription floor can beat the hourly rate.** boat meters at
+   $0.018/hour, but its $20 plan is a *usage credit*, not a surcharge. boat's own
+   docs (fetched 2026-10-02): *"not a fee: every dollar comes back as sandbox
+   time at the rates above."* The bill therefore cannot fall below $20, and boat
+   is **$20 at every duty cycle**, including 1 hour/day. A provider whose floor
+   exceeds your usage is a rental, not a metered box.
+2. **Free credit is smaller and rarer than it is advertised.** 13 of 366 cards
+   publish a credit that recurs; the largest is Modal at **$30/month**. 79
+   publish a one-time signup credit, and the famous $300 figures from Google,
+   AWS, Azure, Oracle and IBM are **one-time**: they do not renew. A further 124
+   cards sell a $0 plan and publish no credit, quota or cap at all, which is
+   recorded as unknown rather than free.
+3. **The cheapest row is a different provider at every duty cycle, and the
+   cheapest *kind* of provider changes too.** Per-resource sandboxes (E2B,
+   Daytona at $0.0504/vCPU-h) lose to size-based ones (zipbox $0.0137/h,
+   Lizard $0.0180/h) on a small box; the order reverses as the shape grows,
+   because a 2 vCPU box is 2 units of the expensive model and one unit of the
+   cheap one.
 
-## 3. The ranking (self-serve and not-self-serve both shown)
+## 3. Where revision 1 was wrong
 
-Full 211-row table with per-row free-credit structure, tier and the exact mode
-it was priced by: [`data/catalogue-ranked.md`](data/catalogue-ranked.md). The top
-40:
+Written down because a reader who only sees the current tables cannot tell what
+the earlier ones got wrong, and the corrections are the useful part.
 
-| # | provider | category | isolation | all-in $/mo | rank in full table | free | tier |
-|---|---|---|---|---|---|---|---|
-| 1 | Scaleway Instances (Stardust 1C/1G) | hyperscaler | vm | 0.03 | 1 | - | self-serve (stock-limited) |
-| 3 | Agent 37 | agent-sandbox | gvisor | 0.30 | 3 | $1 once | self-serve |
-| 4 | IBM Cloud VPC (burstable) | hyperscaler | vm | 0.33 | 4 | $200 once | self-serve |
-| 5 | Oracle Cloud (burstable) | hyperscaler | vm | 0.46 | 5 | $300 once | self-serve |
-| 7 | zipbox | agent-sandbox | firecracker | 0.69 | 7 | $25 once | self-serve |
-| 9 | boat.dev | agent-sandbox | vm | 0.90 | 9 | $1 once | self-serve |
-| 10 | Lizard | agent-sandbox | container | 0.90 | 10 | $10 once | self-serve |
-| 12 | shellbox | agent-sandbox | firecracker | 1.00 | 12 | - | self-serve |
-| 19 | Koyeb Sandboxes | agent-sandbox | vm | 1.44 | 19 | - | self-serve |
-| 23 | Together Code Sandbox | agent-sandbox | firecracker | 1.50 | 23 | - | self-serve |
-| 28 | Fly.io Machines | paas | firecracker | 1.76 | 28 | - | self-serve |
-| 39 | AWS EC2 (on-demand) | hyperscaler | vm | 2.46 | 39 | $100 once | self-serve |
-| 94 | Freestyle | agent-sandbox | bare-metal-vm | 6.61 | 94 | $18.38/mo credit | self-serve |
-| 112 | Daytona | agent-sandbox | container | 8.28 | 112 | - | self-serve |
-| 115 | E2B | agent-sandbox | firecracker | 8.28 | 115 | - | self-serve |
+| revision 1 said | why it was wrong | corrected in |
+|---|---|---|
+| "the cheapest is Scaleway Stardust at $0.03/month" | that was a 1 vCPU / 1 GiB machine priced as if the workload were 2 vCPU / 4 GiB, and it is stock-limited. At the real shape it is not the cheapest, and it is not an agent sandbox | table C, `tiny` vs `agent` |
+| one monthly total per provider | reads a stoppable machine as a fixed monthly host, which is the VPS comparison the task is not asking for | the whole of table B |
+| no hourly figure, no duty cycle | the cheapest provider is a function of hours; one number hides the answer | `$/hour`, `$/day`, `$/week`, `$/month` per duty cycle |
+| "no large recurring free-credit tier; 13 of 366, max $30" | correct, but it was a paragraph in the middle of a write-up, and the *one-time* credits were folded into the same sentence | tables A1, A2 and A3, separately |
+| boat at $0.90, "the first plan you can stay on is $20" | the $20 is not a cheaper tier you upgrade to, it is a **floor** the bill cannot fall below. The row was directionally right and structurally wrong | `floor` column; boat is $20 at every duty cycle |
+| 211 ranked rows, ranked on one workload | a provider that fits 4 vCPU was ranked against one that fits 1 vCPU | three shapes, priced separately |
+| the two named providers were checked; the third was a typo | correct, and still true, but it was the most-emphasised finding in the document when it is a one-line naming correction | section 4 |
 
-The rows for E2B and Daytona are not an omission; they sit far down the table at
-their true $8.28. They are called out because "cheapest" and "well-known" point
-at different providers. Freestyle at rank 94 is the clearest case of a provider
-whose free credit is real and fully documented and which is still **not** cheap,
-because its $18.38 of allowance is non-fungible: a 2-vCPU box at $0.04032/vCPU-h
-cannot spend a $0.04032/hour credit faster than it burns it, so the credit buys
-roughly 460 vCPU-hours against a 50-hour workload and the rest expires.
+The single defect that produced most of the rest: **revision 1 never asked what
+a sandbox is.** It took a corpus of cards, multiplied a rate by a month, and
+sorted. The cards know the difference — 28 modes publish `auto_stop_idle`, 40
+publish `pause_resume`, and `pricing: pool` bills whether used or not — and that
+information went unused.
 
 ---
 
@@ -307,21 +313,30 @@ exist than these three roundups and the corpus surface; assume fewer are
   it could not get.
 - `20-extract-provider-universe.py` extracts every card from primary fields only.
   It never calls the upstream engine (that would be the subject grading itself).
-- `30-rank-providers.py` applies the stated workload and emits the two-tier
-  ranking.
+- `70-period-model.py` prices three shapes at four duty cycles and records the
+  keep rate, the minimum billable unit and the subscription floor per provider.
+- `80-render-catalogue.py` renders the four tables every row of which links to
+  the provider's own page.
+- `30-rank-providers.py` is revision 1's single-workload ranking. It is kept, and
+  still runs, because `40` cross-checks against the upstream engine using the
+  same shape of question; but it is superseded by 70/80 for ranking purposes.
 - `40-crosscheck-engine.py` re-prices with the upstream engine (strict and soft)
   and localises the disagreement.
 - `50-firstparty-audit.py` re-fetches vendor pages for a named sample and
   reports agreement, disagreement, and unreadable pages honestly.
 
-The guard-mutation review that produced defects 3 and 4 is a file, so a later
-session can re-run it rather than re-derive it: `experiments/60-guard-mutation.py`.
+The guard-mutation review is a file, so a later session can re-run it rather than
+re-derive it: `experiments/60-guard-mutation.py`.
 
 **Not handled:** no vendor signup was performed, so no *purchase* path, no
 realised price and no real concurrency limit is verified. Free-credit figures
 are as published, never redeemed. Region availability and network allowlists are
-recorded per card but not re-fetched for every provider. The model does not
-price egress, storage overage, IPv4 or seats at scale.
+recorded per card but not re-fetched for every provider. The tables do not price
+egress, storage overage, IPv4 or seats at scale. **No sandbox was actually
+started and stopped**, so every keep rate is a reading of a published feature
+flag, not a measurement. Concurrency and bursty-agent behaviour (the
+`min_billed_seconds` penalty) are recorded per provider but not modelled into
+the period figures.
 
 ---
 
@@ -329,11 +344,13 @@ price egress, storage overage, IPv4 or seats at scale.
 
 Run from the repo root, in order:
 
-    bash experiments/10-fetch-corpus.sh
+    bash   experiments/10-fetch-corpus.sh
     python3 experiments/20-extract-provider-universe.py
-    python3 experiments/30-rank-providers.py
+    python3 experiments/70-period-model.py          # shapes x duty cycles
+    python3 experiments/80-render-catalogue.py      # the four tables
     python3 experiments/40-crosscheck-engine.py     # needs node on PATH
     python3 experiments/50-firstparty-audit.py      # needs network
+    python3 experiments/60-guard-mutation.py
 
 Each prints its conditions (date, corpus commit, workload, model) and writes a
 JSON artefact under `data/`. Numbers in this document came from those runs on
