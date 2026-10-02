@@ -41,6 +41,20 @@ if not os.path.isfile(os.path.join(ROOT, 'experiments', '70-period-model.py')):
     print("set PELI_ROOT to the repository root, or run this from inside it",
           file=sys.stderr)
     sys.exit(2)
+if not os.path.isdir(os.path.join(ROOT, 'references', 'battleships', 'research', 'cards')):
+    # The corpus is deliberately NOT committed: ariana-dot-dev/battleships
+    # publishes no licence, so peli-cloud fetches it rather than redistributing
+    # it (see NOTICE). A fresh clone therefore has data/ and docs/ but no input,
+    # and this suite cannot re-price anything. That is "could not run", exit 2,
+    # NOT a guard failure: reporting it as a FAIL sends a reader hunting for a
+    # broken guard that is in fact waiting for its input.
+    print("corpus not present at %s" % os.path.join(ROOT, 'references', 'battleships'),
+          file=sys.stderr)
+    print("run: bash experiments/10-fetch-corpus.sh   (pinned commit, no licence "
+          "to redistribute)", file=sys.stderr)
+    print("the committed data/ and docs/ still reproduce without it, so the "
+          "catalogue is readable, only not re-derivable", file=sys.stderr)
+    sys.exit(2)
 def load(p,n):
     s=importlib.util.spec_from_file_location(n,os.path.join(ROOT,p)); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); return m
 pm=load('experiments/70-period-model.py','pm')
