@@ -14,6 +14,9 @@ three things ran first and can find them.
 | `30-rank-providers.py` | which providers are cheapest-first for one stated workload? | `20` |
 | `40-crosscheck-engine.py` | where does peli-cloud's model disagree with the corpus's own engine? | `30`, node |
 | `50-firstparty-audit.py` | do the corpus's prices still match vendors' live pages? | `20`, network |
+| `51-billing-posture-probe.py` | what do 183 vendors say about billing a stopped machine? | `70`, network |
+| `52-apply-posture.py` | which of those verdicts is safe to act on, and what is each worth? | `51` |
+| `53-keep-rate-provenance.py` | for every priced row, is the keep rate measured or assumed? | `70`, `51` |
 | `60-guard-mutation.py` | can the guards in `20` and `30` actually fail, and do they still accept correct input? | `20`, `30` |
 | `70-period-model.py` | what does one shape cost at each duty cycle, per provider, before and after credit? | `20` |
 | `80-render-catalogue.py` | render the four tables from the period model | `70` |
@@ -45,6 +48,20 @@ three things ran first and can find them.
   much of that you are billed for. Multiplying the two bills a suspending
   provider for zero hours. The keep rate belongs on the `held 24/7` figure,
   which is the sandbox-versus-VPS comparison, and the table prints both.
+- **An unstated policy is not a measured one.** `51` fetches 183 vendor pages and
+  gets a policy on 13. The other 170 are `unstated`, `shell` or `unreachable`
+  and keep the conservative `1.00`; they are never rounded to "bills for uptime".
+  Every published verdict carries the quote it came from, and the classifier
+  runs a 14-case self-test on known real pages before it is allowed to publish,
+  because it classified four of them wrongly before it classified them right.
+- **`partial` is never mapped to one number.** A provider that stops billing CPU
+  when paused and keeps billing RAM cannot be expressed by a scalar keep rate,
+  and mapping it to 0.00 understates the bill by the resource that keeps
+  charging. Those rows keep the default and are named as needing a split model.
+- **The model reads the probe as an input, in one pass.** An earlier arrangement
+  patched keep rates into `data/period-model.json` after the fact, and re-running
+  the model silently discarded every one of them. A step that has to be
+  remembered is a step that gets forgotten, and that one failed quietly.
 - **A card field can disagree with its own name.** `hour == month_cap` means the
   corpus encoded a monthly rent in the hourly field, and the card's note says so.
   173 sizes across 8 cards are encoded that way. Multiplying the rent by hours
@@ -61,11 +78,17 @@ three things ran first and can find them.
   identical to a good one until it blocks real work.
 - **Everything prints its conditions** (date, corpus commit, workload, model) and
   writes a JSON artefact under `data/`. Nothing deletes its own output.
-- **Exit codes mean something:** 0 the measurement ran, 1 it ran and the thing
-  was empty or failed, 2 it could not run. `61` uses all three: a planted defect
-  is 1, and a tree it cannot find is 2 with a message on stderr. It used to
-  crash with a bare `FileNotFoundError`, which is a 1 to the shell and silence
-  to a reader, and that silence is what hid the three defects below.
+- **Exit codes mean something:** 0 the measurement ran and its artefact is the
+  one on disk, 1 it ran and the thing was empty or failed, 2 it could not run.
+  `61` uses all three: a planted defect is 1, and a tree it cannot find is 2
+  with a message on stderr. It used to crash with a bare `FileNotFoundError`,
+  which is a 1 to the shell and silence to a reader, and that silence is what
+  hid the three defects below.
+- **`51` also has a 3**, which means "this run found fewer billing-policy
+  verdicts than the artefact already on disk, so I did not overwrite it".
+  183 vendors fetched in a burst will serve degraded pages, and a run that
+  silently replaced 13 verdicts with 3 is worse than no run at all. It is not a
+  failure and it must not read as one, so it has its own code.
 - **The console and the catalogue must agree.** `70` prints the ranking and `80`
   writes the catalogue from the same artefact. When they disagreed, GUARD F in
   `61` caught it; before GUARD F existed they had been disagreeing since the

@@ -1,0 +1,1658 @@
+{
+ "card_commit": "f6a71ab09fef",
+ "counts": {
+  "bills_uptime": 2,
+  "partial": 3,
+  "shell": 26,
+  "suspends": 8,
+  "unreachable": 4,
+  "unstated": 140
+ },
+ "method": "first-party page fetch, vendor's own words, quote kept",
+ "probed_at": "2026-10-02T04:31:41Z",
+ "rows": [
+  {
+   "bytes": 83240,
+   "eff": "https://www.agent37.com/pricing",
+   "id": "agent-37",
+   "quote": null,
+   "url": "https://www.agent37.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 25052,
+   "eff": "https://www.agentcomputer.ai/pricing",
+   "id": "agentcomputer",
+   "quote": null,
+   "url": "https://agentcomputer.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 135955,
+   "eff": "https://www.alibabacloud.com/en/product/kubernetes?_p_lc=1",
+   "id": "alibaba-ack",
+   "quote": null,
+   "url": "https://www.alibabacloud.com/product/kubernetes",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 58486,
+   "eff": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions",
+   "id": "alibaba-agentbay",
+   "quote": null,
+   "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 80904,
+   "eff": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+   "id": "alibaba-agentrun",
+   "quote": null,
+   "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 206494,
+   "eff": "https://www.alibabacloud.com/en/product/ecs/pricing?_p_lc=1",
+   "id": "alibaba-ecs",
+   "quote": null,
+   "url": "https://www.alibabacloud.com/en/product/ecs/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 87484,
+   "eff": "https://www.amika.dev/pricing",
+   "id": "amika",
+   "quote": null,
+   "url": "https://www.amika.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 54224,
+   "eff": "https://ampcode.com/docs/orbs/sizes-and-costs",
+   "id": "amp",
+   "quote": null,
+   "url": "https://ampcode.com/docs/orbs/sizes-and-costs",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 713120,
+   "eff": "https://www.aptible.com",
+   "id": "aptible",
+   "quote": null,
+   "url": "https://www.aptible.com",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 148876,
+   "eff": "https://archil.com/pricing",
+   "id": "archil",
+   "quote": null,
+   "url": "https://archil.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 365405,
+   "eff": "https://arker.ai/docs/pricing",
+   "id": "arker",
+   "quote": null,
+   "url": "https://arker.ai/docs/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 488050,
+   "eff": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+   "id": "aws-agentcore",
+   "quote": null,
+   "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 381242,
+   "eff": "https://aws.amazon.com/codebuild/pricing/",
+   "id": "aws-codebuild",
+   "quote": null,
+   "url": "https://aws.amazon.com/codebuild/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 367306,
+   "eff": "https://aws.amazon.com/ec2/pricing/on-demand/",
+   "id": "aws-ec2",
+   "quote": null,
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 511581,
+   "eff": "https://aws.amazon.com/ec2/instance-types/mac/",
+   "id": "aws-ec2-mac",
+   "quote": null,
+   "url": "https://aws.amazon.com/ec2/instance-types/mac/",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 367306,
+   "eff": "https://aws.amazon.com/ec2/pricing/on-demand/",
+   "id": "aws-ec2-windows",
+   "quote": null,
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 370177,
+   "eff": "https://aws.amazon.com/fargate/pricing/",
+   "id": "aws-fargate",
+   "quote": null,
+   "url": "https://aws.amazon.com/fargate/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 474520,
+   "eff": "https://aws.amazon.com/lambda/pricing/",
+   "id": "aws-lambda-microvms",
+   "quote": null,
+   "url": "https://aws.amazon.com/lambda/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 547851,
+   "eff": "https://azure.microsoft.com/en-us/pricing/details/container-apps/",
+   "id": "azure-container-apps",
+   "quote": null,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/container-apps/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 59383,
+   "eff": "https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-overview",
+   "id": "azure-container-apps-sandboxes",
+   "quote": null,
+   "url": "https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-overview",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 477313,
+   "eff": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/",
+   "id": "azure-foundry-agents",
+   "quote": null,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 518230,
+   "eff": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
+   "id": "azure-pipelines",
+   "quote": null,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 471139,
+   "eff": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
+   "id": "azure-vm",
+   "quote": null,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text | rejected matches: bills_uptime: the page hedges rather than stating a policy"
+  },
+  {
+   "bytes": 472444,
+   "eff": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+   "id": "azure-windows",
+   "quote": null,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text | rejected matches: bills_uptime: the page hedges rather than stating a policy"
+  },
+  {
+   "bytes": 67664,
+   "eff": "https://baponi.ai/pricing/",
+   "id": "baponi",
+   "quote": null,
+   "url": "https://baponi.ai/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 497734,
+   "eff": "https://docs.baseten.co/deployment/resources",
+   "id": "baseten",
+   "quote": null,
+   "url": "https://docs.baseten.co/deployment/resources",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 312733,
+   "eff": "https://www.beam.cloud/pricing",
+   "id": "beam",
+   "quote": "cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates above). Billed by the millisecond, only while your code is running. Sandboxes Isolated, secure environments for running untrusted code at scale. Get started Resource Per hour Per second",
+   "url": "https://www.beam.cloud/pricing",
+   "verdict": "suspends",
+   "why": "billed only while running"
+  },
+  {
+   "bytes": 1162444,
+   "eff": "https://www.atlassian.com/software/bitbucket/pricing",
+   "id": "bitbucket-pipelines",
+   "quote": null,
+   "url": "https://www.atlassian.com/software/bitbucket/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 1078177,
+   "eff": "https://bitrise.io/pricing",
+   "id": "bitrise",
+   "quote": null,
+   "url": "https://bitrise.io/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 73159,
+   "eff": "https://www.blacksmith.sh/pricing",
+   "id": "blacksmith",
+   "quote": null,
+   "url": "https://www.blacksmith.sh/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 160690,
+   "eff": "https://blaxel.ai/pricing",
+   "id": "blaxel",
+   "quote": null,
+   "url": "https://blaxel.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 376266,
+   "eff": "https://docs.boat.dev/pricing",
+   "id": "boat",
+   "quote": null,
+   "url": "https://docs.boat.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 84581,
+   "eff": "https://boxd.sh/pricing",
+   "id": "boxd",
+   "quote": "Pricing - boxd boxd Docs Use cases Blog Pricing Careers Contact Pricing. Credit-based. RAM bills on what is in use and disk on what you have written to, not on what you provisioned. Start with \u20ac30 of free credits. Custom deals for bigger machines or self-host. Pay as you go Star",
+   "url": "https://boxd.sh/pricing",
+   "verdict": "partial",
+   "why": "an idle machine still pays for RAM or storage, but billed only while running"
+  },
+  {
+   "bytes": 74198,
+   "eff": "https://boxes.dev/",
+   "id": "boxes-dev",
+   "quote": null,
+   "url": "https://boxes.dev/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 168111,
+   "eff": "https://buddy.works/pricing",
+   "id": "buddy",
+   "quote": null,
+   "url": "https://buddy.works/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 393314,
+   "eff": "https://buildkite.com/pricing/",
+   "id": "buildkite-hosted",
+   "quote": null,
+   "url": "https://buildkite.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 1074511,
+   "eff": "https://capy.ai",
+   "id": "capy",
+   "quote": null,
+   "url": "https://capy.ai",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 52392,
+   "eff": "https://celesto.ai/pricing",
+   "id": "celesto",
+   "quote": null,
+   "url": "https://celesto.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 380897,
+   "eff": "https://cerebrium.ai/pricing",
+   "id": "cerebrium",
+   "quote": null,
+   "url": "https://cerebrium.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 226883,
+   "eff": "https://circleci.com/pricing/price-list/",
+   "id": "circleci",
+   "quote": null,
+   "url": "https://circleci.com/pricing/price-list/",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 196542,
+   "eff": "https://www.civo.com/pricing",
+   "id": "civo",
+   "quote": null,
+   "url": "https://www.civo.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 145158,
+   "eff": "https://www.clever.cloud/pricing/",
+   "id": "clever-cloud",
+   "quote": null,
+   "url": "https://www.clever.cloud/pricing/",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 106929,
+   "eff": "https://developers.cloudflare.com/containers/platform/pricing/",
+   "id": "cloudflare-sandbox",
+   "quote": null,
+   "url": "https://developers.cloudflare.com/containers/platform/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 119082,
+   "eff": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/",
+   "id": "cloudflare-workers-for-platforms",
+   "quote": null,
+   "url": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 70094,
+   "eff": "https://codemagic.io/pricing/",
+   "id": "codemagic",
+   "quote": null,
+   "url": "https://codemagic.io/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 0,
+   "id": "codesandbox-sdk",
+   "quote": null,
+   "url": "https://codesandbox.io/docs/sdk/pricing",
+   "verdict": "unreachable",
+   "why": "HTTP 403"
+  },
+  {
+   "bytes": 12343,
+   "eff": "https://collimate.ai/pricing",
+   "id": "collimate",
+   "quote": null,
+   "url": "https://collimate.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 1433907,
+   "eff": "https://contabo.com/en-us/pricing/",
+   "id": "contabo",
+   "quote": null,
+   "url": "https://contabo.com/en-us/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 283511,
+   "eff": "https://www.crusoe.ai/cloud/pricing",
+   "id": "crusoe",
+   "quote": null,
+   "url": "https://www.crusoe.ai/cloud/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 197148,
+   "eff": "https://cua.ai/#pricing",
+   "id": "cua",
+   "quote": null,
+   "url": "https://cua.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 197148,
+   "eff": "https://cua.ai/#pricing",
+   "id": "cua-windows",
+   "quote": null,
+   "url": "https://cua.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 165487,
+   "eff": "https://cube.computer/",
+   "id": "cube",
+   "quote": null,
+   "url": "https://cube.computer/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 4488,
+   "eff": "https://datalayer.io/pricing",
+   "id": "datalayer",
+   "quote": null,
+   "url": "https://datalayer.io/pricing",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 719581,
+   "eff": "https://www.daytona.io/pricing",
+   "id": "daytona",
+   "quote": null,
+   "url": "https://www.daytona.io/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 291178,
+   "eff": "https://docs.declaw.ai/platform/billing",
+   "id": "declaw",
+   "quote": null,
+   "url": "https://docs.declaw.ai/platform/billing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 203763,
+   "eff": "https://www.dedaluslabs.ai/pricing",
+   "id": "dedalus-labs",
+   "quote": null,
+   "url": "https://www.dedaluslabs.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 235538,
+   "eff": "https://deno.com/deploy/pricing",
+   "id": "deno-sandbox",
+   "quote": null,
+   "url": "https://deno.com/deploy/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 390133,
+   "eff": "https://depot.dev/pricing",
+   "id": "depot",
+   "quote": null,
+   "url": "https://depot.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 490872,
+   "eff": "https://www.digitalocean.com/pricing/droplets",
+   "id": "digitalocean",
+   "quote": null,
+   "url": "https://www.digitalocean.com/pricing/droplets",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 261952,
+   "eff": "https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/",
+   "id": "docker-cloud-sandboxes",
+   "quote": null,
+   "url": "https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 204581,
+   "eff": "https://e2b.dev/pricing",
+   "id": "e2b",
+   "quote": null,
+   "url": "https://e2b.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 360858,
+   "eff": "https://www.e2enetworks.com/pricing",
+   "id": "e2e-networks",
+   "quote": null,
+   "url": "https://www.e2enetworks.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 159939,
+   "eff": "https://www.ellipsis.dev/pricing",
+   "id": "ellipsis",
+   "quote": null,
+   "url": "https://www.ellipsis.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 28169,
+   "eff": "https://exe.dev/pricing",
+   "id": "exe-dev",
+   "quote": null,
+   "url": "https://exe.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 528843,
+   "eff": "https://www.exoscale.com/pricing/",
+   "id": "exoscale",
+   "quote": null,
+   "url": "https://www.exoscale.com/pricing/",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 325101,
+   "eff": "https://expo.dev",
+   "id": "expo",
+   "quote": null,
+   "url": "https://expo.dev",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 549141,
+   "eff": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+   "id": "flow-swiss-mac",
+   "quote": null,
+   "url": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 96720,
+   "eff": "https://fly.io/pricing/",
+   "id": "fly-machines",
+   "quote": null,
+   "url": "https://fly.io/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 59410,
+   "eff": "https://www.freestyle.sh/pricing",
+   "id": "freestyle",
+   "quote": null,
+   "url": "https://www.freestyle.sh/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 484471,
+   "eff": "https://gcore.com/cloud/virtual-machines",
+   "id": "gcore",
+   "quote": null,
+   "url": "https://gcore.com/cloud/virtual-machines",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 35594894,
+   "eff": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "id": "gcp-compute",
+   "quote": null,
+   "url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 3696088,
+   "eff": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+   "id": "gcp-windows",
+   "quote": null,
+   "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 168924,
+   "eff": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+   "id": "github-actions",
+   "quote": null,
+   "url": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 196324,
+   "eff": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
+   "id": "github-codespaces",
+   "quote": null,
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 167318,
+   "eff": "https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes",
+   "id": "github-copilot-cloud-sandboxes",
+   "quote": null,
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 46845,
+   "eff": "https://docs.gitlab.com/ci/pipelines/compute_minutes/",
+   "id": "gitlab-runners",
+   "quote": null,
+   "url": "https://docs.gitlab.com/ci/pipelines/compute_minutes/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 0,
+   "id": "gke-agent-sandbox",
+   "quote": null,
+   "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+   "verdict": "unreachable",
+   "why": "HTTP 404"
+  },
+  {
+   "bytes": 3559145,
+   "eff": "https://cloud.google.com/build/pricing",
+   "id": "google-cloud-build",
+   "quote": null,
+   "url": "https://cloud.google.com/build/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 3121305,
+   "eff": "https://cloud.google.com/run/pricing",
+   "id": "google-cloud-run",
+   "quote": null,
+   "url": "https://cloud.google.com/run/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 72407,
+   "eff": "https://developers.google.com/colab",
+   "id": "google-colab",
+   "quote": null,
+   "url": "https://developers.google.com/colab",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 523178,
+   "eff": "https://www.heroku.com/pricing/",
+   "id": "heroku",
+   "quote": null,
+   "url": "https://www.heroku.com/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 361298,
+   "eff": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+   "id": "hetzner-cloud",
+   "quote": null,
+   "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 108422,
+   "eff": "https://www.hetzner.com/dedicated-rootserver/",
+   "id": "hetzner-dedicated",
+   "quote": null,
+   "url": "https://www.hetzner.com/dedicated-rootserver/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 81572,
+   "eff": "https://hopx.ai/pricing/",
+   "id": "hopx",
+   "quote": null,
+   "url": "https://hopx.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 1287891,
+   "eff": "https://www.hostinger.com/vps-hosting",
+   "id": "hostinger-vps",
+   "quote": null,
+   "url": "https://www.hostinger.com/vps-hosting",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 517202,
+   "eff": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
+   "id": "huawei-cloud",
+   "quote": null,
+   "url": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 212047,
+   "eff": "https://huggingface.co/docs/hub/en/jobs-pricing",
+   "id": "huggingface-jobs",
+   "quote": "t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardware, it is billed by the minute, only while the Job is Starting or Running. Manage billing Bill to your organization Billing is done to the user\u2019s namespace by default, but you can bill to your",
+   "url": "https://huggingface.co/docs/hub/en/jobs-pricing",
+   "verdict": "suspends",
+   "why": "billed only while running"
+  },
+  {
+   "bytes": 159190,
+   "eff": "https://www.hyperstack.cloud/gpu-pricing",
+   "id": "hyperstack",
+   "quote": null,
+   "url": "https://www.hyperstack.cloud/gpu-pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 237576,
+   "eff": "https://www.ibm.com/products/virtual-servers",
+   "id": "ibm-cloud-vpc",
+   "quote": null,
+   "url": "https://www.ibm.com/products/virtual-servers/pricing",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 92705,
+   "eff": "https://www.instacloud.com/pricing",
+   "id": "insforge-instacloud",
+   "quote": null,
+   "url": "https://www.instacloud.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 55503,
+   "eff": "https://instavm.io/pricing",
+   "id": "instavm",
+   "quote": null,
+   "url": "https://instavm.io/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 4314038,
+   "eff": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+   "id": "ionos",
+   "quote": null,
+   "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 35208,
+   "eff": "https://islo.dev/pricing/",
+   "id": "islo",
+   "quote": "e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent \u2192 Pricing Pay only while it runs. CPU, memory, and storage billed per hour. Stop the computer, stop the meter. Get started \u2192 vCPU 2 Memory 4 GB",
+   "url": "https://islo.dev/pricing",
+   "verdict": "suspends",
+   "why": "pays only while running"
+  },
+  {
+   "bytes": 76335,
+   "eff": "https://docs.isorun.ai/getting-started/pricing",
+   "id": "isorun",
+   "quote": null,
+   "url": "https://docs.isorun.ai/getting-started/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 127156,
+   "eff": "https://jarvislabs.ai/pricing",
+   "id": "jarvislabs",
+   "quote": null,
+   "url": "https://jarvislabs.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 249538,
+   "eff": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+   "id": "kakao-cloud",
+   "quote": null,
+   "url": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 346202,
+   "eff": "https://www.kamatera.com/pricing/",
+   "id": "kamatera",
+   "quote": null,
+   "url": "https://www.kamatera.com/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 50691,
+   "eff": "https://kedge.dev/docs/billing",
+   "id": "kedge",
+   "quote": null,
+   "url": "https://kedge.dev/docs/billing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 274233,
+   "eff": "https://www.koyeb.com/pricing",
+   "id": "koyeb",
+   "quote": null,
+   "url": "https://www.koyeb.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 291471,
+   "eff": "https://www.langchain.com/pricing",
+   "id": "langsmith-sandbox",
+   "quote": "ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zero, so you pay only while it runs) and Dedicated for customer-facing agents that need consistent uptime. Start at Small and size up to Medium or",
+   "url": "https://www.langchain.com/pricing",
+   "verdict": "suspends",
+   "why": "pays only while running"
+  },
+  {
+   "bytes": 335827,
+   "eff": "https://www.latitude.sh/pricing",
+   "id": "latitude-sh",
+   "quote": null,
+   "url": "https://www.latitude.sh/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 18060,
+   "eff": "https://lightning.ai/pricing",
+   "id": "lightning-ai",
+   "quote": null,
+   "url": "https://lightning.ai/pricing",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 0,
+   "id": "linode",
+   "quote": null,
+   "url": "https://www.akamai.com/cloud/pricing",
+   "verdict": "unreachable",
+   "why": "HTTP 403"
+  },
+  {
+   "bytes": 150561,
+   "eff": "https://machine0.io/",
+   "id": "machine0",
+   "quote": "very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmatically. Start, Suspend, Snapshot & Resume Freeze a VM's state, stop billing, restore later. Create golden images from any VM and spin up clones. Integrate with your MCPs, GitHub & Environment Inj",
+   "url": "https://machine0.io/",
+   "verdict": "suspends",
+   "why": "stopping the machine stops billing"
+  },
+  {
+   "bytes": 81056,
+   "eff": "https://microsandbox.dev/pricing",
+   "id": "microsandbox",
+   "quote": null,
+   "url": "https://microsandbox.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 24418,
+   "eff": "https://miosa.ai/pricing",
+   "id": "miosa",
+   "quote": null,
+   "url": "https://miosa.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 273916,
+   "eff": "https://modal.com/pricing",
+   "id": "modal",
+   "quote": null,
+   "url": "https://modal.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 255594,
+   "eff": "https://modelence.com",
+   "id": "modelence",
+   "quote": null,
+   "url": "https://modelence.com",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 3053,
+   "eff": "https://platform.kimi.com/docs/pricing/hosted-agents.md",
+   "id": "moonshot-kimi",
+   "quote": null,
+   "url": "https://platform.kimi.com/docs/pricing/hosted-agents.md",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 38648,
+   "eff": "https://cloud.morph.so/web/subscribe",
+   "id": "morph-cloud",
+   "quote": null,
+   "url": "https://cloud.morph.so/web/subscribe",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 10791,
+   "eff": "https://sandbox.mosaicos.com/",
+   "id": "mosaic",
+   "quote": "ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in seconds. Pay only while it works. $0.05/hour active compute Includes RAM and storage. $0 while hibernated Run the 5 min quickstart Get API Key",
+   "url": "https://sandbox.mosaicos.com/",
+   "verdict": "suspends",
+   "why": "pays only while running"
+  },
+  {
+   "bytes": 223799,
+   "eff": "https://namespace.so/pricing",
+   "id": "namespace",
+   "quote": null,
+   "url": "https://namespace.so/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 2889530,
+   "eff": "https://www.ncloud.com/product/compute/server",
+   "id": "naver-cloud",
+   "quote": null,
+   "url": "https://www.ncloud.com/product/compute/server",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 487199,
+   "eff": "https://docs.nebius.com/compute/resources/pricing",
+   "id": "nebius",
+   "quote": null,
+   "url": "https://docs.nebius.com/compute/resources/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text | rejected matches: bills_uptime: the sentence negates the billing it appears to describe"
+  },
+  {
+   "bytes": 729819,
+   "eff": "https://www.netcup.com/en/server/vps",
+   "id": "netcup",
+   "quote": null,
+   "url": "https://www.netcup.com/en/server/vps",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 84629,
+   "eff": "https://www.nextmv.io/",
+   "id": "nextmv",
+   "quote": null,
+   "url": "https://nextmv.io",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 193712,
+   "eff": "https://northflank.com/pricing",
+   "id": "northflank",
+   "quote": null,
+   "url": "https://northflank.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 389333,
+   "eff": "https://docs.novita.ai/guides/sandbox-pricing",
+   "id": "novita",
+   "quote": null,
+   "url": "https://docs.novita.ai/guides/sandbox-pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 30333,
+   "eff": "https://www.omnara.com/pricing",
+   "id": "omnara",
+   "quote": null,
+   "url": "https://www.omnara.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 60425,
+   "eff": "https://omnirun.io/managed",
+   "id": "omnirun",
+   "quote": null,
+   "url": "https://omnirun.io/pricing",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 181392,
+   "eff": "https://ona.com/pricing",
+   "id": "ona",
+   "quote": null,
+   "url": "https://ona.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 195468,
+   "eff": "https://www.t-cloud-public.com/en/prices",
+   "id": "open-telekom-cloud",
+   "quote": null,
+   "url": "https://www.open-telekom-cloud.com/en/prices",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 69027,
+   "eff": "https://opencomputer.dev/sandboxes",
+   "id": "opencomputer",
+   "quote": null,
+   "url": "https://opencomputer.dev/sandboxes",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 83751,
+   "eff": "https://openpond.ai/pricing",
+   "id": "openpond",
+   "quote": null,
+   "url": "https://openpond.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 37496,
+   "eff": "https://openreward.ai/pricing",
+   "id": "openreward",
+   "quote": null,
+   "url": "https://openreward.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 473524,
+   "eff": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
+   "id": "openshift",
+   "quote": null,
+   "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 352980,
+   "eff": "https://www.oracle.com/cloud/price-list/#pricing-compute",
+   "id": "oracle-cloud",
+   "quote": null,
+   "url": "https://www.oracle.com/cloud/compute/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 66959,
+   "eff": "https://orkestr.eu/sandboxes",
+   "id": "orkestr",
+   "quote": null,
+   "url": "https://orkestr.eu/sandboxes",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 1443723,
+   "eff": "https://us.ovhcloud.com/public-cloud/prices/",
+   "id": "ovhcloud",
+   "quote": null,
+   "url": "https://us.ovhcloud.com/public-cloud/prices/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 74024,
+   "eff": "https://www.pandastack.ai/pricing/",
+   "id": "pandastack",
+   "quote": "Pricing \u00b7 PandaStack Skip to content pandastack v0.5.0 products solutions templates pricing benchmarks docs sign in start free \u2192 vm fork 1 fork 2 fork 3 49 ms boot AI agent sandboxes 49ms p50 Firecracker microVMs that boot from snapshot before your model finishes a token. Exec,",
+   "url": "https://www.pandastack.ai/pricing/",
+   "verdict": "partial",
+   "why": "an auto-suspended machine bills storage only, but auto-suspend is described as saving billing"
+  },
+  {
+   "bytes": 57547,
+   "eff": "https://docs.digitalocean.com/products/paperspace/pricing/",
+   "id": "paperspace",
+   "quote": "that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet exists. A powered-off Droplet continues to incur compute charges because its resources stay reserved until you destroy it. Paperspace Machines do not behave this way: shutting down a",
+   "url": "https://docs.digitalocean.com/products/paperspace/pricing/",
+   "verdict": "bills_uptime",
+   "why": "a stopped machine is still billed"
+  },
+  {
+   "bytes": 3306,
+   "eff": "https://ppio.com/docs/sandbox/pricing.md",
+   "id": "ppio-sandbox",
+   "quote": null,
+   "url": "https://ppio.com/docs/sandbox/pricing.md",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 71537,
+   "eff": "https://www.primeintellect.ai/sandboxes",
+   "id": "prime-intellect",
+   "quote": null,
+   "url": "https://www.primeintellect.ai/sandboxes",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 134895,
+   "eff": "https://prized.dev/docs/billing",
+   "id": "prized",
+   "quote": null,
+   "url": "https://prized.dev/docs/billing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 339479,
+   "eff": "https://railway.com/pricing",
+   "id": "railway",
+   "quote": null,
+   "url": "https://railway.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 700038,
+   "eff": "https://render.com/pricing",
+   "id": "render",
+   "quote": null,
+   "url": "https://render.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 398739,
+   "eff": "https://replicas.dev",
+   "id": "replicas",
+   "quote": null,
+   "url": "https://replicas.dev",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 86519,
+   "eff": "https://replicate.com/pricing",
+   "id": "replicate",
+   "quote": null,
+   "url": "https://replicate.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 123902,
+   "eff": "https://rivet.dev/pricing/",
+   "id": "rivet",
+   "quote": null,
+   "url": "https://rivet.dev/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 3330,
+   "eff": "https://docs.run.cloud/sandboxes/index.md",
+   "id": "run-cloud",
+   "quote": null,
+   "url": "https://docs.run.cloud/sandboxes/index.md",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 122156,
+   "eff": "https://runloop.ai/pricing",
+   "id": "runloop",
+   "quote": null,
+   "url": "https://www.runloop.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 320609,
+   "eff": "https://www.runpod.io/pricing",
+   "id": "runpod",
+   "quote": "lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run. Pods are dedicated GPU instances for development and long-running jobs, Serverless bills inference workers based on usage, and Clusters support multi-node workloads and reserved capacity. Storage and deploym",
+   "url": "https://www.runpod.io/pricing",
+   "verdict": "bills_uptime",
+   "why": "reserved capacity is billed whether used or not"
+  },
+  {
+   "bytes": 189408,
+   "eff": "https://runs-on.com/pricing/",
+   "id": "runs-on",
+   "quote": null,
+   "url": "https://runs-on.com/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 22115,
+   "eff": "https://runta.com/pricing/",
+   "id": "runta",
+   "quote": null,
+   "url": "https://runta.com/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 800481,
+   "eff": "https://docs.sailresearch.com/pricing",
+   "id": "sail",
+   "quote": null,
+   "url": "https://docs.sailresearch.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 186858,
+   "eff": "https://cloud.sakura.ad.jp/products/server/",
+   "id": "sakura-cloud",
+   "quote": null,
+   "url": "https://cloud.sakura.ad.jp/products/server/",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 18654,
+   "eff": "https://cloud.samsungsds.com/serviceportal/pricing.html",
+   "id": "samsung-cloud",
+   "quote": null,
+   "url": "https://cloud.samsungsds.com/serviceportal/pricing.html",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 15636,
+   "eff": "https://sandbox-as-a-service.com/pricing",
+   "id": "sandbox-as-a-service",
+   "quote": null,
+   "url": "https://sandbox-as-a-service.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 123604,
+   "eff": "https://sandbox0.ai/pricing",
+   "id": "sandbox0",
+   "quote": "pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCPU. CPU is billed only while active. Provisioned disk, Workers, Durable Objects, logs, and egress can add charges; included usage is excluded. Instance con",
+   "url": "https://sandbox0.ai/pricing",
+   "verdict": "suspends",
+   "why": "billed only while running"
+  },
+  {
+   "bytes": 6782564,
+   "eff": "https://www.scaleway.com/en/pricing/virtual-instances/",
+   "id": "scaleway",
+   "quote": null,
+   "url": "https://www.scaleway.com/en/pricing/virtual-instances/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 32592,
+   "eff": "https://shardflux.dev/#pricing",
+   "id": "shardflux",
+   "quote": null,
+   "url": "https://shardflux.dev/#pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 112552,
+   "eff": "https://shellbox.dev/",
+   "id": "shellbox",
+   "quote": null,
+   "url": "https://shellbox.dev/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 12394,
+   "eff": "https://smolmachines.com/pricing",
+   "id": "smol-machines",
+   "quote": null,
+   "url": "https://smolmachines.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 42452,
+   "eff": "https://docs.getsolari.com/pricing",
+   "id": "solari",
+   "quote": null,
+   "url": "https://docs.getsolari.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 104430,
+   "eff": "https://specific.dev/pricing",
+   "id": "specific",
+   "quote": null,
+   "url": "https://specific.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 96720,
+   "eff": "https://fly.io/pricing/",
+   "id": "sprites",
+   "quote": null,
+   "url": "https://fly.io/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 847282,
+   "eff": "https://pim.api.stackit.cloud/v1/skus",
+   "id": "stackit",
+   "quote": null,
+   "url": "https://pim.api.stackit.cloud/v1/skus",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text | rejected matches: bills_uptime: match is inside an embedded JSON/catalogue blob, not prose"
+  },
+  {
+   "bytes": 159143,
+   "eff": "https://starsling.dev/pricing",
+   "id": "starsling",
+   "quote": null,
+   "url": "https://starsling.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 45472,
+   "eff": "https://sandbox.stateset.app/",
+   "id": "stateset",
+   "quote": null,
+   "url": "https://sandbox.stateset.app/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 48885,
+   "eff": "https://www.superserve.ai/pricing/",
+   "id": "superserve",
+   "quote": "Pricing | Superserve - Pay-as-you-go sandboxes for AI agents Docs Pricing Blog Careers Contact 464 Get started Open menu [ Pricing \u00b7 Pay-as-you-go ] Start for free, pay as you scale. No credit card to start. Per-second billing on every resource. Start for free Contact sales [ Us",
+   "url": "https://superserve.ai/pricing",
+   "verdict": "partial",
+   "why": "an idle machine still pays for RAM or storage, but pays only while running"
+  },
+  {
+   "bytes": 3007,
+   "eff": "https://tama.computer/",
+   "id": "tama",
+   "quote": null,
+   "url": "https://tama.computer/",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 57893,
+   "eff": "https://cloud.tencent.com/document/product/1814/133249",
+   "id": "tencent-agent-runtime",
+   "quote": null,
+   "url": "https://cloud.tencent.com/document/product/1814/133249",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 54075,
+   "eff": "https://cloud.tencent.cn/document/product/1039/131894",
+   "id": "tencent-cloud-studio",
+   "quote": null,
+   "url": "https://cloud.tencent.cn/document/product/1039/131894",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 55196,
+   "eff": "https://cloud.tencent.com/document/product/583/17299",
+   "id": "tencent-scf",
+   "quote": null,
+   "url": "https://cloud.tencent.com/document/product/583/17299",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 819642,
+   "eff": "https://tenki.cloud/pricing",
+   "id": "tenki",
+   "quote": null,
+   "url": "https://tenki.cloud/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 49156,
+   "eff": "https://www.tensorlake.ai/pricing",
+   "id": "tensorlake",
+   "quote": null,
+   "url": "https://www.tensorlake.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 719420,
+   "eff": "https://tinfoil.sh",
+   "id": "tinfoil",
+   "quote": null,
+   "url": "https://tinfoil.sh",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 580821,
+   "eff": "https://www.together.ai/pricing",
+   "id": "together-code-sandbox",
+   "quote": null,
+   "url": "https://www.together.ai/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 240782,
+   "eff": "https://trigger.dev/pricing",
+   "id": "trigger-dev",
+   "quote": null,
+   "url": "https://trigger.dev/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 342618,
+   "eff": "https://www.ubicloud.com/docs/about/pricing",
+   "id": "ubicloud",
+   "quote": null,
+   "url": "https://www.ubicloud.com/docs/about/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 131876,
+   "eff": "https://astraflow.ucloud.cn/docs/agent-sandbox",
+   "id": "ucloud",
+   "quote": null,
+   "url": "https://astraflow.ucloud.cn/docs/agent-sandbox",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 541349,
+   "eff": "https://upcloud.com/pricing/",
+   "id": "upcloud",
+   "quote": null,
+   "url": "https://upcloud.com/pricing/",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 37275,
+   "eff": "https://use.computer/",
+   "id": "use-computer",
+   "quote": null,
+   "url": "https://use.computer/",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 986346,
+   "eff": "https://vercel.com/docs/sandbox/pricing",
+   "id": "vercel-sandbox",
+   "quote": null,
+   "url": "https://vercel.com/docs/sandbox/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 420136,
+   "eff": "https://verda.com/pricing",
+   "id": "verda",
+   "quote": null,
+   "url": "https://verda.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 16078903,
+   "eff": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+   "id": "vertex-computer-use",
+   "quote": null,
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 11914,
+   "eff": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh",
+   "id": "volcengine-agentkit",
+   "quote": null,
+   "url": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 0,
+   "id": "vultr",
+   "quote": null,
+   "url": "https://www.vultr.com/pricing/",
+   "verdict": "unreachable",
+   "why": "HTTP 403"
+  },
+  {
+   "bytes": 302245,
+   "eff": "https://docs.vultr.com/support/platform/billing/is-a-windows-license-included-in-the-monthly-price",
+   "id": "vultr-windows",
+   "quote": null,
+   "url": "https://docs.vultr.com/support/platform/billing/is-a-windows-license-included-in-the-monthly-price",
+   "verdict": "shell",
+   "why": "no price rendered in the HTML (client-side)"
+  },
+  {
+   "bytes": 148826,
+   "eff": "https://www.warpbuild.com/pricing",
+   "id": "warpbuild",
+   "quote": null,
+   "url": "https://www.warpbuild.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 921472,
+   "eff": "https://wasmer.io/pricing",
+   "id": "wasmer",
+   "quote": null,
+   "url": "https://wasmer.io/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 82207,
+   "eff": "https://withruntime.com/pricing",
+   "id": "withruntime",
+   "quote": null,
+   "url": "https://withruntime.com/pricing",
+   "verdict": "unstated",
+   "why": "page fetched and read; it does not state an idle-billing policy in text"
+  },
+  {
+   "bytes": 40263,
+   "eff": "https://zipbox.ai/pricing",
+   "id": "zipbox",
+   "quote": "Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing Pay only while it runs Every new",
+   "url": "https://zipbox.ai/pricing",
+   "verdict": "suspends",
+   "why": "pays only while running"
+  }
+ ]
+}

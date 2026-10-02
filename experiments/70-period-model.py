@@ -174,8 +174,60 @@ KEEP_RATES_FIRSTPARTY = [
 
 
 def keep_rate_firstparty(pid):
-    """A first-party keep rate for a provider, or None."""
-    return [k for k in KEEP_RATES_FIRSTPARTY if k["provider"] == pid]
+    """A first-party keep rate for a provider, or None.
+
+    Two sources, in order of authority. KEEP_RATES_FIRSTPARTY above is the
+    hand-checked table: a person read that page and wrote down what it said.
+    The probed table is data/billing-posture.json, which
+    51-billing-posture-probe.py produces by fetching 183 vendor pages and
+    matching the vendor's own words, gated by a self-test of fourteen known
+    answers that its first two versions failed.
+
+    The probe is read HERE, in the model, rather than patched into the artefact
+    afterwards. An earlier arrangement had 53-apply-posture-to-model.py rewrite
+    keep rates into data/period-model.json, which worked until anyone re-ran 70:
+    the model recomputed every keep rate from the card and silently discarded
+    all thirty probed rows. A step that has to be remembered is a step that gets
+    forgotten, and this one fails quietly.
+    """
+    for k in KEEP_RATES_FIRSTPARTY:
+        if k["provider"] == pid:
+            return [k]
+    return _probed_keep(pid)
+
+
+_PROBED_CACHE = {}
+
+
+def _probed_keep(pid):
+    """The probe's verdict for a provider, shaped like a hand-checked entry.
+
+    Only `suspends` and `bills_uptime` are returned. `partial` is deliberately
+    absent: boxd, pandastack and superserve each say one resource stops billing
+    and another does not, and a single scalar cannot express that. Returning 0.0
+    for them would understate the bill by the resource that keeps charging, which
+    is the direction that produces a surprise invoice.
+    """
+    if not _PROBED_CACHE:
+        path = os.path.join(os.path.dirname(os.path.dirname(
+            os.path.abspath(__file__))), "data", "billing-posture.json")
+        try:
+            with open(path, encoding="utf-8") as fh:
+                doc = json.load(fh)
+        except (OSError, ValueError):
+            return []
+        for r in doc.get("rows") or []:
+            if r.get("verdict") in ("suspends", "bills_uptime"):
+                _PROBED_CACHE[r["id"]] = [{
+                    "provider": r["id"],
+                    "keep": 0.0 if r["verdict"] == "suspends" else 1.0,
+                    "url": r.get("url"),
+                    "quote": r.get("quote") or "",
+                    "why": "%s: %s" % (r["verdict"], r.get("why") or ""),
+                    "read_on": (doc.get("probed_at") or "")[:10],
+                    "probed": True,
+                }]
+    return _PROBED_CACHE.get(pid, [])
 
 
 def allowance_saving(allow, m, shape, hours):
@@ -580,7 +632,13 @@ def main():
                 for _k in keep_rate_firstparty(pid):
                     keep = _k["keep"]
                     keep_basis = ("first-party: %s" % _k["quote"][:110])
-                    keep_src = "first-party page (%s)" % _k["url"]
+                    # A hand-checked entry and an automated probe are both
+                    # first-party, but they are not the same quality of evidence
+                    # and the row should say which is which.
+                    keep_src = ("first-party probe %s (%s)"
+                                % ((_k.get("read_on") or "?"), _k["url"])
+                                if _k.get("probed")
+                                else "first-party page (%s)" % _k["url"])
                 hourly, how = mode_hourly(m, shape, pid)
                 if hourly is None or hourly <= 0:
                     continue

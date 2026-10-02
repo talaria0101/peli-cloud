@@ -1,6 +1,6 @@
 # peli-cloud — every provider, cheapest first, at every period
 
-**Generated 2026-10-02T04:00:32Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
+**Generated 2026-10-02T04:52:59Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
 
 ## How to read this
 
@@ -228,31 +228,31 @@ Cheapest first within each cell. `$/h` is the published machine rate; the period
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.01 | 0.08 | 0.00 | 8.28 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.00 | 0.00 | 0.02 | 0.49 | 0.02 | - | 1.00 | - | yes | `scaleway` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.00 | 0.01 | 0.06 | 1.48 | 0.06 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.01 | 0.04 | 0.16 | 3.75 | 0.16 | - | 1.00 | - | yes | `upcloud` |
-| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.01 | 0.04 | 0.16 | 3.95 | 0.16 | - | 1.00 | - | yes | `kamatera` |
-| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.01 | 0.05 | 0.20 | 4.72 | 0.20 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.01 | 0.05 | 0.20 | 4.90 | 0.20 | - | 1.00 | - | yes | `zipbox` |
-| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.01 | 0.05 | 0.22 | 5.33 | 0.22 | - | 1.00 | - | yes | `vultr` |
-| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.01 | 0.05 | 0.22 | 5.36 | 0.22 | - | 1.00 | - | yes | `civo` |
-| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.01 | 0.05 | 0.23 | 5.40 | 0.23 | - | 1.00 | - | yes | `linode` |
-| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.01 | 0.06 | 0.24 | 5.70 | 0.00 | **$5.22 covers it** | 1.00 | - | yes | `google-cloud-run` |
-| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.01 | 0.06 | 0.24 | 5.73 | 0.24 | - | 1.00 | - | yes | `ionos` |
-| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.01 | 0.06 | 0.25 | 5.89 | 0.25 | - | 1.00 | - | yes | `kakao-cloud` |
-| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.01 | 0.06 | 0.27 | 6.43 | 0.27 | - | 1.00 | - | yes | `digitalocean` |
-| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.01 | 0.06 | 0.27 | 0.27 | 0.27 | - | 0.00 | - | **disputed** | `lizard` |
-| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.01 | 0.06 | 0.27 | 6.51 | 0.27 | - | 1.00 | - | yes | `contabo` |
-| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.01 | 0.06 | 0.27 | 6.55 | 0.27 | - | 1.00 | - | yes | `gcore` |
-| 18 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 7.49 | 0.31 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 19 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.01 | 0.08 | 0.32 | 7.73 | 0.32 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.01 | 0.08 | 0.00 | 8.28 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.00 | 0.00 | 0.02 | 0.49 | 0.02 | - | 1.00* | - | yes | `scaleway` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.00 | 0.01 | 0.06 | 1.48 | 0.06 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.01 | 0.04 | 0.16 | 3.75 | 0.16 | - | 1.00* | - | yes | `upcloud` |
+| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.01 | 0.04 | 0.16 | 3.95 | 0.16 | - | 1.00* | - | yes | `kamatera` |
+| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.01 | 0.05 | 0.20 | 4.72 | 0.20 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.01 | 0.05 | 0.20 | 0.20 | 0.20 | - | **0.00** | - | yes | `zipbox` |
+| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.01 | 0.05 | 0.22 | 5.33 | 0.22 | - | 1.00* | - | yes | `vultr` |
+| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.01 | 0.05 | 0.22 | 5.36 | 0.22 | - | 1.00* | - | yes | `civo` |
+| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.01 | 0.05 | 0.23 | 5.40 | 0.23 | - | 1.00* | - | yes | `linode` |
+| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.01 | 0.06 | 0.24 | 5.70 | 0.00 | **$5.22 covers it** | 1.00* | - | yes | `google-cloud-run` |
+| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.01 | 0.06 | 0.24 | 5.73 | 0.24 | - | 1.00* | - | yes | `ionos` |
+| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.01 | 0.06 | 0.25 | 5.89 | 0.25 | - | 1.00* | - | yes | `kakao-cloud` |
+| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.01 | 0.06 | 0.27 | 6.43 | 0.27 | - | 1.00* | - | yes | `digitalocean` |
+| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.01 | 0.06 | 0.27 | 0.27 | 0.27 | - | **0.00** | - | **disputed** | `lizard` |
+| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.01 | 0.06 | 0.27 | 6.51 | 0.27 | - | 1.00* | - | yes | `contabo` |
+| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.01 | 0.06 | 0.27 | 6.55 | 0.27 | - | 1.00* | - | yes | `gcore` |
+| 18 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 7.49 | 0.31 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 19 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.01 | 0.08 | 0.32 | 7.73 | 0.32 | - | 1.00* | - | **no** | `moonshot-kimi` |
 | 20 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.01 | 0.08 | 0.33 | 7.89 | 0.33 | - | 1.00 | - | yes | `upstash-box` |
-| 21 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.01 | 0.08 | 0.35 | 8.39 | 0.35 | - | 1.00 | - | yes | `netcup` |
-| 22 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.01 | 0.08 | 0.36 | 8.64 | 0.36 | - | 1.00 | - | yes | `verda` |
-| 23 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.01 | 0.09 | 0.39 | 9.29 | 0.39 | - | 1.00 | - | yes | `ovhcloud` |
-| 24 | [machine0](https://machine0.io/) | 0.0130 | 0.01 | 0.09 | 0.39 | 9.36 | 0.39 | - | 1.00 | - | yes | `machine0` |
-| 25 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.01 | 0.10 | 0.42 | 10.15 | 0.42 | - | 1.00 | - | yes | `alibaba-ecs` |
+| 21 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.01 | 0.08 | 0.35 | 8.39 | 0.35 | - | 1.00* | - | yes | `netcup` |
+| 22 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.01 | 0.08 | 0.36 | 8.64 | 0.36 | - | 1.00* | - | yes | `verda` |
+| 23 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.01 | 0.09 | 0.39 | 9.29 | 0.39 | - | 1.00* | - | yes | `ovhcloud` |
+| 24 | [machine0](https://machine0.io/) | 0.0130 | 0.01 | 0.09 | 0.39 | 0.39 | 0.39 | - | **0.00** | - | yes | `machine0` |
+| 25 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.01 | 0.10 | 0.42 | 10.15 | 0.42 | - | 1.00* | - | yes | `alibaba-ecs` |
 
 _181 more at this duty cycle; the full rank is table C._
 
@@ -272,31 +272,31 @@ _181 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.05 | 0.32 | 0.00 | 8.28 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.00 | 0.02 | 0.08 | 0.49 | 0.08 | - | 1.00 | - | yes | `scaleway` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.01 | 0.06 | 0.25 | 1.48 | 0.25 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.02 | 0.15 | 0.62 | 3.75 | 0.62 | - | 1.00 | - | yes | `upcloud` |
-| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.02 | 0.15 | 0.66 | 3.95 | 0.66 | - | 1.00 | - | yes | `kamatera` |
-| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.03 | 0.18 | 0.79 | 4.72 | 0.79 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.03 | 0.19 | 0.82 | 4.90 | 0.82 | - | 1.00 | - | yes | `zipbox` |
-| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.03 | 0.21 | 0.89 | 5.33 | 0.89 | - | 1.00 | - | yes | `vultr` |
-| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.03 | 0.21 | 0.89 | 5.36 | 0.89 | - | 1.00 | - | yes | `civo` |
-| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.03 | 0.21 | 0.90 | 5.40 | 0.90 | - | 1.00 | - | yes | `linode` |
-| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.03 | 0.22 | 0.95 | 5.70 | 0.00 | **$5.22 covers it** | 1.00 | - | yes | `google-cloud-run` |
-| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.03 | 0.22 | 0.96 | 5.73 | 0.96 | - | 1.00 | - | yes | `ionos` |
-| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.03 | 0.23 | 0.98 | 5.89 | 0.98 | - | 1.00 | - | yes | `kakao-cloud` |
-| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.04 | 0.25 | 1.07 | 6.43 | 1.07 | - | 1.00 | - | yes | `digitalocean` |
-| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.04 | 0.25 | 1.08 | 1.08 | 1.08 | - | 0.00 | - | **disputed** | `lizard` |
-| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.04 | 0.25 | 1.08 | 6.51 | 1.08 | - | 1.00 | - | yes | `contabo` |
-| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.04 | 0.25 | 1.09 | 6.55 | 1.09 | - | 1.00 | - | yes | `gcore` |
-| 18 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 7.49 | 1.25 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 19 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.04 | 0.30 | 1.29 | 7.73 | 1.29 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.05 | 0.32 | 0.00 | 8.28 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.00 | 0.02 | 0.08 | 0.49 | 0.08 | - | 1.00* | - | yes | `scaleway` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.01 | 0.06 | 0.25 | 1.48 | 0.25 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.02 | 0.15 | 0.62 | 3.75 | 0.62 | - | 1.00* | - | yes | `upcloud` |
+| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.02 | 0.15 | 0.66 | 3.95 | 0.66 | - | 1.00* | - | yes | `kamatera` |
+| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.03 | 0.18 | 0.79 | 4.72 | 0.79 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.03 | 0.19 | 0.82 | 0.82 | 0.82 | - | **0.00** | - | yes | `zipbox` |
+| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.03 | 0.21 | 0.89 | 5.33 | 0.89 | - | 1.00* | - | yes | `vultr` |
+| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.03 | 0.21 | 0.89 | 5.36 | 0.89 | - | 1.00* | - | yes | `civo` |
+| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.03 | 0.21 | 0.90 | 5.40 | 0.90 | - | 1.00* | - | yes | `linode` |
+| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.03 | 0.22 | 0.95 | 5.70 | 0.00 | **$5.22 covers it** | 1.00* | - | yes | `google-cloud-run` |
+| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.03 | 0.22 | 0.96 | 5.73 | 0.96 | - | 1.00* | - | yes | `ionos` |
+| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.03 | 0.23 | 0.98 | 5.89 | 0.98 | - | 1.00* | - | yes | `kakao-cloud` |
+| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.04 | 0.25 | 1.07 | 6.43 | 1.07 | - | 1.00* | - | yes | `digitalocean` |
+| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.04 | 0.25 | 1.08 | 1.08 | 1.08 | - | **0.00** | - | **disputed** | `lizard` |
+| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.04 | 0.25 | 1.08 | 6.51 | 1.08 | - | 1.00* | - | yes | `contabo` |
+| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.04 | 0.25 | 1.09 | 6.55 | 1.09 | - | 1.00* | - | yes | `gcore` |
+| 18 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 7.49 | 1.25 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 19 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.04 | 0.30 | 1.29 | 7.73 | 1.29 | - | 1.00* | - | **no** | `moonshot-kimi` |
 | 20 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.04 | 0.31 | 1.32 | 7.89 | 1.32 | - | 1.00 | - | yes | `upstash-box` |
-| 21 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.05 | 0.33 | 1.40 | 8.39 | 1.40 | - | 1.00 | - | yes | `netcup` |
-| 22 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.05 | 0.34 | 1.44 | 8.64 | 1.44 | - | 1.00 | - | yes | `verda` |
-| 23 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.05 | 0.36 | 1.55 | 9.29 | 1.55 | - | 1.00 | - | yes | `ovhcloud` |
-| 24 | [machine0](https://machine0.io/) | 0.0130 | 0.05 | 0.36 | 1.56 | 9.36 | 1.56 | - | 1.00 | - | yes | `machine0` |
-| 25 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.06 | 0.39 | 1.69 | 10.15 | 1.69 | - | 1.00 | - | yes | `alibaba-ecs` |
+| 21 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.05 | 0.33 | 1.40 | 8.39 | 1.40 | - | 1.00* | - | yes | `netcup` |
+| 22 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.05 | 0.34 | 1.44 | 8.64 | 1.44 | - | 1.00* | - | yes | `verda` |
+| 23 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.05 | 0.36 | 1.55 | 9.29 | 1.55 | - | 1.00* | - | yes | `ovhcloud` |
+| 24 | [machine0](https://machine0.io/) | 0.0130 | 0.05 | 0.36 | 1.56 | 1.56 | 1.56 | - | **0.00** | - | yes | `machine0` |
+| 25 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.06 | 0.39 | 1.69 | 10.15 | 1.69 | - | 1.00* | - | yes | `alibaba-ecs` |
 
 _181 more at this duty cycle; the full rank is table C._
 
@@ -316,31 +316,31 @@ _181 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.12 | 0.81 | 0.00 | 8.28 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.01 | 0.05 | 0.20 | 0.49 | 0.20 | - | 1.00 | - | yes | `scaleway` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.02 | 0.14 | 0.62 | 1.48 | 0.62 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.05 | 0.36 | 1.56 | 3.75 | 1.56 | - | 1.00 | - | yes | `upcloud` |
-| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.05 | 0.38 | 1.64 | 3.95 | 1.64 | - | 1.00 | - | yes | `kamatera` |
-| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.07 | 0.46 | 1.97 | 4.72 | 1.97 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.07 | 0.48 | 2.04 | 4.90 | 2.04 | - | 1.00 | - | yes | `zipbox` |
-| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.07 | 0.52 | 2.22 | 5.33 | 2.22 | - | 1.00 | - | yes | `vultr` |
-| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.07 | 0.52 | 2.23 | 5.36 | 2.23 | - | 1.00 | - | yes | `civo` |
-| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.07 | 0.53 | 2.25 | 5.40 | 2.25 | - | 1.00 | - | yes | `linode` |
-| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.08 | 0.55 | 2.38 | 5.70 | 0.00 | **$5.22 covers it** | 1.00 | - | yes | `google-cloud-run` |
-| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.08 | 0.56 | 2.39 | 5.73 | 2.39 | - | 1.00 | - | yes | `ionos` |
-| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.08 | 0.57 | 2.45 | 5.89 | 2.45 | - | 1.00 | - | yes | `kakao-cloud` |
-| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.09 | 0.63 | 2.68 | 6.43 | 2.68 | - | 1.00 | - | yes | `digitalocean` |
-| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.09 | 0.63 | 2.70 | 2.70 | 2.70 | - | 0.00 | - | **disputed** | `lizard` |
-| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.09 | 0.63 | 2.71 | 6.51 | 2.71 | - | 1.00 | - | yes | `contabo` |
-| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.09 | 0.64 | 2.73 | 6.55 | 2.73 | - | 1.00 | - | yes | `gcore` |
-| 18 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 7.49 | 3.12 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 19 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.11 | 0.75 | 3.22 | 7.73 | 3.22 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.12 | 0.81 | 0.00 | 8.28 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.01 | 0.05 | 0.20 | 0.49 | 0.20 | - | 1.00* | - | yes | `scaleway` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.02 | 0.14 | 0.62 | 1.48 | 0.62 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.05 | 0.36 | 1.56 | 3.75 | 1.56 | - | 1.00* | - | yes | `upcloud` |
+| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.05 | 0.38 | 1.64 | 3.95 | 1.64 | - | 1.00* | - | yes | `kamatera` |
+| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.07 | 0.46 | 1.97 | 4.72 | 1.97 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.07 | 0.48 | 2.04 | 2.04 | 2.04 | - | **0.00** | - | yes | `zipbox` |
+| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.07 | 0.52 | 2.22 | 5.33 | 2.22 | - | 1.00* | - | yes | `vultr` |
+| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.07 | 0.52 | 2.23 | 5.36 | 2.23 | - | 1.00* | - | yes | `civo` |
+| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.07 | 0.53 | 2.25 | 5.40 | 2.25 | - | 1.00* | - | yes | `linode` |
+| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.08 | 0.55 | 2.38 | 5.70 | 0.00 | **$5.22 covers it** | 1.00* | - | yes | `google-cloud-run` |
+| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.08 | 0.56 | 2.39 | 5.73 | 2.39 | - | 1.00* | - | yes | `ionos` |
+| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.08 | 0.57 | 2.45 | 5.89 | 2.45 | - | 1.00* | - | yes | `kakao-cloud` |
+| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.09 | 0.63 | 2.68 | 6.43 | 2.68 | - | 1.00* | - | yes | `digitalocean` |
+| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.09 | 0.63 | 2.70 | 2.70 | 2.70 | - | **0.00** | - | **disputed** | `lizard` |
+| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.09 | 0.63 | 2.71 | 6.51 | 2.71 | - | 1.00* | - | yes | `contabo` |
+| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.09 | 0.64 | 2.73 | 6.55 | 2.73 | - | 1.00* | - | yes | `gcore` |
+| 18 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 7.49 | 3.12 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 19 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.11 | 0.75 | 3.22 | 7.73 | 3.22 | - | 1.00* | - | **no** | `moonshot-kimi` |
 | 20 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.11 | 0.77 | 3.29 | 7.89 | 3.29 | - | 1.00 | - | yes | `upstash-box` |
-| 21 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.12 | 0.82 | 3.50 | 8.39 | 3.50 | - | 1.00 | - | yes | `netcup` |
-| 22 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.12 | 0.84 | 3.60 | 8.64 | 3.60 | - | 1.00 | - | yes | `verda` |
-| 23 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.13 | 0.90 | 3.87 | 9.29 | 3.87 | - | 1.00 | - | yes | `ovhcloud` |
-| 24 | [machine0](https://machine0.io/) | 0.0130 | 0.13 | 0.91 | 3.90 | 9.36 | 3.90 | - | 1.00 | - | yes | `machine0` |
-| 25 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.14 | 0.99 | 4.23 | 10.15 | 4.23 | - | 1.00 | - | yes | `alibaba-ecs` |
+| 21 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.12 | 0.82 | 3.50 | 8.39 | 3.50 | - | 1.00* | - | yes | `netcup` |
+| 22 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.12 | 0.84 | 3.60 | 8.64 | 3.60 | - | 1.00* | - | yes | `verda` |
+| 23 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.13 | 0.90 | 3.87 | 9.29 | 3.87 | - | 1.00* | - | yes | `ovhcloud` |
+| 24 | [machine0](https://machine0.io/) | 0.0130 | 0.13 | 0.91 | 3.90 | 3.90 | 3.90 | - | **0.00** | - | yes | `machine0` |
+| 25 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.14 | 0.99 | 4.23 | 10.15 | 4.23 | - | 1.00* | - | yes | `alibaba-ecs` |
 
 _181 more at this duty cycle; the full rank is table C._
 
@@ -360,31 +360,31 @@ _181 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.28 | 1.93 | 0.00 | 8.28 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.02 | 0.11 | 0.49 | 0.49 | 0.49 | - | 1.00 | - | yes | `scaleway` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.05 | 0.35 | 1.48 | 1.48 | 1.48 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.12 | 0.88 | 3.75 | 3.75 | 3.75 | - | 1.00 | - | yes | `upcloud` |
-| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.13 | 0.92 | 3.95 | 3.95 | 3.95 | - | 1.00 | - | yes | `kamatera` |
-| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.16 | 1.10 | 4.72 | 4.72 | 4.72 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.16 | 1.14 | 4.90 | 4.90 | 4.90 | - | 1.00 | - | yes | `zipbox` |
-| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.18 | 1.24 | 5.33 | 5.33 | 5.33 | - | 1.00 | - | yes | `vultr` |
-| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.18 | 1.25 | 5.36 | 5.36 | 5.36 | - | 1.00 | - | yes | `civo` |
-| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.18 | 1.26 | 5.40 | 5.40 | 5.40 | - | 1.00 | - | yes | `linode` |
-| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.19 | 1.33 | 5.70 | 5.70 | 0.48 | $5.22 of it | 1.00 | - | yes | `google-cloud-run` |
-| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.19 | 1.34 | 5.73 | 5.73 | 5.73 | - | 1.00 | - | yes | `ionos` |
-| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.20 | 1.37 | 5.89 | 5.89 | 5.89 | - | 1.00 | - | yes | `kakao-cloud` |
-| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.21 | 1.50 | 6.43 | 6.43 | 6.43 | - | 1.00 | - | yes | `digitalocean` |
-| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.22 | 1.51 | 6.48 | 6.48 | 6.48 | - | 0.00 | - | **disputed** | `lizard` |
-| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.22 | 1.52 | 6.51 | 6.51 | 6.51 | - | 1.00 | - | yes | `contabo` |
-| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.22 | 1.53 | 6.55 | 6.55 | 6.55 | - | 1.00 | - | yes | `gcore` |
-| 18 | [Fly.io Machines](https://fly.io/pricing) | 0.0093 | 0.22 | 1.56 | 6.70 | 6.70 | 6.70 | - | 1.00 | $5 | yes | `fly-machines` |
-| 19 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | 7.49 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 20 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.26 | 1.80 | 7.73 | 7.73 | 7.73 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0115 | 0.28 | 1.93 | 0.00 | 8.28 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0007 | 0.02 | 0.11 | 0.49 | 0.49 | 0.49 | - | 1.00* | - | yes | `scaleway` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0021 | 0.05 | 0.35 | 1.48 | 1.48 | 1.48 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [UpCloud](https://upcloud.com/pricing/) | 0.0052 | 0.12 | 0.88 | 3.75 | 3.75 | 3.75 | - | 1.00* | - | yes | `upcloud` |
+| 5 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0055 | 0.13 | 0.92 | 3.95 | 3.95 | 3.95 | - | 1.00* | - | yes | `kamatera` |
+| 6 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0066 | 0.16 | 1.10 | 4.72 | 4.72 | 4.72 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0068 | 0.16 | 1.14 | 4.90 | 4.90 | 4.90 | - | **0.00** | - | yes | `zipbox` |
+| 8 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0074 | 0.18 | 1.24 | 5.33 | 5.33 | 5.33 | - | 1.00* | - | yes | `vultr` |
+| 9 | [Civo Compute](https://www.civo.com/pricing) | 0.0074 | 0.18 | 1.25 | 5.36 | 5.36 | 5.36 | - | 1.00* | - | yes | `civo` |
+| 10 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0075 | 0.18 | 1.26 | 5.40 | 5.40 | 5.40 | - | 1.00* | - | yes | `linode` |
+| 11 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0079 | 0.19 | 1.33 | 5.70 | 5.70 | 0.48 | $5.22 of it | 1.00* | - | yes | `google-cloud-run` |
+| 12 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.19 | 1.34 | 5.73 | 5.73 | 5.73 | - | 1.00* | - | yes | `ionos` |
+| 13 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.20 | 1.37 | 5.89 | 5.89 | 5.89 | - | 1.00* | - | yes | `kakao-cloud` |
+| 14 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.21 | 1.50 | 6.43 | 6.43 | 6.43 | - | 1.00* | - | yes | `digitalocean` |
+| 15 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.22 | 1.51 | 6.48 | 6.48 | 6.48 | - | **0.00** | - | **disputed** | `lizard` |
+| 16 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.22 | 1.52 | 6.51 | 6.51 | 6.51 | - | 1.00* | - | yes | `contabo` |
+| 17 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.22 | 1.53 | 6.55 | 6.55 | 6.55 | - | 1.00* | - | yes | `gcore` |
+| 18 | [Fly.io Machines](https://fly.io/pricing) | 0.0093 | 0.22 | 1.56 | 6.70 | 6.70 | 6.70 | - | 1.00* | $5 | yes | `fly-machines` |
+| 19 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | 7.49 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 20 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.26 | 1.80 | 7.73 | 7.73 | 7.73 | - | 1.00* | - | **no** | `moonshot-kimi` |
 | 21 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.26 | 1.84 | 7.89 | 7.89 | 7.89 | - | 1.00 | - | yes | `upstash-box` |
 | 22 | [Zeabur](https://zeabur.com/pricing) | 0.0041 | 0.10 | 0.69 | 7.96 | 2.96 | 7.96 | - | 1.00 | - | **no** | `zeabur` |
-| 23 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.28 | 1.96 | 8.39 | 8.39 | 8.39 | - | 1.00 | - | yes | `netcup` |
-| 24 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.29 | 2.02 | 8.64 | 8.64 | 8.64 | - | 1.00 | - | yes | `verda` |
-| 25 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.31 | 2.17 | 9.29 | 9.29 | 9.29 | - | 1.00 | - | yes | `ovhcloud` |
+| 23 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.28 | 1.96 | 8.39 | 8.39 | 8.39 | - | 1.00* | - | yes | `netcup` |
+| 24 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.29 | 2.02 | 8.64 | 8.64 | 8.64 | - | 1.00* | - | yes | `verda` |
+| 25 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.31 | 2.17 | 9.29 | 9.29 | 9.29 | - | 1.00* | - | yes | `ovhcloud` |
 
 _181 more at this duty cycle; the full rank is table C._
 
@@ -406,31 +406,31 @@ _181 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.03 | 0.18 | 0.00 | 18.72 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.01 | 0.04 | 0.18 | 4.34 | 0.18 | - | 1.00 | - | yes | `agent-37` |
-| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.01 | 0.06 | 0.27 | 0.27 | 0.27 | - | 0.00 | - | **disputed** | `lizard` |
-| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.01 | 0.06 | 0.27 | 6.51 | 0.27 | - | 1.00 | - | yes | `contabo` |
-| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 7.49 | 0.31 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.03 | 0.18 | 0.00 | 18.72 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.01 | 0.04 | 0.18 | 4.34 | 0.18 | - | 1.00* | - | yes | `agent-37` |
+| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.01 | 0.06 | 0.27 | 0.27 | 0.27 | - | **0.00** | - | **disputed** | `lizard` |
+| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.01 | 0.06 | 0.27 | 6.51 | 0.27 | - | 1.00* | - | yes | `contabo` |
+| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 7.49 | 0.31 | - | 1.00* | - | yes | `hetzner-cloud` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.01 | 0.08 | 0.33 | 7.89 | 0.33 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.01 | 0.08 | 0.35 | 8.39 | 0.35 | - | 1.00 | - | yes | `netcup` |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.01 | 0.10 | 0.41 | 9.86 | 0.41 | - | 1.00 | - | yes | `zipbox` |
-| 9 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.01 | 0.10 | 0.44 | 10.65 | 0.44 | - | 1.00 | - | yes | `ionos` |
-| 10 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.02 | 0.12 | 0.53 | 12.78 | 0.53 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 11 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.02 | 0.14 | 0.58 | 13.92 | 0.58 | - | 1.00 | - | yes | `gcore` |
-| 12 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.02 | 0.14 | 0.60 | 14.40 | 0.60 | - | 1.00 | - | yes | `shellbox` |
-| 13 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.02 | 0.15 | 0.62 | 15.00 | 0.62 | - | 1.00 | - | yes | `upcloud` |
-| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.02 | 0.16 | 0.69 | 16.54 | 0.69 | - | 1.00 | - | yes | `scaleway` |
-| 15 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.02 | 0.17 | 0.72 | 17.28 | 0.72 | - | 1.00 | - | yes | `verda` |
-| 16 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.02 | 0.17 | 0.74 | 17.81 | 0.74 | - | 1.00 | - | **no** | `cube` |
-| 17 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.03 | 0.18 | 0.77 | 18.43 | 0.77 | - | 1.00 | - | yes | `ovhcloud` |
-| 18 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.03 | 0.19 | 0.82 | 19.73 | 0.82 | - | 1.00 | - | yes | `kamatera` |
-| 19 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.03 | 0.21 | 0.89 | 21.41 | 0.00 | **$5.22 covers it** | 1.00 | - | yes | `google-cloud-run` |
-| 20 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.03 | 0.21 | 0.89 | 21.43 | 0.89 | - | 1.00 | - | yes | `civo` |
-| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.03 | 0.21 | 0.89 | 21.46 | 0.89 | - | 1.00 | - | yes | `vultr` |
-| 22 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.03 | 0.22 | 0.94 | 22.46 | 0.94 | - | 1.00 | - | yes | `ubicloud` |
-| 23 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0326 | 0.03 | 0.23 | 0.98 | 23.44 | 0.98 | - | 1.00 | - | yes | `kakao-cloud` |
-| 24 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0328 | 0.03 | 0.23 | 0.98 | 23.59 | 0.98 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 25 | [Google Compute Engine (Windows Server)](https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing) | 0.0335 | 0.03 | 0.23 | 1.01 | 24.12 | 1.01 | - | 1.00 | - | yes | `gcp-windows` |
+| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.01 | 0.08 | 0.35 | 8.39 | 0.35 | - | 1.00* | - | yes | `netcup` |
+| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.01 | 0.10 | 0.41 | 0.41 | 0.41 | - | **0.00** | - | yes | `zipbox` |
+| 9 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.01 | 0.10 | 0.44 | 10.65 | 0.44 | - | 1.00* | - | yes | `ionos` |
+| 10 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.02 | 0.12 | 0.53 | 12.78 | 0.53 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 11 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.02 | 0.14 | 0.58 | 13.92 | 0.58 | - | 1.00* | - | yes | `gcore` |
+| 12 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.02 | 0.14 | 0.60 | 14.40 | 0.60 | - | 1.00* | - | yes | `shellbox` |
+| 13 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.02 | 0.15 | 0.62 | 15.00 | 0.62 | - | 1.00* | - | yes | `upcloud` |
+| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.02 | 0.16 | 0.69 | 16.54 | 0.69 | - | 1.00* | - | yes | `scaleway` |
+| 15 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.02 | 0.17 | 0.72 | 17.28 | 0.72 | - | 1.00* | - | yes | `verda` |
+| 16 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.02 | 0.17 | 0.74 | 17.81 | 0.74 | - | 1.00* | - | **no** | `cube` |
+| 17 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.03 | 0.18 | 0.77 | 18.43 | 0.77 | - | 1.00* | - | yes | `ovhcloud` |
+| 18 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.03 | 0.19 | 0.82 | 19.73 | 0.82 | - | 1.00* | - | yes | `kamatera` |
+| 19 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.03 | 0.21 | 0.89 | 21.41 | 0.00 | **$5.22 covers it** | 1.00* | - | yes | `google-cloud-run` |
+| 20 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.03 | 0.21 | 0.89 | 21.43 | 0.89 | - | 1.00* | - | yes | `civo` |
+| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.03 | 0.21 | 0.89 | 21.46 | 0.89 | - | 1.00* | - | yes | `vultr` |
+| 22 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.03 | 0.22 | 0.94 | 22.46 | 0.94 | - | 1.00* | - | yes | `ubicloud` |
+| 23 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0326 | 0.03 | 0.23 | 0.98 | 23.44 | 0.98 | - | 1.00* | - | yes | `kakao-cloud` |
+| 24 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0328 | 0.03 | 0.23 | 0.98 | 23.59 | 0.98 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 25 | [Google Compute Engine (Windows Server)](https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing) | 0.0335 | 0.03 | 0.23 | 1.01 | 24.12 | 1.01 | - | 1.00* | - | yes | `gcp-windows` |
 
 _177 more at this duty cycle; the full rank is table C._
 
@@ -450,31 +450,31 @@ _177 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.10 | 0.73 | 0.00 | 18.72 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.02 | 0.17 | 0.72 | 4.34 | 0.72 | - | 1.00 | - | yes | `agent-37` |
-| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.04 | 0.25 | 1.08 | 1.08 | 1.08 | - | 0.00 | - | **disputed** | `lizard` |
-| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.04 | 0.25 | 1.08 | 6.51 | 1.08 | - | 1.00 | - | yes | `contabo` |
-| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 7.49 | 1.25 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.10 | 0.73 | 0.00 | 18.72 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.02 | 0.17 | 0.72 | 4.34 | 0.72 | - | 1.00* | - | yes | `agent-37` |
+| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.04 | 0.25 | 1.08 | 1.08 | 1.08 | - | **0.00** | - | **disputed** | `lizard` |
+| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.04 | 0.25 | 1.08 | 6.51 | 1.08 | - | 1.00* | - | yes | `contabo` |
+| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 7.49 | 1.25 | - | 1.00* | - | yes | `hetzner-cloud` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.04 | 0.31 | 1.32 | 7.89 | 1.32 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.05 | 0.33 | 1.40 | 8.39 | 1.40 | - | 1.00 | - | yes | `netcup` |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.05 | 0.38 | 1.64 | 9.86 | 1.64 | - | 1.00 | - | yes | `zipbox` |
-| 9 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.06 | 0.41 | 1.77 | 10.65 | 1.77 | - | 1.00 | - | yes | `ionos` |
-| 10 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.07 | 0.50 | 2.13 | 12.78 | 2.13 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 11 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.08 | 0.54 | 2.32 | 13.92 | 2.32 | - | 1.00 | - | yes | `gcore` |
-| 12 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.08 | 0.56 | 2.40 | 14.40 | 2.40 | - | 1.00 | - | yes | `shellbox` |
-| 13 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.08 | 0.58 | 2.50 | 15.00 | 2.50 | - | 1.00 | - | yes | `upcloud` |
-| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.09 | 0.64 | 2.76 | 16.54 | 2.76 | - | 1.00 | - | yes | `scaleway` |
-| 15 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.10 | 0.67 | 2.88 | 17.28 | 2.88 | - | 1.00 | - | yes | `verda` |
-| 16 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.10 | 0.69 | 2.97 | 17.81 | 2.97 | - | 1.00 | - | **no** | `cube` |
-| 17 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.10 | 0.72 | 3.07 | 18.43 | 3.07 | - | 1.00 | - | yes | `ovhcloud` |
-| 18 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.11 | 0.77 | 3.29 | 19.73 | 3.29 | - | 1.00 | - | yes | `kamatera` |
-| 19 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.12 | 0.83 | 3.57 | 21.41 | 0.00 | **$5.22 covers it** | 1.00 | - | yes | `google-cloud-run` |
-| 20 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.12 | 0.83 | 3.57 | 21.43 | 3.57 | - | 1.00 | - | yes | `civo` |
-| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.12 | 0.83 | 3.58 | 21.46 | 3.58 | - | 1.00 | - | yes | `vultr` |
-| 22 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.12 | 0.87 | 3.74 | 22.46 | 3.74 | - | 1.00 | - | yes | `ubicloud` |
-| 23 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0326 | 0.13 | 0.91 | 3.91 | 23.44 | 3.91 | - | 1.00 | - | yes | `kakao-cloud` |
-| 24 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0328 | 0.13 | 0.92 | 3.93 | 23.59 | 3.93 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 25 | [Google Compute Engine (Windows Server)](https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing) | 0.0335 | 0.13 | 0.94 | 4.02 | 24.12 | 4.02 | - | 1.00 | - | yes | `gcp-windows` |
+| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.05 | 0.33 | 1.40 | 8.39 | 1.40 | - | 1.00* | - | yes | `netcup` |
+| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.05 | 0.38 | 1.64 | 1.64 | 1.64 | - | **0.00** | - | yes | `zipbox` |
+| 9 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.06 | 0.41 | 1.77 | 10.65 | 1.77 | - | 1.00* | - | yes | `ionos` |
+| 10 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.07 | 0.50 | 2.13 | 12.78 | 2.13 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 11 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.08 | 0.54 | 2.32 | 13.92 | 2.32 | - | 1.00* | - | yes | `gcore` |
+| 12 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.08 | 0.56 | 2.40 | 14.40 | 2.40 | - | 1.00* | - | yes | `shellbox` |
+| 13 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.08 | 0.58 | 2.50 | 15.00 | 2.50 | - | 1.00* | - | yes | `upcloud` |
+| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.09 | 0.64 | 2.76 | 16.54 | 2.76 | - | 1.00* | - | yes | `scaleway` |
+| 15 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.10 | 0.67 | 2.88 | 17.28 | 2.88 | - | 1.00* | - | yes | `verda` |
+| 16 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.10 | 0.69 | 2.97 | 17.81 | 2.97 | - | 1.00* | - | **no** | `cube` |
+| 17 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.10 | 0.72 | 3.07 | 18.43 | 3.07 | - | 1.00* | - | yes | `ovhcloud` |
+| 18 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.11 | 0.77 | 3.29 | 19.73 | 3.29 | - | 1.00* | - | yes | `kamatera` |
+| 19 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.12 | 0.83 | 3.57 | 21.41 | 0.00 | **$5.22 covers it** | 1.00* | - | yes | `google-cloud-run` |
+| 20 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.12 | 0.83 | 3.57 | 21.43 | 3.57 | - | 1.00* | - | yes | `civo` |
+| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.12 | 0.83 | 3.58 | 21.46 | 3.58 | - | 1.00* | - | yes | `vultr` |
+| 22 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.12 | 0.87 | 3.74 | 22.46 | 3.74 | - | 1.00* | - | yes | `ubicloud` |
+| 23 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0326 | 0.13 | 0.91 | 3.91 | 23.44 | 3.91 | - | 1.00* | - | yes | `kakao-cloud` |
+| 24 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0328 | 0.13 | 0.92 | 3.93 | 23.59 | 3.93 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 25 | [Google Compute Engine (Windows Server)](https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing) | 0.0335 | 0.13 | 0.94 | 4.02 | 24.12 | 4.02 | - | 1.00* | - | yes | `gcp-windows` |
 
 _177 more at this duty cycle; the full rank is table C._
 
@@ -494,31 +494,31 @@ _177 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.26 | 1.82 | 0.00 | 18.72 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.06 | 0.42 | 1.81 | 4.34 | 1.81 | - | 1.00 | - | yes | `agent-37` |
-| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.09 | 0.63 | 2.70 | 2.70 | 2.70 | - | 0.00 | - | **disputed** | `lizard` |
-| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.09 | 0.63 | 2.71 | 6.51 | 2.71 | - | 1.00 | - | yes | `contabo` |
-| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 7.49 | 3.12 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.26 | 1.82 | 0.00 | 18.72 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.06 | 0.42 | 1.81 | 4.34 | 1.81 | - | 1.00* | - | yes | `agent-37` |
+| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.09 | 0.63 | 2.70 | 2.70 | 2.70 | - | **0.00** | - | **disputed** | `lizard` |
+| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.09 | 0.63 | 2.71 | 6.51 | 2.71 | - | 1.00* | - | yes | `contabo` |
+| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 7.49 | 3.12 | - | 1.00* | - | yes | `hetzner-cloud` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.11 | 0.77 | 3.29 | 7.89 | 3.29 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.12 | 0.82 | 3.50 | 8.39 | 3.50 | - | 1.00 | - | yes | `netcup` |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.14 | 0.96 | 4.11 | 9.86 | 4.11 | - | 1.00 | - | yes | `zipbox` |
-| 9 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.15 | 1.04 | 4.44 | 10.65 | 4.44 | - | 1.00 | - | yes | `ionos` |
-| 10 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.18 | 1.24 | 5.33 | 12.78 | 5.33 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 11 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.19 | 1.35 | 5.80 | 13.92 | 5.80 | - | 1.00 | - | yes | `gcore` |
-| 12 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.20 | 1.40 | 6.00 | 14.40 | 6.00 | - | 1.00 | - | yes | `shellbox` |
-| 13 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.21 | 1.46 | 6.25 | 15.00 | 6.25 | - | 1.00 | - | yes | `upcloud` |
+| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.12 | 0.82 | 3.50 | 8.39 | 3.50 | - | 1.00* | - | yes | `netcup` |
+| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.14 | 0.96 | 4.11 | 4.11 | 4.11 | - | **0.00** | - | yes | `zipbox` |
+| 9 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.15 | 1.04 | 4.44 | 10.65 | 4.44 | - | 1.00* | - | yes | `ionos` |
+| 10 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.18 | 1.24 | 5.33 | 12.78 | 5.33 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 11 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.19 | 1.35 | 5.80 | 13.92 | 5.80 | - | 1.00* | - | yes | `gcore` |
+| 12 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.20 | 1.40 | 6.00 | 14.40 | 6.00 | - | 1.00* | - | yes | `shellbox` |
+| 13 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.21 | 1.46 | 6.25 | 15.00 | 6.25 | - | 1.00* | - | yes | `upcloud` |
 | 14 | [Zeabur](https://zeabur.com/pricing) | 0.0055 | 0.05 | 0.38 | 6.64 | 3.95 | 6.64 | - | 1.00 | - | **no** | `zeabur` |
-| 15 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.23 | 1.61 | 6.89 | 16.54 | 6.89 | - | 1.00 | - | yes | `scaleway` |
-| 16 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.24 | 1.68 | 7.20 | 17.28 | 7.20 | - | 1.00 | - | yes | `verda` |
-| 17 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.25 | 1.73 | 7.42 | 17.81 | 7.42 | - | 1.00 | - | **no** | `cube` |
-| 18 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.26 | 1.79 | 7.68 | 18.43 | 7.68 | - | 1.00 | - | yes | `ovhcloud` |
-| 19 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.27 | 1.92 | 8.22 | 19.73 | 8.22 | - | 1.00 | - | yes | `kamatera` |
-| 20 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.30 | 2.08 | 8.92 | 21.41 | 3.70 | $5.22 of it | 1.00 | - | yes | `google-cloud-run` |
-| 21 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.30 | 2.08 | 8.93 | 21.43 | 8.93 | - | 1.00 | - | yes | `civo` |
-| 22 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.30 | 2.09 | 8.94 | 21.46 | 8.94 | - | 1.00 | - | yes | `vultr` |
-| 23 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.31 | 2.18 | 9.36 | 22.46 | 9.36 | - | 1.00 | - | yes | `ubicloud` |
-| 24 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0326 | 0.33 | 2.28 | 9.77 | 23.44 | 9.77 | - | 1.00 | - | yes | `kakao-cloud` |
-| 25 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0328 | 0.33 | 2.29 | 9.83 | 23.59 | 9.83 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
+| 15 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.23 | 1.61 | 6.89 | 16.54 | 6.89 | - | 1.00* | - | yes | `scaleway` |
+| 16 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.24 | 1.68 | 7.20 | 17.28 | 7.20 | - | 1.00* | - | yes | `verda` |
+| 17 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.25 | 1.73 | 7.42 | 17.81 | 7.42 | - | 1.00* | - | **no** | `cube` |
+| 18 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.26 | 1.79 | 7.68 | 18.43 | 7.68 | - | 1.00* | - | yes | `ovhcloud` |
+| 19 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.27 | 1.92 | 8.22 | 19.73 | 8.22 | - | 1.00* | - | yes | `kamatera` |
+| 20 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.30 | 2.08 | 8.92 | 21.41 | 3.70 | $5.22 of it | 1.00* | - | yes | `google-cloud-run` |
+| 21 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.30 | 2.08 | 8.93 | 21.43 | 8.93 | - | 1.00* | - | yes | `civo` |
+| 22 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.30 | 2.09 | 8.94 | 21.46 | 8.94 | - | 1.00* | - | yes | `vultr` |
+| 23 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.31 | 2.18 | 9.36 | 22.46 | 9.36 | - | 1.00* | - | yes | `ubicloud` |
+| 24 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0326 | 0.33 | 2.28 | 9.77 | 23.44 | 9.77 | - | 1.00* | - | yes | `kakao-cloud` |
+| 25 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0328 | 0.33 | 2.29 | 9.83 | 23.59 | 9.83 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
 
 _177 more at this duty cycle; the full rank is table C._
 
@@ -538,31 +538,31 @@ _177 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.62 | 4.37 | 0.00 | 18.72 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.14 | 1.01 | 4.34 | 4.34 | 4.34 | - | 1.00 | - | yes | `agent-37` |
-| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.22 | 1.51 | 6.48 | 6.48 | 6.48 | - | 0.00 | - | **disputed** | `lizard` |
-| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.22 | 1.52 | 6.51 | 6.51 | 6.51 | - | 1.00 | - | yes | `contabo` |
-| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | 7.49 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0260 | 0.62 | 4.37 | 0.00 | 18.72 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.14 | 1.01 | 4.34 | 4.34 | 4.34 | - | 1.00* | - | yes | `agent-37` |
+| 3 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.22 | 1.51 | 6.48 | 6.48 | 6.48 | - | **0.00** | - | **disputed** | `lizard` |
+| 4 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.22 | 1.52 | 6.51 | 6.51 | 6.51 | - | 1.00* | - | yes | `contabo` |
+| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | 7.49 | - | 1.00* | - | yes | `hetzner-cloud` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.26 | 1.84 | 7.89 | 7.89 | 7.89 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.28 | 1.96 | 8.39 | 8.39 | 8.39 | - | 1.00 | - | yes | `netcup` |
+| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 0.28 | 1.96 | 8.39 | 8.39 | 8.39 | - | 1.00* | - | yes | `netcup` |
 | 8 | [Zeabur](https://zeabur.com/pricing) | 0.0055 | 0.13 | 0.92 | 8.95 | 3.95 | 8.95 | - | 1.00 | - | **no** | `zeabur` |
-| 9 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.33 | 2.30 | 9.86 | 9.86 | 9.86 | - | 1.00 | - | yes | `zipbox` |
-| 10 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.35 | 2.48 | 10.65 | 10.65 | 10.65 | - | 1.00 | - | yes | `ionos` |
-| 11 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.43 | 2.98 | 12.78 | 12.78 | 12.78 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 12 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.46 | 3.25 | 13.92 | 13.92 | 13.92 | - | 1.00 | - | yes | `gcore` |
-| 13 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.48 | 3.36 | 14.40 | 14.40 | 14.40 | - | 1.00 | - | yes | `shellbox` |
-| 14 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.50 | 3.50 | 15.00 | 15.00 | 15.00 | - | 1.00 | - | yes | `upcloud` |
-| 15 | [Hugging Face Jobs (hf-sandbox backend)](https://huggingface.co/docs/hub/en/jobs-pricing) | 0.0100 | 0.24 | 1.68 | 16.20 | 7.20 | 16.20 | - | 1.00 | - | **no** | `huggingface-jobs` |
-| 16 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.55 | 3.86 | 16.54 | 16.54 | 16.54 | - | 1.00 | - | yes | `scaleway` |
-| 17 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.58 | 4.03 | 17.28 | 17.28 | 17.28 | - | 1.00 | - | yes | `verda` |
-| 18 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.59 | 4.16 | 17.81 | 17.81 | 17.81 | - | 1.00 | - | **no** | `cube` |
-| 19 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.61 | 4.30 | 18.43 | 18.43 | 18.43 | - | 1.00 | - | yes | `ovhcloud` |
-| 20 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.66 | 4.60 | 19.73 | 19.73 | 19.73 | - | 1.00 | - | yes | `kamatera` |
-| 21 | [boat.dev](https://docs.boat.dev/pricing) | 0.0180 | 0.43 | 3.02 | 20.00 | 12.96 | 20.00 | - | 1.00 | $20 | yes | `boat` |
-| 22 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.71 | 5.00 | 21.41 | 21.41 | 16.19 | $5.22 of it | 1.00 | - | yes | `google-cloud-run` |
-| 23 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.71 | 5.00 | 21.43 | 21.43 | 21.43 | - | 1.00 | - | yes | `civo` |
-| 24 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.72 | 5.01 | 21.46 | 21.46 | 21.46 | - | 1.00 | - | yes | `vultr` |
-| 25 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.75 | 5.24 | 22.46 | 22.46 | 22.46 | - | 1.00 | - | yes | `ubicloud` |
+| 9 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.33 | 2.30 | 9.86 | 9.86 | 9.86 | - | **0.00** | - | yes | `zipbox` |
+| 10 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.35 | 2.48 | 10.65 | 10.65 | 10.65 | - | 1.00* | - | yes | `ionos` |
+| 11 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0178 | 0.43 | 2.98 | 12.78 | 12.78 | 12.78 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 12 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.46 | 3.25 | 13.92 | 13.92 | 13.92 | - | 1.00* | - | yes | `gcore` |
+| 13 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.48 | 3.36 | 14.40 | 14.40 | 14.40 | - | 1.00* | - | yes | `shellbox` |
+| 14 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.50 | 3.50 | 15.00 | 15.00 | 15.00 | - | 1.00* | - | yes | `upcloud` |
+| 15 | [Hugging Face Jobs (hf-sandbox backend)](https://huggingface.co/docs/hub/en/jobs-pricing) | 0.0100 | 0.24 | 1.68 | 16.20 | 7.20 | 16.20 | - | **0.00** | - | **no** | `huggingface-jobs` |
+| 16 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | 0.55 | 3.86 | 16.54 | 16.54 | 16.54 | - | 1.00* | - | yes | `scaleway` |
+| 17 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0240 | 0.58 | 4.03 | 17.28 | 17.28 | 17.28 | - | 1.00* | - | yes | `verda` |
+| 18 | [Cube Computer](https://cube.computer/) | 0.0247 | 0.59 | 4.16 | 17.81 | 17.81 | 17.81 | - | 1.00* | - | **no** | `cube` |
+| 19 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0256 | 0.61 | 4.30 | 18.43 | 18.43 | 18.43 | - | 1.00* | - | yes | `ovhcloud` |
+| 20 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0274 | 0.66 | 4.60 | 19.73 | 19.73 | 19.73 | - | 1.00* | - | yes | `kamatera` |
+| 21 | [boat.dev](https://docs.boat.dev/pricing) | 0.0180 | 0.43 | 3.02 | 20.00 | 12.96 | 20.00 | - | 1.00* | $20 | yes | `boat` |
+| 22 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0297 | 0.71 | 5.00 | 21.41 | 21.41 | 16.19 | $5.22 of it | 1.00* | - | yes | `google-cloud-run` |
+| 23 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | 0.71 | 5.00 | 21.43 | 21.43 | 21.43 | - | 1.00* | - | yes | `civo` |
+| 24 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0298 | 0.72 | 5.01 | 21.46 | 21.46 | 21.46 | - | 1.00* | - | yes | `vultr` |
+| 25 | [Ubicloud](https://www.ubicloud.com/docs/about/pricing) | 0.0312 | 0.75 | 5.24 | 22.46 | 22.46 | 22.46 | - | 1.00* | - | yes | `ubicloud` |
 
 _177 more at this duty cycle; the full rank is table C._
 
@@ -584,31 +584,31 @@ _177 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 0.05 | 0.36 | 0.00 | 37.44 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.01 | 0.06 | 0.27 | 6.51 | 0.27 | - | 1.00 | - | yes | `contabo` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.01 | 0.08 | 0.36 | 8.68 | 0.36 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.02 | 0.11 | 0.48 | 11.52 | 0.48 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.02 | 0.15 | 0.63 | 15.16 | 0.63 | - | 1.00 | - | yes | `netcup` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 0.05 | 0.36 | 0.00 | 37.44 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.01 | 0.06 | 0.27 | 6.51 | 0.27 | - | 1.00* | - | yes | `contabo` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.01 | 0.08 | 0.36 | 8.68 | 0.36 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.02 | 0.11 | 0.48 | 11.52 | 0.48 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.02 | 0.15 | 0.63 | 15.16 | 0.63 | - | 1.00* | - | yes | `netcup` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0219 | 0.02 | 0.15 | 0.66 | 15.78 | 0.66 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.03 | 0.19 | 0.82 | 19.66 | 0.82 | - | 1.00 | - | yes | `ionos` |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.03 | 0.19 | 0.82 | 19.73 | 0.82 | - | 1.00 | - | yes | `zipbox` |
-| 9 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.04 | 0.25 | 1.07 | 25.71 | 1.07 | - | 1.00 | - | yes | `upcloud` |
-| 10 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.04 | 0.27 | 1.16 | 27.86 | 1.16 | - | 1.00 | - | yes | `gcore` |
-| 11 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.04 | 0.28 | 1.20 | 28.80 | 1.20 | - | 1.00 | - | yes | `shellbox` |
-| 12 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 0.05 | 0.32 | 1.38 | 33.19 | 1.38 | - | 1.00 | - | yes | `ovhcloud` |
-| 13 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 0.05 | 0.34 | 1.44 | 34.56 | 1.44 | - | 1.00 | - | yes | `verda` |
-| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 0.05 | 0.34 | 1.46 | 35.10 | 1.46 | - | 1.00 | - | yes | `scaleway` |
-| 15 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 0.05 | 0.34 | 1.47 | 35.28 | 1.47 | - | 1.00 | - | yes | `e2e-networks` |
-| 16 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 0.05 | 0.37 | 1.58 | 38.01 | 1.58 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 17 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 0.05 | 0.38 | 1.64 | 39.45 | 1.64 | - | 1.00 | - | yes | `kamatera` |
-| 18 | [Cube Computer](https://cube.computer/) | 0.0560 | 0.06 | 0.39 | 1.68 | 40.34 | 1.68 | - | 1.00 | - | **no** | `cube` |
-| 19 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 0.06 | 0.41 | 1.77 | 42.40 | 1.77 | - | 1.00 | - | yes | `hostinger-vps` |
-| 20 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 0.06 | 0.42 | 1.78 | 42.82 | 0.00 | **$5.22 covers it** | 1.00 | - | yes | `google-cloud-run` |
-| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 0.06 | 0.42 | 1.78 | 42.84 | 1.78 | - | 1.00 | - | yes | `vultr` |
-| 22 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 0.06 | 0.42 | 1.79 | 42.86 | 1.79 | - | 1.00 | - | yes | `civo` |
-| 23 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0655 | 0.07 | 0.46 | 1.97 | 47.16 | 1.97 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 24 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0714 | 0.07 | 0.50 | 2.14 | 51.43 | 2.14 | - | 1.00 | - | yes | `digitalocean` |
-| 25 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0720 | 0.07 | 0.50 | 2.16 | 51.84 | 2.16 | - | 1.00 | - | yes | `linode` |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.03 | 0.19 | 0.82 | 19.66 | 0.82 | - | 1.00* | - | yes | `ionos` |
+| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.03 | 0.19 | 0.82 | 0.82 | 0.82 | - | **0.00** | - | yes | `zipbox` |
+| 9 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.04 | 0.25 | 1.07 | 25.71 | 1.07 | - | 1.00* | - | yes | `upcloud` |
+| 10 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.04 | 0.27 | 1.16 | 27.86 | 1.16 | - | 1.00* | - | yes | `gcore` |
+| 11 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.04 | 0.28 | 1.20 | 28.80 | 1.20 | - | 1.00* | - | yes | `shellbox` |
+| 12 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 0.05 | 0.32 | 1.38 | 33.19 | 1.38 | - | 1.00* | - | yes | `ovhcloud` |
+| 13 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 0.05 | 0.34 | 1.44 | 34.56 | 1.44 | - | 1.00* | - | yes | `verda` |
+| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 0.05 | 0.34 | 1.46 | 35.10 | 1.46 | - | 1.00* | - | yes | `scaleway` |
+| 15 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 0.05 | 0.34 | 1.47 | 35.28 | 1.47 | - | 1.00* | - | yes | `e2e-networks` |
+| 16 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 0.05 | 0.37 | 1.58 | 38.01 | 1.58 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 17 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 0.05 | 0.38 | 1.64 | 39.45 | 1.64 | - | 1.00* | - | yes | `kamatera` |
+| 18 | [Cube Computer](https://cube.computer/) | 0.0560 | 0.06 | 0.39 | 1.68 | 40.34 | 1.68 | - | 1.00* | - | **no** | `cube` |
+| 19 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 0.06 | 0.41 | 1.77 | 42.40 | 1.77 | - | 1.00* | - | yes | `hostinger-vps` |
+| 20 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 0.06 | 0.42 | 1.78 | 42.82 | 0.00 | **$5.22 covers it** | 1.00* | - | yes | `google-cloud-run` |
+| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 0.06 | 0.42 | 1.78 | 42.84 | 1.78 | - | 1.00* | - | yes | `vultr` |
+| 22 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 0.06 | 0.42 | 1.79 | 42.86 | 1.79 | - | 1.00* | - | yes | `civo` |
+| 23 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0655 | 0.07 | 0.46 | 1.97 | 47.16 | 1.97 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 24 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0714 | 0.07 | 0.50 | 2.14 | 51.43 | 2.14 | - | 1.00* | - | yes | `digitalocean` |
+| 25 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0720 | 0.07 | 0.50 | 2.16 | 51.84 | 2.16 | - | 1.00* | - | yes | `linode` |
 
 _172 more at this duty cycle; the full rank is table C._
 
@@ -624,31 +624,31 @@ _172 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 0.21 | 1.46 | 0.00 | 37.44 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.04 | 0.25 | 1.08 | 6.51 | 1.08 | - | 1.00 | - | yes | `contabo` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.05 | 0.34 | 1.45 | 8.68 | 1.45 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.06 | 0.45 | 1.92 | 11.52 | 1.92 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.08 | 0.59 | 2.53 | 15.16 | 2.53 | - | 1.00 | - | yes | `netcup` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 0.21 | 1.46 | 0.00 | 37.44 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.04 | 0.25 | 1.08 | 6.51 | 1.08 | - | 1.00* | - | yes | `contabo` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.05 | 0.34 | 1.45 | 8.68 | 1.45 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.06 | 0.45 | 1.92 | 11.52 | 1.92 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.08 | 0.59 | 2.53 | 15.16 | 2.53 | - | 1.00* | - | yes | `netcup` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0219 | 0.09 | 0.61 | 2.63 | 15.78 | 2.63 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.11 | 0.76 | 3.28 | 19.66 | 3.28 | - | 1.00 | - | yes | `ionos` |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.11 | 0.77 | 3.29 | 19.73 | 3.29 | - | 1.00 | - | yes | `zipbox` |
-| 9 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.14 | 1.00 | 4.29 | 25.71 | 4.29 | - | 1.00 | - | yes | `upcloud` |
-| 10 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.15 | 1.08 | 4.64 | 27.86 | 4.64 | - | 1.00 | - | yes | `gcore` |
-| 11 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.16 | 1.12 | 4.80 | 28.80 | 4.80 | - | 1.00 | - | yes | `shellbox` |
-| 12 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 0.18 | 1.29 | 5.53 | 33.19 | 5.53 | - | 1.00 | - | yes | `ovhcloud` |
-| 13 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 0.19 | 1.34 | 5.76 | 34.56 | 5.76 | - | 1.00 | - | yes | `verda` |
-| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 0.20 | 1.36 | 5.85 | 35.10 | 5.85 | - | 1.00 | - | yes | `scaleway` |
-| 15 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 0.20 | 1.37 | 5.88 | 35.28 | 5.88 | - | 1.00 | - | yes | `e2e-networks` |
-| 16 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 0.21 | 1.48 | 6.34 | 38.01 | 6.34 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 17 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 0.22 | 1.53 | 6.58 | 39.45 | 6.58 | - | 1.00 | - | yes | `kamatera` |
-| 18 | [Cube Computer](https://cube.computer/) | 0.0560 | 0.22 | 1.57 | 6.72 | 40.34 | 6.72 | - | 1.00 | - | **no** | `cube` |
-| 19 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 0.24 | 1.65 | 7.07 | 42.40 | 7.07 | - | 1.00 | - | yes | `hostinger-vps` |
-| 20 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 0.24 | 1.67 | 7.14 | 42.82 | 1.92 | $5.22 of it | 1.00 | - | yes | `google-cloud-run` |
-| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 0.24 | 1.67 | 7.14 | 42.84 | 7.14 | - | 1.00 | - | yes | `vultr` |
-| 22 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 0.24 | 1.67 | 7.14 | 42.86 | 7.14 | - | 1.00 | - | yes | `civo` |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.11 | 0.76 | 3.28 | 19.66 | 3.28 | - | 1.00* | - | yes | `ionos` |
+| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.11 | 0.77 | 3.29 | 3.29 | 3.29 | - | **0.00** | - | yes | `zipbox` |
+| 9 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.14 | 1.00 | 4.29 | 25.71 | 4.29 | - | 1.00* | - | yes | `upcloud` |
+| 10 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.15 | 1.08 | 4.64 | 27.86 | 4.64 | - | 1.00* | - | yes | `gcore` |
+| 11 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.16 | 1.12 | 4.80 | 28.80 | 4.80 | - | 1.00* | - | yes | `shellbox` |
+| 12 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 0.18 | 1.29 | 5.53 | 33.19 | 5.53 | - | 1.00* | - | yes | `ovhcloud` |
+| 13 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 0.19 | 1.34 | 5.76 | 34.56 | 5.76 | - | 1.00* | - | yes | `verda` |
+| 14 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 0.20 | 1.36 | 5.85 | 35.10 | 5.85 | - | 1.00* | - | yes | `scaleway` |
+| 15 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 0.20 | 1.37 | 5.88 | 35.28 | 5.88 | - | 1.00* | - | yes | `e2e-networks` |
+| 16 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 0.21 | 1.48 | 6.34 | 38.01 | 6.34 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 17 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 0.22 | 1.53 | 6.58 | 39.45 | 6.58 | - | 1.00* | - | yes | `kamatera` |
+| 18 | [Cube Computer](https://cube.computer/) | 0.0560 | 0.22 | 1.57 | 6.72 | 40.34 | 6.72 | - | 1.00* | - | **no** | `cube` |
+| 19 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 0.24 | 1.65 | 7.07 | 42.40 | 7.07 | - | 1.00* | - | yes | `hostinger-vps` |
+| 20 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 0.24 | 1.67 | 7.14 | 42.82 | 1.92 | $5.22 of it | 1.00* | - | yes | `google-cloud-run` |
+| 21 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 0.24 | 1.67 | 7.14 | 42.84 | 7.14 | - | 1.00* | - | yes | `vultr` |
+| 22 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 0.24 | 1.67 | 7.14 | 42.86 | 7.14 | - | 1.00* | - | yes | `civo` |
 | 23 | [Zeabur](https://zeabur.com/pricing) | 0.0233 | 0.09 | 0.65 | 7.79 | 16.77 | 7.79 | - | 1.00 | - | **no** | `zeabur` |
-| 24 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0655 | 0.26 | 1.83 | 7.86 | 47.16 | 7.86 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
-| 25 | [Fly.io Machines](https://fly.io/pricing) | 0.0706 | 0.28 | 1.98 | 8.47 | 50.80 | 8.47 | - | 1.00 | $5 | yes | `fly-machines` |
+| 24 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0655 | 0.26 | 1.83 | 7.86 | 47.16 | 7.86 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
+| 25 | [Fly.io Machines](https://fly.io/pricing) | 0.0706 | 0.28 | 1.98 | 8.47 | 50.80 | 8.47 | - | 1.00* | $5 | yes | `fly-machines` |
 
 _172 more at this duty cycle; the full rank is table C._
 
@@ -664,31 +664,31 @@ _172 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 0.52 | 3.64 | 0.00 | 37.44 | 0.00 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.09 | 0.63 | 2.71 | 6.51 | 2.71 | - | 1.00 | - | yes | `contabo` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.12 | 0.84 | 3.62 | 8.68 | 3.62 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.16 | 1.12 | 4.80 | 11.52 | 4.80 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.21 | 1.47 | 6.32 | 15.16 | 6.32 | - | 1.00 | - | yes | `netcup` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 0.52 | 3.64 | 0.00 | 37.44 | 0.00 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.09 | 0.63 | 2.71 | 6.51 | 2.71 | - | 1.00* | - | yes | `contabo` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.12 | 0.84 | 3.62 | 8.68 | 3.62 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.16 | 1.12 | 4.80 | 11.52 | 4.80 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.21 | 1.47 | 6.32 | 15.16 | 6.32 | - | 1.00* | - | yes | `netcup` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0219 | 0.22 | 1.53 | 6.58 | 15.78 | 6.58 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.27 | 1.91 | 8.19 | 19.66 | 8.19 | - | 1.00 | - | yes | `ionos` |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.27 | 1.92 | 8.22 | 19.73 | 8.22 | - | 1.00 | - | yes | `zipbox` |
-| 9 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.36 | 2.50 | 10.71 | 25.71 | 10.71 | - | 1.00 | - | yes | `upcloud` |
-| 10 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.39 | 2.71 | 11.61 | 27.86 | 11.61 | - | 1.00 | - | yes | `gcore` |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.27 | 1.91 | 8.19 | 19.66 | 8.19 | - | 1.00* | - | yes | `ionos` |
+| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.27 | 1.92 | 8.22 | 8.22 | 8.22 | - | **0.00** | - | yes | `zipbox` |
+| 9 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.36 | 2.50 | 10.71 | 25.71 | 10.71 | - | 1.00* | - | yes | `upcloud` |
+| 10 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.39 | 2.71 | 11.61 | 27.86 | 11.61 | - | 1.00* | - | yes | `gcore` |
 | 11 | [Zeabur](https://zeabur.com/pricing) | 0.0233 | 0.23 | 1.63 | 11.99 | 16.77 | 11.99 | - | 1.00 | - | **no** | `zeabur` |
-| 12 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.40 | 2.80 | 12.00 | 28.80 | 12.00 | - | 1.00 | - | yes | `shellbox` |
-| 13 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 0.46 | 3.23 | 13.83 | 33.19 | 13.83 | - | 1.00 | - | yes | `ovhcloud` |
-| 14 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 0.48 | 3.36 | 14.40 | 34.56 | 14.40 | - | 1.00 | - | yes | `verda` |
-| 15 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 0.49 | 3.41 | 14.62 | 35.10 | 14.62 | - | 1.00 | - | yes | `scaleway` |
-| 16 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 0.49 | 3.43 | 14.70 | 35.28 | 14.70 | - | 1.00 | - | yes | `e2e-networks` |
-| 17 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 0.53 | 3.70 | 15.84 | 38.01 | 15.84 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 18 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 0.55 | 3.84 | 16.44 | 39.45 | 16.44 | - | 1.00 | - | yes | `kamatera` |
-| 19 | [Cube Computer](https://cube.computer/) | 0.0560 | 0.56 | 3.92 | 16.81 | 40.34 | 16.81 | - | 1.00 | - | **no** | `cube` |
-| 20 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 0.59 | 4.12 | 17.67 | 42.40 | 17.67 | - | 1.00 | - | yes | `hostinger-vps` |
-| 21 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 0.59 | 4.16 | 17.84 | 42.82 | 12.62 | $5.22 of it | 1.00 | - | yes | `google-cloud-run` |
-| 22 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 0.59 | 4.17 | 17.85 | 42.84 | 17.85 | - | 1.00 | - | yes | `vultr` |
-| 23 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 0.60 | 4.17 | 17.86 | 42.86 | 17.86 | - | 1.00 | - | yes | `civo` |
-| 24 | [Hugging Face Jobs (hf-sandbox backend)](https://huggingface.co/docs/hub/en/jobs-pricing) | 0.0300 | 0.30 | 2.10 | 18.00 | 21.60 | 18.00 | - | 1.00 | - | **no** | `huggingface-jobs` |
-| 25 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0655 | 0.66 | 4.58 | 19.65 | 47.16 | 19.65 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
+| 12 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.40 | 2.80 | 12.00 | 28.80 | 12.00 | - | 1.00* | - | yes | `shellbox` |
+| 13 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 0.46 | 3.23 | 13.83 | 33.19 | 13.83 | - | 1.00* | - | yes | `ovhcloud` |
+| 14 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 0.48 | 3.36 | 14.40 | 34.56 | 14.40 | - | 1.00* | - | yes | `verda` |
+| 15 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 0.49 | 3.41 | 14.62 | 35.10 | 14.62 | - | 1.00* | - | yes | `scaleway` |
+| 16 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 0.49 | 3.43 | 14.70 | 35.28 | 14.70 | - | 1.00* | - | yes | `e2e-networks` |
+| 17 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 0.53 | 3.70 | 15.84 | 38.01 | 15.84 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 18 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 0.55 | 3.84 | 16.44 | 39.45 | 16.44 | - | 1.00* | - | yes | `kamatera` |
+| 19 | [Cube Computer](https://cube.computer/) | 0.0560 | 0.56 | 3.92 | 16.81 | 40.34 | 16.81 | - | 1.00* | - | **no** | `cube` |
+| 20 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 0.59 | 4.12 | 17.67 | 42.40 | 17.67 | - | 1.00* | - | yes | `hostinger-vps` |
+| 21 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 0.59 | 4.16 | 17.84 | 42.82 | 12.62 | $5.22 of it | 1.00* | - | yes | `google-cloud-run` |
+| 22 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 0.59 | 4.17 | 17.85 | 42.84 | 17.85 | - | 1.00* | - | yes | `vultr` |
+| 23 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 0.60 | 4.17 | 17.86 | 42.86 | 17.86 | - | 1.00* | - | yes | `civo` |
+| 24 | [Hugging Face Jobs (hf-sandbox backend)](https://huggingface.co/docs/hub/en/jobs-pricing) | 0.0300 | 0.30 | 2.10 | 18.00 | 9.00 | 18.00 | - | **0.00** | - | **no** | `huggingface-jobs` |
+| 25 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0655 | 0.66 | 4.58 | 19.65 | 47.16 | 19.65 | - | 1.00* | - | yes | `ibm-cloud-vpc` |
 
 _172 more at this duty cycle; the full rank is table C._
 
@@ -696,31 +696,31 @@ _172 more at this duty cycle; the full rank is table C._
 
 | # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 1.25 | 8.74 | 13.80 | 37.44 | 13.80 | - | 1.00 | - | yes | `oracle-cloud` |
-| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.22 | 1.52 | 6.51 | 6.51 | 6.51 | - | 1.00 | - | yes | `contabo` |
-| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.29 | 2.03 | 8.68 | 8.68 | 8.68 | - | 1.00 | - | yes | `agent-37` |
-| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.38 | 2.69 | 11.52 | 11.52 | 11.52 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.51 | 3.54 | 15.16 | 15.16 | 15.16 | - | 1.00 | - | yes | `netcup` |
+| 1 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0520 | 1.25 | 8.74 | 13.80 | 37.44 | 13.80 | - | 1.00* | - | yes | `oracle-cloud` |
+| 2 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 0.22 | 1.52 | 6.51 | 6.51 | 6.51 | - | 1.00* | - | yes | `contabo` |
+| 3 | [Agent 37](https://www.agent37.com/pricing) | 0.0121 | 0.29 | 2.03 | 8.68 | 8.68 | 8.68 | - | 1.00* | - | yes | `agent-37` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0160 | 0.38 | 2.69 | 11.52 | 11.52 | 11.52 | - | 1.00* | - | yes | `hetzner-cloud` |
+| 5 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0211 | 0.51 | 3.54 | 15.16 | 15.16 | 15.16 | - | 1.00* | - | yes | `netcup` |
 | 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0219 | 0.53 | 3.68 | 15.78 | 15.78 | 15.78 | - | 1.00 | - | yes | `upstash-box` |
-| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.66 | 4.59 | 19.66 | 19.66 | 19.66 | - | 1.00 | - | yes | `ionos` |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.66 | 4.60 | 19.73 | 19.73 | 19.73 | - | 1.00 | - | yes | `zipbox` |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0273 | 0.66 | 4.59 | 19.66 | 19.66 | 19.66 | - | 1.00* | - | yes | `ionos` |
+| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0274 | 0.66 | 4.60 | 19.73 | 19.73 | 19.73 | - | **0.00** | - | yes | `zipbox` |
 | 9 | [Zeabur](https://zeabur.com/pricing) | 0.0233 | 0.56 | 3.91 | 21.77 | 16.77 | 21.77 | - | 1.00 | - | **no** | `zeabur` |
-| 10 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.86 | 6.00 | 25.71 | 25.71 | 25.71 | - | 1.00 | - | yes | `upcloud` |
-| 11 | [boat.dev](https://docs.boat.dev/pricing) | 0.0360 | 0.86 | 6.05 | 25.92 | 25.92 | 25.92 | - | 1.00 | $20 | yes | `boat` |
-| 12 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.93 | 6.50 | 27.86 | 27.86 | 27.86 | - | 1.00 | - | yes | `gcore` |
-| 13 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.96 | 6.72 | 28.80 | 28.80 | 28.80 | - | 1.00 | - | yes | `shellbox` |
-| 14 | [Hugging Face Jobs (hf-sandbox backend)](https://huggingface.co/docs/hub/en/jobs-pricing) | 0.0300 | 0.72 | 5.04 | 30.60 | 21.60 | 30.60 | - | 1.00 | - | **no** | `huggingface-jobs` |
-| 15 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 1.11 | 7.74 | 33.19 | 33.19 | 33.19 | - | 1.00 | - | yes | `ovhcloud` |
-| 16 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 1.15 | 8.06 | 34.56 | 34.56 | 34.56 | - | 1.00 | - | yes | `verda` |
-| 17 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 1.17 | 8.19 | 35.10 | 35.10 | 35.10 | - | 1.00 | - | yes | `scaleway` |
-| 18 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 1.18 | 8.23 | 35.28 | 35.28 | 35.28 | - | 1.00 | - | yes | `e2e-networks` |
-| 19 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 1.27 | 8.87 | 38.01 | 38.01 | 38.01 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 20 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 1.32 | 9.21 | 39.45 | 39.45 | 39.45 | - | 1.00 | - | yes | `kamatera` |
-| 21 | [Cube Computer](https://cube.computer/) | 0.0560 | 1.34 | 9.41 | 40.34 | 40.34 | 40.34 | - | 1.00 | - | **no** | `cube` |
-| 22 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 1.41 | 9.89 | 42.40 | 42.40 | 42.40 | - | 1.00 | - | yes | `hostinger-vps` |
-| 23 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 1.43 | 9.99 | 42.82 | 42.82 | 37.60 | $5.22 of it | 1.00 | - | yes | `google-cloud-run` |
-| 24 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 1.43 | 10.00 | 42.84 | 42.84 | 42.84 | - | 1.00 | - | yes | `vultr` |
-| 25 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 1.43 | 10.00 | 42.86 | 42.86 | 42.86 | - | 1.00 | - | yes | `civo` |
+| 10 | [UpCloud](https://upcloud.com/pricing/) | 0.0357 | 0.86 | 6.00 | 25.71 | 25.71 | 25.71 | - | 1.00* | - | yes | `upcloud` |
+| 11 | [boat.dev](https://docs.boat.dev/pricing) | 0.0360 | 0.86 | 6.05 | 25.92 | 25.92 | 25.92 | - | 1.00* | $20 | yes | `boat` |
+| 12 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0387 | 0.93 | 6.50 | 27.86 | 27.86 | 27.86 | - | 1.00* | - | yes | `gcore` |
+| 13 | [shellbox](https://shellbox.dev/) | 0.0400 | 0.96 | 6.72 | 28.80 | 28.80 | 28.80 | - | 1.00* | - | yes | `shellbox` |
+| 14 | [Hugging Face Jobs (hf-sandbox backend)](https://huggingface.co/docs/hub/en/jobs-pricing) | 0.0300 | 0.72 | 5.04 | 30.60 | 21.60 | 30.60 | - | **0.00** | - | **no** | `huggingface-jobs` |
+| 15 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0461 | 1.11 | 7.74 | 33.19 | 33.19 | 33.19 | - | 1.00* | - | yes | `ovhcloud` |
+| 16 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0480 | 1.15 | 8.06 | 34.56 | 34.56 | 34.56 | - | 1.00* | - | yes | `verda` |
+| 17 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0487 | 1.17 | 8.19 | 35.10 | 35.10 | 35.10 | - | 1.00* | - | yes | `scaleway` |
+| 18 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0490 | 1.18 | 8.23 | 35.28 | 35.28 | 35.28 | - | 1.00* | - | yes | `e2e-networks` |
+| 19 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0528 | 1.27 | 8.87 | 38.01 | 38.01 | 38.01 | - | 1.00* | - | yes | `alibaba-ecs` |
+| 20 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0548 | 1.32 | 9.21 | 39.45 | 39.45 | 39.45 | - | 1.00* | - | yes | `kamatera` |
+| 21 | [Cube Computer](https://cube.computer/) | 0.0560 | 1.34 | 9.41 | 40.34 | 40.34 | 40.34 | - | 1.00* | - | **no** | `cube` |
+| 22 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 0.0589 | 1.41 | 9.89 | 42.40 | 42.40 | 42.40 | - | 1.00* | - | yes | `hostinger-vps` |
+| 23 | [Google Cloud Run](https://cloud.google.com/run/pricing) | 0.0595 | 1.43 | 9.99 | 42.82 | 42.82 | 37.60 | $5.22 of it | 1.00* | - | yes | `google-cloud-run` |
+| 24 | [Vultr Cloud Compute](https://www.vultr.com/pricing/) | 0.0595 | 1.43 | 10.00 | 42.84 | 42.84 | 42.84 | - | 1.00* | - | yes | `vultr` |
+| 25 | [Civo Compute](https://www.civo.com/pricing) | 0.0595 | 1.43 | 10.00 | 42.86 | 42.86 | 42.86 | - | 1.00* | - | yes | `civo` |
 
 _172 more at this duty cycle; the full rank is table C._
 

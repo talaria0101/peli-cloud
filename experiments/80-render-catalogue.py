@@ -35,6 +35,27 @@ _pm_spec = importlib.util.spec_from_file_location(
 pm = importlib.util.module_from_spec(_pm_spec)
 _pm_spec.loader.exec_module(pm)
 
+
+def keep_cell(s):
+    """The keep rate, marked when it is measured rather than assumed.
+
+    A bare 1.00 is ambiguous between "the card says this machine bills for
+    uptime" and "nobody has checked". Those are different facts and the reader
+    needs the second one to be visible, because every default row makes holding
+    look dearer than it is. `1.00*` means the conservative fallback.
+    """
+    if not s:
+        return "-"
+    k = s.get("keep_rate")
+    src = s.get("keep_source") or ""
+    if k is None:
+        return "-"
+    if src == "default":
+        return "%.2f*" % k
+    if src.startswith("first-party"):
+        return "**%.2f**" % k
+    return "%.2f" % k
+
 SHAPES_ORDER = ["tiny", "agent", "devbox"]
 DUTY = ["1h", "4h", "10h", "24h"]
 
@@ -311,11 +332,11 @@ def main():
                 # page's own docs contradict, so the column says so.
                 if "[ADVERTISED" in (s.get("how") or ""):
                     buy = "**disputed**"
-                A("| %d | %s | %.4f | %.2f | %.2f | %.2f | %.2f | %.2f | %s | %.2f | %s | %s | `%s` |" % (
+                A("| %d | %s | %.4f | %.2f | %.2f | %.2f | %.2f | %.2f | %s | %s | %s | %s | `%s` |" % (
                     i, link(p["name"] or p["id"], p.get("url")), s["hourly"],
                     pd["compute_day"], pd["compute_week"], pd["billed_month_no_credit"],
                     pd.get("hold_month", 0.0),
-                    pd["billed_month_with_credit"], used, s["keep_rate"],
+                    pd["billed_month_with_credit"], used, keep_cell(s),
                     ("$%g" % floor) if floor else "-", buy, p["id"]))
             if len(paid) > 25:
                 A("")

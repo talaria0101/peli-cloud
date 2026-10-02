@@ -48,10 +48,10 @@ in `experiments/`.
   plain VM is. **No sandbox was created and stopped**, so no keep rate in this
   document is observed behaviour. It is a reading of the vendor's own feature
   list. Only **8 of 366** cards publish `auto_stop_idle` on any mode (11 modes
-  in total), so **539 of 605** priced rows fall back to the conservative `1.00`
-  and are assumptions, not readings. Five rows are read first-party; see
-  section 6.2, which also explains what the fallback does and does not get
-  wrong.
+  in total), so **509 of 605** priced rows fall back to the conservative `1.00`
+  and are assumptions, not readings. 96 rows are measured first-party. See
+  section 6.2, which explains what the fallback does and does not get wrong and
+  what was done about it.
 - **The period model excludes egress, storage beyond what a card bundles, IPv4
   and team seats.** A provider cheap here can be dear there. The full corpus
   cards carry those fields; these tables do not price them.
@@ -532,11 +532,13 @@ The card (`lizard.json`, mode `sandbox`) publishes
 
 ### 6.2 The keep rate: what was wrong, and what is now fixed
 
-**539 of 605 priced rows** take their keep rate from the fallback in section 0:
+**509 of 605 priced rows** take their keep rate from the fallback in section 0:
 the corpus card publishes no suspension feature, so the row is recorded as
-`1.00`, billed for uptime. Five rows are now read first-party. Only 61 rows have
-a published basis in the card (`auto_stop_idle` 5, `pause_resume` 10,
-`requires_always_on` 46).
+`1.00`, billed for uptime. **96 rows are now measured first-party**: 61 from a
+published basis in the card (`auto_stop_idle` 5, `pause_resume` 10,
+`requires_always_on` 46), 5 hand-checked, and 30 from an automated probe of 183
+vendor pages. Section 6.4 is that probe, including the four pages it got wrong
+before it got them right.
 
 I went looking for a card where the vendor's own page contradicts that default,
 and found one on the row I had just corrected.
@@ -666,6 +668,108 @@ before the code was written, which is the only reason they were caught at all.
 reclaim capacity; boot volume is extra, as the card's own note says; and
 `VM.Standard.E2.1.Micro` is a separate, much smaller free tier that this
 catalogue does not price because it cannot fit the agent shape.
+
+### 6.4 Reading 183 billing policies first-party, and the four it got wrong first
+
+The keep-rate gap was not closed by a better default. It was closed by going and
+reading, which is `51-billing-posture-probe.py`: for every provider whose row
+still fell back to `1.00`, it fetches that provider's own page, strips the
+markup, and looks for the vendor's own words about billing a machine that is
+stopped, paused or idle.
+
+**What it found, out of 183 providers.**
+
+| verdict | n | meaning |
+|---|---|---|
+| `suspends` | 8 | the vendor says a stopped machine does not bill |
+| `partial` | 3 | one resource stops billing and another does not |
+| `bills_uptime` | 2 | the vendor says a stopped machine is still billed |
+| `unstated` | 140 | the page was fetched and read, and says nothing either way |
+| `shell` | 26 | the page renders client-side; nothing was read |
+| `unreachable` | 4 | the page could not be fetched from this host |
+
+13 of 183 is a low yield and it is the honest one. **The probe is not a way of
+converting 183 unknowns into 183 facts**; it is a way of finding the 13 where
+the vendor happens to state a policy, without pretending about the other 170.
+
+**The four pages it got wrong, and why each is in the code as a test.**
+
+The first run published 17 verdicts and **3 of them were wrong**. The second run
+got one more wrong. All four are now known-answer cases in `51`'s self-test,
+which runs on every invocation and refuses to publish if it fails.
+
+- **nebius.** The page says *"Computing resources of stopped VMs are not
+  charged."* The pattern matched the word "charged" near "stopped" and read it
+  as billing a stopped VM, which is the exact opposite of what the page says. A
+  match whose own sentence contains a negation is not evidence.
+- **azure-vm.** The page asks *"If my deployed instance says 'stopped', am I
+  still getting billed?"* and answers **"Maybe."** The pattern read a question
+  as a statement. Hedging is not a verdict.
+- **stackit.** The match landed inside an embedded JSON catalogue blob
+  (`{"id":"STA_SKU_583365","unitBilling":"per GB/hour"}`). That is a pricing
+  API response containing no prose at all. JSON is not a vendor statement.
+- **boxd.** *"A machine in standby pays for RAM and disk. vCPU is billed only
+  while a machine is actually running."* That spans two sentences, so a
+  single-sentence pattern for `partial` missed it and the row was published as a
+  clean `suspends`. **This is the most damaging of the four**: it makes a
+  provider that still bills RAM look free to hold, which is precisely the error
+  that costs somebody money. `partial` is now decided by the presence of both
+  statements anywhere on the page, before any other verdict is considered.
+
+**What was applied, and what was deliberately not.**
+
+- `suspends` and `bills_uptime` are applied. `bills_uptime` **changes no
+  number**: it confirms `1.00`, which was already the default. It is still
+  recorded, because "we checked" and "we assumed" are different facts and only
+  one of them is evidence.
+- `partial` is **never** applied. One scalar cannot express "CPU stops, RAM
+  does not", and `0.00` would understate the bill by the resource that keeps
+  charging. Those 9 rows across 3 providers keep the conservative default and
+  are named as needing a split model. That is real work, not something to
+  approximate with one number.
+- `unstated`, `shell` and `unreachable` are **never** applied. Silence is not
+  evidence of billing for uptime, and treating it as such would be inventing a
+  fact.
+
+**How much it bought, measured where it actually bites.** At 24 h/day the
+machine is never idle, so the keep rate cannot change anything and every
+suspension would show a movement of $0.00. The measurement is taken at a 1 h/day
+duty cycle, where 23 of every 24 hours are idle:
+
+| provider | holding a 1 h/day box, before | after |
+|---|---|---|
+| islo | $216.00/mo | **$9.00/mo** |
+| beam | $163.56 | **$6.81** |
+| langsmith-sandbox | $136.08 | **$5.67** |
+| sandbox0 | $43.20 | **$1.80** |
+| machine0 | $37.44 | **$1.56** |
+| mosaic | $36.00 | **$1.50** |
+| zipbox | $9.86 | **$0.41** |
+| huggingface-jobs | $7.20 | **$0.30** |
+
+**Measured: 96 of 605 rows (16%).** The other 509 carry the conservative `1.00`
+and are an assumption. `experiments/53-keep-rate-provenance.py` prints that
+split and `data/keep-rate-provenance.json` records it per row, and the
+catalogue marks an assumed keep rate as `1.00*` and a measured one in bold. The
+direction of the residual error is stated on the row too: every defaulted row
+**overstates** what holding costs, so the held column is an upper bound on those
+509 rows and never a floor.
+
+**One architectural mistake, recorded because it failed silently.** The first
+arrangement had a separate script rewrite keep rates into
+`data/period-model.json` after the model had been built. It worked, and then
+anyone re-running `70-period-model.py` recomputed every keep rate from the card
+and discarded all 30 probed rows. No error, no warning, and a *smaller* number of
+measured rows than the run before. The probe is now read by the model itself as
+an input, so there is no step to forget, and GUARD O fails if the probed rows
+ever stop reaching the artefact.
+
+**What this does not establish.** 140 pages were read and said nothing; 26 could
+not be read at all because they render client-side; 4 were unreachable from this
+host. Reading those 150 properly means a headless browser or a vendor
+questionnaire, and neither is a thing this pass did. The 509 rows that still
+carry `1.00` are the ones to re-examine first if this catalogue is used to buy
+something held for a month.
 
 ---
 

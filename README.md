@@ -102,12 +102,37 @@ the home region, and Oracle may reclaim capacity. Table B carries it as its own
 table with the arithmetic rather than folding it into the paid ranking.
 
 **Holding a box is a different question from using it, and the keep rate is the
-difference.** The catalogue now prints `held 24/7` beside the duty-cycle
-figures. Lizard costs **$0.27** whether you use it an hour a day or hold it
-around the clock, because its page says a paused sandbox does not bill. Contabo
-costs $0.27 to use for an hour a day and **$6.51** to hold. That is the whole
-argument for a sandbox over a VPS, and it was not visible in this catalogue
-before.
+difference.** The catalogue prints `held 24/7` beside the duty-cycle figures.
+Lizard costs **$0.27** whether you use it an hour a day or hold it around the
+clock, because its page says a paused sandbox does not bill. Contabo costs $0.27
+to use for an hour a day and **$6.51** to hold. That is the whole argument for a
+sandbox over a VPS.
+
+**How much of that is measured, and how much is assumed.** The keep rate is read
+first-party for **96 of 605 priced rows**: 61 from a policy the corpus card
+publishes, 5 read by hand, and 30 from an automated probe that fetched **183
+vendor pages** looking for the vendor's own words about billing a stopped
+machine. It found a policy on 13 of them. The other 509 rows carry a
+conservative `1.00` and the catalogue marks them `1.00*` rather than presenting
+an assumption as a measurement. Every one of those 509 **overstates** what
+holding costs, so the held column is an upper bound on them and never a floor.
+`experiments/53-keep-rate-provenance.py` prints the split and
+`data/keep-rate-provenance.json` records it per row.
+
+Holding a 1 h/day box for a month, where the keep rate actually bites:
+
+| provider | before | after reading the vendor's page |
+|---|---|---|
+| islo | $216.00/mo | **$9.00** |
+| beam | $163.56 | **$6.81** |
+| langsmith-sandbox | $136.08 | **$5.67** |
+| zipbox | $9.86 | **$0.41** |
+
+140 of the 183 pages were read and said nothing, 26 render client-side and could
+not be read at all, and 3 providers turn out to bill one resource while paused
+and not the other, which one number cannot express. All of that is in FINDINGS
+6.4, including the four pages the probe classified wrongly before it classified
+them right.
 
 **A `$0` tier is not a free tier.** 16 cards mark one `trial_only` because it
 blocks usage or expires. Replit's is $0 and buys nothing; its real entry is $18.

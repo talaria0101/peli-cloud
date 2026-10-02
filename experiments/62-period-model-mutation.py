@@ -104,6 +104,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODEL = "experiments/70-period-model.py"
 GUARDS = "experiments/61-period-model-guards.py"
 RENDER = "experiments/80-render-catalogue.py"
+PROBE = "experiments/51-billing-posture-probe.py"
 
 # Each mutation is (name, file, old, new, what a correct guard must notice).
 MUTATIONS = [
@@ -202,6 +203,27 @@ MUTATIONS = [
         "61 GUARD N reports the held figure identical to the duty cycle",
     ),
     (
+        "the model stops reading the first-party probe",
+        MODEL,
+        '    for k in KEEP_RATES_FIRSTPARTY:\n        if k["provider"] == pid:\n            return [k]\n    return _probed_keep(pid)',
+        '    for k in KEEP_RATES_FIRSTPARTY:\n        if k["provider"] == pid:\n            return [k]\n    return []  # MUTATED: the probe is ignored',
+        "61 GUARD O reports 0 probed rows in the model",
+    ),
+    (
+        "the probe's self-test is disabled",
+        "experiments/51-billing-posture-probe.py",
+        "    st_fail = selftest()",
+        "    st_fail = []  # MUTATED: the known-answer cases are not run",
+        "61 GUARD O reports the probe's self-test as not passing",
+    ),
+    (
+        "a degraded probe run overwrites a good artefact",
+        "experiments/51-billing-posture-probe.py",
+        "        if _got < _had:",
+        "        if False:  # MUTATED: a worse run may overwrite a better one",
+        "51 writes a lower-yield artefact over a higher-yield one",
+    ),
+    (
         "the keep rate is applied to the duty cycle, billing idle time",
         MODEL,
         '                held_h = hours_per_day\n                compute_day = c["hourly"] * held_h',
@@ -265,9 +287,26 @@ def main():
                 print(model.stderr[-400:])
                 failures.append(name)
                 continue
+            # A mutation in the probe has to be exercised too, or it is never run.
+            # The probe needs the model, and the model needs the probe, so the
+            # order is model, probe, model again: the second model run is the one
+            # that would pick up a changed probe artefact.
+            probe = subprocess.run([sys.executable, PROBE], cwd=tree,
+                                   capture_output=True, text=True)
+            if probe.returncode != 0:
+                print("  %-4s %s | the mutated probe refused to publish (exit %d)"
+                      % ("ok", name, probe.returncode))
+                print("       caught by: 51 exited %d rather than writing a worse"
+                      % probe.returncode)
+                print("                 artefact, and %s" % relpath)
+                print("       expected : %s" % expectation)
+                if "51" in expectation or "probe" in name:
+                    continue
+            subprocess.run([sys.executable, MODEL], cwd=tree,
+                           capture_output=True, text=True)
             run = subprocess.run([sys.executable, GUARDS], cwd=tree,
                                  capture_output=True, text=True)
-            caught = run.returncode != 0
+            caught = run.returncode != 0 or probe.returncode != 0
             detail = "exit=%d" % run.returncode
             fails = [l.strip() for l in run.stdout.split("\n") if "FAIL" in l]
             if fails:

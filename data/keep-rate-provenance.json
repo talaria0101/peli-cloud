@@ -1,0 +1,3854 @@
+{
+ "at": "2026-10-02T04:52:31Z",
+ "changed": [
+  {
+   "held_after": 6.8148,
+   "keep_rate": 0.0,
+   "provider": "beam",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)"
+  },
+  {
+   "held_after": 13.6296,
+   "keep_rate": 0.0,
+   "provider": "beam",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)"
+  },
+  {
+   "held_after": 2.7162,
+   "keep_rate": 0.0,
+   "provider": "beam",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)"
+  },
+  {
+   "held_after": 0.3,
+   "keep_rate": 0.0,
+   "provider": "huggingface-jobs",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)"
+  },
+  {
+   "held_after": 0.9,
+   "keep_rate": 0.0,
+   "provider": "huggingface-jobs",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)"
+  },
+  {
+   "held_after": 0.3,
+   "keep_rate": 0.0,
+   "provider": "huggingface-jobs",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)"
+  },
+  {
+   "held_after": 9.0,
+   "keep_rate": 0.0,
+   "provider": "islo",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://islo.dev/pricing)"
+  },
+  {
+   "held_after": 18.0,
+   "keep_rate": 0.0,
+   "provider": "islo",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://islo.dev/pricing)"
+  },
+  {
+   "held_after": 3.3,
+   "keep_rate": 0.0,
+   "provider": "islo",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://islo.dev/pricing)"
+  },
+  {
+   "held_after": 5.67,
+   "keep_rate": 0.0,
+   "provider": "langsmith-sandbox",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)"
+  },
+  {
+   "held_after": 11.34,
+   "keep_rate": 0.0,
+   "provider": "langsmith-sandbox",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)"
+  },
+  {
+   "held_after": 2.2815,
+   "keep_rate": 0.0,
+   "provider": "langsmith-sandbox",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)"
+  },
+  {
+   "held_after": 1.56,
+   "keep_rate": 0.0,
+   "provider": "machine0",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://machine0.io/)"
+  },
+  {
+   "held_after": 3.12,
+   "keep_rate": 0.0,
+   "provider": "machine0",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://machine0.io/)"
+  },
+  {
+   "held_after": 0.39,
+   "keep_rate": 0.0,
+   "provider": "machine0",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://machine0.io/)"
+  },
+  {
+   "held_after": 1.5,
+   "keep_rate": 0.0,
+   "provider": "mosaic",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)"
+  },
+  {
+   "held_after": 3.0,
+   "keep_rate": 0.0,
+   "provider": "mosaic",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)"
+  },
+  {
+   "held_after": 1.5,
+   "keep_rate": 0.0,
+   "provider": "mosaic",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)"
+  },
+  {
+   "held_after": 28.8,
+   "keep_rate": 1.0,
+   "provider": "paperspace",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)"
+  },
+  {
+   "held_after": 57.6,
+   "keep_rate": 1.0,
+   "provider": "paperspace",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)"
+  },
+  {
+   "held_after": 12.96,
+   "keep_rate": 1.0,
+   "provider": "paperspace",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)"
+  },
+  {
+   "held_after": 43.2,
+   "keep_rate": 1.0,
+   "provider": "runpod",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)"
+  },
+  {
+   "held_after": 86.4,
+   "keep_rate": 1.0,
+   "provider": "runpod",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)"
+  },
+  {
+   "held_after": 43.2,
+   "keep_rate": 1.0,
+   "provider": "runpod",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)"
+  },
+  {
+   "held_after": 1.8,
+   "keep_rate": 0.0,
+   "provider": "sandbox0",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)"
+  },
+  {
+   "held_after": 3.6,
+   "keep_rate": 0.0,
+   "provider": "sandbox0",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)"
+  },
+  {
+   "held_after": 0.45,
+   "keep_rate": 0.0,
+   "provider": "sandbox0",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)"
+  },
+  {
+   "held_after": 0.411,
+   "keep_rate": 0.0,
+   "provider": "zipbox",
+   "shape": "agent",
+   "source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)"
+  },
+  {
+   "held_after": 0.822,
+   "keep_rate": 0.0,
+   "provider": "zipbox",
+   "shape": "devbox",
+   "source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)"
+  },
+  {
+   "held_after": 0.204,
+   "keep_rate": 0.0,
+   "provider": "zipbox",
+   "shape": "tiny",
+   "source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)"
+  }
+ ],
+ "origins": {
+  "conservative default (1.00)": 509,
+  "corpus card": 61,
+  "first-party, hand-checked": 5,
+  "first-party, probed and quoted": 30
+ },
+ "probed_at": "2026-10-02T04:31:41Z",
+ "rows": {
+  "agent-37/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "agent-37/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "agent-37/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "agentcomputer/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "agentcomputer/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "agentcomputer/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-ack/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-ack/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-ack/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-agentbay/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-agentbay/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-agentbay/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-agentrun/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-agentrun/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-agentrun/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-ecs/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-ecs/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "alibaba-ecs/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "amika/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "amika/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "amika/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "amp/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "amp/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "amp/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aptible/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aptible/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aptible/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "archil/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "archil/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "arker/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "arker/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "arker/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-agentcore/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-agentcore/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-agentcore/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-codebuild/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-codebuild/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-codebuild/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2-mac/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2-mac/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2-mac/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2-windows/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2-windows/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2-windows/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-ec2/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-fargate/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-fargate/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-fargate/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-lambda-microvms/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-lambda-microvms/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-lambda-microvms/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "aws-lambda/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "aws-lambda/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "aws-lambda/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "aws-workspaces/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "aws-workspaces/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "aws-workspaces/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "azure-container-apps-sandboxes/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-container-apps-sandboxes/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-container-apps-sandboxes/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-container-apps/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-container-apps/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-container-apps/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-foundry-agents/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-foundry-agents/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-pipelines/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-pipelines/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-pipelines/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-vm/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-vm/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-vm/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-windows/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-windows/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "azure-windows/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "baponi/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "baponi/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "baponi/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "baseten/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "baseten/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "baseten/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "beam/agent": {
+   "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)"
+  },
+  "beam/devbox": {
+   "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)"
+  },
+  "beam/tiny": {
+   "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)"
+  },
+  "bitbucket-pipelines/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "bitbucket-pipelines/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "bitbucket-pipelines/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "bitrise/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "bitrise/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "bitrise/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "blacksmith/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "blacksmith/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "blacksmith/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "blaxel/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "blaxel/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "blaxel/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boat/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boat/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boat/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boxd/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boxd/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boxd/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boxes-dev/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boxes-dev/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "boxes-dev/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "buddy/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "buddy/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "buddy/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "buildkite-hosted/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "buildkite-hosted/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "buildkite-hosted/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "capy/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "capy/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "capy/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "celesto/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "celesto/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "celesto/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cerebrium/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cerebrium/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cerebrium/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "circleci/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "circleci/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "circleci/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cirrus-runners/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "cirrus-runners/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "cirrus-runners/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "civo/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "civo/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "civo/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "claude-managed-agents/tiny": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "clever-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "clever-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "clever-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cloudflare-sandbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cloudflare-sandbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cloudflare-sandbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cloudflare-workers-for-platforms/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cloudflare-workers-for-platforms/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cloudflare-workers-for-platforms/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "codemagic/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "codemagic/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "codemagic/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "codesandbox-sdk/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "codesandbox-sdk/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "codesandbox-sdk/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "collimate/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "collimate/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "collimate/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "contabo/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "contabo/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "contabo/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "createos/agent": {
+   "keep_basis": "first-party: PAUSED sandboxes stop vCPU billing but KEEP billing RAM at $0.01159025/GB-h",
+   "keep_rate": 1.0,
+   "origin": "first-party, hand-checked",
+   "source": "first-party page (https://createos.com/pricing)"
+  },
+  "createos/devbox": {
+   "keep_basis": "first-party: PAUSED sandboxes stop vCPU billing but KEEP billing RAM at $0.01159025/GB-h",
+   "keep_rate": 1.0,
+   "origin": "first-party, hand-checked",
+   "source": "first-party page (https://createos.com/pricing)"
+  },
+  "createos/tiny": {
+   "keep_basis": "first-party: PAUSED sandboxes stop vCPU billing but KEEP billing RAM at $0.01159025/GB-h",
+   "keep_rate": 1.0,
+   "origin": "first-party, hand-checked",
+   "source": "first-party page (https://createos.com/pricing)"
+  },
+  "crusoe/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "crusoe/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "crusoe/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cua-windows/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cua-windows/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cua-windows/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cua/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cua/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cua/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cube/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cube/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "cube/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "datalayer/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "daytona-windows/agent": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "daytona-windows/devbox": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "daytona-windows/tiny": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "daytona/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "daytona/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "daytona/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "declaw/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "declaw/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "declaw/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "dedalus-labs/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "dedalus-labs/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "dedalus-labs/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "deno-sandbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "deno-sandbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "deno-sandbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "depot/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "depot/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "depot/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "digitalocean/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "digitalocean/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "digitalocean/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "docker-cloud-sandboxes/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "docker-cloud-sandboxes/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "docker-cloud-sandboxes/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "e2b/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "e2b/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "e2b/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "e2e-networks/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "e2e-networks/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "e2e-networks/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ellipsis/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ellipsis/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ellipsis/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "exe-dev/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "exe-dev/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "exe-dev/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "exoscale/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "exoscale/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "exoscale/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "expo/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "expo/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "expo/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "flow-swiss-mac/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "flow-swiss-mac/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "flow-swiss-mac/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "fly-machines/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "fly-machines/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "fly-machines/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "freestyle/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "freestyle/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "freestyle/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcore/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcore/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcore/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcp-compute/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcp-compute/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcp-compute/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcp-windows/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcp-windows/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gcp-windows/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-actions/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-actions/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-actions/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-codespaces/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-codespaces/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-codespaces/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-copilot-cloud-sandboxes/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-copilot-cloud-sandboxes/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "github-copilot-cloud-sandboxes/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gitlab-runners/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gitlab-runners/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gitlab-runners/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gke-agent-sandbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gke-agent-sandbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "gke-agent-sandbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-agent-engine/agent": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "google-agent-engine/devbox": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "google-agent-engine/tiny": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "google-cloud-build/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-cloud-build/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-cloud-build/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-cloud-run/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-cloud-run/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-cloud-run/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-colab/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-colab/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "google-colab/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "greenmini/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "greenmini/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "greenmini/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "heroku/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "heroku/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "heroku/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hetzner-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hetzner-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hetzner-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hetzner-dedicated/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hetzner-dedicated/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hetzner-dedicated/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hopx/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hopx/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hopx/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hostinger-vps/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hostinger-vps/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hostinger-vps/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hostmyapple/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "hostmyapple/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "huawei-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "huawei-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "huawei-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "huggingface-jobs/agent": {
+   "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)"
+  },
+  "huggingface-jobs/devbox": {
+   "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)"
+  },
+  "huggingface-jobs/tiny": {
+   "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)"
+  },
+  "hyperstack/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hyperstack/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "hyperstack/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ibm-cloud-vpc/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ibm-cloud-vpc/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ibm-cloud-vpc/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "insforge-instacloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "insforge-instacloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "insforge-instacloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "instavm/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "instavm/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "instavm/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ionos/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ionos/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ionos/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "islo/agent": {
+   "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://islo.dev/pricing)"
+  },
+  "islo/devbox": {
+   "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://islo.dev/pricing)"
+  },
+  "islo/tiny": {
+   "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://islo.dev/pricing)"
+  },
+  "isorun/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "isorun/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "isorun/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "jarvislabs/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "jarvislabs/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "jarvislabs/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kakao-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kakao-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kakao-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kamatera/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kamatera/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kamatera/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kedge/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kedge/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "kedge/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "koyeb/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "koyeb/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "koyeb/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "langsmith-sandbox/agent": {
+   "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)"
+  },
+  "langsmith-sandbox/devbox": {
+   "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)"
+  },
+  "langsmith-sandbox/tiny": {
+   "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)"
+  },
+  "latitude-sh/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "latitude-sh/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "latitude-sh/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "lightning-ai/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "lightning-ai/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "lightning-ai/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "linode/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "linode/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "linode/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "lizard/agent": {
+   "keep_basis": "first-party: Sandboxes come in three sizes, priced per hour and billed per second while they run ... paused sandboxes do no",
+   "keep_rate": 0.0,
+   "origin": "first-party, hand-checked",
+   "source": "first-party page (https://lizard.build/pricing)"
+  },
+  "lizard/tiny": {
+   "keep_basis": "first-party: Sandboxes come in three sizes, priced per hour and billed per second while they run ... paused sandboxes do no",
+   "keep_rate": 0.0,
+   "origin": "first-party, hand-checked",
+   "source": "first-party page (https://lizard.build/pricing)"
+  },
+  "machine0/agent": {
+   "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://machine0.io/)"
+  },
+  "machine0/devbox": {
+   "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://machine0.io/)"
+  },
+  "machine0/tiny": {
+   "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://machine0.io/)"
+  },
+  "macincloud/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "macincloud/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "macincloud/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "macstadium/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "macstadium/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "macstadium/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "manus-cloud-computer/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "manus-cloud-computer/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "microsandbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "microsandbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "microsandbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "miosa/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "miosa/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "miosa/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "modal/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "modal/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "modal/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "modelence/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "modelence/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "modelence/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "moonshot-kimi/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "morph-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "morph-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "morph-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "mosaic/agent": {
+   "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)"
+  },
+  "mosaic/devbox": {
+   "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)"
+  },
+  "mosaic/tiny": {
+   "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)"
+  },
+  "namespace/agent": {
+   "keep_basis": "suspends on idle (auto_stop_idle)",
+   "keep_rate": 0.0,
+   "origin": "corpus card",
+   "source": "features.auto_stop_idle"
+  },
+  "namespace/devbox": {
+   "keep_basis": "suspends on idle (auto_stop_idle)",
+   "keep_rate": 0.0,
+   "origin": "corpus card",
+   "source": "features.auto_stop_idle"
+  },
+  "namespace/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "naver-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "naver-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "naver-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "nebius/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "nebius/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "nebius/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "netcup/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "netcup/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "netcup/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "nextmv/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "nextmv/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "nextmv/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "northflank/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "northflank/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "northflank/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "novita/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "novita/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "novita/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "oakhost/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "oakhost/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "oakhost/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "omnara/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "omnara/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "omnara/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "omnirun/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ona/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ona/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ona/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "open-telekom-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "open-telekom-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "open-telekom-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openai-containers/agent": {
+   "keep_basis": "suspends on idle (auto_stop_idle)",
+   "keep_rate": 0.0,
+   "origin": "corpus card",
+   "source": "features.auto_stop_idle"
+  },
+  "openai-containers/devbox": {
+   "keep_basis": "suspends on idle (auto_stop_idle)",
+   "keep_rate": 0.0,
+   "origin": "corpus card",
+   "source": "features.auto_stop_idle"
+  },
+  "openai-containers/tiny": {
+   "keep_basis": "suspends on idle (auto_stop_idle)",
+   "keep_rate": 0.0,
+   "origin": "corpus card",
+   "source": "features.auto_stop_idle"
+  },
+  "opencomputer/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "opencomputer/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "opencomputer/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openpond/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openpond/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openpond/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openreward/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openreward/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openreward/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openshift/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openshift/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "openshift/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "oracle-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "oracle-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "oracle-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "orkestr/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "orkestr/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "orkestr/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ovhcloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ovhcloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ovhcloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "pandastack/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "pandastack/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "pandastack/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "paperspace/agent": {
+   "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
+   "keep_rate": 1.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)"
+  },
+  "paperspace/devbox": {
+   "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
+   "keep_rate": 1.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)"
+  },
+  "paperspace/tiny": {
+   "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
+   "keep_rate": 1.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)"
+  },
+  "ppio-sandbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ppio-sandbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ppio-sandbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "prime-intellect/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "prime-intellect/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "prime-intellect/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "prized/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "prized/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "prized/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "railway/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "railway/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "railway/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "render/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "render/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "render/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "rentamac/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "rentamac/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "rentamac/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "replicas/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "replicas/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "replicas/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "replicate/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "replicate/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "replicate/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "replit/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "replit/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "replit/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "rivet/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "rivet/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "rivet/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "run-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "run-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "run-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runloop/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runloop/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runloop/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runpod/agent": {
+   "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
+   "keep_rate": 1.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)"
+  },
+  "runpod/devbox": {
+   "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
+   "keep_rate": 1.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)"
+  },
+  "runpod/tiny": {
+   "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
+   "keep_rate": 1.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)"
+  },
+  "runs-on/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runs-on/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runs-on/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runta/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runta/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "runta/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sail/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sail/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sail/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sakura-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sakura-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sakura-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "samsung-cloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "samsung-cloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "samsung-cloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sandbox-as-a-service/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sandbox-as-a-service/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sandbox-as-a-service/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sandbox0/agent": {
+   "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)"
+  },
+  "sandbox0/devbox": {
+   "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)"
+  },
+  "sandbox0/tiny": {
+   "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)"
+  },
+  "scaleway-apple-silicon/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "scaleway-apple-silicon/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "scaleway-apple-silicon/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "scaleway/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "scaleway/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "scaleway/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sfcompute/agent": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "sfcompute/devbox": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "sfcompute/tiny": {
+   "keep_basis": "billed while running; can be stopped by the caller",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "features.pause_resume"
+  },
+  "shardflux/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "shardflux/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "shardflux/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "shellbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "shellbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "shellbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "smol-machines/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "smol-machines/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "smol-machines/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "solari/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "solari/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "solari/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "specific/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "specific/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "specific/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sprites/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sprites/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "sprites/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "stackit/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "stackit/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "stackit/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "starsling/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "starsling/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "starsling/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "stateset/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "stateset/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "stateset/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "superserve/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "superserve/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "superserve/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tama/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tama/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tama/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-agent-runtime/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-agent-runtime/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-agent-runtime/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-cloud-studio/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-cloud-studio/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-cloud-studio/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-scf/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-scf/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tencent-scf/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tenki/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tenki/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tenki/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tensorlake/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tensorlake/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tensorlake/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tinfoil/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tinfoil/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "tinfoil/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "together-code-sandbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "together-code-sandbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "together-code-sandbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "trigger-dev/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "trigger-dev/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "trigger-dev/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ubicloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ubicloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ubicloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ucloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ucloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "ucloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "upcloud/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "upcloud/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "upcloud/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "upstash-box/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "upstash-box/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "upstash-box/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "use-computer/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "use-computer/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "use-computer/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vercel-sandbox/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vercel-sandbox/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vercel-sandbox/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "verda/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "verda/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "verda/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vertex-computer-use/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vertex-computer-use/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vertex-computer-use/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "volcengine-agentkit/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "volcengine-agentkit/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "volcengine-agentkit/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vultr-windows/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vultr-windows/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vultr-windows/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vultr/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vultr/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "vultr/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "warpbuild/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "warpbuild/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "warpbuild/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "wasmer/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "wasmer/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "wasmer/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "windows-365/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "windows-365/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "windows-365/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "withruntime/agent": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "withruntime/devbox": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "withruntime/tiny": {
+   "keep_basis": "billed for uptime (no suspension feature published)",
+   "keep_rate": 1.0,
+   "origin": "conservative default (1.00)",
+   "source": "default"
+  },
+  "zeabur/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "zeabur/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "zeabur/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "zipbox/agent": {
+   "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)"
+  },
+  "zipbox/devbox": {
+   "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)"
+  },
+  "zipbox/tiny": {
+   "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+   "keep_rate": 0.0,
+   "origin": "first-party, probed and quoted",
+   "source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)"
+  },
+  "zo-computer/agent": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "zo-computer/devbox": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  },
+  "zo-computer/tiny": {
+   "keep_basis": "always-on by contract",
+   "keep_rate": 1.0,
+   "origin": "corpus card",
+   "source": "requires_always_on"
+  }
+ }
+}

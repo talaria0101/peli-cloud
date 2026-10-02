@@ -648,6 +648,72 @@ ck("every priced row states a hold_month figure",
        for p in doc['providers'] for s in (p.get('shapes') or {}).values()
        for pd in s['periods'].values()))
 ck("the catalogue prints the held column", 'held 24/7' in _cat2)
+ck("the catalogue marks an assumed keep rate as assumed",
+   re.search(r'1\.00\*', _cat2) is not None)
+ck("the catalogue marks a probed keep rate as measured",
+   re.search(r'\*\*0\.00\*\*', _cat2) is not None)
+
+print("GUARD O: the first-party posture probe must not be a silent no-op")
+# 51 fetched 183 vendor pages and 70 now reads the result as an input. Three
+# separate ways that could have failed quietly, and all three did during
+# development: the artefact was never written, the self-test gate was removed,
+# or the model was re-run after a script patched the artefact in place and wiped
+# the result. Each of those leaves a smaller number of measured rows than the
+# run before, with no error anywhere.
+_posture_path = os.path.join(ROOT, 'data', 'billing-posture.json')
+if not os.path.isfile(_posture_path):
+    print("  skip billing-posture guards (data/billing-posture.json absent; run")
+    print("       experiments/51-billing-posture-probe.py to check these)")
+else:
+    with open(_posture_path, encoding='utf-8') as _fh:
+        _posture = json.load(_fh)
+    _spec = importlib.util.spec_from_file_location(
+        "bp", os.path.join(ROOT, "experiments", "51-billing-posture-probe.py"))
+    bp = importlib.util.module_from_spec(_spec)
+    _spec.loader.exec_module(bp)
+    # The self-test must still pass on this tree, or the verdicts in the
+    # artefact were produced by a classifier that no longer reproduces itself.
+    _st = bp.selftest()
+    ck("the probe's self-test passes (%d known answers)" % len(bp.SELFTEST),
+       not _st, "; ".join(_st[:2]))
+    _rows = _posture.get('rows') or []
+    ck("the probe covered the providers that need it", len(_rows) >= 100,
+       "%d rows" % len(_rows))
+    # Every published verdict must carry the quote it was made from. A verdict
+    # with no quote is a verdict nobody can check.
+    _published = [r for r in _rows
+                  if r.get('verdict') in ('suspends', 'bills_uptime', 'partial')]
+    ck("every published verdict carries a quote (%d of them)" % len(_published),
+       all((r.get('quote') or '').strip() for r in _published),
+       str([r['id'] for r in _published if not (r.get('quote') or '').strip()][:3]))
+    ck("every published verdict carries the URL it was read from",
+       all((r.get('url') or '').startswith('http') for r in _published))
+    # And the three pages the classifier got wrong must NOT be published as a
+    # verdict. Each is a real page, each was misread at least once.
+    _by_id = {r['id']: r for r in _rows}
+    for _pid in ('nebius', 'azure-vm', 'stackit'):
+        ck("%s is not given a verdict from a rejected match" % _pid,
+           _by_id.get(_pid, {}).get('verdict') not in
+           ('suspends', 'bills_uptime', 'partial'),
+           str(_by_id.get(_pid, {}).get('verdict')))
+    ck('createos is not published as a clean suspension',
+       _by_id.get('createos', {}).get('verdict') not in ('suspends',),
+       str(_by_id.get('createos', {}).get('verdict')))
+    # The probed keep rates must actually be IN the model now, not only in the
+    # probe artefact. This is the check that catches "someone re-ran 70 after
+    # 53 patched the file".
+    _probed_in_model = [p for p in doc['providers']
+                        for s in (p.get('shapes') or {}).values()
+                        if (s.get('keep_source') or '').startswith('first-party probe')]
+    ck("probed keep rates reached the model (%d rows)" % len(_probed_in_model),
+       len(_probed_in_model) >= 20, "%d rows" % len(_probed_in_model))
+    _zip = [p for p in doc['providers'] if p['id'] == 'zipbox']
+    if _zip:
+        _zs = _zip[0]['shapes'].get('agent')
+        ck("zipbox carries the probed 0.00, not the default",
+           _zs and _zs['keep_rate'] == 0.0
+           and (_zs.get('keep_source') or '').startswith('first-party probe'),
+           str(_zs['keep_source'])[:50] if _zs else 'absent')
 
 print()
 print("TOTAL:", len(fails), "failures")

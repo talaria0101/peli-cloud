@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T04:01:23Z",
+ "at": "2026-10-02T04:52:59Z",
  "card_commit": "f6a71ab09fef",
  "duty_cycles_h_per_day": [
   1,
@@ -8049,9 +8049,9 @@
      "granularity_s": 0.001,
      "hourly": 0.22716,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)",
      "min_billed_seconds": 0,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -8061,7 +8061,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 157.148,
        "billed_month_with_credit": 157.148,
        "compute_day": 2.2716,
@@ -8070,17 +8070,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 163.5552,
+       "hold_month": 68.148,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 95.8148,
        "billed_month_with_credit": 95.8148,
        "compute_day": 0.2272,
@@ -8089,10 +8089,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 163.5552,
+       "hold_month": 6.8148,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -8110,15 +8110,15 @@
        "held_hours_per_day": 24,
        "hold_month": 163.5552,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 116.2592,
        "billed_month_with_credit": 116.2592,
        "compute_day": 0.9086,
@@ -8127,10 +8127,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 163.5552,
+       "hold_month": 27.2592,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       }
      }
     },
@@ -8139,9 +8139,9 @@
      "granularity_s": 0.001,
      "hourly": 0.45432,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)",
      "min_billed_seconds": 0,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -8151,7 +8151,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 225.296,
        "billed_month_with_credit": 225.296,
        "compute_day": 4.5432,
@@ -8160,17 +8160,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 327.1104,
+       "hold_month": 136.296,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 102.6296,
        "billed_month_with_credit": 102.6296,
        "compute_day": 0.4543,
@@ -8179,10 +8179,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 327.1104,
+       "hold_month": 13.6296,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -8200,15 +8200,15 @@
        "held_hours_per_day": 24,
        "hold_month": 327.1104,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 143.5184,
        "billed_month_with_credit": 143.5184,
        "compute_day": 1.8173,
@@ -8217,10 +8217,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 327.1104,
+       "hold_month": 54.5184,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       }
      }
     },
@@ -8229,9 +8229,9 @@
      "granularity_s": 0.001,
      "hourly": 0.09054,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://www.beam.cloud/pricing)",
      "min_billed_seconds": 0,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -8241,7 +8241,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 116.162,
        "billed_month_with_credit": 116.162,
        "compute_day": 0.9054,
@@ -8250,17 +8250,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 65.1888,
+       "hold_month": 27.162,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 91.7162,
        "billed_month_with_credit": 91.7162,
        "compute_day": 0.0905,
@@ -8269,10 +8269,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 65.1888,
+       "hold_month": 2.7162,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -8290,15 +8290,15 @@
        "held_hours_per_day": 24,
        "hold_month": 65.1888,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 99.8648,
        "billed_month_with_credit": 99.8648,
        "compute_day": 0.3622,
@@ -8307,10 +8307,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 65.1888,
+       "hold_month": 10.8648,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: cores ( 4 vCPU) and 16 GiB RAM costs $1.77 /hr ( $0.69 GPU + $0.76 CPU + $0.32 RAM , at the GPU-attached rates",
+       "keep_rate": 0.0
       }
      }
     }
@@ -27286,9 +27286,9 @@
      "granularity_s": 60,
      "hourly": 0.01,
      "how": "size cpu-basic (2 vCPU / 16 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": true,
@@ -27298,7 +27298,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 12.0,
        "billed_month_with_credit": 12.0,
        "compute_day": 0.1,
@@ -27307,17 +27307,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 7.2,
+       "hold_month": 3.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 9.3,
        "billed_month_with_credit": 9.3,
        "compute_day": 0.01,
@@ -27326,10 +27326,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 7.2,
+       "hold_month": 0.3,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -27347,15 +27347,15 @@
        "held_hours_per_day": 24,
        "hold_month": 7.2,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 10.2,
        "billed_month_with_credit": 10.2,
        "compute_day": 0.04,
@@ -27364,10 +27364,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 7.2,
+       "hold_month": 1.2,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       }
      }
     },
@@ -27378,9 +27378,9 @@
      "granularity_s": 60,
      "hourly": 0.03,
      "how": "size cpu-upgrade (8 vCPU / 32 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": true,
@@ -27390,7 +27390,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 18.0,
        "billed_month_with_credit": 18.0,
        "compute_day": 0.3,
@@ -27399,17 +27399,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 21.6,
+       "hold_month": 9.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 9.9,
        "billed_month_with_credit": 9.9,
        "compute_day": 0.03,
@@ -27418,10 +27418,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 21.6,
+       "hold_month": 0.9,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -27439,15 +27439,15 @@
        "held_hours_per_day": 24,
        "hold_month": 21.6,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 12.6,
        "billed_month_with_credit": 12.6,
        "compute_day": 0.12,
@@ -27456,10 +27456,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 21.6,
+       "hold_month": 3.6,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       }
      }
     },
@@ -27470,9 +27470,9 @@
      "granularity_s": 60,
      "hourly": 0.01,
      "how": "size cpu-basic (2 vCPU / 16 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://huggingface.co/docs/hub/en/jobs-pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": true,
@@ -27482,7 +27482,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 12.0,
        "billed_month_with_credit": 12.0,
        "compute_day": 0.1,
@@ -27491,17 +27491,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 7.2,
+       "hold_month": 3.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 9.3,
        "billed_month_with_credit": 9.3,
        "compute_day": 0.01,
@@ -27510,10 +27510,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 7.2,
+       "hold_month": 0.3,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -27531,15 +27531,15 @@
        "held_hours_per_day": 24,
        "hold_month": 7.2,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 10.2,
        "billed_month_with_credit": 10.2,
        "compute_day": 0.04,
@@ -27548,10 +27548,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 7.2,
+       "hold_month": 1.2,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: t a flat rate per Job, in addition to the hardware price: Product Hourly Price Exposed ports $0.01 Like hardwa",
+       "keep_rate": 0.0
       }
      }
     }
@@ -29063,9 +29063,9 @@
      "granularity_s": null,
      "hourly": 0.3,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://islo.dev/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -29075,7 +29075,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 90.0,
        "billed_month_with_credit": 90.0,
        "compute_day": 3.0,
@@ -29084,17 +29084,17 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 10,
-       "hold_month": 216.0,
+       "hold_month": 90.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 50.0,
        "billed_month_with_credit": 50.0,
        "compute_day": 0.3,
@@ -29103,10 +29103,10 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 1,
-       "hold_month": 216.0,
+       "hold_month": 9.0,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -29124,15 +29124,15 @@
        "held_hours_per_day": 24,
        "hold_month": 216.0,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 50.0,
        "billed_month_with_credit": 50.0,
        "compute_day": 1.2,
@@ -29141,10 +29141,10 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 4,
-       "hold_month": 216.0,
+       "hold_month": 36.0,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       }
      }
     },
@@ -29153,9 +29153,9 @@
      "granularity_s": null,
      "hourly": 0.6,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://islo.dev/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -29165,7 +29165,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 180.0,
        "billed_month_with_credit": 180.0,
        "compute_day": 6.0,
@@ -29174,17 +29174,17 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 10,
-       "hold_month": 432.0,
+       "hold_month": 180.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 50.0,
        "billed_month_with_credit": 50.0,
        "compute_day": 0.6,
@@ -29193,10 +29193,10 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 1,
-       "hold_month": 432.0,
+       "hold_month": 18.0,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -29214,15 +29214,15 @@
        "held_hours_per_day": 24,
        "hold_month": 432.0,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 72.0,
        "billed_month_with_credit": 72.0,
        "compute_day": 2.4,
@@ -29231,10 +29231,10 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 4,
-       "hold_month": 432.0,
+       "hold_month": 72.0,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       }
      }
     },
@@ -29243,9 +29243,9 @@
      "granularity_s": null,
      "hourly": 0.11,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://islo.dev/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -29255,7 +29255,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 50.0,
        "billed_month_with_credit": 50.0,
        "compute_day": 1.1,
@@ -29264,17 +29264,17 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 10,
-       "hold_month": 79.2,
+       "hold_month": 33.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 50.0,
        "billed_month_with_credit": 50.0,
        "compute_day": 0.11,
@@ -29283,10 +29283,10 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 1,
-       "hold_month": 79.2,
+       "hold_month": 3.3,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -29304,15 +29304,15 @@
        "held_hours_per_day": 24,
        "hold_month": 79.2,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 50.0,
        "billed_month_with_credit": 50.0,
        "compute_day": 0.44,
@@ -29321,10 +29321,10 @@
        "credit_applied": 0,
        "floor_applied": 50,
        "held_hours_per_day": 4,
-       "hold_month": 79.2,
+       "hold_month": 13.2,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: e alternatives More Community Agent infrastructure glossary Security Customers Pricing Sign in Start an agent ",
+       "keep_rate": 0.0
       }
      }
     }
@@ -31152,9 +31152,9 @@
      "granularity_s": 1,
      "hourly": 0.189,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -31164,7 +31164,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 95.7,
        "billed_month_with_credit": 95.7,
        "compute_day": 1.89,
@@ -31173,17 +31173,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 136.08,
+       "hold_month": 56.7,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 44.67,
        "billed_month_with_credit": 44.67,
        "compute_day": 0.189,
@@ -31192,10 +31192,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 136.08,
+       "hold_month": 5.67,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -31213,15 +31213,15 @@
        "held_hours_per_day": 24,
        "hold_month": 136.08,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 61.68,
        "billed_month_with_credit": 61.68,
        "compute_day": 0.756,
@@ -31230,10 +31230,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 136.08,
+       "hold_month": 22.68,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       }
      }
     },
@@ -31244,9 +31244,9 @@
      "granularity_s": 1,
      "hourly": 0.378,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -31256,7 +31256,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 152.4,
        "billed_month_with_credit": 152.4,
        "compute_day": 3.78,
@@ -31265,17 +31265,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 272.16,
+       "hold_month": 113.4,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 50.34,
        "billed_month_with_credit": 50.34,
        "compute_day": 0.378,
@@ -31284,10 +31284,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 272.16,
+       "hold_month": 11.34,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -31305,15 +31305,15 @@
        "held_hours_per_day": 24,
        "hold_month": 272.16,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 84.36,
        "billed_month_with_credit": 84.36,
        "compute_day": 1.512,
@@ -31322,10 +31322,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 272.16,
+       "hold_month": 45.36,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       }
      }
     },
@@ -31336,9 +31336,9 @@
      "granularity_s": 1,
      "hourly": 0.07605,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://www.langchain.com/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -31348,7 +31348,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 61.815,
        "billed_month_with_credit": 61.815,
        "compute_day": 0.7605,
@@ -31357,17 +31357,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 54.756,
+       "hold_month": 22.815,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 41.2815,
        "billed_month_with_credit": 41.2815,
        "compute_day": 0.0761,
@@ -31376,10 +31376,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 54.756,
+       "hold_month": 2.2815,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -31397,15 +31397,15 @@
        "held_hours_per_day": 24,
        "hold_month": 54.756,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 48.126,
        "billed_month_with_credit": 48.126,
        "compute_day": 0.3042,
@@ -31414,10 +31414,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 54.756,
+       "hold_month": 9.126,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ize deployment should I start with? Use Serverless for background or latency-tolerant agents (it scales to zer",
+       "keep_rate": 0.0
       }
      }
     }
@@ -32503,9 +32503,9 @@
      "granularity_s": 60,
      "hourly": 0.052,
      "how": "size large (2 vCPU / 4 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://machine0.io/)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -32515,7 +32515,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 15.6,
        "billed_month_with_credit": 15.6,
        "compute_day": 0.52,
@@ -32524,17 +32524,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 37.44,
+       "hold_month": 15.6,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 1.56,
        "billed_month_with_credit": 1.56,
        "compute_day": 0.052,
@@ -32543,10 +32543,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 37.44,
+       "hold_month": 1.56,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -32564,15 +32564,15 @@
        "held_hours_per_day": 24,
        "hold_month": 37.44,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 6.24,
        "billed_month_with_credit": 6.24,
        "compute_day": 0.208,
@@ -32581,10 +32581,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 37.44,
+       "hold_month": 6.24,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       }
      }
     },
@@ -32593,9 +32593,9 @@
      "granularity_s": 60,
      "hourly": 0.104,
      "how": "size xl (4 vCPU / 8 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://machine0.io/)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -32605,7 +32605,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 31.2,
        "billed_month_with_credit": 31.2,
        "compute_day": 1.04,
@@ -32614,17 +32614,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 74.88,
+       "hold_month": 31.2,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 3.12,
        "billed_month_with_credit": 3.12,
        "compute_day": 0.104,
@@ -32633,10 +32633,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 74.88,
+       "hold_month": 3.12,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -32654,15 +32654,15 @@
        "held_hours_per_day": 24,
        "hold_month": 74.88,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 12.48,
        "billed_month_with_credit": 12.48,
        "compute_day": 0.416,
@@ -32671,10 +32671,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 74.88,
+       "hold_month": 12.48,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       }
      }
     },
@@ -32683,9 +32683,9 @@
      "granularity_s": 60,
      "hourly": 0.013,
      "how": "size small (1 vCPU / 1 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://machine0.io/)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -32695,7 +32695,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 3.9,
        "billed_month_with_credit": 3.9,
        "compute_day": 0.13,
@@ -32704,17 +32704,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 9.36,
+       "hold_month": 3.9,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 0.39,
        "billed_month_with_credit": 0.39,
        "compute_day": 0.013,
@@ -32723,10 +32723,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 9.36,
+       "hold_month": 0.39,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -32744,15 +32744,15 @@
        "held_hours_per_day": 24,
        "hold_month": 9.36,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 1.56,
        "billed_month_with_credit": 1.56,
        "compute_day": 0.052,
@@ -32761,10 +32761,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 9.36,
+       "hold_month": 1.56,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: very operation is a CLI command with --json . A remote MCP server lets agents drive everything programmaticall",
+       "keep_rate": 0.0
       }
      }
     }
@@ -35125,9 +35125,9 @@
      "granularity_s": 1,
      "hourly": 0.05,
      "how": "size 2 vCPU / 4096 MiB (default, 1 unit, kept warm) (2 vCPU / 4 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -35137,7 +35137,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 15.0,
        "billed_month_with_credit": 15.0,
        "compute_day": 0.5,
@@ -35146,17 +35146,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 36.0,
+       "hold_month": 15.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 1.5,
        "billed_month_with_credit": 1.5,
        "compute_day": 0.05,
@@ -35165,10 +35165,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 36.0,
+       "hold_month": 1.5,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -35186,15 +35186,15 @@
        "held_hours_per_day": 24,
        "hold_month": 36.0,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 6.0,
        "billed_month_with_credit": 6.0,
        "compute_day": 0.2,
@@ -35203,10 +35203,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 36.0,
+       "hold_month": 6.0,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       }
      }
     },
@@ -35215,9 +35215,9 @@
      "granularity_s": 1,
      "hourly": 0.1,
      "how": "size 4 vCPU / 8192 MiB (2 units, cold boot) (4 vCPU / 8 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -35227,7 +35227,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 30.0,
        "billed_month_with_credit": 30.0,
        "compute_day": 1.0,
@@ -35236,17 +35236,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 72.0,
+       "hold_month": 30.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 3.0,
        "billed_month_with_credit": 3.0,
        "compute_day": 0.1,
@@ -35255,10 +35255,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 72.0,
+       "hold_month": 3.0,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -35276,15 +35276,15 @@
        "held_hours_per_day": 24,
        "hold_month": 72.0,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 12.0,
        "billed_month_with_credit": 12.0,
        "compute_day": 0.4,
@@ -35293,10 +35293,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 72.0,
+       "hold_month": 12.0,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       }
      }
     },
@@ -35305,9 +35305,9 @@
      "granularity_s": 1,
      "hourly": 0.05,
      "how": "size 1 vCPU / 2048 MiB (bills as 1 unit) (1 vCPU / 2 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://sandbox.mosaicos.com/)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -35317,7 +35317,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 15.0,
        "billed_month_with_credit": 15.0,
        "compute_day": 0.5,
@@ -35326,17 +35326,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 36.0,
+       "hold_month": 15.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 1.5,
        "billed_month_with_credit": 1.5,
        "compute_day": 0.05,
@@ -35345,10 +35345,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 36.0,
+       "hold_month": 1.5,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -35366,15 +35366,15 @@
        "held_hours_per_day": 24,
        "hold_month": 36.0,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 6.0,
        "billed_month_with_credit": 6.0,
        "compute_day": 0.2,
@@ -35383,10 +35383,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 36.0,
+       "hold_month": 6.0,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: ses Pricing Benchmarks Roadmap Security Get Key No walled gardens A real Linux sandbox for any agent. Start in",
+       "keep_rate": 0.0
       }
      }
     }
@@ -41524,9 +41524,9 @@
      "granularity_s": 3600,
      "hourly": 0.04,
      "how": "size C4 (2 vCPU / 4 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
+     "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
      "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)",
      "min_billed_seconds": null,
      "mode": "hourly-core",
      "not_self_serve": false,
@@ -41547,7 +41547,7 @@
        "held_hours_per_day": 10,
        "hold_month": 28.8,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "1h": {
@@ -41566,7 +41566,7 @@
        "held_hours_per_day": 1,
        "hold_month": 28.8,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "24h": {
@@ -41585,7 +41585,7 @@
        "held_hours_per_day": 24,
        "hold_month": 28.8,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "4h": {
@@ -41604,7 +41604,7 @@
        "held_hours_per_day": 4,
        "hold_month": 28.8,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       }
      }
@@ -41614,9 +41614,9 @@
      "granularity_s": 3600,
      "hourly": 0.08,
      "how": "size C5 (4 vCPU / 8 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
+     "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
      "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)",
      "min_billed_seconds": null,
      "mode": "hourly-core",
      "not_self_serve": false,
@@ -41637,7 +41637,7 @@
        "held_hours_per_day": 10,
        "hold_month": 57.6,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "1h": {
@@ -41656,7 +41656,7 @@
        "held_hours_per_day": 1,
        "hold_month": 57.6,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "24h": {
@@ -41675,7 +41675,7 @@
        "held_hours_per_day": 24,
        "hold_month": 57.6,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "4h": {
@@ -41694,7 +41694,7 @@
        "held_hours_per_day": 4,
        "hold_month": 57.6,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       }
      }
@@ -41704,9 +41704,9 @@
      "granularity_s": 3600,
      "hourly": 0.018,
      "how": "size C3 (2 vCPU / 2 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
+     "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
      "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_source": "first-party probe 2026-10-02 (https://docs.digitalocean.com/products/paperspace/pricing/)",
      "min_billed_seconds": null,
      "mode": "hourly-core",
      "not_self_serve": false,
@@ -41727,7 +41727,7 @@
        "held_hours_per_day": 10,
        "hold_month": 12.96,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "1h": {
@@ -41746,7 +41746,7 @@
        "held_hours_per_day": 1,
        "hold_month": 12.96,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "24h": {
@@ -41765,7 +41765,7 @@
        "held_hours_per_day": 24,
        "hold_month": 12.96,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       },
       "4h": {
@@ -41784,7 +41784,7 @@
        "held_hours_per_day": 4,
        "hold_month": 12.96,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: that machine. This differs from DigitalOcean Droplets, which are billed per second for as long as the Droplet ",
        "keep_rate": 1.0
       }
      }
@@ -45288,9 +45288,9 @@
      "granularity_s": 1,
      "hourly": 0.06,
      "how": "size cpu3c-2-4 (2 vCPU / 4 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
+     "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
      "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)",
      "min_billed_seconds": 0,
      "mode": "cpu-pod",
      "not_self_serve": false,
@@ -45311,7 +45311,7 @@
        "held_hours_per_day": 10,
        "hold_month": 43.2,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "1h": {
@@ -45330,7 +45330,7 @@
        "held_hours_per_day": 1,
        "hold_month": 43.2,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "24h": {
@@ -45349,7 +45349,7 @@
        "held_hours_per_day": 24,
        "hold_month": 43.2,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "4h": {
@@ -45368,7 +45368,7 @@
        "held_hours_per_day": 4,
        "hold_month": 43.2,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       }
      }
@@ -45378,9 +45378,9 @@
      "granularity_s": 1,
      "hourly": 0.12,
      "how": "size cpu3c-4-8 (4 vCPU / 8 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
+     "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
      "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)",
      "min_billed_seconds": 0,
      "mode": "cpu-pod",
      "not_self_serve": false,
@@ -45401,7 +45401,7 @@
        "held_hours_per_day": 10,
        "hold_month": 86.4,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "1h": {
@@ -45420,7 +45420,7 @@
        "held_hours_per_day": 1,
        "hold_month": 86.4,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "24h": {
@@ -45439,7 +45439,7 @@
        "held_hours_per_day": 24,
        "hold_month": 86.4,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "4h": {
@@ -45458,7 +45458,7 @@
        "held_hours_per_day": 4,
        "hold_month": 86.4,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       }
      }
@@ -45468,9 +45468,9 @@
      "granularity_s": 1,
      "hourly": 0.06,
      "how": "size cpu3c-2-4 (2 vCPU / 4 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
+     "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
      "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_source": "first-party probe 2026-10-02 (https://www.runpod.io/pricing)",
      "min_billed_seconds": 0,
      "mode": "cpu-pod",
      "not_self_serve": false,
@@ -45491,7 +45491,7 @@
        "held_hours_per_day": 10,
        "hold_month": 43.2,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "1h": {
@@ -45510,7 +45510,7 @@
        "held_hours_per_day": 1,
        "hold_month": 43.2,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "24h": {
@@ -45529,7 +45529,7 @@
        "held_hours_per_day": 24,
        "hold_month": 43.2,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       },
       "4h": {
@@ -45548,7 +45548,7 @@
        "held_hours_per_day": 4,
        "hold_month": 43.2,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "first-party: lex workers. Get started How Runpod pricing works Runpod pricing is based on the type of GPU workload you run.",
        "keep_rate": 1.0
       }
      }
@@ -47297,9 +47297,9 @@
      "granularity_s": 1,
      "hourly": 0.06,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)",
      "min_billed_seconds": 0,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -47309,7 +47309,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 18.0,
        "billed_month_with_credit": 18.0,
        "compute_day": 0.6,
@@ -47318,17 +47318,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 43.2,
+       "hold_month": 18.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 1.8,
        "billed_month_with_credit": 1.8,
        "compute_day": 0.06,
@@ -47337,10 +47337,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 43.2,
+       "hold_month": 1.8,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -47358,15 +47358,15 @@
        "held_hours_per_day": 24,
        "hold_month": 43.2,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 7.2,
        "billed_month_with_credit": 7.2,
        "compute_day": 0.24,
@@ -47375,10 +47375,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 43.2,
+       "hold_month": 7.2,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       }
      }
     },
@@ -47387,9 +47387,9 @@
      "granularity_s": 1,
      "hourly": 0.12,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)",
      "min_billed_seconds": 0,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -47399,7 +47399,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 36.0,
        "billed_month_with_credit": 36.0,
        "compute_day": 1.2,
@@ -47408,17 +47408,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 86.4,
+       "hold_month": 36.0,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 3.6,
        "billed_month_with_credit": 3.6,
        "compute_day": 0.12,
@@ -47427,10 +47427,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 86.4,
+       "hold_month": 3.6,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -47448,15 +47448,15 @@
        "held_hours_per_day": 24,
        "hold_month": 86.4,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 14.4,
        "billed_month_with_credit": 14.4,
        "compute_day": 0.48,
@@ -47465,10 +47465,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 86.4,
+       "hold_month": 14.4,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       }
      }
     },
@@ -47477,9 +47477,9 @@
      "granularity_s": 1,
      "hourly": 0.015,
      "how": "per-resource allocated",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://sandbox0.ai/pricing)",
      "min_billed_seconds": 0,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -47489,7 +47489,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 4.5,
        "billed_month_with_credit": 4.5,
        "compute_day": 0.15,
@@ -47498,17 +47498,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 10.8,
+       "hold_month": 4.5,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 0.45,
        "billed_month_with_credit": 0.45,
        "compute_day": 0.015,
@@ -47517,10 +47517,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 10.8,
+       "hold_month": 0.45,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -47538,15 +47538,15 @@
        "held_hours_per_day": 24,
        "hold_month": 10.8,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 1.8,
        "billed_month_with_credit": 1.8,
        "compute_day": 0.06,
@@ -47555,10 +47555,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 10.8,
+       "hold_month": 1.8,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: pply to Sandbox. The example uses a custom 2 vCPU / 6 GiB instance: Cloudflare requires at least 3 GiB per vCP",
+       "keep_rate": 0.0
       }
      }
     }
@@ -58895,9 +58895,9 @@
      "granularity_s": 1,
      "hourly": 0.0137,
      "how": "size Small (2 vCPU / 4 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -58907,7 +58907,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 4.11,
        "billed_month_with_credit": 4.11,
        "compute_day": 0.137,
@@ -58916,17 +58916,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 9.864,
+       "hold_month": 4.11,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 0.411,
        "billed_month_with_credit": 0.411,
        "compute_day": 0.0137,
@@ -58935,10 +58935,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 9.864,
+       "hold_month": 0.411,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -58956,15 +58956,15 @@
        "held_hours_per_day": 24,
        "hold_month": 9.864,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 1.644,
        "billed_month_with_credit": 1.644,
        "compute_day": 0.0548,
@@ -58973,10 +58973,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 9.864,
+       "hold_month": 1.644,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       }
      }
     },
@@ -58985,9 +58985,9 @@
      "granularity_s": 1,
      "hourly": 0.0274,
      "how": "size Medium (4 vCPU / 8 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -58997,7 +58997,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 8.22,
        "billed_month_with_credit": 8.22,
        "compute_day": 0.274,
@@ -59006,17 +59006,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 19.728,
+       "hold_month": 8.22,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 0.822,
        "billed_month_with_credit": 0.822,
        "compute_day": 0.0274,
@@ -59025,10 +59025,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 19.728,
+       "hold_month": 0.822,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -59046,15 +59046,15 @@
        "held_hours_per_day": 24,
        "hold_month": 19.728,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 3.288,
        "billed_month_with_credit": 3.288,
        "compute_day": 0.1096,
@@ -59063,10 +59063,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 19.728,
+       "hold_month": 3.288,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       }
      }
     },
@@ -59075,9 +59075,9 @@
      "granularity_s": 1,
      "hourly": 0.0068,
      "how": "size Tiny (1 vCPU / 2 GiB)",
-     "keep_basis": "billed for uptime (no suspension feature published)",
-     "keep_rate": 1.0,
-     "keep_source": "default",
+     "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+     "keep_rate": 0.0,
+     "keep_source": "first-party probe 2026-10-02 (https://zipbox.ai/pricing)",
      "min_billed_seconds": null,
      "mode": "on-demand",
      "not_self_serve": false,
@@ -59087,7 +59087,7 @@
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 10.0,
        "billed_month_no_credit": 2.04,
        "billed_month_with_credit": 2.04,
        "compute_day": 0.068,
@@ -59096,17 +59096,17 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 10,
-       "hold_month": 4.896,
+       "hold_month": 2.04,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "1h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 1.0,
        "billed_month_no_credit": 0.204,
        "billed_month_with_credit": 0.204,
        "compute_day": 0.0068,
@@ -59115,10 +59115,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 1,
-       "hold_month": 4.896,
+       "hold_month": 0.204,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "24h": {
        "allowance_applied_usd": 0.0,
@@ -59136,15 +59136,15 @@
        "held_hours_per_day": 24,
        "hold_month": 4.896,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       },
       "4h": {
        "allowance_applied_usd": 0.0,
        "allowance_covered_fraction": 0.0,
        "allowance_detail": {},
        "allowance_source": null,
-       "billed_held_hours_per_day": 24.0,
+       "billed_held_hours_per_day": 4.0,
        "billed_month_no_credit": 0.816,
        "billed_month_with_credit": 0.816,
        "compute_day": 0.0272,
@@ -59153,10 +59153,10 @@
        "credit_applied": 0,
        "floor_applied": null,
        "held_hours_per_day": 4,
-       "hold_month": 4.896,
+       "hold_month": 0.816,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
+       "keep_basis": "first-party: Pricing: pay only while a sandbox runs \u00b7 zipbox zipbox Product Security Pricing Docs Boot a sandbox \u2192 Pricing ",
+       "keep_rate": 0.0
       }
      }
     }
