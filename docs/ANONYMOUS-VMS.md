@@ -23,11 +23,13 @@ Three different claims are in this page and they are **not** the same claim.
 | `claimed` | The provider claims SSH; the host could not be dialled from here, and the reason is in the row. |
 | `no` | No inbound SSH endpoint is published. |
 
-**7 rows are banner-verified. That is not a login count, and on this
-host a login over the relay forward path does not complete** - the link stops
-before key exchange finishes, on every target tried, including stock OpenSSH
-servers. The measurement, the controls and the one target that behaves
-differently are in
+**6 rows are banner-verified. That is not a login count, and on this
+host a login over the relay forward path does not complete.** The cause is not
+SSH: review R25 sent a plain HTTP request down the same forward path and also got
+nothing back, so this host opens a forward session, reads the target's first
+bytes, and cannot get its own bytes delivered past that point - for any
+protocol. Which end is at fault is not established. The measurement, the
+controls and what would settle it are in
 [`research/verification/ssh-relay-2026-10-02.md`](../research/verification/ssh-relay-2026-10-02.md).
 
 ## What the three classes mean
@@ -38,8 +40,17 @@ differently are in
 - **free-tier-card** - a card is required, and a recurring or time-boxed
   allowance covers the machine.
 
-**17 rows below are a free or anonymous machine you can reach over SSH.
-15 of the 17 ask for an account and 4 ask for a card.**
+**15 rows below are a free or anonymous machine that some provider says
+answers SSH. That is NOT 15 reachable machines, and the difference is the
+point of the next table:**
+
+| of those 15 | count | what was done |
+|---|---|---|
+| dialled from this host, SSH banner read | **6** | the host answered with a version string; **no login was completed** |
+| the provider documents it, no public endpoint to dial | 7 | nothing was measured; the claim is the provider's |
+| the provider claims it and **this host could not reach it** | 2 | named in the row, with the measured reason |
+| **reachable AND logged in to, from this host** | **0** | see the relay note below |
+
 Every count on this page is computed by the renderer from the JSON; none is
 typed.
 
@@ -68,16 +79,14 @@ and its files are deleted.
 | [tilde.club](https://tilde.club/wiki/) | yes (banner) | SSH; the wiki publishes the host's RSA, ECDSA and ED25519 fingerprints | shared shell account | free while active | 0 |
 | [tilde.guru](https://tilde.guru/) | yes (banner) | SSH; the site is a FreeBSD pubnix | FreeBSD pubnix, member of the tildeverse; every user's home is served as a public web page | free while active | 0 |
 | [tilde.town](https://tilde.town/) | yes (banner) | SSH; the site publishes the host ECDSA key | shared shell account | free while active | 0 |
-| [tilde.zone](https://tilde.zone/) | yes (banner) | SSH; member of the tildeverse | shared shell account | free while active | 0 |
 | [alwaysdata Free](https://www.alwaysdata.com/en/pricing/) | claimed | SSH to the account's user; alwaysdata documents SSH users, keys and 2FA | 1 GB SSD, 256 MB RAM, 1/4 CPU, shared hosting | the free offer is described as available for life | 0 |
-| [Blinkenshell](https://blinkenshell.org/) | claimed | SSH on the NON-STANDARD port 2222, which the project's own FAQ states | shared UNIX shell provider, online continuously since 2006 | free account; new members accepted | 0 |
-| [GitHub Codespaces](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces) | yes (documented) | gh codespace ssh -c CODESPACE-NAME; the default dev container runs an SSH server | 2-core default machine; choose 2/4/8/16/32-core | quota resets monthly; a codespace is deleted after its retention period of inactivity | 0 within the free quota |
+| [Blinkenshell](https://blinkenshell.org/wiki/FAQ) | claimed | SSH on the NON-STANDARD port 2222, which the project's own FAQ states | shared UNIX shell provider, online continuously since 2006 | free account; new members accepted | 0 |
 | [Google Cloud Shell](https://cloud.google.com/shell/docs/limitations) | yes (documented) | Open in the browser or connect with the gcloud CLI | temporary Compute Engine VM, 5 GB persistent $HOME | ephemeral VM per session; the 5 GB $HOME persists | 0 within the weekly quota |
 | [Hugging Face Spaces (CPU)](https://huggingface.co/pricing) | yes (documented) | Spaces Dev Mode exposes an SSH endpoint for a running Space | free CPU basic Space (2 vCPU / 16 GB) | while the Space exists and is built | 0 on the free CPU tier |
 | [Modal Starter](https://modal.com/pricing) | yes (documented) | modal shell into a sandbox container from the Modal CLI | containers and sandboxes on Modal's pool; 1 TiB/month free egress | monthly credit reissued each month | 0 within $30/month of compute |
 | [AWS CloudShell](https://aws.amazon.com/cloudshell/) | no | Browser terminal only; no inbound SSH endpoint is published | 1 GB persistent storage per AWS Region | session persists within the Region; idle sessions end | 0 |
 | [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview) | no | Browser terminal only; no inbound SSH endpoint is published | cloud-hosted shell with a persistent Azure Files share | session times out after 20 minutes without interactive activity; files persist | 0 for the machine; storage costs apply |
-| [Killercoda](https://killercoda.com/) | no | browser terminal; no inbound SSH published | Linux or Kubernetes scenario environment | FREE scenario runs up to 1 hour; PLUS up to 4 hours and 3 concurrent scenarios | 0 on the free tier |
+| [Killercoda](https://killercoda.com/pricing) | no | browser terminal; no inbound SSH published | Linux or Kubernetes scenario environment | FREE scenario runs up to 1 hour; PLUS up to 4 hours and 3 concurrent scenarios | 0 on the free tier |
 | [Northflank Sandbox tier](https://northflank.com/pricing) | no | No published inbound SSH; deploy services and use the web console or API | 2 free services, 1 free database, 2 free cron jobs, always-on | free while the account is used | 0 |
 | [Render Free compute](https://render.com/pricing) | no | No published inbound SSH for free web services | 512 MB RAM, less than 1 CPU | free compute plans have usage limits and are for exploration and previews | 0 |
 
@@ -100,7 +109,7 @@ class of host as dead. That is the kind of finding a keyword search cannot make.
 | [AWS Free Tier](https://aws.amazon.com/free/) | yes (documented) | SSH key pair is chosen at instance launch | EC2 instances up to the plan's credit; the current free plan is credit-based (up to $200 over 6 months) | 6 months, or until the credits run out; the account then closes on its own unless converted to paid | 0 within the credits |
 | [Azure Free Account](https://azure.microsoft.com/en-us/free/) | yes (documented) | SSH keys are set at VM creation; the portal and the CLI both connect | 750 hours each of B1s, B2pts v2 (Arm) and B2ats v2 (AMD) burstable VMs, plus 65+ always-free services | the VM hours are 12 months for new customers; the $200 credit lasts 30 days; always-free services do not expire | 0 within the monthly amounts |
 | [Google Cloud Free Tier (e2-micro)](https://cloud.google.com/free/docs/free-cloud-features) | yes (documented) | SSH keys are added to the instance or its project metadata | 1 non-preemptible e2-micro, 30 GB standard persistent disk, 1 GB egress | every month, for the life of the account | 0 within the allowance |
-| [Oracle Cloud Always Free](https://www.oracle.com/cloud/free/) | yes (documented) | SSH key is installed at instance creation; the console and the CLI both connect | 2 AMD micro VMs and up to 4 OCPU / 24 GB Arm Ampere A1 across one or more instances; 200 GB block storage | Always Free, no time limit, while the tenancy qualifies | 0 on the Always Free shapes |
+| [Oracle Cloud Always Free](https://www.oracle.com/cloud/free/) | yes (documented) | SSH key is installed at instance creation; the console and the CLI both connect | the page no longer states the A1 OCPU-hour allowance; a 4 OCPU / 24 GB Ampere A1 shape and 200 GB block storage are quoted in Oracle's own Always Free documentation, NOT on this page | Always Free, no time limit, while the tenancy qualifies | 0 on the Always Free shapes |
 
 The largest machines on the page: Oracle's Always Free A1 allowance and
 Google's e2-micro are real 24/7 machines. AWS's free plan is now a six-month
@@ -113,9 +122,11 @@ months only.
 
 | Provider | SSH | How you get in | What you get | Lifetime | Cost |
 |---|---|---|---|---|---|
+| [tilde.zone](https://tilde.zone/) | yes (banner) | unknown: no operator page was found that documents how to get an account | unknown; a Debian host answering SSH, and a Mastodon instance on the same name | unknown | unknown |
+| [GitHub Codespaces](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces) | yes (documented) | gh codespace ssh -c CODESPACE-NAME; the default dev container runs an SSH server | 2-core default machine; choose 2/4/8/16/32-core | quota resets monthly; a codespace is deleted after its retention period of inactivity | unknown: the monthly core-hour figure could not be verified first-party from this host |
 | [Fly.io](https://fly.io/docs/about/pricing/) | no | fly ssh console reaches a running Machine, but there is no free allowance to run one | shared-CPU Machines; volumes first 10 GB free per month | pay-as-you-go | no free VM allowance; the only 'first free' is 10 GB of volume capacity |
 | [Koyeb](https://www.koyeb.com/pricing) | no | No published inbound SSH; the free plan is not in the published tiers | platform services and workers; included usage is a plan feature | included usage reissued monthly on paid plans | 0 only if a free tier is still offered; the published Starter/Pro plans carry included usage |
-| [Microterm, LinuxOnTab](https://microterm.dev/ and https://linuxontab.com/) | no | none: both run a Linux kernel inside the browser via WebAssembly (TinyEMU/RISC-V64 and v86) | Alpine userland in-browser, Microterm claims persistent local storage up to 40 GB; LinuxOnTab ships a real x86 kernel and calls itself 'Free, no signup' | runs in the reader's own browser tab | 0 |
+| [Microterm, LinuxOnTab](https://linuxontab.com/) | no | none: both run a Linux kernel inside the browser via WebAssembly (TinyEMU/RISC-V64 and v86) | Alpine userland in-browser, Microterm claims persistent local storage up to 40 GB; LinuxOnTab ships a real x86 kernel and calls itself 'Free, no signup' | runs in the reader's own browser tab | 0 |
 | [Play with Docker](https://labs.play-with-docker.com/) | no | browser terminal, never SSH | 4-hour Docker-in-Docker session (historical) | unavailable from 2026-03-01 | n/a |
 
 Two corrections matter. **Play with Docker**, the canonical anonymous free VM in
@@ -137,12 +148,18 @@ saying *runs on your own laptop* is misleading.
 
 The relay dialed these hosts and read their banners on 2026-10-02:
 
-Railway Free VM, SDF Public Access UNIX System, hashbang (#!), tilde.club, tilde.guru, tilde.town, tilde.zone
+Railway Free VM, SDF Public Access UNIX System, hashbang (#!), tilde.club, tilde.guru, tilde.town
 
 Reachability was checked through the relay's own `/trace` diagnostic because
 this sandbox's egress proxy **refuses port 22** (`CONNECT ... 403`) and permits
 443. That is a property of this sandbox, not of any provider, and it is why the
 relay is the only route at all here.
+
+**The 2 hosts this sandbox could NOT reach are Blinkenshell, alwaysdata Free.**
+That is recorded as a fact about this host and this network, not as a verdict on
+the services: Blinkenshell answered 0 bytes on 22, 2222 and 443 alike, and
+alwaysdata's free tier is reached through a per-account host rather than a
+public one. Neither row claims the service is dead.
 
 ---
 
@@ -161,9 +178,9 @@ relay is the only route at all here.
 - caveats: The ONLY row here that needs no account at all. Anonymous trials are capped per region and can be disabled under demand (the page's own words: "Anonymous trials are temporarily disabled"); the preview URL is visible only from the creating IP until claimed; abuse protections and a shared AI budget apply. Reaching it FROM THIS SANDBOX over the relay gets as far as the SSH banner and then the relay link closes before key exchange completes, so a working login here is not established. See research/verification/ssh-relay-2026-10-02.md.
 
 **SDF Public Access UNIX System** - `free-account`, account=yes, card=no
-- quote: “Signup for Shell Access ... [UNIX SHELL] ... Est. 1987”
+- quote: “Create a Free UNIX Shell Account ... Linux/UNIX users can type 'ssh new@sdf.org' at their shell prompt.”
 - endpoint: `sdf.org:22` (banner-verified)
-- checked: first-party-fetched 2026-10-02 (HTTP 200); relay /trace dialed sdf.org:22 and read banner SSH-2.0-OpenSSH_10.4
+- checked: first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py; relay /trace dialed sdf.org:22 and read banner SSH-2.0-OpenSSH_10.4
 - caveats: A shared shell, not a VM. The same site is reachable at freeshell.org and webstats.freeshell.org, which both resolve to this one system rather than being three providers.
 
 **tilde.club** - `free-account`, account=yes, card=no
@@ -173,7 +190,7 @@ relay is the only route at all here.
 - caveats: Shared shell, not a VM; signups no longer accept gmail.com addresses.
 
 **tilde.guru** - `free-account`, account=yes, card=no
-- quote: “a FreeBSD pubnix · est. 2021 · member of the tildeverse ... SYSTEM ONLINE — FreeBSD 15.0-RELEASE”
+- quote: “a FreeBSD pubnix · est. 2021 · member of the tildeverse”
 - endpoint: `tilde.guru:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02 (HTTP 200); relay /trace dialed tilde.guru:22 and read banner SSH-2.0-OpenSSH_10.0 FreeBSD-20250801
 - caveats: NEW ROW, not in the earlier census. FreeBSD, not Linux. Shared shell, not a VM. Signup and resource limits are on the site's own wiki, which returned 404 for /wiki/Join when fetched here.
@@ -184,16 +201,10 @@ relay is the only route at all here.
 - checked: first-party-fetched 2026-10-02; relay /trace dialed tilde.town:22 and read banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4
 - caveats: Shared shell; signup is by invitation/request; not a VM.
 
-**tilde.zone** - `free-account`, account=yes, card=no
-- quote: none taken; see the measurement note below
-- endpoint: `tilde.zone:22` (banner-verified)
-- checked: reachability measured 2026-10-02: relay /trace dialed tilde.zone:22 and read banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4
-- caveats: NEW ROW and the WEAKEST evidence in this census: the host was dialled and answered with an OpenSSH banner, and nothing else about it was checked first-party. Same Debian build string as tilde.town, which is what a shared image or a mirror would produce; that is a reason to verify the operator before relying on it, not a claim that they are the same host. No signup page was fetched.
-
 **alwaysdata Free** - `free-account`, account=yes, card=no
-- quote: “Free ... 0 €/month ... Disk space SSD 1 Go gift RAM 256 Mo free CPU 1/4 ... for life”
+- quote: “free for personal needs, ad-free offer available for life”
 - endpoint: `ssh.<account>.alwaysdata.com (per-account, not a public host)` (not-verified)
-- checked: first-party-fetched 2026-10-02; the relay dialed alwaysdata.com:22 and read 0 bytes, but that host is a shared web front end and the account's SSH host is per-account, so this is not evidence about the service
+- checked: first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py. The earlier quote ('Free ... 0 EUR/month ... Disk space SSD 1 Go') did NOT survive being fetched and was replaced with the page's own current wording
 - caveats: Shared web-hosting account, not a root VM; the free quota is small and some services are restricted.
 
 **AWS Free Tier** - `free-tier-card`, account=yes, card=yes
@@ -211,14 +222,8 @@ relay is the only route at all here.
 **Blinkenshell** - `free-account`, account=yes, card=no
 - quote: “Blinkenshell uses the non-standard port 2222 for SSH (instead of 22), so you need to specify this when connecting.”
 - endpoint: `blinkenshell.org:2222` (not-verified)
-- checked: first-party-fetched 2026-10-02 (HTTP 200); its wiki/FAQ carries the port-2222 sentence quoted above
+- checked: first-party-fetched 2026-10-02: the quote is verbatim on the cited wiki/FAQ page (HTTP 200, 61,633 bytes) and the root page does NOT contain it, so the citation points at the page that carries the sentence. The relay dialed blinkenshell.org on 22, 2222 and 443 and each answered with 0 bytes
 - caveats: NEW ROW. NOT reachable from here and the reason is measured, not assumed: the relay dialed blinkenshell.org on 22, 2222 and 443 and every one answered silent-or-unreachable at 0 bytes, so the host is refusing or filtering this network rather than being down. Signup is a multi-step process that ends in a VOUCH by an existing member, and the FAQ states you cannot SSH until you reach step 5. It is a shared shell, not a VM. The port-2222 fact is the useful part: a scanner that only tries 22 records every Blinkenshell-class host as dead.
-
-**GitHub Codespaces** - `free-account`, account=yes, card=no
-- quote: “GitHub will provide users in the free plan 120 core hours or 60 hours of run time on a 2 core codespace, plus 15 GB of storage each month.”
-- endpoint: `published per-codespace by GitHub` (provider-documented)
-- checked: provider-documented; no published host:port to dial, so nothing was checked from this host
-- caveats: Free quota is for personal accounts only; organizations and enterprises must pay. Storage beyond 15 GB-month and compute beyond the quota are billed.
 
 **Google Cloud Free Tier (e2-micro)** - `free-tier-card`, account=yes, card=yes
 - quote: “1 non-preemptible e2-micro VM instance per month in one of the following US regions ... 30 GB-months standard persistent disk ... 1 GB of outbound data transfer ... per month.”
@@ -245,10 +250,10 @@ relay is the only route at all here.
 - caveats: An account is required; the $30 is a monthly credit, not a permanent free machine. It is a container sandbox, not a general VPS.
 
 **Oracle Cloud Always Free** - `free-tier-card`, account=yes, card=yes
-- quote: “All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month for free for VM instances using the VM.Standard.A1.Flex shape (carried from research/verification/2026-10-02.md; the oracle.com domain returns 403 to this host)”
+- quote: “Build, test and deploy applications on the Cloud with Always Free cloud services and get $300 in credit towards other cloud services.”
 - endpoint: `per-instance, public IP assigned by Oracle` (provider-documented)
-- checked: blocked-from-host: every oracle.com URL returns a 1,339-byte export-control 403 here; the corpus card and the quoted allowance are the evidence
-- caveats: A card is required at signup and capacity can be reclaimed; A1 is often out of capacity in a region. The allowance is a resource allowance, not a dollar credit.
+- checked: MEASURED 2026-10-02: https://www.oracle.com/cloud/free/ returns HTTP 200 with 79,448 bytes, so the 403 this host used to receive no longer happens. The page is CLIENT-RENDERED: the quoted sentence is its meta description, which is the only customer-visible text present, and the strings '1,500', 'OCPU' and '9,000' do NOT occur anywhere in the response. The A1 allowance figures this row used to quote are therefore UNVERIFIED against this page and are not presented as if they were
+- caveats: DEMOTED after review R23/R24. Two corrections, both measured. (1) The 403 that earlier revisions recorded for oracle.com from this host does not happen now - the page returns 200 - so the carried-figure excuse no longer applies. (2) With the page fetched, the OCPU-hour allowance this row quoted is NOT on it. What survives is Oracle's own always-free promise and a $300 trial credit, both from the page's own meta description. The A1 allowance remains the largest single understatement in the main catalogue and is carried there from the corpus card, not from this page; do not read this row as confirming it. A card is required at signup and A1 capacity can be reclaimed.
 
 **AWS CloudShell** - `free-account`, account=yes, card=no
 - quote: “Run scripts and commands at no extra cost, with up to 1 GB of persistent storage per AWS Region.”
@@ -265,13 +270,13 @@ relay is the only route at all here.
 **Killercoda** - `free-account`, account=yes, card=no
 - quote: “Membership PLUS Includes all from FREE Use scenarios for up to 4 hours instead of just one ... Open up to 3 scenarios at the same time”
 - endpoint: `none published` (not-verified)
-- checked: first-party-fetched 2026-10-02; the relay dialed killercoda.com:22 and read 0 bytes, which is consistent with a browser-only product
+- checked: first-party-fetched 2026-10-02: the root page does NOT carry the quota text; it is on /pricing, which is now the cited source. Re-verified by tools/check-quotes.py
 - caveats: The page does not state whether a login is required to start a free scenario; treat 'anonymous' as unverified. Browser terminal only, no SSH.
 
 **Northflank Sandbox tier** - `free-account`, account=yes, card=no
-- quote: “Tiers Sandbox ... Always-on-compute - no sleeping :) 2x free services 1x free database 2x free cron jobs”
+- quote: “Always-on-compute - no sleeping :) 2× free services 1× free database 2× free cron jobs”
 - endpoint: `none published` (provider-documented)
-- checked: first-party-fetched 2026-10-02
+- checked: first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py
 - caveats: A container platform, not a VM you SSH into; the free tier is for testing and building trust.
 
 **Render Free compute** - `free-account`, account=yes, card=no
@@ -282,6 +287,18 @@ relay is the only route at all here.
 
 ## Changed and dead
 
+**tilde.zone** - `changed`, account=yes, card=no
+- quote: none taken; see the measurement note below
+- endpoint: `tilde.zone:22` (banner-verified)
+- checked: reachability measured 2026-10-02: relay /trace dialed tilde.zone:22 and read banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4. NO first-party claim of a free shell was found: the site's only page is a Mastodon instance requiring JavaScript, and none of its outbound links identify a shell operator
+- caveats: DEMOTED from the free-shell table after review, deliberately, and this row is the reason it is still here rather than deleted. A host answering SSH is EVIDENCE OF A HOST, NOT OF A FREE SHELL: fetched first-party, tilde.zone publishes nothing about free accounts, signup, or who operates it. A row that says 'free' on a banner alone is exactly the padding the guard exists to prevent, so it now reads 'unknown' where the three facts cannot be established and is classed `changed` to keep it out of the free tables while leaving the measurement visible. Same Debian build string as tilde.town, which is what a shared image or a mirror would produce - a reason to verify the operator, not a claim they are one host. Recovering the row requires a first-party page that names an operator and a signup path.
+
+**GitHub Codespaces** - `changed`, account=yes, card=no
+- quote: none taken; see the measurement note below
+- endpoint: `published per-codespace by GitHub` (provider-documented)
+- checked: MEASURED absence, 2026-10-02: the cited page was fetched (HTTP 200, 196,281 bytes) and carries a 15 GB storage figure but NOT the "120 core hours or 60 hours" quota line this row used to quote. Four further GitHub pages were fetched to chase it (features/codespaces, the codespaces CLI page, managing-billing, about-codespaces) and none carries it. The number is therefore recorded as unverified rather than published
+- caveats: DEMOTED after review R23. The earlier row asserted a free quota of "120 core hours or 60 hours of run time on a 2 core codespace" with a citation that does not contain that sentence - the quote did not survive being fetched, which is the one thing a quote is for. The SSH mechanism is real and is GitHub's own documented gh codespace ssh; the FREE-TIER SIZE is what this row can no longer support, so it leaves the free tables until the figure is confirmed against a page that states it. Not a claim that the free tier is gone or that codespaces now cost money.
+
 **Fly.io** - `changed`, account=yes, card=yes
 - quote: “$0.08/GB per month First 10GB free each month”
 - endpoint: `per-Machine` (provider-documented)
@@ -289,15 +306,15 @@ relay is the only route at all here.
 - caveats: The free Machine allowance Fly.io used to grant is gone from the pricing page. A card is required; the 10 GB is storage, not compute.
 
 **Koyeb** - `changed`, account=yes, card=no
-- quote: “Pro $29 /mo +compute ... Included Usage $10 ... Once you've consumed your included monthly free credit, we start billing you on a pay-per-use basis.”
+- quote: “Included Usage $10 ... Once you've consumed your included monthly free credit, we start billing you on a pay-per-use basis.”
 - endpoint: `none published` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: The old free 'Hobby' instance is not in the tiers shown on 2026-10-02; included usage is a paid-plan feature, so a free VM should not be assumed.
 
 **Microterm, LinuxOnTab** - `changed`, account=no, card=no
-- quote: “Microterm is a fully functional Alpine Linux virtual machine running directly in any browser tab ... local computation with maximum privacy | Free, no signup”
+- quote: “Free, no signup”
 - endpoint: `none: there is no network path to these at all` (not-verified)
-- checked: first-party-fetched 2026-10-02, both HTTP 200
+- checked: first-party-fetched 2026-10-02: linuxontab.com carries the quoted phrase 'Free, no signup' verbatim. The companion project microterm.dev was fetched the same day (HTTP 200) and is described in the caveats; it is not the cited source because the quote is not on it
 - caveats: NEW ROW, and the category is new rather than the entries: these are 'anonymous free Linux' with no account and no card, but the machine is the READER'S OWN, there is no host to SSH to, and nothing runs while the tab is closed. Listing them beside a real remote VM would be a category error, which is why they are here rather than in the SSH table. Microterm is RISC-V64 emulated; LinuxOnTab ships a native WebAssembly x86 kernel.
 
 **Play with Docker** - `dead`, account=no, card=no

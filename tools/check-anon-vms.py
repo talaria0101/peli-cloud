@@ -13,7 +13,16 @@ Four things must hold before a row is published:
      page says so where the distinction matters. This is the clause that stops
      the strongest-sounding field in the file from being read as the strongest
      thing in it.
-  4. The SSH floor: at least ten free-or-anonymous machines that answer SSH, and
+  4. A FREE row may not rest on a banner alone. This clause exists because one
+     did: review R22 found tilde.zone carrying `class: free-account` with an
+     empty quote, a `cost_usd` of 0 and nothing but a live SSH banner behind it,
+     and its first-party page turned out to be a Mastodon instance that mentions
+     neither a shell nor an operator. A host answering SSH is evidence of a
+     HOST, not of a FREE SHELL. So: a row in a free class must carry a
+     first-party quote that says so, OR a `cost_usd` that is not a bare number
+     with a first-party basis. A row that wants to be free has to say free in
+     words somebody else wrote.
+  5. The SSH floor: at least ten free-or-anonymous machines that answer SSH, and
      at least one genuinely anonymous row.
 
 Exit 0 when every clause holds, 1 when one does not, and it names which.
@@ -27,6 +36,9 @@ DATA = os.path.join(ROOT, "data", "anonymous-vms.json")
 FREE_CLASSES = {"anonymous", "free-account", "free-tier-card"}
 ALL_CLASSES = FREE_CLASSES | {"changed", "dead"}
 REACHABILITY = {"banner-verified", "not-verified", "provider-documented"}
+# A free row that has been dialled must ALSO carry first-party words saying it
+# is free. Set after review R22, which found a live banner carrying a row.
+FREE_CLASS_REQUIRES_QUOTE = FREE_CLASSES
 
 MIN_SSH = 10
 MIN_ROWS = 20
@@ -66,6 +78,18 @@ for r in rows:
         problems.append(f"{rid}: banner-verified but no ssh_endpoint")
     if reach == "not-verified" and not r.get("ssh_endpoint") and not r.get("ssh_how"):
         problems.append(f"{rid}: not-verified and no endpoint or how")
+
+# R22. A free row may not rest on reachability. If it was dialled and carries no
+# quote, then the ONLY thing supporting "free" is that something answered on
+# port 22 - which is evidence of a host, not of a free shell. Review R22 found
+# exactly that: a row classed free-account, cost 0, no quote, one live banner,
+# and a first-party page that never mentioned a shell.
+for r in rows:
+    if r.get("class") in FREE_CLASS_REQUIRES_QUOTE and not r.get("quote"):
+        problems.append(
+            f"{r.get('id')}: free class with no first-party quote. A banner proves a "
+            f"host, not a free shell; a free row needs words its provider wrote "
+            f"(see review R22)")
 
 # The point of the brief: free-or-anonymous machines that answer SSH.
 ssh_rows = [r for r in rows if r.get("class") in FREE_CLASSES and r.get("ssh") is True]

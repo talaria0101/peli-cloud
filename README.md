@@ -18,6 +18,7 @@ each in their own table, and every row linking to the page its numbers came from
 | ten minutes | [docs/CATALOGUE.md](docs/CATALOGUE.md) in full |
 | to buy something | table C, then the duty cycle that matches your agent |
 | **a shell with no card and no account** | **[docs/ANONYMOUS-VMS.md](docs/ANONYMOUS-VMS.md)** |
+| **to doubt the census** | **[research/deep-reviews-anon-vms.md](research/deep-reviews-anon-vms.md)** - five reviews; three of them removed rows |
 | **an SSH session into this sandbox from outside** | **[research/verification/ssh-relay-2026-10-02.md](research/verification/ssh-relay-2026-10-02.md)**, then `sh tools/ssh-relay-check.sh` |
 | to distrust me | [experiments/](experiments/) and `data/*.json` |
 | to know what was wrong | [docs/FINDINGS.md](docs/FINDINGS.md) |
@@ -165,14 +166,19 @@ shell on for nothing, and what it actually takes:
 
     python3 tools/check-anon-vms.py                       # guard the census
     python3 tools/render-anon-vms.py                      # write docs/ANONYMOUS-VMS.md from the JSON
+    python3 tools/check-quotes.py                         # every quote, against the page it cites
+    python3 tests/selftest-check-quotes.py                # the quote checker's own known answers
+    python3 tests/selftest-check-quotes.py --mutate       # and the mutation that must be caught
     sh      tools/ssh-relay-check.sh                      # a REAL ssh login into this sandbox, over a relay
     sh      tests/ssh-relay-regressions.sh                # 11 clauses; each names the control it needs
     sh      tests/one-login.sh <name>                     # one login, passwd name drivable (PASSWD_NAME=<n>)
 
-[`docs/ANONYMOUS-VMS.md`](docs/ANONYMOUS-VMS.md) carries 26 rows: **17 free or
-anonymous machines that answer SSH, 7 of them dialled and banner-verified, 1
-genuinely anonymous.** Railway's free VM is the only row needing no account and
-no card, and its own FAQ says so: *"Railway identifies you by your SSH key."*
+[`docs/ANONYMOUS-VMS.md`](docs/ANONYMOUS-VMS.md) carries 26 rows: **15 free or
+anonymous machines that a provider says answer SSH, 6 of them dialled and
+banner-verified, 1 genuinely anonymous.** Railway's free VM is the only row
+needing no account and no card, and its own FAQ says so: *"Railway identifies
+you by your SSH key."* Every quote on the page is checked against the page it
+cites, by `tools/check-quotes.py`.
 
 Two things that page is careful about, because both are easy to get wrong:
 

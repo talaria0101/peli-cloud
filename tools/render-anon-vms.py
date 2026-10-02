@@ -91,6 +91,10 @@ ssh_rows = [r for r in rows if r["class"] in FREE and r["ssh"]]
 banner_rows = [r for r in ssh_rows if r["ssh_reachability"] == "banner-verified"]
 n_ssh = len(ssh_rows)
 n_banner = len(banner_rows)
+n_doc = len([r for r in ssh_rows if r["ssh_reachability"] == "provider-documented"])
+n_unreach = len([r for r in ssh_rows if r["ssh_reachability"] == "not-verified"])
+unreach_names = ", ".join(sorted(r["name"] for r in ssh_rows
+                                 if r["ssh_reachability"] == "not-verified"))
 anon_needed = [r for r in ssh_rows if r["account_required"]]
 n_anon_needed = len(anon_needed)
 n_card = len([r for r in ssh_rows if r["card_required"]])
@@ -122,10 +126,12 @@ Three different claims are in this page and they are **not** the same claim.
 | `no` | No inbound SSH endpoint is published. |
 
 **{n_banner} rows are banner-verified. That is not a login count, and on this
-host a login over the relay forward path does not complete** - the link stops
-before key exchange finishes, on every target tried, including stock OpenSSH
-servers. The measurement, the controls and the one target that behaves
-differently are in
+host a login over the relay forward path does not complete.** The cause is not
+SSH: review R25 sent a plain HTTP request down the same forward path and also got
+nothing back, so this host opens a forward session, reads the target's first
+bytes, and cannot get its own bytes delivered past that point - for any
+protocol. Which end is at fault is not established. The measurement, the
+controls and what would settle it are in
 [`research/verification/ssh-relay-2026-10-02.md`](../research/verification/ssh-relay-2026-10-02.md).
 
 ## What the three classes mean
@@ -136,8 +142,17 @@ differently are in
 - **free-tier-card** - a card is required, and a recurring or time-boxed
   allowance covers the machine.
 
-**{n_ssh} rows below are a free or anonymous machine you can reach over SSH.
-{n_anon_needed} of the {n_ssh} ask for an account and {n_card} ask for a card.**
+**{n_ssh} rows below are a free or anonymous machine that some provider says
+answers SSH. That is NOT {n_ssh} reachable machines, and the difference is the
+point of the next table:**
+
+| of those {n_ssh} | count | what was done |
+|---|---|---|
+| dialled from this host, SSH banner read | **{n_banner}** | the host answered with a version string; **no login was completed** |
+| the provider documents it, no public endpoint to dial | {n_doc} | nothing was measured; the claim is the provider's |
+| the provider claims it and **this host could not reach it** | {n_unreach} | named in the row, with the measured reason |
+| **reachable AND logged in to, from this host** | **0** | see the relay note below |
+
 Every count on this page is computed by the renderer from the JSON; none is
 typed.
 
@@ -211,6 +226,12 @@ Reachability was checked through the relay's own `/trace` diagnostic because
 this sandbox's egress proxy **refuses port 22** (`CONNECT ... 403`) and permits
 443. That is a property of this sandbox, not of any provider, and it is why the
 relay is the only route at all here.
+
+**The {n_unreach} hosts this sandbox could NOT reach are {unreach_names}.**
+That is recorded as a fact about this host and this network, not as a verdict on
+the services: Blinkenshell answered 0 bytes on 22, 2222 and 443 alike, and
+alwaysdata's free tier is reached through a per-account host rather than a
+public one. Neither row claims the service is dead.
 
 ---
 

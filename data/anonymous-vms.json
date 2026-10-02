@@ -50,8 +50,8 @@
       "lifetime": "free USER tier for as long as the account is used",
       "cost_usd": "0",
       "source": "https://sdf.org/?signup",
-      "quote": "Signup for Shell Access ... [UNIX SHELL] ... Est. 1987",
-      "verification": "first-party-fetched 2026-10-02 (HTTP 200); relay /trace dialed sdf.org:22 and read banner SSH-2.0-OpenSSH_10.4",
+      "quote": "Create a Free UNIX Shell Account ... Linux/UNIX users can type 'ssh new@sdf.org' at their shell prompt.",
+      "verification": "first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py; relay /trace dialed sdf.org:22 and read banner SSH-2.0-OpenSSH_10.4",
       "caveats": "A shared shell, not a VM. The same site is reachable at freeshell.org and webstats.freeshell.org, which both resolve to this one system rather than being three providers."
     },
     {
@@ -68,7 +68,7 @@
       "lifetime": "free while active",
       "cost_usd": "0",
       "source": "https://tilde.guru/",
-      "quote": "a FreeBSD pubnix · est. 2021 · member of the tildeverse ... SYSTEM ONLINE — FreeBSD 15.0-RELEASE",
+      "quote": "a FreeBSD pubnix \u00b7 est. 2021 \u00b7 member of the tildeverse",
       "verification": "first-party-fetched 2026-10-02 (HTTP 200); relay /trace dialed tilde.guru:22 and read banner SSH-2.0-OpenSSH_10.0 FreeBSD-20250801",
       "caveats": "NEW ROW, not in the earlier census. FreeBSD, not Linux. Shared shell, not a VM. Signup and resource limits are on the site's own wiki, which returned 404 for /wiki/Join when fetched here."
     },
@@ -111,20 +111,20 @@
     {
       "id": "tilde-zone",
       "name": "tilde.zone",
-      "class": "free-account",
+      "class": "changed",
       "account_required": true,
       "card_required": false,
       "ssh": true,
-      "ssh_how": "SSH; member of the tildeverse",
+      "ssh_how": "unknown: no operator page was found that documents how to get an account",
       "ssh_reachability": "banner-verified",
       "ssh_endpoint": "tilde.zone:22",
-      "resources": "shared shell account",
-      "lifetime": "free while active",
-      "cost_usd": "0",
+      "resources": "unknown; a Debian host answering SSH, and a Mastodon instance on the same name",
+      "lifetime": "unknown",
+      "cost_usd": "unknown",
       "source": "https://tilde.zone/",
       "quote": "",
-      "verification": "reachability measured 2026-10-02: relay /trace dialed tilde.zone:22 and read banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4",
-      "caveats": "NEW ROW and the WEAKEST evidence in this census: the host was dialled and answered with an OpenSSH banner, and nothing else about it was checked first-party. Same Debian build string as tilde.town, which is what a shared image or a mirror would produce; that is a reason to verify the operator before relying on it, not a claim that they are the same host. No signup page was fetched."
+      "verification": "reachability measured 2026-10-02: relay /trace dialed tilde.zone:22 and read banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4. NO first-party claim of a free shell was found: the site's only page is a Mastodon instance requiring JavaScript, and none of its outbound links identify a shell operator",
+      "caveats": "DEMOTED from the free-shell table after review, deliberately, and this row is the reason it is still here rather than deleted. A host answering SSH is EVIDENCE OF A HOST, NOT OF A FREE SHELL: fetched first-party, tilde.zone publishes nothing about free accounts, signup, or who operates it. A row that says 'free' on a banner alone is exactly the padding the guard exists to prevent, so it now reads 'unknown' where the three facts cannot be established and is classed `changed` to keep it out of the free tables while leaving the measurement visible. Same Debian build string as tilde.town, which is what a shared image or a mirror would produce - a reason to verify the operator, not a claim they are one host. Recovering the row requires a first-party page that names an operator and a signup path."
     },
     {
       "id": "hashbang",
@@ -157,15 +157,15 @@
       "resources": "shared UNIX shell provider, online continuously since 2006",
       "lifetime": "free account; new members accepted",
       "cost_usd": "0",
-      "source": "https://blinkenshell.org/",
+      "source": "https://blinkenshell.org/wiki/FAQ",
       "quote": "Blinkenshell uses the non-standard port 2222 for SSH (instead of 22), so you need to specify this when connecting.",
-      "verification": "first-party-fetched 2026-10-02 (HTTP 200); its wiki/FAQ carries the port-2222 sentence quoted above",
+      "verification": "first-party-fetched 2026-10-02: the quote is verbatim on the cited wiki/FAQ page (HTTP 200, 61,633 bytes) and the root page does NOT contain it, so the citation points at the page that carries the sentence. The relay dialed blinkenshell.org on 22, 2222 and 443 and each answered with 0 bytes",
       "caveats": "NEW ROW. NOT reachable from here and the reason is measured, not assumed: the relay dialed blinkenshell.org on 22, 2222 and 443 and every one answered silent-or-unreachable at 0 bytes, so the host is refusing or filtering this network rather than being down. Signup is a multi-step process that ends in a VOUCH by an existing member, and the FAQ states you cannot SSH until you reach step 5. It is a shared shell, not a VM. The port-2222 fact is the useful part: a scanner that only tries 22 records every Blinkenshell-class host as dead."
     },
     {
       "id": "github-codespaces",
       "name": "GitHub Codespaces",
-      "class": "free-account",
+      "class": "changed",
       "account_required": true,
       "card_required": false,
       "ssh": true,
@@ -174,11 +174,11 @@
       "ssh_endpoint": "published per-codespace by GitHub",
       "resources": "2-core default machine; choose 2/4/8/16/32-core",
       "lifetime": "quota resets monthly; a codespace is deleted after its retention period of inactivity",
-      "cost_usd": "0 within the free quota",
+      "cost_usd": "unknown: the monthly core-hour figure could not be verified first-party from this host",
       "source": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
-      "quote": "GitHub will provide users in the free plan 120 core hours or 60 hours of run time on a 2 core codespace, plus 15 GB of storage each month.",
-      "verification": "provider-documented; no published host:port to dial, so nothing was checked from this host",
-      "caveats": "Free quota is for personal accounts only; organizations and enterprises must pay. Storage beyond 15 GB-month and compute beyond the quota are billed."
+      "quote": "",
+      "verification": "MEASURED absence, 2026-10-02: the cited page was fetched (HTTP 200, 196,281 bytes) and carries a 15 GB storage figure but NOT the \"120 core hours or 60 hours\" quota line this row used to quote. Four further GitHub pages were fetched to chase it (features/codespaces, the codespaces CLI page, managing-billing, about-codespaces) and none carries it. The number is therefore recorded as unverified rather than published",
+      "caveats": "DEMOTED after review R23. The earlier row asserted a free quota of \"120 core hours or 60 hours of run time on a 2 core codespace\" with a citation that does not contain that sentence - the quote did not survive being fetched, which is the one thing a quote is for. The SSH mechanism is real and is GitHub's own documented gh codespace ssh; the FREE-TIER SIZE is what this row can no longer support, so it leaves the free tables until the figure is confirmed against a page that states it. Not a claim that the free tier is gone or that codespaces now cost money."
     },
     {
       "id": "google-cloud-shell",
@@ -212,8 +212,8 @@
       "lifetime": "the free offer is described as available for life",
       "cost_usd": "0",
       "source": "https://www.alwaysdata.com/en/pricing/",
-      "quote": "Free ... 0 €/month ... Disk space SSD 1 Go gift RAM 256 Mo free CPU 1/4 ... for life",
-      "verification": "first-party-fetched 2026-10-02; the relay dialed alwaysdata.com:22 and read 0 bytes, but that host is a shared web front end and the account's SSH host is per-account, so this is not evidence about the service",
+      "quote": "free for personal needs, ad-free offer available for life",
+      "verification": "first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py. The earlier quote ('Free ... 0 EUR/month ... Disk space SSD 1 Go') did NOT survive being fetched and was replaced with the page's own current wording",
       "caveats": "Shared web-hosting account, not a root VM; the free quota is small and some services are restricted."
     },
     {
@@ -226,13 +226,13 @@
       "ssh_how": "SSH key is installed at instance creation; the console and the CLI both connect",
       "ssh_reachability": "provider-documented",
       "ssh_endpoint": "per-instance, public IP assigned by Oracle",
-      "resources": "2 AMD micro VMs and up to 4 OCPU / 24 GB Arm Ampere A1 across one or more instances; 200 GB block storage",
+      "resources": "the page no longer states the A1 OCPU-hour allowance; a 4 OCPU / 24 GB Ampere A1 shape and 200 GB block storage are quoted in Oracle's own Always Free documentation, NOT on this page",
       "lifetime": "Always Free, no time limit, while the tenancy qualifies",
       "cost_usd": "0 on the Always Free shapes",
       "source": "https://www.oracle.com/cloud/free/",
-      "quote": "All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month for free for VM instances using the VM.Standard.A1.Flex shape (carried from research/verification/2026-10-02.md; the oracle.com domain returns 403 to this host)",
-      "verification": "blocked-from-host: every oracle.com URL returns a 1,339-byte export-control 403 here; the corpus card and the quoted allowance are the evidence",
-      "caveats": "A card is required at signup and capacity can be reclaimed; A1 is often out of capacity in a region. The allowance is a resource allowance, not a dollar credit."
+      "quote": "Build, test and deploy applications on the Cloud with Always Free cloud services and get $300 in credit towards other cloud services.",
+      "verification": "MEASURED 2026-10-02: https://www.oracle.com/cloud/free/ returns HTTP 200 with 79,448 bytes, so the 403 this host used to receive no longer happens. The page is CLIENT-RENDERED: the quoted sentence is its meta description, which is the only customer-visible text present, and the strings '1,500', 'OCPU' and '9,000' do NOT occur anywhere in the response. The A1 allowance figures this row used to quote are therefore UNVERIFIED against this page and are not presented as if they were",
+      "caveats": "DEMOTED after review R23/R24. Two corrections, both measured. (1) The 403 that earlier revisions recorded for oracle.com from this host does not happen now - the page returns 200 - so the carried-figure excuse no longer applies. (2) With the page fetched, the OCPU-hour allowance this row quoted is NOT on it. What survives is Oracle's own always-free promise and a $300 trial credit, both from the page's own meta description. The A1 allowance remains the largest single understatement in the main catalogue and is carried there from the corpus card, not from this page; do not read this row as confirming it. A card is required at signup and A1 capacity can be reclaimed."
     },
     {
       "id": "google-cloud-free-e2-micro",
@@ -337,9 +337,9 @@
       "resources": "Linux or Kubernetes scenario environment",
       "lifetime": "FREE scenario runs up to 1 hour; PLUS up to 4 hours and 3 concurrent scenarios",
       "cost_usd": "0 on the free tier",
-      "source": "https://killercoda.com/",
+      "source": "https://killercoda.com/pricing",
       "quote": "Membership PLUS Includes all from FREE Use scenarios for up to 4 hours instead of just one ... Open up to 3 scenarios at the same time",
-      "verification": "first-party-fetched 2026-10-02; the relay dialed killercoda.com:22 and read 0 bytes, which is consistent with a browser-only product",
+      "verification": "first-party-fetched 2026-10-02: the root page does NOT carry the quota text; it is on /pricing, which is now the cited source. Re-verified by tools/check-quotes.py",
       "caveats": "The page does not state whether a login is required to start a free scenario; treat 'anonymous' as unverified. Browser terminal only, no SSH."
     },
     {
@@ -356,8 +356,8 @@
       "lifetime": "free while the account is used",
       "cost_usd": "0",
       "source": "https://northflank.com/pricing",
-      "quote": "Tiers Sandbox ... Always-on-compute - no sleeping :) 2x free services 1x free database 2x free cron jobs",
-      "verification": "first-party-fetched 2026-10-02",
+      "quote": "Always-on-compute - no sleeping :) 2\u00d7 free services 1\u00d7 free database 2\u00d7 free cron jobs",
+      "verification": "first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py",
       "caveats": "A container platform, not a VM you SSH into; the free tier is for testing and building trust."
     },
     {
@@ -446,7 +446,7 @@
       "lifetime": "included usage reissued monthly on paid plans",
       "cost_usd": "0 only if a free tier is still offered; the published Starter/Pro plans carry included usage",
       "source": "https://www.koyeb.com/pricing",
-      "quote": "Pro $29 /mo +compute ... Included Usage $10 ... Once you've consumed your included monthly free credit, we start billing you on a pay-per-use basis.",
+      "quote": "Included Usage $10 ... Once you've consumed your included monthly free credit, we start billing you on a pay-per-use basis.",
       "verification": "first-party-fetched 2026-10-02",
       "caveats": "The old free 'Hobby' instance is not in the tiers shown on 2026-10-02; included usage is a paid-plan feature, so a free VM should not be assumed."
     },
@@ -481,9 +481,9 @@
       "resources": "Alpine userland in-browser, Microterm claims persistent local storage up to 40 GB; LinuxOnTab ships a real x86 kernel and calls itself 'Free, no signup'",
       "lifetime": "runs in the reader's own browser tab",
       "cost_usd": "0",
-      "source": "https://microterm.dev/ and https://linuxontab.com/",
-      "quote": "Microterm is a fully functional Alpine Linux virtual machine running directly in any browser tab ... local computation with maximum privacy | Free, no signup",
-      "verification": "first-party-fetched 2026-10-02, both HTTP 200",
+      "source": "https://linuxontab.com/",
+      "quote": "Free, no signup",
+      "verification": "first-party-fetched 2026-10-02: linuxontab.com carries the quoted phrase 'Free, no signup' verbatim. The companion project microterm.dev was fetched the same day (HTTP 200) and is described in the caveats; it is not the cited source because the quote is not on it",
       "caveats": "NEW ROW, and the category is new rather than the entries: these are 'anonymous free Linux' with no account and no card, but the machine is the READER'S OWN, there is no host to SSH to, and nothing runs while the tab is closed. Listing them beside a real remote VM would be a category error, which is why they are here rather than in the SSH table. Microterm is RISC-V64 emulated; LinuxOnTab ships a native WebAssembly x86 kernel."
     }
   ]

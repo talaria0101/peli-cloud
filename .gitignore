@@ -17,3 +17,9 @@ references/battleships/
 # published, so the directory is excluded here rather than trusted. Drop it to
 # rotate the pair.
 .dropssh-check/
+
+# tools/check-quotes.py caches fetched provider pages here for a week. They are
+# third-party HTML, which NOTICE says is not committed, and a cache that goes
+# stale silently would let the quote check pass against a page that has since
+# changed. Delete it to force a re-fetch.
+.quote-cache/
