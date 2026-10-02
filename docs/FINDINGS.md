@@ -517,15 +517,18 @@ The card (`lizard.json`, mode `sandbox`) publishes
 `keep_rate: 1.00`, basis *"billed for uptime (no suspension feature published)"*.
 **The page says the opposite: a paused sandbox does not bill.** So:
 
-- My **10 h/day** figures are unaffected. They already assume the machine is
-  held for exactly the hours in the duty cycle, and a suspension only matters
-  when you hold a machine *longer* than you use it.
-- My **24/7** figure for Lizard, **$6.48/month**, is therefore **too high** for
-  anyone who pauses between agent steps, and it is the shape of number a reader
-  would use to judge a sandbox as a VPS. It is also, at $6.48, *cheaper* than a
-  4 vCPU Lizard box at the same vendor ($12.96) would be, which is exactly the
-  kind of row that gets bought as a stoppable machine and then found to bill
-  continuously.
+- My **10 h/day** figures were never affected. They assume the machine is busy
+  for the hours in the duty cycle, and a suspension only matters when you hold a
+  machine *longer* than you use it.
+- My **24/7** figure for Lizard, **$6.48/month**, is **arithmetically right and
+  was never the error**: a box running continuously bills continuously, and
+  $0.009 x 720 h is $6.48. An earlier draft of this section called that number
+  "too high", which was wrong. The defect was not the figure, it was that a
+  reader had **no way to see** that holding the same box idle costs nothing,
+  because the keep rate was inert. A $6.48 row beside a `keep: 1.00` column
+  reads as "a sandbox that costs like a small VPS"; the same row beside a
+  working keep rate reads as "free to hold, $2.70 to use". The number did not
+  move and the meaning of it did.
 
 ### 6.2 The keep rate: what was wrong, and what is now fixed
 
