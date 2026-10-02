@@ -1,0 +1,7087 @@
+{
+ "at": "2026-10-02T02:30:49Z",
+ "caveat": "each profile is compared against the SAME demand, smoothed; these are bounds, not predicted bills",
+ "demand_hours_per_day": 10.0,
+ "profiles": {
+  "few-long": {
+   "hours_each": 2.0,
+   "starts": 5
+  },
+  "many-short": {
+   "hours_each": 0.25,
+   "starts": 20
+  }
+ },
+ "rows": [
+  {
+   "burst_month": 0.9,
+   "granularity_s": 60,
+   "hourly": 0.006027,
+   "id": "agent-37",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Agent 37",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 1.81,
+     "month_smooth_same_demand": 1.81,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 0.9,
+     "month_smooth_same_demand": 0.9,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 1.81,
+   "url": "https://www.agent37.com/pricing"
+  },
+  {
+   "burst_month": 47.25,
+   "granularity_s": null,
+   "hourly": 0.315,
+   "id": "agentcomputer",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "AgentComputer",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 94.5,
+     "month_smooth_same_demand": 94.5,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 47.25,
+     "month_smooth_same_demand": 47.25,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 94.5,
+   "url": "https://agentcomputer.ai/pricing"
+  },
+  {
+   "burst_month": 10.39,
+   "granularity_s": 1,
+   "hourly": 0.069264,
+   "id": "alibaba-ack",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Alibaba Cloud ACK (Harbor backend)",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 20.78,
+     "month_smooth_same_demand": 20.78,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 10.39,
+     "month_smooth_same_demand": 10.39,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 20.78,
+   "url": "https://www.alibabacloud.com/product/kubernetes"
+  },
+  {
+   "burst_month": 14.88,
+   "granularity_s": 1,
+   "hourly": 0.0992,
+   "id": "alibaba-agentbay",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Alibaba Cloud AgentBay",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 29.76,
+     "month_smooth_same_demand": 29.76,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 14.88,
+     "month_smooth_same_demand": 14.88,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 29.76,
+   "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions"
+  },
+  {
+   "burst_month": 8.24,
+   "granularity_s": 1,
+   "hourly": 0.054936,
+   "id": "alibaba-agentrun",
+   "min_billed_hours": 0.0002777777777777778,
+   "min_billed_seconds": 1,
+   "name": "Alibaba Cloud Agent Sandbox / FC / AgentRun",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 16.48,
+     "month_smooth_same_demand": 16.48,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 8.24,
+     "month_smooth_same_demand": 8.24,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 16.48,
+   "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview"
+  },
+  {
+   "burst_month": 4.22,
+   "granularity_s": 1,
+   "hourly": 0.0281,
+   "id": "alibaba-ecs",
+   "min_billed_hours": 0.03333333333333333,
+   "min_billed_seconds": 120,
+   "name": "Alibaba Cloud ECS International",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 8.43,
+     "month_smooth_same_demand": 8.43,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4.22,
+     "month_smooth_same_demand": 4.22,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 8.43,
+   "url": "https://www.alibabacloud.com/en/product/ecs/pricing"
+  },
+  {
+   "burst_month": 49.68,
+   "granularity_s": 1,
+   "hourly": 0.3312,
+   "id": "amika",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Amika",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 99.36,
+     "month_smooth_same_demand": 99.36,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 99.36,
+   "url": "https://www.amika.dev/pricing"
+  },
+  {
+   "burst_month": 25.5,
+   "granularity_s": 60,
+   "hourly": 0.17,
+   "id": "amp",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Amp Orbs",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 51.0,
+     "month_smooth_same_demand": 51.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 25.5,
+     "month_smooth_same_demand": 25.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 51.0,
+   "url": "https://ampcode.com/docs/orbs/sizes-and-costs"
+  },
+  {
+   "burst_month": 120.0,
+   "granularity_s": 3600,
+   "hourly": 0.2,
+   "id": "aptible",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Aptible",
+   "not_self_serve": true,
+   "penalty_usd": 90.0,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 60.0,
+     "month_smooth_same_demand": 60.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 120.0,
+     "month_smooth_same_demand": 30.0,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 60.0,
+   "url": "https://www.aptible.com"
+  },
+  {
+   "burst_month": 27.0,
+   "granularity_s": null,
+   "hourly": 0.18,
+   "id": "archil",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Archil",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 27.0,
+     "month_smooth_same_demand": 27.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 54.0,
+   "url": "https://archil.com/pricing"
+  },
+  {
+   "burst_month": 28.16,
+   "granularity_s": null,
+   "hourly": 0.187736,
+   "id": "arker",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Arker",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 56.32,
+     "month_smooth_same_demand": 56.32,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 28.16,
+     "month_smooth_same_demand": 28.16,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 56.32,
+   "url": "https://arker.ai/docs/pricing"
+  },
+  {
+   "burst_month": 32.52,
+   "granularity_s": 1,
+   "hourly": 0.2168,
+   "id": "aws-agentcore",
+   "min_billed_hours": 0.0002777777777777778,
+   "min_billed_seconds": 1,
+   "name": "Amazon Bedrock AgentCore (Runtime / Code Interpreter / Browser)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 65.04,
+     "month_smooth_same_demand": 65.04,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 32.52,
+     "month_smooth_same_demand": 32.52,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 65.04,
+   "url": "https://aws.amazon.com/bedrock/agentcore/pricing/"
+  },
+  {
+   "burst_month": 10.8,
+   "granularity_s": 1,
+   "hourly": 0.072,
+   "id": "aws-codebuild",
+   "min_billed_hours": 0.0002777777777777778,
+   "min_billed_seconds": 1,
+   "name": "AWS CodeBuild",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 21.6,
+     "month_smooth_same_demand": 21.6,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 10.8,
+     "month_smooth_same_demand": 10.8,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 21.6,
+   "url": "https://aws.amazon.com/codebuild/pricing/"
+  },
+  {
+   "burst_month": 9360.0,
+   "granularity_s": 1,
+   "hourly": 0.65,
+   "id": "aws-ec2-mac",
+   "min_billed_hours": 24.0,
+   "min_billed_seconds": 86400,
+   "name": "AWS EC2 Mac (Dedicated Host)",
+   "not_self_serve": false,
+   "penalty_usd": 9262.5,
+   "penalty_x": 96.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 120.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 2340.0,
+     "month_smooth_same_demand": 195.0,
+     "penalty_x": 12.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 480.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9360.0,
+     "month_smooth_same_demand": 97.5,
+     "penalty_x": 96.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 195.0,
+   "url": "https://aws.amazon.com/ec2/instance-types/mac/"
+  },
+  {
+   "burst_month": 9.0,
+   "granularity_s": 1,
+   "hourly": 0.06,
+   "id": "aws-ec2-windows",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "AWS EC2 (Windows Server)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.0,
+     "month_smooth_same_demand": 9.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 18.0,
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/"
+  },
+  {
+   "burst_month": 7.37,
+   "granularity_s": 1,
+   "hourly": 0.0491,
+   "id": "aws-ec2",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "AWS EC2 (reference VMs)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 14.73,
+     "month_smooth_same_demand": 14.73,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 7.37,
+     "month_smooth_same_demand": 7.37,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 14.73,
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/"
+  },
+  {
+   "burst_month": 8.71,
+   "granularity_s": 1,
+   "hourly": 0.0581,
+   "id": "aws-fargate",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "AWS Fargate",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 17.43,
+     "month_smooth_same_demand": 17.43,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 8.71,
+     "month_smooth_same_demand": 8.71,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 17.43,
+   "url": "https://aws.amazon.com/fargate/pricing/"
+  },
+  {
+   "burst_month": 37.83,
+   "granularity_s": 1,
+   "hourly": 0.2522,
+   "id": "aws-lambda-microvms",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "AWS Lambda MicroVMs",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 75.66,
+     "month_smooth_same_demand": 75.66,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 37.83,
+     "month_smooth_same_demand": 37.83,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 75.66,
+   "url": "https://aws.amazon.com/lambda/pricing/"
+  },
+  {
+   "burst_month": 24.0,
+   "granularity_s": 0.001,
+   "hourly": 0.16,
+   "id": "aws-lambda",
+   "min_billed_hours": 2.7777777777777776e-07,
+   "min_billed_seconds": 0.001,
+   "name": "AWS Lambda",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.000001388888888,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 48.0,
+     "month_smooth_same_demand": 48.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.000005555555555,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.0,
+     "month_smooth_same_demand": 24.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 48.0,
+   "url": "https://aws.amazon.com/lambda/pricing/"
+  },
+  {
+   "burst_month": 25.48,
+   "granularity_s": 3600,
+   "hourly": 0.042466,
+   "id": "aws-workspaces",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Amazon WorkSpaces Personal (Windows)",
+   "not_self_serve": false,
+   "penalty_usd": 19.11,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 12.74,
+     "month_smooth_same_demand": 12.74,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 25.48,
+     "month_smooth_same_demand": 6.37,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 12.74,
+   "url": "https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/"
+  },
+  {
+   "burst_month": 32.4,
+   "granularity_s": 1,
+   "hourly": 0.216,
+   "id": "azure-container-apps-sandboxes",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Azure Container Apps Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 64.8,
+     "month_smooth_same_demand": 64.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 32.4,
+     "month_smooth_same_demand": 32.4,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 64.8,
+   "url": "https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-overview"
+  },
+  {
+   "burst_month": 32.4,
+   "granularity_s": 1,
+   "hourly": 0.216,
+   "id": "azure-container-apps",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Azure Container Apps (Consumption, Dedicated, Dynamic Sessions)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 64.8,
+     "month_smooth_same_demand": 64.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 32.4,
+     "month_smooth_same_demand": 32.4,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 64.8,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/container-apps/"
+  },
+  {
+   "burst_month": 36.9,
+   "granularity_s": null,
+   "hourly": 0.246,
+   "id": "azure-foundry-agents",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Microsoft Foundry hosted agents (East US)",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 73.8,
+     "month_smooth_same_demand": 73.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 36.9,
+     "month_smooth_same_demand": 36.9,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 73.8,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/"
+  },
+  {
+   "burst_month": 558.0,
+   "granularity_s": 60,
+   "hourly": 3.72,
+   "id": "azure-pipelines",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Azure Pipelines",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 1116.0,
+     "month_smooth_same_demand": 1116.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 558.0,
+     "month_smooth_same_demand": 558.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 1116.0,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/"
+  },
+  {
+   "burst_month": 5.64,
+   "granularity_s": 60,
+   "hourly": 0.0376,
+   "id": "azure-vm",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Azure Virtual Machines (Linux)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 11.28,
+     "month_smooth_same_demand": 11.28,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5.64,
+     "month_smooth_same_demand": 5.64,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 11.28,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+  },
+  {
+   "burst_month": 6.24,
+   "granularity_s": 1,
+   "hourly": 0.0416,
+   "id": "azure-windows",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Azure Virtual Machines (Windows Server)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 12.48,
+     "month_smooth_same_demand": 12.48,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 6.24,
+     "month_smooth_same_demand": 6.24,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 12.48,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/"
+  },
+  {
+   "burst_month": 18.0,
+   "granularity_s": 60,
+   "hourly": 0.12,
+   "id": "baponi",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Baponi",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 36.0,
+     "month_smooth_same_demand": 36.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 36.0,
+   "url": "https://baponi.ai/pricing/"
+  },
+  {
+   "burst_month": 15.57,
+   "granularity_s": 60,
+   "hourly": 0.1038,
+   "id": "baseten",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Baseten",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 31.14,
+     "month_smooth_same_demand": 31.14,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 15.57,
+     "month_smooth_same_demand": 15.57,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 31.14,
+   "url": "https://docs.baseten.co/deployment/resources"
+  },
+  {
+   "burst_month": 34.07,
+   "granularity_s": 0.001,
+   "hourly": 0.22716,
+   "id": "beam",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Beam",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.000001388888888,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 68.15,
+     "month_smooth_same_demand": 68.15,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.000005555555555,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 34.07,
+     "month_smooth_same_demand": 34.07,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 68.15,
+   "url": "https://www.beam.cloud/pricing"
+  },
+  {
+   "burst_month": 90.0,
+   "granularity_s": 60,
+   "hourly": 0.6,
+   "id": "bitbucket-pipelines",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Bitbucket Pipelines",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 180.0,
+     "month_smooth_same_demand": 180.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 90.0,
+     "month_smooth_same_demand": 90.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 180.0,
+   "url": "https://www.atlassian.com/software/bitbucket/pricing"
+  },
+  {
+   "burst_month": 19.8,
+   "granularity_s": 60,
+   "hourly": 0.132,
+   "id": "bitrise",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Bitrise (mobile CI)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 39.6,
+     "month_smooth_same_demand": 39.6,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 19.8,
+     "month_smooth_same_demand": 19.8,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 39.6,
+   "url": "https://bitrise.io/pricing"
+  },
+  {
+   "burst_month": 22.5,
+   "granularity_s": 60,
+   "hourly": 0.15,
+   "id": "blacksmith",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Blacksmith (GitHub Actions runners)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 45.0,
+     "month_smooth_same_demand": 45.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 22.5,
+     "month_smooth_same_demand": 22.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 45.0,
+   "url": "https://www.blacksmith.sh/pricing"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "blaxel",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Blaxel",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://blaxel.ai/pricing"
+  },
+  {
+   "burst_month": 2.7,
+   "granularity_s": 1,
+   "hourly": 0.018,
+   "id": "boat",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "boat.dev",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 5.4,
+     "month_smooth_same_demand": 5.4,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 2.7,
+     "month_smooth_same_demand": 2.7,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 5.4,
+   "url": "https://docs.boat.dev/pricing"
+  },
+  {
+   "burst_month": 28.5,
+   "granularity_s": 1,
+   "hourly": 0.19,
+   "id": "boxd",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "boxd",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 57.0,
+     "month_smooth_same_demand": 57.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 28.5,
+     "month_smooth_same_demand": 28.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 57.0,
+   "url": "https://boxd.sh/pricing"
+  },
+  {
+   "burst_month": 90.0,
+   "granularity_s": 1,
+   "hourly": 0.6,
+   "id": "boxes-dev",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "boxes.dev",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 180.0,
+     "month_smooth_same_demand": 180.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 90.0,
+     "month_smooth_same_demand": 90.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 180.0,
+   "url": "https://boxes.dev/"
+  },
+  {
+   "burst_month": 12.96,
+   "granularity_s": 60,
+   "hourly": 0.0864,
+   "id": "buddy",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Buddy Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 25.92,
+     "month_smooth_same_demand": 25.92,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 12.96,
+     "month_smooth_same_demand": 12.96,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 25.92,
+   "url": "https://buddy.works/pricing"
+  },
+  {
+   "burst_month": 72.0,
+   "granularity_s": 1,
+   "hourly": 0.48,
+   "id": "buildkite-hosted",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Buildkite hosted agents",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 144.0,
+     "month_smooth_same_demand": 144.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 72.0,
+     "month_smooth_same_demand": 72.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 144.0,
+   "url": "https://buildkite.com/pricing"
+  },
+  {
+   "burst_month": 30.0,
+   "granularity_s": null,
+   "hourly": 0.2,
+   "id": "capy",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Capy",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 60.0,
+     "month_smooth_same_demand": 60.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 30.0,
+     "month_smooth_same_demand": 30.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 60.0,
+   "url": "https://capy.ai"
+  },
+  {
+   "burst_month": 9.0,
+   "granularity_s": null,
+   "hourly": 0.06,
+   "id": "celesto",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Celesto Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.0,
+     "month_smooth_same_demand": 9.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 18.0,
+   "url": "https://celesto.ai/pricing"
+  },
+  {
+   "burst_month": 11.87,
+   "granularity_s": 1,
+   "hourly": 0.079128,
+   "id": "cerebrium",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Cerebrium",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 23.74,
+     "month_smooth_same_demand": 23.74,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 11.87,
+     "month_smooth_same_demand": 11.87,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 23.74,
+   "url": "https://cerebrium.ai/pricing"
+  },
+  {
+   "burst_month": 54.0,
+   "granularity_s": 1,
+   "hourly": 0.36,
+   "id": "circleci",
+   "min_billed_hours": 0.0002777777777777778,
+   "min_billed_seconds": 1,
+   "name": "CircleCI",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 108.0,
+     "month_smooth_same_demand": 108.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 108.0,
+   "url": "https://circleci.com/pricing/price-list/"
+  },
+  {
+   "burst_month": 30.82,
+   "granularity_s": null,
+   "hourly": 0.205479,
+   "id": "cirrus-runners",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Cirrus Runners",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 61.64,
+     "month_smooth_same_demand": 61.64,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 30.82,
+     "month_smooth_same_demand": 30.82,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 61.64,
+   "url": "https://cirrus-runners.app/pricing/"
+  },
+  {
+   "burst_month": 17.86,
+   "granularity_s": 3600,
+   "hourly": 0.029762,
+   "id": "civo",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Civo Compute",
+   "not_self_serve": false,
+   "penalty_usd": 13.4,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 8.93,
+     "month_smooth_same_demand": 8.93,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 17.86,
+     "month_smooth_same_demand": 4.46,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 8.93,
+   "url": "https://www.civo.com/pricing"
+  },
+  {
+   "burst_month": 13.77,
+   "granularity_s": 1,
+   "hourly": 0.091833,
+   "id": "clever-cloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Clever Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 27.55,
+     "month_smooth_same_demand": 27.55,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 13.77,
+     "month_smooth_same_demand": 13.77,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 27.55,
+   "url": "https://www.clever.cloud/pricing/"
+  },
+  {
+   "burst_month": 27.0,
+   "granularity_s": 0.01,
+   "hourly": 0.18,
+   "id": "cloudflare-sandbox",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Cloudflare Sandbox SDK / Containers",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 27.0,
+     "month_smooth_same_demand": 27.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 54.0,
+   "url": "https://developers.cloudflare.com/containers/platform/pricing/"
+  },
+  {
+   "burst_month": 21.6,
+   "granularity_s": 1,
+   "hourly": 0.144,
+   "id": "cloudflare-workers-for-platforms",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Cloudflare Workers for Platforms",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 43.2,
+     "month_smooth_same_demand": 43.2,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 21.6,
+     "month_smooth_same_demand": 21.6,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 43.2,
+   "url": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/"
+  },
+  {
+   "burst_month": 405.0,
+   "granularity_s": 60,
+   "hourly": 2.7,
+   "id": "codemagic",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Codemagic (mobile CI)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 810.0,
+     "month_smooth_same_demand": 810.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 405.0,
+     "month_smooth_same_demand": 405.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 810.0,
+   "url": "https://codemagic.io/pricing/"
+  },
+  {
+   "burst_month": 22.29,
+   "granularity_s": 60,
+   "hourly": 0.1486,
+   "id": "codesandbox-sdk",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "CodeSandbox SDK",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 44.58,
+     "month_smooth_same_demand": 44.58,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 22.29,
+     "month_smooth_same_demand": 22.29,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 44.58,
+   "url": "https://codesandbox.io/docs/sdk/pricing"
+  },
+  {
+   "burst_month": 19.2,
+   "granularity_s": 1,
+   "hourly": 0.128,
+   "id": "collimate",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Collimate",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 38.4,
+     "month_smooth_same_demand": 38.4,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 19.2,
+     "month_smooth_same_demand": 19.2,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 38.4,
+   "url": "https://collimate.ai/pricing"
+  },
+  {
+   "burst_month": 3960.0,
+   "granularity_s": 3600,
+   "hourly": 6.6,
+   "id": "contabo",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Contabo",
+   "not_self_serve": false,
+   "penalty_usd": 2970.0,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 1980.0,
+     "month_smooth_same_demand": 1980.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 3960.0,
+     "month_smooth_same_demand": 990.0,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 1980.0,
+   "url": "https://contabo.com/en-us/pricing/"
+  },
+  {
+   "burst_month": 17.8,
+   "granularity_s": 1,
+   "hourly": 0.118688,
+   "id": "createos",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "CreateOS Sandbox (NodeOps)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 35.61,
+     "month_smooth_same_demand": 35.61,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 17.8,
+     "month_smooth_same_demand": 17.8,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 35.61,
+   "url": "https://createos.sh/products/sandbox"
+  },
+  {
+   "burst_month": 12.0,
+   "granularity_s": 1,
+   "hourly": 0.08,
+   "id": "crusoe",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Crusoe",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 24.0,
+     "month_smooth_same_demand": 24.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 12.0,
+     "month_smooth_same_demand": 12.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 24.0,
+   "url": "https://www.crusoe.ai/cloud/pricing"
+  },
+  {
+   "burst_month": 26.77,
+   "granularity_s": null,
+   "hourly": 0.1785,
+   "id": "cua-windows",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Cua Fleet (Windows Server)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 53.55,
+     "month_smooth_same_demand": 53.55,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 26.77,
+     "month_smooth_same_demand": 26.77,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 53.55,
+   "url": "https://cua.ai/pricing"
+  },
+  {
+   "burst_month": 26.77,
+   "granularity_s": null,
+   "hourly": 0.1785,
+   "id": "cua",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Cua Fleet",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 53.55,
+     "month_smooth_same_demand": 53.55,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 26.77,
+     "month_smooth_same_demand": 26.77,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 53.55,
+   "url": "https://cua.ai/pricing"
+  },
+  {
+   "burst_month": 3.71,
+   "granularity_s": null,
+   "hourly": 0.024735,
+   "id": "cube",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Cube Computer",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 7.42,
+     "month_smooth_same_demand": 7.42,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 3.71,
+     "month_smooth_same_demand": 3.71,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 7.42,
+   "url": "https://cube.computer/"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "daytona-windows",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Daytona (Windows sandboxes)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://www.daytona.io/pricing"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "daytona",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Daytona",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://www.daytona.io/pricing"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "declaw",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Declaw",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://docs.declaw.ai/platform/billing"
+  },
+  {
+   "burst_month": 22.36,
+   "granularity_s": 1,
+   "hourly": 0.14904,
+   "id": "dedalus-labs",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Dedalus Labs",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 44.71,
+     "month_smooth_same_demand": 44.71,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 22.36,
+     "month_smooth_same_demand": 22.36,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 44.71,
+   "url": "https://www.dedaluslabs.ai/pricing"
+  },
+  {
+   "burst_month": 45.0,
+   "granularity_s": null,
+   "hourly": 0.3,
+   "id": "deno-sandbox",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Deno Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 90.0,
+     "month_smooth_same_demand": 90.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 45.0,
+     "month_smooth_same_demand": 45.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 90.0,
+   "url": "https://deno.com/deploy/pricing"
+  },
+  {
+   "burst_month": 54.0,
+   "granularity_s": 1,
+   "hourly": 0.36,
+   "id": "depot",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Depot (GitHub Actions runners)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 108.0,
+     "month_smooth_same_demand": 108.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 108.0,
+   "url": "https://depot.dev/pricing"
+  },
+  {
+   "burst_month": 5.36,
+   "granularity_s": 1,
+   "hourly": 0.03571,
+   "id": "digitalocean",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "DigitalOcean Droplets",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 10.71,
+     "month_smooth_same_demand": 10.71,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5.36,
+     "month_smooth_same_demand": 5.36,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 10.71,
+   "url": "https://www.digitalocean.com/pricing/droplets"
+  },
+  {
+   "burst_month": 21.0,
+   "granularity_s": 1,
+   "hourly": 0.14,
+   "id": "docker-cloud-sandboxes",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Docker Cloud Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 42.0,
+     "month_smooth_same_demand": 42.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 21.0,
+     "month_smooth_same_demand": 21.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 42.0,
+   "url": "https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "e2b",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "E2B",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://e2b.dev/pricing"
+  },
+  {
+   "burst_month": 26.4,
+   "granularity_s": 3600,
+   "hourly": 0.044,
+   "id": "e2e-networks",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "E2E Networks",
+   "not_self_serve": false,
+   "penalty_usd": 19.8,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 13.2,
+     "month_smooth_same_demand": 13.2,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 26.4,
+     "month_smooth_same_demand": 6.6,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 13.2,
+   "url": "https://www.e2enetworks.com/pricing"
+  },
+  {
+   "burst_month": 68.51,
+   "granularity_s": 1,
+   "hourly": 0.45671,
+   "id": "ellipsis",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Ellipsis",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 137.01,
+     "month_smooth_same_demand": 137.01,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 68.51,
+     "month_smooth_same_demand": 68.51,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 137.01,
+   "url": "https://www.ellipsis.dev/pricing"
+  },
+  {
+   "burst_month": 15.75,
+   "granularity_s": null,
+   "hourly": 0.105,
+   "id": "exe-dev",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "exe.dev",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 31.5,
+     "month_smooth_same_demand": 31.5,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 15.75,
+     "month_smooth_same_demand": 15.75,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 31.5,
+   "url": "https://exe.dev/pricing"
+  },
+  {
+   "burst_month": 7.0,
+   "granularity_s": 1,
+   "hourly": 0.04666,
+   "id": "exoscale",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Exoscale",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 14.0,
+     "month_smooth_same_demand": 14.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 7.0,
+     "month_smooth_same_demand": 7.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 14.0,
+   "url": "https://www.exoscale.com/pricing/"
+  },
+  {
+   "burst_month": 162.0,
+   "granularity_s": 60,
+   "hourly": 1.08,
+   "id": "expo",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Expo",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 324.0,
+     "month_smooth_same_demand": 324.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 162.0,
+     "month_smooth_same_demand": 162.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 324.0,
+   "url": "https://expo.dev"
+  },
+  {
+   "burst_month": 4698.65,
+   "granularity_s": 3600,
+   "hourly": 0.326295,
+   "id": "flow-swiss-mac",
+   "min_billed_hours": 24.0,
+   "min_billed_seconds": 86400,
+   "name": "Flow Swiss Mac Bare Metal",
+   "not_self_serve": false,
+   "penalty_usd": 4649.71,
+   "penalty_x": 96.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 120.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 1174.66,
+     "month_smooth_same_demand": 97.89,
+     "penalty_x": 12.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 480.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4698.65,
+     "month_smooth_same_demand": 48.94,
+     "penalty_x": 96.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 97.89,
+   "url": "https://doc.flow.swiss/platform/pricing/mac-bare-metal"
+  },
+  {
+   "burst_month": 5.29,
+   "granularity_s": 1,
+   "hourly": 0.035276,
+   "id": "fly-machines",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Fly.io Machines",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 10.58,
+     "month_smooth_same_demand": 10.58,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5.29,
+     "month_smooth_same_demand": 5.29,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 10.58,
+   "url": "https://fly.io/pricing"
+  },
+  {
+   "burst_month": 19.84,
+   "granularity_s": 1,
+   "hourly": 0.13224,
+   "id": "freestyle",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Freestyle",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 39.67,
+     "month_smooth_same_demand": 39.67,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 19.84,
+     "month_smooth_same_demand": 19.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 39.67,
+   "url": "https://www.freestyle.sh/pricing"
+  },
+  {
+   "burst_month": 2.9,
+   "granularity_s": null,
+   "hourly": 0.01934,
+   "id": "gcore",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Gcore Cloud / Functions / GPU",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 5.8,
+     "month_smooth_same_demand": 5.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 2.9,
+     "month_smooth_same_demand": 2.9,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 5.8,
+   "url": "https://gcore.com/cloud/virtual-machines"
+  },
+  {
+   "burst_month": 10.05,
+   "granularity_s": 1,
+   "hourly": 0.067011,
+   "id": "gcp-compute",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Google Compute Engine (Linux VMs)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 20.1,
+     "month_smooth_same_demand": 20.1,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 10.05,
+     "month_smooth_same_demand": 10.05,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 20.1,
+   "url": "https://cloud.google.com/products/compute/pricing/general-purpose"
+  },
+  {
+   "burst_month": 5.03,
+   "granularity_s": 1,
+   "hourly": 0.033506,
+   "id": "gcp-windows",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Google Compute Engine (Windows Server)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 10.05,
+     "month_smooth_same_demand": 10.05,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5.03,
+     "month_smooth_same_demand": 5.03,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 10.05,
+   "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing"
+  },
+  {
+   "burst_month": 45.0,
+   "granularity_s": 60,
+   "hourly": 0.3,
+   "id": "github-actions",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "GitHub Actions hosted runners",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 90.0,
+     "month_smooth_same_demand": 90.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 45.0,
+     "month_smooth_same_demand": 45.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 90.0,
+   "url": "https://docs.github.com/en/billing/reference/actions-runner-pricing"
+  },
+  {
+   "burst_month": 27.0,
+   "granularity_s": null,
+   "hourly": 0.18,
+   "id": "github-codespaces",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "GitHub Codespaces",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 27.0,
+     "month_smooth_same_demand": 27.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 54.0,
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces"
+  },
+  {
+   "burst_month": 32.4,
+   "granularity_s": 1,
+   "hourly": 0.216,
+   "id": "github-copilot-cloud-sandboxes",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "GitHub Copilot cloud sandboxes",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 64.8,
+     "month_smooth_same_demand": 64.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 32.4,
+     "month_smooth_same_demand": 32.4,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 64.8,
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes"
+  },
+  {
+   "burst_month": 90.0,
+   "granularity_s": 1,
+   "hourly": 0.6,
+   "id": "gitlab-runners",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "GitLab.com hosted runners",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 180.0,
+     "month_smooth_same_demand": 180.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 90.0,
+     "month_smooth_same_demand": 90.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 180.0,
+   "url": "https://docs.gitlab.com/ci/pipelines/compute_minutes/"
+  },
+  {
+   "burst_month": 16.3,
+   "granularity_s": 1,
+   "hourly": 0.10869,
+   "id": "gke-agent-sandbox",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "GKE Agent Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 32.61,
+     "month_smooth_same_demand": 32.61,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 16.3,
+     "month_smooth_same_demand": 16.3,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 32.61,
+   "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox"
+  },
+  {
+   "burst_month": 30.9,
+   "granularity_s": 1,
+   "hourly": 0.206,
+   "id": "google-agent-engine",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Google Agent Runtime / Agent Engine",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 61.8,
+     "month_smooth_same_demand": 61.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 30.9,
+     "month_smooth_same_demand": 30.9,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 61.8,
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing"
+  },
+  {
+   "burst_month": 54.0,
+   "granularity_s": 1,
+   "hourly": 0.36,
+   "id": "google-cloud-build",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Google Cloud Build",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 108.0,
+     "month_smooth_same_demand": 108.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 108.0,
+   "url": "https://cloud.google.com/build/pricing"
+  },
+  {
+   "burst_month": 4.46,
+   "granularity_s": 0.1,
+   "hourly": 0.029736,
+   "id": "google-cloud-run",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Google Cloud Run",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 8.92,
+     "month_smooth_same_demand": 8.92,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4.46,
+     "month_smooth_same_demand": 4.46,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 8.92,
+   "url": "https://cloud.google.com/run/pricing"
+  },
+  {
+   "burst_month": 9.96,
+   "granularity_s": null,
+   "hourly": 0.066381,
+   "id": "google-colab",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Google Colab",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 19.91,
+     "month_smooth_same_demand": 19.91,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.96,
+     "month_smooth_same_demand": 9.96,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 19.91,
+   "url": "https://developers.google.com/colab"
+  },
+  {
+   "burst_month": 14.18,
+   "granularity_s": 1,
+   "hourly": 0.094562,
+   "id": "greenmini",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Green Mini host",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 28.37,
+     "month_smooth_same_demand": 28.37,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 14.18,
+     "month_smooth_same_demand": 14.18,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 28.37,
+   "url": "https://portal.greenmini.host/checkout/order"
+  },
+  {
+   "burst_month": 31.25,
+   "granularity_s": 1,
+   "hourly": 0.20833,
+   "id": "heroku",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Heroku",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 62.5,
+     "month_smooth_same_demand": 62.5,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 31.25,
+     "month_smooth_same_demand": 31.25,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 62.5,
+   "url": "https://www.heroku.com/pricing/"
+  },
+  {
+   "burst_month": 6.24,
+   "granularity_s": 3600,
+   "hourly": 0.0104,
+   "id": "hetzner-cloud",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Hetzner Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 4.68,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 3.12,
+     "month_smooth_same_demand": 3.12,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 6.24,
+     "month_smooth_same_demand": 1.56,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 3.12,
+   "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/"
+  },
+  {
+   "burst_month": 64.5,
+   "granularity_s": 3600,
+   "hourly": 0.1075,
+   "id": "hetzner-dedicated",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Hetzner Dedicated AX / EX",
+   "not_self_serve": false,
+   "penalty_usd": 48.38,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 32.25,
+     "month_smooth_same_demand": 32.25,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 64.5,
+     "month_smooth_same_demand": 16.12,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 32.25,
+   "url": "https://www.hetzner.com/dedicated-rootserver/"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "hopx",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Hopx",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://hopx.ai/pricing"
+  },
+  {
+   "burst_month": 14694.0,
+   "granularity_s": 3600,
+   "hourly": 24.49,
+   "id": "hostinger-vps",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Hostinger VPS",
+   "not_self_serve": false,
+   "penalty_usd": 11020.5,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 7347.0,
+     "month_smooth_same_demand": 7347.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 14694.0,
+     "month_smooth_same_demand": 3673.5,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 7347.0,
+   "url": "https://www.hostinger.com/vps-hosting"
+  },
+  {
+   "burst_month": 20706.62,
+   "granularity_s": 1,
+   "hourly": 0.047932,
+   "id": "hostmyapple",
+   "min_billed_hours": 720.0,
+   "min_billed_seconds": 2592000,
+   "name": "HostMyApple",
+   "not_self_serve": false,
+   "penalty_usd": 20699.43,
+   "penalty_x": 2880.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 3600.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 5176.66,
+     "month_smooth_same_demand": 14.38,
+     "penalty_x": 360.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 14400.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 20706.62,
+     "month_smooth_same_demand": 7.19,
+     "penalty_x": 2880.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 14.38,
+   "url": "https://hostmyapple.com/mac-vps-hosting"
+  },
+  {
+   "burst_month": 59.59,
+   "granularity_s": 1,
+   "hourly": 0.397276,
+   "id": "huawei-cloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Huawei Cloud AgentArts",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 119.18,
+     "month_smooth_same_demand": 119.18,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 59.59,
+     "month_smooth_same_demand": 59.59,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 119.18,
+   "url": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf"
+  },
+  {
+   "burst_month": 1.5,
+   "granularity_s": 60,
+   "hourly": 0.01,
+   "id": "huggingface-jobs",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Hugging Face Jobs (hf-sandbox backend)",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 3.0,
+     "month_smooth_same_demand": 3.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 1.5,
+     "month_smooth_same_demand": 1.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 3.0,
+   "url": "https://huggingface.co/docs/hub/en/jobs-pricing"
+  },
+  {
+   "burst_month": 52.5,
+   "granularity_s": 60,
+   "hourly": 0.35,
+   "id": "hyperstack",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Hyperstack",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 105.0,
+     "month_smooth_same_demand": 105.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 52.5,
+     "month_smooth_same_demand": 52.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 105.0,
+   "url": "https://www.hyperstack.cloud/gpu-pricing"
+  },
+  {
+   "burst_month": 4.92,
+   "granularity_s": 1,
+   "hourly": 0.03277,
+   "id": "ibm-cloud-vpc",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "IBM Cloud VPC",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 9.83,
+     "month_smooth_same_demand": 9.83,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4.92,
+     "month_smooth_same_demand": 4.92,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 9.83,
+   "url": "https://www.ibm.com/products/virtual-servers/pricing"
+  },
+  {
+   "burst_month": 16.68,
+   "granularity_s": 1,
+   "hourly": 0.111168,
+   "id": "insforge-instacloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "InsForge (InstaCloud)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 33.35,
+     "month_smooth_same_demand": 33.35,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 16.68,
+     "month_smooth_same_demand": 16.68,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 33.35,
+   "url": "https://www.instacloud.com/pricing"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "instavm",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "InstaVM",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://instavm.io/pricing"
+  },
+  {
+   "burst_month": 2.22,
+   "granularity_s": 60,
+   "hourly": 0.014791,
+   "id": "ionos",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "IONOS Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 4.44,
+     "month_smooth_same_demand": 4.44,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 2.22,
+     "month_smooth_same_demand": 2.22,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 4.44,
+   "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en"
+  },
+  {
+   "burst_month": 45.0,
+   "granularity_s": null,
+   "hourly": 0.3,
+   "id": "islo",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Islo",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 90.0,
+     "month_smooth_same_demand": 90.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 45.0,
+     "month_smooth_same_demand": 45.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 90.0,
+   "url": "https://islo.dev/pricing"
+  },
+  {
+   "burst_month": 16.5,
+   "granularity_s": 1,
+   "hourly": 0.11,
+   "id": "isorun",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Isorun",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 33.0,
+     "month_smooth_same_demand": 33.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 16.5,
+     "month_smooth_same_demand": 16.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 33.0,
+   "url": "https://docs.isorun.ai/getting-started/pricing"
+  },
+  {
+   "burst_month": 7.5,
+   "granularity_s": 60,
+   "hourly": 0.05,
+   "id": "jarvislabs",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Jarvislabs",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 15.0,
+     "month_smooth_same_demand": 15.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 7.5,
+     "month_smooth_same_demand": 7.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 15.0,
+   "url": "https://jarvislabs.ai/pricing"
+  },
+  {
+   "burst_month": 4.88,
+   "granularity_s": 60,
+   "hourly": 0.03255,
+   "id": "kakao-cloud",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "KakaoCloud Virtual Machine",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 9.77,
+     "month_smooth_same_demand": 9.77,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4.88,
+     "month_smooth_same_demand": 4.88,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 9.77,
+   "url": "https://www.kakaocloud.com/services/virtual-machine/pricing"
+  },
+  {
+   "burst_month": 4.11,
+   "granularity_s": 60,
+   "hourly": 0.027397,
+   "id": "kamatera",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Kamatera",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 8.22,
+     "month_smooth_same_demand": 8.22,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4.11,
+     "month_smooth_same_demand": 4.11,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 8.22,
+   "url": "https://www.kamatera.com/pricing/"
+  },
+  {
+   "burst_month": 10.27,
+   "granularity_s": 1,
+   "hourly": 0.068493,
+   "id": "kedge",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Kedge",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 20.55,
+     "month_smooth_same_demand": 20.55,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 10.27,
+     "month_smooth_same_demand": 10.27,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 20.55,
+   "url": "https://kedge.dev/docs/billing"
+  },
+  {
+   "burst_month": 4.32,
+   "granularity_s": 1,
+   "hourly": 0.0288,
+   "id": "koyeb",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Koyeb Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 8.64,
+     "month_smooth_same_demand": 8.64,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4.32,
+     "month_smooth_same_demand": 4.32,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 8.64,
+   "url": "https://www.koyeb.com/pricing"
+  },
+  {
+   "burst_month": 28.35,
+   "granularity_s": 1,
+   "hourly": 0.189,
+   "id": "langsmith-sandbox",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "LangSmith Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 56.7,
+     "month_smooth_same_demand": 56.7,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 28.35,
+     "month_smooth_same_demand": 28.35,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 56.7,
+   "url": "https://www.langchain.com/pricing"
+  },
+  {
+   "burst_month": 114.0,
+   "granularity_s": 3600,
+   "hourly": 0.19,
+   "id": "latitude-sh",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Latitude.sh",
+   "not_self_serve": false,
+   "penalty_usd": 85.5,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 57.0,
+     "month_smooth_same_demand": 57.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 114.0,
+     "month_smooth_same_demand": 28.5,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 57.0,
+   "url": "https://www.latitude.sh/pricing"
+  },
+  {
+   "burst_month": 76.5,
+   "granularity_s": 1,
+   "hourly": 0.51,
+   "id": "lightning-ai",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Lightning AI",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 153.0,
+     "month_smooth_same_demand": 153.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 76.5,
+     "month_smooth_same_demand": 76.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 153.0,
+   "url": "https://lightning.ai/pricing"
+  },
+  {
+   "burst_month": 21.6,
+   "granularity_s": 3600,
+   "hourly": 0.036,
+   "id": "linode",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Akamai Cloud / Linode",
+   "not_self_serve": false,
+   "penalty_usd": 16.2,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 10.8,
+     "month_smooth_same_demand": 10.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 21.6,
+     "month_smooth_same_demand": 5.4,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 10.8,
+   "url": "https://www.akamai.com/cloud/pricing"
+  },
+  {
+   "burst_month": 2.7,
+   "granularity_s": 1,
+   "hourly": 0.018,
+   "id": "lizard",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Lizard",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 5.4,
+     "month_smooth_same_demand": 5.4,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 2.7,
+     "month_smooth_same_demand": 2.7,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 5.4,
+   "url": "https://lizard.build/pricing"
+  },
+  {
+   "burst_month": 7.8,
+   "granularity_s": 60,
+   "hourly": 0.052,
+   "id": "machine0",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "machine0",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 15.6,
+     "month_smooth_same_demand": 15.6,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 7.8,
+     "month_smooth_same_demand": 7.8,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 15.6,
+   "url": "https://machine0.io/"
+  },
+  {
+   "burst_month": 12.12,
+   "granularity_s": 1,
+   "hourly": 0.080822,
+   "id": "macincloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "MacinCloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 24.25,
+     "month_smooth_same_demand": 24.25,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 12.12,
+     "month_smooth_same_demand": 12.12,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 24.25,
+   "url": "https://www.macincloud.com/pages/dedicated.html"
+  },
+  {
+   "burst_month": 64504.08,
+   "granularity_s": 2592000,
+   "hourly": 0.149315,
+   "id": "macstadium",
+   "min_billed_hours": 720.0,
+   "min_billed_seconds": 2592000,
+   "name": "MacStadium",
+   "not_self_serve": false,
+   "penalty_usd": 61278.88,
+   "penalty_x": 20.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 3600.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 16126.02,
+     "month_smooth_same_demand": 3225.2,
+     "penalty_x": 5.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 14400.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 64504.08,
+     "month_smooth_same_demand": 3225.2,
+     "penalty_x": 20.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 720.0,
+   "smooth_month": 3225.2,
+   "url": "https://www.macstadium.com/pricing"
+  },
+  {
+   "burst_month": 6.16,
+   "granularity_s": null,
+   "hourly": 0.041096,
+   "id": "manus-cloud-computer",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Manus Cloud Computer",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 12.33,
+     "month_smooth_same_demand": 12.33,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 6.16,
+     "month_smooth_same_demand": 6.16,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 12.33,
+   "url": "https://help.manus.im/en/articles/15392078-understanding-cloud-computer-plans-and-billing"
+  },
+  {
+   "burst_month": 24.72,
+   "granularity_s": 1,
+   "hourly": 0.1648,
+   "id": "microsandbox",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "microsandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.44,
+     "month_smooth_same_demand": 49.44,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.72,
+     "month_smooth_same_demand": 24.72,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.44,
+   "url": "https://microsandbox.dev/pricing"
+  },
+  {
+   "burst_month": 23.28,
+   "granularity_s": 1,
+   "hourly": 0.155187,
+   "id": "miosa",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "MIOSA",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 46.56,
+     "month_smooth_same_demand": 46.56,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 23.28,
+     "month_smooth_same_demand": 23.28,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 46.56,
+   "url": "https://miosa.ai/pricing"
+  },
+  {
+   "burst_month": 56.98,
+   "granularity_s": 1,
+   "hourly": 0.379872,
+   "id": "modal",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Modal",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 113.96,
+     "month_smooth_same_demand": 113.96,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 56.98,
+     "month_smooth_same_demand": 56.98,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 113.96,
+   "url": "https://modal.com/pricing"
+  },
+  {
+   "burst_month": 18.0,
+   "granularity_s": null,
+   "hourly": 0.12,
+   "id": "modelence",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Modelence",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 36.0,
+     "month_smooth_same_demand": 36.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 36.0,
+   "url": "https://modelence.com"
+  },
+  {
+   "burst_month": 15.0,
+   "granularity_s": null,
+   "hourly": 0.1,
+   "id": "morph-cloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Morph Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 30.0,
+     "month_smooth_same_demand": 30.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 15.0,
+     "month_smooth_same_demand": 15.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 30.0,
+   "url": "https://cloud.morph.so/web/subscribe"
+  },
+  {
+   "burst_month": 7.5,
+   "granularity_s": 1,
+   "hourly": 0.05,
+   "id": "mosaic",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Mosaic Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 15.0,
+     "month_smooth_same_demand": 15.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 7.5,
+     "month_smooth_same_demand": 7.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 15.0,
+   "url": "https://sandbox.mosaicos.com/"
+  },
+  {
+   "burst_month": 36.0,
+   "granularity_s": 60,
+   "hourly": 0.24,
+   "id": "namespace",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Namespace",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 72.0,
+     "month_smooth_same_demand": 72.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 36.0,
+     "month_smooth_same_demand": 36.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 72.0,
+   "url": "https://namespace.so/pricing"
+  },
+  {
+   "burst_month": 84.84,
+   "granularity_s": 3600,
+   "hourly": 0.141392,
+   "id": "naver-cloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "NAVER Cloud / LINE-NAVER scope",
+   "not_self_serve": false,
+   "penalty_usd": 63.63,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 42.42,
+     "month_smooth_same_demand": 42.42,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 84.84,
+     "month_smooth_same_demand": 21.21,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 42.42,
+   "url": "https://www.ncloud.com/product/compute/server"
+  },
+  {
+   "burst_month": 5.52,
+   "granularity_s": 1,
+   "hourly": 0.0368,
+   "id": "nebius",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Nebius",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 11.04,
+     "month_smooth_same_demand": 11.04,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5.52,
+     "month_smooth_same_demand": 5.52,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 11.04,
+   "url": "https://docs.nebius.com/compute/resources/pricing"
+  },
+  {
+   "burst_month": 5106.45,
+   "granularity_s": 3600,
+   "hourly": 8.510744,
+   "id": "netcup",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "netcup VPS",
+   "not_self_serve": false,
+   "penalty_usd": 3829.84,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 2553.22,
+     "month_smooth_same_demand": 2553.22,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5106.45,
+     "month_smooth_same_demand": 1276.61,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 2553.22,
+   "url": "https://www.netcup.com/en/server/vps"
+  },
+  {
+   "burst_month": 1458.0,
+   "granularity_s": 1,
+   "hourly": 9.72,
+   "id": "nextmv",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Nextmv",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 2916.0,
+     "month_smooth_same_demand": 2916.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 1458.0,
+     "month_smooth_same_demand": 1458.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 2916.0,
+   "url": "https://nextmv.io"
+  },
+  {
+   "burst_month": 10.0,
+   "granularity_s": 1,
+   "hourly": 0.0667,
+   "id": "northflank",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Northflank Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 20.01,
+     "month_smooth_same_demand": 20.01,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 10.0,
+     "month_smooth_same_demand": 10.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 20.01,
+   "url": "https://northflank.com/pricing"
+  },
+  {
+   "burst_month": 17.5,
+   "granularity_s": 1,
+   "hourly": 0.11664,
+   "id": "novita",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Novita AI Agent Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 34.99,
+     "month_smooth_same_demand": 34.99,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 17.5,
+     "month_smooth_same_demand": 17.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 34.99,
+   "url": "https://docs.novita.ai/guides/sandbox-pricing"
+  },
+  {
+   "burst_month": 16.83,
+   "granularity_s": 1,
+   "hourly": 0.112192,
+   "id": "oakhost",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "OakHost",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 33.66,
+     "month_smooth_same_demand": 33.66,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 16.83,
+     "month_smooth_same_demand": 16.83,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 33.66,
+   "url": "https://www.oakhost.com/mac-mini-hosting"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": null,
+   "hourly": 0.1656,
+   "id": "omnara",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Omnara",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://www.omnara.com/pricing"
+  },
+  {
+   "burst_month": 37.5,
+   "granularity_s": null,
+   "hourly": 0.25,
+   "id": "ona",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Ona (formerly Gitpod)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 75.0,
+     "month_smooth_same_demand": 75.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 37.5,
+     "month_smooth_same_demand": 37.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 75.0,
+   "url": "https://ona.com/pricing"
+  },
+  {
+   "burst_month": 19.64,
+   "granularity_s": 1,
+   "hourly": 0.130924,
+   "id": "open-telekom-cloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Open Telekom Cloud / T Cloud Public",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 39.28,
+     "month_smooth_same_demand": 39.28,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 19.64,
+     "month_smooth_same_demand": 19.64,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 39.28,
+   "url": "https://www.open-telekom-cloud.com/en/prices"
+  },
+  {
+   "burst_month": 54.0,
+   "granularity_s": 60,
+   "hourly": 0.36,
+   "id": "openai-containers",
+   "min_billed_hours": 0.08333333333333333,
+   "min_billed_seconds": 300,
+   "name": "OpenAI Containers (Code Interpreter / Hosted Shell)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 108.0,
+     "month_smooth_same_demand": 108.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 108.0,
+   "url": "https://developers.openai.com/api/docs/pricing"
+  },
+  {
+   "burst_month": 56.7,
+   "granularity_s": 1,
+   "hourly": 0.378,
+   "id": "opencomputer",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "OpenComputer",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 113.4,
+     "month_smooth_same_demand": 113.4,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 56.7,
+     "month_smooth_same_demand": 56.7,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 113.4,
+   "url": "https://opencomputer.dev/sandboxes"
+  },
+  {
+   "burst_month": 35.64,
+   "granularity_s": 1,
+   "hourly": 0.2376,
+   "id": "openpond",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "OpenPond Cloud Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 71.28,
+     "month_smooth_same_demand": 71.28,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 35.64,
+     "month_smooth_same_demand": 35.64,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 71.28,
+   "url": "https://openpond.ai/pricing"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "openreward",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "OpenReward Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://openreward.ai/pricing"
+  },
+  {
+   "burst_month": 12.83,
+   "granularity_s": null,
+   "hourly": 0.0855,
+   "id": "openshift",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Red Hat OpenShift (Harbor backend)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 25.65,
+     "month_smooth_same_demand": 25.65,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 12.83,
+     "month_smooth_same_demand": 12.83,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 25.65,
+   "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing"
+  },
+  {
+   "burst_month": 1.37,
+   "granularity_s": 1,
+   "hourly": 0.009125,
+   "id": "oracle-cloud",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Oracle Cloud Infrastructure",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 2.74,
+     "month_smooth_same_demand": 2.74,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 1.37,
+     "month_smooth_same_demand": 1.37,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 2.74,
+   "url": "https://www.oracle.com/cloud/compute/pricing/"
+  },
+  {
+   "burst_month": 25.6,
+   "granularity_s": 1,
+   "hourly": 0.17067,
+   "id": "orkestr",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "orkestr Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 51.2,
+     "month_smooth_same_demand": 51.2,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 25.6,
+     "month_smooth_same_demand": 25.6,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 51.2,
+   "url": "https://orkestr.eu/sandboxes"
+  },
+  {
+   "burst_month": 3.84,
+   "granularity_s": 1,
+   "hourly": 0.0256,
+   "id": "ovhcloud",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "OVHcloud Public Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 7.68,
+     "month_smooth_same_demand": 7.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 3.84,
+     "month_smooth_same_demand": 3.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 7.68,
+   "url": "https://us.ovhcloud.com/public-cloud/prices/"
+  },
+  {
+   "burst_month": 25.92,
+   "granularity_s": 1,
+   "hourly": 0.1728,
+   "id": "pandastack",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "PandaStack",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 51.84,
+     "month_smooth_same_demand": 51.84,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 25.92,
+     "month_smooth_same_demand": 25.92,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 51.84,
+   "url": "https://www.pandastack.ai/pricing/"
+  },
+  {
+   "burst_month": 24.0,
+   "granularity_s": 3600,
+   "hourly": 0.04,
+   "id": "paperspace",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Paperspace",
+   "not_self_serve": false,
+   "penalty_usd": 18.0,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 12.0,
+     "month_smooth_same_demand": 12.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.0,
+     "month_smooth_same_demand": 6.0,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 12.0,
+   "url": "https://docs.digitalocean.com/products/paperspace/pricing/"
+  },
+  {
+   "burst_month": 9.66,
+   "granularity_s": 1,
+   "hourly": 0.064377,
+   "id": "ppio-sandbox",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "PPIO Agent Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 19.31,
+     "month_smooth_same_demand": 19.31,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.66,
+     "month_smooth_same_demand": 9.66,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 19.31,
+   "url": "https://ppio.com/docs/sandbox/pricing.md"
+  },
+  {
+   "burst_month": 13.5,
+   "granularity_s": null,
+   "hourly": 0.09,
+   "id": "prime-intellect",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Prime Intellect Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 27.0,
+     "month_smooth_same_demand": 27.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 13.5,
+     "month_smooth_same_demand": 13.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 27.0,
+   "url": "https://www.primeintellect.ai/sandboxes"
+  },
+  {
+   "burst_month": 5.14,
+   "granularity_s": 1,
+   "hourly": 0.034247,
+   "id": "prized",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Prized",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 10.27,
+     "month_smooth_same_demand": 10.27,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5.14,
+     "month_smooth_same_demand": 5.14,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 10.27,
+   "url": "https://prized.dev/docs/billing"
+  },
+  {
+   "burst_month": 16.68,
+   "granularity_s": 1,
+   "hourly": 0.111168,
+   "id": "railway",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Railway",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 33.35,
+     "month_smooth_same_demand": 33.35,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 16.68,
+     "month_smooth_same_demand": 16.68,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 33.35,
+   "url": "https://railway.com/pricing"
+  },
+  {
+   "burst_month": 17.47,
+   "granularity_s": 1,
+   "hourly": 0.116438,
+   "id": "render",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Render",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 34.93,
+     "month_smooth_same_demand": 34.93,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 17.47,
+     "month_smooth_same_demand": 17.47,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 34.93,
+   "url": "https://render.com/pricing"
+  },
+  {
+   "burst_month": 21.88,
+   "granularity_s": 1,
+   "hourly": 0.14589,
+   "id": "rentamac",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "RentaMac (rentamac.io)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 43.77,
+     "month_smooth_same_demand": 43.77,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 21.88,
+     "month_smooth_same_demand": 21.88,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 43.77,
+   "url": "https://rentamac.io/pricing"
+  },
+  {
+   "burst_month": 72.0,
+   "granularity_s": 60,
+   "hourly": 0.48,
+   "id": "replicas",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Replicas",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 144.0,
+     "month_smooth_same_demand": 144.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 72.0,
+     "month_smooth_same_demand": 72.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 144.0,
+   "url": "https://replicas.dev"
+  },
+  {
+   "burst_month": 54.0,
+   "granularity_s": 1,
+   "hourly": 0.36,
+   "id": "replicate",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Replicate",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 108.0,
+     "month_smooth_same_demand": 108.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 108.0,
+   "url": "https://replicate.com/pricing"
+  },
+  {
+   "burst_month": 10.41,
+   "granularity_s": null,
+   "hourly": 0.0694,
+   "id": "replit",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Replit",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 20.82,
+     "month_smooth_same_demand": 20.82,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 10.41,
+     "month_smooth_same_demand": 10.41,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 20.82,
+   "url": "https://docs.replit.com/billing/deployment-pricing"
+  },
+  {
+   "burst_month": 41.9,
+   "granularity_s": 1,
+   "hourly": 0.27936,
+   "id": "rivet",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Rivet (Actors & agentOS)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 83.81,
+     "month_smooth_same_demand": 83.81,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 41.9,
+     "month_smooth_same_demand": 41.9,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 83.81,
+   "url": "https://rivet.dev/pricing/"
+  },
+  {
+   "burst_month": 6.99,
+   "granularity_s": 1,
+   "hourly": 0.0466,
+   "id": "run-cloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Run Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 13.98,
+     "month_smooth_same_demand": 13.98,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 6.99,
+     "month_smooth_same_demand": 6.99,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 13.98,
+   "url": "https://docs.run.cloud/sandboxes/index.md"
+  },
+  {
+   "burst_month": 47.52,
+   "granularity_s": 1,
+   "hourly": 0.3168,
+   "id": "runloop",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Runloop",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 95.04,
+     "month_smooth_same_demand": 95.04,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 47.52,
+     "month_smooth_same_demand": 47.52,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 95.04,
+   "url": "https://www.runloop.ai/pricing"
+  },
+  {
+   "burst_month": 9.0,
+   "granularity_s": 1,
+   "hourly": 0.06,
+   "id": "runpod",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Runpod",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.0,
+     "month_smooth_same_demand": 9.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 18.0,
+   "url": "https://www.runpod.io/pricing"
+  },
+  {
+   "burst_month": 16.2,
+   "granularity_s": 1,
+   "hourly": 0.108,
+   "id": "runs-on",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "RunsOn",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 32.4,
+     "month_smooth_same_demand": 32.4,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 16.2,
+     "month_smooth_same_demand": 16.2,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 32.4,
+   "url": "https://runs-on.com/pricing/"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": null,
+   "hourly": 0.1656,
+   "id": "runta",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Runta",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://runta.com/pricing/"
+  },
+  {
+   "burst_month": 9.3,
+   "granularity_s": 15,
+   "hourly": 0.062,
+   "id": "sail",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Sail Research (Sailboxes)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 18.6,
+     "month_smooth_same_demand": 18.6,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.3,
+     "month_smooth_same_demand": 9.3,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 18.6,
+   "url": "https://docs.sailresearch.com/pricing"
+  },
+  {
+   "burst_month": 79.97,
+   "granularity_s": 3600,
+   "hourly": 0.133279,
+   "id": "sakura-cloud",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Sakura Internet Cloud",
+   "not_self_serve": false,
+   "penalty_usd": 59.98,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 39.98,
+     "month_smooth_same_demand": 39.98,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 79.97,
+     "month_smooth_same_demand": 19.99,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 39.98,
+   "url": "https://cloud.sakura.ad.jp/products/server/"
+  },
+  {
+   "burst_month": 13.44,
+   "granularity_s": null,
+   "hourly": 0.0896,
+   "id": "samsung-cloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Samsung SDS Cloud Platform",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 26.88,
+     "month_smooth_same_demand": 26.88,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 13.44,
+     "month_smooth_same_demand": 13.44,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 26.88,
+   "url": "https://cloud.samsungsds.com/serviceportal/pricing.html"
+  },
+  {
+   "burst_month": 13.5,
+   "granularity_s": 1,
+   "hourly": 0.09,
+   "id": "sandbox-as-a-service",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Sandbox as a Service",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 27.0,
+     "month_smooth_same_demand": 27.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 13.5,
+     "month_smooth_same_demand": 13.5,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 27.0,
+   "url": "https://sandbox-as-a-service.com/pricing"
+  },
+  {
+   "burst_month": 9.0,
+   "granularity_s": 1,
+   "hourly": 0.06,
+   "id": "sandbox0",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Sandbox0",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.0,
+     "month_smooth_same_demand": 9.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 18.0,
+   "url": "https://sandbox0.ai/pricing"
+  },
+  {
+   "burst_month": 18.03,
+   "granularity_s": 1,
+   "hourly": 0.120205,
+   "id": "scaleway-apple-silicon",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Scaleway Apple silicon (Mac mini)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 36.06,
+     "month_smooth_same_demand": 36.06,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 18.03,
+     "month_smooth_same_demand": 18.03,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 36.06,
+   "url": "https://www.scaleway.com/en/pricing/apple-silicon/"
+  },
+  {
+   "burst_month": 13.79,
+   "granularity_s": 3600,
+   "hourly": 0.022979,
+   "id": "scaleway",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Scaleway Instances",
+   "not_self_serve": false,
+   "penalty_usd": 10.34,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 6.89,
+     "month_smooth_same_demand": 6.89,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 13.79,
+     "month_smooth_same_demand": 3.45,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 6.89,
+   "url": "https://www.scaleway.com/en/pricing/virtual-instances/"
+  },
+  {
+   "burst_month": 109.73,
+   "granularity_s": 60,
+   "hourly": 0.73152,
+   "id": "sfcompute",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "SF Compute (GPU market + Autoresearch sandboxes)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 219.46,
+     "month_smooth_same_demand": 219.46,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 109.73,
+     "month_smooth_same_demand": 109.73,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 219.46,
+   "url": "https://autoresearch.sfcompute.com/"
+  },
+  {
+   "burst_month": 60.0,
+   "granularity_s": 1,
+   "hourly": 0.4,
+   "id": "shardflux",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Shardflux",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 120.0,
+     "month_smooth_same_demand": 120.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 60.0,
+     "month_smooth_same_demand": 60.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 120.0,
+   "url": "https://shardflux.dev/#pricing"
+  },
+  {
+   "burst_month": 3.0,
+   "granularity_s": 60,
+   "hourly": 0.02,
+   "id": "shellbox",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "shellbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 6.0,
+     "month_smooth_same_demand": 6.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 3.0,
+     "month_smooth_same_demand": 3.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 6.0,
+   "url": "https://shellbox.dev/"
+  },
+  {
+   "burst_month": 24.72,
+   "granularity_s": 1,
+   "hourly": 0.1648,
+   "id": "smol-machines",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "smol machines",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.44,
+     "month_smooth_same_demand": 49.44,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.72,
+     "month_smooth_same_demand": 24.72,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.44,
+   "url": "https://smolmachines.com/pricing"
+  },
+  {
+   "burst_month": 11.97,
+   "granularity_s": null,
+   "hourly": 0.0798,
+   "id": "solari",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Solari",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 23.94,
+     "month_smooth_same_demand": 23.94,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 11.97,
+     "month_smooth_same_demand": 11.97,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 23.94,
+   "url": "https://docs.getsolari.com/pricing"
+  },
+  {
+   "burst_month": 18.0,
+   "granularity_s": null,
+   "hourly": 0.12,
+   "id": "specific",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Specific",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 36.0,
+     "month_smooth_same_demand": 36.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 36.0,
+   "url": "https://specific.dev/pricing"
+  },
+  {
+   "burst_month": 24.6,
+   "granularity_s": null,
+   "hourly": 0.164,
+   "id": "sprites",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Sprites (Fly.io)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.2,
+     "month_smooth_same_demand": 49.2,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.6,
+     "month_smooth_same_demand": 24.6,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.2,
+   "url": "https://fly.io/pricing"
+  },
+  {
+   "burst_month": 29.55,
+   "granularity_s": 3600,
+   "hourly": 0.049255,
+   "id": "stackit",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "STACKIT Compute Engine",
+   "not_self_serve": false,
+   "penalty_usd": 22.16,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 14.78,
+     "month_smooth_same_demand": 14.78,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 29.55,
+     "month_smooth_same_demand": 7.39,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 14.78,
+   "url": "https://pim.api.stackit.cloud/v1/skus"
+  },
+  {
+   "burst_month": 36.0,
+   "granularity_s": 60,
+   "hourly": 0.24,
+   "id": "starsling",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "StarSling",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 72.0,
+     "month_smooth_same_demand": 72.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 36.0,
+     "month_smooth_same_demand": 36.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 72.0,
+   "url": "https://starsling.dev/pricing"
+  },
+  {
+   "burst_month": 34.8,
+   "granularity_s": null,
+   "hourly": 0.232,
+   "id": "stateset",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "StateSet Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 69.6,
+     "month_smooth_same_demand": 69.6,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 34.8,
+     "month_smooth_same_demand": 34.8,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 69.6,
+   "url": "https://sandbox.stateset.app/"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "superserve",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Superserve",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://superserve.ai/pricing"
+  },
+  {
+   "burst_month": 6.81,
+   "granularity_s": 1,
+   "hourly": 0.045412,
+   "id": "tama",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "tama",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 13.62,
+     "month_smooth_same_demand": 13.62,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 6.81,
+     "month_smooth_same_demand": 6.81,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 13.62,
+   "url": "https://tama.computer/"
+  },
+  {
+   "burst_month": 21.08,
+   "granularity_s": 1,
+   "hourly": 0.140556,
+   "id": "tencent-agent-runtime",
+   "min_billed_hours": 0.0002777777777777778,
+   "min_billed_seconds": 1,
+   "name": "Tencent Cloud Agent Runtime \u2014 Agent Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 42.17,
+     "month_smooth_same_demand": 42.17,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 21.08,
+     "month_smooth_same_demand": 21.08,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 42.17,
+   "url": "https://cloud.tencent.com/document/product/1814/133249"
+  },
+  {
+   "burst_month": 5.59,
+   "granularity_s": null,
+   "hourly": 0.037255,
+   "id": "tencent-cloud-studio",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Tencent Cloud Studio",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 11.18,
+     "month_smooth_same_demand": 11.18,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 5.59,
+     "month_smooth_same_demand": 5.59,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 11.18,
+   "url": "https://cloud.tencent.cn/document/product/1039/131894"
+  },
+  {
+   "burst_month": 18.3,
+   "granularity_s": null,
+   "hourly": 0.121968,
+   "id": "tencent-scf",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Tencent Cloud SCF",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 36.59,
+     "month_smooth_same_demand": 36.59,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 18.3,
+     "month_smooth_same_demand": 18.3,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 36.59,
+   "url": "https://cloud.tencent.com/document/product/583/17299"
+  },
+  {
+   "burst_month": 24.84,
+   "granularity_s": 1,
+   "hourly": 0.1656,
+   "id": "tenki",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Tenki Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 49.68,
+     "month_smooth_same_demand": 49.68,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 24.84,
+     "month_smooth_same_demand": 24.84,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 49.68,
+   "url": "https://tenki.cloud/pricing"
+  },
+  {
+   "burst_month": 18.0,
+   "granularity_s": 1,
+   "hourly": 0.12,
+   "id": "tensorlake",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Tensorlake Sandboxes",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 36.0,
+     "month_smooth_same_demand": 36.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 18.0,
+     "month_smooth_same_demand": 18.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 36.0,
+   "url": "https://www.tensorlake.ai/pricing"
+  },
+  {
+   "burst_month": 96.0,
+   "granularity_s": 3600,
+   "hourly": 0.16,
+   "id": "tinfoil",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Tinfoil",
+   "not_self_serve": true,
+   "penalty_usd": 72.0,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 48.0,
+     "month_smooth_same_demand": 48.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 96.0,
+     "month_smooth_same_demand": 24.0,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 48.0,
+   "url": "https://tinfoil.sh"
+  },
+  {
+   "burst_month": 22.32,
+   "granularity_s": 60,
+   "hourly": 0.1488,
+   "id": "together-code-sandbox",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Together Code Sandbox",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 44.64,
+     "month_smooth_same_demand": 44.64,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 22.32,
+     "month_smooth_same_demand": 22.32,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 44.64,
+   "url": "https://www.together.ai/pricing"
+  },
+  {
+   "burst_month": 91.8,
+   "granularity_s": 1,
+   "hourly": 0.612,
+   "id": "trigger-dev",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Trigger.dev",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 183.6,
+     "month_smooth_same_demand": 183.6,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 91.8,
+     "month_smooth_same_demand": 91.8,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 183.6,
+   "url": "https://trigger.dev/pricing"
+  },
+  {
+   "burst_month": 4.68,
+   "granularity_s": 60,
+   "hourly": 0.0312,
+   "id": "ubicloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Ubicloud",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 9.36,
+     "month_smooth_same_demand": 9.36,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 4.68,
+     "month_smooth_same_demand": 4.68,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 9.36,
+   "url": "https://www.ubicloud.com/docs/about/pricing"
+  },
+  {
+   "burst_month": 9.66,
+   "granularity_s": 1,
+   "hourly": 0.064376,
+   "id": "ucloud",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "UCloud Agent Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 19.31,
+     "month_smooth_same_demand": 19.31,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.66,
+     "month_smooth_same_demand": 9.66,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 19.31,
+   "url": "https://astraflow.ucloud.cn/docs/agent-sandbox"
+  },
+  {
+   "burst_month": 12.5,
+   "granularity_s": 3600,
+   "hourly": 0.020833,
+   "id": "upcloud",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "UpCloud",
+   "not_self_serve": false,
+   "penalty_usd": 9.38,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 6.25,
+     "month_smooth_same_demand": 6.25,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 12.5,
+     "month_smooth_same_demand": 3.12,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 6.25,
+   "url": "https://upcloud.com/pricing/"
+  },
+  {
+   "burst_month": 1.64,
+   "granularity_s": null,
+   "hourly": 0.010959,
+   "id": "upstash-box",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Upstash Box",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 3.29,
+     "month_smooth_same_demand": 3.29,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 1.64,
+     "month_smooth_same_demand": 1.64,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 3.29,
+   "url": "https://upstash.com/pricing/box"
+  },
+  {
+   "burst_month": 6480.0,
+   "granularity_s": 3600,
+   "hourly": 0.45,
+   "id": "use-computer",
+   "min_billed_hours": 24.0,
+   "min_billed_seconds": 86400,
+   "name": "use.computer",
+   "not_self_serve": false,
+   "penalty_usd": 6412.5,
+   "penalty_x": 96.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 120.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 1620.0,
+     "month_smooth_same_demand": 135.0,
+     "penalty_x": 12.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 480.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 6480.0,
+     "month_smooth_same_demand": 67.5,
+     "penalty_x": 96.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 135.0,
+   "url": "https://use.computer/"
+  },
+  {
+   "burst_month": 51.12,
+   "granularity_s": null,
+   "hourly": 0.3408,
+   "id": "vercel-sandbox",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Vercel Sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 102.24,
+     "month_smooth_same_demand": 102.24,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 51.12,
+     "month_smooth_same_demand": 51.12,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 102.24,
+   "url": "https://vercel.com/docs/sandbox/pricing"
+  },
+  {
+   "burst_month": 3.6,
+   "granularity_s": 60,
+   "hourly": 0.024,
+   "id": "verda",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "Verda (formerly DataCrunch)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 7.2,
+     "month_smooth_same_demand": 7.2,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 3.6,
+     "month_smooth_same_demand": 3.6,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 7.2,
+   "url": "https://verda.com/pricing"
+  },
+  {
+   "burst_month": 30.9,
+   "granularity_s": 1,
+   "hourly": 0.206,
+   "id": "vertex-computer-use",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Google Agent Platform Sandbox (Code Execution / Shell / Computer Use)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 61.8,
+     "month_smooth_same_demand": 61.8,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 30.9,
+     "month_smooth_same_demand": 30.9,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 61.8,
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing"
+  },
+  {
+   "burst_month": 9.8,
+   "granularity_s": 1,
+   "hourly": 0.065342,
+   "id": "volcengine-agentkit",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Volcano Engine AgentKit / veFaaS sandbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 19.6,
+     "month_smooth_same_demand": 19.6,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 9.8,
+     "month_smooth_same_demand": 9.8,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 19.6,
+   "url": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh"
+  },
+  {
+   "burst_month": 46.43,
+   "granularity_s": 3600,
+   "hourly": 0.077381,
+   "id": "vultr-windows",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Vultr Cloud Compute (Windows Server)",
+   "not_self_serve": false,
+   "penalty_usd": 34.82,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 23.21,
+     "month_smooth_same_demand": 23.21,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 46.43,
+     "month_smooth_same_demand": 11.61,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 23.21,
+   "url": "https://docs.vultr.com/support/platform/billing/is-a-windows-license-included-in-the-monthly-price"
+  },
+  {
+   "burst_month": 17.88,
+   "granularity_s": 3600,
+   "hourly": 0.0298,
+   "id": "vultr",
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
+   "name": "Vultr Cloud Compute",
+   "not_self_serve": false,
+   "penalty_usd": 13.41,
+   "penalty_x": 4.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 8.94,
+     "month_smooth_same_demand": 8.94,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 20.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 17.88,
+     "month_smooth_same_demand": 4.47,
+     "penalty_x": 4.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 8.94,
+   "url": "https://www.vultr.com/pricing/"
+  },
+  {
+   "burst_month": 27.0,
+   "granularity_s": 60,
+   "hourly": 0.18,
+   "id": "warpbuild",
+   "min_billed_hours": 0.016666666666666666,
+   "min_billed_seconds": 60,
+   "name": "WarpBuild (GitHub Actions runners)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 54.0,
+     "month_smooth_same_demand": 54.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 27.0,
+     "month_smooth_same_demand": 27.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 54.0,
+   "url": "https://www.warpbuild.com/pricing"
+  },
+  {
+   "burst_month": 36.0,
+   "granularity_s": null,
+   "hourly": 0.24,
+   "id": "wasmer",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Wasmer",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 72.0,
+     "month_smooth_same_demand": 72.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 36.0,
+     "month_smooth_same_demand": 36.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 72.0,
+   "url": "https://wasmer.io/pricing"
+  },
+  {
+   "burst_month": 7.4,
+   "granularity_s": 1,
+   "hourly": 0.049315,
+   "id": "windows-365",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Windows 365 Cloud PC (Business / Enterprise)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 14.79,
+     "month_smooth_same_demand": 14.79,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 7.4,
+     "month_smooth_same_demand": 7.4,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 14.79,
+   "url": "https://www.microsoft.com/en-us/windows-365/business/compare-plans-pricing"
+  },
+  {
+   "burst_month": 12.0,
+   "granularity_s": null,
+   "hourly": 0.08,
+   "id": "withruntime",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Runtime (withruntime.com)",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 24.0,
+     "month_smooth_same_demand": 24.0,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 12.0,
+     "month_smooth_same_demand": 12.0,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 24.0,
+   "url": "https://withruntime.com/pricing"
+  },
+  {
+   "burst_month": 0.82,
+   "granularity_s": null,
+   "hourly": 0.00548,
+   "id": "zeabur",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "Zeabur",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 1.64,
+     "month_smooth_same_demand": 1.64,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 0.82,
+     "month_smooth_same_demand": 0.82,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 1.64,
+   "url": "https://zeabur.com/pricing"
+  },
+  {
+   "burst_month": 2.06,
+   "granularity_s": 1,
+   "hourly": 0.0137,
+   "id": "zipbox",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": null,
+   "name": "zipbox",
+   "not_self_serve": false,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 4.11,
+     "month_smooth_same_demand": 4.11,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 2.06,
+     "month_smooth_same_demand": 2.06,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 4.11,
+   "url": "https://zipbox.ai/pricing"
+  },
+  {
+   "burst_month": 3.7,
+   "granularity_s": null,
+   "hourly": 0.024658,
+   "id": "zo-computer",
+   "min_billed_hours": 0.0,
+   "min_billed_seconds": 0,
+   "name": "Zo Computer",
+   "not_self_serve": true,
+   "penalty_usd": 0.0,
+   "penalty_x": 1.0,
+   "profiles": {
+    "few-long": {
+     "billed_day_h": 10.0,
+     "demand_day_h": 10.0,
+     "hours_each": 2.0,
+     "month": 7.4,
+     "month_smooth_same_demand": 7.4,
+     "penalty_x": 1.0,
+     "starts": 5
+    },
+    "many-short": {
+     "billed_day_h": 5.0,
+     "demand_day_h": 5.0,
+     "hours_each": 0.25,
+     "month": 3.7,
+     "month_smooth_same_demand": 3.7,
+     "penalty_x": 1.0,
+     "starts": 20
+    }
+   },
+   "smooth_day_h": 10.0,
+   "smooth_month": 7.4,
+   "url": "https://www.zo.computer/pricing"
+  }
+ ]
+}

@@ -604,6 +604,48 @@ _172 more at this duty cycle; the full rank is table C._
 
 ---
 
+## B1. The minimum bill, which a $/hour table hides
+
+A published hourly rate is not what you pay for a short burst. **42 modes in this corpus bill a minimum of one hour** and 9 bill a minimum of one full day. For an agent that starts a sandbox, runs a tool call and starts again, the minimum is the price that actually applies, and every table above hides it.
+
+Two profiles, each compared against the **same** demand so the comparison is like for like:
+
+- **many short sessions**: 20 starts a day of 0.25 h each = 5 h of real demand. This is what an agent running a tool call, reading a result and starting again actually does.
+- **few long sessions**: 5 starts a day of 2 h each = 10 h. Every session already exceeds a one-hour minimum, so the minimum never bites here.
+
+**25 of 202 providers are affected.** The worst:
+
+| # | provider | $/hour | same demand, smooth | same demand, bursty | penalty | rounds up to | link |
+|---|---|---|---|---|---|---|---|
+| 1 | [HostMyApple](https://hostmyapple.com/mac-vps-hosting) | 0.0479 | $7.19/mo | $20706.62/mo | **2880.0x** | min 2.592e+06 s | `hostmyapple` |
+| 2 | [AWS EC2 Mac (Dedicated Host)](https://aws.amazon.com/ec2/instance-types/mac/) | 0.6500 | $97.50/mo | $9360.00/mo | **96.0x** | min 86400 s | `aws-ec2-mac` |
+| 3 | [Flow Swiss Mac Bare Metal](https://doc.flow.swiss/platform/pricing/mac-bare-metal) | 0.3263 | $48.94/mo | $4698.65/mo | **96.0x** | min 86400 s | `flow-swiss-mac` |
+| 4 | [use.computer](https://use.computer/) | 0.4500 | $67.50/mo | $6480.00/mo | **96.0x** | min 86400 s | `use-computer` |
+| 5 | [MacStadium](https://www.macstadium.com/pricing) | 0.1493 | $3225.20/mo | $64504.08/mo | **20.0x** | min 2.592e+06 s | `macstadium` |
+| 6 | [Aptible](https://www.aptible.com) | 0.2000 | $30.00/mo | $120.00/mo | **4.0x** | gran 3600 s | `aptible` |
+| 7 | [Amazon WorkSpaces Personal (Windows)](https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/) | 0.0425 | $6.37/mo | $25.48/mo | **4.0x** | gran 3600 s | `aws-workspaces` |
+| 8 | [Civo Compute](https://www.civo.com/pricing) | 0.0298 | $4.46/mo | $17.86/mo | **4.0x** | min 3600 s | `civo` |
+| 9 | [Contabo](https://contabo.com/en-us/pricing/) | 6.6000 | $990.00/mo | $3960.00/mo | **4.0x** | min 3600 s | `contabo` |
+| 10 | [E2E Networks](https://www.e2enetworks.com/pricing) | 0.0440 | $6.60/mo | $26.40/mo | **4.0x** | gran 3600 s | `e2e-networks` |
+| 11 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | $1.56/mo | $6.24/mo | **4.0x** | min 3600 s | `hetzner-cloud` |
+| 12 | [Hetzner Dedicated AX / EX](https://www.hetzner.com/dedicated-rootserver/) | 0.1075 | $16.12/mo | $64.50/mo | **4.0x** | min 3600 s | `hetzner-dedicated` |
+| 13 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | 24.4900 | $3673.50/mo | $14694.00/mo | **4.0x** | min 3600 s | `hostinger-vps` |
+| 14 | [Latitude.sh](https://www.latitude.sh/pricing) | 0.1900 | $28.50/mo | $114.00/mo | **4.0x** | gran 3600 s | `latitude-sh` |
+| 15 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | 0.0360 | $5.40/mo | $21.60/mo | **4.0x** | min 3600 s | `linode` |
+| 16 | [NAVER Cloud / LINE-NAVER scope](https://www.ncloud.com/product/compute/server) | 0.1414 | $21.21/mo | $84.84/mo | **4.0x** | gran 3600 s | `naver-cloud` |
+| 17 | [netcup VPS](https://www.netcup.com/en/server/vps) | 8.5107 | $1276.61/mo | $5106.45/mo | **4.0x** | min 3600 s | `netcup` |
+| 18 | [Paperspace](https://docs.digitalocean.com/products/paperspace/pricing/) | 0.0400 | $6.00/mo | $24.00/mo | **4.0x** | gran 3600 s | `paperspace` |
+| 19 | [Sakura Internet Cloud](https://cloud.sakura.ad.jp/products/server/) | 0.1333 | $19.99/mo | $79.97/mo | **4.0x** | min 3600 s | `sakura-cloud` |
+| 20 | [Scaleway Instances](https://www.scaleway.com/en/pricing/virtual-instances/) | 0.0230 | $3.45/mo | $13.79/mo | **4.0x** | min 3600 s | `scaleway` |
+
+Read these as bounds, not predictions. `bursty` assumes every session is shorter than the minimum, which is the pessimistic side; a real agent that holds one sandbox for the hour pays once. What the column establishes is which headline rates cannot survive a bursty workload.
+
+**Two different mechanisms, one effect, and the column above keeps them apart.** A *minimum billable unit* charges at least that much per start regardless. A *granularity* rounds any partial hour up to the next step. Both make a 15-minute session cost a full hour, which is why Civo, Hetzner, Scaleway and UpCloud are 4x worse bursty, and why Aptible and Paperspace are too despite publishing no minimum at all.
+
+**The ones that bite hardest are not the expensive ones.** HostMyApple at $0.0479/hour carries a 30-day minimum; a bursty agent would pay $20,706 a month against $7.19 for the same demand smoothed. Hetzner's $0.0104/hour is 4x worse bursty than smooth, and it ranks third in the `agent` table above on the smooth number. The market's cheap providers are disproportionately hourly-rounders, and that is invisible in a rate table.
+
+---
+
 ## B2. GPU providers — priced per GPU-hour
 
 A GPU box is billed per GPU-hour, not per vCPU. Ranking one beside a CPU box compares two currencies, so these get their own table. Revision 2 dropped all of them silently; there are 17.

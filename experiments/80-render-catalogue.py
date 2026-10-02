@@ -247,6 +247,86 @@ def main():
                 A("_%d more at this duty cycle; the full rank is table C._" % (len(paid) - 25))
             A("")
 
+    # ---------------- Table B1.5: minimum bill ----------------
+    mb_path = os.path.join(root, "data", "minimum-bill-penalty.json")
+    if os.path.exists(mb_path):
+        with open(mb_path, encoding="utf-8") as fh:
+            mb = json.load(fh)
+        prof = mb.get("profiles") or {}
+        ms = prof.get("many-short")
+        fl = prof.get("few-long")
+        A("---")
+        A("")
+        A("## B1. The minimum bill, which a $/hour table hides")
+        A("")
+        A("A published hourly rate is not what you pay for a short burst. **42 modes "
+          "in this corpus bill a minimum of one hour** and 9 bill a minimum of one "
+          "full day. For an agent that starts a sandbox, runs a tool call and "
+          "starts again, the minimum is the price that actually applies, and every "
+          "table above hides it.")
+        A("")
+        A("Two profiles, each compared against the **same** demand so the "
+          "comparison is like for like:")
+        A("")
+        if ms:
+            A("- **many short sessions**: %d starts a day of %g h each = %g h of "
+              "real demand. This is what an agent running a tool call, reading a "
+              "result and starting again actually does."
+              % (ms["starts"], ms["hours_each"],
+                 ms["starts"] * ms["hours_each"]))
+        if fl:
+            A("- **few long sessions**: %d starts a day of %g h each = %g h. Every "
+              "session already exceeds a one-hour minimum, so the minimum never "
+              "bites here."
+              % (fl["starts"], fl["hours_each"], fl["starts"] * fl["hours_each"]))
+        A("")
+        mrows = [r for r in mb.get("rows") or []
+                 if (r.get("profiles", {}).get("many-short", {}).get("penalty_x") or 1) > 1.0]
+        mrows.sort(key=lambda r: -r["profiles"]["many-short"]["penalty_x"])
+        A("**%d of %d providers are affected.** The worst:" % (len(mrows), len(mb.get("rows") or [])))
+        A("")
+        A("| # | provider | $/hour | same demand, smooth | same demand, bursty | penalty | rounds up to | link |")
+        A("|---|---|---|---|---|---|---|---|")
+        for i, r in enumerate(mrows[:20], 1):
+            p_ms = r["profiles"]["many-short"]
+            # Two different mechanisms produce the same penalty and the column
+            # must not conflate them: a MINIMUM billable unit, and a
+            # GRANULARITY that rounds any partial hour up to a whole one. Both
+            # make a 15-minute session cost an hour; only one is a minimum.
+            mbs = r.get("min_billed_seconds")
+            gran = r.get("granularity_s")
+            if mbs:
+                why = "min %g s" % mbs
+            elif gran and gran >= 60:
+                why = "gran %g s" % gran
+            else:
+                why = "-"
+            A("| %d | %s | %.4f | $%.2f/mo | $%.2f/mo | **%.1fx** | %s | `%s` |" % (
+                i, link(r["name"] or r["id"], r.get("url")), r["hourly"],
+                p_ms["month_smooth_same_demand"], p_ms["month"], p_ms["penalty_x"],
+                why, r["id"]))
+        A("")
+        A("Read these as bounds, not predictions. `bursty` assumes every session is "
+          "shorter than the minimum, which is the pessimistic side; a real agent "
+          "that holds one sandbox for the hour pays once. What the column "
+          "establishes is which headline rates cannot survive a bursty workload.")
+        A("")
+        A("**Two different mechanisms, one effect, and the column above keeps "
+          "them apart.** A *minimum billable unit* charges at least that much per "
+          "start regardless. A *granularity* rounds any partial hour up to the next "
+          "step. Both make a 15-minute session cost a full hour, which is why "
+          "Civo, Hetzner, Scaleway and UpCloud are 4x worse bursty, and why Aptible "
+          "and Paperspace are too despite publishing no minimum at all.")
+        A("")
+        A("**The ones that bite hardest are not the expensive ones.** HostMyApple "
+          "at $0.0479/hour carries a 30-day minimum; a bursty agent would pay "
+          "$20,706 a month against $7.19 for the same demand smoothed. Hetzner's "
+          "$0.0104/hour is 4x worse bursty than smooth, and it ranks third in the "
+          "`agent` table above on the smooth number. The market's cheap providers "
+          "are disproportionately hourly-rounders, and that is invisible in a "
+          "rate table.")
+        A("")
+
     # ---------------- Table B2: GPU ----------------
     gpu = [p for p in providers if p.get("gpu_only")]
     if gpu:
