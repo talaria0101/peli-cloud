@@ -1,0 +1,508 @@
+{
+  "id": "zhipu",
+  "name": "Zhipu Z Managed Agents",
+  "url": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "managed-agents-beta",
+      "label": "Managed Agent sandbox, temporary free runtime fee",
+      "flags": [
+        "alt",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Native CNY public list/reference quote; rates converted using fx.json. Unknown: reviewed pricing source does not explicitly establish VAT/tax inclusion."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null,
+    "max_checkpoint_retention_days": 30,
+    "checkpoint_note": "Opt-in disk-only checkpoint after a successful turn; failure falls back to a fresh sandbox. It does not preserve processes or RAM and is subject to quota/availability."
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown quotas are not confirmed unlimited. "
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "asia"
+    ],
+    "soc2": null,
+    "hipaa": null,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": true,
+    "lang_rust": true,
+    "lang_java": true,
+    "gpu_desktop": null,
+    "credential_injection": true,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": true,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": false,
+    "mcp_server": true,
+    "snapshot_auto": true,
+    "harness_api": true,
+    "egress_allowlist_level": "domain",
+    "secret_proxy": "any-http",
+    "volume_shared": true,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "own_agent_api": true,
+    "ingress_rules": false,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Fixed CPU/RAM size, 50-concurrent access and 8-hour runtime eligibility unknown; no 4/8 comparison.",
+    "Runtime promo end date unknown; model-token bill is mandatory but depends on selected model/tokens.",
+    "Outbound network limited to HTTP/HTTPS ports 80/443; allowlists available.",
+    "Unknowns remain null, not free; generic infrastructure modes are opt-in alt.",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Unknown: reviewed pricing source does not explicitly establish VAT/tax inclusion.",
+    "Residency: Chinese API agent-api.bigmodel.cn; precise execution region and residency controls unpublished.",
+    "Mandatory model inference (bigmodel.cn pricing, CNY per M tokens, input / output / cache hit): GLM-5.3 8 / 28 / 2; GLM-5.3-FlashX 2 / 7 / 0.57; GLM-5.3-Flash list 0.8 / 2.8 / 0.23 with a limited-time 50% promo (0.4 / 1.4 / 0.115, no end date). Cache storage temporarily free. Not included in the runtime estimate."
+  ],
+  "sources": [
+    "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+    "https://docs.bigmodel.cn/cn/managed-agents/cloud-environment.md",
+    "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+    "https://docs.bigmodel.cn/cn/managed-agents/faq.md",
+    "https://docs.bigmodel.cn/cn/guide/start/pricing.md",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "unknown",
+    "raise_time_days": null,
+    "verification": "API-key access plus private-beta headers required",
+    "tiers": null,
+    "notes": "Session creation is an ordinary write: organization bucket burst 20, refill 10 requests/s. High-frequency event/session-update/deployment-run endpoints instead get burst 100, refill 50/s. Platform may vary values by account or endpoint; concurrency quota is unpublished.",
+    "sources": [
+      "https://docs.bigmodel.cn/cn/managed-agents/api-reference.md"
+    ],
+    "researched": "2026-09-29"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/create-session.md",
+      "quote": "开启后，平台会在成功执行结束时尝试保存快照，下一轮优先从最近一次成功快照恢复；失败轮不更新快照。",
+      "note": "Opt-in per session at creation with header x-checkpoint: true (x-checkpoint-ttl 1-30 days, default 30). Triggered automatically at the end of each successful turn (session returns to idle); the next turn restores from the latest successful snapshot. Disk only: 'Checkpoint 只保留磁盘，不保留正在运行的进程和内存状态。' Best-effort: subject to account quota/service availability, falls back to a fresh sandbox on failure. Without it, /workspace, /tmp and runtime-installed packages are lost between turns; /mnt/session/outputs always persists.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "先订阅 SSE，再把用户消息作为事件发送；Agent 自主调用工具并实时回传。事件历史在服务端持久化，可随时完整拉取。",
+      "note": "The product is a harness API (Anthropic Managed Agents-style Agent/Environment/Session/Events): POST /v1/sessions/:id/events (user.message, user.interrupt, tool confirmations, custom tool results), GET /v1/sessions/:id/events/stream (SSE), event history list, session list/get/archive, scheduled Deployments (cron). Harness is Zhipu's own platform-run agent loop on glm-5.3 / glm-5.3-flash / glm-5.3-flashx only; not Claude Code/Codex/OpenCode. Private beta (header zai-beta: managed-agents-2026-05-26).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "出站网络受 Environment 网络策略控制（unrestricted / limited + allowed_hosts），并统一限制为 HTTP/HTTPS 端口 80/443；由平台侧网关强制执行。",
+      "note": "Environment networking: 'unrestricted' (default, public hosts on ports 80/443 only) or 'limited' with allowed_hosts (up to 256 hostnames or *.example.com wildcards; no scheme/port/path), plus allow_package_managers and allow_mcp_servers toggles. Enforced by a platform-side gateway. Ports are hard-limited to 80/443 in all modes; no IP/CIDR rules.",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/vaults.md",
+      "quote": "Agent 与沙箱拿不到凭据原文；MCP 与 HTTPS 出站由平台侧注入，不进入提示词。",
+      "note": "Vault credential types: static_bearer / mcp_oauth (MCP servers), bearer / oauth for any plain HTTPS host (identity key = host; OAuth auto-refresh), and environment_variable: the sandbox sees an omasec_ placeholder and 'the real secret is substituted into the outbound request only when the target host matches the credential networking rule' ('真实密钥仅在目标主机命中该凭据 networking 规则时由平台代入出站请求'). Secrets are write-only (never echoed). HTTP(S) only: sandbox egress is limited to ports 80/443, so no database/SSH/raw git-over-SSH coverage.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/memory-stores.md",
+      "quote": "Memory Store 是持久的——挂载到任意多个会话，Agent 在工作中读取和沉淀记忆，你可以随时审计每一次变更。",
+      "note": "One Memory Store can be mounted into many concurrent sessions, read-write or read-only (docs: '共享记忆用 read_only：多个 Agent 共享一份知识库时，只给需要沉淀的会话 read_write'); writes become versioned Memory entries with sha256 preconditions for concurrent edits. Text-memory semantics, not a general POSIX network FS. Uploaded Files can also be mounted read-only into multiple sessions.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/cloud-environment.md",
+      "quote": "自定义 registry / source / index URL 与私有源凭据配置一律拒绝（400 Extra inputs are not permitted）",
+      "note": "Environment only supports declaring apt/pip/npm/etc. packages on top of a fixed baseline image; there is no way to start a session from a customer-supplied Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "Docker CLI 29.x 含 Buildx、Compose；仅 CLI，沙箱内不运行 Docker daemon",
+      "note": "Docker CLI is installed but the daemon cannot run inside; no /dev/kvm or nested-VM capability is mentioned anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "Z Managed Agents 提供云端托管的 Agent 运行环境，帮助开发者降低构建 Agent Runtime、执行环境和任务编排的复杂度",
+      "note": "not offered: outside the product's scope — it is an API-driven headless agent/tool sandbox (bash, file ops), with no VNC/RDP/stream graphical desktop.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/tools.md",
+      "quote": "内置工具集（agent_toolset_20260601）当前包含以下工具 ... Bash / Read / Write / Edit / Grep / Find / Ls",
+      "note": "not offered: outside the product's scope — the built-in toolset is code/file/shell tools only; there is no screenshot+click computer-use API.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "Playwright（Python 与 Node 同版本）+ 共享 Chromium（Chrome for Testing），配合 Xvfb 虚拟显示，可直接做网页截图、抓取与端到端测试",
+      "note": "not offered: outside the product's scope — a plain Playwright/Chromium browser for the agent's own testing/scraping tool use, with no stealth/fingerprint-evasion features described.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "Playwright（Python 与 Node 同版本）+ 共享 Chromium（Chrome for Testing），配合 Xvfb 虚拟显示，可直接做网页截图、抓取与端到端测试",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving capability is documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "出站网络受 Environment 网络策略控制（unrestricted / limited + allowed_hosts），并统一限制为 HTTP/HTTPS 端口 80/443；由平台侧网关强制执行",
+      "note": "derived: all outbound traffic is forced through the platform's own gateway (cloud datacenter egress); no residential/mobile/static-IP egress option is offered.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "通过 API 定义并启动 Agent 会话，即可让 Agent 在云端调用工具、处理文件、执行命令，并持续完成复杂任务",
+      "note": "not offered: outside the product's scope — the only way to interact with the sandbox is via the Managed Agents API/events (bash tool executed by the agent); no user SSH access is documented.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/create-session.md",
+      "quote": "开启后，平台会在成功执行结束时尝试保存快照，下一轮优先从最近一次成功快照恢复；失败轮不更新快照。",
+      "note": "Checkpoint saving is automatic-only, triggered by the platform at the end of each successful turn when x-checkpoint:true was set at session creation. There is no API/CLI call to take a snapshot on demand at an arbitrary point; snapshot:\"fs\" describes the mechanism's kind (disk-only), not an on-demand trigger, so no real contradiction with on_demand=false.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/api-reference.md",
+      "quote": "端点总表：按资源列出全部接口（Agents / Environments / Sessions / Files / Memory Stores / Vaults / Skills / Deployments）",
+      "note": "derived: the full endpoint list has no fork/clone operation for sessions or their sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/api-reference.md",
+      "quote": "端点总表：按资源列出全部接口（Agents / Environments / Sessions / Files / Memory Stores / Vaults / Skills / Deployments）",
+      "note": "derived: no fork capability exists at all (see fork), so cloning a running machine is not possible.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/create-session.md",
+      "quote": "Checkpoint 只保留磁盘，不保留正在运行的进程和内存状态",
+      "note": "Checkpoints are disk-only (no running-process/memory state), and no fork feature exists, so a memory-preserving fork is not possible.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "Managed Agents 在设计上是有状态的：会话长时间运行、可在暂停后恢复，对话历史与产出保存在服务端。",
+      "note": "Official docs explicitly state sessions can run long and be resumed after being paused ('可在暂停后恢复'). Between turns a session goes to 'idle' (no active compute billed) and resumes on the next message; with x-checkpoint:true the disk state (not running processes/RAM) is restored automatically on resume - matches the pause_resume definition (billing paused/reduced across pause), consistent with snapshot_auto=true.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/create-session.md",
+      "quote": "会话进入 running：平台按环境快照供给沙箱、挂载资源与 Skill、启动 Agent 循环",
+      "note": "An idle session has no provisioned sandbox until a new user.message event arrives, at which point the platform automatically provisions the sandbox again (optionally restoring the last checkpoint).",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/create-session.md",
+      "quote": "**/mnt/session/outputs** 始终跨轮保留",
+      "note": "Output files persist across turns (sandbox stop/start) by default; /workspace and /tmp persist too if x-checkpoint is enabled.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/create-session.md",
+      "quote": "resources 可选。挂载 Memory Store 与 File Resource（合计最多 508 项）",
+      "note": "Sessions can mount Memory Stores and File Resources (application-level, not a POSIX filesystem), but there is no generic attachable block-volume feature.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/create-session.md",
+      "quote": "默认情况下，/tmp 与运行期安装的包（如 pip install）不跨轮保留",
+      "note": "The sandbox is released/reset at the end of each turn/session by default (unless checkpointing is enabled), which functions as automatic stop-on-idle.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "沙箱与运行环境：当前限时免费。后续计费规则以平台公告为准",
+      "note": "not offered: no CPU/RAM resize API is documented; sandbox sizing is fixed and not published/adjustable via the API.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "模型用量：按会话实际调用的模型（目前支持 glm-5.3、glm-5.3-flash、glm-5.3-flashx）",
+      "note": "The platform runs its own GLM-based agent loop only; there is no offering of third-party coding-agent harnesses like Claude Code, Codex, or OpenCode.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "先订阅 SSE，再把用户消息作为事件发送；Agent 自主调用工具并实时回传。事件历史在服务端持久化，可随时完整拉取",
+      "note": "First-party API (Agents/Environments/Sessions/Events) drives Zhipu's own task agent loop (bash/file tools, MCP, custom tools) end-to-end.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "出站网络受 Environment 网络策略控制 ... 由平台侧网关强制执行",
+      "note": "not offered: only outbound (egress) networking through a platform gateway is documented; no per-sandbox public IPv4 is mentioned.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "镜像内不包含任何 API Key、Session token 或云存储凭据；Agent 只拿到单次执行所需的运行时配置",
+      "note": "not offered: outside the product's scope — no port-exposure/inbound-URL feature is documented; interaction is only via the Events API.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "网络与安全：出站网络受 Environment 网络策略控制 ... 并统一限制为 HTTP/HTTPS 端口 80/443",
+      "note": "derived: documented network controls are outbound (egress) only; there is no inbound exposure to control in the first place.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/cloud-environment.md",
+      "quote": "allowed_hosts：最多 256 项；每项是主机名或 *.example.com 通配，不得带协议前缀、端口或路径",
+      "note": "Egress control is host/domain-level (allowed_hosts) only; there is no HTTP method/path-level egress rule capability.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "出站网络受 Environment 网络策略控制 ... 由平台侧网关强制执行",
+      "note": "not offered: egress goes through a shared platform-side gateway; no fixed/dedicated outbound IP feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "基础系统：Ubuntu 24.04 LTS，架构 linux/amd64（x86_64），时区 Etc/UTC，locale C.UTF-8",
+      "note": "not offered: outside the product's scope — Managed Agents is a coding/tool-use CPU sandbox; no GPU option is mentioned anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "基础系统：Ubuntu 24.04 LTS，架构 linux/amd64（x86_64）",
+      "note": "not offered: outside the product's scope — the sandbox image is fixed to Linux (Ubuntu 24.04 amd64).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "基础系统：Ubuntu 24.04 LTS，架构 linux/amd64（x86_64）",
+      "note": "not offered: outside the product's scope — Linux-only sandbox image.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "Z Managed Agents 提供云端托管的 Agent 运行环境，帮助开发者降低构建 Agent Runtime、执行环境和任务编排的复杂度",
+      "note": "not offered: outside the product's scope — it is described purely as a cloud-hosted managed service, with no self-hosting/on-prem option mentioned.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "Z Managed Agents 提供云端托管的 Agent 运行环境",
+      "note": "not offered: no bring-your-own-cloud deployment option is documented; the service runs only in Zhipu's own cloud (agent-api.bigmodel.cn).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "Z Managed Agents 提供云端托管的 Agent 运行环境，帮助开发者降低构建 Agent Runtime、执行环境和任务编排的复杂度",
+      "note": "not offered: it is a proprietary hosted platform/API; no OSI-licensed open-source release of the Managed Agents runtime is documented.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+      "quote": "目前以 API 开放内测，控制台等更多功能近期即将推出",
+      "note": "not offered: the product is currently API-key-only (Bearer token from the open-platform console) with no console/web login yet ('console coming soon'), so there is no SAML/OIDC SSO surface today.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "Docker CLI | 29.x | 含 Buildx、Compose；仅 CLI，沙箱内不运行 Docker daemon",
+      "note": "The sandbox ships the Docker CLI (with Buildx/Compose) but explicitly does not run a Docker daemon inside the sandbox, so containers cannot actually be built/run inside it.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/sandbox-reference.md",
+      "quote": "基础系统：Ubuntu 24.04 LTS，架构 linux/amd64（x86_64）",
+      "note": "The sandbox base image is explicitly x86_64 (linux/amd64) only; no ARM architecture is offered.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/api-reference.md",
+      "quote": "https://agent-api.bigmodel.cn/api/agent/managed",
+      "note": "Managed Agents is a Zhipu AI (bigmodel.cn) product served from a single Chinese API domain (agent-api.bigmodel.cn); no regions, EU or otherwise, are documented or selectable anywhere in the API reference, overview, or pricing docs. No EU residency option is offered; product is China/Asia-only, so confidence is medium per the 'plainly outside what the product is' rule.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://docs.bigmodel.cn/cn/managed-agents/session-operations.md",
+      "quote": "响应中值得关注的运行时字段：status（当前真实状态）、usage（累计 input / output / cache_read token）",
+      "note": "granularity: per-sandbox; cost: no; GET /v1/sessions/:sessionId returns a usage field containing input_tokens, output_tokens, and cache_read_input_tokens. Each session is a sandbox. Usage is reported as token counts, not cost; billing/cost monitoring is handled separately on the platform's billing side.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.bigmodel.cn/cn/managed-agents/overview.md",
+  "locations_quote": "Chinese API agent-api.bigmodel.cn; precise execution region and residency controls unpublished",
+  "locations_checked": "2026-10-01"
+}

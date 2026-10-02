@@ -1,0 +1,541 @@
+{
+  "id": "playgent",
+  "name": "Playgent",
+  "url": "https://useplaygent.com",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Pivoted: Playgent now sells finance-specific RL environments and post-training data (expert-curated tasks, verifier rubrics, environments with MCP tools) for investment-banking agents. This is a data/environment vendor sold by contact form, not a compute sandbox product. No pricing (/pricing 404), docs, console or self-serve access.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Buying process is sales-only: 'Contact us to discuss your use case and access our RL environments.' No self-serve signup exists (app./docs. subdomains do not resolve)."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/playgent",
+    "https://www.useplaygent.com/"
+  ],
+  "audit_2026_09_29": {
+    "applied": 2,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Not a compute product; RL environments and data are sold via contact form. No quotas published.",
+    "sources": [
+      "https://www.useplaygent.com/"
+    ]
+  },
+  "feature_evidence": {
+    "image_oci": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://www.useplaygent.com/",
+      "quote": "environments with MCP tools",
+      "note": "Card notes environments ship with MCP tools as part of the RL environment/data product, not a sandbox-control MCP server; noting positively per card's own description.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "RL Environments for Finance. Post-training.",
+      "note": "not offered: outside the product's scope (no console/self-serve product exists to log into)",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "We build tasks, verifiers, and environments that teach agents how to think... Every task is benchmarked, every environment is production-ready.",
+      "note": "not offered: outside the product's scope — no security/trust/compliance page exists; product is expert-curated RL environments and data sold by contact form, not hosted infrastructure that would carry a SOC 2 attestation.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "Purpose-built for Finance and Banking. Real tasks that drive real results.",
+      "note": "not offered: outside the product's scope — product is finance/banking-focused RL environments and data, not a hosting platform, and no HIPAA/BAA mention exists anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.useplaygent.com/",
+      "quote": "Contact us to discuss your use case and access our RL environments. We'll help you integrate our data into your training pipeline and start improving your agents' performance on financial tasks.",
+      "note": "not offered: outside the product's scope — Playgent does not run customer sandboxes/sessions at all; it delivers RL environments/data for the buyer's own training pipeline, so there is no session-time limit concept to apply.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.useplaygent.com/",
+      "quote": "Playgent - RL Environments for Finance",
+      "note": "No compliance/security/trust page or region controls exist anywhere on the site; the product is RL environments and post-training data delivered to the buyer's own pipeline, not hosted infrastructure with regions. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://useplaygent.com/",
+      "quote": "We benchmark agent performance across our expert-curated tasks and sell this data as production-ready RL environments for post-training... Contact us to discuss your use case and access our RL environments.",
+      "note": "granularity: none; cost: no; Playgent is a data/RL environment vendor for post-training, not a compute sandbox provider. No sandboxes exist, therefore no usage API exists. Product delivered to customer's own training pipeline.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://www.useplaygent.com/",
+  "locations_quote": "Contact us to discuss your use case and access our RL environments. We'll help you integrate our data into your training pipeline and start improving your agents' performance on financial tasks.",
+  "locations_checked": "2026-10-01"
+}

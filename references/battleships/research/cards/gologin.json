@@ -1,0 +1,608 @@
+{
+  "id": "gologin",
+  "name": "Gologin Cloud Browser",
+  "url": "https://gologin.com/cloud-browser/",
+  "category": "browser",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "professional-browser",
+      "label": "Professional browser",
+      "flags": [],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Professional",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.09,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Marketing cloud-browser tariff; extra concurrent sessions $2/month each; pricing docs conflict. Unspecified guest OS is not a selectable OS guarantee."
+    },
+    {
+      "key": "business-browser",
+      "label": "Business browser",
+      "flags": [],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Business",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.08,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Marketing cloud-browser tariff; extra concurrent sessions $2/month each; pricing docs conflict. Unspecified guest OS is not a selectable OS guarantee."
+    },
+    {
+      "key": "enterprise-browser",
+      "label": "Enterprise browser",
+      "flags": [],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Enterprise",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.07,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Marketing cloud-browser tariff; extra concurrent sessions $2/month each; pricing docs conflict. Unspecified guest OS is not a selectable OS guarantee."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": 2,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "residential_proxy_gib": 1,
+    "dedicated_proxy_ip_month": 5,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Professional",
+      "fee": 4.5,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 4.5,
+      "per_seat": null,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Professional"
+      ],
+      "note": "50 included hours;1 included concurrent browsers. Additional concurrency $2/slot-month, not automatically modeled."
+    },
+    {
+      "name": "Business",
+      "fee": 8,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 8,
+      "per_seat": null,
+      "concurrency": 2,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Business"
+      ],
+      "note": "100 included hours;2 included concurrent browsers. Additional concurrency $2/slot-month, not automatically modeled."
+    },
+    {
+      "name": "Enterprise",
+      "fee": 14,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 14.000000000000002,
+      "per_seat": null,
+      "concurrency": 3,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Enterprise"
+      ],
+      "note": "200 included hours;3 included concurrent browsers. Additional concurrency $2/slot-month, not automatically modeled."
+    },
+    {
+      "name": "Custom",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom volume, SSO, SLA, dedicated account manager.",
+      "minimum_concurrency": 4
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null,
+    "note": "Cloud Browser free allowance: 15 minutes of browser time across 3 parallel sessions, no card (Google sign-up); no $ credit."
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "browser_control": true,
+    "desktop_control": true,
+    "anti_bot": true,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter+residential+mobile",
+    "ip_note": "Residential/mobile/datacenter/ISP IPs in 195+ countries; residential allowance included in cloud plans, overage $1/GB per marketing page vs $1.99/GB proxy traffic in docs; ISP proxies $5/IP.",
+    "persistent_browser_profiles": true,
+    "snapshot_auto": true,
+    "harness_api": false,
+    "image_oci": false,
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "isolation": "container",
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Storage, snapshot GiB-month and public IPv 4 prices are not published in the reviewed sources; null is not free.",
+    "No guaranteed vCPU allocation published; browser-hour is not a verified 4-vCPU/8-GiB VM equivalent. The sizes card keeps unknown hardware null; do not coerce it to zero or auto-rank against resource-guaranteed VMs.",
+    "Browser RAM is not published unless a specific mode overrides it.",
+    "Cloud Browser has its own tariff, not the main local antidetect profile subscription. A client OS fingerprint is not a hosted OS SKU.",
+    "Official sources conflict: the current Cloud Browser landing offer is $4.50/$8/$14 with 50/100/200 hours, 1/2/3 sessions and $1/GB; the Cloud Browser docs still say $0.048/hour, 20–200 hours, 1–4 sessions and $1.99/GB; general subscription docs publish a different $9/$119/$299 monthly ladder with 100/200/300 cloud hours. Favor the product landing offer but obtain a binding account quote.",
+    "Additional concurrency is an add-on, not a requirement to buy 50 separate subscriptions. Engine base plans conservatively retain included concurrency rather than assuming arbitrary add-on approval.",
+    "No cap on active Cloud Browser session time (official examples: a nine-hour run stays one session)."
+  ],
+  "sources": [
+    "https://gologin.com/cloud-browser/",
+    "https://gologin.com/docs/llms-full.txt",
+    "https://gologin.com/docs/api-reference/cloud-browser/what-is-gologin-cloud-browser",
+    "https://gologin.com/docs/ai-agents"
+  ],
+  "fleet": {
+    "default_max_instances": 3,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Google signup, free key without card.",
+    "tiers": "Intro API key: 3 parallel sessions / 15 total minutes; paid plans have 1–4 included slots; additional concurrency/custom packages by contact.",
+    "notes": "Current cloud-browser FAQ establishes 3 for the new free key, unlike old card entry paid 1. Published paid included slots are not a cap if add-ons purchased; large fleet max/approval timing not established.",
+    "sources": [
+      "https://gologin.com/cloud-browser/",
+      "https://gologin.com/docs/api-reference/cloud-browser/what-is-gologin-cloud-browser"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 11,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://gologin.com/docs/browser-profiles/profile-management/restore-browser-sessions",
+      "quote": "Every time you run and close a Gologin profile, the system automatically creates a **session snapshot**.",
+      "note": "Browser-profile state only: cookies, session storage, logged-in state, website tokens and browser data. No memory or running processes. It is triggered on profile close, and profile sync uploads the state to the cloud and restores it on the next launch. The last 5 sessions can be restored from Profile > History in the app, and no API for this was found in the OpenAPI spec. The page is written for profiles in general (desktop app), but Cloud Browser runs the same profiles ('Gologin profiles persist. Log in once, close the session, reconnect later'). Not verified live on a cloud session.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://gologin.com/docs/ai/cloud-browser-with-agents",
+      "quote": "AI agents typically do not \"connect to a browser\" directly. Instead, they:",
+      "note": "Cloud Browser is a remote Orbita/Chromium runtime reached over CDP. The agent (Claude, Codex...) runs on the customer's side. First-party MCP server, Claude Code skills and Agent Browser / Web Access CLIs let an outside agent drive the browser, but nothing runs an agent harness inside the environment.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — Cloud Browser only runs Gologin's own Orbita/Chromium browser image, no custom OCI/Docker image import.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — Cloud Browser exposes a browser session via CDP, not a general-purpose machine that can run Docker.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no /dev/kvm or VM/emulator access is exposed to a browser-only remote runtime.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no SSH access is documented anywhere; access is via CDP/WebSocket browser endpoint and REST API only.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://gologin.com/docs/browser-profiles/profile-management/restore-browser-sessions",
+      "quote": "Every time you run and close a Gologin profile, the system automatically creates a session snapshot. A session snapshot includes... cookies, session storage, logged-in state, website tokens and browser data.",
+      "note": "Profile/browser-state snapshot (cookies, storage, tokens) only, not a running-process memory snapshot; closest analog is a filesystem/state snapshot, not 'mem'.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://gologin.com/docs/browser-profiles/profile-management/restore-browser-sessions",
+      "quote": "Every time you run and close a Gologin profile, the system automatically creates a session snapshot.",
+      "note": "Snapshotting is automatic on profile close; no documented API/CLI call to trigger a snapshot on demand.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://gologin.com/docs/api-reference/profile/clone-multiple-profiles",
+      "quote": "Clones multiple profiles at once.",
+      "note": "Cloning duplicates a browser profile (fingerprint/proxy/cookies config) into new profiles; this is the product's equivalent of forking a machine.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://gologin.com/docs/api-reference/profile/clone-multiple-profiles",
+      "quote": "Clones multiple profiles at once.",
+      "note": "Cloning operates on stored profile configuration, not a live running session; no evidence a running session itself can be cloned without stopping it.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://gologin.com/docs/api-reference/profile/clone-multiple-profiles",
+      "quote": "Clones multiple profiles at once.",
+      "note": "Clones copy profile settings/fingerprint/cookies, not in-memory running process state of a live browser session.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "No documented pause/resume-with-reduced-billing mechanic for a running Cloud Browser session; sessions are opened/closed and billed by browser-hour.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://gologin.com/docs/browser-profiles/profile-management/restore-browser-sessions",
+      "quote": "Gologin profiles persist. Log in once, close the session, reconnect later.",
+      "note": "Profile data (cookies, storage, logins) persists across sessions via automatic cloud sync, functioning as persistent storage across stop/start.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no extra attachable disk/volume concept exists for a managed remote browser runtime.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no shared-volume concept; profiles can be shared as accounts/roles, not as a mounted volume across running machines.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no selectable/adjustable vCPU/RAM sizing is published for Cloud Browser sessions at all.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://gologin.com/docs/ai/cloud-browser-with-agents",
+      "quote": "AI agents typically do not \"connect to a browser\" directly. Instead, they: ...",
+      "note": "No coding-agent harness (Claude Code, Codex, OpenCode) is preinstalled or offered as a template inside the environment; the agent always runs on the customer's own side and connects to the remote browser via CDP.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://gologin.com/docs/ai/cloud-browser-with-agents",
+      "quote": "AI agents typically do not \"connect to a browser\" directly. Instead, they: ...",
+      "note": "Gologin ships CLIs/MCP servers (Agent Browser CLI, Web Access CLI) to let an outside agent drive the remote browser, but does not run its own first-party autonomous browser/research agent that you prompt directly.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://gologin.com/docs/api-reference/sdks/python-sdk",
+      "quote": "Python SDK",
+      "note": "First-party Python SDK for running/managing Gologin profiles and connecting Playwright/Selenium to sessions.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://gologin.com/docs/api-reference/sdks/nodejs-sdk",
+      "quote": "Run GoLogin profiles programmatically with the Node.js SDK",
+      "note": "First-party Node.js SDK, plus Node.js-based CLIs (Agent Browser CLI, Web Access CLI, MCP server).",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — the customer never gets a public IPv4 address bound to the remote browser machine itself; only a WebSocket/CDP endpoint URL is exposed.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — Cloud Browser is reached via a Gologin-issued WebSocket CDP endpoint, not an inbound HTTPS URL to a port you expose on the machine.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — there is no concept of exposed inbound ports/security groups on a managed remote browser runtime.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — outbound access is via configurable proxies (per-profile IP location), not provider-side allow/deny egress control.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no HTTP method/path-level egress rule feature documented.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — a remote browser session is not a full VM/microVM the customer has root/iptables access inside.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "No first-party proxy that injects arbitrary HTTP API credentials so a secret never enters the machine; API tokens/credentials are used directly by the customer's own automation code.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://gologin.com/docs/faq/dedicated-ip",
+      "quote": "A Dedicated IP is... a single IP address reserved for you and nobody else... It never rotates and has no traffic limit.",
+      "note": "Sold as a 'Dedicated IP' add-on ($5/month); it stays fixed for the subscription duration.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no GPU-accelerated machine option is published for Cloud Browser; GPU-related fingerprint settings (WebGL) only mask/report values, not physical GPU hardware.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — Cloud Browser reports a configurable OS fingerprint to websites, but there is no selectable underlying Windows machine SKU; the desktop Gologin app (a different product) runs on Windows/Mac/Linux client machines, not as a hosted OS.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no hosted macOS machine option; macOS is only a fingerprint value reported to websites and a supported desktop-client OS.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — Cloud Browser and profile hosting are only available as Gologin's managed cloud service; only client-side SDKs/CLIs are open-sourced, not the browser-hosting infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — no option found to deploy Gologin's managed browser infrastructure into a customer-owned cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/gologinapp/gologin",
+      "quote": "Source code: https://github.com/gologinapp/gologin",
+      "note": "Only client SDKs and agent CLIs/skills (Node.js SDK, Agent Browser CLI, MCP server) are open-sourced; the core Cloud Browser/Orbita hosting service and antidetect engine itself are closed-source.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://gologin.com/docs/api-reference/cloud-browser/what-is-gologin-cloud-browser",
+      "quote": "No cap on active Cloud Browser session time (official examples: a nine-hour run stays one session).",
+      "note": "No documented hard session-length cutoff; billed hourly with no stated maximum duration.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://gologin.com/docs/general/troubleshooting/common-errors",
+      "quote": "\"Container not found\" ... The profile data is corrupted, or the cloud container failed to start on GoLogin's servers.",
+      "note": "Gologin's own docs describe the remote Cloud Browser runtime explicitly as a 'cloud container' (also referenced when describing file up/downloads: 'Files go through an intermediate step via the cloud container'). No mention of a per-customer VM/microVM/hypervisor anywhere in docs, consistent with a shared-kernel container-based browser runtime rather than a dedicated VM.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://gologin.com/docs/api-reference/cloud-browser/getting-started",
+      "quote": "The `/connect` endpoint starts the browser session automatically — no separate API call needed before connecting.",
+      "note": "Connecting to the CDP endpoint (https://cloudbrowser.gologin.com/connect?token=...&profile=...) automatically starts/spins up the browser session on first request; no prior explicit 'start' API call is required.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://gologin.com/cloud-browser/",
+      "quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+      "note": "not offered: outside the product's scope — Cloud Browser is a managed remote browser session (CDP endpoint), not a selectable machine; no machine architecture (x86/ARM) option is published anywhere in pricing or docs.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://support.gologin.com/en/articles/3574774-privacy-policy",
+      "quote": "We do NOT collect special categories of data (health, religion, biometrics, or children's data).",
+      "note": "not offered: outside the product's scope — Gologin's privacy policy explicitly excludes health data from what it processes; no HIPAA-eligibility or BAA offering is documented anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://support.gologin.com/en/articles/3574774-privacy-policy",
+      "quote": "Your data may be processed in the USA, EU, or other countries. If data is transferred outside the EEA, we use Standard Contractual Clauses (SCC) or other legal safeguards.",
+      "note": "No customer-selectable 'keep data/machines in EU regions' option is documented; the privacy policy describes multi-region processing (USA/EU/other) governed by SCCs for cross-border transfer, not a data-residency guarantee or region pinning feature. Cloud Browser sessions/proxies have no published region-of-hosting selector either.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://gologin.com/docs/api-reference/cloud-usage/get-detailed-cloud-usage-statistics-for-a-workspace",
+      "quote": "Get detailed cloud usage statistics for a workspace",
+      "note": "granularity: per-project; cost: no; Gologin exposes a REST API endpoint for retrieving detailed cloud usage statistics scoped to workspaces. Workspaces are billing/organizational units that contain profiles and sessions. The API returns usage metrics per workspace but cost is not explicitly documented in the available public docs.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://gologin.com/cloud-browser/",
+  "locations_quote": "Gologin Cloud Browser can be used as a remote browser runtime for AI agents.",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,513 @@
+{
+  "id": "poplarml",
+  "name": "PoplarML",
+  "url": "http://poplarml.com",
+  "category": "gpu-cloud",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": null,
+    "gpu": true,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "ingress_rules": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "YC says custom ML models deploy to GPU endpoints. Public website failed TLS verification and current pricing could not be established; access failure alone is not proof of death.",
+    "Inventory exclusion: public product inaccessible; current hosting unverified. Card contains no numeric compute modes and no selectable price plan.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Status evidence 2026-09-29: poplarml.com and www TLS certificate expired 2025-02-07 (CN=poplarml.com); bypassing TLS, CloudFront returns S3 'NoSuchBucket' for bucket poplarml.com-content. app./docs./api. subdomains no longer resolve in DNS. Only https://auth.api.poplarml.com/ (AWS API Gateway) still answers {\"status\":200}. Wayback: last 200 capture of the homepage 2024-04-21; every homepage capture since 2024-09-18 is 404. YC directory still lists the company as Active, team size 2, website http://poplarml.com.",
+    "PoplarML never published a price: the last live homepage (Wayback 2024-04-21) had a 'Pricing' nav item but no pricing content, 'Docs — Coming soon', and described one-click CLI deploys of TensorFlow/PyTorch/JAX models 'to a fleet of GPUs' with REST inference endpoints (a model-serving product, not a sandbox/VM)."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/poplarml"
+  ],
+  "audit_2026_09_29": {
+    "applied": 2,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "image_oci": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: product is a CLI model-deploy/inference service, not an OCI-image compute sandbox",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Bring your Tensorflow, Pytorch, or JAX model, and we'll do the rest.",
+      "note": "not offered: outside the product's scope (managed inference endpoint, not a general compute sandbox)",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Deploy Models to Production, Insanely Fast",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (REST inference endpoint, no GUI)",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "PoplarML enables the deployment of production-ready, scalable ML systems with minimal engineering effort.",
+      "note": "not offered: outside the product's scope (ML model hosting, no browser automation)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "PoplarML enables the deployment of production-ready, scalable ML systems with minimal engineering effort.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: deploy/invoke is via CLI + REST API, no evidence of shell/SSH access to underlying machines",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope (model-serving endpoints, not clonable machines)",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope (model-serving endpoint, no volume-attach concept exposed)",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "PoplarML enables the deployment of production-ready, scalable ML systems with minimal engineering effort.",
+      "note": "not offered: outside the product's scope (ML model hosting, not a coding-agent sandbox)",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "PoplarML enables the deployment of production-ready, scalable ML systems with minimal engineering effort.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (serves user-supplied ML models, not a browser/research agent)",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Docs — Coming soon",
+      "note": "not offered: no evidence of any MCP server; site now dead",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Bring your Tensorflow, Pytorch, or JAX model, and we'll do the rest.",
+      "note": "TensorFlow/PyTorch/JAX are Python ML frameworks, implying Python model-serving runtime",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Bring your Tensorflow, Pytorch, or JAX model, and we'll do the rest.",
+      "note": "not offered: outside the product's scope (Python-only ML framework deploys, no Node runtime mentioned)",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference Invoke your model through a REST API endpoint.",
+      "note": "a REST API endpoint for inference implies an HTTPS-reachable endpoint",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope (managed inference endpoint, no user-controlled OS/root confirmed)",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: no evidence of a credential-injecting HTTP proxy; outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope (Linux-based GPU model-serving fleet)",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "PoplarML enables the deployment of production-ready, scalable ML systems with minimal engineering effort.",
+      "note": "not offered: presented as a hosted SaaS platform, no self-host option mentioned",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "PoplarML enables the deployment of production-ready, scalable ML systems with minimal engineering effort.",
+      "note": "not offered: no evidence of a bring-your-own-cloud deployment model",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "PoplarML enables the deployment of production-ready, scalable ML systems with minimal engineering effort.",
+      "note": "not offered: no evidence the core platform is open source",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "One Click Deploys — Seamlessly deploy ML models using our CLI tool to a fleet of GPUs. Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (managed inference-endpoint deployment, not a sandbox/VM with snapshotting)",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (inference-endpoint product, no user-managed machine lifecycle)",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Bring your Tensorflow, Pytorch, or JAX model, and we'll do the rest.",
+      "note": "not offered: outside the product's scope (deploys a model artifact to an inference endpoint; no general persistent filesystem exposed to users)",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (access is via a REST API endpoint/CLI, not a raw machine with a public IPv4)",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (managed model-serving endpoint, no general-purpose machine with egress policy controls)",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (a managed model-serving REST endpoint, not a user-controlled VM/sandbox with wake/sleep lifecycle semantics exposed).",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope (no user-managed machine lifecycle; product is a model-deploy/inference endpoint, not a sandbox/VM).",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "not offered: outside the product's scope (single REST inference endpoint, no provider-side ingress security-group/allowlist controls exposed).",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope (managed inference-endpoint deployment, no evidence of any outbound egress-control feature).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: outside the product's scope (no networking docs or evidence of a dedicated/static outbound IP feature).",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/poplarml",
+      "quote": "PoplarML ... team size 2",
+      "note": "not offered: no security/trust page or compliance docs were ever published ('Docs — Coming soon'); a 2-person early-stage startup with no evidence of a SOC 2 attestation.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/poplarml",
+      "quote": "PoplarML ... team size 2",
+      "note": "not offered: no security/compliance docs were ever published; no evidence of HIPAA eligibility or a BAA offering from this 2-person startup.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Docs — Coming soon",
+      "note": "not offered: no enterprise/auth docs ever published; login/auth was only a bare AWS API Gateway endpoint, no evidence of SAML/OIDC SSO.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs.",
+      "note": "not offered: no regions or data-residency options were ever documented; site is now defunct with no evidence of EU-region deployment control.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+      "quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs. Real-time Inference — Invoke your model through a REST API endpoint.",
+      "note": "granularity: none; cost: no; PoplarML was a managed model-serving platform, not a sandbox/VM provider. Access was via CLI deploy + REST inference endpoint. No usage API, billing API, or cost-tracking endpoint documentation exists. The product is now defunct (TLS cert expired 2025-02-07, site offline since 2024-09-18). Pricing page and documentation were never published ('Docs — Coming soon'). Only auth.api.poplarml.com still responds. This was not a multi-tenant compute provider where usage tracking per customer/sandbox would apply.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "http://web.archive.org/web/20240224095027/https://www.poplarml.com/",
+  "locations_quote": "Seamlessly deploy ML models using our CLI tool to a fleet of GPUs. Real-time Inference Invoke your model through a REST API endpoint.",
+  "locations_checked": "2026-10-01"
+}

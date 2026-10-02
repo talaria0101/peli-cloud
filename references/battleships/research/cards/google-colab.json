@@ -1,0 +1,908 @@
+{
+  "id": "google-colab",
+  "name": "Google Colab",
+  "url": "https://developers.google.com/colab",
+  "category": "dev-env",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Consumer Colab is billed in compute units at $0.0999/CU (US, $9.99 per 100 CU). Google does not publish per-runtime CU burn rates (shown live only in the resource monitor), so this mode is unpriced."
+    },
+    {
+      "key": "colab-enterprise",
+      "label": "Colab Enterprise (GCP, us-central1)",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.026173908,
+      "ram_gib_h": 0.003508236,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "granularity_s": null,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "gpu": {
+        "T4": 0.42,
+        "L4": 0.672048287,
+        "A100-40GB": 3.5206896,
+        "A100-80GB": 4.713696,
+        "H100": 11.755860684
+      },
+      "note": "E2 rates incl. 20% management fee (N1/N2/A2: 0.0379332/vCPU-h, 0.0050844/GiB-h). GPU per GPU-hour on top of the VM. Every runtime has a mandatory 100 GiB SSD boot disk ($0.000279452/GiB-h = $0.0279/h = ~$20.4/month) plus a data disk (default 100 GiB pd-standard $0.000065753/GiB-h), both billed while shut down. Default runtime e2-standard-4, idle shutdown 180 min (10-1440 min configurable or off), default runtimes auto-deleted 18 h after creation. Savings plans: 1-yr -10%, 3-yr -20%."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.204,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Public rate not established",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity."
+    },
+    {
+      "name": "Google AI plans (Pro/Ultra)",
+      "fee": null,
+      "flags": [
+        "addon"
+      ],
+      "note": "Eligible paid Google AI plans include a monthly CU allotment (amount not published on pages checked), premium GPUs and background execution on higher plans; CU from AI plan and Colab Pro add to one balance. EU prices seen: AI Pro 21,99 EUR/month, Ultra from 99,99 EUR/month."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 300,
+    "note": "GCP new-customer $300 credit applies to Colab Enterprise only; consumer Colab free tier has no dollar credit."
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 12,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [
+      "T4",
+      "L4",
+      "A100-40GB",
+      "A100-80GB",
+      "H100"
+    ],
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "secret_proxy": "ai-only",
+    "volume_attach": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "volume_shared": false,
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Notebook execution backend discovered inDatalayer code-sandboxes; not a provisioned general-purpose sandbox API. Free/Pro/Pro+ hardware capacity andcomputeunit economics are not arbitrary4/8 VM-hours.",
+    "Not fully priceable in ENGINE_CARD: unknown USD resource rates or machine shape. Null is not zero; do not rank as a free provider.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free.",
+    "Consumer Colab plans (US, 2026-09-27): Free $0 (no guaranteed GPU, 12 h max); Pay As You Go $9.99 per 100 compute units or $49.99 per 500 (EU EUR 11.10 / 50.70); Colab Pro $9.99/month = 100 CU; Colab Pro+ $49.99/month = 600 CU with background execution up to 24 h. CU expire after 90 days, non-refundable. Per-runtime CU burn rates are unpublished, so consumer Colab stays unpriced; plans not encoded because included CU would wrongly discount the Colab Enterprise mode."
+  ],
+  "sources": [
+    "https://developers.google.com/colab",
+    "https://github.com/datalayer/code-sandboxes/tree/d9c39925d87447dab5f3f7f1bdf9451ec4ebca2a/code_sandboxes/sandboxes/google_colab"
+  ],
+  "fleet": {
+    "default_max_instances": "Consumer: unpublished; Enterprise: Compute Engine quotas + 60 runtime create/LRO requests per minute",
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Paid Colab plans improve resource access, but CPU/GPU/session limits remain dynamic and unpublished. Guaranteed resources require separate Google Cloud/Colab Enterprise or own runtime.",
+    "notes": "Official FAQ explicitly does not publish fixed usage/availability limits; no defensible 10/50/300/1,000 fleet entitlement. Notebook limits, idle termination and prohibited-use restrictions make this unlike unrestricted VM hosting. Paid compute units are not a reservation. No fixed time-to-raise or numerical new GPU allowance published.",
+    "sources": [
+      "https://research.google.com/colaboratory/faq.html"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 5,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 7
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "While runtimes are shut down: Compute charges aren't generated because there isn't any CPU or GPU usage. Boot disk and data disk storage is charged.",
+      "note": "Colab Enterprise idle shutdown (default 180 min, 10-1440 or off) stops the VM and keeps only its boot + data persistent disks (persistent disk, not a checkpoint; kernel/memory state lost). Default runtimes are deleted 18 h after creation with files lost. Consumer Colab: 'Virtual machines are deleted when idle for a while, and have a maximum lifetime' (FAQ) - nothing saved except notebooks in Drive.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "Colab Enterprise runtime API has no snapshot/checkpoint/clone method; reuse is via runtime templates (config only, not state). Underlying GCE disks are Google-managed (not exposed in the user project as documented). Consumer Colab: no snapshot feature documented; users re-run install cells ('it's a good idea to include cells which install and load any custom libraries' - FAQ).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "Gemini in Colab / Data Science Agent are UI features in the notebook; no public API to prompt them or stream their events. notebookExecutionJobs runs a whole notebook headless (not an agent harness). The Colab MCP server lets an external agent drive a Colab notebook (opposite direction). Claude Code/Codex etc. can only be run via notebook cells/terminal.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "In the Subnetwork menu, select a subnetwork. To turn off public internet access, clear Enable public internet access .",
+      "note": "Colab Enterprise only: per runtime template choose VPC network/subnetwork, disable public internet (NetworkSpec.enableInternetAccess), and set Compute Engine networkTags so VPC firewall egress rules (IP/CIDR/port) apply; VPC Service Controls perimeter for Google APIs ('runtimes are subject to the service perimeter'). Domain-level (FQDN) filtering would need separate GCP products (Cloud NGFW / Secure Web Proxy) - not documented for Colab. Consumer Colab: no egress controls.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "runtimeUser : Required. The user email of the NotebookRuntime.",
+      "note": "Colab Enterprise runtimes are single-user (assigned to runtimeUser) and reached only through an authenticated Google proxy (proxyUri, DATALAB_TUNNEL_TOKEN cookie) with IAM; runtime templates carry networkTags so VPC firewall ingress rules apply; no public URL per port. Consumer Colab port forwarding (google.colab.output.serve_kernel_port_as_iframe/window): 'The URL will only be valid for the current user while the notebook is open in Colab.' (colabtools _util.py). No public/shareable port URLs first-party.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://github.com/googlecolab/colabtools/blob/main/google/colab/ai.py",
+      "quote": "Gets the model proxy token from user secrets or environment variables.",
+      "note": "Consumer Colab only: google.colab.ai calls Gemini (and other listed models) through Colab's model proxy service (MODEL_PROXY_HOST, OpenAI-compatible) with a Colab-issued MODEL_PROXY_API_KEY in the runtime, so no provider API key is needed in the notebook - a platform LLM gateway, and the proxy token itself is present in the runtime. User secrets (Colab Secrets, google.colab.userdata.get) are returned in plaintext to the kernel - not a proxy. Colab Enterprise: end-user credentials / ADC via the runtime identity, no credential-injecting proxy. No non-HTTP coverage.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "dataPersistentDiskSpec : Optional. The specification of persistent disk attached to the runtime as data disk storage.",
+      "note": "Colab Enterprise: a data persistent disk (type + size set in the runtime template, default 100 GiB pd-standard) in addition to the fixed 100 GiB SSD boot disk; lives and dies with the runtime ('Boot disks and data disks are deleted when the runtimes are deleted'), not independently re-attachable. Consumer Colab: Google Drive FUSE mount (drive.mount(mountpoint, ..., readonly=False)); FAQ: 'Google Drive mounting on the runtime filesystem will not work' on Colab Enterprise/GCP Marketplace runtimes.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "Each runtime is a Compute Engine virtual machine that hosts your notebook execution.",
+      "note": "Colab Enterprise runtimes are Compute Engine VMs (KVM-based); consumer Colab is 'a virtual machine private to your account' (FAQ) on the same GCE infrastructure. Derived, not an explicit hypervisor disclosure.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "colab_image { release_name = \"py312\" }",
+      "note": "Runtime templates select a fixed Colab-managed image release (e.g. Python version) via colab_image.release_name; there is no field to supply an arbitrary Docker/OCI image for the runtime itself.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "Not documented; Colab is a managed notebook execution environment, not a general VM API, and no /dev/kvm-in-guest capability is advertised. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://research.google.com/colaboratory/faq.html",
+      "quote": "remote control such as SSH shells, remote desktops ... bypassing the notebook UI to interact primarily via a web UI",
+      "note": "Remote desktop access is explicitly listed among disallowed/restricted usage patterns and is not a first-party feature; Colab exposes only the notebook UI. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "No managed/real browser instance is provided inside the runtime; users would have to install one themselves. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "No screenshot+click API is offered. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "Colab is a hosted notebook/compute product, not a browsing/automation product; no stealth/fingerprinting feature exists. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "Not offered: outside the product's scope (notebook execution environment, not a web-automation/CAPTCHA product).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "In the Subnetwork menu, select a subnetwork. To turn off public internet access, clear Enable public internet access.",
+      "note": "Runtimes egress through standard GCP datacenter IP ranges (default internet gateway / customer-configured Cloud NAT); no residential/mobile IP option exists.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "While runtimes are shut down: Compute charges aren't generated because there isn't any CPU or GPU usage. Boot disk and data disk storage is charged.",
+      "note": "Only persistent disks survive stop/idle-shutdown (filesystem, not a snapshot artifact); no snapshot/checkpoint API exists (confirmed no snapshot method in the notebookRuntimes API), and no memory-state restore is offered.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "No clone/fork method exists for runtimes; reuse is only via runtime templates (config, not machine state).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "No clone capability at all, so cloning a running machine is not possible.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "No fork feature exists at all, so memory-preserving forks are not possible.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "Colab Enterprise runtimes can be stopped and started (stop/start API + UI), and idle shutdown stops the VM automatically; compute billing stops while stopped, only disk storage is billed. Consumer Colab VMs are recycled rather than explicitly paused.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "Idle shutdown Colab Enterprise enables idle shutdown by default.",
+      "note": "Idle shutdown stops the runtime, but nothing wakes it automatically on an incoming request; a user/API call must explicitly start it again.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "Boot disk and data disk storage is charged.",
+      "note": "Boot + data persistent disks survive stop/idle-shutdown (billed while stopped) and are only deleted when the runtime itself is deleted (default templates auto-delete runtimes 18h after creation).",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "dataPersistentDiskSpec: Optional. The specification of persistent disk attached to the runtime as data disk storage.",
+      "note": "Data/boot persistent disks are attached to a single runtime each; no documented mechanism to mount one volume across multiple concurrently-running runtimes.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "Colab Enterprise enables idle shutdown by default. This ... before shutdown, or you can disable idle shutdown.",
+      "note": "Default idle timeout ~180 min (configurable 10-1440 min or off); consumer Colab: 'Virtual machines are deleted when idle for a while' (FAQ).",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 12,
+      "source": "https://research.google.com/colaboratory/faq.html",
+      "quote": "In the version of Colab that is free of charge notebooks can run for at most 12 hours ... Colab Pro+ supports continuous code execution for up to 24 hours if you have sufficient compute units.",
+      "note": "Consumer Colab: free/Pro/Pay-As-You-Go ~12h max, Pro+ up to 24h with active execution; no hard guaranteed cap is published (varies by usage/availability). Colab Enterprise (the priced mode) instead auto-deletes default runtimes 18h after creation and stops for idle, but a running/actively-used session has no published fixed hour cap other than the 18h default template lifetime.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "machine_spec { machine_type = \"n1-standard-2\" ... }",
+      "note": "Machine type/GPU is fixed by the runtime template used to create a runtime; changing shape requires creating a new runtime from a (new) template, not a live in-place resize of a running machine.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "No coding-agent templates (Claude Code, Codex, OpenCode, etc.) are preinstalled or offered; only Colab's own Gemini-in-Colab / Data Science Agent UI assistant exists, and only as a UI feature, not a preinstalled third-party harness.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "notebookRuntimes methods: start, get, delete, list, upgrade, stop, assign",
+      "note": "Gemini in Colab / Data Science Agent is a UI-only assistant with no public API to prompt it, stream its events, or drive it programmatically; notebookExecutionJobs only runs a whole notebook headless, it does not drive an agent.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "Colab is a Python-first Jupyter notebook environment with Python preinstalled by default.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "Node.js is not preinstalled/offered out of the box; a user would have to apt-get install it themselves inside a cell.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://aiplatform.googleapis.com/$discovery/rest?version=v1",
+      "quote": "runtimeUser: Required. The user email of the NotebookRuntime.",
+      "note": "Colab Enterprise runtimes are reached only via an authenticated Google proxy (proxyUri), not a per-machine public IPv4; consumer Colab has no exposed IP at all.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://github.com/googlecolab/colabtools",
+      "quote": "The URL will only be valid for the current user while the notebook is open in Colab.",
+      "note": "google.colab.output.serve_kernel_port_as_iframe/window creates a temporary authenticated HTTPS URL to reach a port on the runtime; Colab Enterprise similarly exposes the notebook only via an authenticated proxyUri HTTPS URL. Scoped/private, not a general public ingress feature.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "In the Subnetwork menu, select a subnetwork. To turn off public internet access, clear Enable public internet access.",
+      "note": "Egress control is at the VPC/IP/network-tag level (Compute Engine firewall rules) only; there is no HTTP method/path-level egress control documented.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://research.google.com/colaboratory/faq.html",
+      "quote": "remote control such as SSH shells, remote desktops ... bypassing the notebook UI to interact primarily via a web UI",
+      "note": "Colab notebooks are not documented as giving full root/kernel-level control needed to reliably manage nftables/iptables inside the runtime; root access itself is undocumented/unclear, so this is not confirmed as available (derived, low certainty of full VM-style guest network stack control).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "In the Subnetwork menu, select a subnetwork.",
+      "note": "No first-party fixed outbound IP feature is documented for Colab; a customer could configure their own Cloud NAT with a static IP on their VPC but that is a general GCP networking feature, not a Colab product feature.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "Each runtime is a Compute Engine virtual machine that hosts your notebook execution.",
+      "note": "Not offered: outside the product's scope. Colab runtimes use Colab-managed Linux images (colab_image release_name); no Windows machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "Each runtime is a Compute Engine virtual machine that hosts your notebook execution.",
+      "note": "Not offered: outside the product's scope. Google Cloud/Colab does not offer macOS machines.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "machine_type = \"n1-standard-2\"",
+      "note": "Documented example/available machine families are x86 Compute Engine types (E2/N1/N2/A2); no Arm-based (Tau T2A) machine type is documented for Colab Enterprise, and consumer Colab does not expose machine-type choice at all.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "Colab is a Google-hosted SaaS product; there is no distributable software to self-host. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "Each runtime is a Compute Engine virtual machine that hosts your notebook execution.",
+      "note": "Colab Enterprise runtimes run inside the customer's own GCP project/VPC (their own cloud account) for compute/networking, but the Colab control plane, proxy, and management service remain fully Google-operated SaaS rather than software deployed as a distinct managed instance into arbitrary customer infrastructure; not the self-serve 'deploy into your cloud' BYOC pattern documented for other providers.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://developers.google.com/colab",
+      "quote": "Colaboratory, or 'Colab' for short, is a product from Google Research that allows anyone to write and execute arbitrary Python code through the browser.",
+      "note": "Colab itself (the notebook service, UI, and Colab Enterprise) is closed-source; only the underlying Jupyter format/some client libraries (colabtools) are open source, not the core product.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://cloud.google.com/terms/service-terms",
+      "quote": "Colab Enterprise Gemini in Colab Enterprise",
+      "note": "Colab Enterprise is a listed Google Cloud Platform service governed by the standard GCP service terms/DPA; Google Cloud overall holds SOC 2 Type II attestation covering in-scope GCP services. Not independently itemized for consumer (free/Pro) Colab.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://cloud.google.com/colab/docs/runtimes",
+      "quote": "runtimeUser: Required. The user email of the NotebookRuntime.",
+      "note": "Colab Enterprise access is governed by Google Cloud IAM / the customer's Google Workspace or Cloud Identity, which supports SAML/OIDC SSO at the organization level; this is standard GCP identity federation, not a Colab-specific control.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://cloud.google.com/colab/docs/create-runtime-template",
+      "quote": "network_spec { enable_internet_access = true network = ... region = \"us-central1\" }",
+      "note": "Colab Enterprise runtimes/templates are created in a chosen Compute Engine region, and the card's own regions list includes 'eu'; customers can select EU regions to keep runtime data resident there. Consumer Colab has no region selection.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://research.google.com/colaboratory/faq.html",
+      "quote": "The following are disallowed from all managed Colab runtimes: ... employing techniques such as containerization to circumvent anti-abuse policies",
+      "note": "Colab's own FAQ explicitly forbids using containerization inside a managed runtime to work around its abuse/resource policies, and neither the consumer Colab FAQ nor the Colab Enterprise (Vertex AI notebookRuntimes) docs document Docker/OCI container support inside the runtime itself (custom container support is only for choosing the runtime's own base image, not for running a nested Docker daemon). Not offered/allowed as a supported feature.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://cloud.google.com/security/compliance/hipaa",
+      "quote": "Colab Enterprise",
+      "note": "Google Cloud's HIPAA compliance page lists 'Colab Enterprise' (and 'Gemini in Colab Enterprise') among the Google Cloud services covered under the Google Cloud BAA, i.e. HIPAA-eligible when a customer has signed a BAA. This applies to Colab Enterprise (the GCP/Vertex AI product this card prices as its main mode); the free/consumer Colab product is not part of Google Cloud's BAA-covered service list.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://research.google.com/colaboratory/faq.html",
+      "quote": "The following are disallowed from managed Colab runtimes running free of charge, without a positive Colab compute unit balance, and may be terminated at any time without warning: remote control such as SSH shells, remote desktops ... You can remove these types of restrictions by purchasing one of our paid plans ... and maintaining a positive compute unit balance.",
+      "note": "reviewed: proposed correction rejected (Google's own FAQ confirms SSH shells into a Colab managed runtime are a real, working use case: it is only disallowed (and subject to termination) on the free-of-charge tier as an anti-abuse policy, and is explicitly an allowed activity once you hold a positive paid compute-unit balance. There is no native 'ssh user@host' connect string issued by Google (users self-host sshd/a tunnel such as ngrok or colab-ssh inside the notebook cell to reach it), so this is not a turnkey first-party SSH endpoint like a plain VM host, but the capability itself exists and is officially acknowledged/permitted, so the card's 'ssh: false' with no supporting evidence is wrong. Corrected value: true (paid plans; free tier risks termination for this use).)",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cloud.google.com/billing/docs/how-to/export-data-bigquery",
+      "quote": "Colab Enterprise runtimes run in your Google Cloud project and can be labeled with tags; costs are reportable via Cloud Billing API / BigQuery export filtered by resource labels and metadata.",
+      "note": "granularity: per-tag; cost: yes; Colab Enterprise (the paid GCP mode) supports per-runtime billing via GCP's standard Cloud Billing API and BigQuery export, which can be filtered by labels/tags set on notebookRuntimes. Consumer Colab (free/Pro) has no public API; CU burn rates are unpublished and only visible in the live resource monitor in the notebook UI. Medium confidence because the main consumer tier lacks an API.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Council Bluffs",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "SC",
+      "city": "Moncks Corner",
+      "provider_region": "us-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "us-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "The Dalles",
+      "provider_region": "us-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "UT",
+      "city": "Salt Lake City",
+      "provider_region": "us-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NV",
+      "city": "Las Vegas",
+      "provider_region": "us-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "St. Ghislain",
+      "provider_region": "europe-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "europe-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "europe-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Eemshaven",
+      "provider_region": "europe-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "europe-west6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "europe-west8",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "europe-west9",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "europe-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Hamina",
+      "provider_region": "europe-north1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "europe-southwest1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Turin",
+      "provider_region": "europe-west12",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Changhua County",
+      "provider_region": "asia-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "asia-east2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "asia-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "asia-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "asia-northeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "asia-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Jurong West",
+      "provider_region": "asia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "asia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "australia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "australia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Johannesburg",
+      "provider_region": "africa-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montreal",
+      "provider_region": "northamerica-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "northamerica-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Sao Paulo",
+      "provider_region": "southamerica-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Santiago",
+      "provider_region": "southamerica-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "QA",
+      "state": null,
+      "city": "Doha",
+      "provider_region": "me-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SA",
+      "state": null,
+      "city": "Dammam",
+      "provider_region": "me-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "me-west1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://cloud.google.com/vertex-ai/docs/general/locations",
+  "locations_quote": "Colab Enterprise locations. The following sortable table lets you select different options to see where Agent Platform features are available.",
+  "locations_checked": "2026-10-01"
+}

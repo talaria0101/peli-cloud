@@ -1,0 +1,1666 @@
+{
+  "id": "scaleway",
+  "name": "Scaleway Instances",
+  "url": "https://www.scaleway.com/en/pricing/virtual-instances/",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "shared-development",
+      "label": "shared-development",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "DEV1-L",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.048743352,
+          "month_cap": null
+        },
+        {
+          "name": "DEV1-M",
+          "vcpu": 3,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.022979008799999995,
+          "month_cap": null
+        },
+        {
+          "name": "DEV1-S",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": 0,
+          "hour": 0.010212892799999998,
+          "month_cap": null
+        },
+        {
+          "name": "DEV1-XL",
+          "vcpu": 4,
+          "ram_gib": 12,
+          "disk_gib": 0,
+          "hour": 0.0740434728,
+          "month_cap": null
+        },
+        {
+          "name": "PLAY2-MICRO",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.06267002399999999,
+          "month_cap": null
+        },
+        {
+          "name": "PLAY2-NANO",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.031335011999999995,
+          "month_cap": null
+        },
+        {
+          "name": "PLAY2-PICO",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 0,
+          "hour": 0.016247783999999998,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "PAR-1 EUR API price × 1.1378 USD/EUR (ECB 2026-09-28); no monthly cap. Storage and IPv4 excluded. CPU Instances \"Billed per hour of uptime (including startup and standby time)\" (Instances FAQ): granularity and minimum 1 h. Boot time is billed but unpublished (boot_overhead_s null). DIY VM: no sandbox API."
+    },
+    {
+      "key": "general-purpose",
+      "label": "general-purpose",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "BASIC3-X12C-24G",
+          "vcpu": 12,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.30845758,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X12C-48G",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 0,
+          "hour": 0.35317312,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X16C-32G",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.4042000365999999,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X16C-64G",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.538503673,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X2C-4G",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.044885072199999994,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X2C-8G",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.06738620499999999,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X4C-16G",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.13477240999999998,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X4C-8G",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.0898873378,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X6C-12G",
+          "vcpu": 6,
+          "ram_gib": 12,
+          "disk_gib": 0,
+          "hour": 0.15428567999999998,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X6C-24G",
+          "vcpu": 6,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.17670033999999998,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X8C-16G",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.20215861499999999,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC3-X8C-32G",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.26942762659999997,
+          "month_cap": null
+        },
+        {
+          "name": "GP1-L",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 0.8808620039999999,
+          "month_cap": null
+        },
+        {
+          "name": "GP1-M",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.436369056,
+          "month_cap": null
+        },
+        {
+          "name": "GP1-S",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.21702397199999998,
+          "month_cap": null
+        },
+        {
+          "name": "GP1-XL",
+          "vcpu": 48,
+          "ram_gib": 256,
+          "disk_gib": 0,
+          "hour": 1.904472396,
+          "month_cap": null
+        },
+        {
+          "name": "GP1-XS",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.10561059599999999,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-12C-48G",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 0,
+          "hour": 0.49494299999999997,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-16C-64G",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.671302,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-24C-96G",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": 0,
+          "hour": 1.006953,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-2C-8G",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.08362829999999999,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-32C-128G",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.342604,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-48C-192G",
+          "vcpu": 48,
+          "ram_gib": 192,
+          "disk_gib": 0,
+          "hour": 2.013906,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-4C-16G",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.16725659999999998,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-64C-256G",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": 0,
+          "hour": 2.6738299999999997,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-6C-24G",
+          "vcpu": 6,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.250885,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-8C-32G",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.329962,
+          "month_cap": null
+        },
+        {
+          "name": "PRO2-L",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.017807612,
+          "month_cap": null
+        },
+        {
+          "name": "PRO2-M",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.5083235279999999,
+          "month_cap": null
+        },
+        {
+          "name": "PRO2-S",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.25416176399999996,
+          "month_cap": null
+        },
+        {
+          "name": "PRO2-XS",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.12766116,
+          "month_cap": null
+        },
+        {
+          "name": "PRO2-XXS",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.06383058,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X12C-48G",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 0,
+          "hour": 0.5263462799999999,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X16C-64G",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.7384322,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X24C-96G",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": 0,
+          "hour": 1.07078358,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X2C-8G",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.09204802,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X32C-128G",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.4768644,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X48C-192G",
+          "vcpu": 48,
+          "ram_gib": 192,
+          "disk_gib": 0,
+          "hour": 2.2152966,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X4C-16G",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.18398226,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X64C-256G",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": 0,
+          "hour": 2.941213,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X6C-24G",
+          "vcpu": 6,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.266814,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD3-X8C-32G",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.3629582,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "PAR-1 EUR API price × 1.1378 USD/EUR (ECB 2026-09-28); no monthly cap. Storage and IPv4 excluded. CPU Instances \"Billed per hour of uptime (including startup and standby time)\" (Instances FAQ): granularity and minimum 1 h. Boot time is billed but unpublished (boot_overhead_s null). DIY VM: no sandbox API."
+    },
+    {
+      "key": "dedicated-compute",
+      "label": "dedicated-compute",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "COMPUTE3-X12C-24G",
+          "vcpu": 12,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.39948158,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X16C-32G",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.5327179599999999,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X24C-48G",
+          "vcpu": 24,
+          "ram_gib": 48,
+          "disk_gib": 0,
+          "hour": 0.79896316,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X2C-4G",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.0665613,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X32C-64G",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 1.06532214,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X48C-96G",
+          "vcpu": 48,
+          "ram_gib": 96,
+          "disk_gib": 0,
+          "hour": 1.5895066,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X4C-8G",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.1331226,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X64C-128G",
+          "vcpu": 64,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 2.13064428,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X6C-12G",
+          "vcpu": 6,
+          "ram_gib": 12,
+          "disk_gib": 0,
+          "hour": 0.19979768,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X8C-16G",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.26635897999999997,
+          "month_cap": null
+        },
+        {
+          "name": "COMPUTE3-X96C-192G",
+          "vcpu": 96,
+          "ram_gib": 192,
+          "disk_gib": 0,
+          "hour": 3.1790132,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-12C-24G",
+          "vcpu": 12,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.36318575999999997,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-16C-32G",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.48424767999999996,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-24C-48G",
+          "vcpu": 24,
+          "ram_gib": 48,
+          "disk_gib": 0,
+          "hour": 0.7263715199999999,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-2C-4G",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.060530959999999995,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-32C-64G",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.9684953599999999,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-48C-96G",
+          "vcpu": 48,
+          "ram_gib": 96,
+          "disk_gib": 0,
+          "hour": 1.445006,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-4C-8G",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.12106191999999999,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-64C-128G",
+          "vcpu": 64,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.9369907199999998,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-6C-12G",
+          "vcpu": 6,
+          "ram_gib": 12,
+          "disk_gib": 0,
+          "hour": 0.18159287999999998,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-HC-8C-16G",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.24212383999999998,
+          "month_cap": null
+        },
+        [
+          {
+            "name": "MEMORY3-X2C-16G",
+            "vcpu": 2,
+            "ram_gib": 16,
+            "disk_gib": 0,
+            "hour": 0.128913,
+            "month_cap": null
+          },
+          {
+            "name": "MEMORY3-X4C-32G",
+            "vcpu": 4,
+            "ram_gib": 32,
+            "disk_gib": 0,
+            "hour": 0.257825,
+            "month_cap": null
+          },
+          {
+            "name": "MEMORY3-X8C-64G",
+            "vcpu": 8,
+            "ram_gib": 64,
+            "disk_gib": 0,
+            "hour": 0.515651,
+            "month_cap": null
+          },
+          {
+            "name": "MEMORY3-X16C-128G",
+            "vcpu": 16,
+            "ram_gib": 128,
+            "disk_gib": 0,
+            "hour": 1.031302,
+            "month_cap": null
+          },
+          {
+            "name": "MEMORY3-X32C-256G",
+            "vcpu": 32,
+            "ram_gib": 256,
+            "disk_gib": 0,
+            "hour": 2.062604,
+            "month_cap": null
+          },
+          {
+            "name": "MEMORY3-X48C-384G",
+            "vcpu": 48,
+            "ram_gib": 384,
+            "disk_gib": 0,
+            "hour": 3.091403,
+            "month_cap": null
+          },
+          {
+            "name": "POP2-HM-2C-16G",
+            "vcpu": 2,
+            "ram_gib": 16,
+            "disk_gib": 0,
+            "hour": 0.117193,
+            "month_cap": null
+          },
+          {
+            "name": "POP2-HM-4C-32G",
+            "vcpu": 4,
+            "ram_gib": 32,
+            "disk_gib": 0,
+            "hour": 0.234387,
+            "month_cap": null
+          },
+          {
+            "name": "POP2-HM-8C-64G",
+            "vcpu": 8,
+            "ram_gib": 64,
+            "disk_gib": 0,
+            "hour": 0.468774,
+            "month_cap": null
+          },
+          {
+            "name": "POP2-HM-16C-128G",
+            "vcpu": 16,
+            "ram_gib": 128,
+            "disk_gib": 0,
+            "hour": 0.937547,
+            "month_cap": null
+          },
+          {
+            "name": "POP2-HM-32C-256G",
+            "vcpu": 32,
+            "ram_gib": 256,
+            "disk_gib": 0,
+            "hour": 1.875094,
+            "month_cap": null
+          },
+          {
+            "name": "POP2-HM-64C-512G",
+            "vcpu": 64,
+            "ram_gib": 512,
+            "disk_gib": 0,
+            "hour": 3.750189,
+            "month_cap": null
+          }
+        ]
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "PAR-1 EUR API price × 1.1378 USD/EUR (ECB 2026-09-28); no monthly cap. Storage and IPv4 excluded. CPU Instances \"Billed per hour of uptime (including startup and standby time)\" (Instances FAQ): granularity and minimum 1 h. Boot time is billed but unpublished (boot_overhead_s null). DIY VM: no sandbox API."
+    },
+    {
+      "key": "arm",
+      "label": "arm",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "BASIC2-A12C-24G",
+          "vcpu": 12,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.17954483999999998,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A12C-48G",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 0,
+          "hour": 0.20560045999999998,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A16C-32G",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.23518325999999998,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A16C-64G",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.31357767999999997,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A2C-4G",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.0261694,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A2C-8G",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.0392541,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A4C-16G",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.07839441999999999,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A4C-8G",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.058824259999999996,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A6C-12G",
+          "vcpu": 6,
+          "ram_gib": 12,
+          "disk_gib": 0,
+          "hour": 0.08977241999999999,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A6C-24G",
+          "vcpu": 6,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.10274334,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A8C-16G",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.11764851999999999,
+          "month_cap": null
+        },
+        {
+          "name": "BASIC2-A8C-32G",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.15678883999999998,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A12C-48G",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 0,
+          "hour": 0.34907704,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A16C-64G",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.57333742,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A24C-96G",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": 0,
+          "hour": 0.74537278,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A2C-8G",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.06667508,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A32C-128G",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.146675,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A48C-192G",
+          "vcpu": 48,
+          "ram_gib": 192,
+          "disk_gib": 0,
+          "hour": 1.7200122599999998,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A4C-16G",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.13323638,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A64C-256G",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": 0,
+          "hour": 2.29175676,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A6C-24G",
+          "vcpu": 6,
+          "ram_gib": 24,
+          "disk_gib": 0,
+          "hour": 0.17442473999999997,
+          "month_cap": null
+        },
+        {
+          "name": "STANDARD2-A8C-32G",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.26658654,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "PAR-1 EUR API price × 1.1378 USD/EUR (ECB 2026-09-28); no monthly cap. Storage and IPv4 excluded. CPU Instances \"Billed per hour of uptime (including startup and standby time)\" (Instances FAQ): granularity and minimum 1 h. Boot time is billed but unpublished (boot_overhead_s null). DIY VM: no sandbox API. Arm64 (BASIC2-A / STANDARD2-A) instances: an ordinary VM on another architecture; the arm64 feature on this mode lets arch-aware workloads pick it."
+    },
+    {
+      "key": "windows",
+      "label": "Windows Server (POP2-WIN)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "POP2-2C-8G-WIN",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.207421,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-4C-16G-WIN",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.413818,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-8C-32G-WIN",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.822971,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-16C-64G-WIN",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 1.657433,
+          "month_cap": null
+        },
+        {
+          "name": "POP2-32C-128G-WIN",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 3.314753,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "PAR-1/PAR-2 only. Licence premium is about €0.0542/vCPU-h ($0.0616) over the Linux POP2 price. Excluded from savings plans (POP-WIN)."
+    },
+    {
+      "key": "stardust",
+      "label": "Stardust (tiny shared instance, stock-limited)",
+      "flags": [
+        "stock"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "STARDUST1-S",
+          "vcpu": 1,
+          "ram_gib": 1,
+          "disk_gib": 0,
+          "hour": 0.0006826799999999999,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "PAR-1 EUR API price × 1.1378 USD/EUR (ECB 2026-09-28); no monthly cap. Storage and IPv4 excluded. CPU Instances \"Billed per hour of uptime (including startup and standby time)\" (Instances FAQ): granularity and minimum 1 h. Boot time is billed but unpublished (boot_overhead_s null). DIY VM: no sandbox API. Stardust split into its own stock-flagged mode 2026-09-29.",
+      "stock_note": "Instance API availability 2026-09-29: shortage in fr-par-1, scarce in nl-ams-1, available only in pl-waw-2. Zones FR-PAR-1, NL-AMS-1, PL-WAW-2 only; not in the org quota table; excluded from savings plans."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.10797721999999998,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.04069910599999999,
+    "paused_ram_billed": false,
+    "min_system_volume_gib": 10
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": 4.15297,
+    "ipv4_available": true
+  },
+  "plans": [
+    {
+      "name": "Usage account",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Account quotas and stock availability must be checked before deploying 50 concurrent machines; no quota approval implied."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": false,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "DIY infrastructure rather than an agent-managed sandbox: guest installation, HTTPS/domain setup, abuse controls and operations are customer responsibilities. Linux guest administrative capabilities are not preinstalled agent features. 30% guest CPU utilization does not reduce allocated-compute charges. Unknowns remain null; a partial subtotal is not a complete invoice.",
+    "IPv6 and egress included, IPv4 EUR 0.005/hour separately billed. Power-off stops compute but not disks/IP.",
+    "Apple Silicon provider already exists and is not duplicated. API monthly_price is an estimate, not an automatic cap.",
+    "Storage profile selection changes price; card block-storage rate is a reference profile, not local SSD or every IOPS tier.",
+    "Billing (Instances FAQ, reviewed 2025-12-19, fetched 2026-09-28): \"CPU Instances : Billed per hour of uptime (including startup and standby time)\"; GPU Instances per minute. Power-off stops compute billing; storage and flexible IPv4 keep billing.",
+    "DIY VM: boot/provisioning time (billed, since uptime includes startup) is not published; boot_overhead_s null.",
+    "Arm mode: alt flag removed 2026-09-28 (an arm64 VM is not a different product).",
+    "Region price multiplier: FR-PAR-3 is +50% for POP2/POP2-HC/HM/HN, PRO2 and GP1 (e.g. POP2-2C-8G €0.0735 in PAR-1 vs €0.1103 in PAR-3). All other zones (PAR-1/2, AMS-1/2/3, WAW-1/2/3, and new IT-MIL-1) match PAR-1 prices. Arm64 BASIC2/STANDARD2 only in PAR-1, PAR-2, AMS-1.",
+    "Compute savings plan: commit EUR 50-9,999/month for 12 or 36 months, discount \"up to 25%\" (bracket unpublished), cannot be cancelled, identity verification required. It excludes Gen3 (BASIC3/STANDARD3/COMPUTE3/MEMORY3), STARDUST, POP-WIN and GPUs. Not modelled."
+  ],
+  "sources": [
+    "https://www.scaleway.com/en/pricing/virtual-instances/",
+    "https://api.scaleway.com/instance/v1/zones/fr-par-1/products/servers",
+    "https://www.scaleway.com/en/pricing/storage/",
+    "https://www.scaleway.com/en/pricing/network/",
+    "https://www.scaleway.com/en/docs/instances/reference-content/understanding-instance-pricing/",
+    "https://www.scaleway.com/en/docs/instances/reference-content/choosing-shared-vs-dedicated-cpus/",
+    "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml",
+    "https://www.scaleway.com/en/docs/instances/faq/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Validated payment method; identity validation unlocks higher quotas; support beyond verified tier.",
+    "tiers": "Per-shape, not one fleet cap: DEV1-S 10→20 and DEV1-M 8→15 after identity validation; some larger shapes require identity/support first.",
+    "notes": "Numeric account-wide machine/vCPU total cannot be inferred by adding shape limits. Quotas and available shape families vary; see organization quota table. Flexible IPv4 quota is 20 per Organization (payment validated) or 50 (identity validated), so a public-IPv4 fleet above 50 needs a support ticket. Relevant 4 vCPU/8 GiB shape quotas (payment → identity validated): DEV1-L 5→10, PLAY2-MICRO 3→5, BASIC2-A4C-8G 6→20, GP1-XS (4/16) 1→4, POP2-HC-4C-8G identity-only→4. BASIC3/STANDARD3/COMPUTE3/MEMORY3/STARDUST are not in the quota table. Some 64-vCPU shapes and POP2-HN-10 need support even after verification.",
+    "sources": [
+      "https://www.scaleway.com/en/docs/organizations-and-projects/organization/organization-quotas/",
+      "https://www.scaleway.com/en/docs/account/setup-lifecycle/verify-identity/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 6,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 8
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/power-off-instance/",
+      "quote": "Powering off your Instance shuts it down by transferring all the data on the Instance's local volume to a volume store.",
+      "note": "Power-off keeps disks only (persistent_disk, no memory, no snapshot artifact); snapshots/images are user-initiated. No automatic snapshot on stop documented.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/create-a-backup/",
+      "quote": "You can use this image to restore your Instance and its data, or to create a series of Instances with a predefined configuration",
+      "note": "Image = snapshots of all volumes (console/API/CLI); per-volume Block Storage snapshots also available. Disk only, no memory. New Instances can boot from an image (template). Snapshots can be exported/imported (QCOW2 via Object Storage).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud.",
+      "note": "Plain IaaS VM; no coding-agent-harness product or API exists anywhere in the Instances docs/API reference.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/use-security-groups/",
+      "quote": "You can create customized inbound and outbound rules to drop or accept traffic on particular protocols, ports, and IP ranges.",
+      "note": "Security groups with default inbound/outbound policy drop|accept, stateful or stateless; SMTP ports blocked by default. Enforced by Scaleway outside the guest (security groups are attached to the Instance via console/API). Caveat: they 'act as firewalls, filtering public internet traffic on your Instances' (private network traffic not filtered).",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/use-security-groups/",
+      "quote": "The IP range in CIDR notation on which the rule applies.",
+      "note": "Security group rules are L3/L4 only (action, protocol, port, IP range). No HTTP-level egress filtering for Instances.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/use-security-groups/",
+      "quote": "Define the inbound and outbound **rules** that will be applied to your security group",
+      "note": "Inbound security group rules by protocol/port/CIDR with default drop policy; instances can also run without public IP on a Private Network.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VM with root; iptables/nftables inside the guest work as on any Linux server (not explicitly documented).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/secret-manager/concepts/",
+      "quote": "accessible for retrieval by authorized users and applications",
+      "note": "Secret Manager is a secret store that applications fetch values from (secret enters the machine). No credential-injecting egress proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/docs/block-storage/how-to/attach-a-volume/",
+      "quote": "You can attach up to 15 volumes at a time to a single Instance.",
+      "note": "Block Storage volumes, same Availability Zone, attach at any time.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/docs/file-storage/concepts/",
+      "quote": "File systems can be shared by several Instances.",
+      "note": "Scaleway File Storage: managed shared file system, read-write, attached to several Instances ('so multiple compute instances can work on the same collection of files'); FAQ: 'currently available in the PAR region. The AMS region will be available soon.' Max file systems per Instance depends on type. Block volumes attach to one Instance.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/understanding-qemu-guest-agent/",
+      "quote": "The QEMU Guest Agent (QGA) is a daemon designed to run inside virtual machines, enabling communication between the guest operating system and the QEMU hypervisor.",
+      "note": "Instances also described as running on 'a hypervisor' splitting physical servers into VMs (choosing-shared-vs-dedicated-cpus doc); QEMU/KVM confirmed by the QGA doc.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/create-a-backup/",
+      "quote": "The image feature lets you create an image of your Instance, which includes all its volumes. You can use this image to restore your Instance and its data, or to create a series of Instances with a predefined configuration.",
+      "note": "not offered: Instances boot from VM disk images/snapshots (qcow2 export/import) chosen from a marketplace catalog or your own snapshot, not from a Docker/OCI container image.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/pricing/virtual-instances/",
+      "quote": "Virtual Instances - Deploy scalable and flexible cloud servers",
+      "note": "not offered: outside the product's scope (generic IaaS VM, no browser/bot-detection-stealth feature).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/pricing/virtual-instances/",
+      "quote": "Virtual Instances - Deploy scalable and flexible cloud servers",
+      "note": "not offered: outside the product's scope (generic IaaS VM, not a browser-automation/agent product).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://www.scaleway.com/en/docs/instances/concepts/",
+      "quote": "Flexible IP addresses are public IP addresses that you can hold independently of any Instance. When you create a Scaleway Instance, by default, its public IP address is also a flexible IP address. ... remain associated with your Instance even when the Instance is stopped",
+      "note": "Datacenter-range IPv4 assigned to the Instance for both inbound and outbound traffic; stays fixed unless you explicitly move/detach it.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/create-a-backup/",
+      "quote": "Click the Instance you want to back up. Go to the Images section of the Instance overview page. Click Create image from Instance.",
+      "note": "No requirement to power off/stop the Instance before creating an image (unlike the separate 'Power off an Instance' / standby-mode docs); the resulting image can be used to create new Instances, i.e. clone a running machine.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/use-standby-mode/",
+      "quote": "Standby mode temporarily stops an Instance. ... You are still billed for an Instance in standby mode ... To avoid being charged for an unused Instance, you can power it off.",
+      "note": "Standby/power-off are manual actions; no documented mechanism to auto-wake a stopped/standby Instance when a network request arrives.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/use-standby-mode/",
+      "quote": "How to put an Instance into standby mode ... Click Switch to standby mode.",
+      "note": "Standby mode and power-off are user-initiated (console/CLI/poweroff command); no automatic idle-detection stop is documented for Instances.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/resize-instances/",
+      "quote": "Click Change offer type to proceed. This upgrades your Instance, which reboots in the process, resulting in up to five minutes of downtime.",
+      "note": "Vertical scaling (changing CPU/RAM offer) requires a reboot with downtime, so CPU/RAM cannot be changed on a running Instance without interruption.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/pricing/virtual-instances/",
+      "quote": "Virtual Instances - Deploy scalable and flexible cloud servers",
+      "note": "not offered: outside the product's scope (plain IaaS VM; no first-party browser/computer-use/research task-agent API).",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/pricing/virtual-instances/",
+      "quote": "Virtual Instances - Deploy scalable and flexible cloud servers",
+      "note": "not offered: outside the product's scope. No MCP server for controlling Instances found in Scaleway's Instances docs (Scaleway CLI/Terraform/API are the control surfaces).",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/concepts/",
+      "quote": "Instance OS images and InstantApps",
+      "note": "not offered: outside the product's scope. Instances are generic VMs booted from a chosen OS image/marketplace app; any language runtime is whatever the customer's chosen OS image provides, not a provider-managed runtime or SDK code-exec.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/concepts/",
+      "quote": "Instance OS images and InstantApps",
+      "note": "not offered: outside the product's scope. Same reasoning as lang_python — generic VM, no provider-managed Node.js runtime or code-exec SDK for Instances.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/docs/instances/concepts/",
+      "quote": "Flexible IP addresses ... remain associated with your Instance even when the Instance is stopped and are held in your account and can be moved between different Instances if you wish.",
+      "note": "The attached flexible/public IPv4 is fixed to the Instance (used for outbound traffic too) unless the customer explicitly detaches/moves it.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "https://www.scaleway.com/en/gpu-instances/",
+      "quote": "GPU Instances",
+      "note": "Scaleway offers dedicated GPU Instances (H100, L4, L40S, etc.) as part of its compute lineup alongside CPU Instances.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/security-and-compliance/",
+      "quote": "Scaleway is committed to obtaining the most stringent certifications (ISO 27001, HDS, SecNumCloud – currently undergoing assessment) to enable you to deploy your solutions with complete peace of mind, particularly in regulated markets.",
+      "note": "Scaleway's published certifications are ISO/IEC 27001, HDS, and SecNumCloud (ongoing); SOC 2 is not listed among its certifications/qualifications.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/security-and-compliance/",
+      "quote": "HDS - Health data requires uncompromising security. Scaleway is HDS-certified for the hosting of health data, enabling e-health start-ups, hospitals and medical software developers to innovate whilst remaining fully compliant with the law.",
+      "note": "Scaleway is a 100% European/French provider offering the French HDS health-data-hosting certification, not the US HIPAA/BAA; no HIPAA or BAA offering is mentioned anywhere on its compliance page.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.scaleway.com/en/docs/instances/faq/",
+      "quote": "CPU Instances: Billed per hour of uptime (including startup and standby time).",
+      "note": "Instances are persistent VMs billed by uptime until the customer stops/deletes them; no maximum session duration is imposed.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/instance-states.md",
+      "quote": "Stopped | The Instance is halted and the underlying hypervisor is released. Compute billing stops... When stopping you can: Keep local storage – it remains attached and is billed as storage. Archive local storage – the data is snapshotted to the volume store; the Instance can be restarted later and the snapshot is restored automatically.",
+      "note": "Scaleway Instances only expose Running/Stopped/Deleted lifecycle states; 'Stopped' releases the hypervisor entirely (cold stop/start with disk snapshotted or kept), not a suspend/resume that keeps RAM/process state. No pause-then-resume primitive documented.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/create-a-backup/",
+      "quote": "You can use this image to restore your Instance and its data, or to create a series of Instances with a predefined configuration",
+      "note": "Images/snapshots (used for the card's fork=true) are disk-only: new Instances boot cold from the image, they do not resume a running process/memory state. No memory-inclusive fork documented anywhere in Instances docs.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud. You can create and manage Instances via our console, API, CLI, or other developer tools.",
+      "note": "Plain IaaS VM product; you SSH in and install whatever OS/software you want. No managed graphical desktop/VNC/RDP streaming is offered as a feature of Instances.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud.",
+      "note": "No first-party managed browser is offered/preinstalled; this is a generic VM you provision and configure yourself (DIY VM, per card caveats).",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud.",
+      "note": "No screenshot/click driving API; product is a raw VM with SSH access, not an agent/computer-use platform.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/how-to/use-flexips.md",
+      "quote": "Flexible routed IPv4 addresses: public IPv4 addresses routed directly to your Instance.",
+      "note": "Instances get raw public IPv4/IPv6 (routed directly, plain L3/L4); there is no managed HTTPS URL / TLS-terminating ingress feature for Instances — customers must run and configure their own reverse proxy, TLS cert, and DNS (matches the card's caveat that 'HTTPS/domain setup... are customer responsibilities').",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/imagehub/",
+      "quote": "Scaleway’s ImageHub is a catalog of system images that allow you to deploy, manage, and scale your favorite applications in seconds using image templates.",
+      "note": "ImageHub offers OS/app image templates (Linux distros, InstantApps) for self-installed software, not preinstalled coding-agent harnesses (Claude Code, Codex, OpenCode, etc.); none listed.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway provides CPU Instances equipped with either x86 or ARM CPUs.",
+      "note": "This product (Virtual/CPU Instances, this card) is x86/ARM Linux and Windows only. Scaleway does sell macOS (Apple Silicon Mac mini) machines, but as a separate product line already tracked on its own card (scaleway-apple-silicon.json), not part of Virtual Instances.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud. You can create and manage Instances via our console, API, CLI, or other developer tools.",
+      "note": "Instances is a rented public-cloud VM service (Scaleway-owned datacenters); there is no software artifact a customer can install on their own infrastructure to run 'Scaleway Instances' themselves.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud.",
+      "note": "No offering to deploy the Instances control plane/service into a customer's own cloud account (AWS/GCP/Azure); it only runs in Scaleway's own regions/AZs (fr-par, nl-ams, pl-waw, it-mil).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/instances/reference-content/choosing-instance-type.md",
+      "quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud.",
+      "note": "Instances is a proprietary managed cloud service; no OSI-licensed core codebase is published for the Instances product itself.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.scaleway.com/en/docs/",
+      "quote": "DIY VM: no sandbox API. Instances are billed per hour of uptime. Usage is an invoice or dashboard for the whole account.",
+      "note": "granularity: account-only; cost: no; Scaleway Instances is a DIY IaaS VM product (card note: 'DIY VM: no sandbox API'). Customers manage their own instances without agent-controlled provisioning. While Scaleway has a Billing API, it provides account-level invoices and cost data only. There is no per-instance or per-tag usage API documented that breaks down billable usage (CPU/memory/disk seconds) by individual VM or custom label. Monitoring and metrics are available through Cockpit (observability) with live CPU/memory/disk graphs, but these are runtime metrics, not billable usage data.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "fr-par-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "fr-par-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "fr-par-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "nl-ams-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "nl-ams-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "nl-ams-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "pl-waw-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "pl-waw-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "pl-waw-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "it-mil-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.scaleway.com/en/pricing/virtual-instances/",
+  "locations_quote": "Scaleway CPU & GPU Instances are virtual machines in the cloud. Available zones: FR-PAR-1, FR-PAR-2, FR-PAR-3 (Paris), NL-AMS-1, NL-AMS-2, NL-AMS-3 (Amsterdam), PL-WAW-1, PL-WAW-2, PL-WAW-3 (Warsaw), IT-MIL-1 (Milan). All are documented in the Instances API and pricing pages as choosable availabilit",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,521 @@
+{
+  "id": "lapdev",
+  "name": "Lapdev",
+  "url": "https://lap.dev/pricing/",
+  "category": "dev-env",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "native-meter",
+      "label": "Native product meter; not a general-purpose 4-vCPU/8-GiB VM",
+      "flags": [
+        "alt"
+      ],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Not auto-rankable for generic VM workloads. Native price and usage limits are preserved in provider rate_cards/extras and regimes. Empty sizes intentionally prevents inventing CPU/RAM capacity or treating missing rates as zero."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Public beta",
+      "fee": 0,
+      "flags": [
+        "beta"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "No platform fee during beta; own Kubernetes compute/network/storage billed externally; 'Unlimited developers · Unlimited catalogs'; concierge onboarding and priority support included. No environment/concurrency cap published. Environment types: personal (full namespace copy, highest cost), shared, branch (only modified HTTP services; vendor claims up to 88% infra reduction)."
+    },
+    {
+      "name": "GA future subscription",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Planned platform subscription aligned to the number of active environments (personal, shared and branch); price unpublished; vendor promises pricing before GA 'with plenty of notice'; optional paid enablement services mentioned."
+    }
+  ],
+  "free": {
+    "one_time_credit": null,
+    "monthly_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": false,
+    "byoc": true,
+    "open_source": true,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [],
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "ingress_rules": true,
+    "secret_proxy": false,
+    "isolation": "container",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_shared": true,
+    "harness_api": false,
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "max_session_unlimited": true,
+    "volume_attach": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Customer supplies Kubernetes cluster and pays its provider independently.",
+    "Future GA prices unpublished; zero beta fee is temporary, not permanent list promise.",
+    "Kubernetes pod isolation depends on customer runtime; no default hardware microVM assurance established.",
+    "No provider-neutral total can be calculated without cluster/node/storage/network SKUs and utilization.",
+    "Native billing cannot be reduced to a 4-vCPU/8-GiB price. No matching engine sizes, by design.",
+    "Maintenance signal (2026-09-29): public repo lapce/lapdev last commit 2025-11-24 (lapdev-cli v0.2.0); status.lap.dev serves an expired TLS cert (notAfter 2026-09-22) and a Vercel DEPLOYMENT_NOT_FOUND 404; api.lap.dev (named in docs as required egress target) returns NXDOMAIN. Site, pricing page, docs and app.lap.dev login are live; latest blog post 2026-02-17.",
+    "Licence is open-core: AGPLv3 except the lapdev-enterprise directory (separate Enterprise License); GitHub reports NOASSERTION."
+  ],
+  "sources": [
+    "https://lap.dev/pricing/",
+    "https://docs.lap.dev/llms-full.txt",
+    "https://github.com/lapce/lapdev",
+    "https://lap.dev/",
+    "https://lap.dev/blog/lapdev-has-changed/",
+    "https://docs.lap.dev/llms.txt",
+    "https://raw.githubusercontent.com/lapce/lapdev/main/LICENSE"
+  ],
+  "audit_2026_09_29": {
+    "applied": 4,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 5
+  },
+  "feature_evidence": {
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.lap.dev/core-concepts/preview-url.md",
+      "quote": "Organization (default):** Only members of your Lapdev organization can access (after login)",
+      "note": "Preview URLs are created per service you choose to expose. Each URL is either Organization (login required, the default) or Public ('Anyone with the link can access without authentication'). 'Custom rules' are marked coming soon. Traffic goes through Lapdev's cloud proxy, and nothing else is exposed from the cluster.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/environment.md",
+      "quote": "ConfigMaps, Secrets, and Services are automatically included",
+      "note": "Secrets are ordinary Kubernetes Secrets copied from the production manifests into the environment namespace and mounted into the pods. No credential-injection proxy is documented.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://docs.lap.dev/core-concepts/architecture.md",
+      "quote": "Creates dev environments - Replicates selected workloads into isolated or shared namespaces",
+      "note": "Environments are Kubernetes namespaces/pods on the customer's own cluster (shared kernel, container-level isolation), not VMs/microVMs.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/app-catalog.md",
+      "quote": "Lapdev reads your production Kubernetes manifests directly from your cluster...It defines which workloads belong to your app...and acts as the blueprint Lapdev uses to create consistent and production-aligned development environments.",
+      "note": "not offered: outside the product's scope — Lapdev replicates existing production Kubernetes workloads/images from manifests; there is no API to start a fresh machine from a user-supplied OCI image.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://lap.dev/",
+      "quote": "Lapdev gives your team production-accurate development environments that run directly in your Kubernetes cluster.",
+      "note": "not offered: outside the product's scope — environments are Kubernetes pods running the workloads defined in your manifests; running an independent Docker engine inside them is not a documented feature.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://lap.dev/",
+      "quote": "Lapdev gives your team production-accurate development environments that run directly in your Kubernetes cluster.",
+      "note": "not offered: outside the product's scope — Kubernetes pod/container isolation, no /dev/kvm exposure documented.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — a Kubernetes microservice dev-environment/traffic-interception tool, not a GUI desktop product.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/preview-url.md",
+      "quote": "External users accessing your development environment via browser",
+      "note": "not offered: outside the product's scope — a browser is only used client-side to view generated preview URLs; the product does not provide/manage a browser instance.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — no desktop/screenshot-driving API exists for this Kubernetes dev-environment tool.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — no browser/bot-detection functionality is part of this product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving functionality is part of this product.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/devbox.md",
+      "quote": "Devbox establishes secure tunnel: Local machine → Lapdev Cloud → Sidecar Proxy",
+      "note": "not offered: outside the product's scope — access to environments is via the Devbox CLI tunnel/preview URLs, not documented SSH into the machine.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.lap.dev/llms-full.txt",
+      "quote": "Each personal environment runs in its own Kubernetes namespace... Lapdev helps mitigate this cost by allowing you to pause and resume environments on demand, automatically scaling down resources when you're not using them.",
+      "note": "Lapdev environments are Kubernetes namespaces running live workload copies (personal/shared/branch), not VM disk images. 'Pause and resume' scales Kubernetes deployments down/up (reducing pod replicas/resources) rather than taking a disk or memory snapshot; branch environments are Git-like HTTP-service overlays, not machine clones/forks. The full docs (llms-full.txt), the pivot blog post, and the GitHub README contain no mention of 'snapshot', 'fork', or 'clone' as a machine/VM-state feature anywhere. No contradiction found: pause/resume of a k8s namespace is a distinct capability from disk/memory snapshotting, and no on-demand/automatic snapshot or fork capability is documented or implied.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/architecture/branch-environment-architecture.md",
+      "quote": "A shared baseline environment runs all services once.",
+      "note": "not offered: outside the product's scope — no automatic snapshot-on-stop/restore-on-start mechanism is documented.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/architecture/branch-environment-architecture.md",
+      "quote": "A shared baseline environment runs all services once.",
+      "note": "not offered: outside the product's scope — no on-demand snapshot/checkpoint API is documented.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.lap.dev/how-to-guides/create-lapdev-environment.md",
+      "quote": "Branch environments reuse an existing shared environment as their baseline...Select the services you plan to modify and provide a name/description for the branch.",
+      "note": "Branch environments are lightweight clones created from an existing shared environment's baseline, cloning only the modified services rather than a full VM image.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.lap.dev/core-concepts/architecture/branch-environment-architecture.md",
+      "quote": "A shared baseline environment runs all services once. Developers create lightweight branch environments for only the services they're actively modifying. Lapdev automatically routes your traffic to your version while everything else uses the shared baseline.",
+      "note": "The shared baseline environment keeps running while branch environments are created from it, without stopping it.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/architecture/branch-environment-architecture.md",
+      "quote": "Developers create lightweight branch environments for only the services they're actively modifying.",
+      "note": "not offered: outside the product's scope — branch environments duplicate container definitions for modified services (fresh pods), not a live memory/process-state snapshot of a running machine.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — environments are long-running Kubernetes deployments, not a serverless sleep/wake-on-request model.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.lap.dev/core-concepts/environment.md",
+      "quote": "Services with persistent state (databases, caches) are shared across branches",
+      "note": "Stateful services (and their volumes) are shared/reused across branch environments rather than duplicated per branch.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — a Kubernetes staging/dev-environment product, not a coding-agent template platform.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — no API to drive a coding agent/harness is documented.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — no first-party task/computer-use agent API is documented.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — no MCP server is mentioned anywhere in the docs, site, or GitHub org.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/app-catalog.md",
+      "quote": "It defines which workloads belong to your app...and acts as the blueprint Lapdev uses to create consistent and production-aligned development environments.",
+      "note": "not offered: outside the product's scope — Lapdev replicates whatever container images/languages your own workloads already use; it does not itself provide a hosted Python runtime.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/app-catalog.md",
+      "quote": "It defines which workloads belong to your app...and acts as the blueprint Lapdev uses to create consistent and production-aligned development environments.",
+      "note": "not offered: outside the product's scope — Lapdev replicates whatever container images/languages your own workloads already use; it does not itself provide a hosted Node.js runtime.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/preview-url.md",
+      "quote": "Traffic goes through Lapdev's cloud proxy, and nothing else is exposed from the cluster.",
+      "note": "Access is exclusively via Lapdev's HTTPS preview-URL cloud proxy / Devbox tunnel, not a public IPv4 address per environment.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/architecture.md",
+      "quote": "Creates dev environments - Replicates selected workloads into isolated or shared namespaces",
+      "note": "not offered: outside the product's scope — Kubernetes pod/container isolation (not a full VM/microVM with guest root), so guest-side nftables/iptables is not an applicable product feature.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Lapdev - Kubernetes Development Environments",
+      "note": "not offered: outside the product's scope — no GPU machine offering; Lapdev only orchestrates namespaces on the customer's existing cluster nodes.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.lap.dev/how-to-guides/local-development-with-devbox.md",
+      "quote": "Windows PowerShell",
+      "note": "not offered: outside the product's scope — the Windows reference is only for installing the client-side Devbox CLI on a developer's laptop; provisioned environments are Kubernetes (Linux) workloads.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.lap.dev/how-to-guides/local-development-with-devbox.md",
+      "quote": "Linux or macOS",
+      "note": "not offered: outside the product's scope — macOS reference is only for installing the client-side Devbox CLI; provisioned environments are Kubernetes (Linux) workloads, not macOS machines.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/lapce/lapdev/main/README.md",
+      "quote": "Lapdev API Server – SaaS control plane that handles auth, orchestration, and secure tunneling.",
+      "note": "Only the lightweight lapdev-kube-manager runs inside the customer's own cluster; the API server/control plane is a Lapdev-hosted SaaS component, so the full product cannot be self-hosted.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.lap.dev/core-concepts/architecture/branch-environment-architecture.md",
+      "quote": "A shared baseline environment runs all services once. Developers create lightweight branch environments for only the services they're actively modifying.",
+      "note": "No session/time limit is documented anywhere; environments are long-running Kubernetes deployments that persist until the developer deletes them.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/environment.md",
+      "quote": "Services with persistent state (databases, caches) are shared across branches",
+      "note": "not offered: outside the product's scope. Lapdev replicates Deployments/StatefulSets/ConfigMaps/Secrets/Services into namespaces; stateful data is left shared/unreplicated rather than given a Lapdev-managed persistent disk per environment. Disk persistence, if any, is a property of the customer's own cluster storage classes, not a Lapdev feature.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/environment.md",
+      "quote": "1. Select an existing App Catalog that defines your app's workloads 2. Choose an environment type (Personal, Shared, or Branch) 3. Lapdev deploys the workloads",
+      "note": "not offered: outside the product's scope. Lapdev orchestrates Kubernetes workload manifests (Deployments/StatefulSets/ConfigMaps/Secrets/Services); it does not expose an API of its own to attach extra storage volumes to an environment. Volume provisioning, if used, is the customer's own Kubernetes/cloud concern.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://docs.lap.dev/core-concepts/environment.md",
+      "quote": "Lapdev helps mitigate this cost by allowing you to pause and resume environments on demand, automatically scaling down resources when you're not using them.",
+      "note": "Phrasing mixes an on-demand pause action with a claim of automatic scale-down when idle; docs do not give a precise idle timeout, so treated as a real but loosely-specified auto-stop-on-idle behavior for Personal Environments.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Native product meter; not a general-purpose 4-vCPU/8-GiB VM",
+      "note": "not offered: outside the product's scope. Lapdev does not sell or size VM/CPU/RAM instances itself (compute comes from the customer's own Kubernetes cluster/nodes), so there is no Lapdev-level API to live-resize CPU/RAM of a running environment; no such capability is documented anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/architecture.md",
+      "quote": "Connection is outbound-only from your cluster (no inbound firewall rules needed)",
+      "note": "not offered: outside the product's scope. Lapdev's own connectivity model is a single outbound websocket tunnel from the customer's kube-manager to Lapdev's API server; there is no documented Lapdev feature to allow/deny-list outbound destinations from environments themselves. Egress control, if any, is a customer Kubernetes NetworkPolicy concern, not a Lapdev product feature.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/preview-url.md",
+      "quote": "Custom rules** are marked coming soon",
+      "note": "not offered: outside the product's scope currently. Lapdev's documented per-path/method control ('Custom rules') only applies to inbound Preview URL access and is explicitly marked as not yet shipped ('coming soon'); no HTTP-method/path-level egress rule feature is documented at all.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/architecture.md",
+      "quote": "Connection is outbound-only from your cluster (no inbound firewall rules needed)",
+      "note": "not offered: outside the product's scope. Outbound networking for environments comes from the customer's own Kubernetes cluster/cloud; Lapdev does not document assigning or offering a fixed outbound IP for environments it orchestrates.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Native product meter; not a general-purpose 4-vCPU/8-GiB VM",
+      "note": "not offered: outside the product's scope. Lapdev does not provide or size compute itself; it deploys workload copies into the customer's own Kubernetes cluster, so CPU architecture (x86/arm64) is entirely determined by the customer's own nodes and is never mentioned as a Lapdev-selectable option.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://docs.lap.dev/core-concepts/architecture.md",
+      "quote": "User authentication and authorization - GitHub/GitLab OAuth, team management",
+      "note": "Documented authentication is GitHub/GitLab OAuth only; no SAML/OIDC enterprise single sign-on is mentioned anywhere in the docs, pricing, or blog.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Public beta",
+      "note": "No security/trust/compliance page exists on lap.dev (checked /security, /trust, /legal/security — all 404) and no SOC 2 mention appears anywhere in the docs, site, or blog. The product is still in public beta with an unpublished GA plan, consistent with no formal attestation yet.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Public beta",
+      "note": "No HIPAA/BAA mention anywhere in the docs, site, or blog, and no dedicated compliance/security page exists. Consistent with an early public-beta product with no published compliance attestations.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.lap.dev/core-concepts/cluster.md",
+      "quote": "A **Cluster** in Lapdev refers to a Kubernetes cluster you've connected to Lapdev for managing development environments... Target Cluster - Hosts development environments",
+      "note": "Lapdev is BYOC: it deploys dev-environment workloads into whatever Kubernetes cluster the customer connects as the 'target cluster', wherever that cluster is hosted (including EU regions/cloud accounts of the customer's choosing). Lapdev's own SaaS control plane (auth/orchestration) location is unpublished, but the actual machine/workload data stays in the customer-chosen cluster, so EU residency of workloads is achievable by the customer's own cluster placement.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://lap.dev/pricing/",
+      "quote": "Customer supplies Kubernetes cluster and pays its provider independently",
+      "note": "granularity: none; cost: no; Lapdev is a BYOC (Bring Your Own Cluster) Kubernetes development environment platform. It is a control plane that orchestrates workloads on the customer's own Kubernetes cluster. Billing and usage metering are handled entirely by the customer's Kubernetes provider (AWS, GCP, Azure, etc.), not by Lapdev itself. Lapdev has zero platform fee during public beta. No usage/billing API exists for Lapdev environments; customers must use their underlying cloud provider's cost/usage APIs.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.lap.dev/core-concepts/cluster.md",
+  "locations_quote": "A Cluster in Lapdev refers to a Kubernetes cluster you've connected to Lapdev for managing development environments... Customer supplies Kubernetes cluster and pays its provider independently.",
+  "locations_checked": "2026-10-01"
+}

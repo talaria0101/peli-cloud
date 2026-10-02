@@ -1,0 +1,481 @@
+{
+  "id": "cedana",
+  "name": "Cedana",
+  "url": "https://cedana.com/",
+  "category": "other (checkpoint/restore software; not a compute provider)",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "No public pricing: accounts only via sales/founders contact; demo-led. Commercial licence quoted per GPU (annual) per Cedana's own blog framing; no figure published."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": false,
+    "open_source": true,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "volume_attach": true,
+    "harness_api": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "volume_shared": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Live migration and orchestration optimize own GPU infrastructure; public site lacks compute rental price. Software/license pricing and host cost separate; marginal to compute-provider estimator.",
+    "Inventory exclusion: migration software for own infrastructure. Card contains no numeric compute modes and no selectable price plan.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Docs expose a 'Cloud Bursting' API (POST /v1/instances with shade_instance_type/shade_cloud, hourly_price per instance type) and a 'Pricing' API where the customer enters their own on-demand/spot $/h per instance type; these are customer-configured cost inputs and brokered third-party instances, not a Cedana public tariff."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/cedana",
+    "https://cedana.com/",
+    "https://cedana.com/llms.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.cedana.ai/cedana-slurm/automation",
+      "quote": "In short, a job will be automatically checkpointed on preemption and resumed when it starts running again after being re-queued by SLURM (if configured to).",
+      "note": "Checkpoint/restore software you install on your own Kubernetes/SLURM cluster, not a hosted machine. Triggers: SLURM preemption (with GraceTime), policy engine ('heartbeat checkpointing, which will act as a cron job and checkpoint every n minutes', memory-threshold or webhook triggers); on K8s, a rescheduled pod with CEDANA_CHECKPOINT set restores from the latest checkpoint. Process memory (CPU and GPU) plus rootfs diff included. Opt-in per workload via env vars.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/cr",
+      "quote": "Checkpoint via API (see the spec [here](https://demo.cedana.ai/v1/scalar), or just pass this to an agent).",
+      "note": "Checkpoint a running pod/job via UI or API; restore on the same or another node ('save the full state of your container enabling you to save, migrate and resume your workloads across instances and vendors'). Memory (CPU+GPU process state) included; restores to new nodes. Container-level, not whole-VM.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://github.com/cedana/cedana",
+      "quote": "Welcome to Cedana! This repository is the home of the Cedana daemon and the low-level orchestration of our save/migrate/resume (SMR) functionality.",
+      "note": "not offered: outside the product's scope (checkpoint/restore of existing workloads, not a machine-provisioning service that boots from an OCI image)",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Live migration for CPU and GPU containers. Save · migrate · resume — drop-in for k8s & SLURM, zero code changes.",
+      "note": "not offered: outside the product's scope; Cedana checkpoints/restores containers on your own containerd/CRI-O/K8s cluster, it does not host a machine for you to run Docker inside",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Live migration for CPU and GPU containers. Save · migrate · resume — drop-in for k8s & SLURM, zero code changes.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.cedana.ai/get-started/authentication.md",
+      "quote": "Once you have obtained an API key, you can set up and start using Cedana with your system of choice via either: Cedana for Kubernetes, Cedana for SLURM, Cedana on Bare-Metal",
+      "note": "not offered: outside the product's scope; access is via API key / kubectl / UI, not SSH into a Cedana-hosted machine",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/cr.md",
+      "quote": "You can manually restore the workload on the Checkpoints Page ... you've successfully used Cedana to move a stateful workload between nodes and have it pick up work where it left off.",
+      "note": "not offered: docs describe restoring a checkpoint to move/resume a workload on another node (migration), not cloning one machine into multiple independent running copies",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/cr.md",
+      "quote": "You can manually restore the workload on the Checkpoints Page ... you've successfully used Cedana to move a stateful workload between nodes.",
+      "note": "not offered: no documented capability to clone a still-running workload into a new copy; checkpoints are taken then restored elsewhere",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/cr.md",
+      "quote": "you've successfully used Cedana to move a stateful workload between nodes and have it pick up work where it left off.",
+      "note": "checkpoints include memory/process state, but there is no documented fork/clone feature (only single-destination migrate/restore)",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/cr.md",
+      "quote": "To checkpoint a running pod ... You can manually restore the workload on the Checkpoints Page.",
+      "note": "checkpoint = pause with saved state, restore = resume; core product mechanism for CPU and GPU workloads on the customer's own cluster",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/automation.md",
+      "quote": "a job will be automatically checkpointed on preemption and resumed when it starts running again after being re-queued by SLURM (if configured to)",
+      "note": "not offered: automatic restore is tied to scheduler rescheduling/preemption events, not to an inbound network request waking a sleeping machine",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/storage/what-we-checkpoint.md",
+      "quote": "If you're writing files into the rootfs of the container, we just take them with us on the snapshot! We perform a diff of the filesystem and add it to our process/system-level checkpoint.",
+      "note": "rootfs diff plus attached PVCs are captured in the checkpoint and restored, so files survive a checkpoint/restore cycle",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/storage/what-we-checkpoint.md",
+      "quote": "If your workload uses PersistentVolumeClaim-backed volumes, Cedana also checkpoints the PVC objects that are attached to the pod ... During restore: Cedana recreates missing PVCs for the restored pod.",
+      "note": "derived: works through the customer's own Kubernetes CSI/PVC volumes, which Cedana checkpoints and re-attaches on restore",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/automation.md",
+      "quote": "heartbeat checkpointing, which will act as a cron job and checkpoint every n minutes",
+      "note": "not offered: Cedana triggers checkpoints on preemption/policy/cron/webhook events, but does not itself stop machines for idleness since it doesn't host the machines",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cedana.com/product/orchestration/",
+      "quote": "Resize, migrate, and preempt jobs in real time",
+      "note": "not offered: outside the product's scope; page describes scheduler-level resize/migrate/preempt of jobs across your cluster, not a first-party API to live-resize a single machine's own CPU/RAM",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/cr.md",
+      "quote": "Checkpoint via API (see the spec here, or just pass this to an agent).",
+      "note": "no dedicated Cedana MCP server found; docs merely note the OpenAPI spec can be handed to an agent",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope; Cedana checkpoints arbitrary existing processes (its own samples happen to use Python), it is not a hosted Python code-exec runtime",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope; Cedana does not host or expose machines",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope; Cedana does not itself provision a VM/microVM to the customer, it runs as software on the customer's own machines",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "not offered as defined (GPU machines offered by the provider): Cedana does not sell/host GPU machines, it checkpoints/migrates/resumes GPU workloads on the customer's own GPU infrastructure",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://github.com/cedana/cedana",
+      "quote": "We build on top of and leverage CRIU to provide userspace checkpoint/restore of processes.",
+      "note": "not offered: outside the product's scope; built on Linux CRIU, Linux-only per the card's own features.linux=true",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://github.com/cedana/cedana",
+      "quote": "We build on top of and leverage CRIU to provide userspace checkpoint/restore of processes.",
+      "note": "not offered: outside the product's scope; CRIU-based, Linux-only",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.cedana.ai/get-started/authentication.md",
+      "quote": "you can set up and start using Cedana with your system of choice via either: Cedana for Kubernetes, Cedana for SLURM, Cedana on Bare-Metal",
+      "note": "Cedana is installed by the customer onto their own cluster (self-hosted daemon/agent), not a managed service Cedana deploys into the customer's cloud account",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.cedana.ai/get-started/authentication.md",
+      "quote": "Cedana for Kubernetes, Cedana for SLURM, Cedana on Bare-Metal",
+      "note": "Cedana does not host or time-limit machines itself; it runs as software on the customer's own cluster where session length is governed by the customer's own scheduler/infra, not by Cedana",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.cedana.ai/cedana-kubernetes/storage/what-we-checkpoint.md",
+      "quote": "If your workload uses PersistentVolumeClaim-backed volumes, Cedana also checkpoints the PVC objects that are attached to the pod ... During restore: Cedana recreates missing PVCs for the restored pod.",
+      "note": "not offered: outside the product's scope; Cedana checkpoints/restores whatever PVCs already back a workload on the customer's own Kubernetes cluster, it does not itself offer a shared-volume-across-machines primitive.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://api.github.com/repos/cedana/cedana/releases/latest",
+      "quote": "cedana-amd64.tar.gz, cedana-arm64.tar.gz, libcedana-k8s-amd64.tar.gz, libcedana-k8s-arm64.tar.gz, libcedana-slurm-amd64.tar.gz, libcedana-slurm-arm64.tar.gz ...",
+      "note": "Cedana's daemon and all its plugin libraries (k8s, SLURM, containerd, CRI-O, runc, kata, storage backends) are built and published for both amd64 and arm64 in every GitHub release, i.e. the software runs on ARM64 hosts/clusters.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://cedana.com/",
+      "quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+      "note": "granularity: none; cost: no; Cedana is checkpoint/restore middleware that runs on the customer's own Kubernetes/SLURM/bare-metal clusters; it does not host machines and therefore does not track billable usage. The customer's own infrastructure is responsible for tracking usage. Cedana's API provides endpoints for managing checkpoints, jobs, and deployments, but not for querying billable usage of sandboxes/VMs per resource or tag.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://cedana.com/",
+  "locations_quote": "Cedana provides GPU and CPU workload save, migrate, and resume infrastructure for AI, HPC, inference, training, spot capacity, and scientific computing workloads.",
+  "locations_checked": "2026-10-01"
+}

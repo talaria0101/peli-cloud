@@ -1,0 +1,525 @@
+{
+  "id": "tencent-cubesandbox",
+  "name": "Tencent Cloud CubeSandbox",
+  "url": "https://github.com/TencentCloud/CubeSandbox",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    },
+    {
+      "key": "self-host",
+      "label": "Self-hosted CubeSandbox (Apache-2.0)",
+      "flags": [
+        "alt"
+      ],
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "note": "No licence fee; cost is your own KVM bare metal / PVM cloud VMs. README: 'Cube Sandbox requires an x86_64 Linux environment with KVM support' (PVM path for clouds without /dev/kvm)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 15,
+    "disk_gib_month": 0.2284,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": 0,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "The priority is allow > deny > default-allow",
+          "url": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/architecture/network.md"
+        },
+        {
+          "quote": "CubeVS always denies the following private and link-local ranges so that a sandbox cannot probe the host's internal network or other sandboxes",
+          "url": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/architecture/network.md"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Public rate not established",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 50,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "Default quotas per account per region (https://cloud.tencent.com/document/product/1814/123815, 2026-09-28): 50 sandbox instances (running + idle), 50 cores / 100 GiB total for running instances, 20 paused instances, 10 sandbox tools; custom tools 0.5-32 cores. Raisable on request. No published price."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": true,
+    "byoc": false,
+    "open_source": true,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": true,
+    "egress_http_rules": true,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "isolation": "vm",
+    "image_oci": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": "any-http",
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": true,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Official SDK/public Tencent Agent Sandbox product. Chinese-cloud pricing and shape not reliably extracted in this pass; unknown is not zero.",
+    "Not fully priceable in ENGINE_CARD: unknown USD resource rates or machine shape. Null is not zero; do not rank as a free provider.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free.",
+    "Re-checked 2026-09-28: the Agent Runtime product page (https://cloud.tencent.com/product/ags) and its docs (https://cloud.tencent.com/document/product/1814: overview, quick start, quotas, FAQ) publish no per-resource rate or billing page; the page only says billing is on demand (\"按需计费\"). CubeSandbox itself is Apache-2.0 open source (self-host). Still unpriceable.",
+    "Account quota: 50 cores / 100 GiB total across running instances per region (not per sandbox); plan.max_vcpu 32 is the largest custom tool size.",
+    "Hosted AGS quotas per main account per region: 50 instances (running+idle), 50 cores and 100 GiB across running instances, 20 paused, 10 sandbox tools. All can be raised via online consultation. Image pre-cache API limited to 20 req/s and 50 concurrent tasks.",
+    "Prices are 'current public prices, not differentiated by region or availability zone'. CNY list on the China site (cloud.tencent.com). The international site (tencentcloud.com/products/ags) returned only a JS shell; no USD listing was verified.",
+    "The hosted commercial counterpart (Tencent Cloud Agent Runtime / Agent Sandbox \"AGS\") publishes a billing page (doc 1814/133249, 2026-09-09: CPU CNY 0.000081/core-s, memory CNY 0.000025/GiB-s) and is priced on the tencent-agent-runtime card; this card covers CubeSandbox itself (Apache-2.0 self-host, no fee) and is left unpriced to avoid listing AGS twice."
+  ],
+  "sources": [
+    "https://github.com/TencentCloud/CubeSandbox",
+    "https://pypi.org/project/cubesandbox/",
+    "https://cloud.tencent.com/product/ags",
+    "https://cloud.tencent.com/document/product/1814/123815"
+  ],
+  "audit_2026_09_29": {
+    "applied": 18,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/lifecycle.md",
+      "quote": "**`on_timeout=\"pause\"`**: after `timeout` seconds idle, the platform schedules a pause. State flips to `paused`, the VM memory is frozen to the snapshot store.",
+      "note": "Opt-in per sandbox at create (lifecycle={on_timeout: 'pause', auto_resume: True}); default on_timeout is 'kill'. Trigger: idle timeout. Memory + processes + filesystem included ('CPU registers, process memory, TCP state (with no external peer), and filesystem mutations all survive the snapshot'; outbound sockets dropped). auto_resume=True wakes it transparently on the next HTTP/SDK request. E2B-compatible lifecycle shape. Applies to self-hosted CubeSandbox; cluster default idle TTL is operator-set (ships as -1 = never).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/snapshot-rollback-clone.md",
+      "quote": "`sb.create_snapshot()` persists the sandbox's current state (filesystem + memory) as a snapshot and returns a `SnapshotInfo` object. The `snapshot_id` field can be passed directly to `Sandbox.create(template=...)`.",
+      "note": "Memory included; new sandboxes boot from the snapshot (template); in-place sb.rollback(snapshot_id); sb.clone(n=N) forks a running sandbox N ways with memory+filesystem. Also explicit sandbox.pause()/connect(). Snapshots outlive the source sandbox; list/delete APIs. Cross-node restore via S3 backend (preview in v0.7.0). Filesystem-only snapshots are on the roadmap (today always memory+fs).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/integrations/claude-code.md",
+      "quote": "This guide shows how to keep Claude Code running **on your host** while transparently redirecting **every Bash command it runs** into an isolated CubeSandbox MicroVM, using a `PreToolUse` hook.",
+      "note": "SDK is an E2B-compatible exec/files/PTY API; no first-party API to prompt/stream/resume a harness inside the sandbox. Integrations are community guides: Claude Code and OpenCode run on the host with hooks routing bash into the sandbox; Pi agent runs inside via example host-driver scripts using commands.run; LangChain/OpenAI Agents SDK use it as a tool backend. Closest thing: the preview 'Digital Assistant (AgentHub)' in the WebUI/CubeOps, which creates/snapshots/clones OpenClaw assistant sandboxes and injects the LLM key, but users talk to OpenClaw via its own Gateway UI (port 18789) / WeCom, not a Cube prompt/stream API. Borderline if the coordinator counts AgentHub.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/network-policy.md",
+      "quote": "`allow_out` | `network[\"allow_out\"]` | CubeVS | Explicitly allowed IPv4 addresses, CIDRs, or DNS names. IP/CIDR targets go into `allow_out_v2`; domain targets go into `dns_allow` and become temporary IP allows through DNS query/response learning.",
+      "note": "Per sandbox at create time: allow_internet_access=false installs a 0.0.0.0/0 deny-all; allow_out (IPv4/CIDR/domain/*.wildcard), deny_out (IPv4/CIDR only), plus L7 rules (host/SNI) via CubeEgress. Enforced in the host eBPF data plane (CubeVS) on the TAP device, outside the microVM. Default is allow-all internet but private/metadata CIDRs denied by default. Limits: 8192 IP keys, 1024 domain keys. Templates can carry a network config that is merged.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/security-proxy.md",
+      "quote": "**Domain filtering** — allow/deny outbound requests by SNI, host, HTTP method, scheme, or exact path.",
+      "note": "CubeEgress (OpenResty TPROXY MITM proxy on each host) evaluates first-match-wins rules with match fields scheme/port/sni/host/method list/path (exact or trailing-* prefix); unmatched L7 traffic is denied (403). Custom HTTP(S) ports supported (up to 8 per host). Per-request JSONL audit log. Operators can extend with custom Lua (e.g. prompt/body filtering). No header-based match.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/restrict-public-access.md",
+      "quote": "Creating a sandbox with `network.allow_public_traffic = false` returns a per-sandbox `traffic_access_token` on the create response. Every inbound request to the sandbox's public URL must then carry the token in either of two equivalent headers",
+      "note": "Default: public URL <port>-<sandboxId>.<domain> reachable by anyone who knows the ID. Opt-in token (E2B-compatible e2b-traffic-access-token / cube-traffic-access-token) enforced by CubeProxy on HTTP, HTTPS and gRPC listeners; no rotation. Exposed ports are declared per template (--expose-port). No per-sandbox IP allowlist documented; being self-hosted, the operator controls the CubeProxy network exposure.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/introduction.md",
+      "quote": "| **Isolation Level** | Low (Shared Kernel Namespaces) | High (Dedicated Kernel) | **Extreme (Dedicated Kernel + eBPF)** |",
+      "note": "KVM microVM (Cloud Hypervisor fork) with its own guest kernel; custom OCI images. Running nftables/iptables inside the guest is not documented explicitly and depends on the guest kernel config and root/sudo in the template; derived. Host-side CubeVS eBPF policy applies regardless.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/security-proxy.md",
+      "quote": "The point of the inject path is that the secret stays on the operator side: it lives in the rule list, gets pushed to CubeEgress at sandbox creation, and is never exposed to the sandbox's environment, filesystem, or process space.",
+      "note": "Inject rules add static headers (format e.g. 'Bearer ${SECRET}') to any matched host/method/path; HTTPS via MITM with a CA baked into the template (--with-cube-ca). Secrets redacted from audit logs. HTTP (plaintext) injection allowed but warned against. Only HTTP(S) headers: non-HTTP TCP (databases, SSH, git over SSH) is not proxied by CubeEgress ('Direct TCP to ports no rule covers ... is invisible to CubeEgress'); git over HTTPS would work via a header rule. Used by AgentHub 'Credential hosting' and the Pi agent guide ('CubeEgress credential vault', >= v0.4.0). No dynamic/rotating credential callbacks documented (static secrets set at create).",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/docs/guide/s3-volume.md",
+      "quote": "Give a sandbox storage that **survives its lifecycle**: create a Volume → mount it in a sandbox → read/write → destroy the sandbox, the data stays → remount it next time.",
+      "note": "E2B-compatible Volume API (Volume.create/connect/list/destroy, Sandbox.create(volume_mounts={...})), backed by a volume plugin: S3-compatible (bundled MinIO by default; AWS S3, Tencent COS, R2), COS, JuiceFS, NFS or custom plugins. Also host mounts (bind-mount of an allowlisted host-node directory, ro or rw) via metadata 'host-mount'. Filesystem-level (s3fs/FUSE style), not block volumes. Mounts set at sandbox creation.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox/blob/master/sdk/python/docs/volume.md",
+      "quote": "Multiple sandboxes can mount the same volume concurrently. Data is visible to all mounters in real time.",
+      "note": "Read-write or per-attachment read-only (VolumeMount(vol, read_only=True)); the same volume can be rw in sandbox A and ro in sandbox B. s3-volume.md: 'One Volume can be mounted by several sandboxes at once'. Host mounts are also shareable by sandboxes on the same node (no locking). Consistency depends on the backend (object store via s3fs, NFS, JuiceFS).",
+      "checked": "2026-09-29"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/quickstart.md",
+      "quote": "PVM (Pagetable-based Virtual Machine) is a page-table-based nested virtualization framework built on top of KVM ... Cube Sandbox requires an x86_64 Linux environment with KVM support",
+      "note": "PVM/nested virtualization is used by the CubeSandbox host so it can run its own KVM microVMs on a cloud VM that lacks /dev/kvm; it is a host-provisioning concern, not a passthrough of /dev/kvm into tenant sandboxes. No documentation offers /dev/kvm inside a sandbox itself.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/integrations/ubuntu-desktop.md",
+      "quote": "Run a full Ubuntu 22.04 GNOME desktop inside a Cube sandbox and open it in your browser. ... A 1280×720 display served over noVNC on port 6080",
+      "note": "Official example template (examples/ubuntu-desktop), not a default template; opt-in via a provided Dockerfile/CubeSandbox template.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/integrations/ubuntu-desktop.md",
+      "quote": "sb.commands.run(\"DISPLAY=:0 gnome-screenshot -f /tmp/desk.png\") ... sb.commands.run(\"DISPLAY=:0 wmctrl -l\")",
+      "note": "not offered: the desktop guide only shows generic shell exec (screenshot via gnome-screenshot, window listing via wmctrl) through the standard commands API; there is no dedicated screenshot+click/computer-use action API.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "Cube Sandbox is a high-performance, out-of-the-box secure sandbox service built on RustVMM and KVM ... compatible with the E2B SDK",
+      "note": "not offered: outside the product's scope. CubeSandbox is a general-purpose MicroVM code/agent execution runtime; a Playwright/Chromium example exists (examples/browser-sandbox) but no stealth/fingerprint-evasion feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "Cube Sandbox is a high-performance, out-of-the-box secure sandbox service built on RustVMM and KVM ... compatible with the E2B SDK",
+      "note": "not offered: outside the product's scope, no CAPTCHA-solving capability documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/route-aware-egress.md",
+      "quote": "When cube-router is disabled, CubeVS performs the original direct SNAT path: sandbox -> TAP -> CubeVS from_cube -> Primary NIC",
+      "note": "Sandbox outbound traffic is SNAT'd through its host node's primary NIC (a self-hosted/operator-controlled datacenter IP); the IP is stable while the sandbox stays on that node but can change on cross-node pause/resume.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/quickstart.md",
+      "quote": "envd is a background service preinstalled in CubeSandbox base images. After a sandbox is created, SDK operations such as running commands, reading and writing files, and opening a terminal send requests to envd inside the sandbox.",
+      "note": "not offered: sandboxes are accessed through the E2B-compatible envd exec/files/PTY API, not SSH. (The dev-environment.md SSH-on-127.0.0.1:10022 is for the CubeSandbox self-host developer test VM, not for tenant sandboxes.)",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/snapshot-rollback-clone.md",
+      "quote": "Calling sb.clone(n=N) on a running sandbox immediately derives N independent copies. ... The source sandbox keeps running unaffected.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/snapshot-rollback-clone.md",
+      "quote": "Each copy fully inherits the source sandbox's runtime state at the moment of the clone call — memory and filesystem alike — but subsequent writes are fully isolated.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "Auto-Pause & Auto-Resume: Idle sandboxes are automatically snapshot-suspended (zero resource cost) and transparently restored on the next request — hundred-millisecond resume, zero caller awareness.",
+      "note": "Opt-in per sandbox via lifecycle on_timeout='pause' + auto_resume; default on_timeout is 'kill'.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/lifecycle.md",
+      "quote": "**`on_timeout=\"pause\"`**: after `timeout` seconds idle, the platform schedules a pause. State flips to `paused`, the VM memory is frozen to the snapshot store.",
+      "note": "Pause/resume snapshots preserve filesystem across stop/start; separately, host-mount and Volume APIs (persistent-storage.md, s3-volume.md) give storage that outlives the sandbox lifecycle entirely.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/roadmap.md",
+      "quote": "Scheduling and Operations Enhancements ... Also covers operational tooling: live resource rebalancing and node drain with sandbox migration.",
+      "note": "not offered yet: live CPU/RAM resize of a running sandbox is listed under 'Coming Soon' on the roadmap, not shipped.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/integrations/claude-code.md",
+      "quote": "This guide shows how to keep Claude Code running on your host while transparently redirecting every Bash command it runs into an isolated CubeSandbox MicroVM, using a PreToolUse hook.",
+      "note": "Official integration guides + example templates for Claude Code, OpenCode, and the Pi agent (docs/guide/integrations/, examples/claude-code-integration, examples/opencode-plugin-sandbox, examples/pi-agent-integration); these are host-hook/template patterns rather than a single 'preinstalled harness' toggle.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/digital-assistant.md",
+      "quote": "The Digital Assistant (AgentHub) uses Cube Sandbox to create and manage OpenClaw assistants. It supports assistant instances, snapshots, rollback, clone creation, assistant template publishing, and operation history.",
+      "note": "Preview feature: AgentHub is a first-party API/WebUI to create/manage the provider's own OpenClaw task-agent instances (with credential hosting for the LLM key), separate from the generic exec/harness API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "Cube Sandbox is a high-performance, out-of-the-box secure sandbox service built on RustVMM and KVM. It is compatible with the E2B SDK",
+      "note": "not offered: no MCP server found in the repo, docs, or web search for the provider offering an MCP server to control its sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/quickstart.md",
+      "quote": "pip install e2b-code-interpreter ... with Sandbox.create(template=os.environ[\"CUBE_TEMPLATE_ID\"]) as sandbox: result = sandbox.run_code(\"print('Hello from Cube Sandbox, safely isolated!')\")",
+      "note": "First-party Python SDK (sdk/python) plus a code-interpreter run_code path.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://api.github.com/repos/TencentCloud/CubeSandbox/contents/sdk",
+      "quote": "sdk/node",
+      "note": "First-party Node.js SDK directory exists alongside sdk/python and sdk/go.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/https-and-domain.md",
+      "quote": "CubeProxy serves both HTTPS (port 443) and HTTP (port 80) out of the box.",
+      "note": "not offered: sandboxes are reached through CubeProxy's domain-based reverse proxy (`<port>-<sandboxId>.<domain>`), not a dedicated public IPv4 per machine.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/https-and-domain.md",
+      "quote": "CubeProxy serves both HTTPS (port 443) and HTTP (port 80) out of the box. The E2B SDK uses HTTPS by default.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/route-aware-egress.md",
+      "quote": "CubeVS performs the original direct SNAT path: sandbox -> TAP -> CubeVS from_cube -> Primary NIC",
+      "note": "derived: outbound traffic is SNAT'd through the sandbox's host node's primary NIC, giving a stable egress IP for the life of the sandbox on that node; not marketed as a dedicated 'static IP' product feature.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/roadmap.md",
+      "quote": "GPU Sandboxes: Attach host GPUs to sandboxes so Agent and inference workloads can run CUDA (and similar accelerators) inside the same isolated VM model, with the scheduler accounting for GPU inventory and placement.",
+      "note": "not offered yet: GPU support is listed under 'Coming Soon' on the roadmap, not shipped.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "Cube Sandbox is a high-performance, out-of-the-box secure sandbox service built on RustVMM and KVM ... Linux x86_64 or aarch64 (ARM64) with KVM enabled",
+      "note": "not offered: outside the product's scope — CubeSandbox is a Linux-guest KVM microVM runtime; no Windows guest support documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "Cube Sandbox is a high-performance, out-of-the-box secure sandbox service built on RustVMM and KVM ... Linux x86_64 or aarch64 (ARM64) with KVM enabled",
+      "note": "not offered: outside the product's scope — Linux-only KVM microVM guests; no macOS guest/hardware support.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": true,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "License: Apache-2.0 ... Instant, Concurrent, Secure & Lightweight Sandbox Service for AI Agents",
+      "note": "CubeSandbox itself is the self-hosted Apache-2.0 open-source product this card models (distinct from the hosted Tencent Cloud 'Agent Runtime/AGS' offering, priced on a separate card).",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/quickstart.md",
+      "quote": "The steps below guide you through provisioning a cloud server, enabling KVM via PVM, and installing Cube Sandbox on that server.",
+      "note": "not offered: outside the product's scope — CubeSandbox is self-hosted open source you install and operate yourself, not a managed service the vendor deploys into your cloud account (BYOC).",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "License: Apache-2.0 — an open-source self-hosted infrastructure project.",
+      "note": "not offered: no SOC 2 attestation is applicable/published for a self-hosted open-source project; compliance is the operator's own responsibility.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://github.com/TencentCloud/CubeSandbox",
+      "quote": "License: Apache-2.0 — an open-source self-hosted infrastructure project.",
+      "note": "not offered: no HIPAA/BAA is applicable/published for a self-hosted open-source project.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/authentication.md",
+      "quote": "extract credential (Bearer / API Key) ... X-API-Key",
+      "note": "not offered: authentication is Bearer token / API Key based; no SAML/OIDC SSO documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/quickstart.md",
+      "quote": "provisioning a cloud server, enabling KVM via PVM, and installing Cube Sandbox on that server",
+      "note": "Self-hosted: the operator installs CubeSandbox on any server they choose, including in EU regions, so EU data residency is achievable by deployment choice rather than a vendor-managed region feature.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/lifecycle.md",
+      "quote": "Cube doesn't impose hard wall-clock ceilings (24h Pro / 1h Base) the way hosted e2b does. When you omit `timeout`, the effective idle TTL is set by your cluster operator ... NEVER_TIMEOUT (-1): Never time out — no idle reclamation",
+      "note": "No platform-enforced maximum session length; a sandbox can run indefinitely (NEVER_TIMEOUT) subject only to operator-configured idle policy.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/introduction.md",
+      "quote": "Hardware-Level Isolation: Each sandbox gets its own dedicated Guest OS kernel — no shared-kernel container escapes. Run untrusted LLM-generated code safely with hardware-enforced boundaries (KVM + eBPF).",
+      "note": "derived: each sandbox is a full KVM microVM with its own dedicated Linux guest kernel (not a shared-kernel container), and custom templates are built from arbitrary OCI/Dockerfiles (docs/guide/tutorials/bring-your-own-image.md) with root access implied by the base image tooling. Running a Docker daemon (namespaces/cgroups, no /dev/kvm needed) inside such a full guest kernel is standard and not architecturally blocked, but no official doc explicitly demonstrates `dockerd` running inside a tenant sandbox (only host-side/dev-VM Docker usage and OCI-image-as-template workflows are documented), so this is inferred rather than directly confirmed.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/TencentCloud/CubeSandbox/master/docs/guide/resource-metrics.md",
+      "quote": "Cubelet exposes CPU and memory metrics for running Cube sandboxes... http://<cubelet-node>:9998/v1/metrics/resource... cubesandbox_host_sandbox_cpu_usage_seconds_total, cubesandbox_host_sandbox_memory_current_bytes... metrics have only the sandbox_id label",
+      "note": "granularity: per-sandbox; cost: no; Prometheus-format endpoint returns per-sandbox resource usage (CPU time, memory, throttling, failures); no cost breakdown, only resource quantities",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://github.com/TencentCloud/CubeSandbox",
+  "locations_quote": "CubeSandbox itself is Apache-2.0 open source (self-host)... the hosted commercial counterpart (Tencent Cloud Agent Runtime / Agent Sandbox 'AGS') ... is left unpriced to avoid listing AGS twice.",
+  "locations_checked": "2026-10-01"
+}

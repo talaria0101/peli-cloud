@@ -1,0 +1,484 @@
+{
+  "id": "nodus-compute",
+  "name": "Nodus Compute",
+  "url": "https://www.nodus-compute.ai/pricing/",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "managed-sandbox",
+      "label": "Admitted managed sandbox",
+      "flags": [
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": null
+      },
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Final customer rates unknown; supply quotes are not all-in bill."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Unverified",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": 30
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": false,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "isolation": null,
+    "image_oci": true,
+    "snapshot_auto": true,
+    "own_agent_api": true,
+    "harness_api": false,
+    "egress_allowlist_level": "domain",
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "secret_proxy": "ai-only",
+    "volume_attach": true,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_on_demand": false,
+    "max_session_unlimited": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Published table says supply costs, NOT final all-in customer tariffs. Live meter separates compute/platform/storage/model/subscription charges. Do not rank the $0.0714 4/8 supply figure as a customer price.",
+    "CPU managed agent tools sandbox is gated by account admission and deployment qualification. Final billing can settle after completion; retained files keep billing. Legacy per-run budget fields do not enforce spend limits.",
+    "Sleep saves a verified project and releases compute; wake rebuilds tools/processes, not proof of memory snapshot.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Re-checked 2026-09-28: nodus-compute.ai/pricing still labels its CPU/GPU table \"supply costs\", not end-customer prices (e.g. 4 vCPU/16 GiB/64 GiB disk $0.1054/h supply); docs/concepts/costs gives no customer rate card. Kept unpriced.",
+    "Pricing page unchanged since 2026-09-28: still titled 'GPU and CPU supply costs.' with a 'Nodus supply' column next to Modal list prices; no customer rate card. The meter adds separate platform fees ('The meter separates compute, platform fees, storage, model and subscription charges'). Keep unpriced/beta.",
+    "Admission-gated preview: CPU agent sandboxes, managed agents and Workspaces all require 'account admission and deployment qualification'. Terms: 'Pilot / invite access may be limited or revoked' and 'During launch and pilot periods, no SLA applies'.",
+    "No per-run spend caps: legacy budget fields are ignored; work stops only when credits run out. Managed agents default to 0-4 workers; 'Requested warm workers can incur idle charges.'",
+    "GPU Workspaces (preview, 2026-09-24): saved project + GPU machine with browser editor/VS Code over SSH/JupyterLab; compute billed while running, saved files kept between sessions; no published customer rate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/nodus-compute",
+    "https://www.nodus-compute.ai/pricing/",
+    "https://www.nodus-compute.ai/docs/concepts/costs/",
+    "https://www.nodus-compute.ai/docs/guides/agent-sandboxes/",
+    "https://www.nodus-compute.ai/",
+    "https://www.nodus-compute.ai/docs/",
+    "https://www.nodus-compute.ai/llms.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 13,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/openapi.yaml",
+      "quote": "Whether Nodus periodically saves filesystem recovery state.",
+      "note": "OpenAPI SandboxContinuity.mode enum ['snapshotted','ephemeral'] defaults to 'snapshotted' (interval_s configurable) and SandboxLifecycle.on_idle defaults to 'suspend' (idle_timeout_s default 300); wake/host recovery restores saved project files. Files only: 'Snapshot recovery restores files, not arbitrary process memory' (durable-steps). Bootstrap 'does not make the root filesystem persistent', so this covers the workspace/project, not the whole root FS. Managed agents with checkpoint-v1 also auto-save NODUS_CHECKPOINT_DIR at each step/wait.",
+      "checked": "2026-09-29"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/source/guides/managed-agents.md",
+      "quote": "Accounts admitted to hosted model access can deploy the installed text assistant without uploading a project or providing a model API key.",
+      "note": "Managed durable agents API (client.agents.create/submit/runs/signal/pause/resume, sessions for ordered follow-ups, observations endpoint) runs your own entrypoint or Nodus's hosted 'nodus:claude-assistant-v1/v2' template (text-only Claude assistant, v2 delegates to specialist sub-agents; 'does not execute tools or browse'). Gated by account admission. No API to drive Claude Code/Codex/OpenCode CLIs inside a sandbox (those connect to Nodus from outside via MCP).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/managed-agents.md",
+      "quote": "Accounts admitted to hosted model access can deploy the installed text assistant without uploading a project or providing a model API key.",
+      "note": "Managed durable agents API (client.agents.create/submit/runs/signal/pause/resume, sessions for ordered follow-ups, observations endpoint) runs your own entrypoint or Nodus's hosted 'nodus:claude-assistant-v1/v2' template (text-only Claude assistant, v2 delegates to specialist sub-agents; 'does not execute tools or browse'). Gated by account admission. No API to drive Claude Code/Codex/OpenCode CLIs inside a sandbox (those connect to Nodus from outside via MCP).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "Allowlist mode supports HTTP and HTTPS clients that respect the supplied proxy environment variables. Only ports 80 and 443 are supported. Direct external sockets remain unavailable. Use hostnames without URL schemes or paths.",
+      "note": "policy.network enum ['deny','allowlist'], default 'deny' (OpenAPI); egress_allow exact hostnames or *.subdomain wildcards; preset network_permissions (github, python_packages, node_packages, openai, anthropic). Private/metadata addresses always blocked; sandbox.egress_denied events report denied hostnames. Enforced by provider proxy.",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "Use hostnames without URL schemes or paths. An exact name permits only that host.",
+      "note": "Host-level only; no method/path/header rules.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/source/guides/services.md",
+      "quote": "Nodus forwards authenticated requests over the runtime relay. There is no inbound guest networking.",
+      "note": "Sandbox ports are reachable only via /v1/sandboxes/{id}/ports/{port}/{path} with the Nodus bearer token (64 KiB bodies, no WebSockets/streaming, 15 s deadline); Authorization/Cookie headers never reach the guest. No public URLs. GPU workspaces use editor/notebook URLs and SSH with admitted public keys.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "Use a published image with an explicit non-root `USER`, a writable working directory and the programs your agent will execute.",
+      "note": "Sandbox images must run as non-root ('A root-only base image must be rebuilt with a non-root user'), so nftables/iptables inside is not possible. Isolation technology not documented. GPU workspaces (SSH) not checked for root.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://nodus-compute.ai/docs/source/guides/managed-agents.md",
+      "quote": "The call accepts no destination URL or provider credential. It uses the assigned private session, so never put your account API key in the agent project.",
+      "note": "Model broker (nodus.agent.complete_model / nodus.agent.model) and hosted model access give managed agents LLM calls without a model key in the sandbox; broker is 'unavailable by default' (separate admission). General tenant secrets are NOT proxied: 'Commands receive each value as an environment variable and as a file' (secrets reference), with output redaction. DB connections run query imports on the control plane so 'the database credential never reaches the workload' (connections guide) but that is an import, not an outbound proxy; wandb keys are injected as env.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/source/workspaces.md",
+      "quote": "A volume is a named store that a sandbox mounts to keep selected files between sandbox identities.",
+      "note": "client.volumes.create(name, size_gb) then sandboxes.create(workspace={name, mount}); saved as archives ('Periodic saves preserve the latest useful archive'), not a block device. Storage billing disabled unless a price is configured. GPU workspaces have separate saved project files.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/workspaces.md",
+      "quote": "One live sandbox can write a volume. A conflict includes its current holder ID.",
+      "note": "Single-writer; must wait for the holder to terminate before attaching elsewhere. No read-only multi-attach documented.",
+      "checked": "2026-09-29"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "Use a published image with an explicit non-root `USER`, a writable working directory and the programs your agent will execute.",
+      "note": "not offered: sandboxes require a non-root user and no docker-in-docker / container-runtime-inside-sandbox capability is documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "A root-only base image must be rebuilt with a non-root user before submission.",
+      "note": "not offered: no /dev/kvm or nested-virtualization capability is documented; sandboxes explicitly disallow root.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/workspaces.md",
+      "quote": "A workspace is a saved project plus a GPU machine you can open in VS Code, JupyterLab or SSH.",
+      "note": "not offered: outside the product's scope. Access is a browser code editor / notebook / SSH, not a graphical desktop (VNC/RDP/stream).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: outside the product's scope. Nodus is a GPU/CPU workload and sandbox execution platform; no managed browser is documented.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: outside the product's scope; no screenshot/click driving API is documented.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: outside the product's scope (GPU/CPU compute + agent sandboxes, not a browser/stealth product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: outside the product's scope (GPU/CPU compute + agent sandboxes, not a browser automation product).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "Allowlist mode supports HTTP and HTTPS clients that respect the supplied proxy environment variables. Only ports 80 and 443 are supported.",
+      "note": "Egress is proxied through Nodus's own infrastructure/relay across pooled GPU/CPU suppliers; no residential/mobile IP feature is documented, consistent with ordinary datacenter egress. No published IP list.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/source/workspaces.md",
+      "quote": "Every workspace serves VS Code, JupyterLab and SSH. SSH needs a public key: pass `ssh_key` to admit one.",
+      "note": "Applies to GPU Workspaces; the CPU agent-sandbox product has no SSH (only exec/files APIs and an inbound relay, per services.md: 'There is no inbound guest networking.').",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/reference/parameters/continuity.md",
+      "quote": "Nodus requests saves and preserves completed versions.",
+      "note": "Checkpointing is automatic/interval-based (snapshot_auto) and tied to sandbox.sleep()/stop; no documented API call to trigger an ad hoc snapshot of a running machine on demand while it keeps running.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: no clone/fork-a-machine capability is documented anywhere in the SDK, CLI, or OpenAPI guides.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: no fork feature exists at all (see fork).",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/openapi.yaml",
+      "quote": "Snapshot recovery restores files, not arbitrary process memory.",
+      "note": "No fork feature exists, and even ordinary checkpoint/recovery only restores files, not process memory.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/source/guides/services.md",
+      "quote": "A suspended service returns `service_waking` and starts recovery. That request was not sent to the application. Retry after the sandbox becomes ready.",
+      "note": "An inbound request to a suspended HTTP service automatically starts sandbox recovery/wake.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/workspaces.md",
+      "quote": "`ws.configure(gpu_count=2)` changes the saved configuration for the next session.",
+      "note": "Resize only applies to the next (stopped) session, not to a running machine.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/plugins.md",
+      "quote": "Install Nodus in Codex, Claude Code or Cursor to run GPU workloads from your coding agent. The plugins include MCP tools and two skills for setup and workload execution.",
+      "note": "This connects external coding agents (Claude Code/Codex/Cursor) TO Nodus via MCP; it does not preinstall/offer a coding-agent harness template running inside a Nodus sandbox. The only sandbox-side agent template is 'nodus:claude-assistant-v1/v2', a text-only Q&A assistant that 'does not execute tools or browse', not a coding harness.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/services.md",
+      "quote": "The server binds a loopback HTTP port inside the sandbox. Nodus forwards authenticated requests over the runtime relay. There is no inbound guest networking.",
+      "note": "not offered: sandboxes have no public IPv4; all inbound access is via Nodus's authenticated relay (ports API) or, for GPU Workspaces, editor/SSH URLs, not a raw public IP.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "Allowlist mode supports HTTP and HTTPS clients that respect the supplied proxy environment variables.",
+      "note": "not offered: egress is via a shared allowlist proxy; no fixed/static outbound IP is published anywhere in docs.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: outside the product's scope. Mentions of Windows are only about the local client/CLI running on a customer's Windows machine, not a Windows sandbox/VM offering.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/pricing/",
+      "quote": "Run training, fine-tuning, batch GPU experiments and tool-driven agent sandboxes through one Python interface.",
+      "note": "not offered: outside the product's scope. Mentions of macOS are only about the local client/CLI running on a customer's Mac, not a macOS sandbox/VM offering.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://nodus-compute.ai/llms-full.txt",
+      "quote": "macOS or glibc Linux, on Intel or ARM64:",
+      "note": "This describes the local CLI installer's supported client architectures, not the sandbox/GPU machine architecture. No ARM64 sandbox/workload machine is documented; GPU catalog is all NVIDIA (x86 hosts).",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/pools.md",
+      "quote": "Pools register customer-owned GPU hosts for free, read-only measurement on deployments where Compute is enabled. Your existing scheduler continues running your workloads.",
+      "note": "Pools let you register your own GPU hosts for measurement/advisory use, but the Nodus control plane itself is a hosted SaaS; there is no documented way to self-host the platform.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/nodus-compute/Nodus-sdk-python",
+      "quote": "SDK source and examples: Public implementation, examples and release history.",
+      "note": "Only the Python client SDK is public on GitHub; the core sandbox/workload execution platform is closed-source.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/security",
+      "quote": "We are in pilot. No SOC 2, no ISO certification, no third-party penetration test, no external security assessment, and no claim to any of them.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/security",
+      "quote": "We are in pilot. No SOC 2, no ISO certification, no third-party penetration test, no external security assessment, and no claim to any of them.",
+      "note": "No BAA/HIPAA-eligibility is mentioned anywhere; the security page explicitly disclaims any compliance certifications during the pilot.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/security",
+      "quote": "People sign in to the console with an email and a bcrypt-hashed password and receive an expiring session token.",
+      "note": "Console auth is email/password only; no SAML/OIDC SSO is documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.nodus-compute.ai/security",
+      "quote": "The pilot has no private networking, VPC peering, IP allowlisting, or customer-managed encryption keys. Data at rest sits in managed Postgres and object storage under the provider's encryption, not a key you hold.",
+      "note": "A generic `data_regions` policy field exists but 'For the hosted service, contact Nodus for the enabled identifiers' — no region list or EU region is published anywhere, and the security page describes only a single pilot deployment with no region controls.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://nodus-compute.ai/docs/source/workspaces.md",
+      "quote": "Compute runs until you stop it or your account credit runs out. Sessions draw on account credit, and there is no per-session time or spending limit.",
+      "note": "GPU Workspaces have no session time limit. CPU agent sandboxes default `lifecycle.max_lifetime_s` (e.g. example shows 3600s/90000s) but that is a caller-set, not provider-enforced maximum; no documented hard cap on either product.",
+      "checked": "2026-09-30"
+    },
+    "root": {
+      "value": false,
+      "source": "https://nodus-compute.ai/docs/source/guides/agent-sandboxes.md",
+      "quote": "Use a published image with an explicit non-root `USER`, a writable working directory and the programs your agent will execute. ... A root-only base image must be rebuilt with a non-root user before submission.",
+      "note": "Docs explicitly require non-root USER for custom sandbox images; root-only base images are rejected until rebuilt. Confirms root:false.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://nodus-compute.ai/docs/concepts/costs/",
+      "quote": "Nodus records usage as your work runs. The meter separates compute, platform fees, storage, model and subscription charges. Sandbox handles expose charge_state and final_charge_usd directly. GET /v1/workloads/{id} and GET /v1/workloads/{id}/ledger return per-workload billing data.",
+      "note": "granularity: per-sandbox; cost: yes; REST API endpoints (GET /v1/workloads/{id}, GET /v1/workloads/{id}/ledger) and Python SDK methods (workload.cost_now_usd, workload.meter, workload.ledger()) provide programmatic access to billable usage per workload/sandbox. Meter includes: settled_usd, final_charge_usd, charge_state (estimated/final), and itemized charges (compute_settled_usd, platform_fee_settled_usd, storage_settled_usd, model_settled_usd).",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://www.nodus-compute.ai/security",
+  "locations_quote": "For the hosted service, contact Nodus for the enabled identifiers",
+  "locations_checked": "2026-10-01"
+}

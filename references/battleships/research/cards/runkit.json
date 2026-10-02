@@ -1,0 +1,192 @@
+{
+  "id": "runkit",
+  "name": "RunKit",
+  "url": "https://runkit.com/",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "notebooks",
+      "label": "JavaScript notebooks",
+      "flags": [
+        "alt",
+        "legacy"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Unverified",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": null,
+    "macos": null,
+    "arm64": null,
+    "gpu": null,
+    "snapshot": null,
+    "pause_resume": null,
+    "fork": null,
+    "persistent_disk": null,
+    "volumes": null,
+    "auto_stop_idle": null,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": null,
+    "nested_virt": null,
+    "root": null,
+    "systemd": null,
+    "browser": null,
+    "desktop": null,
+    "computer_use": null,
+    "code_interpreter": null,
+    "agent_harnesses": null,
+    "ssh": null,
+    "public_ipv4": null,
+    "inbound_https": null,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": null,
+    "static_egress_ip": null,
+    "private_network": null,
+    "self_host": null,
+    "byoc": null,
+    "open_source": null,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": null,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": null,
+    "wake_on_request": null,
+    "live_resize": null,
+    "fork_running": null,
+    "memory_snapshot_fork": null,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": null,
+    "harness_api": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Service offline (checked live 2026-09-29): runkit.com, runkit.io, embed.runkit.com and tonicdev.com all return HTTP 503 from the AWS load balancer, the runkit.com TLS certificate expired 2026-01-18, and discuss.runkit.com/status.runkit.com do not answer. Wayback shows the last HTTP 200 of runkit.com/home on 2025-10-14 and 503 from 2026-01-12 onward. No official shutdown notice was found; blog.runkit.com last post is 2018-12-10 and the runkitdev GitHub org was last pushed 2023-12. RunKit (ex-Tonic, YC S16) was acquired by Stripe. It never published a paid tariff: it was a free Node.js notebook, Embed and Endpoint (beta, non-commercial) service.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Historic limits, from the archived official docs (Wayback 2025-10-18, not live): RunKit Endpoint was a beta. 'Requests must terminate within 60 seconds. Endpoints are rate limited, and during the beta period they are restricted to non-commercial use.' Commercial use or higher limits were by contact only. No price was ever published."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/runkit",
+    "https://runkit.com/",
+    "https://blog.runkit.com/"
+  ],
+  "audit_2026_09_29": {
+    "applied": 3,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "status": "offline: all domains HTTP 503 since 2026-01 and TLS certificate expired; no official shutdown notice (treat as discontinued)",
+  "feature_evidence": {
+    "harness_api": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "Node.js notebook/Embed/Endpoint service (2015-2025) predating coding-agent harnesses; no agent features. Service offline.",
+      "checked": "2026-09-29"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://runkit.com/",
+      "quote": "It never published a paid tariff: it was a free Node.js notebook, Embed and Endpoint (beta, non-commercial) service.",
+      "note": "granularity: none; cost: no; Service offline since 2026-01 (HTTP 503); was free with no usage API. Endpoint was rate-limited beta feature restricted to non-commercial use, but no billing/usage endpoint was documented.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "Service offline; no documented regions list found in available sources",
+  "locations_quote": "Service offline (checked live 2026-09-29): runkit.com, runkit.io, embed.runkit.com and tonicdev.com all return HTTP 503 from the AWS load balancer",
+  "locations_checked": "2026-10-01"
+}

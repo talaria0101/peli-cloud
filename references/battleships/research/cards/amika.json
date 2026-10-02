@@ -1,0 +1,507 @@
+{
+  "id": "amika",
+  "name": "Amika",
+  "url": "https://www.amika.dev/pricing",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.1008,
+      "ram_gib_h": 0.0324,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 1.5768,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 5,
+      "per_seat": null,
+      "concurrency": 2,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Developer (one user)",
+      "fee": 30,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 15,
+      "per_seat": 30,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Team (one user)",
+      "fee": 100,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 50,
+      "per_seat": 100,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "isolation": "vm",
+    "image_oci": false,
+    "snapshot_on_demand": true,
+    "harness_api": true,
+    "secret_proxy": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "snapshot_auto": true,
+    "volume_attach": true,
+    "volume_shared": true,
+    "own_agent_api": false,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "max_session_unlimited": true,
+    "egress_ip_type": "datacenter",
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "BYO LLM keys; no token markup. Allocated-vs-utilized CPU wording not specified: conservatively model allocated.",
+    "Storage table conflicts by 10x: $0.00216/GiB-h vs $0.00000006/GiB-s (= $0.000216/h) (re-checked 2026-09-28, still inconsistent). Card uses the higher per-hour figure ($1.5768/GiB-month).",
+    "Per-user plan credits apply CPU/RAM/storage; Developer $30/user includes $15, Team $100/user includes $50. Concurrency Developer 10/user, Team advertised unlimited.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Storage $0.00216/GiB-h (= $1.5768/GiB-month) per amika.dev/pricing; whether stopped sandboxes keep paying storage is unstated.",
+    "Docs 2026-09-28: SSH into a rig documented (guides/ssh-and-connect); presets (coder, coder-plus-docker) list dev tooling and Docker but no desktop/VNC or browser. Snapshots are reusable base images; their storage price and egress price are not published (null).",
+    "Hosted rigs run on third-party sandbox providers chosen per rig: API `provider` possible values \"daytona\", \"e2b\", \"freestyle\", \"vercel\"; size 'defaults to that provider's medium tier'. Isolation therefore depends on the provider (Daytona containers/VMs, E2B/Vercel Firecracker), and the card's single 'vm' isolation and single rate are an abstraction; per-size vCPU/RAM specs (xs/m/l/xl = a0.*, a1.*) are not published (dashboard tooltip only).",
+    "Plan-gated features: custom container images and snapshots require Developer+; warmed sandboxes, custom network/access rules, MCP libraries, agentic CI require Team; BYOC/BYO sandboxes, GPUs, SSO, audit logs, SLA require Enterprise. Free plan is single-member orgs only, 2 concurrent, 25 stored sessions.",
+    "Terms: monthly subscription, auto-charged monthly; 'Limitations are per plan tier, with overage allotments'; price changes need 30 days notice."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/amika",
+    "https://www.amika.dev/pricing",
+    "https://docs.amika.dev",
+    "https://www.amika.dev/",
+    "https://docs.amika.dev/guides/ssh-and-connect.md",
+    "https://docs.amika.dev/reference/presets.md"
+  ],
+  "fleet": {
+    "default_max_instances": 2,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Free: 2 concurrent; Developer: 10/user ($30/user/month); Team: advertised unlimited concurrency ($100/user/month); Enterprise custom resources/BYOC.",
+    "notes": "Plan concurrency is published; unlimited is a plan description, not a capacity reservation for 300/1,000 machines. Separate account aggregate vCPU/GPU quotas, onboarding verification and upgrade timing not published in inspected sources.",
+    "sources": [
+      "https://www.amika.dev/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 11,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 4
+  },
+  "feature_evidence": {
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.amika.dev/guides/create-a-snapshot",
+      "quote": "A snapshot captures a configured rig's filesystem as a reusable base image. New rigs that boot from it start with your dependencies, tools, and environment already in place",
+      "note": "Filesystem only (no memory). Source rig must be running. CLI `amika snapshot create`, web UI, or `POST /sandbox-snapshots`. Modes: scrub_and_delete (strips injected secrets, deletes source rig) or full (keeps rig running). New rigs boot from it (template); per-repo default snapshot; changelog: snapshots work across repos. Hosted-cloud only, Developer plan and up.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.amika.dev/guides/send-a-message-to-an-agent",
+      "quote": "Once you have a running rig, you can drive its coding agent (Claude Code, Codex, OpenCode, etc.) by sending a single prompt synchronously.",
+      "note": "REST + TS SDK + CLI: `POST /rigs/{id}/agent-send` (blocking), `agent-send-jobs` (async), `POST /agent-sessions/stream` (\"Send a message to a coding agent, streaming the reply (SSE)\"), `GET /agent-sessions/{id}/events` (SSE), session list/get/patch, resume by session id or --new-session. Harnesses: Claude Code (default), Codex, OpenCode, Pi (architecture doc also lists custom agents via Agent Communication Protocol). Also Slack/Linear/GitHub triggers.",
+      "checked": "2026-09-29"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.amika.dev/architecture/roadmap",
+      "quote": "Network Proxy\n\n*Early design. Open-source status TBD.*",
+      "note": "Request-level network authorization/mutation proxy is a roadmap item (\"Set authorization rules at the network layer\"), not shipped; homepage says \"coming soon\".",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/env-vars-and-secrets",
+      "quote": "Secrets are resolved at rig creation time and **copied into the rig VM**, where they are readable as environment variables from inside the rig.",
+      "note": "Vault secrets and agent credentials (Claude/Codex OAuth or API key) are injected as env vars/credential files; MCP OAuth tokens are written into ~/.claude/.config.json. Tokenized secrets swapped by a network proxy is a roadmap item (\"Secrets Vault ... Early design\"); homepage: \"Hidden secrets ... (coming soon)\".",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.amika.dev/reference/presets",
+      "quote": "A preset selects the prebuilt environment that boots a rig... Use `coder` for most repositories... `coder-plus-docker`... It does not support the `xs` size tier.",
+      "note": "Rigs boot only from Amika's `coder`/`coder-plus-docker` presets or a snapshot captured from one of those presets; the CLI's `--image` flag for arbitrary Docker/OCI images only applies to ephemeral `amika materialize` containers, not to rig VMs themselves.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.amika.dev/",
+      "quote": "Multiplayer cloud workstations for coding agents and humans... provision VMs, load them with your favorite agent(s) and your git repos, and then remote control the agents from any chat surface or app.",
+      "note": "not offered: outside the product's scope (a coding-agent dev workstation, not a browser/stealth-scraping product)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.amika.dev/",
+      "quote": "Multiplayer cloud workstations for coding agents and humans... provision VMs, load them with your favorite agent(s) and your git repos, and then remote control the agents from any chat surface or app.",
+      "note": "not offered: outside the product's scope (a coding-agent dev workstation, not a browser automation/CAPTCHA product)",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.amika.dev/guides/rig-lifecycle",
+      "quote": "Stop to pause cost ... await amika.stopRig(name); ... Later: resume ... await amika.startRig(name);",
+      "note": "Filesystem/disk state is preserved automatically on `stop` and restored automatically on `start` with no separate snapshot API call needed (persistent_disk). This is disk-only; there is no evidence running-process/memory state is restored (fs snapshot, not mem).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.amika.dev/reference/cli",
+      "quote": "`--snapshot <slug>` ... Fork from a captured snapshot",
+      "note": "A new rig can be created (\"forked\") from a previously captured filesystem snapshot of another rig via `amika rig create --snapshot <slug>`.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/create-a-snapshot",
+      "quote": "A snapshot captures a configured rig's filesystem as a reusable base image. New rigs that boot from it start with your dependencies, tools, and environment already in place",
+      "note": "Forking requires first capturing a filesystem snapshot (an explicit step), then creating a new rig that boots from it as a base image; it is not an instant clone of a still-running machine's live state.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/create-a-snapshot",
+      "quote": "A snapshot captures a configured rig's filesystem as a reusable base image.",
+      "note": "Snapshots are filesystem-only (card feature `snapshot: \"fs\"`); no running-process/memory state is captured or restored when forking.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/rig-lifecycle",
+      "quote": "`stopped` | Paused. Can be resumed with `start`",
+      "note": "Stopped rigs must be explicitly resumed via `amika rig start` / `startRig()`; no docs mention a stopped rig auto-waking when an inbound HTTP/SSH request arrives.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.amika.dev/llms-full.txt",
+      "quote": "Mount persistent file volumes onto rigs and version and control the files. Mount parts of a Filesystem Volume to a rig; when the rig terminates, the files persist.",
+      "note": "Filesystem Volumes are attachable to rigs (`ro`/`rw`/`rwcopy` mount modes) and persist independently of any single rig.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.amika.dev/guides/rig-lifecycle",
+      "quote": "The CLI's `--delete-volumes` / `--keep-volumes` flags control what happens to associated volumes... When neither flag is set and the rig is the sole reference for a volume, you will be prompted to decide.",
+      "note": "Volume-deletion logic explicitly references volumes being \"referenced by other rigs\", implying the same Filesystem Volume can be mounted (at least read-only, per the `ro` mount mode) by more than one rig; concurrent multi-rig read-write mounting is not explicitly confirmed.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.amika.dev/reference/cli",
+      "quote": "Create, List, Connect, Delete, Stop, Start, SSH, Code, Agent Send",
+      "note": "The full set of documented `amika rig` subcommands has no resize/resource-update operation; `--size` is only set at `rig create` time, so changing CPU/RAM of a running rig without recreating it is not offered.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/send-a-message-to-an-agent",
+      "quote": "Once you have a running rig, you can drive its coding agent (Claude Code, Codex, OpenCode, etc.) by sending a single prompt synchronously.",
+      "note": "not offered: outside the product's scope. Amika's first-party API drives YOUR coding harness (Claude Code/Codex/OpenCode/Pi) inside the rig; it does not ship its own proprietary browser/computer-use/research task agent.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/mcp-integrations",
+      "quote": "Give sandboxed agents pre-authenticated access to external tools via MCP servers... Amika stores the OAuth token in the secrets vault, attaches it to each rig... and writes the MCP server configuration into the rig's `~/.claude/.config.json`",
+      "note": "Amika consumes/wires third-party MCP servers into agents running inside rigs; no evidence of Amika shipping its own MCP server that lets an external MCP client (e.g. Claude Desktop) create/control Amika rigs directly.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.amika.dev/reference/presets",
+      "quote": "Base: Ubuntu 24.04; Tools: Git, GitHub CLI, curl, zsh, build essentials, Python, Node.js 24, `npm`, `pnpm`, TypeScript, and `tsx`",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.amika.dev/reference/presets",
+      "quote": "Base: Ubuntu 24.04; Tools: Git, GitHub CLI, curl, zsh, build essentials, Python, Node.js 24, `npm`, `pnpm`, TypeScript, and `tsx`",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/ssh-and-connect",
+      "quote": "amika rig ssh dev-box",
+      "note": "SSH and HTTPS access are brokered through Amika's own SSH proxy/host-key pinning and `<rig>.preview.amika.dev` URLs rather than a raw per-machine public IPv4 address; no docs mention an assigned public IPv4 per rig.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.amika.dev/pricing",
+      "quote": "Custom network and sandbox access rules",
+      "note": "Listed as a Team-plan pricing feature (provider-side control of exposure). A specific instance already shipped: OpenCode's web console access is gated by a provider-managed username/password (docs.amika.dev/guides/opencode). A broader per-service public-vs-team-auth network proxy is separately described as \"Early design\" on the architecture/roadmap page, so full scope/maturity is unclear.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://docs.amika.dev/llms-full.txt",
+      "quote": "sudo apt-get update ... sudo env DEBIAN_FRONTEND=noninteractive apt-get install -y ...",
+      "note": "derived: rigs are full VMs with root/sudo access inside, so nftables/iptables are expected to work; not separately documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.amika.dev/pricing",
+      "quote": "Hosted rigs run on third-party sandbox providers chosen per rig: API `provider` possible values \"daytona\", \"e2b\", \"freestyle\", \"vercel\"",
+      "note": "No pricing/docs page advertises a fixed outbound IP; rigs run across multiple third-party hosted providers, making a stable per-rig egress IP unlikely and undocumented.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.amika.dev/reference/presets",
+      "quote": "### `coder` (default)... Base: Ubuntu 24.04",
+      "note": "not offered: outside the product's scope. Rigs boot from Linux (Ubuntu 24.04) presets only; the ARM64/x86_64 support mentioned in docs.amika.dev/install is for the Amika CLI binary's own host platform, not a Windows rig OS.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.amika.dev/reference/presets",
+      "quote": "### `coder` (default)... Base: Ubuntu 24.04",
+      "note": "not offered: outside the product's scope. Rigs boot from Linux (Ubuntu 24.04) presets only; macOS support in docs.amika.dev/install refers to the CLI binary's supported host platforms, not a macOS rig.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.amika.dev/install",
+      "quote": "Linux | x86_64, arm64 | macOS | x86_64 (Intel), arm64 (Apple Silicon)",
+      "note": "That table describes the Amika CLI binary's supported host platforms, not a rig CPU architecture option; no rig size/preset documentation mentions an ARM64 rig tier (sizes referenced are `a0.*`/`a1.*` with unpublished specs).",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.amika.dev/pricing",
+      "quote": "Enterprise ... Audit logs and compliance reports ... Advanced security and proxy support",
+      "note": "Enterprise tier advertises audit logs/compliance reports and \"advanced security\" generically, but no SOC 2 attestation, badge, or trust page was found on the pricing, privacy, or docs pages.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.amika.dev/pricing",
+      "quote": "Enterprise ... Dedicated support, security, and custom infrastructure.",
+      "note": "No HIPAA/BAA mention found on pricing, privacy, or docs pages.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.amika.dev/privacy",
+      "quote": "your information may be transferred to, stored, and processed by us in our facilities and by those third parties with whom we may share your personal information, in the United States and other countries.",
+      "note": "Privacy policy describes cross-border transfer to the US/other countries by default for EEA/UK/Switzerland residents, with no mention of an EU-region data residency option for rigs.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.amika.dev/sdks/typescript/types",
+      "quote": "interface CreateRigRequest { ... autoStopInterval?: number; autoDeleteInterval?: number; ... }",
+      "note": "No published hard maximum session length; rigs run until you (or your own configured `autoStopInterval` idle timeout) stop them, like a persistent VM — not a fixed platform-imposed cap.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/ssh-and-connect",
+      "quote": "Any editor that reads your `~/.ssh/config` and supports remote SSH can use the Amika-managed host alias. ... Use a browser: To work with an agent without a local editor, use the OpenCode web console.",
+      "note": "Amika rigs are headless Linux dev VMs accessed via SSH or an SSH-backed remote editor / OpenCode web console (a code editor UI, not a GUI desktop). No VNC/remote-desktop/GUI streaming feature is documented anywhere in the docs (checked create-a-rig, presets, ssh-and-connect, opencode, config-toml, roadmap); presets (coder, coder-plus-docker) list dev tooling and Docker only. Product is a coding-agent sandbox, not a virtual desktop, so 'no desktop' is correct.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://docs.amika.dev/guides/opencode",
+      "quote": "Rigs can serve OpenCode's web console so you can drive the agent from a browser. Access to that console is protected by a username and password you manage for your organization.",
+      "note": "The only 'browser' surface documented is a human using their own local browser to reach the OpenCode web console (an agent chat/code UI) or to complete OAuth logins; there is no first-party in-rig browser/browser-automation primitive (no Playwright/Puppeteer/Chrome-for-agents service, no headless browser API) anywhere in the docs, presets, or roadmap. So 'no browser' (in the sandbox-feature sense) is correct.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.amika.dev/reference/presets",
+      "quote": "presets (coder, coder-plus-docker) list dev tooling and Docker but no desktop/VNC or browser",
+      "note": "No computer-use / GUI-control capability (mouse/keyboard/screen tool for a desktop or browser) is documented anywhere in llms-full.txt, presets, config.toml reference, or the architecture/roadmap page; the roadmap only lists a network proxy and secrets vault as 'early design'. Product exposes coding-agent harness APIs (Claude Code/Codex/OpenCode) over SSH, not a computer-use surface, so 'no computer_use' is correct.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.amika.dev/pricing",
+      "quote": "Hosted rigs run on third-party sandbox providers chosen per rig: API `provider` possible values \"daytona\", \"e2b\", \"freestyle\", \"vercel\"",
+      "note": "derived: no Amika doc mentions /dev/kvm or running VMs/emulators inside a rig. Docker-inside is documented (docker_inside=true) but that only requires a container runtime, not KVM passthrough. Rigs are hosted on third-party providers (Daytona containers, E2B/Vercel Firecracker microVMs) which typically do not expose nested virtualization to the guest, so nested_virt is unlikely to be available and is undocumented either way.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://www.amika.dev/pricing",
+      "quote": "Hosted rigs run on third-party sandbox providers chosen per rig: API `provider` possible values \"daytona\", \"e2b\", \"freestyle\", \"vercel\"",
+      "note": "derived: Amika does not publish an explicit egress-IP-type page. Rigs run as VMs/containers on standard cloud infrastructure via Daytona/E2B/Freestyle/Vercel; there is no mention anywhere in docs.amika.dev or the pricing/architecture pages of residential or mobile proxying, so outbound traffic is standard cloud datacenter IP space.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://app.amika.dev/api/v0beta1/openapi.json",
+      "quote": "OpenAPI spec lists all endpoints: /rigs, /sandboxes, /agent-sessions, etc. No endpoints for /usage, /billing, /metrics, or cost queries per sandbox. Only cost_usd appears in agent session responses (LLM token costs).",
+      "note": "granularity: account-only; cost: no; Amika's REST API provides no endpoint to query billable sandbox/rig usage metrics (vCPU-seconds, memory-seconds, storage-seconds, cost). The API returns only LLM token costs in agent-session responses, not infrastructure usage. Pricing is by-resource (vCPU/GiB-hour rates listed on pricing page) but no programmatic query mechanism exists for individual sandbox usage; usage is only available through account dashboards and invoices.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.amika.dev/guides/create-a-rig.md",
+  "locations_quote": "By default everything runs on the hosted platform at app.amika.dev. Hosted rigs run on third-party sandbox providers chosen per rig: API provider possible values daytona, e2b, freestyle, vercel.",
+  "locations_checked": "2026-10-01"
+}

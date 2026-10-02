@@ -1,0 +1,1030 @@
+{
+  "id": "aws-workspaces",
+  "name": "Amazon WorkSpaces Personal (Windows)",
+  "url": "https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/",
+  "category": "windows",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "always-on-commit",
+      "label": "AlwaysOn monthly bundle (licence included, us-east-1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Value (1 vCPU / 2 GB)",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 90,
+          "hour": 0.034247,
+          "month_cap": 25
+        },
+        {
+          "name": "Standard (2 vCPU / 4 GB)",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 90,
+          "hour": 0.045205,
+          "month_cap": 33
+        },
+        {
+          "name": "Performance (2 vCPU / 8 GB)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 90,
+          "hour": 0.061644,
+          "month_cap": 45
+        },
+        {
+          "name": "Power (4 vCPU / 16 GB)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 90,
+          "hour": 0.09589,
+          "month_cap": 70
+        },
+        {
+          "name": "PowerPro (8 vCPU / 32 GB)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 90,
+          "hour": 0.173973,
+          "month_cap": 127
+        },
+        {
+          "name": "GeneralPurpose.4xlarge (16 vCPU / 64 GB, 175+100 GB)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 275,
+          "hour": 0.40411,
+          "month_cap": 295
+        },
+        {
+          "name": "GeneralPurpose.8xlarge (32 vCPU / 128 GB, 175+100 GB)",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 275,
+          "hour": 0.808219,
+          "month_cap": 590
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "Flat monthly per desktop regardless of use. Not prorated except in the first month: deleting a desktop mid-month still bills the full month. Switching from AlwaysOn to AutoStop takes effect the next month. Bundle/volume changes are prorated per day.",
+      "min_billed_seconds": 0,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Official AWS WorkSpaces price JSON (us-east-1, 'Windows <bundle> AlwaysOn Billed by the month Included'), cheapest storage option root 80 GB + user 10 GB (GP bundles 175+100 GB). More storage raises the monthly price (e.g. Standard 80/50 = $35). Windows desktop experience on Windows Server; licence included."
+    },
+    {
+      "key": "on-demand",
+      "label": "AutoStop: monthly fee + hourly (licence included, us-east-1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Value (1 vCPU / 2 GB)",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 90,
+          "hour": 0.22,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "Standard (2 vCPU / 4 GB)",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 90,
+          "hour": 0.3,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "Performance (2 vCPU / 8 GB)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 90,
+          "hour": 0.47,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "Power (4 vCPU / 16 GB)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 90,
+          "hour": 0.68,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "PowerPro (8 vCPU / 32 GB)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 90,
+          "hour": 1.53,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "GeneralPurpose.4xlarge (16 vCPU / 64 GB, 175+100 GB)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 275,
+          "hour": 2.28,
+          "month_cap": null,
+          "month_fee_per_instance": 19
+        },
+        {
+          "name": "GeneralPurpose.8xlarge (32 vCPU / 128 GB, 175+100 GB)",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 275,
+          "hour": 4.56,
+          "month_cap": null,
+          "month_fee_per_instance": 19
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "boot_overhead_s": 90,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Hourly rate plus a fixed monthly fee per desktop ($7.25 at 80+10 GB, $9.75 at 80+50, $13 at 80+100, $19 at 175+100). The fee is charged even if the desktop never runs. Partial hours are billed as a full hour (official). AutoStop stops the desktop only after the AutoStop Time following DISCONNECT. That time defaults to 60 min and is configurable only in 60-minute steps, so every session pays at least one extra idle hour unless the caller stops the desktop via the StopWorkspaces API. Resume takes typically under 90 s. GPU and GeneralPurpose bundles do not hibernate on AutoStop, so in-memory state is lost (disk is kept). Stopped desktops pay only the monthly fee; switch to AlwaysOn above the break-even (Power: ~92 h/month)."
+    },
+    {
+      "key": "linux-always-on",
+      "label": "AlwaysOn monthly bundle, Ubuntu Linux (us-east-1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "requires_always_on": true,
+      "sizes": [
+        {
+          "name": "Value (1 vCPU / 2 GB)",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 90,
+          "hour": 0.031507,
+          "month_cap": 23
+        },
+        {
+          "name": "Standard (2 vCPU / 4 GB)",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 90,
+          "hour": 0.042466,
+          "month_cap": 31
+        },
+        {
+          "name": "Performance (2 vCPU / 8 GB)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 90,
+          "hour": 0.058904,
+          "month_cap": 43
+        },
+        {
+          "name": "Power (4 vCPU / 16 GB)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 90,
+          "hour": 0.093151,
+          "month_cap": 68
+        },
+        {
+          "name": "PowerPro (8 vCPU / 32 GB)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 90,
+          "hour": 0.171233,
+          "month_cap": 125
+        }
+      ],
+      "granularity_s": 3600,
+      "min_billed_seconds": 0,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Ubuntu (22.04/24.04) bundles, root 80 GB + user 10 GB. Amazon Linux bundles are $2/month cheaper (Value $21, Standard $29, Performance $41, Power $66, PowerPro $123). RHEL is +$1 over Amazon Linux-ish (Standard $32) and Rocky Standard is $30. Ubuntu GeneralPurpose 16/64 $284 and 32/128 $568 exist only in us-east-2 and ap-southeast-5 in the price JSON."
+    },
+    {
+      "key": "linux-autostop",
+      "label": "AutoStop: monthly fee + hourly, Ubuntu Linux (us-east-1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "requires_always_on": false,
+      "sizes": [
+        {
+          "name": "Value (1 vCPU / 2 GB)",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 90,
+          "hour": 0.19,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "Standard (2 vCPU / 4 GB)",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 90,
+          "hour": 0.28,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "Performance (2 vCPU / 8 GB)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 90,
+          "hour": 0.45,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "Power (4 vCPU / 16 GB)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 90,
+          "hour": 0.66,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        },
+        {
+          "name": "PowerPro (8 vCPU / 32 GB)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 90,
+          "hour": 1.51,
+          "month_cap": null,
+          "month_fee_per_instance": 7.25
+        }
+      ],
+      "granularity_s": 3600,
+      "min_billed_seconds": 3600,
+      "start_fee": 0,
+      "boot_overhead_s": 90,
+      "multiplier": 1,
+      "note": "Same mechanics as the Windows AutoStop mode: partial hours are billed as full hours, there is a 60-min default idle tail after disconnect, and the fixed monthly fee is charged even if the desktop is never used. Amazon Linux hourly is $0.17/0.26/0.43/0.64/1.49."
+    },
+    {
+      "key": "gpu-always-on",
+      "label": "AlwaysOn GPU bundles, Windows licence included (us-east-1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "requires_always_on": true,
+      "plan_limits_exempt": true,
+      "sizes": [
+        {
+          "name": "Graphics.g6f.large (2 vCPU / 8 GiB / 1/8 L4)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 200,
+          "gpu": "L4",
+          "gpu_count": 0.125,
+          "hour": 0.264384,
+          "month_cap": 193
+        },
+        {
+          "name": "Graphics.g6f.xlarge (4 vCPU / 16 GiB / 1/8 L4)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "gpu": "L4",
+          "gpu_count": 0.125,
+          "hour": 0.379452,
+          "month_cap": 277
+        },
+        {
+          "name": "Graphics.g4dn (4 vCPU / 16 GiB / 1 T4)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "gpu": "T4",
+          "gpu_count": 1,
+          "hour": 0.735616,
+          "month_cap": 537
+        },
+        {
+          "name": "Graphics.g6.xlarge (4 vCPU / 16 GiB / 1 L4)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "gpu": "L4",
+          "gpu_count": 1,
+          "hour": 0.890411,
+          "month_cap": 650
+        },
+        {
+          "name": "Graphics.g6.2xlarge (8 vCPU / 32 GiB / 1 L4)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 250,
+          "gpu": "L4",
+          "gpu_count": 1,
+          "hour": 1.210959,
+          "month_cap": 884
+        },
+        {
+          "name": "Graphics.g6.4xlarge (16 vCPU / 64 GiB / 1 L4)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 350,
+          "gpu": "L4",
+          "gpu_count": 1,
+          "hour": 1.853425,
+          "month_cap": 1353
+        },
+        {
+          "name": "Graphics.g7.2xlarge (8 vCPU / 32 GiB / 1 RTX PRO 4500)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 250,
+          "gpu": "RTX PRO 4500",
+          "gpu_count": 1,
+          "hour": 3.795534,
+          "month_cap": 2770.74
+        }
+      ],
+      "granularity_s": 3600,
+      "min_billed_seconds": 0,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "The GPU quota for every Graphics bundle defaults to 0 per Region, so a quota ticket is required. AutoStop variants: g6f.large $20/month + $0.54/h, g4dn $22 + $1.54/h, g6.xlarge $20 + $1.80/h, g7.2xlarge $38.46 + $5.77/h (JSON shows $42.14 fee for us-east-1). G7 is only in us-east-1/us-east-2/us-west-2. No hibernation on AutoStop for GPU bundles. Full list (Gr6, g6.8x/16x, g7.4x-12x) is in raw/aws-workspaces-daas-pricing.txt."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 90,
+    "disk_gib_month": 0.1,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 100,
+    "egress_gib": 0.09,
+    "ipv4_month": 3.65,
+    "ipv4_available": true,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "Launch your WorkSpaces in private subnets and configure a NAT gateway in a public subnet in your VPC.",
+          "url": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-internet-access.html"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "AWS account (no plan fee)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Per-desktop pricing. Simple AD and AD Connector are included in WorkSpaces pricing. Only AWS Managed Microsoft AD costs extra. Requires an AWS Paid account plan (card on file)."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 200,
+    "note": "WorkSpaces Free Tier (once per account, new to WorkSpaces, starts at first launch and lasts 3 billing cycles). 2 Standard AutoStop WorkSpaces of any OS, 40 h combined per month. Plus 5 Performance AutoStop Ubuntu WorkSpaces, 100 h combined per month. The monthly infrastructure fee is waived. Unused hours do not roll over. Requires an AWS Paid plan (card)."
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "T4",
+      "L4",
+      "RTX PRO 4500 Blackwell"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": false,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": false,
+    "mcp_server": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "isolation": "dedicated-vm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "volume_shared": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [
+    {
+      "id": "region",
+      "label": "Region",
+      "kind": "select",
+      "min": null,
+      "max": null,
+      "step": null,
+      "default": 1,
+      "unit": null,
+      "options": [
+        {
+          "value": 1,
+          "label": "US East/West (N. Virginia, Ohio, Oregon)"
+        },
+        {
+          "value": 1.06,
+          "label": "EU (Ireland) (Power $74 vs $70)"
+        },
+        {
+          "value": 1.16,
+          "label": "EU (Paris) (Power $81.20)"
+        },
+        {
+          "value": 1.21,
+          "label": "EU (Frankfurt) (Power $85)"
+        },
+        {
+          "value": 1.36,
+          "label": "EU (London) (Power $95)"
+        },
+        {
+          "value": 1.54,
+          "label": "Asia Pacific (Tokyo) (Power $108)"
+        },
+        {
+          "value": 1.66,
+          "label": "Asia Pacific (Singapore/Mumbai) (Power $116)"
+        },
+        {
+          "value": 1.87,
+          "label": "South America (Sao Paulo) (Power $131)"
+        }
+      ],
+      "effect": "rate_factor",
+      "modes": null,
+      "map": null,
+      "why": "WorkSpaces prices differ by region. Factors are Windows Power AlwaysOn (80+10 GB) vs us-east-1 from the official price JSON (publication 2026-09-28). Ratios vary by bundle: Frankfurt Standard is x1.12, Power x1.21. AutoStop fees also rise (EU Frankfurt $9, Tokyo $10)."
+    }
+  ],
+  "caveats": [
+    "CORRECTION vs sweep: Standard 2 vCPU/4 GB is $33/mo AlwaysOn (not $31) and $7.25/mo + $0.30/h AutoStop (not $0.28/h), per AWS's official WorkSpaces price JSON fetched 2026-09-28.",
+    "AutoStop monthly fee (month_fee_per_instance) is not an engine field: add $7.25 (or $9.75/$19 for bigger storage) per desktop per month by hand.",
+    "No 4 vCPU / 8 GB bundle: 4 vCPU needs Power (16 GB).",
+    "Provisioning takes ~20+ min; AutoStop resume ~1-2 min; seat/desktop-oriented DaaS, not an API sandbox. No agent API.",
+    "Office/Visual Studio application bundles, BYOL Windows 10/11 and WorkSpaces Pools/Core not encoded.",
+    "Network egress for streaming is included; internet egress from the VPC (NAT etc.) is normal AWS data transfer, not encoded (null).",
+    "Not encoded: (1) Windows BYOL, $4 cheaper per month on the small bundles (Value $21, Standard $29, Performance $41, Power $66, PowerPro $123, GP $272/$544 AlwaysOn; hourly $0.17/0.26/0.43/0.64/1.49/2.20/4.40). It requires a minimum of 50 WorkSpaces per Region per month (GPU: 4 AlwaysOn or 20 AutoStop) on dedicated hardware, enabled via account manager or ticket, with a 6-month grace period. (2) WorkSpaces Pools: closed to new customers since July 31, 2026. (3) WorkSpaces Core bundles: BYOL-only, via a VDI partner. (4) Office/Visio/Project/Visual Studio add-ons ($8.77-$304.15/month), charged monthly even on AutoStop."
+  ],
+  "sources": [
+    "https://aws.amazon.com/workspaces/personal/pricing/",
+    "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/workspaces/USD/current/workspaces.json"
+  ],
+  "fleet": {
+    "default_max_instances": 1,
+    "default_max_vcpu": null,
+    "default_max_gpus": 0,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Personal details, email and phone; payment card may be required.",
+    "tiers": null,
+    "notes": "Default quota is 1 WorkSpace per Region (adjustable). GeneralPurpose.4xlarge/8xlarge: 1 each. Every Graphics bundle (g4dn, g6*, gr6*, g6f*, g7*): 0. Standby: 5. Custom images: 40. WorkSpaces API throttling: 2 calls per second. You can resize up only once per 6 h and down once per 30 days. Use Service Quotas to request increases; applied quota and regional availability must be checked.",
+    "sources": [
+      "https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-limits.html",
+      "https://docs.aws.amazon.com/general/latest/gr/wsp.html",
+      "https://aws.amazon.com/free/complete-signup/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 13,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 9
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html",
+      "quote": "When the WorkSpaces support hibernation, the state of the desktop is saved to the root volume of the WorkSpace. The WorkSpace resumes when a user logs in. All open documents and running programs return to their saved state",
+      "note": "AutoStop running mode only: triggered by the AutoStop timeout after disconnect (default 1 h) or a manual Stop; hibernation includes memory (running programs). Not for GPU bundles, GeneralPurpose.4xlarge/8xlarge, or Windows Server 2025 / Win11 24H2+ with nested virtualization. AlwaysOn never stops. Separately, automatic root+user volume snapshots every 12 h are used for Restore/Rebuild (scheduled backups, not this feature).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/create-custom-bundle.html",
+      "quote": "If you've launched a Windows or Linux WorkSpace and have customized it, you can create a custom image and custom bundles from that WorkSpace.",
+      "note": "Only as an image capture (CreateWorkspaceImage): disk only, root/OS volume ('A custom image contains only the OS, software, and settings'), no memory, no user volume; new WorkSpaces boot from it via a custom bundle (template). No user-triggered checkpoint of a specific WorkSpace: Restore/Rebuild only use the automatic 12-hourly snapshots.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/api/API_Operations.html",
+      "quote": null,
+      "note": "WorkSpaces API covers desktop lifecycle, images, bundles, IP groups, directories and pools only; no agent/harness operations. Seat-oriented DaaS.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-internet-access.html",
+      "quote": "you must ensure that the security group for your WorkSpaces allows outbound traffic on ports 80 (HTTP) and 443 (HTTPS) to all destinations (0.0.0.0/0)",
+      "note": "WorkSpaces sit in your VPC: security groups on the WorkSpace ENI (IP/CIDR/port egress rules), NACLs, and no-internet by omitting NAT/public IP. Domain-level via AWS Network Firewall domain-list rule groups ('You can create allow lists and deny lists with domain names', network-firewall docs) or Route 53 DNS Firewall in the same VPC; separately billed AWS services, not WorkSpaces settings.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-ip-access-control-groups.html",
+      "quote": "An IP access control group acts as a virtual firewall that controls the IP addresses from which users are allowed to access their WorkSpaces.",
+      "note": "IP access control groups (CIDR allowlist for streaming clients, up to 30 rules/group), plus VPC security-group inbound rules on the WorkSpace ENI; no public app ports by default (streaming gateway only).",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full VM (Windows Server-based desktop or Amazon Linux/Ubuntu/Rocky/RHEL) with its own kernel; with local admin/sudo, Windows Defender Firewall or iptables/nftables work. Not stated in docs.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://aws.amazon.com/workspaces/personal/pricing/",
+      "quote": "Amazon WorkSpaces Personal is a fully managed, persistent desktop virtualization service",
+      "note": "not offered: outside the product's scope. WorkSpaces Personal is a persistent Windows/Linux virtual desktop for human users, not an API-driven sandbox; there is no first-party proxy that injects HTTP/API credentials into the guest on a caller's behalf. Any credentials a user has (AD/IAM, application secrets) are configured inside the guest OS or via directory/AD integration, not via a secret-injecting network proxy. Checked the admin guide, API operations index, and VPC/networking pages; no credential-injection/secrets-proxy feature is documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html",
+      "quote": "WorkSpace root and user volumes come in set groups that can't be changed.",
+      "note": "Storage is fixed to one root + one user volume, each resizable up to 2000 GB (increase only). No extra EBS/network volume attach feature.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "dedicated-vm",
+      "source": "https://aws.amazon.com/workspaces/faqs/",
+      "quote": "WorkSpaces Personal is a fully managed virtual desktop service that allows seamless access to applications and resources for knowledge workers, developers, engineers, and other users who need a persistent desktop experience",
+      "note": "derived: each WorkSpace is a persistent, dedicated cloud desktop (EC2-family instance) assigned to one user, not a shared microVM/container runtime; AWS documents dedicated *physical* hardware only for the BYOL case, but the standard product is one full VM per WorkSpace.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/create-custom-bundle.html",
+      "quote": "If you've launched a Windows or Linux WorkSpace and have customized it, you can create a custom image and custom bundles from that WorkSpace.",
+      "note": "not offered: outside the product's scope. Custom images are captured from an existing running WorkSpace through AWS's own imaging pipeline; there is no way to launch a WorkSpace from a user-supplied Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://aws.amazon.com/workspaces/personal/pricing/",
+      "quote": "Amazon WorkSpaces Personal is a fully managed, persistent desktop virtualization service",
+      "note": "not offered: outside the product's scope. WorkSpaces is a virtual desktop/DaaS product for human users and admins, not a browser-automation/scraping product with bot-detection stealth features.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://aws.amazon.com/workspaces/personal/pricing/",
+      "quote": "Amazon WorkSpaces Personal is a fully managed, persistent desktop virtualization service",
+      "note": "not offered: outside the product's scope. No CAPTCHA-solving capability is documented; this is a persistent Windows/Linux desktop product, not a scraping/automation service.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-internet-access.html",
+      "quote": "you must ensure that the security group for your WorkSpaces allows outbound traffic on ports 80 (HTTP) and 443 (HTTPS) to all destinations (0.0.0.0/0)",
+      "note": "WorkSpaces sit in a customer VPC and egress through standard AWS datacenter IP ranges (NAT gateway/EIP); a fixed (static) outbound IP is achievable via a VPC NAT gateway, matching the card's static_egress_ip:true. No residential/mobile IP option exists.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html",
+      "quote": "When a user reconnects to a stopped WorkSpace, it resumes from where it left off, typically in under 90 seconds.",
+      "note": "AutoStop WorkSpaces automatically resume when a user simply connects/logs in again; no separate StartWorkspaces API call is required to wake it.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html",
+      "quote": "WorkSpace root and user volumes come in set groups that can't be changed.",
+      "note": "Each WorkSpace has its own dedicated root + user volume pair; there is no documented mechanism to mount one volume across multiple running WorkSpaces simultaneously.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html",
+      "quote": "the WorkSpace ... rebooted during the compute type change process.",
+      "note": "Changing compute type (vCPU/RAM bundle) can be requested while AVAILABLE or STOPPED, but the WorkSpace enters a 'Modifying Compute' state and is rebooted to apply the new size, so it is not a resize of a running machine without disruption.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/api/API_Operations.html",
+      "quote": null,
+      "note": "not offered: outside the product's scope. The WorkSpaces API only covers desktop lifecycle, images/bundles, IP groups, directories and pools — there is no first-party browser/computer-use/research agent API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/api/API_Operations.html",
+      "quote": null,
+      "note": "No MCP server shipped by AWS for controlling Amazon WorkSpaces was found in the WorkSpaces docs, API reference, or GitHub org (aws/aws-sdk / AWS Labs MCP servers cover other services, not WorkSpaces).",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html",
+      "quote": "A WorkSpace bundle is a combination of an operating system, and storage, compute, and software resources.",
+      "note": "not offered: outside the product's scope. Public bundles are plain Windows Server / Amazon Linux / Ubuntu / RHEL / Rocky desktop images; Python is not called out as preinstalled software, and Windows Server bundles ship without it by default.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html",
+      "quote": "A WorkSpace bundle is a combination of an operating system, and storage, compute, and software resources.",
+      "note": "not offered: outside the product's scope. Node.js is not part of the documented public bundle software; it would need to be installed manually or baked into a custom image/bundle.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-internet-access.html",
+      "quote": "you must ensure that the security group for your WorkSpaces allows outbound traffic on ports 80 (HTTP) and 443 (HTTPS) to all destinations (0.0.0.0/0)",
+      "note": "Egress control is at the VPC security-group/NACL (IP+port) level, or via separately billed AWS Network Firewall domain allow/deny lists — not HTTP method/path-level rules on WorkSpaces itself.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/running-mode.html",
+      "quote": "AlwaysOn — Use when paying a fixed monthly fee for unlimited usage of your WorkSpaces.",
+      "note": "No maximum continuous runtime is documented; an AlwaysOn WorkSpace runs indefinitely until the user/admin stops it, and even AutoStop WorkSpaces only stop after idle disconnection, not a hard session-length cap.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html",
+      "quote": "If you've launched a Windows or Linux WorkSpace and have customized it, you can create a custom image from that WorkSpace. A custom image contains only the OS, software, and settings for the WorkSpace.",
+      "note": "The only clone-like mechanism is CreateWorkspaceImage: an offline, disk/OS-only image used to launch brand-new WorkSpaces later, not a live fork/clone of a running desktop that keeps memory state or branches into a new running copy.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html",
+      "quote": "A custom image contains only the OS, software, and settings for the WorkSpace.",
+      "note": "No API or console action forks a currently-running WorkSpace into a second live instance; image capture is disk-only and requires a rebuild/new launch, not an instant running clone.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html",
+      "quote": "A custom image contains only the OS, software, and settings for the WorkSpace.",
+      "note": "Hibernation (AutoStop) snapshots memory to resume the *same* WorkSpace, but there is no feature to fork a new WorkSpace from a saved memory snapshot; custom images explicitly capture disk/OS state only, no memory.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/connect-to-linux-workspaces-with-ssh.html",
+      "quote": "If you or your users want to connect to your Linux WorkSpaces by using the command line, you can enable SSH connections. You can enable SSH connections to all WorkSpaces in a directory or to individual WorkSpaces in a directory. To enable SSH connections, you create a new security group or update an existing security group and add a rule to allow inbound traffic for this purpose.",
+      "note": "CORRECTION: SSH is an official, documented feature for Linux WorkSpaces (Amazon Linux/Ubuntu/RHEL/Rocky), enabled via a security-group inbound rule; users then connect with PuTTY or a Linux/macOS terminal.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://aws.amazon.com/workspaces/",
+      "quote": "WorkSpaces Desktop as a Service (DaaS) — Secure cloud desktops that scale instantly across any device",
+      "note": "WorkSpaces is a human-facing virtual desktop (streamed via PCoIP/DCV to a client app); there is no agent/computer-use API to programmatically observe the screen and drive mouse/keyboard, and the WorkSpaces API (lifecycle, images, bundles, directories, pools) has no such operation.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/modify-workspaces.html",
+      "quote": "WorkSpace root and user volumes come in set groups that can't be changed.",
+      "note": "Storage is fixed to exactly one root volume + one user volume per WorkSpace (each independently resizable up, no shrink); there is no attach/detach of extra block volumes (no EBS-style volume feature).",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-security-groups.html",
+      "quote": "You can add a default WorkSpaces security group to a directory... you assign the new security group to the elastic network interface (ENI) of the WorkSpace... add a rule to allow inbound traffic for this purpose.",
+      "note": "reviewed: proposed correction rejected (CORRECTION: each WorkSpace has a normal EC2-style ENI/security group. AWS documents opening inbound port 22 for SSH this exact way (see ssh claim); the same security-group mechanism lets an admin open inbound 443/HTTPS to a WorkSpace, especially once it has a public/Elastic IP (see public_ipv4). Not a built-in managed HTTPS ingress product feature (no managed TLS/cert service), but inbound HTTPS traffic to the desktop is achievable and documented via security groups, so 'false' undersells it.)",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-vpc.html",
+      "quote": "Alternatively, you can create a VPC with two public subnets for your WorkSpaces and associate a public IP address or Elastic IP address with each WorkSpace... Step 2: Assign public IP addresses to your WorkSpaces. You can assign public IP addresses to your WorkSpaces automatically or manually.",
+      "note": "CORRECTION: AWS explicitly documents assigning a public IPv4/Elastic IP address to a WorkSpace when it's launched in a public subnet, both automatically and manually via the EC2 console.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/api/API_Operations.html",
+      "quote": null,
+      "note": "The WorkSpaces API surface (browsed at this operations index) covers only desktop/directory/bundle/image/pool lifecycle calls; there is no agent-harness registration, execution, or orchestration API, and no first-party CLI-agent integration is documented anywhere in the admin guide.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html",
+      "quote": "WorkSpaces supports several different operating systems (OS)... Windows Server 2016... Windows Server 2019... Windows Server 2022... Windows Server 2025... Windows 10... Windows 11... Amazon Linux 2... Ubuntu 22.04 LTS... Ubuntu 24.04 LTS... Rocky Linux 8... Rocky Linux 9... Red Hat Enterprise Linux 8... Red Hat Enterprise Linux 9",
+      "note": "The full official list of supported WorkSpace operating systems is Windows and several Linux distributions only; macOS is not offered as a WorkSpace guest OS (macOS appears only as a supported *client* OS for connecting, per the networking page).",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-bundles.html",
+      "quote": "Supported bundles: Value, Standard, Performance, Power, PowerPro, GraphicsPro, Graphics G4dn, GeneralPurpose, Graphics G6, Graphics G7",
+      "note": "None of the officially listed WorkSpaces bundle families are Graviton/ARM-based; all documented bundles map to x86_64 EC2 instance families (the same naming used in the pricing JSON — Value/Standard/Performance/Power/PowerPro/GeneralPurpose/Graphics g4dn/g6/g7 are x86_64-only families). No ARM/Graviton WorkSpaces bundle is documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://aws.amazon.com/workspaces/",
+      "quote": "WorkSpaces Desktop as a Service (DaaS) — Secure cloud desktops that scale instantly across any device",
+      "note": "WorkSpaces is a fully-managed AWS service running only in AWS-operated infrastructure/Regions; there is no distributable software or on-prem deployment option (WorkSpaces Core, mentioned in caveats, is BYOL-of-the-guest-OS via a VDI partner, not self-hosting the WorkSpaces control plane itself).",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces-vpc.html",
+      "quote": "WorkSpaces launches your WorkSpaces in a virtual private cloud (VPC).",
+      "note": "WorkSpaces only launches into a VPC within the customer's own AWS account/Region (still AWS's cloud), not into another cloud provider or on-prem infrastructure the customer supplies; there is no bring-your-own-cloud/other-cloud deployment target.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://aws.amazon.com/workspaces/",
+      "quote": "WorkSpaces Desktop as a Service (DaaS) — Secure cloud desktops that scale instantly across any device",
+      "note": "WorkSpaces is a proprietary, closed AWS managed service; no source code, client, or server component is published under an open-source license by AWS.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetCostAndUsage.html",
+      "quote": "You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific time range... When you group by the TAG type and include a valid tag key, you get all tag values, including empty strings. You can specify which cost and usage-related metric that you want the request",
+      "note": "granularity: per-tag; cost: yes; AWS Cost Explorer API (GetCostAndUsage) supports grouping WorkSpaces costs by TAG dimension for billing breakdowns by customer/project. AWS Cost and Usage Reports (CUR) export includes lineItem/ResourceId field for per-WorkSpace cost tracking. Both return costs (BlendedCost, UnblendedCost in USD), not just usage quantities.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "ca-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "eu-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "eu-west-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Cape Town",
+      "provider_region": "af-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "ap-northeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "ap-northeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "ap-southeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "ap-southeast-5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "ap-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "sa-east-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.aws.amazon.com/general/latest/gr/wsp.html",
+  "locations_quote": "AWS Regions in the following table apply to WorkSpaces personal",
+  "locations_checked": "2026-10-01"
+}

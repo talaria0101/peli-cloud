@@ -1,0 +1,608 @@
+{
+  "id": "freestyle",
+  "name": "Freestyle",
+  "url": "https://www.freestyle.sh/pricing",
+  "category": "agent-sandbox",
+  "isolation": "bare-metal-vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand (allocated, per second)",
+      "pricing": "resource",
+      "vcpu_h": 0.04032,
+      "ram_gib_h": 0.0129,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 1,
+      "max_vcpu": 32,
+      "max_ram_gib": 64,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Same rates on Free/Hobby/Pro. Per-VM max depends on plan (Free 4/8, Hobby 8/16, Pro 32/64). Monthly allowances (200 vCPU-h, 400 GiB-h RAM, 60,000 GiB-h storage) are applied first on every plan. Paused VMs bill storage only. No idle timeout by default. Resize is up-only. Basis verified 2026-09-28: \"vCPU, memory and storage are all billed on the amount allocated to the VM for the time it is allocated — a reserved core is yours whether or not the guest is busy.\" ; \"A paused VM holds no compute reservation, so it bills only for storage while it sleeps.\" (https://www.freestyle.sh/docs/vms/pricing-and-limits).",
+      "features": {
+        "isolation": "bare-metal-vm"
+      },
+      "flags": [],
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "enterprise-active-cpu",
+      "label": "Enterprise active-CPU pricing",
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "active",
+      "ram_basis": "alloc",
+      "active_floor": null,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Enterprise contract only; rates unpublished. RAM basis under this option is not stated (assumed allocated).",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Docs: 'bill on measured CPU time rather than allocated vCPU'. Not priceable until sales quote. Basis verified 2026-09-28: \"Active CPU pricing — bill on measured CPU time rather than allocated vCPU, so you only pay for compute you actually use.\" (same URL). RAM basis and floor unpublished.",
+      "features": {
+        "isolation": "bare-metal-vm"
+      },
+      "flags": [
+        "sales"
+      ],
+      "cpu_class": "shared"
+    },
+    {
+      "key": "dedicated",
+      "label": "Enterprise node-based (dedicated capacity, flat rate)",
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "Enterprise: 'reserve dedicated capacity at a flat rate instead of per-resource usage billing'; separate 'commitment discounts' for usage/spend commitments. All rates unpublished.",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Not priceable; placeholder so the regime is visible.",
+      "features": {
+        "isolation": "bare-metal-vm"
+      },
+      "flags": [
+        "sales"
+      ],
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.06278,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.06278,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 500,
+    "egress_gib": 0.02,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "note": "Allowances are HARD STOPS (VMs paused when exhausted; no overage). 10 saved VMs, 10 snapshots, account totals 40 vCPU/80 GiB/320 GB, 32 GB disk/VM, 50 GB transfer (not 500). No custom sizing. Pricing page says no persistent VMs/snapshots; docs say persistent VMs are allowed.",
+      "flags": [],
+      "egress_cap_gib": 50
+    },
+    {
+      "name": "Hobby",
+      "fee": 50,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 40,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 16,
+      "sizes_allowed": null,
+      "note": "$50 minimum spend, fully usable as usage (applied after the free allowances). 200 saved VMs, 1,000 snapshots, 64 GB disk/VM, account 800 vCPU/1.56 TiB/3,125 GB (disk budget caps you at 97 default VMs saved).",
+      "flags": []
+    },
+    {
+      "name": "Pro",
+      "fee": 500,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 400,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "$500 minimum spend, fully usable as usage. 4,000 saved VMs, 12,000 snapshots, 256 GB disk/VM, account 16,000 vCPU/31.25 TiB/62,500 GB.",
+      "flags": []
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom limits (e.g. ubuntu-3xl 64 vCPU/128 GiB), active-CPU / node-based / commitment pricing, SAML SSO & SCIM, audit logs, 99.99% SLA. Pricing by quote.",
+      "flags": [
+        "sales"
+      ]
+    }
+  ],
+  "free": {
+    "monthly_credit": 18.38,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us"
+    ],
+    "soc2": null,
+    "hipaa": null,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": true,
+    "egress_http_rules": true,
+    "wake_on_request": true,
+    "live_resize": true,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": null,
+    "mcp_server": false,
+    "isolation": "bare-metal-vm",
+    "image_oci": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": "any-http",
+    "volume_attach": false,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "fast_boot": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": 9.64,
+    "cold_start_ms": null,
+    "burst_tti_ms": 1088.1,
+    "dax_s": null
+  },
+  "perf_source": "cpu_runs_s 9.64: hpc-sandbox-benchmarks (branch provider/ascii-box, docs/results/2026-08-24-cpu), measured 2026-08-24 on the platform default VM (4 vCPU / 8 GiB). burst 1,088.1 ms: ComputeSDK (github.com/computesdk/benchmarks results/) burst TTI 2026-09-25 (activated 2026-08-31). No cold-start or DAX result.",
+  "knobs": [
+    {
+      "id": "running_pct",
+      "label": "Share of session running (pause when idle)",
+      "kind": "slider",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 1,
+      "unit": "%",
+      "options": null,
+      "effect": "hours_factor",
+      "modes": [
+        "on-demand"
+      ],
+      "why": "Freestyle VMs bill allocated vCPU/RAM per second while running and have NO idle timeout by default; paused VMs bill storage only. Setting idleTimeoutSeconds (network-inactivity based) or calling vm.pause() between steps bills only the running share; 1 (default) = never paused.",
+      "source": "https://www.freestyle.sh/docs/vms/lifecycle"
+    }
+  ],
+  "caveats": [
+    "free.monthly_credit 18.38 = dollar value of per-resource allowances (200 vCPU-h $8.06 + 400 GiB-h RAM $5.16 + 60,000 GiB-h storage $5.16). The allowances are NOT fungible: each only offsets its own resource. They apply on every plan before the fee credit, and on Free they are hard caps.",
+    "egress_free_gib 500 applies to Hobby/Pro; Free includes 50 GB and stops there. Transfer counts bytes in BOTH directions (ingress too). VPC-internal traffic is free.",
+    "disk_gib_month = $0.000086/GiB-h x 730. Disk is billed on allocated size (default 32 GB) while running, paused or stopped. Ephemeral VMs (autoDeleteSeconds 0) stop billing disk when deleted. There is no per-sandbox free disk, but the 60,000 GiB-h monthly allowance covers ~82 GiB kept all month.",
+    "Retained state priced at the storage rate ($0.000086/GiB-h = $0.06278/GiB-month): docs say \"A paused VM holds no compute reservation, so it bills only for storage while it sleeps.\" Named-snapshot storage has no separate published price (only count limits 10/1,000/12,000); treated as the same storage rate (unverified). Whether a paused VM's saved RAM image counts as storage is undocumented.",
+    "No default idle timeout: VMs bill until paused/stopped/deleted. idleTimeoutSeconds is network-activity based, so CPU-only jobs can be paused. Marketing's ~30 s auto-suspend is not in the docs.",
+    "Enterprise active-CPU, node-based and commitment-discount rates are unpublished (modes left null).",
+    "Allowances were DAILY on an older pricing page (20 vCPU-h/40 GiB-h/16,800 GiB-h storage per day); they are now monthly (200/400/60,000). The change date is unknown.",
+    "No dedicated IPv4: every VM gets a public IPv6, and all VMs in an account share one outbound IPv4.",
+    "Regions not documented; 'us' inferred from the Latitude.sh San Jose peering note.",
+    "cold_start_ms: no computesdk cold-start run for freestyle (vendor claims ~65 ms); dax never succeeded in benchmarks.",
+    "free.monthly_credit ($18.38) values separate monthly resource allowances (200 CPU-h, 400 GiB-h RAM, 60,000 GiB-h disk per the 2026-09-24 capture); it is not a pooled spendable credit, so unused disk allowance cannot offset CPU in reality. A 2026-07-08 capture advertised per-day allowances (20 CPU-h / 40 GiB-h / 16,800 GiB-h disk); do not reuse current allowances for historical estimates. https://web.archive.org/web/20260708095940/https://www.freestyle.sh/pricing , https://web.archive.org/web/20260924112048/https://www.freestyle.sh/pricing",
+    "Order of credits is now documented: the per-resource allowances are applied first, and the Hobby/Pro fee is a floor on the remaining usage. Bill = max(fee, usage above allowances). An engine that computes max(fee, usage) - free.monthly_credit understates Hobby/Pro bills when usage is below the fee (e.g. Hobby at low usage: real $50, engine up to $31.62).",
+    "Base snapshot presets (boot sizes): busybox 1/0.125 GiB/1 GB, ubuntu-sm 2/4/16, ubuntu 4/8/32 (default), ubuntu-lg 8/16/64, ubuntu-xl 16/32/128, ubuntu-2xl 32/64/128, ubuntu-3xl 64/128/256 (Enterprise only). Free tops out at ubuntu, Hobby at ubuntu-lg, Pro at ubuntu-2xl. Any valid size up to the plan max is allowed, so resource pricing (vcpu_options null) stays correct."
+  ],
+  "sources": [
+    "https://www.freestyle.sh/pricing",
+    "https://www.freestyle.sh/docs/vms/pricing-and-limits",
+    "https://www.freestyle.sh/docs/vms/lifecycle",
+    "https://www.freestyle.sh/products/vms",
+    "https://apis.io/plans/freestyle-sh/freestyle-sh-plans-pricing/",
+    "https://www.computesdk.com/benchmarks/sandboxes/burst_tti/"
+  ],
+  "fleet": {
+    "default_max_instances": 10,
+    "default_max_vcpu": 40,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "No card to start. Adding a card causes a $1 verification charge automatically refunded; paid upgrades fund monthly usage minimums.",
+    "tiers": "Free 10 concurrent/10 saved; Hobby 40 concurrent/200 saved; Pro 400 concurrent/4,000 saved; Enterprise custom. Active CPU/RAM pools: Free 40 vCPU/80 GiB; Hobby 800 vCPU/1.56 TiB; Pro 16,000 vCPU/31.25 TiB. Disk budget counts all saved VMs.",
+    "notes": "10 fits Free if resources and usage suffice; 50/300 require Pro, 1,000 Enterprise. Separate aggregate resource and saved-VM/snapshot quotas apply; paused VMs free concurrent slots but remain saved.",
+    "sources": [
+      "https://www.freestyle.sh/docs/vms/pricing-and-limits",
+      "https://www.freestyle.sh/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 2,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://www.freestyle.sh/docs/vms/lifecycle",
+      "quote": "Configure an idle timeout to let Freestyle pause VMs that have no network activity. [...] A VM paused this way resumes on its next start, or on the next traffic that reaches it.",
+      "note": "Trigger: idleTimeoutSeconds (network-inactivity based; opt-in, no default) or maxRunSeconds; also Free-plan allowance exhaustion pauses VMs. Pause includes memory: 'Pausing freezes the VM and saves its memory. Starting it again resumes the same processes at the same point'. Wakes automatically on HTTP/VPC/tunnel traffic, exec, PTY, file writes.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://www.freestyle.sh/docs/vms/base-snapshots",
+      "quote": "capture its exact memory and disk. The source VM must be running or paused",
+      "note": "vm.snapshot() captures memory + disk of a running or paused VM; new VMs boot from it via vms.create({ snapshotId }) (fork/template; no single fork(count) call). Snapshots persist until deleted; count limits 10/1,000/12,000 by plan.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/run-claude-code-in-a-sandbox",
+      "quote": "Build a snapshot with Claude Code installed, then use that sandbox three ways: run a one-off prompt, attach an interactive terminal over the PTY API, and drive the CLI from the Claude Agent SDK running on your own machine — bridging the SDK's process to the VM through `spawnClaudeCodeProcess`.",
+      "note": "Only DIY guides (Claude Code, GitHub Copilot CLI, OpenClaw, T3 Code, OpenAI Agents SDK / Mastra adapters) built on generic exec/PTY; no first-party harness-driving API in the SDK/CLI docs. Nothing preinstalled.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://www.freestyle.sh/docs/guides/migrate-from-e2b",
+      "quote": "A Freestyle VM has none until a firewall rule allows it, and only allow rules exist. [...] `allowOut: [\"api.github.com\"]` | A TLS rule per exact domain, `destination: { public: true }` | `allowOut: [\"*.example.com\"]` | Not available yet; only exact names steer",
+      "note": "Default-deny: 'firewall is required on vms.create. A VM gets nothing implicitly — no outbound Internet, no inbound' (firewall page). IP level: allow rules by cidr/public/vmId/vpcId/tunnelId with port+protocol (tcp/udp/icmp). Domain level: TLS egress rule per exact hostname admits the VM to that domain via the edge with no broad Internet grant (steered via /etc/hosts; direct-IP dials still need a firewall grant). No wildcard domains, no deny rules. Outbound SMTP 25/465/587 always blocked.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://www.freestyle.sh/docs/vms/network/tls-outbound",
+      "quote": "An optional `match` beside `transform` selects which HTTP egress requests receive",
+      "note": "match on method + exact path selects which requests get transforms (header injection, RFC 6902 jsonPatch body rewrite); docs say 'Matching does not deny origin access' so match itself is not a deny rule. Actual HTTP-level enforcement: s3 transform scope ('Requests outside the bucket, key prefix, or operation allowlist return 403 before contacting S3') and jsonPatch 'test' op ('a failed test rejects the request'). No header-based matching; 'Freestyle currently supports method and exact path only.'",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.freestyle.sh/docs/vms/forward-auth",
+      "quote": "Forward auth lets your application decide whether each public HTTP request may reach a VM. Freestyle terminates HTTPS, asks your authorization endpoint, and forwards only allowed requests.",
+      "note": "Also firewall ingress rules by cidr/public/vmId/vpcId/tunnelId + port/protocol (default no inbound; e.g. 'Ping from one office range only' with source cidr 203.0.113.0/24), explicit per-port domain routing via inbound TLS rules, private VPCs and WireGuard tunnels. Edge-routed domains and SSH gateway bypass firewall rules by design ('Freestyle's Own Traffic Always Works').",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VM on bare metal with own kernel (6.1.0-15-freestyle) and passwordless sudo; WireGuard/eBPF in kernel. nftables/iptables not explicitly documented, but the router-VM guides configure in-guest routing/NAT.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://www.freestyle.sh/docs/vms/network/tls-outbound",
+      "quote": "Credential injection lets the VM authenticate without receiving the real API key or database password.",
+      "note": "TLS egress rules per exact domain with transform headers (arbitrary HTTP APIs; values write-only, read back as \"***\"), Postgres user/password injection (non-HTTP DB protocol covered), S3 SigV4 signing with bucket/prefix/operation scope, SOCKS5 proxy creds, SMTP brokered at edge, Git over HTTPS via header injection (guide). Requires trusting Freestyle CA in the VM; cert-pinning clients break. SSH-git not covered.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/migrate-from-e2b",
+      "quote": "Volumes and cloud buckets. Mount object storage from inside the VM with the tool of your choice, or share data between VMs over a VPC.",
+      "note": "Listed under 'Account For What Has No Equivalent'. Only root disk (grow-only live resize up to plan max 32/64/256 GB). S3 mount guide is DIY rclone FUSE.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/migrate-from-e2b",
+      "quote": "Volumes and cloud buckets. Mount object storage from inside the VM with the tool of your choice, or share data between VMs over a VPC.",
+      "note": "No first-party shared volume or bucket mount; DIY rclone S3 FUSE (read-write) with edge-scoped S3 credentials can emulate sharing.",
+      "checked": "2026-09-29"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.freestyle.sh/about.md",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks.",
+      "note": "not offered: outside the product's scope. Freestyle is generic Linux VM infrastructure; its browser guides (running Chromium/Chrome for computer use) are DIY installs with no stealth/fingerprint-evasion or bot-detection-avoidance feature documented anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.freestyle.sh/about.md",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks.",
+      "note": "not offered: outside the product's scope. No CAPTCHA-solving capability is mentioned anywhere in the docs, pricing, or guides; browsers inside the VM are entirely user-installed and DIY.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://www.freestyle.sh/docs/vms/pricing-and-limits",
+      "quote": "Data transfer is the one included amount that differs by plan... It counts bytes crossing the datacenter boundary in either direction.",
+      "note": "VMs run on Freestyle's own bare-metal datacenter infrastructure; every VM gets a public IPv6 and all VMs in an account share one outbound IPv4 (per card caveats, migrate-from-e2b guide) — a shared datacenter egress IP, not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.freestyle.sh/about.md",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks.",
+      "note": "not offered: outside the product's scope. Freestyle ships no first-party task/browser/computer-use agent of its own — only VM infrastructure plus DIY guides for running third-party coding agents (Claude Code, Copilot CLI, etc.) and browsers inside VMs via generic exec/PTY/CDP.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.freestyle.sh/docs/vms/lifecycle",
+      "quote": "maxRunSeconds | Pause after this many seconds in one run; starting again gives a fresh budget",
+      "note": "maxRunSeconds/maxRunTotalSeconds/idleTimeoutSeconds/ttlSeconds are all optional caller-set fields with no default; unset, a VM runs (and bills) indefinitely until explicitly paused, stopped, or deleted ('No default idle timeout: VMs bill until paused/stopped/deleted' per card). No provider-imposed maximum session length is documented for any plan.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/run-gnome-in-a-sandbox",
+      "quote": "The important dependencies are: gnome-session... tigervnc-standalone-server... novnc and websockify",
+      "note": "Freestyle offers no managed/first-party desktop. A 'How to Run GNOME in a Sandbox' guide shows users apt-get installing GNOME + TigerVNC + noVNC themselves inside a plain Linux VM; nothing is preinstalled or managed by Freestyle.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/vms/base-snapshots",
+      "quote": "All Ubuntu sizes include the same software... | Coding agents | claude, codex, opencode, and openclaw... |",
+      "note": "The 'What's Installed' inventory of the default freestyle/ubuntu base image lists Node/Python/coding-agent tooling but no browser (chromium/chrome/etc.). A separate guide (run-chromium-and-chrome-in-a-sandbox) shows installing a browser yourself via apt-get; it is not available/managed out of the box.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/run-chromium-and-chrome-in-a-sandbox",
+      "quote": "Build a Headed Browser for Computer Use. A browser-only agent does not need a full GNOME desktop. Use the Chromium snapshot from above, then add a small visible stack: Xvfb... Openbox... x11vnc... noVNC",
+      "note": "'Computer use' is a DIY guide (xdotool for mouse/keyboard, scrot for screenshots, Xvfb/x11vnc/noVNC) that the user builds and runs inside a generic VM; Freestyle has no first-party screenshot+click API.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/llms-full.txt",
+      "quote": "fromDockerfile | Build and run your Docker image inside the VM",
+      "note": "Docker is preinstalled and runs containers INSIDE the Linux VM (vm.exec(\"docker run ...\")); the VM itself always boots from a Freestyle base snapshot (Ubuntu/BusyBox), never directly from a user-supplied OCI/Docker image.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/migrate-from-e2b",
+      "quote": "Volumes and cloud buckets. Mount object storage from inside the VM with the tool of your choice, or share data between VMs over a VPC.",
+      "note": "Listed under 'Account For What Has No Equivalent' in the E2B migration guide; only the root disk exists (grow-only live resize). No attachable persistent volume product; matches existing feature_evidence.volume_attach/volume_shared in the card.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/vms/network/firewall",
+      "quote": "That is what makes a rule about your machines rather than about your topology: attaching a VM to a VPC later, or giving it a public IPv4, does not silently change which rules apply to it. ... its public IPv6 — so one rule covers both",
+      "note": "Each VM gets a public IPv6 address; per-machine public IPv4 is not offered (the account instead shares one outbound IPv4, see static_egress_ip).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://www.freestyle.sh/docs/guides/route-sandboxes-through-another-sandbox",
+      "quote": "The exit VM's own outbound address is what the internet sees. Every VM in your account already shares one outbound IPv4 address, so this pattern is for inspecting, filtering and attributing traffic rather than for changing the address it leaves from.",
+      "note": "Every VM in an account shares a single fixed outbound IPv4 address by default (the doc explicitly contrasts this with wanting to CHANGE the egress address, implying it is otherwise static/shared). This is a first-party fixed outbound IP, so static_egress_ip should be true, not false. It is account-wide/shared rather than per-VM-dedicated, which is worth noting.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://www.freestyle.sh/docs/vms/base-snapshots",
+      "quote": "freestyle/ubuntu — Ubuntu 24.04 with development tools preinstalled, and the default every guide assumes. systemd is pid 1, Docker runs from boot, and Node.js, Bun, Python, and coding agents are on PATH. ... | Coding agents | claude, codex, opencode, and openclaw, also installed in the shared Node tree |",
+      "note": "The default freestyle/ubuntu base snapshot (used by every VM unless overridden) ships Claude Code (claude), Codex (codex), OpenCode (opencode), and OpenClaw (openclaw) preinstalled and on PATH. This directly satisfies the definition ('coding agents preinstalled/offered as templates') and contradicts the card's false value.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/llms-full.txt",
+      "quote": "MCP servers or notebooks | Run the server or Jupyter in the VM and route a domain to it",
+      "note": "Freestyle only documents running the USER's own MCP server inside a VM; it does not ship a first-party Freestyle-hosted MCP server.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/run-android-in-a-sandbox",
+      "quote": "'hw.gpu.enabled=yes' 'hw.gpu.mode=swiftshader_indirect'",
+      "note": "The only 'gpu' reference in the docs is SwiftShader software (CPU-based) rendering for an Android emulator; no real GPU instance type is offered (features.gpu_types is empty and the plan/base-snapshot tables list only vCPU/RAM/disk).",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.freestyle.sh/llms.txt",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks.",
+      "note": "Product is explicitly Linux-only; base snapshots are Ubuntu/BusyBox only. No Windows machine type exists.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.freestyle.sh/llms.txt",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks.",
+      "note": "Same as windows: Linux-only VM product (Ubuntu/BusyBox base snapshots), no macOS machine type.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/guides/build-a-doordash-cli-sandbox",
+      "quote": "Freestyle VMs are x86_64 Linux, so the VM needs the linux-amd64 release — the darwin-arm64 tarball you may already have installed locally is a Mach-O binary and will not execute there.",
+      "note": "Explicit statement that Freestyle VMs run on x86_64 only; no arm64 instance type offered.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.freestyle.sh/about.md",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks. ... Documentation: freestyle.sh/docs",
+      "note": "Freestyle is offered only as a hosted API/platform (dash.freestyle.sh, per-second billing, plans). No mention anywhere in the docs of running the Freestyle control plane/hypervisor platform on the customer's own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.freestyle.sh/about.md",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks.",
+      "note": "No BYOC (deploy-into-customer's-cloud-account) offering found in docs, pricing, or Enterprise description (Enterprise adds SSO/SCIM/audit logs/custom limits/dedicated capacity, not a BYOC deployment model).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.freestyle.sh/about.md",
+      "quote": "Freestyle VMs are full Linux virtual machines designed for long running, complex tasks. Documentation: freestyle.sh/docs",
+      "note": "No OSI-licensed open-source repository for the core Freestyle VM platform found; the docs only reference third-party open-source software users may run inside their VMs (e.g. Hexclave/Stack Auth, Convex).",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/llms-full.txt",
+      "quote": "region San Jose. The S3 endpoint for that region is",
+      "note": "The only concrete Freestyle datacenter location named in the docs is San Jose (US); no EU region or data-residency option is documented anywhere in pricing/docs.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "on-demand": "dedicated",
+        "enterprise-active-cpu": "shared",
+        "dedicated": "dedicated"
+      },
+      "source": "https://www.freestyle.sh/docs/vms/pricing-and-limits",
+      "quote": "vCPU, memory and storage are all billed on the amount allocated to the VM for the time it is allocated — a reserved core is yours whether or not the guest is busy. ... Active CPU pricing — bill on measured CPU time rather than allocated vCPU, so you only pay for compute you actually use. ... Node-based pricing — reserve dedicated capacity at a flat rate instead of per-resource usage billing.",
+      "note": "on-demand: docs explicitly say a reserved core is yours regardless of guest activity -> dedicated. dedicated (enterprise node-based) mode explicitly reserves dedicated capacity -> dedicated. enterprise-active-cpu bills on measured/actual CPU time rather than a reserved allocation, implying the underlying cores are not exclusively reserved for the tenant while idle -> classified shared (medium confidence, inferred from billing model description; exact hardware allocation for this enterprise-only mode is not published).",
+      "checked": "2026-09-30"
+    },
+    "fast_boot": {
+      "value": true,
+      "source": "https://www.computesdk.com/benchmarks",
+      "quote": "burst of 100: p95 1242 ms, 100% started",
+      "note": "ComputeSDK sandbox benchmark 2026-09-25",
+      "checked": "2026-09-25"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/vms/pricing-and-limits",
+      "quote": "Usage is tracked on the dashboard and monthly invoices; no API endpoint for per-sandbox billable usage is documented in the pricing, API reference, or SDK docs.",
+      "note": "granularity: account-only; cost: no; Freestyle bills by plan (Free/Hobby/Pro/Enterprise) with per-resource pricing (vCPU-h, GiB-h RAM, GiB-h storage). The dashboard shows account-level usage and costs, but no documented REST/SDK/CLI endpoint to retrieve billable usage of individual sandboxes or sandbox groups identified by tag/label/project. The SDK and CLI docs (included in base snapshots) provide VM lifecycle/management but not billing queries.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": null,
+  "locations_quote": null,
+  "locations_checked": "2026-10-01"
+}

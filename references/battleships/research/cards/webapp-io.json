@@ -1,0 +1,284 @@
+{
+  "id": "webapp-io",
+  "name": "webapp.io",
+  "url": "https://webapp.io",
+  "category": "dev-env",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt",
+        "legacy"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Pro one member",
+      "fee": 15,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Team one member",
+      "fee": 39,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 12,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Scale",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": null,
+    "macos": null,
+    "arm64": null,
+    "gpu": null,
+    "snapshot": null,
+    "pause_resume": null,
+    "fork": null,
+    "persistent_disk": null,
+    "volumes": null,
+    "auto_stop_idle": null,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": null,
+    "nested_virt": null,
+    "root": null,
+    "systemd": null,
+    "browser": null,
+    "desktop": null,
+    "computer_use": null,
+    "code_interpreter": null,
+    "agent_harnesses": null,
+    "ssh": null,
+    "public_ipv4": null,
+    "inbound_https": null,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": null,
+    "static_egress_ip": null,
+    "private_network": null,
+    "self_host": null,
+    "byoc": null,
+    "open_source": null,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": null,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": null,
+    "wake_on_request": null,
+    "live_resize": null,
+    "fork_running": null,
+    "memory_snapshot_fork": null,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": null,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "usage_api": null
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Discontinued or closed to new customers, confirmed on the live site 2026-09-29. The stale pricing page still renders: Starter $0/member (free for 3), Pro $15/member/mo (up to 10, 6 parallel VMs, 100GB bandwidth, 7 VMs hosting), Team $39/member/mo (up to 50, 12 parallel VMs, 1TB bandwidth, 12 VMs), Scale/Enterprise custom, annual 20% off; card had per_seat null although fees are",
+    "Starter $0 up to 3 members; Pro $15/member/mo up to 10; Team $39/member/mo up to 50; annual 20% off, Enterprise quote. VM pool quotas and retained previews tied to plan, but CPU/RAM pool shape not verified. Twelve parallel VMs shown for Team; 50 concurrent benchmark requires custom service. YC acquired status does not equal shutdown.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Status: the homepage banner says 'Webapp.io has joined Harness'; signup reportedly returns 404 and status.webapp.io no longer resolves, so the still-live pricing page (Starter $0 / Pro $15 / Team $39 per member) should be treated as stale. Shutdown date (2025-06-01 per audit) not verified on the live page."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/webapp-io",
+    "https://webapp.io/",
+    "https://webapp.io/pricing",
+    "https://docs.webapp.io/introduction"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Starter no CI parallelization; Pro 6 parallel VMs; Team 12; Scale custom.",
+    "notes": "CI parallelization is not an account pool of always-on arbitrary sandboxes, so default_max_instances remains null rather than interpreting None as zero machines. 10 CI workers fits Team; 50/300/1,000 custom. Trial versus plan-specific activation/verification and approval time unspecified.",
+    "sources": [
+      "https://webapp.io/pricing",
+      "https://docs.webapp.io/introduction"
+    ],
+    "researched": "2026-09-28"
+  },
+  "status": "discontinued",
+  "audit_2026_09_29": {
+    "applied": 1,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.webapp.io/hosting/free-hosting",
+      "quote": "Our VM's automatically hibernate after 30 minutes of inactivity, but with our proprietary snapshotting technology, we are able to wake up our VM's so the response delay is less than a few seconds.",
+      "note": "Environments go Running -> Stopped 'After 3 minutes of inactivity if there are builds queued' or 'After 60 minutes in general' (docs.webapp.io/snapshots) and restart from the VM snapshot. Snapshots are also taken automatically after each Layerfile step. Memory is included: 'Running processes are snapshotted and reused' (tuning-performance/the-layerfile-cache). Unclear whether runtime changes made after the build are captured at hibernation or whether wake restores the build-time snapshot.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.webapp.io/layerfile-reference/checkpoint",
+      "quote": "The `CHECKPOINT` instruction allows you to control exactly when webapp.io will take snapshots of the pipeline.",
+      "note": "Snapshot points are declared in the Layerfile (build-time), not taken ad hoc on an arbitrary running VM; 'CHECKPOINT deploy' creates a named checkpoint 'which can be triggered as a lambda from our api'. Memory/running processes included. New VMs start from snapshots: child Layerfiles inherit via FROM, and 'We let you duplicate VMs to make copies of your stack and run acceptance tests in parallel' (SPLIT).",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.webapp.io/advanced-workflows/routing",
+      "quote": "Private Deployments which prevents people from outside your organizations from viewing your site",
+      "note": "Only ports named with EXPOSE WEBSITE are published (default https://(uuid).cidemo.co or custom domain via CNAME). The docs introduction Limits table lists 'Number of private previewers' per plan (3/10/50/Custom). Debug-terminal access is gated by the 'repo.<name>.stagingterm' permission. No IP allowlists documented.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Docs: 'Layerfiles define VMs, not containers - this means you can run anything (including docker) that you could run on a regular cloud server'; steps run as root by default (USER directive exists to run as non-root).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.webapp.io/layerfile-reference/secret-env",
+      "quote": "The `SECRET ENV` instruction adds values from secrets to the runner's environment.",
+      "note": "Built-in secrets manager injects secrets as env vars into the VM; no credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "usage_api": {
+      "value": null,
+      "source": "https://docs.webapp.io/introduction",
+      "quote": "Webapp.io has joined Harness; signup reportedly returns 404 and status.webapp.io no longer resolves, so the still-live pricing page (Starter $0 / Pro $15 / Team $39 per member) should be treated as stale. Shutdown date (2025-06-01 per audit) not verified on the live page.",
+      "note": "granularity: account-only; cost: no; Service discontinued and acquired by Harness (2026-09-29). Docs site now blocked by Cloudflare. No usage API endpoint found in available documentation. Resource-based pricing (per VM instance, concurrent VM limits per plan) documented but no API for querying billable usage per sandbox or by tag. Only account/billing dashboard likely available.",
+      "confidence": "low",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": null,
+  "locations_quote": null,
+  "locations_checked": "2026-10-01"
+}

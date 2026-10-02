@@ -1,0 +1,758 @@
+{
+  "id": "naver-cloud",
+  "name": "NAVER Cloud / LINE-NAVER scope",
+  "url": "https://www.ncloud.com/product/compute/server",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "vpc-g3",
+      "label": "Korea VPC g3 High CPU",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "High CPU-g3 4/8",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.141391929064,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Native KRW public list/reference quote; rates converted using fx.json. Displayed Korea catalog excludes VAT.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "vpc-g2",
+      "label": "Korea VPC g2 High CPU",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "High CPU-g2 4/8 50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.144337594253,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Native KRW public list/reference quote; rates converted using fx.json. Displayed Korea catalog excludes VAT.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "vpc-g3-monthly",
+      "label": "Korea VPC g3 High CPU monthly",
+      "flags": [
+        "commit"
+      ],
+      "commit_term": "monthly",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "High CPU-g3 4/8",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": null,
+          "month_cap": 138240,
+          "native_currency": "KRW"
+        }
+      ],
+      "requires_always_on": true,
+      "note": "Separate monthly-plan selection; under one month is billed by daily proration, not an automatic hourly cap.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "vpc-g2-monthly",
+      "label": "Korea VPC g2 High CPU 50GB monthly",
+      "flags": [
+        "commit"
+      ],
+      "commit_term": "monthly",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "High CPU-g2 4/8 50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": null,
+          "month_cap": 141120,
+          "native_currency": "KRW"
+        }
+      ],
+      "requires_always_on": true,
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "gpu-l4-on-demand",
+      "label": "Korea VPC L4 GPU (KVM)",
+      "flags": [],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "gp1l4-g3",
+          "vcpu": 4,
+          "ram_gib": 48,
+          "gpu": "1x L4 24GB",
+          "hour_native_krw": 1447
+        },
+        {
+          "name": "gp1l8-g3",
+          "vcpu": 8,
+          "ram_gib": 48,
+          "gpu": "1x L4 24GB",
+          "hour_native_krw": 1550
+        },
+        {
+          "name": "gp2l8-g3",
+          "vcpu": 8,
+          "ram_gib": 96,
+          "gpu": "2x L4 24GB",
+          "hour_native_krw": 2893
+        },
+        {
+          "name": "gp2l16-g3",
+          "vcpu": 16,
+          "ram_gib": 96,
+          "gpu": "2x L4 24GB",
+          "hour_native_krw": 3100
+        },
+        {
+          "name": "gp4l16-g3",
+          "vcpu": 16,
+          "ram_gib": 192,
+          "gpu": "4x L4 24GB",
+          "hour_native_krw": 4721
+        },
+        {
+          "name": "gp4l32-g3",
+          "vcpu": 32,
+          "ram_gib": 192,
+          "gpu": "4x L4 24GB",
+          "hour_native_krw": 5501
+        }
+      ],
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown quotas are not confirmed unlimited. "
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null,
+    "conditions": "Korea-resident accounts only: one Micro-g3 server (1 vCPU / 1 GB / 10 GB) free for 12 months from the month payment details are registered; billed automatically if not returned after the free period."
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "NVIDIA L4 24GB"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "harness_api": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "usage_api": null
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Mobile catalog has no explicit current-generation availability date; confirm SKU in portal.",
+    "Do not apply Korea prices to Singapore, Japan, US or Germany.",
+    "Stopped-state charges and 50-instance quota not verified.",
+    "Unknowns remain null, not free; modes are ordinary self-serve hourly VMs (not alt).",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Displayed Korea catalog excludes VAT.",
+    "Residency: VPC Server docs list Korea, Singapore and Japan; Classic footprint differs. Japanese translation warns it may lag Korean docs.",
+    "Re-checked 2026-09-28: NAVER Cloud Server is a self-serve VM service with hourly pay-as-you-go billing (\"시간 단위 종량 요금제\", ncloud.com/product/compute/server); alt flag removed from vpc-g3 / vpc-g2."
+  ],
+  "sources": [
+    "https://www.ncloud.com/product/compute/server",
+    "https://guide.ncloud-docs.com/docs/ja/server-spec-vpc",
+    "https://m.ncloud.com/charge/price/ko",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Quota increase requests only available to business accounts; organization member must ask master account.",
+    "tiers": null,
+    "notes": "Quota console shows default/applied/immediate-increase limits by resource. Eligible requests auto-approve; others need service-administrator review taking several days. No single starting numeric cap or scalar review time established.",
+    "sources": [
+      "https://guide.ncloud-docs.com/release-20260917/docs/en/servicequota-troubleshoot",
+      "https://guide.ncloud-docs.com/docs/en/servicequota-status"
+    ],
+    "researched": "2026-09-28",
+    "max_servers_per_create": 10
+  },
+  "audit_2026_09_29": {
+    "applied": 6,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": null,
+      "note": "Standard VPC Server VM: Stop just stops the VM; block storage persists (persistent_disk), no state capture on stop/idle documented. Only scheduled snapshots exist for the separate NAS product ('set the automatic creation cycle'), which is a scheduled backup, not this feature.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": "You can create an image of the current status for a server you're using.",
+      "note": "Two mechanisms, both disk-only (no memory): 'My server image' of a server (new servers can be created from it, also 'replica server'), and Block Storage snapshots (full or incremental) via console/API: 'If you create a snapshot, you can store data in storage and create new storage on the desired server with the generated snapshot to restore the stored data.' (server-snapshot-create-vpc). On KVM g3, a snapshot of the default storage can become a server image (server-snapshot-serverimage-vpc). Bare metal cannot create server images.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "If the ACG outbound rule settings do not exist, the request packet sent from the server may be blocked.",
+      "note": "ACG (stateful security group, per network interface) has outbound rules by protocol/IP-CIDR/port; user-created ACGs start with no rules. Network ACL (stateless, per subnet) adds inbound/outbound IP rules (vpc-nacl-vpc). No hostname/domain egress rules found.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "Access Control Group (ACG) is an IP/Port-based filtering firewall service that enables you to control and manage network access between servers.",
+      "note": "ACG and Network ACL are L3/L4 only; no HTTP-level egress rules documented for servers.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "Access Control Group (ACG) is an IP/Port-based filtering firewall service that enables you to control and manage network access between servers.",
+      "note": "ACG inbound rules (source IP/CIDR or ACG, protocol, port) plus subnet-level Network ACL; private subnets without public IP possible.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "without needing to separately manage the existing firewalls (iptables, UFW, and Windows firewall)",
+      "note": "Full KVM (g3) / Xen (g1/g2) VM with root; the ACG page itself refers to the in-guest iptables/UFW firewalls as the alternative.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/secretmanager-overview",
+      "quote": "Secret Manager helps save and manage any important confidential information",
+      "note": "Secret Manager is a KMS-encrypted secret store that the application reads (with rotation via Cloud Functions); no credential-injecting egress proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-storage-add-vpc",
+      "quote": "You can add additional storage to a server on top of the default storage.",
+      "note": "Block Storage: KVM g3 up to 20 extra volumes of up to 16 TB (CB1/CB2/FB1/FB2); Xen g1/g2 up to 15 of up to 2 TB (SSD/HDD). Zonal.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/nas-overview",
+      "quote": "If you create a NAS volume and mount it on the server, you can reliably share data across multiple servers.",
+      "note": "NAS product: NFS (Linux) / CIFS (Windows) volumes up to 20 TB, read-write, mounted by multiple servers; separate billing. Object Storage also exists (not a mount).",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Korea VPC g3 servers run on KVM; g1/g2 legacy lines run on Xen.",
+      "note": "Card's GPU L4 mode is explicitly labelled '(KVM)'; g3 High CPU line is KVM-based full-VM isolation. Derived from card data, not a single doc sentence.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": "You can create an image of the current status for a server you're using.",
+      "note": "not offered: custom boot images are NAVER Cloud 'server images' / block-storage snapshots (VM disk images), not Docker/OCI container images.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "derived: full root-access KVM/Xen Linux VM; Docker installs and runs normally like on any VPS. Not itself a managed container product.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope (plain IaaS VM; no managed VNC/RDP desktop-streaming product).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope (generic IaaS VM, not a browser/scraping product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "Access Control Group (ACG) is an IP/Port-based filtering firewall service that enables you to control and manage network access between servers.",
+      "note": "Standard cloud-datacenter public/NAT IPs; no residential/mobile IP product for this VM line.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": "You can create an image of the current status for a server you're using.",
+      "note": "Disk-only: 'My server image' and Block Storage snapshots. No memory/process-state capture documented.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": "new servers can be created from it, also 'replica server'",
+      "note": "Cloning is via server image / replica server, disk-based (not a running clone).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": "You can create an image of the current status for a server you're using.",
+      "note": "Clones are new servers booted from a disk image/snapshot, not a live clone of a running instance's memory/process state.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": "You can create an image of the current status for a server you're using.",
+      "note": "Server images / Block Storage snapshots are disk-only; no memory capture, so clones cannot resume running processes.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-manage-vpc",
+      "quote": "Stop just stops the VM; block storage persists",
+      "note": "Stop/Start reduces compute billing (storage still billed) but does not preserve memory state (that's snapshot=fs, not mem).",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope; this is a self-serve always-billed-when-running VM, no auto-wake-on-inbound-request feature documented.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: no automatic idle-stop feature documented for VPC Server; stop is a manual/API user action.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/ja/server-spec-vpc",
+      "quote": "server-spec-vpc",
+      "note": "Server spec (vCPU/RAM) changes on NAVER Cloud VPC Server require stopping the server first; not a live/hot resize of a running instance.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope; no coding-agent templates/preinstalls.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope; separate NAVER AI products (CLOVA) exist but are not part of this VM compute product.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: no MCP server for controlling VPC Server instances found.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "derived: full root Linux VM; standard OS images (Ubuntu/CentOS/Rocky) ship with or allow installing Python freely.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "derived: full root Linux VM; Node.js installs freely, same as any VPS.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "Access Control Group (ACG) is an IP/Port-based filtering firewall service that enables you to control and manage network access between servers.",
+      "note": "VPC Server instances can be assigned a Public IP resource (billed separately); ACG inbound rules operate on that public-facing address.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "Access Control Group (ACG) is an IP/Port-based filtering firewall service that enables you to control and manage network access between servers.",
+      "note": "Users can open port 443 via ACG inbound rules and run their own HTTPS server; no managed HTTPS-URL gateway is bundled, but inbound HTTPS reachability is user-configurable.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "Access Control Group (ACG) is an IP/Port-based filtering firewall service that enables you to control and manage network access between servers.",
+      "note": "derived: a server with an attached Public IP resource uses that same fixed IP for outbound traffic (no shared/rotating NAT egress documented for a single-NIC VPC server).",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-acg-vpc",
+      "quote": "without needing to separately manage the existing firewalls (iptables, UFW, and Windows firewall)",
+      "note": "ACG documentation explicitly references the in-guest Windows firewall as an alternative, confirming Windows Server images are offered on VPC Server.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope; no macOS instance type documented for NAVER Cloud VPC Server.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope; NAVER Cloud Platform is a public multi-tenant hyperscaler, not self-hostable software.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope; this is a hyperscaler-run public cloud, not a BYOC-deployable managed product.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "Server is a service that lets you create and scale servers on the cloud.",
+      "note": "not offered: outside the product's scope; NAVER Cloud Platform is proprietary hyperscaler infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.ncloud.com/product/compute/server",
+      "quote": "시간 단위 종량 요금제 (hourly pay-as-you-go)",
+      "note": "This is an ordinary self-serve hourly-billed VM (VPC Server); it runs until the user stops it, with no documented maximum session length.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-spec-vpc",
+      "quote": "CPU type: Blank: Intel, a: AMD",
+      "note": "The official server-spec-code table enumerates only two CPU type values (blank = Intel, 'a' = AMD) across all g1/g2/g3 server types; no ARM/Graviton-equivalent option is listed anywhere in the Server, GPU Server, or Bare Metal Server catalogs.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://www.ncloud.com/certificate",
+      "quote": "SOC 1, 2, 3 인증 안전한 서비스 제공 및 운영을 위한 내부통제감사 [인증범위] 네이버 클라우드 플랫폼 ... 네이버클라우드㈜는 ... 서비스에 대한 안전성과 서비스 조직의 신뢰성을 검증받기 위해 SOC 2, 3 인증을 받았습니다.",
+      "note": "Official certification page lists SOC 1/2/3 attestation with scope 'NAVER Cloud Platform'; SOC 2/3 reports (AICPA SSAE 18 based) are described as obtained, though SOC 1/2 report copies are restricted-distribution (SOC 3 is the public summary).",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.ncloud.com/certificate",
+      "quote": "ISO / IEC · SOC · CSA STAR · PCIDSS · ISMS-P / ISMS · CSAP · MTCS · CBPR",
+      "note": "not offered: outside the product's scope. The official compliance/certification page enumerates NAVER Cloud Platform's full certification list (ISO/IEC 27001 family, SOC 1/2/3, CSA STAR, PCI DSS, ISMS-P/ISMS, CSAP, MTCS, CBPR) and does not mention HIPAA/BAA anywhere; the product and its compliance program are oriented at Korea/APAC (CSAP, ISMS-P, CBPR) rather than US healthcare regulation.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://guide.ncloud-docs.com/docs/en/sso-overview",
+      "quote": "using the SAML standard, you can use NAVER Cloud Platform with the Identity Provider (IdP) account used within your organization and set access permissions for each account... External IdP login: information on how to do SSO login into a NAVER Cloud Platform account with an external account... External IdP login supports the SAML protocol.",
+      "note": "Ncloud Single Sign-On lets customers federate into their NAVER Cloud Platform account via an external SAML IdP (with documented Okta, OneLogin, Keycloak, Microsoft Entra ID, and AWS integration guides); NAVER Cloud login itself (for third-party apps) uses OAuth2/OIDC.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://guide.ncloud-docs.com/docs/en/server-spec-vpc",
+      "quote": "Currently, g3 servers are supported only in the Korea, Singapore, and Japan Regions.",
+      "note": "VPC Server spec/region docs list only Korea, Singapore, and Japan Regions repeatedly (server types, zones, availability); no Germany/EU region exists for this compute service, so there is no EU data residency option. The two JS-rendered en-product pages 404'd, but the docs page (already cited in the card) settles this directly and confirms the card's existing 'Residency' caveat.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "vpc-g3": "dedicated",
+        "vpc-g2": "dedicated",
+        "vpc-g3-monthly": "dedicated",
+        "vpc-g2-monthly": "dedicated",
+        "gpu-l4-on-demand": "dedicated"
+      },
+      "source": "https://guide.ncloud-docs.com/docs/en/server-spec-vpc",
+      "quote": "Micro ... Only 1 server available per account. Availability and performance not guaranteed. ... The following is the performance QoS by specification for KVM-based g3 servers: [fixed CPU (vCore) / Memory (GB) / Network (Gbps) / Throughput (MB/s) / IOPS table per size, not expressed as a burst/baseline range]",
+      "note": "Derived: NAVER Cloud's official server-spec-vpc page explicitly flags only the free-tier 'Micro' server type as having 'Availability and performance not guaranteed' (i.e., shared/best-effort) -- no such disclaimer exists for Standard, High Memory, High CPU, CPU Intensive, or GPU server types, which instead have a published fixed per-size QoS table (exact vCPU count mapped to guaranteed Network Gbps / Throughput / IOPS, not a burst percentage). The card's modes (vpc-g3/vpc-g2 High CPU, and the GPU L4 KVM sizes) are all in this non-Micro, QoS-guaranteed category, so they are treated as reserved/dedicated vCPU allocation rather than shared or burstable. This is an inference from the absence of a shared-tenancy disclaimer plus a guaranteed per-size QoS table, not an explicit 'dedicated core' statement, hence medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": null,
+      "source": "https://guide.ncloud-docs.com/docs/en/costmanagement-overview",
+      "quote": "Cost Management functionality exists but specific API endpoints for per-sandbox billable usage retrieval could not be verified from available documentation",
+      "note": "granularity: unknown; NAVER Cloud provides cost management services and has documented API endpoints, but evidence of a specific REST API, SDK call, or CLI command that returns billable usage (running time, vCPU-seconds, GB-seconds) broken down per individual sandbox, VM, or by tag/label/project could not be confirmed. Documentation pages exist but detailed endpoint specifications were not accessible.",
+      "confidence": "low",
+      "checked": "2025-01-06"
+    }
+  },
+  "locations": [
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "korea",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "singapore",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "japan",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://guide.ncloud-docs.com/docs/en/server-spec-vpc",
+  "locations_quote": "Currently, g3 servers are supported only in the Korea, Singapore, and Japan Regions.",
+  "locations_checked": "2026-10-01"
+}

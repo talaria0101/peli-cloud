@@ -1,0 +1,1482 @@
+{
+  "id": "latitude-sh",
+  "name": "Latitude.sh",
+  "url": "https://www.latitude.sh/pricing",
+  "category": "hyperscaler",
+  "isolation": "dedicated-host",
+  "modes": [
+    {
+      "key": "metal-hourly",
+      "label": "Bare metal hourly starting rates",
+      "flags": [
+        "stock"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {
+        "snapshot": "none",
+        "fork": false,
+        "fork_running": false,
+        "memory_snapshot_fork": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "c3.small.x86",
+          "vcpu": 12,
+          "ram_gib": 32,
+          "disk_gib": 800,
+          "hour": 0.52,
+          "month_cap": null
+        },
+        {
+          "name": "m4.metal.small",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 960,
+          "hour": 0.81,
+          "month_cap": null
+        },
+        {
+          "name": "f4.metal.small",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": 960,
+          "hour": 1.09,
+          "month_cap": null
+        },
+        {
+          "name": "m4.metal.medium",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1900,
+          "hour": 1.25,
+          "month_cap": null
+        },
+        {
+          "name": "f4.metal.medium",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1900,
+          "hour": 1.52,
+          "month_cap": null
+        },
+        {
+          "name": "c3.large.x86",
+          "vcpu": 48,
+          "ram_gib": 256,
+          "disk_gib": 1900,
+          "hour": 1.36,
+          "month_cap": null
+        },
+        {
+          "name": "s3.large.x86",
+          "vcpu": 48,
+          "ram_gib": 512,
+          "disk_gib": 3800,
+          "hour": 1.78,
+          "month_cap": null
+        },
+        {
+          "name": "c4.metal.large",
+          "vcpu": 192,
+          "ram_gib": 384,
+          "disk_gib": 3800,
+          "hour": 8,
+          "month_cap": null
+        },
+        {
+          "name": "m4.metal.large",
+          "vcpu": 48,
+          "ram_gib": 384,
+          "disk_gib": 3800,
+          "hour": 4.06,
+          "month_cap": null
+        },
+        {
+          "name": "f4.metal.large",
+          "vcpu": 48,
+          "ram_gib": 768,
+          "disk_gib": 3800,
+          "hour": 5.25,
+          "month_cap": null
+        },
+        {
+          "name": "rs4.metal.large",
+          "vcpu": 64,
+          "ram_gib": 768,
+          "disk_gib": 8000,
+          "hour": 6.44,
+          "month_cap": null
+        },
+        {
+          "name": "m4.metal.xlarge",
+          "vcpu": 96,
+          "ram_gib": 768,
+          "disk_gib": 3800,
+          "hour": 9.52,
+          "month_cap": null
+        },
+        {
+          "name": "rs4.metal.xlarge",
+          "vcpu": 128,
+          "ram_gib": 1536,
+          "disk_gib": 8000,
+          "hour": 10.88,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Verified Hourly toggle USD starting rates (raw/latitude-billing-toggle-audit.txt); native cores doubled to hardware-thread vCPU proxy for SMT x86 CPUs. Region and billing-toggle verification required; no cap inferred."
+    },
+    {
+      "key": "virtual-machines",
+      "label": "Virtual machines",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "nested_virt": null,
+        "snapshot": "fs",
+        "fork": true,
+        "memory_snapshot_fork": false,
+        "agent_harnesses": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "vm.small",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 160,
+          "hour": 0.19,
+          "month_cap": null
+        },
+        {
+          "name": "vm.medium",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 320,
+          "hour": 0.35,
+          "month_cap": null
+        },
+        {
+          "name": "vm.large",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 640,
+          "hour": 0.65,
+          "month_cap": null
+        },
+        {
+          "name": "vm.xlarge",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1280,
+          "hour": 1.02,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "VM headline rates. VM disk backups exist but pricing was not published in read docs. Do not infer bare-metal isolation for these VMs."
+    },
+    {
+      "key": "monthly-measured",
+      "label": "Bare metal monthly prepaid (measured toggle)",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {
+        "snapshot": "none",
+        "fork": false,
+        "fork_running": false,
+        "memory_snapshot_fork": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "c3.small.x86",
+          "vcpu": 12,
+          "ram_gib": 32,
+          "disk_gib": 800,
+          "hour": 190,
+          "month_cap": 190
+        },
+        {
+          "name": "m4.metal.small",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 960,
+          "hour": 296,
+          "month_cap": 296
+        },
+        {
+          "name": "f4.metal.small",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": 960,
+          "hour": 398,
+          "month_cap": 398
+        },
+        {
+          "name": "m4.metal.medium",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1900,
+          "hour": 456,
+          "month_cap": 456
+        },
+        {
+          "name": "f4.metal.medium",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1900,
+          "hour": 555,
+          "month_cap": 555
+        },
+        {
+          "name": "c3.large.x86",
+          "vcpu": 48,
+          "ram_gib": 256,
+          "disk_gib": 1900,
+          "hour": 496,
+          "month_cap": 496
+        },
+        {
+          "name": "s3.large.x86",
+          "vcpu": 48,
+          "ram_gib": 512,
+          "disk_gib": 3800,
+          "hour": 650,
+          "month_cap": 650
+        },
+        {
+          "name": "c4.metal.large",
+          "vcpu": 192,
+          "ram_gib": 384,
+          "disk_gib": 3800,
+          "hour": 2920,
+          "month_cap": 2920
+        },
+        {
+          "name": "m4.metal.large",
+          "vcpu": 48,
+          "ram_gib": 384,
+          "disk_gib": 3800,
+          "hour": 1482,
+          "month_cap": 1482
+        },
+        {
+          "name": "f4.metal.large",
+          "vcpu": 48,
+          "ram_gib": 768,
+          "disk_gib": 3800,
+          "hour": 1916,
+          "month_cap": 1916
+        },
+        {
+          "name": "rs4.metal.large",
+          "vcpu": 64,
+          "ram_gib": 768,
+          "disk_gib": 8000,
+          "hour": 2351,
+          "month_cap": 2351
+        },
+        {
+          "name": "m4.metal.xlarge",
+          "vcpu": 96,
+          "ram_gib": 768,
+          "disk_gib": 3800,
+          "hour": 3475,
+          "month_cap": 3475
+        },
+        {
+          "name": "rs4.metal.xlarge",
+          "vcpu": 128,
+          "ram_gib": 1536,
+          "disk_gib": 8000,
+          "hour": 3971,
+          "month_cap": 3971
+        },
+        {
+          "name": "m3.large.x86",
+          "vcpu": 64,
+          "ram_gib": 1024,
+          "disk_gib": 3800,
+          "hour": 938,
+          "month_cap": 938
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "One month prepaid; no refund on early deletion",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Estimator-only encoding: sizes.hour and month_cap both equal full monthly rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff. For valid workloads with sessions >= peak concurrency it charges one monthly rental per concurrent machine, including off-hours. Setup/term cash outlays are caveated separately.",
+      "commit_term": "1-month prepaid"
+    },
+    {
+      "key": "vm-monthly-measured",
+      "label": "VM monthly prepaid (measured toggle)",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "snapshot": "fs",
+        "fork": true,
+        "memory_snapshot_fork": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "vm.small",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 160,
+          "hour": 69,
+          "month_cap": 69
+        },
+        {
+          "name": "vm.medium",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 320,
+          "hour": 128,
+          "month_cap": 128
+        },
+        {
+          "name": "vm.large",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 640,
+          "hour": 237,
+          "month_cap": 237
+        },
+        {
+          "name": "vm.xlarge",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1280,
+          "hour": 372,
+          "month_cap": 372
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "One month prepaid",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Estimator-only encoding: sizes.hour and month_cap both equal full monthly rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff. For valid workloads with sessions >= peak concurrency it charges one monthly rental per concurrent machine, including off-hours. Setup/term cash outlays are caveated separately.",
+      "commit_term": "1-month prepaid"
+    },
+    {
+      "key": "annual-measured",
+      "label": "Bare metal annual prepaid (measured toggle)",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {
+        "snapshot": "none",
+        "fork": false,
+        "fork_running": false,
+        "memory_snapshot_fork": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "c3.small.x86",
+          "vcpu": 12,
+          "ram_gib": 32,
+          "disk_gib": 800,
+          "hour": 133,
+          "month_cap": 133
+        },
+        {
+          "name": "m4.metal.small",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 960,
+          "hour": 207.16666666666666,
+          "month_cap": 207.16666666666666
+        },
+        {
+          "name": "m4.metal.medium",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1900,
+          "hour": 319.1666666666667,
+          "month_cap": 319.1666666666667
+        },
+        {
+          "name": "m4.metal.large",
+          "vcpu": 48,
+          "ram_gib": 384,
+          "disk_gib": 3800,
+          "hour": 1037.42,
+          "month_cap": 1037.42
+        },
+        {
+          "name": "f4.metal.large",
+          "vcpu": 48,
+          "ram_gib": 768,
+          "disk_gib": 3800,
+          "hour": 1341.17,
+          "month_cap": 1341.17
+        },
+        {
+          "name": "rs4.metal.large",
+          "vcpu": 64,
+          "ram_gib": 768,
+          "disk_gib": 8000,
+          "hour": 1645.67,
+          "month_cap": 1645.67
+        },
+        {
+          "name": "m4.metal.xlarge",
+          "vcpu": 96,
+          "ram_gib": 768,
+          "disk_gib": 3800,
+          "hour": 2432.5,
+          "month_cap": 2432.5
+        },
+        {
+          "name": "rs4.metal.xlarge",
+          "vcpu": 128,
+          "ram_gib": 1536,
+          "disk_gib": 8000,
+          "hour": 2779.67,
+          "month_cap": 2779.67
+        },
+        {
+          "name": "m3.large.x86",
+          "vcpu": 64,
+          "ram_gib": 1024,
+          "disk_gib": 3800,
+          "hour": 656.58,
+          "month_cap": 656.58
+        },
+        {
+          "name": "f4.metal.small",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": 960,
+          "hour": 278.58,
+          "month_cap": 278.58
+        },
+        {
+          "name": "f4.metal.medium",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1900,
+          "hour": 388.5,
+          "month_cap": 388.5
+        },
+        {
+          "name": "c3.large.x86",
+          "vcpu": 48,
+          "ram_gib": 256,
+          "disk_gib": 1900,
+          "hour": 347.17,
+          "month_cap": 347.17
+        },
+        {
+          "name": "s3.large.x86",
+          "vcpu": 48,
+          "ram_gib": 512,
+          "disk_gib": 3800,
+          "hour": 455,
+          "month_cap": 455
+        },
+        {
+          "name": "c4.metal.large",
+          "vcpu": 192,
+          "ram_gib": 384,
+          "disk_gib": 3800,
+          "hour": 2044,
+          "month_cap": 2044
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "One year paid upfront",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Estimator-only encoding: sizes.hour and month_cap both equal full monthly rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff. For valid workloads with sessions >= peak concurrency it charges one monthly rental per concurrent machine, including off-hours. Setup/term cash outlays are caveated separately.",
+      "commit_term": "1-year prepaid"
+    },
+    {
+      "key": "gpu-h100-hourly",
+      "label": "Metal GPU g3.h100.small (1x H100 80GB), hourly",
+      "flags": [
+        "stock"
+      ],
+      "stock_note": "pricing-page plan data lists g3.h100.small stockLevel \"unavailable\" in all US locations",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {
+        "snapshot": "none",
+        "fork": false,
+        "fork_running": false,
+        "memory_snapshot_fork": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "g3.h100.small",
+          "vcpu": 32,
+          "ram_gib": 192,
+          "disk_gib": 7600,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 3.37
+      },
+      "note": "Bare-metal GPU server: 1x NVIDIA H100 80GB, AMD 9124 16 cores (32 threads as vCPU proxy), 192 GB RAM, 2x3.8 TB NVMe. Hourly $3.37 (pricing-page embedded plan data, Hourly toggle), Monthly $1,230 (= $1.68/h amortized, shown by default on https://www.latitude.sh/pricing), yearly $10,332. Whole server price is carried in the gpu map (size hour 0). 8x RTX PRO 6000 ($24/h monthly-amortized) and 8x B300 ($64/h monthly-amortized) nodes also listed; not encoded (hourly toggle price not captured)."
+    },
+    {
+      "key": "vm-annual-measured",
+      "label": "VM annual prepaid (measured toggle)",
+      "flags": [
+        "commit"
+      ],
+      "commit_term": "1-year prepaid",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "pricing": "sizes",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "sizes": [
+        {
+          "name": "vm.small",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 160,
+          "hour": 48.33,
+          "month_cap": 48.33
+        },
+        {
+          "name": "vm.medium",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 320,
+          "hour": 89.58,
+          "month_cap": 89.58
+        },
+        {
+          "name": "vm.large",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 640,
+          "hour": 165.92,
+          "month_cap": 165.92
+        },
+        {
+          "name": "vm.xlarge",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 1280,
+          "hour": 260.42,
+          "month_cap": 260.42
+        }
+      ],
+      "features": {
+        "snapshot": "fs",
+        "fork": true,
+        "memory_snapshot_fork": false
+      },
+      "note": "Same estimator-only encoding as vm-monthly-measured: yearly price / 12 as month rent."
+    },
+    {
+      "key": "gpu-8x-hourly",
+      "label": "Metal GPU 8-GPU nodes, hourly",
+      "flags": [
+        "stock"
+      ],
+      "stock_note": "stockLevel unavailable in all listed locations on 2026-09-29",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "pricing": "sizes",
+      "granularity_s": 3600,
+      "sizes": [
+        {
+          "name": "g4.rtx6kpro.large",
+          "vcpu": 256,
+          "ram_gib": 1536,
+          "disk_gib": 15200,
+          "hour": 0,
+          "month_cap": null
+        },
+        {
+          "name": "g4.b300.large",
+          "vcpu": 256,
+          "ram_gib": 1536,
+          "disk_gib": 1920,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "gpu": {
+        "RTX-PRO-6000": 6,
+        "B300": 16
+      },
+      "note": "Whole node priced via per-GPU rate x8: g4.rtx6kpro.large $48/h (8x RTX PRO 6000 96GB, 2x AMD 9355 64c); g4.b300.large $128/h (8x HGX B300 288GB, 2x EPYC 9555 64c; US only). RTX PRO 6000 is $52/h Japan, $66/h Australia."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.08,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 20000,
+    "egress_gib": 0.01,
+    "ipv4_month": 0,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Usage account",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "New accounts: hourly spending limit $100, rising to $500 with consistent payments; higher only via sales. Account must be verified (Stripe ID or $100 prepaid credits + $5 card hold) before deploying. Per-team quotas on count of bare-metal servers, GPU servers and VMs; increases by request with business justification. Account quotas and stock availability must be checked before deploying 50 concurrent machines; no quota approval implied."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "H100",
+      "RTX-PRO-6000",
+      "B300"
+    ],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "ingress_rules": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "bare-metal",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "DIY infrastructure rather than an agent-managed sandbox: guest installation, HTTPS/domain setup, abuse controls and operations are customer responsibilities. Linux guest administrative capabilities are not preinstalled agent features. 30% guest CPU utilization does not reduce allocated-compute charges. Unknowns remain null; a partial subtotal is not a complete invoice.",
+    "Explicitly clicked Hourly/Monthly/Paid yearly: c3.small is $0.52/h on demand, $190/month committed, $1596/year prepaid; default page $0.26/h is MONTHLY amortized, not on-demand. Toggle capture resolves stale FAQ discount conflict; measured commitment modes are priceable.",
+    "20TB outbound per server/month, pooled by project and country; ingress/private transfer free. Additional packages sold per 10TB; overage $0.01/GB.",
+    "One management IP included. Additional/elastic IPs may have separate fees and justification requirements.",
+    "Bare-metal nested virtualization means the host can expose KVM to your VMs; no VM-mode nested support is promised.",
+    "Snapshot/retention costs not verified. Card architecture proxy is not benchmark equivalence.",
+    "The public page defaults to Monthly. The independently selected Hourly tab is the on-demand source; monthly/yearly amortized per-hour labels must not be used as PAYG prices.",
+    "GPU: Latitude sells Metal GPU servers (g3.h100.small 1x H100; g4.rtx6kpro.large 8x RTX PRO 6000 $17,520/mo; g4.b300.large 8x B300 $46,720/mo). Only the 1x H100 hourly rate is encoded; it was listed out of stock.",
+    "Extra costs: additional IPv4 $4/mo (IPv6 free), Elastic IP $4/mo, BYOIP $200 setup; Firewall $4/server/month; Public Network /29 $32/mo to /26 $256/mo; bandwidth packages per TB $1.25 (US/CA/DE/NL/UK) or $5.40 (other regions), sold in 10 TB increments, vs overage $0.01/GB.",
+    "Powered-off VMs keep billing: 'Shutting down a virtual machine does not pause billing. To avoid charges, you have to delete the instance instead.' Monthly servers: no proration/refund on deletion. Reserved (yearly) servers can only be deleted after the reservation ends.",
+    "Pricing page FAQ still says Monthly = 30% and Reserved 1-year = 50% discount, but the live toggles, the discount table and billing docs agree on 50%/65%; card numbers are correct.",
+    "API rate limits per key: 800 GET/min, 120 write/min; dashboard VM create deploys 1-5 instances per request. Taxes are included in listed prices.",
+    "Regional pricing: list prices hold for US/UK/DE/NL/CA; Gen4 metal sizes cost more elsewhere (Japan/Singapore x1.05-1.29; Brazil/Mexico/Argentina/Chile/Colombia/Australia x1.26-1.43, e.g. m4.metal.small $0.81 US vs $0.96 JP vs $1.11 BR/AU/MX). Gen3 c3/s3 sizes are the same price everywhere. Monthly/annual regimes scale the same way."
+  ],
+  "sources": [
+    "https://www.latitude.sh/pricing",
+    "https://www.latitude.sh/docs/billing/on-demand-vs-reserved",
+    "https://www.latitude.sh/docs/servers/deploying-a-server",
+    "https://www.latitude.sh/docs/vms/backups-and-restore",
+    "https://www.latitude.sh/pricing/network",
+    "https://www.latitude.sh/docs/networking/ips"
+  ],
+  "audit_2026_09_29": {
+    "applied": 35,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 6
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/vms/virtual-machines.md",
+      "quote": "Shutting down a virtual machine does not pause billing. To avoid charges, you have to delete the instance instead.",
+      "note": "Bare metal and VMs are persistent machines (disk persists across power cycles = persistent_disk); no automatic state save/restore or sleep. VM backups are user-triggered only; no scheduled backups documented.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/vms/backups-and-restore.md",
+      "quote": "A backup captures a point-in-time copy of a virtual machine's disk. You can restore that backup into a new virtual machine whenever you need to recover data or clone the machine. Backups run in the background and don't affect the running instance.",
+      "note": "Virtual machines only (not bare metal). Disk only, no memory; taken live; dashboard + API (Create VM backup / Create VM restore). Restore always creates a NEW VM (clone), optionally in another region; no in-place restore.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/llms.txt",
+      "quote": "Model Context Protocol (MCP): Let AI agents manage your Latitude.sh infrastructure through our hosted MCP server",
+      "note": "The only agent-facing surface is an MCP server that lets an agent call the Latitude.sh infrastructure API (create/manage servers, VMs, IPs, etc.) — the reverse of a harness_api. There is no first-party API that drives a coding harness (Claude Code/Codex/etc.) running inside a sandbox; product is bare-metal/VM IaaS.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/networking/firewall.md",
+      "quote": "Unlike network firewalls that operate at the perimeter, it runs directly on each protected resource — servers and virtual machines — while letting you configure all firewall rules from a single interface.",
+      "note": "Latitude.sh Firewall ($4/resource/mo) has outbound rules (destination IP/Any, TCP/UDP, port range) but is enforced by a UFW/iptables agent installed inside the server/VM, so root inside can undo it: not provider-side. No perimeter/cloud firewall or security group documented; private networks are unfiltered L2.",
+      "checked": "2026-09-29"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/networking/firewall.md",
+      "quote": "Latitude.sh Firewall is built on UFW and only exposes **TCP** and **UDP** rules.",
+      "note": "Only L3/L4 rules, and in-guest.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/networking/firewall.md",
+      "quote": "Latitude.sh Firewall provides centralized management of resource-level *iptables* rules across your infrastructure.",
+      "note": "Inbound rules (source IP/Any, TCP/UDP, ports; default allow SSH 22) exist but are centrally managed, guest-enforced iptables via an agent you install, not provider-side. Servers get public IPs directly (no provider proxy/URL layer). Only provider-side ingress mechanism is DDoS scrubbing (not user-configurable). If the coordinator counts centrally-managed guest-agent firewalls, this would be true(ip).",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/networking/firewall.md",
+      "quote": "Latitude.sh Firewall provides centralized management of resource-level *iptables* rules across your infrastructure.",
+      "note": "Bare metal (own kernel, root) and full VMs with sudo; Latitude's own firewall product is iptables/UFW inside the guest, so guest firewalls demonstrably take effect.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/index.md",
+      "quote": "Deploy and manage bare metal servers, virtual machines, storage, and networking on Latitude.sh",
+      "note": "No credential-injecting HTTP proxy of any kind documented; this is plain IaaS — secrets, if any, would only be managed by the customer inside the machine (e.g. via user-data/cloud-init). Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/storage/block-storage.md",
+      "quote": "A volume lives independently of any server: you create it in a project, map it to one of your servers, and the server reaches it over a private storage network using NVMe/TCP.",
+      "note": "Bare metal only (server must be bonded onto a public network); one server per volume; movable between servers in the same location. Availability limited to locations with high performance storage.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/storage/filesystem.md",
+      "quote": "File storage gives you persistent filesystems that several servers can mount at the same time.",
+      "note": "NFSv3/v4, 32 GB-20 TB, read-write for any server on the project's storage network ('any server on that network can mount the filesystem with read and write access'); bare metal; PRIVATE PREVIEW (access by request).",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "bare-metal",
+      "source": "https://www.latitude.sh/pricing",
+      "quote": "Latitude.sh makes it possible for teams to deploy and manage their bare metal servers and AI infrastructure.",
+      "note": "Card models both dedicated bare-metal servers (whole physical host per customer, own kernel/root) and a separate Virtual machines product (multi-tenant host, isolation mechanism for the hypervisor layer not documented). Bare metal is the dominant/original product and the enum's closest fit is 'bare-metal' (dedicated physical host); the VM product's specific hypervisor tech (KVM etc.) is not disclosed in docs.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/servers/custom-images.md",
+      "quote": "Custom images allow you to use iPXE scripts to boot into your operating system of choice. Using an iPXE script to deploy a custom image gives you more flexibility and control over deployments.",
+      "note": "Custom images are booted via iPXE scripts (network boot of an OS image) or IPMI virtual media, not by pulling a Docker/OCI container image as the machine's root filesystem. No OCI/Docker-image-as-VM-source mechanism is documented.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.latitude.sh/pricing",
+      "quote": "Latitude.sh makes it possible for teams to deploy and manage their bare metal servers and AI infrastructure.",
+      "note": "not offered: outside the product's scope — bare-metal/VM/Kubernetes IaaS, not a browser-automation or scraping product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.latitude.sh/pricing",
+      "quote": "Latitude.sh makes it possible for teams to deploy and manage their bare metal servers and AI infrastructure.",
+      "note": "not offered: outside the product's scope — bare-metal/VM/Kubernetes IaaS, not a browser-automation or scraping product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://www.latitude.sh/docs/networking/ips.md",
+      "quote": "Management IPs are IPs that are used for the management IP of a device. This is a public IP address that a device is born and dies with. It never changes during the lifecycle of the device.",
+      "note": "Datacenter-hosted bare metal/VMs with a dedicated public IPv4 that stays fixed for the life of the machine (card also lists static_egress_ip: true); no residential/mobile IP options exist.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://www.latitude.sh/docs/vms/backups-and-restore.md",
+      "quote": "A backup captures a point-in-time copy of a virtual machine's disk. You can restore that backup into a new virtual machine whenever you need to recover data or clone the machine. Backups run in the background and don't affect the running instance.",
+      "note": "Applies to the Virtual machines product only (disk/filesystem snapshot, no memory state); bare-metal servers have no snapshot feature at all (card modes mark bare-metal snapshot: none).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/vms/backups-and-restore.md",
+      "quote": "You can restore that backup into a new virtual machine whenever you need to recover data or clone the machine.",
+      "note": "VM backups restore into a brand-new VM (a clone), which the docs explicitly call cloning the machine. Bare-metal servers have no equivalent fork/clone mechanism.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/vms/backups-and-restore.md",
+      "quote": "Backups run in the background and don't affect the running instance.",
+      "note": "The backup used to create the clone is taken while the source VM keeps running (no stop required), and restore creates a separate new VM. Applies to VMs only.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/vms/backups-and-restore.md",
+      "quote": "A backup captures a point-in-time copy of a virtual machine's disk.",
+      "note": "Backups are disk-only; no memory/process state is captured or restored, so clones start cold rather than resuming running processes.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/vms/virtual-machines.md",
+      "quote": "Shutting down a virtual machine does not pause billing. To avoid charges, you have to delete the instance instead.",
+      "note": "Bare-metal servers and VMs are always-on rental machines with no sleep/hibernate or wake-on-request model; powering off still bills, and nothing restarts a stopped machine automatically on an inbound request.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/vms/virtual-machines.md",
+      "quote": "Shutting down a virtual machine does not pause billing. To avoid charges, you have to delete the instance instead.",
+      "note": "No idle-detection auto-stop/auto-sleep feature is documented for servers or VMs; machines run continuously until the customer stops/deletes them.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/development/model-context-protocol.md",
+      "quote": "The Latitude.sh MCP server lets AI agents and chat-based IDEs interact with the Latitude.sh API in natural language — list servers, deploy bare metal, manage networking, and more.",
+      "note": "Latitude.sh exposes its infrastructure API to third-party coding/chat agents via MCP; it does not ship its own task/browser/computer-use agent product for a client to drive.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/development/model-context-protocol.md",
+      "quote": "The Latitude.sh MCP server lets AI agents and chat-based IDEs interact with the Latitude.sh API in natural language — list servers, deploy bare metal, manage networking, and more. It runs as a hosted remote server.",
+      "note": "Hosted MCP server at https://mcp.latitude.sh (also open-sourced at github.com/latitudesh/latitudesh-mcp) to control servers/VMs/networking via the Latitude.sh API.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/servers/operating-systems.md",
+      "quote": "Latitude.sh provides a variety of Operating systems that you can use to create your servers, such as Windows and Linux distributions.",
+      "note": "This is bare-metal/VM IaaS: customers pick a bare OS image (Linux/Windows distro) and install their own runtimes; Python is not guaranteed out-of-the-box except in the optional ML-in-a-Box GPU image (Python 3.10), which is not the default for all servers.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/servers/operating-systems.md",
+      "quote": "Latitude.sh provides a variety of Operating systems that you can use to create your servers, such as Windows and Linux distributions.",
+      "note": "Bare OS images only; no Node.js runtime is preinstalled by default on servers or VMs (not mentioned in ML-in-a-Box or any other default image).",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/servers/operating-systems.md",
+      "quote": "Latitude.sh provides a variety of Operating systems that you can use to create your servers, such as Windows and Linux distributions.",
+      "note": "Windows is offered as a selectable OS for bare-metal servers (top-level card feature list has windows: null pending; this resolves it to true for bare metal). VM product OS list is Linux-only per card modes.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://trust.latitude.sh",
+      "quote": "Compliance SOC 2 Type II, ISO 27001:2013, GDPR, CCPA",
+      "note": "Latitude.sh's Trust Center lists SOC 2 Type II, ISO 27001:2013, GDPR and CCPA as its compliance certifications; HIPAA/BAA is not listed anywhere on the Trust Center or security policy pages.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.latitude.sh/docs/vms/virtual-machines.md",
+      "quote": "Shutting down a virtual machine does not pause billing. To avoid charges, you have to delete the instance instead.",
+      "note": "Bare-metal servers and VMs are persistent rented machines with no maximum session/runtime limit; they run indefinitely until the customer stops/deletes them (or a yearly-reserved term ends).",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/vms/virtual-machines.md",
+      "quote": "Shutting down a virtual machine does not pause billing. To avoid charges, you have to delete the instance instead.",
+      "note": "Same note appears on bare metal (docs/servers/power-management.md). Only power cycle/shutdown/reboot/delete are offered; no pause/resume primitive, and stopping a machine does not reduce billing.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/index.md",
+      "quote": "Deploy and manage bare metal servers, virtual machines, storage, and networking on Latitude.sh",
+      "note": "Latitude.sh is a bare-metal/VM IaaS provider (SSH access only, docs/servers/logging-into-your-server.md); no VNC/RDP/streamed desktop product documented. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/index.md",
+      "quote": "Deploy and manage bare metal servers, virtual machines, storage, and networking on Latitude.sh",
+      "note": "Pure infrastructure product (compute, storage, networking); no managed/hosted browser offering in docs or pricing. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/index.md",
+      "quote": "Deploy and manage bare metal servers, virtual machines, storage, and networking on Latitude.sh",
+      "note": "No screenshot/click driving API of any kind; product is IaaS (bare metal + VMs), not an agent/automation platform. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/networking/ips.md",
+      "quote": "Latitude.sh has four types of IPs: Management IPs, Additional IPs, Elastic IPs, and BYOIP.",
+      "note": "Latitude.sh only hands out raw public IPv4/IPv6 addresses (management, additional, elastic, BYOIP); there is no provider-managed HTTPS URL/routing layer to reach ports — TLS termination and HTTPS serving are entirely the customer's own responsibility on the guest OS. Card fields raw_tcp_inbound=true / custom_domain=true (DNS you point yourself) are consistent with this.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/servers/operating-systems.md",
+      "quote": "ML-in-a-Box is a custom image built by Latitude.sh that you can use to get started quickly with any of the GPU servers available. This image comes with several dependencies needed for Machine Learning and AI workloads",
+      "note": "Only pre-built image is ML-in-a-Box (Python/CUDA/PyTorch/Docker for ML training); no coding-agent harness (Claude Code, Codex, OpenCode, etc.) is preinstalled or offered as a template anywhere in docs or pricing.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/servers/operating-systems.md",
+      "quote": "Latitude.sh provides a variety of Operating systems that you can use to create your servers, such as Windows and Linux distributions.",
+      "note": "Only Windows and Linux distributions are listed as guest OSes; hardware is AMD EPYC/Intel x86 bare metal (no Apple hardware), so macOS is not offered. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.latitude.sh/pricing",
+      "quote": "AMD Epyc 9555",
+      "note": "All server/VM CPU specs advertised (e.g. AMD EPYC 9555, and per the card's plan notes AMD 9124/9355) are x86-64; no ARM/Ampere/Graviton CPU option found in pricing or docs.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/index.md",
+      "quote": "Deploy and manage bare metal servers, virtual machines, storage, and networking on Latitude.sh",
+      "note": "Latitude.sh is itself a datacenter/bare-metal hosting company — customers rent Latitude.sh's own hardware; there is no downloadable Latitude.sh software product to self-host on other infrastructure. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/index.md",
+      "quote": "Deploy and manage bare metal servers, virtual machines, storage, and networking on Latitude.sh",
+      "note": "Latitude.sh sells its own bare-metal/VM capacity in its own datacenters; there is no mode where the Latitude.sh control plane is deployed into a customer's own cloud account. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/llms.txt",
+      "quote": "Terraform ... Postman Collection ... Cluster API",
+      "note": "Latitude.sh publishes open-source client tooling (CLI, Terraform provider, SDKs) but the core product — the bare-metal/VM hosting platform itself — is closed-source proprietary infrastructure, not an OSI-licensed product a customer can run themselves.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.latitude.sh/docs/vms/virtual-machines.md",
+      "quote": "Resizing is disruptive and runs asynchronously: the instance is powered off, migrated to the new plan, and powered back on.",
+      "note": "VM resize (the only resize path documented) requires a power-off/migrate/power-on cycle, not a live change; bare metal has no resize concept at all (fixed hardware chassis).",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://www.latitude.sh/docs/api-reference/get-billing-usage.md",
+      "quote": "Returns the billing usage of a project. GET /billing/usage endpoint returns project usage with filter[project] parameter (required), can filter by filter[products][] array and filter[plan]. Response includes price (total usage price in cents), amount (total usage amount in cents), and detailed per-p",
+      "note": "granularity: per-project; cost: yes; Latitude.sh provides a REST API endpoint GET /billing/usage that returns detailed billing usage for a specified project. The endpoint supports filtering by specific product IDs and plan names, and returns monetary costs in cents alongside usage quantities. Available via REST API with Bearer token authentication, plus Python, Go, and TypeScript SDKs.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "ASH",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "DAL",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "FL",
+      "city": "Miami",
+      "provider_region": "MIA2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IL",
+      "city": "Chicago",
+      "provider_region": "CHI",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Silicon Valley",
+      "provider_region": "SJC2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "LAX",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "LAX2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NY",
+      "city": "New York",
+      "provider_region": "NYC",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "TOR",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "SAO",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "SAO2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AR",
+      "state": null,
+      "city": "Buenos Aires",
+      "provider_region": "BUE",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Santiago",
+      "provider_region": "SAN3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CO",
+      "state": null,
+      "city": "Bogota",
+      "provider_region": "BGT",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Mexico City",
+      "provider_region": "MEX2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "FRA",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "FRA2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "AMS",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "LON",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "LON2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "TYO3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "TYO4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "SGP",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "SYD",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "SYD2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "MEL",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.latitude.sh/locations",
+  "locations_quote": "26 locations, Unlimited reach. Enterprise-grade infrastructure in the world's most advanced data centers.",
+  "locations_checked": "2026-10-01"
+}

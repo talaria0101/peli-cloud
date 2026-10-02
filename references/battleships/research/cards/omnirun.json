@@ -1,0 +1,626 @@
+{
+  "id": "omnirun",
+  "name": "OmniRun",
+  "url": "https://omnirun.io/pricing",
+  "category": "agent-sandbox",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "launch",
+      "label": "Launch plan sandbox-hours",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Standard sandbox-hour (up to 4 vCPU / 2 GB)",
+          "vcpu": 4,
+          "ram_gib": 2,
+          "disk_gib": null,
+          "hour": 0.2162,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "EUR 0.19/sandbox-hour overage on Launch x 1.1378 USD/EUR (ECB 2026-09-28). \"One sandbox-hour is one hour of a standard sandbox (up to 4 vCPU, 2 GB RAM). Larger configurations consume proportionally more. Billed per-second.\" The scaling rule for larger shapes is not published, so only the standard size is encoded (bigger workloads show as capped at 4 vCPU / 2 GB).",
+      "plans": [
+        "Launch (EUR 19 monthly / EUR180 annual)"
+      ]
+    },
+    {
+      "key": "scale",
+      "label": "Scale plan sandbox-hours",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Standard sandbox-hour (up to 4 vCPU / 2 GB)",
+          "vcpu": 4,
+          "ram_gib": 2,
+          "disk_gib": null,
+          "hour": 0.1707,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "EUR 0.15/sandbox-hour overage on Scale x 1.1378 USD/EUR (ECB 2026-09-28). \"One sandbox-hour is one hour of a standard sandbox (up to 4 vCPU, 2 GB RAM). Larger configurations consume proportionally more. Billed per-second.\" The scaling rule for larger shapes is not published, so only the standard size is encoded (bigger workloads show as capped at 4 vCPU / 2 GB).",
+      "plans": [
+        "Scale (EUR79 monthly / EUR756 annual)"
+      ]
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "Internet is on or off per sandbox. Base templates start offline, and internet: false keeps them with no route out at all; agent templates always have internet on, with open egress.",
+          "url": "https://omnirun.io/solutions/compliance"
+        },
+        {
+          "quote": "Open internet, none, or a list of HTTPS hosts.",
+          "url": "https://omnirun.io/pricing"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Sandbox",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 2,
+      "sizes_allowed": null,
+      "note": "EUR 0/mo, 25 sandbox-hours, 1 concurrent sandbox (4 vCPU / 2 GB): a trial allowance, not a paid tier (no overage rate published).",
+      "trial_only": true
+    },
+    {
+      "name": "Launch (EUR 19 monthly / EUR180 annual)",
+      "fee": 21.62,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 3,
+      "max_session_h": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 4,
+      "sizes_allowed": null,
+      "note": "EUR 19/mo includes 100 sandbox-hours (= 100 x EUR 0.19 overage, so the fee works as usage credit); 3 concurrent; 4 vCPU / 4 GB max; adjustable EUR 50 default spend cap. Annual EUR 180/yr (EUR 15/mo effective) not modelled."
+    },
+    {
+      "name": "Scale (EUR79 monthly / EUR756 annual)",
+      "fee": 89.89,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 12.52,
+      "per_seat": null,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 16,
+      "sizes_allowed": null,
+      "note": "EUR 79/mo includes 600 sandbox-hours (= EUR 90 at the EUR 0.15 overage): fee as credit plus EUR 11 extra included; 10 concurrent; 8 vCPU / 16 GB max; 3 seats, snapshots/webhooks; adjustable EUR 300 default spend cap. Annual EUR 756/yr (EUR 63/mo effective) not modelled."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 32,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null,
+    "note": "Sandbox tier is free forever with 25 standard sandbox-hours/month, 1 concurrent sandbox, 4 vCPU/2 GB max, no card; no overage and excess sandboxes queue until next month."
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "eu"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": true,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": false,
+    "isolation": "firecracker",
+    "image_oci": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "egress_allowlist_level": "domain",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": "ai-only",
+    "volume_attach": false,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_auto": false,
+    "own_agent_api": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Priced (fix 2026-09-28) from omnirun.io/pricing in EUR x 1.1378 USD/EUR: Launch EUR 0.19, Scale EUR 0.15 per standard sandbox-hour (up to 4 vCPU / 2 GB). Only 2 GB RAM per standard sandbox-hour; larger RAM \"consumes proportionally more\" without a published formula, so a 4/8 workload is shown capped at 4 vCPU / 2 GB. Dedicated (EUR 0.10/h, custom fee, 50+ concurrent) not priced.",
+    "Public prices in EUR; USD unknown. Base sandbox-hour means up to 4 vCPU/2 GB; larger shapes consume proportionally more but exact scaling rule is not defined. Do not infer price for 4/8 by multiplying without a published formula.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free."
+  ],
+  "sources": [
+    "https://omnirun.io/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": 1,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Free no credit card.",
+    "tiers": "Sandbox 1; Launch 3; Scale 10; Dedicated 50+ negotiated.",
+    "notes": "10 fits Scale; 50 Dedicated, 300/1,000 need custom confirmation. Free queues beyond cap. Support response times (24h/4h) are not quota approval times.",
+    "sources": [
+      "https://omnirun.io/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "No fork, user snapshots or volumes yet. E2B, CubeSandbox, microsandbox and boxd all have some form of these.",
+      "note": "Not a real contradiction with features.snapshot='fs': that field is the boot/restore mechanism (operator-built Firecracker filesystem snapshots give ~250ms sub-second boot restore, confirmed by llms-full.txt: 'Sub-second boot: Snapshot-based restore in ~250ms'), not a user-facing on-demand snapshot API. The compare page's capability matrix rows 'User snapshots and checkpoints' and 'Fork a running sandbox' are both explicitly 'No / Planned for v0.2' for OmniRun, and llms-full.txt roadmap confirms: 'v0.2 hibernate to disk, fork, user snapshots, template build API'. So users cannot take a snapshot/checkpoint on demand today; the false value is correct.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "| `claude-code` | AI tool template for Claude Code |",
+      "note": "claude-code, codex, gemini-cli and openclaw templates come preinstalled, but the only way to drive them is the generic commands.run exec or PTY API. There is no prompt/stream/resume API. 'Claude Managed Agents backend' means Anthropic's API runs the agent loop and a self-hosted worker (ant beta:worker) runs the tool calls in OmniRun microVMs. That is Anthropic's harness API, not OmniRun's.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://omnirun.io/docs/sandboxes",
+      "quote": "an opt-in SNI egress proxy can restrict a sandbox to an allow-list of hosts: it inspects each TLS handshake on port 443 and only forwards connections whose server name matches your list. It is off by default.",
+      "note": "Base templates also support internet:false ('no route out at all'). Weak: the SNI proxy filters HTTPS on port 443 only. Other ports are not filtered, and domain fronting gets past it ('a guard rail, not an exfiltration control'). Agent templates (claude-code, codex, desktop) always have internet on, and internet:false does not switch it off. SDK 0.6.0 also has an undocumented NetworkPolicy {allowDomains, denyDomains, allowIPs, denyIPs} and setNetworkPolicy() for running sandboxes. IP-level rules appear in the SDK only, not in the docs.",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.npmjs.com/package/@omnirun/sdk",
+      "quote": "@param opts.visibility - `\"public\"` (default) or `\"private\"` (requires auth token).",
+      "note": "Preview URLs are opt-in per port (POST /sandboxes/:id/exposures) and can be revoked. They have ttlSeconds and an optional slug. Private exposures return an accessUrl 'with embedded access token'. The docs pages only describe public HTTPS URLs; the private visibility comes from the SDK types. No IP allowlist. Traffic between sandboxes is blocked (security page). Self-hosted nodes have previews off until preview_domain is set.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Firecracker microVM with its own guest kernel; 'Guest commands run as root by default' (security page). Not documented explicitly.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://omnirun.io/docs/llm-proxy",
+      "quote": "Use hundreds of AI models through a single API key with built-in spend tracking and rate limiting. OpenAI-compatible: just change your base URL.",
+      "note": "An LLM gateway at api.omnirun.io/llm/v1 that uses OmniRun's upstream keys. The sandbox authenticates with an OmniRun omr_ token, so provider keys stay outside the VM. BYOK keys and all other secrets go through the vault, which writes them INTO the VM ('all vault credentials are written to /tmp/.omnirun-env inside the sandbox'). The compare page lists 'Secrets that never enter the VM: No', and the roadmap has it under 'Later'. Nothing for non-HTTP protocols.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "No fork, user snapshots or volumes yet.",
+      "note": "Capability matrix: 'Persistent volumes: No'. The roadmap lists persistent volumes under 'Later'. Each sandbox gets a copy-on-write LVM thin disk that is deleted on kill.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "No fork, user snapshots or volumes yet.",
+      "note": "No volumes of any kind, so no shared volumes.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "Bring your own image ... Partial: Operator build scripts; API planned for v0.2",
+      "note": "You cannot self-serve start a sandbox from your own Docker/OCI image today. Custom images require the operator to run build scripts on the host; a self-service template-build API is only planned for v0.2. Only a fixed list of built-in templates (playground, rust, python-3.11, node-20, desktop, etc.) are creatable via the API.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "Firecracker microVM — Minimal virtual machine monitor / KVM — Hardware virtualization",
+      "note": "derived: KVM/Firecracker is used to run the guest kernel itself; no page mentions /dev/kvm or nested virtualization being exposed inside the guest, and Firecracker microVMs typically do not pass through hardware virtualization to the guest.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": true,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "Desktop Sandboxes: Full Linux GUI (XFCE) with programmatic mouse/keyboard/screenshot control for AI computer use.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": true,
+      "source": "https://omnirun.io/docs/desktop",
+      "quote": "Automated web browsing in a desktop sandbox — Firefox navigating to Hacker News and GitHub Trending",
+      "note": "The desktop template's XFCE image ships Firefox, shown driven via the computer-use API.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": true,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "sb.desktop.screenshot() ... sb.desktop.leftClick(512, 384) ... sb.desktop.type(\"hello world\") ... sb.desktop.press(\"Return\")",
+      "note": "Screenshot + mouse/keyboard control API on the desktop template.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://omnirun.io/pricing",
+      "quote": "OmniRun — Isolated Firecracker microVMs for AI agent workloads. Each sandbox gets its own kernel.",
+      "note": "not offered: outside the product's scope. OmniRun is a general-purpose Firecracker sandbox/desktop product with no stealth/fingerprinting features documented anywhere on its site.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://omnirun.io/pricing",
+      "quote": "OmniRun — Isolated Firecracker microVMs for AI agent workloads. Each sandbox gets its own kernel.",
+      "note": "not offered: outside the product's scope. No CAPTCHA-solving feature is mentioned in the docs, compare page, or security page.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "Hosting: Hetzner data centers in Germany (EU). All data stays in the EU.",
+      "note": "Managed service runs on Hetzner bare metal in the EU (Finland per the security-page footer); no residential/mobile or dedicated egress-IP offering is documented, so outbound traffic is shared datacenter IP space.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "SSH and IDE access ... No",
+      "note": "Access is via the REST/SDK commands API (commands.run, PTY), not SSH.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "No hibernate to disk yet: a paused OmniRun sandbox stays in memory and does not survive a restart.",
+      "note": "A sandbox's copy-on-write disk is deleted when it is killed or its timeout expires; there is no automatic save-and-restore of state on stop/sleep. Hibernate-to-disk is only planned for v0.2.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "No fork, user snapshots or volumes yet. E2B, CubeSandbox, microsandbox and boxd all have some form of these.",
+      "note": "Roadmap v0.2 lists 'Fork a running sandbox' and 'user snapshots' as planned, not shipped.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "Fork a running sandbox ... No Planned for v0.2",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "No fork, user snapshots or volumes yet.",
+      "note": "No fork capability exists at all, so memory-preserving fork does not either.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://omnirun.io/compare",
+      "quote": "Pause in memory ... Yes",
+      "note": "Manual pause()/resume() exists in the SDK, kept in memory only; it does not survive a host restart (no hibernate-to-disk yet).",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "timeout | number | 300 | Max lifetime in seconds before auto-kill",
+      "note": "Sandboxes are explicitly created via the API and torn down on timeout/idle; nothing describes a stopped/sleeping sandbox automatically waking on an inbound request (e.g. via its preview URL).",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://omnirun.io/security",
+      "quote": "Separate disks. Each sandbox gets a copy-on-write LVM thin snapshot of its template, deleted when it is killed.",
+      "note": "Files do not survive the sandbox being killed or timing out; there is no volume/persistent-disk feature (compare page: 'Persistent volumes No').",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "Per-sandbox CPU and memory sizing ... No Fixed per template",
+      "note": "CPU/RAM are fixed by the chosen template, not adjustable on a running sandbox.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "`openclaw` | AI agent gateway for WhatsApp/Telegram/Discord/Slack",
+      "note": "not offered: outside the product's scope. OmniRun ships a generic computer-use API (screenshot/click) and an LLM proxy, plus a messaging-bot gateway template (openclaw), but no first-party task/research/browser agent that OmniRun itself runs and drives via API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "MCP server ... No Planned",
+      "note": "Listed as planned, not shipped.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "`python-3.11` | Python 3.11 ... Python SDK: coming soon",
+      "note": "Python runtime is available as a built-in template; a first-party Python SDK is listed (with sync/async examples), though marked 'coming soon' in the SDK list header.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "`node-20` | Node.js 20 ... TypeScript/JavaScript: `npm install @omnirun/sdk`",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "Expose any sandbox port as a public HTTPS URL instantly. ... exposure.url // \"https://abc123.run.omnirun.io\"",
+      "note": "Inbound access is via proxied HTTPS preview URLs on OmniRun's domain, not a dedicated public IPv4 address per sandbox; no public IPv4 feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "Preview URLs: Expose any sandbox port as a public HTTPS URL instantly.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://omnirun.io/security",
+      "quote": "Separate networks. Each VM gets its own network namespace, tap device and bridge, and traffic between sandboxes is blocked.",
+      "note": "No fixed/dedicated outbound IP feature is documented anywhere (pricing, docs, compare, security); egress goes out through the shared host's network.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://omnirun.io/compare",
+      "quote": "GPU ... No Firecracker has no GPU passthrough",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://omnirun.io/open-source",
+      "quote": "Self-host: x86_64 Linux host with KVM, 8 GB RAM, 30 GB free disk (Ubuntu 24.04 tested)",
+      "note": "not offered: outside the product's scope. All templates are Linux (XFCE desktop, Python/Node/Rust/PHP toolchains); no Windows machine option is offered.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://omnirun.io/open-source",
+      "quote": "Self-host: x86_64 Linux host with KVM, 8 GB RAM, 30 GB free disk (Ubuntu 24.04 tested)",
+      "note": "not offered: outside the product's scope. Firecracker microVMs run Linux guest kernels on a Linux/KVM host; no macOS option exists.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://omnirun.io/open-source",
+      "quote": "Self-host: x86_64 Linux host with KVM, 8 GB RAM, 30 GB free disk (Ubuntu 24.04 tested)",
+      "note": "Self-host requirements and the managed service are described only for x86_64 hosts; no ARM64 host or sandbox option is documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": true,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "Open Source - License: Apache-2.0; contributions via DCO sign-off (`git commit -s`), no CLA - Source opens soon: Apache-2.0, public shortly.",
+      "note": "Core product is Apache-2.0 licensed; source repository is stated to be opening soon (not yet public at time of check).",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://omnirun.io/security",
+      "quote": "No compliance certifications. OmniRun has no SOC 2, ISO 27001 or HIPAA attestation.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://omnirun.io/solutions/claude-managed-agents",
+      "quote": "covers Anthropic's processing only; OmniRun itself holds no HIPAA or SOC 2 attestation.",
+      "note": "Claude Managed Agents can be eligible for Anthropic's own HIPAA-BAA program (configured Anthropic-side), but OmniRun itself has no HIPAA attestation/BAA.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://omnirun.io/security",
+      "quote": "Your code Untrusted: runs as root in its own VM by default ... Guest kernel A Linux kernel per sandbox, never the host's",
+      "note": "derived: not explicitly documented either way. Each sandbox is a full Firecracker microVM with its own dedicated Linux guest kernel (not a shared-kernel container) and guest commands run as root by default, which is exactly the environment Docker needs (cgroups/namespaces inside a real kernel); nested_virt (/dev/kvm passthrough) is false, but Docker itself does not require nested hardware virtualization to run. No page confirms or denies a Docker daemon actually starting inside the guest.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://omnirun.io/llms-full.txt",
+      "quote": "Optional gateway. A single node runs with an admin API key; add the gateway for per-user quotas, metering and more than one node.",
+      "note": "granularity: account-only; cost: no; OmniRun has internal metering through the gateway component for tracking per-user sandbox usage, but no public REST API, SDK call, or CLI command is documented for retrieving billable usage per sandbox or VM. The /llm/v1/usage endpoint is only for the LLM proxy (OpenAI-compatible) usage, not sandbox metering. Usage tracking appears to be configuration-level only (metering-only by default) and not exposed programmatically.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "FI",
+      "state": null,
+      "city": null,
+      "provider_region": "eu-fi-1",
+      "self_serve": true,
+      "choosable": false
+    }
+  ],
+  "locations_source": "https://omnirun.io/pricing",
+  "locations_quote": "All hosts in Finland. Managed service hosted in the EU (Finland).",
+  "locations_checked": "2026-10-01"
+}

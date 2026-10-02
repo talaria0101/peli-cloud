@@ -1,0 +1,1113 @@
+{
+  "id": "bitrise",
+  "name": "Bitrise (mobile CI)",
+  "url": "https://bitrise.io/pricing",
+  "category": "macos",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "pool",
+      "label": "Starter plan: flat $99/$199/$299 per month (1/2/4 concurrent Medium builds), unlimited usage",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "pricing": "pool",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": [
+        {
+          "name": "Starter Tier 1 (1 x macOS/Linux Medium: M2 Pro 4 CPU / 6 GB)",
+          "month": 99,
+          "vcpu": 4,
+          "ram_gib": 6,
+          "max_vms": 1
+        },
+        {
+          "name": "Starter Tier 2 (2 x Medium)",
+          "month": 199,
+          "vcpu": 8,
+          "ram_gib": 12,
+          "max_vms": 2
+        },
+        {
+          "name": "Starter Tier 3 (4 x Medium)",
+          "month": 299,
+          "vcpu": 16,
+          "ram_gib": 24,
+          "max_vms": 4
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Starter: 'Unlimited usage, with up to 4 concurrent builds', macOS/Linux Medium machines only, up to 3 private apps, 210-min build timeout. $89/mo billed annually. Medium = M4 Medium 5 CPU/6 GB or M2 Pro Medium 4 CPU/6 GB (pool uses 4 CPU / 6 GB per slot). Only 6 GB RAM per build: an 8 GiB workload does not really fit.",
+      "product_class": "ci-runner",
+      "plans": [
+        "Starter"
+      ]
+    },
+    {
+      "key": "on-demand",
+      "label": "Per-minute 'Zero Margin' machine cost, macOS",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "macOS Medium (M4 5 CPU / 6 GB)",
+          "vcpu": 5,
+          "ram_gib": 6,
+          "disk_gib": null,
+          "hour": 0.432,
+          "month_cap": null,
+          "per_minute_usd": 0.0072
+        },
+        {
+          "name": "macOS Large (M4 5 CPU / 14 GB)",
+          "vcpu": 5,
+          "ram_gib": 14,
+          "disk_gib": null,
+          "hour": 0.576,
+          "month_cap": null,
+          "per_minute_usd": 0.0096
+        },
+        {
+          "name": "macOS 4Large (M4 Pro 7 CPU / 27 GB)",
+          "vcpu": 7,
+          "ram_gib": 27,
+          "disk_gib": null,
+          "hour": 0.864,
+          "month_cap": null,
+          "per_minute_usd": 0.0144
+        },
+        {
+          "name": "macOS X Large (M4 10 CPU / 28 GB)",
+          "vcpu": 10,
+          "ram_gib": 28,
+          "disk_gib": null,
+          "hour": 1.152,
+          "month_cap": null,
+          "per_minute_usd": 0.0192
+        },
+        {
+          "name": "macOS 4X Large (M4 Pro 14 CPU / 54 GB)",
+          "vcpu": 14,
+          "ram_gib": 54,
+          "disk_gib": null,
+          "hour": 1.758,
+          "month_cap": null,
+          "per_minute_usd": 0.0293
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "'How much does a minute on different machines cost?' table on bitrise.io/pricing (verified in rendered page 2026-09-28). Bitrise says it sells infrastructure 'at passthrough cost, without any profit-generating margin'; the Pro plan fee (builds/month tiers) comes on top. PAYG above the plan's allowance is charged 'at a premium PAYG rate' that is not published. Pricing page (2026-09-28): per-minute costs apply to Pro plan usage via Pay-As-You-Go (Starter includes infrastructure in its fee); so these regimes are sold on Pro only and the $218/mo Pro fee is added. X Large / M4 Pro machines are Enterprise-only.",
+      "product_class": "ci-runner",
+      "plans": [
+        "Pro"
+      ],
+      "features": {
+        "nested_virt": false
+      }
+    },
+    {
+      "key": "on-demand-linux",
+      "label": "Per-minute machine cost, Linux",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Linux 2S",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.132,
+          "month_cap": null,
+          "per_minute_usd": 0.0022
+        },
+        {
+          "name": "Linux M",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.264,
+          "month_cap": null,
+          "per_minute_usd": 0.0044
+        },
+        {
+          "name": "Linux 2M",
+          "vcpu": 6,
+          "ram_gib": 24,
+          "disk_gib": null,
+          "hour": 0.396,
+          "month_cap": null,
+          "per_minute_usd": 0.0066
+        },
+        {
+          "name": "Linux L",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.534,
+          "month_cap": null,
+          "per_minute_usd": 0.0089
+        },
+        {
+          "name": "Linux 4L",
+          "vcpu": 14,
+          "ram_gib": 56,
+          "disk_gib": null,
+          "hour": 0.924,
+          "month_cap": null,
+          "per_minute_usd": 0.0154
+        },
+        {
+          "name": "Linux XL",
+          "vcpu": 16,
+          "ram_gib": 56,
+          "disk_gib": null,
+          "hour": 1.062,
+          "month_cap": null,
+          "per_minute_usd": 0.0177
+        },
+        {
+          "name": "Linux 3XL",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": null,
+          "hour": 1.584,
+          "month_cap": null,
+          "per_minute_usd": 0.0264
+        },
+        {
+          "name": "Linux 5XL",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 2.112,
+          "month_cap": null,
+          "per_minute_usd": 0.0352
+        },
+        {
+          "name": "Linux 7XL",
+          "vcpu": 48,
+          "ram_gib": 192,
+          "disk_gib": null,
+          "hour": 3.168,
+          "month_cap": null,
+          "per_minute_usd": 0.0528
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Same table. No Windows machines on Bitrise. Sold on Pro (per-minute Pay-As-You-Go usage), fee added.",
+      "product_class": "ci-runner",
+      "plans": [
+        "Pro"
+      ]
+    },
+    {
+      "key": "rde-macos",
+      "label": "Remote Dev Environments, macOS VM (per-minute, monthly cap per VM)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": false,
+      "gpu_min_count": null,
+      "plan_limits_exempt": false,
+      "features": {
+        "desktop": true,
+        "nested_virt": false,
+        "persistent_disk": true,
+        "agent_harnesses": true
+      },
+      "plans": [
+        "RDE Basic",
+        "RDE Pro"
+      ],
+      "vm_max_vcpu": null,
+      "vm_max_ram_gib": null,
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "RDE Basic macOS M2 Pro Large",
+          "vcpu": 6,
+          "ram_gib": 14,
+          "disk_gib": null,
+          "hour": 1.728,
+          "month_cap": 99,
+          "per_minute_usd": 0.0288
+        },
+        {
+          "name": "RDE Pro macOS M2 Pro X Large",
+          "vcpu": 12,
+          "ram_gib": 28,
+          "disk_gib": null,
+          "hour": 3.456,
+          "month_cap": 199,
+          "per_minute_usd": 0.0576
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "bitrise.io/pricing (2026-09-29): overage $0.0288/min (Basic, M2 Pro Large 6 vCPU/14 GB) or $0.0576/min (Pro, M2 Pro X Large 12 vCPU/28 GB); once the macOS bill reaches the cap ($99/$297/$495 Basic, $199/$597/$995 Pro for tiers 1/2/3 = $99 or $199 per concurrent VM) macOS is free for the rest of the month. 480/960/1,440 included min per OS per tier not credited (conservative, <= $13.82 Basic / $27.65 Pro). Whether the cap includes the base fee is not stated. Idle running sessions bill minutes (auto-terminate after 5 days inactivity); session storage not billed today; VNC desktop. GA 2026-09-10.",
+      "product_class": "dev-environment"
+    },
+    {
+      "key": "rde-linux",
+      "label": "Remote Dev Environments, Linux VM (per-minute, monthly cap per VM)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": false,
+      "gpu_min_count": null,
+      "plan_limits_exempt": false,
+      "features": {
+        "desktop": false,
+        "persistent_disk": true,
+        "agent_harnesses": true
+      },
+      "plans": [
+        "RDE Basic",
+        "RDE Pro"
+      ],
+      "vm_max_vcpu": null,
+      "vm_max_ram_gib": null,
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "RDE Basic Linux Small",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.264,
+          "month_cap": 39,
+          "per_minute_usd": 0.0044
+        },
+        {
+          "name": "RDE Pro Linux Medium",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.528,
+          "month_cap": 79,
+          "per_minute_usd": 0.0088
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "bitrise.io/pricing (2026-09-29): Linux overage $0.0044/min (Basic, Small 2 vCPU/8 GB) or $0.0088/min (Pro, Medium 4 vCPU/16 GB); Linux cap $39/$117/$195 Basic, $79/$237/$395 Pro for tiers 1/2/3 (= $39 or $79 per concurrent VM), then Linux is free for the rest of the month. 480/960/1,440 included Linux min per tier not credited (conservative, <= $2.11 / $4.22). No desktop on Linux sessions.",
+      "product_class": "dev-environment"
+    },
+    {
+      "key": "build-hub-macos",
+      "label": "Build Hub (GitHub Actions runners), macOS, prepaid monthly compute budget",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "macos"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "gpu_min_count": null,
+      "plan_limits_exempt": false,
+      "features": {},
+      "plans": [
+        "Build Hub Basic",
+        "Build Hub Pro"
+      ],
+      "vm_max_vcpu": null,
+      "vm_max_ram_gib": null,
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "BH macOS M4 Large",
+          "vcpu": 5,
+          "ram_gib": 14,
+          "disk_gib": null,
+          "hour": 1.8,
+          "month_cap": null,
+          "per_minute_usd": 0.03
+        },
+        {
+          "name": "BH macOS M4 XLarge",
+          "vcpu": 10,
+          "ram_gib": 28,
+          "disk_gib": null,
+          "hour": 3.6,
+          "month_cap": null,
+          "per_minute_usd": 0.06
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "bitrise.io/pricing (2026-09-29): machines draw from the plan's prepaid monthly compute budget (fee == budget); when the budget is used up no more jobs run until reset (PAYG at 2x, e.g. $0.06/min M4 Large, is announced but not live). Linux rates (not encoded here, card has no per-size OS): Medium 4/16 $0.0125/min, 2Medium 6/24 $0.01875, Large 8/32 $0.025, 4Large 14/56 $0.04375, XLarge 16/64 $0.05. Budget tiers: Basic $15/$45/$90/$180, Pro $210/$300/$600/$810 (10% off annual).",
+      "product_class": "ci-runner"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 100,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false
+  },
+  "plans": [
+    {
+      "name": "Hobby",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 5,
+      "max_session_h": 1.5,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "1 private app, 300 credits/month (credit value not published), 90-min build timeout."
+    },
+    {
+      "name": "Starter",
+      "fee": 99,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 1,
+      "max_session_h": 3.5,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "macOS Medium (M4 5 CPU / 6 GB)",
+        "Linux M"
+      ],
+      "note": "Unlimited usage; $89/mo annual. Priced via the 'pool' mode."
+    },
+    {
+      "name": "Pro",
+      "fee": 218,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 10,
+      "max_session_h": 3.5,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "macOS Large (M4 5 CPU / 14 GB)",
+        "Linux 2S",
+        "Linux L"
+      ],
+      "note": "From $218/mo monthly ($200 annual), 250-2,000 builds/month and 3,000-24,000 'Zero Margin Infra minutes/month' by tier (tier prices above the entry tier not published). Minutes are part of the tier allowance: after the tier's builds OR minutes are used up, PAYG runs at an unpublished 'premium PAYG rate', builds capped at +50% of the tier, then builds stop until the next cycle. PAYG minutes metered separately for macOS and Linux. Machines: M2 Pro/M4 Large, Linux 2S, Linux L only. Utility builds beta (Linux Small, <5 min) don't count toward the build quota."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": 4,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "From 2,000 builds/month; dedicated or self-hosted AWS options; M4 Pro and X Large machines."
+    },
+    {
+      "name": "RDE Basic",
+      "fee": 20,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "waives_start_fee": false,
+      "included_applies_to_modes": null,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "RDE Basic macOS M2 Pro Large",
+        "RDE Basic Linux Small"
+      ],
+      "note": "Tier 1: $20/mo monthly ($18 annual), 1 concurrent VM, 480 included min per OS (not credited). Tier 2 $40 (3 VMs, 960 min), Tier 3 $60 (5 VMs, 1,440 min). 14-day trial (card for verification, 8 h per OS, 1 VM, 8 h session cap)."
+    },
+    {
+      "name": "RDE Pro",
+      "fee": 40,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "waives_start_fee": false,
+      "included_applies_to_modes": null,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "RDE Pro macOS M2 Pro X Large",
+        "RDE Pro Linux Medium"
+      ],
+      "note": "Tier 1: $40/mo monthly ($36 annual), 1 concurrent VM, 480 included min per OS (not credited). Tier 2 $80 (3 VMs), Tier 3 $120 (5 VMs). Marketed for heavier workloads and AI agents."
+    },
+    {
+      "name": "Build Hub Basic",
+      "fee": 15,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "waives_start_fee": false,
+      "included_applies_to_modes": null,
+      "concurrency": 2,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Tier 1: $15 prepaid compute budget (fee converts to usage), 10 macOS vCPU (= 2 M4 Large) / 24 Linux vCPU concurrency. Tiers 2-4 $45/$90/$180 with 15/30/35 macOS vCPU. Jobs stop when the budget is used up (no overage yet)."
+    },
+    {
+      "name": "Build Hub Pro",
+      "fee": 210,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "waives_start_fee": false,
+      "included_applies_to_modes": null,
+      "concurrency": 8,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Tier 1: $210 prepaid compute budget ($189 annual), 40 macOS vCPU (8 M4 Large) / 160 Linux vCPU concurrency. Tiers 2-4 $300/$600/$810 with up to 90 macOS / 640 Linux vCPU."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": 3.5,
+    "custom_image": false,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": false,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "harness_api": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "isolation": "apple-vm",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Sweep flagged $0.0072-0.0096/min as ~10x too low: they ARE the official per-minute machine costs on bitrise.io/pricing ('Zero Margin Infra'); the plan fee (build tiers) is the margin. Treat the per-minute modes as a floor.",
+    "Remote Dev Environments / Build Hub products have different rates (e.g. macOS overage $0.0288/min Basic, $0.0576/min Pro) and are not encoded.",
+    "CI-only product: jobs are build workflows, max 90-240 min; not a general agent sandbox.",
+    "Hobby credits: credit-to-minute conversion not published.",
+    "Pro fee ($218/mo, 250 builds) is added to per-minute usage; workloads over 250 builds/month need a higher, unencoded Pro tier. Whether some infra minutes are included in the Pro fee is not clearly stated.",
+    "Utility builds beta (since 2026-08-06, Pro and Pro trial): builds on Linux Small that finish in <5 min don't count toward the build quota; minutes still metered.",
+    "Pro trial (30 days, 500 builds) now requires a credit card (since 2026-03-24); docs say new sign-ups cannot start CI builds without the trial or a paid plan, so 'Hobby requires no card' may no longer hold for new accounts."
+  ],
+  "sources": [
+    "https://bitrise.io/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": 5,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Hobby requires no card.",
+    "tiers": "Hobby 5 concurrent builds; Starter up to 4; Pro up to 10 macOS/30 Linux; Enterprise flexible. 30-day Pro trial also available.",
+    "notes": "Using explicitly published no-card Hobby baseline, not assuming every signup retains Pro trial. Hobby has 300 credits/month and 90-minute build timeout. Plan upgrade is not monotonically higher concurrency: Starter advertises 4.",
+    "sources": [
+      "https://bitrise.io/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 8,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 14
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-build-hub/infrastructure/build-stacks/about-build-stacks.md",
+      "quote": "Each build runs in its own virtual machine and the virtual machine is rolled back to a saved state, the “base box” state, after the build is finished.",
+      "note": "CI VMs are discarded/rolled back after every build (no state saved). Remote Dev Environments (RDE) keep a persistent disk on terminate/auto-terminate ('Terminated**: the machine is stopped, but the session and its persistent disk are kept', key-concepts.md) - that is persistent_disk, not a snapshot; no memory state. RDE FAQ: 'Session disks are working storage, and not backed up.'",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.bitrise.io/bitrise-rde/rde-options/bitrise-rde-cli.md",
+      "quote": "To return to a session, use `bitrise-cli rde claude --continue` for the most recent one, or `bitrise-cli rde claude --resume` to pick from a list. Resuming reconnects to a running session, or restores a terminated one and continues the same Claude Code conversation.",
+      "note": "RDE product only. Claude Code only as first-class harness ('The `bitrise-cli rde claude` command creates a session, clones your current repository branch into it, and drops you into Claude Code running on the cloud machine'); `rde session notifications` lists 'events the session emitted, such as agent stops and permission prompts' (also an API endpoint list-session-notifications). Interactive attach + resume of conversations; no documented prompt-in/stream-JSON API. Other agents only via template warmup scripts. MCP server (mcp-rde.bitrise.io) drives sessions (exec, files, GUI), not a harness. Bitrise's own AI build fixer agent is started from the UI on failed builds.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full VMs (macOS Apple-silicon VMs, Linux VMs) with passwordless sudo ('The user account that is used for the builds is configured to have **passwordless sudo** enabled', about-build-stacks.md); pf on macOS / iptables on Linux should work. Not documented.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-ci/configure-builds/secrets.md",
+      "quote": "Secrets are a specific type of Environment Variable",
+      "note": "CI Secrets and RDE saved inputs/template variables are injected as env vars (resolved server-side, but the value enters the machine). RDE GitHub integration 'plants a short-lived GitHub token on each new session' (token is inside the VM). Claude Code credential saved input is also placed in the session. No outbound credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "apple-vm",
+      "source": "https://docs.bitrise.io/en/bitrise-rde/getting-started/rde-faq",
+      "quote": "Which machines can I get? macOS on Apple silicon (M2 Pro, M4, M4 Pro) and Linux from 2 to 48 vCPUs, on shared or dedicated clusters.",
+      "note": "Card category is macos; each build/session runs in its own dedicated virtual machine ('Each build runs in its own virtual machine' - about-build-stacks). macOS runs on Apple silicon via Apple's own virtualization; Linux side also runs in VMs but the hypervisor tech isn't documented publicly.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://docs.bitrise.io/en/bitrise-platform/infrastructure/docker-containers-on-bitrise/about-docker-containers-on-bitrise",
+      "quote": "Use any Docker image as the execution environment for your Steps or as a background service: spin up a database, HTTP server, or any dependency your tests need.",
+      "note": "Linux CI builds only: you can run build Steps inside any Docker/OCI image (container-in-VM), not a full machine boot from your own image. macOS builds and RDE sessions boot from fixed Bitrise 'stacks', not customer-supplied images.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://bitrise.io/pricing",
+      "quote": "on-demand mode and RDE mode feature blocks both record features.nested_virt: false for macOS machines",
+      "note": "Card's mode-level feature_evidence already records nested_virt: false for macOS on-demand machines and macOS RDE sessions; no documentation of /dev/kvm or nested hypervisor access for Linux either. Extending false to the whole product (no evidence of true anywhere).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://bitrise.io/pricing",
+      "quote": "Bitrise is a top mobile CI/CD platform, streamlining build, test, and deployment for mobile apps.",
+      "note": "not offered: outside the product's scope (mobile CI/CD build runner and dev-environment product, not a browser/scraping automation platform).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://bitrise.io/pricing",
+      "quote": "Bitrise is a top mobile CI/CD platform, streamlining build, test, and deployment for mobile apps.",
+      "note": "not offered: outside the product's scope (mobile CI/CD build runner and dev-environment product, not a browser/scraping automation platform).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.bitrise.io/en/bitrise-build-hub/infrastructure/ip-addresses-for-the-build-machines",
+      "quote": "Our datacenters are behind a set of public static IP addresses, with the virtual machines having their own internal subnets behind these addresses.",
+      "note": "Consistent with card's existing features.static_egress_ip: true.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-rde/getting-started/key-concepts",
+      "quote": "Terminated: the machine is stopped, but the session and its persistent disk are kept. Terminating is reversible.",
+      "note": "No snapshot/checkpoint API found anywhere in the docs sitemap (no 'snapshot' or 'checkpoint' endpoints). RDE only keeps a persistent disk across terminate/restore (no memory state, no on-demand point-in-time snapshot). CI build VMs are rolled back to a base state after every build. Consistent with card's snapshot: 'none' / snapshot_auto: false.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-rde/getting-started/key-concepts",
+      "quote": "Terminated: the machine is stopped, but the session and its persistent disk are kept. Terminating is reversible.",
+      "note": "A terminated/stopped session must be explicitly restored via CLI/API/UI ('restore session'); nothing in the docs describes an incoming request automatically waking a stopped session.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-rde/getting-started/key-concepts",
+      "quote": "Terminating a session preserves its persistent disk, so when you restore it your files and changes are still there.",
+      "note": "Only one built-in persistent disk per session is documented; no attachable/extra volume feature or API found.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-rde/getting-started/key-concepts",
+      "quote": "A session's disk stores only the changes you have made on top of the stack image it was created from, so the session can only be started while that stack image is still available.",
+      "note": "Persistent disk is per-session; no documented feature to mount one volume across several running machines.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-rde/getting-started/key-concepts",
+      "quote": "A machine type: the size of the machine, defined by its CPU and RAM. ... A template can set these for you, or you can pick them directly when creating a session.",
+      "note": "Machine type (CPU/RAM) is chosen at session/build creation; no documented API to change CPU/RAM of a running machine without recreating/restoring it.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-ci/workflows-and-pipelines/ai-configuration-assistant",
+      "quote": "The AI config assistant is a chat-based assistant built into the Bitrise Workflow Editor that turns natural-language descriptions into validated YAML.",
+      "note": "Bitrise's own AI features (AI configuration assistant, AI build fixer) are UI-embedded chat tools, not exposed as a first-party API to drive an own browser/computer-use/research task agent. The RDE MCP server / session-click / session-screenshot APIs drive the sandbox's desktop generically (computer_use) rather than a Bitrise-authored task agent.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://stacks.bitrise.io/stack_reports/",
+      "quote": "Tools ... Node.js versions",
+      "note": "Bitrise publishes a dedicated 'Node.js versions' tool page alongside Java/Ruby/Go, confirming Node.js is a preinstalled/managed runtime on Bitrise stacks.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-rde-api/api-reference/codespaces-service-open-remote-access",
+      "quote": "Establishes remote access (SSH/VNC) for a running session.",
+      "note": "not offered: build machines have no public IPv4/inbound HTTPS (card: public_ipv4/inbound_https false); RDE remote access (SSH/VNC) is opened per-session via an authenticated API call rather than provider-side IP allowlists/security groups on exposed ports.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-platform/infrastructure/build-machines/configuring-your-network-to-access-our-build-machines",
+      "quote": "Our datacenters are behind a set of public static IP addresses, with the virtual machines having their own internal subnets behind these addresses.",
+      "note": "This page documents customers allowlisting Bitrise's outbound IPs on their own network, not a Bitrise-side control restricting what the build/RDE machine itself can reach outbound. No provider-side outbound allow/deny-list or no-internet mode found.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.bitrise.io/en/bitrise-platform/infrastructure/build-machines/configuring-your-network-to-access-our-build-machines",
+      "quote": "Our datacenters are behind a set of public static IP addresses, with the virtual machines having their own internal subnets behind these addresses.",
+      "note": "No documentation of HTTP method/path-level egress rules; consistent with no coarser egress_allowlist feature either.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://bitrise.io/security",
+      "quote": "Certified, compliant, audit-ready SOC 2 Type II Independently audited, annually PCI DSS Assessed yearly by a QSA GDPR Fully compliant as a data controller ISO 27001 Held by all our core infrastructure providers",
+      "note": "Bitrise's Trust/security page lists SOC 2 Type II, PCI DSS, GDPR, and ISO 27001 as its compliance credentials; HIPAA/BAA is not mentioned anywhere on this page or elsewhere on bitrise.io, so it is not offered.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://bitrise.io/security",
+      "quote": "Data residency. Choose your region via Bitrise on AWS (US, Ireland, Frankfurt, Singapore, Sydney)",
+      "note": "Ireland and Frankfurt are EU regions; consistent with card's features.regions: ['us','eu'].",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/key-concepts.md",
+      "quote": "Terminating a session preserves its persistent disk, so when you restore it your files and changes are still there.",
+      "note": "Remote Dev Environments (RDE) sessions keep a persistent disk across stop/start ('Terminated' -> 'Running'). Top-level features.persistent_disk=false contradicts the card's own rde-macos/rde-linux mode-level features (both have persistent_disk:true) and feature_evidence.snapshot_auto note. CI build VMs are still ephemeral/rolled-back, but the field only needs one first-party path to be true.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "Is my session disk backed up? No. Session disks are working storage, and not backed up.",
+      "note": "No fs or mem snapshot/checkpoint mechanism is offered: RDE keeps one persistent working disk (no backup/restore points, no memory-state capture) and CI VMs are rolled back to the base stack image after every build ('the virtual machine is rolled back to a saved state, the base box state, after the build is finished', about-build-stacks.md) rather than snapshotted for the user.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "Terminated: the machine is stopped, and the session and its persistent disk are kept; fully reversible.",
+      "note": "RDE sessions can be terminated (stopped) and later restored, keeping the disk; while terminated no session compute is running/billed ('Does using RDE consume my CI build credits? No' - RDE meters per-minute active use only). This is the pause/resume pattern the field asks about.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/configuration/templates.md",
+      "quote": "A template is a reusable Remote Dev Environment configuration. Define the machine and its setup once, then create consistent sessions from it without repeating the same choices each time.",
+      "note": "Sessions are created fresh from a stack image + template/warm-pool configuration, not by cloning an existing session's disk/state. No 'clone this session' or 'fork' action is documented anywhere in RDE, warm pools, templates, or CI docs.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/configuration/warm-pools.md",
+      "quote": "Claiming a session from a pool gives you one of its warm sessions, renamed and stamped with your name, labels, and auto-terminate window.",
+      "note": "Warm pools hand out pre-booted sessions from a shared template configuration; claiming does not clone an already-running, in-use session. No documented ability to fork a live running machine into an independent copy.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/key-concepts.md",
+      "quote": "A session's disk stores only the changes you have made on top of the stack image it was created from",
+      "note": "No memory-state capture/restore or process-preserving clone is documented anywhere (only disk state persists; CI VMs even discard disk state on rollback). Consistent with fork/fork_running being false.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "VNC for a graphical desktop on macOS sessions. Linux sessions have no desktop, so VNC isn't available.",
+      "note": "macOS Remote Dev Environment sessions expose a real graphical desktop over VNC. This also matches the card's own rde-macos mode features (desktop:true) which contradicts the top-level features.desktop=false.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/rde-options/bitrise-rde-mcp-server.md",
+      "quote": "Take screenshots of, and control, the macOS desktop.",
+      "note": "The first-party RDE MCP server exposes exactly a screenshot+click style computer-use capability for driving the macOS desktop (also used to drive iOS simulator/Android emulator UIs: 'install a build, tap through the UI, take screenshots, and run tests').",
+      "checked": "2026-09-30"
+    },
+    "custom_image": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-build-hub/infrastructure/build-stacks/about-build-stacks.md",
+      "quote": "The build stack indicates the virtual machine version that we will use to run your build.",
+      "note": "Machines are booted from Bitrise-managed, fixed 'stacks' (curated OS/tool images) that you select from a list; no documented way to supply your own base VM/OCI image for CI, RDE, or Build Hub machines.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "What's actually on the persistent disk? Only the changes made since the session was created - your clone, build outputs, local configuration - stored as a difference against the stack image.",
+      "note": "Each session has exactly one persistent working disk; no documented ability to attach additional/extra persistent volumes to a machine.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/devices/device-preview-links.md",
+      "quote": "A device preview link is a URL that opens an app build on a live iOS simulator or Android emulator in the recipient's browser.",
+      "note": "Device preview links are a Bitrise-hosted proxy that streams a simulator/emulator screen from a build artifact; they are not a general mechanism for exposing a port/HTTP server running inside a session over a public HTTPS URL. No such ingress feature is documented for CI or RDE machines.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "SSH, using the address and one-time password shown there or from `bitrise-cli rde session view`.",
+      "note": "Connectivity is documented as an SSH address/one-time password issued by Bitrise (plus VNC/web terminal), not a standing public IPv4 assigned to the machine; no page advertises a dedicated public IPv4 per machine. Matches card's own network.ipv4_available=false.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "Which agents can I run? Claude Code is first-class: `bitrise-cli rde claude` creates a session, clones your branch, and starts the agent.",
+      "note": "Claude Code is offered as a first-class, ready-to-run harness on Remote Dev Environments ('bitrise-cli rde claude'), and other agents can be preinstalled via template warmup scripts. Top-level features.agent_harnesses=false contradicts the card's own rde-macos/rde-linux mode features (agent_harnesses:true) and feature_evidence.harness_api entry.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "Which machines can I get? macOS on Apple silicon (M2 Pro, M4, M4 Pro) and Linux from 2 to 48 vCPUs, on shared or dedicated clusters.",
+      "note": "Every documented machine type (CI, RDE, Build Hub) is a plain CPU macOS/Linux VM; no GPU instance type is offered anywhere. Product is a mobile CI/dev-environment platform, not a compute/GPU cloud.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "Which machines can I get? macOS on Apple silicon (M2 Pro, M4, M4 Pro) and Linux from 2 to 48 vCPUs, on shared or dedicated clusters.",
+      "note": "Consistently across CI, RDE, and Build Hub docs and the pricing page, only macOS and Linux machines are offered; no Windows machine type exists on Bitrise.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/rde-options/bitrise-rde-mcp-server.md",
+      "quote": "Connect the open-source Bitrise Dev Environments MCP server to your AI agent so it can create and drive Remote Dev Environment sessions on your behalf.",
+      "note": "Only the MCP connector/CLI tooling is open source; the core Bitrise CI/RDE/Build Hub platform itself is a paid, closed-source commercial SaaS (plans, pricing, sales-only Enterprise tier). No OSI-licensed core product exists, so the field stays false.",
+      "checked": "2026-09-30"
+    },
+    "private_network": {
+      "value": false,
+      "source": "https://docs.bitrise.io/bitrise-rde/getting-started/rde-faq.md",
+      "quote": "Can I reach a private network or VPN? Yes, through custom scripts in your template, the same way CI machines do. There's no dedicated Step or one-click setup yet.",
+      "note": "Bitrise explicitly says there is no first-party private-networking/VPC-peering feature: reaching a private network requires the customer's own VPN client script inside the machine, not a provider-managed private network/security-group construct.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.bitrise.io/bitrise-ci/getting-started/getting-started.md",
+      "quote": "Bitrise stacks come with a preinstalled Python version at all times, so you can avoid the install time by using a partial version that uses a preinstalled Python (if available).",
+      "note": "Python is a preinstalled, first-class runtime on Bitrise stacks (used for both CI builds and RDE sessions, which run on the same stacks). Bitrise also auto-detects Python projects (requirements.txt/pyproject.toml/Pipfile/setup.py) and generates a default `run_tests` Workflow that installs the detected Python version and runs pytest.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://bitrise.io/pricing",
+      "quote": "You can check your monthly cycle usage on your Workspace's Plan & billing page. You can also check your number of builds and build minutes consumed on Insights",
+      "note": "granularity: account-only; cost: no; Bitrise usage is only visible through the web UI dashboard (Plan & billing page, Insights tab), not programmatically. The REST API at api.bitrise.io has no endpoints for billing, cost, usage, or metrics. Users cannot retrieve usage data via REST API, CLI, or SDK.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": null,
+      "city": null,
+      "provider_region": "us",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "ireland",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "frankfurt",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "singapore",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "sydney",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://bitrise.io/security",
+  "locations_quote": "Choose your region via Bitrise on AWS (US, Ireland, Frankfurt, Singapore, Sydney)",
+  "locations_checked": "2026-10-01"
+}

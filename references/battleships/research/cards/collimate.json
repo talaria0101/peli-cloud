@@ -1,0 +1,462 @@
+{
+  "id": "collimate",
+  "name": "Collimate",
+  "url": "https://collimate.ai/pricing",
+  "category": "agent-sandbox",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.04,
+      "ram_gib_h": 0.012,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Billed per second on CPU and memory a sandbox holds while live (pricing page example: 1 vCPU/2 GB = ~$0.064/h). Sandbox size is fixed by the template: the create API (CreateSandboxRequest) has no vCPU/RAM parameter and per-template sizes/max sizes are not published. Docs meter 'CPU-core-hours' while the site prices per vCPU-hour. Running disk is metered (Disk-GB-hours) at an unpublished rate. Forks share parent RAM copy-on-write; whether RAM billing is nominal or resident pages is not stated. Spawn and fork are free; no minimum billed time stated."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": 0.1,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "Per-fork egress: default-deny allowlist; metadata endpoint always blocked.",
+          "url": "https://docs.collimate.ai/llms.txt"
+        },
+        {
+          "quote": "Pure code templates that never need outbound networking run on a fast in-guest-only path with no network surface at all",
+          "url": "https://docs.collimate.ai/core/egress/"
+        },
+        {
+          "quote": "Egress policy applies to network-capable (net/browser) templates.",
+          "url": "https://docs.collimate.ai/core/egress/"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Demo",
+      "fee": 0,
+      "flags": [],
+      "trial_only": true,
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 2,
+      "max_session_h": 1,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Free, no card, no dollar credits: 2 concurrent sandboxes, 1-hour max session, shared capacity and shared request-rate cap; no outbound network (in-guest only), no inbound connect-url, catalog templates only (no BYO image). Fork group up to 1,000. Usage metered but priced $0."
+    },
+    {
+      "name": "Pro",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 100,
+      "max_session_h": 24,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Usage-based; up to 100 concurrent sandboxes, 24-hour sessions (pricing page 2026-09-28)."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom, invoiced (sales). Pricing page and limits docs state unlimited concurrency and session length (API applies no cap); dedicated nodes, SSO, BYOC, SLA. Live-fork per-call count 64."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": null,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": 24,
+    "custom_image": true,
+    "docker_inside": null,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "soc2": null,
+    "hipaa": null,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "isolation": "firecracker",
+    "image_oci": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "domain",
+    "ingress_rules": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "secret_proxy": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Public list pricing. Demo is free; Pro pays allocated live resources per second. Live fork and spawn are free. Suspend retains full memory and filesystem state.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free.",
+    "Re-checked 2026-09-28 (collimate.ai/pricing, docs llms.txt): only vCPU $0.040/h, RAM $0.012/GB-h and suspended storage $0.10/GB-month are published. Running-disk size/price, egress price, SSH and desktop/browser support are not documented (left null).",
+    "Running disk is metered (Disk-GB-hours while running) but no rate or per-sandbox disk size is published; estimate omits it.",
+    "Request rate is 'per-tenant, high' on Pro (no number published); exceeding it returns 429 rate_limited. Live-fork per call capped at 32 children on Pro, 64 on Enterprise (chunk with fork_group). Exec timeout_seconds <= 3600.",
+    "Sessions over the tier max (Demo 1 h, Pro 24 h) are reaped (deleted), not paused; suspend before the cap.",
+    "Operator/billing: Collimate is operated by Gero Consulting (Israeli sole proprietorship); Paddle is Merchant of Record; prices may exclude tax; usage non-refundable; metered rates may change prospectively without the 30-day notice that applies to recurring fees.",
+    "Docs pricing page, auth tiers table and Refund Policy mention a monthly Pro base fee (amount unpublished); the marketing pricing page says 'no platform fee'. Treat Pro fee as uncertain (possible hidden floor)."
+  ],
+  "sources": [
+    "https://collimate.ai/pricing",
+    "https://docs.collimate.ai/llms.txt",
+    "https://docs.collimate.ai/core/lifecycle/",
+    "https://docs.collimate.ai/core/egress/",
+    "https://docs.collimate.ai/pricing/",
+    "https://docs.collimate.ai/reference/limits/",
+    "https://docs.collimate.ai/start/authentication/",
+    "https://docs.collimate.ai/core/templates/",
+    "https://docs.collimate.ai/cookbook/access-models/",
+    "https://collimate.ai/refunds",
+    "https://collimate.ai/terms"
+  ],
+  "fleet": {
+    "default_max_instances": 2,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Demo email signup mints a tenant-scoped key; no card.",
+    "tiers": "Demo 2; Pro pricing page 100; Enterprise unlimited via sales.",
+    "notes": "Pricing page says Pro up to 100 but lifecycle docs say Pro/Enterprise have no concurrency limit: unresolved conflict. Use 2 for new demo account, not 100. 50 fits both descriptions; 300/1,000 on Pro need confirmation. Suspended machines free slots.",
+    "sources": [
+      "https://collimate.ai/pricing",
+      "https://docs.collimate.ai/core/lifecycle/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 13,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 8
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.collimate.ai/reference/limits/",
+      "quote": "Session duration — a sandbox that outlives your tier's max session is reaped. Persist anything you need and re-create, or suspend before the cap.",
+      "note": "Hitting the session cap (Demo 1 h, Pro 24 h) deletes the sandbox; no idle auto-suspend is documented (suspend is an explicit API call). Sandbox state exposes idle_secs but no auto-suspend setting.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.collimate.ai/core/suspend-resume/",
+      "quote": "Suspend freezes a running sandbox to disk: its running guest process is snapshotted, its RAM is reclaimed, and its network is released — but the sandbox is fully resumable by id.",
+      "note": "POST /v1/sandboxes/{id}/suspend; memory included ('exact process memory and filesystem'); resumes in place (1:1). New machines come from live fork (POST .../fork, N copy-on-write children keeping process memory, parent keeps running) or from baked templates ('booted, warmed, checkpointed'); no API to turn a suspended snapshot into a template.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.collimate.ai/openapi.yaml",
+      "quote": "/v1/sandboxes/{id}/exec",
+      "note": "The full /v1 surface is templates, sandboxes, exec, fork, connect-url/connect, suspend/resume, usage - no agent/prompt/session endpoints. Hosted MCP (mcp.collimate.ai) lets an outside agent such as Claude Code USE sandboxes as tools; that is the reverse direction, not a harness API.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.collimate.ai/llms.txt",
+      "quote": "default-deny allowlist; metadata endpoint always blocked.",
+      "note": "egress {allow: [hosts]} per create or per exec (overrides template default), per-branch in fork trees; cloud metadata 169.254.169.254 always blocked. Only net/browser templates have a NIC; pure code templates have no network; Demo has no outbound network. IP/CIDR entries not documented (schema is 'Opaque per-sandbox egress policy').",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.collimate.ai/openapi.yaml",
+      "quote": "Mint a signed, time-boxed URL to a port inside a running sandbox — the connect-from-outside primitive.",
+      "note": "Pro/Enterprise only; token HMAC-scoped to (tenant, sandbox, port, exp), revoked on delete; only the template's exposed ports (else 409 port_not_exposed); WebSocket tunnel (tcp or cdp) or Bearer key. No public URLs, no IP allowlists.",
+      "checked": "2026-09-29"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.collimate.ai/llms.txt",
+      "quote": "Every sandbox is a hardware-isolated Firecracker microVM.",
+      "note": "not offered: no /dev/kvm, VM, or emulator capability is documented anywhere in the API/exec/templates docs; outside the scope of a short-lived Firecracker microVM built for code exec and browser rollouts.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.collimate.ai/cookbook/live-browser/",
+      "quote": "setsid \"$CH\" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage --remote-debugging-port=9222 --remote-allow-origins=*",
+      "note": "not offered: the only GUI-adjacent surface is a headless Chromium reached via CDP; no VNC/RDP/streamed desktop is documented.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.collimate.ai/cookbook/remote-browser/",
+      "quote": "Point a local Playwright at that URL with connect_over_cdp. The script runs on your machine; every navigation and selector is executed by the browser inside the sandbox.",
+      "note": "not offered: browser control is via CDP/Playwright selectors, not a screenshot+click computer-use API; outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://collimate.ai/pricing",
+      "quote": "Fast live-fork microVM sandboxes for agents & RL.",
+      "note": "not offered: no stealth/fingerprinting claims anywhere; product is a general microVM sandbox/RL platform, not a scraping/anti-bot tool.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://collimate.ai/pricing",
+      "quote": "Fast live-fork microVM sandboxes for agents & RL.",
+      "note": "not offered: outside the product's scope (microVM sandbox + RL rollout infra, not a CAPTCHA-solving service).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.collimate.ai/core/egress/",
+      "quote": "Collimate applies an egress policy per sandbox ... sandbox egress to the cloud metadata endpoint (169.254.169.254) is blocked.",
+      "note": "No residential/mobile IP product is documented; outbound traffic runs from the provider's cloud fleet (standard datacenter egress) behind a per-sandbox host allowlist.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.collimate.ai/cookbook/access-models/",
+      "quote": "exec-in-guest ... you hand it a command ... connect-from-outside ... The SDK gives you a signed, per-sandbox URL to a port inside the guest.",
+      "note": "not offered: the two documented access models are the exec API and a signed connect-url/websocket tunnel to an exposed port (browser/CDP, DB, model server); no SSH endpoint or SSH key mechanism is documented.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.collimate.ai/core/lifecycle/",
+      "quote": "suspend — POST /v1/sandboxes/{id}/suspend snapshots the sandbox to disk, reclaims its RAM, and stops the meter. resume — POST /v1/sandboxes/{id}/resume restores a suspended sandbox back to running.",
+      "note": "Resuming a suspended sandbox requires an explicit resume API call; no mechanism wakes a suspended sandbox automatically when an inbound request arrives.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.collimate.ai/core/suspend-resume/",
+      "quote": "Suspend freezes a running sandbox to disk: its running guest process is snapshotted, its RAM is reclaimed, and its network is released — but the sandbox is fully resumable by id.",
+      "note": "Suspend/resume is the stop/start analogue here and preserves the full filesystem (and memory) state, billed as snapshot storage while suspended.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.collimate.ai/core/files/",
+      "quote": "Files: byte-exact upload/download over the exec channel.",
+      "note": "not offered: storage is the sandbox's own disk (persisted via suspend snapshots); no separate attachable/detachable volume resource is documented.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.collimate.ai/cookbook/live-browser/",
+      "quote": "Log in inside the rollout on first use and persist Playwright's storage_state to the fork's own disk (per-fork, never shared), so later steps in the same episode reuse the session.",
+      "note": "Storage is explicitly per-sandbox/per-fork and never shared between concurrently running sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.collimate.ai/reference/limits/",
+      "quote": "Session duration — a sandbox that outlives your tier's max session is reaped. Persist anything you need and re-create, or suspend before the cap.",
+      "note": "Only a hard per-tier session-duration cap (reap) exists; there is no documented idle-based auto-suspend, and suspend is described as an explicit API call, not an automatic idle trigger.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://collimate.ai/pricing",
+      "quote": "vCPU $0.040 / vCPU-hour, billed per second while running. Memory $0.012 / GB-hour, billed per second while running.",
+      "note": "not offered: sandbox size is fixed by the template it was created/forked from; the API has no vCPU/RAM parameter and no resize endpoint is documented.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.collimate.ai/core/templates/",
+      "quote": "python Python 3 ... node Node.js ... browser A headful browser driven over CDP. python-ml Python...",
+      "note": "The template catalog is language/runtime templates (python, node, browser, python-ml), not preinstalled coding-agent harnesses (Claude Code, Codex, OpenCode, etc.).",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.collimate.ai/llms.txt",
+      "quote": "One engine, two audiences (agentic API/MCP, and the collimate-rl SDK for rollouts).",
+      "note": "not offered: outside the product's scope — Collimate ships sandbox/fork infrastructure that outside agents (Claude Code, custom RL loops) drive; it does not ship its own browsing/computer-use/research agent.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.collimate.ai/cookbook/remote-browser/",
+      "quote": "the address is a platform-managed endpoint on api.collimate.ai. Available on Pro connect_url / cdp_url and browser egress are Pro capabilities.",
+      "note": "Inbound reachability is only via a signed, time-boxed connect-url/websocket tunnel to one exposed port on the shared platform domain; no per-sandbox public IPv4 is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.collimate.ai/core/egress/",
+      "quote": "egress policy resolves in this order, most specific wins ... { \"egress\": { \"allow\": [\"api.github.com\", \"pypi.org\"] } }",
+      "note": "Egress control is a host allowlist (per-sandbox/per-exec/per-fork), not HTTP method/path-level rules.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.collimate.ai/cookbook/live-browser/",
+      "quote": "store it in Collimate's secret store and inject it at sandbox-create time, where it reaches the sandbox through the sealed credential proxy — never the artifact, never a log.",
+      "note": "This is a secret store that delivers/injects the credential into the sandbox at create time (so it isn't baked into a shared image/log) — the secret still enters the guest, unlike a proxy that keeps the secret out of the machine entirely for arbitrary HTTP APIs.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://docs.collimate.ai/core/egress/",
+      "quote": "{ \"egress\": { \"allow\": [\"api.github.com\", \"pypi.org\"] } }",
+      "note": "Egress is controlled by a destination-hostname allowlist; no fixed/static outbound IP feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://collimate.ai/pricing",
+      "quote": "vCPU $0.040 / hr · RAM $0.012 / GB-hr · suspended storage $0.10 / GB-mo · spawning and forking free.",
+      "note": "Only vCPU and RAM are metered/priced; no GPU instance type or GPU pricing is mentioned anywhere on the pricing or docs pages.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/collimate-ai/collimate",
+      "quote": "404",
+      "note": "The GitHub org link surfaced on the docs site (collimate-ai/collimate) resolves to GitHub's 404 page; no public OSS repository or license for the core platform was found. Collimate is a closed-source hosted SaaS.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 24,
+      "source": "https://docs.collimate.ai/reference/limits/",
+      "quote": "Max session duration 1 hour 24 hours unlimited",
+      "note": "Demo caps at 1h, Pro ('most teams') at 24h, Enterprise is uncapped/unlimited per the API. 24h (Pro) given as the representative value.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.collimate.ai/openapi.yaml",
+      "quote": "GET /v1/usage — Aggregated usage for the tenant ... UsageSummary returns Per-dimension totals: cpu_core_hours, ram_gb_hours, disk_gb_hours, snapshot_gb_months",
+      "note": "granularity: account-only; cost: no; The API endpoint exists and returns billable usage quantities (CPU-core-hours, RAM-GB-hours, Disk-GB-hours, Snapshot-GB-months) for a time range specified by from/to parameters. However, usage is aggregated at the account/tenant level only; no per-sandbox, per-tag, per-label, or per-project breakdown is supported by the endpoint. Sandboxes support labels/metadata (SandboxInfo.labels) but the usage API cannot filter by them. Cost in dollars is not returned; only metered quantities.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://collimate.ai/pricing",
+  "locations_quote": "No regions documented. API endpoint: api.collimate.ai (single managed cloud).",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,532 @@
+{
+  "id": "rescale",
+  "name": "Rescale",
+  "url": "https://rescale.com",
+  "category": "gpu-cloud",
+  "isolation": "dedicated-vm",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free. Total job charges can include Compute, Rescale Platform and IP Address; workstations add a Workstation License; on-demand software, storage and transfer can add separate charges."
+    },
+    {
+      "key": "on-demand-priority",
+      "label": "On-Demand Priority",
+      "pricing": "quote",
+      "preemptible": false
+    },
+    {
+      "key": "on-demand-economy",
+      "label": "On-Demand Economy",
+      "pricing": "quote",
+      "preemptible": true
+    },
+    {
+      "key": "on-demand-reserved",
+      "label": "On-Demand Reserved",
+      "pricing": "commitment",
+      "minimum_term_months": 12
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null,
+    "note": "Ordinary cloud storage is billed from average monthly usage, prorated by time present, with a 1 GB minimum billable unit; tariff is not public. High-Performance Storage is priced hourly while active based on size and region and has a maximum 365-day walltime."
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": true
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false
+    },
+    {
+      "name": "Government",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": true,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "dedicated-vm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "own_agent_api": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Public HPC CPU/GPU platform with simulation and custom software, multi-cloud and enterprise features. Current prices request quote and depend hardware/software licensing; no universal 4/8 hourly list rate. App licenses may dominate total.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/rescale",
+    "https://rescale.com/",
+    "https://rescale.com/pricing/",
+    "https://rescale.com/documentation/",
+    "https://rescale.com/llms.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 17,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/suspending-your-workstation/",
+      "quote": "Workstation Suspension allows users to suspend a Workstation, which will power down a compute instance and save all software, configuration settings, and files to the Workstation disk. This functionality is just like powering off your computer.",
+      "note": "Autosuspend (after a user-defined time limit) is a power-off that keeps the disk; 'Any running applications will be stopped', so no memory state. That is persistent_disk, not an automatic snapshot. Single-node workstations only; jobs are batch.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://rescale.com/documentation/rescale-firewall-administration/",
+      "quote": "Acceptable allowlist values include IP CIDR ranges, fully qualified domain names (FQDN), and use of basic regular expressions for domains",
+      "note": "Via CNAF (Compute Network Application Firewall), an optional separately priced managed firewall per compute region (AWS/Azure/GCP): default-deny ('By default, any other network traffic outside the compute boundary will be blocked by a CNAF'). Org-wide, not per machine; only org admins; every change is reviewed by Rescale staff (~1 h). Domain entries: only HTTPS traffic allowed.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://rescale.com/documentation/rescale-firewall-administration/",
+      "quote": "Direct URL values that begin with https:// are not supported.",
+      "note": "CNAF entries are IP CIDRs or FQDN patterns only; no method/path/header rules.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://rescale.com/documentation/access-restrictions-cidr-ip-address-rules/",
+      "quote": "This gives the user the ability to limit job access from their specific IP address when using SSH or NiceDCV access to running clusters.",
+      "note": "Per-user CIDR access restriction for SSH and NICE DCV into running jobs/workstations ('0.0.0.0/0 rule is blocklisted'), plus org-level CIDR rules for platform/API access; optional managed VPN.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/rescale-cloud-file-system-cfs/",
+      "quote": "CFS is a high-performance, persistent, centralized storage space that exists independently and can be attached to any number of jobs or workstations",
+      "note": "Cloud Filesystem (CFS, Lustre) is beta and sales-provisioned ('get in touch with your Account Representative'); auto-mounted at storage_ext_{cfs_id}.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/rescale-cloud-file-system-cfs/",
+      "quote": "Once the job or workstation starts, CFS will be mounted at the storage_ext_{cfs_id} directory. You can read and write to this directory as if it were a local disk.",
+      "note": "Read-write Lustre mounted by any number of jobs/workstations at once; per-user and per-project directories for sharing. Beta.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "dedicated-vm",
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/workstations/",
+      "quote": "Multi-cloud workstations: Optimize your latency, performance, and cost using workstations, built with multi-cloud support. Workstations connect seamlessly with AWS, Azure, Google Cloud, and Oracle Cloud.",
+      "note": "Rescale provisions dedicated compute-instance clusters/workstations on top of AWS/Azure/GCP/OCI ('simulations always run in private, closed clusters' per security page); the underlying hypervisor varies by CSP and isn't disclosed, so 'dedicated-vm' (leased whole cloud VM) is the closest fit rather than a specific hypervisor name.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/container-tutorial/",
+      "quote": "Docker container support for single node applications",
+      "note": "Docker/Singularity/Apptainer images are run as an application/job step inside a Rescale-provided OS image; there is no documented way to boot the workstation/job VM itself from a customer-supplied Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/container-tutorial/",
+      "quote": "Advanced container capabilities include: Multi-node high performance support for Singularity and Apptainer containers; Docker container support for single node applications",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/platform-faqs/system-requirements/",
+      "quote": "The Rescale platform has been developed to deliver an application through any HTML5 browser. This includes support for the latest versions of Chrome, Firefox, and Edge on various desktops.",
+      "note": "not offered: outside the product's scope — the browser requirement is for the user's own device to access the Rescale web UI/NiceDCV client; no managed browser inside the job/workstation image is documented.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/elastic-cloud-workstations-overview/",
+      "quote": "Visualization with NiceDCV: View your workstation directly in your browser or through a local client with low latency.",
+      "note": "not offered: outside the product's scope — NiceDCV streaming is for human interactive engineering (CAD/solving), with no documented screenshot+click driving API for agents.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://rescale.com/pricing/",
+      "quote": "Rescale is a unified platform to integrate and orchestrate the compute resources, product data, modeling and simulation stack and AI applications R&D and engineering teams need to work smarter and faster.",
+      "note": "not offered: outside the product's scope — Rescale is an HPC/engineering-simulation compute platform, not a browser-automation/scraping product; no stealth or fingerprinting features are documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://rescale.com/pricing/",
+      "quote": "Rescale is a unified platform to integrate and orchestrate the compute resources, product data, modeling and simulation stack and AI applications R&D and engineering teams need to work smarter and faster.",
+      "note": "not offered: outside the product's scope — an HPC/GPU simulation cloud has no CAPTCHA-solving feature.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/workstations/",
+      "quote": "Multi-cloud workstations: ... built with multi-cloud support. Workstations connect seamlessly with AWS, Azure, Google Cloud, and Oracle Cloud.",
+      "note": "Compute clusters/workstations run as ordinary VMs inside AWS/Azure/GCP/OCI datacenter regions; outbound IPs are standard cloud-provider datacenter IPs, not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/connecting-to-your-cluster/in-browser-ssh/",
+      "quote": "The most straightforward method to connecting to an active cluster is to use Rescale’s in-browser SSH.",
+      "note": "SSH is also supported from a local workstation terminal and via SFTP; SSH port and access are per-job.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/suspending-your-workstation/",
+      "quote": "Workstation Suspension allows users to suspend a Workstation, which will power down a compute instance and save all software, configuration settings, and files to the Workstation disk.",
+      "note": "Disk/filesystem state is preserved on suspend; running processes are stopped ('Any running applications will be stopped'), so this is disk-only, not a memory snapshot.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/suspending-your-workstation/",
+      "quote": "Workstation Suspension allows users to suspend a Workstation, which will power down a compute instance and save all software, configuration settings, and files to the Workstation disk.",
+      "note": "Suspension can be triggered manually by the user at any time (in addition to an automatic idle timer), giving on-demand disk-state checkpointing; documented via the web UI rather than an explicit snapshot API/CLI.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/platform-guides/duplicating-jobs/",
+      "quote": "Duplicating Jobs",
+      "note": "not offered: Rescale lets you duplicate a job's configuration/settings to start a new run, but this re-launches fresh hardware from settings rather than cloning a machine's live disk/memory state.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/platform-guides/duplicating-jobs/",
+      "quote": "Duplicating Jobs",
+      "note": "not offered: no mechanism to clone a running machine without stopping it is documented; duplication only copies job configuration for a new run.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/suspending-your-workstation/",
+      "quote": "Any running applications will be stopped",
+      "note": "not offered: Rescale has no machine-fork feature at all, and its only state-preservation mechanism (suspend) explicitly does not keep processes running, ruling out a memory-preserving fork.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/suspending-your-workstation/",
+      "quote": "Workstation Suspension allows users to suspend a Workstation, which will power down a compute instance and save all software, configuration settings, and files to the Workstation disk. This functionality is just like powering off your computer.",
+      "note": "Suspend/resume stops compute billing while preserving the disk; resuming from suspend takes under 3 minutes per the Workstations doc.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/suspending-your-workstation/",
+      "quote": "Workstation Suspension allows users to suspend a Workstation, which will power down a compute instance and save all software, configuration settings, and files to the Workstation disk.",
+      "note": "not offered: suspended/stopped workstations and jobs must be explicitly relaunched by the user; no automatic wake triggered by an inbound request is documented.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/suspending-your-workstation/",
+      "quote": "Workstation Suspension allows users to suspend a Workstation, which will power down a compute instance and save all software, configuration settings, and files to the Workstation disk.",
+      "note": "The suspend page documents an autosuspend option after a user-defined idle time limit, in addition to manual suspend.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/workstations/",
+      "quote": "Hardware\tShows the coretype selected, including the total number of cores.",
+      "note": "not offered: hardware (coretype/core count) is selected at job/workstation launch; no documented API/UI action changes CPU/RAM of a running machine without recreating it.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://rescale.com/documentation/agents-product-documentation/",
+      "quote": "Rescale Agents are purpose-built AI agents for simulation and HPC workflows. Each agent handles a specific task in the simulation lifecycle, from validating an input file before submission to diagnosing a failed job, benchmarking hardware, or generating a campaign report.",
+      "note": "not offered: Rescale ships its own task-specific simulation/HPC agents (chat/Workflow Builder), not general coding-agent harnesses (Claude Code, Codex, OpenCode, etc.) preinstalled inside the compute machine.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://rescale.com/documentation/mcp-server-getting-started/",
+      "quote": "The Rescale MCP Server connects supported AI assistants and agentic development tools to the Rescale platform through the open Model Context Protocol (MCP).",
+      "note": "not offered: the MCP server lets external coding assistants (e.g. Claude Code) control the Rescale platform itself; it is not a first-party API for driving a coding harness that runs inside a Rescale sandbox/job.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://rescale.com/documentation/using-the-rescale-assistant/",
+      "quote": "The Rescale Assistant is an AI-powered chat interface built into the Rescale platform. You can ask it questions in plain language to query your job data, summarize results, search across your connected data sources, and take common platform actions without leaving your current screen.",
+      "note": "Rescale's own task agents (Rescale Assistant / Rescale Agents) are invoked via the in-platform chat drawer or as Workflow Builder nodes; no separate first-party API to prompt/stream/drive these agents programmatically was found in the docs.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/running-your-custom-code-on-rescale/",
+      "quote": "Rescale nodes come with a range of resources for scientific and parallel computing: Java, Python, the gcc compiler, a choice of MPI libraries (including development files), imaging tools, etc.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/connecting-to-your-cluster/connecting-to-your-cluster/",
+      "quote": "Items Important for Cluster Connection\tExample ... IP address/host name\t###.##.##.###",
+      "note": "Each job/workstation cluster gets a reachable IP address used for SSH/DCV connections.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/elastic-cloud-workstations-overview/",
+      "quote": "Visualization with NiceDCV: View your workstation directly in your browser or through a local client with low latency.",
+      "note": "Workstations and in-browser SSH are reached over HTTPS through the Rescale platform (browser-delivered NiceDCV/terminal); this is proxied desktop/SSH access rather than generic arbitrary-port HTTPS ingress.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/workstations/",
+      "quote": "Supported operating systems: Windows 2019, Linux CentOS",
+      "note": "derived: jobs/workstations are full VMs (root/sudo access documented elsewhere) running standard Linux/Windows images, so nftables/iptables (or Windows Firewall) are expected to work inside; not separately documented.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/administration-portals/integrations/license-proxy-ssh-tunnel/",
+      "quote": "License Proxy – SSH Tunnel",
+      "note": "Rescale's proxy features (License Proxy IP Forwarding/SSH Tunnel) are for reaching on-prem software license servers, not for injecting credentials into arbitrary outbound HTTP API calls; secrets otherwise flow as env vars/API keys (e.g. RESCALE_API_KEY) or files.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/workstations/",
+      "quote": "Supported operating systems: Windows 2019, Linux CentOS",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/workstations/",
+      "quote": "Supported operating systems: Windows 2019, Linux CentOS",
+      "note": "not offered: only Windows 2019 and Linux CentOS are listed as supported workstation/job operating systems; no macOS option exists.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://rescale.com/documentation/main/platform-faqs/coretype-portfolio/",
+      "quote": "Antimony\t8\t10.0\t18 (SSD)\tAWS Graviton2 Processor with 64-bit ARM Neoverse cores",
+      "note": "Multiple coretypes use AWS Graviton2/3/4/5 ARM processors (e.g. Antimony, Datolite, Lavender, Erionite, Toothwort); container tooling also documents 'ARM architecture support for the latest Singularity versions'.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://rescale.com/pricing/",
+      "quote": "Rescale is a unified platform to integrate and orchestrate the compute resources, product data, modeling and simulation stack and AI applications R&D and engineering teams need to work smarter and faster.",
+      "note": "not offered: outside the product's scope — Rescale is delivered as a managed SaaS platform orchestrating AWS/Azure/GCP/OCI capacity; there is no documented option to run the Rescale platform on a customer's own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://rescale.com/pricing/",
+      "quote": "Rescale is a unified platform to integrate and orchestrate the compute resources, product data, modeling and simulation stack and AI applications R&D and engineering teams need to work smarter and faster.",
+      "note": "not offered: Rescale is a proprietary commercial platform; no OSI-licensed core product is published.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://rescale.com/documentation/mcp-server-getting-started/",
+      "quote": "Europe\thttps://mcp.services.eu.rescale.com/mcp",
+      "note": "Rescale operates a distinct EU regional platform/MCP endpoint (mcp.services.eu.rescale.com), and its multi-cloud workstations/jobs run across AWS/Azure/GCP/OCI regions including EU.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://rescale.com/documentation/main/rescale-basics/elastic-cloud-workstations/workstations/",
+      "quote": "Run Time\tThe elapsed run time, including the ability to modify the walltime.",
+      "note": "Walltime/run time is a user-configured job parameter (not a fixed platform cap) that can be modified while running; workstations otherwise run until suspended or stopped by the user, so no fixed maximum session length is documented (aside from the separately noted 365-day walltime cap specific to High-Performance Storage attachment, not the machine itself).",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/running-your-custom-code-on-rescale/",
+      "quote": "Rescale nodes come with a range of resources for scientific and parallel computing: Java, Python, the gcc compiler, a choice of MPI libraries (including development files), imaging tools, etc.",
+      "note": "derived: jobs/workstations run as ordinary (non-bare-metal) instances on AWS/Azure/GCP/OCI; no documentation anywhere (coretype portfolio, custom-code, container, or security pages) mentions /dev/kvm passthrough, nested virtualization, or bare-metal coretypes, and container support (Docker/Singularity/Apptainer) is presented as the way to run isolated workloads instead.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/running-your-custom-code-on-rescale/",
+      "quote": "Rescale nodes come with a range of resources for scientific and parallel computing: Java, Python, the gcc compiler, a choice of MPI libraries (including development files), imaging tools, etc.",
+      "note": "The platform's own doc enumerates the languages/runtimes preinstalled on compute nodes (Java, Python, gcc, MPI) and does not list Node.js/npm; the software catalog (rescale.com/software) also has no Node.js runtime entry. Users can install custom software via build scripts, but that is not 'out of the box'.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://rescale.com/documentation/main/rescale-advanced-features/connecting-to-your-cluster/connecting-to-your-cluster/",
+      "quote": "Items Important for Cluster Connection\tExample ... IP address/host name\t###.##.##.###",
+      "note": "Each job/workstation cluster is provisioned fresh on AWS/Azure/GCP/OCI and gets a new IP address per launch (shown as an example placeholder, not an account-fixed value); no Elastic-IP/static-outbound-IP feature is documented on the workstations, firewall, or connecting-to-your-cluster pages. The egress allowlist (CNAF) filters by destination, not by giving the compute a fixed source IP.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://rescale.github.io/api-docs/",
+      "quote": "GET /api/v2/organizations/<organization-code>/workspaces/<workspace-id>/billing/ returns hardwareUsage, storageUsage, transferUsage, and hardwareCharge, softwareCharge, storageCharge, totalCharge",
+      "note": "granularity: per-workspace; cost: yes; Rescale provides REST API endpoint for workspace (project) billing that returns both billable usage quantities (hardware core-seconds, storage, transfer) and monetary charges. CSV export also available. Granularity is per-workspace/project, not per-individual-sandbox/job.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://rescale.com/documentation/main/rescale-advanced-features/intelligent-resource-automation/region-load-balancing/",
+  "locations_quote": "By default, Rescale platforms specify a set of regions that compute can be distributed to. Additionally, Rescale platforms leverage dynamically calculated Capacity Health Scores to rank regions that can be selected to run compute.",
+  "locations_checked": "2026-10-01"
+}

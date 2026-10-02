@@ -1,0 +1,867 @@
+{
+  "id": "warpbuild",
+  "name": "WarpBuild (GitHub Actions runners)",
+  "url": "https://www.warpbuild.com/pricing",
+  "category": "macos",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "macos-m4pro",
+      "label": "macOS runner, Apple M4 Pro",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "macos"
+      ],
+      "gpu_only": false,
+      "features": {
+        "docker_inside": false,
+        "nested_virt": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "6 vCPU, 14 GB ($0.08/min)",
+          "vcpu": 6,
+          "ram_gib": 14,
+          "disk_gib": 120,
+          "hour": 4.8,
+          "month_cap": null
+        },
+        {
+          "name": "12 vCPU, 28 GB ($0.16/min)",
+          "vcpu": 12,
+          "ram_gib": 28,
+          "disk_gib": 270,
+          "hour": 9.6,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "\"CI runners are billed on a per-minute basis.\" hour = $/min x 60. GitHub Actions runners only (job-scoped, ephemeral). Apple-hardware macOS VMs; WarpBuild is the lessor running CI jobs on its own fleet.",
+      "regions": null,
+      "product_class": "ci-runner",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "windows-x64",
+      "label": "Windows runner, x86-64",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "windows"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "4 vCPU, 16 GB ($0.016/min)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 256,
+          "hour": 0.96,
+          "month_cap": null
+        },
+        {
+          "name": "8 vCPU, 32 GB ($0.032/min)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 256,
+          "hour": 1.92,
+          "month_cap": null
+        },
+        {
+          "name": "16 vCPU, 64 GB ($0.064/min)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 256,
+          "hour": 3.84,
+          "month_cap": null
+        },
+        {
+          "name": "32 vCPU, 128 GB ($0.128/min)",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 256,
+          "hour": 7.68,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "\"CI runners are billed on a per-minute basis.\" hour = $/min x 60. GitHub Actions runners only (job-scoped, ephemeral). Windows licence baked in (2x the Linux x64 rate for the same size).",
+      "regions": null,
+      "product_class": "ci-runner",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "linux-x64",
+      "label": "Linux runner, x86-64",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "2 vCPU, 8 GB ($0.004/min)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 150,
+          "hour": 0.24,
+          "month_cap": null
+        },
+        {
+          "name": "4 vCPU, 16 GB ($0.008/min)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 150,
+          "hour": 0.48,
+          "month_cap": null
+        },
+        {
+          "name": "8 vCPU, 32 GB ($0.016/min)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 150,
+          "hour": 0.96,
+          "month_cap": null
+        },
+        {
+          "name": "16 vCPU, 64 GB ($0.032/min)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 150,
+          "hour": 1.92,
+          "month_cap": null
+        },
+        {
+          "name": "32 vCPU, 128 GB ($0.064/min)",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 150,
+          "hour": 3.84,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). Re-verified on https://www.warpbuild.com/pricing (x64 $0.004..$0.064/min, arm64 $0.003..$0.048/min, Apple-silicon arm64 $0.08/$0.16/min). \"CI runners are billed on a per-minute basis.\" hour = $/min x 60. GitHub Actions runners only (job-scoped, ephemeral). ",
+      "regions": null,
+      "product_class": "ci-runner",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "linux-arm64",
+      "label": "Linux runner, arm64",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "gpu_only": false,
+      "features": {
+        "nested_virt": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "2 vCPU, 8 GB ($0.003/min)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 150,
+          "hour": 0.18,
+          "month_cap": null
+        },
+        {
+          "name": "4 vCPU, 16 GB ($0.006/min)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 150,
+          "hour": 0.36,
+          "month_cap": null
+        },
+        {
+          "name": "8 vCPU, 32 GB ($0.012/min)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 150,
+          "hour": 0.72,
+          "month_cap": null
+        },
+        {
+          "name": "16 vCPU, 64 GB ($0.024/min)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 150,
+          "hour": 1.44,
+          "month_cap": null
+        },
+        {
+          "name": "32 vCPU, 128 GB ($0.048/min)",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 150,
+          "hour": 2.88,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). Re-verified on https://www.warpbuild.com/pricing (x64 $0.004..$0.064/min, arm64 $0.003..$0.048/min, Apple-silicon arm64 $0.08/$0.16/min). \"CI runners are billed on a per-minute basis.\" hour = $/min x 60. GitHub Actions runners only (job-scoped, ephemeral). ",
+      "regions": null,
+      "product_class": "ci-runner",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "linux-arm64-apple",
+      "label": "Linux arm64 runner on Apple silicon (M4 Pro hardware)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "6 vCPU, 14 GB ($0.08/min)",
+          "vcpu": 6,
+          "ram_gib": 14,
+          "disk_gib": 150,
+          "hour": 4.8,
+          "month_cap": null
+        },
+        {
+          "name": "12 vCPU, 28 GB ($0.16/min)",
+          "vcpu": 12,
+          "ram_gib": 28,
+          "disk_gib": 300,
+          "hour": 9.6,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "\"Linux (arm64 on Apple Silicon)\" is a separate SKU on warpbuild.com/pricing (2026-09-28): 6 vCPU 14 GB $0.08/min, 12 vCPU 28 GB $0.16/min - deliberately the same price as the macOS M4 Pro runner (same Apple hardware), not a mislabelled macOS regime. hour = $/min x 60. GitHub Actions runners only (job-scoped, ephemeral).",
+      "regions": null,
+      "product_class": "ci-runner",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "agent-runner",
+      "label": "Claude Managed Agents self_hosted environment on WarpBuild runners (Linux/macOS)",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux",
+        "macos"
+      ],
+      "pricing": "sizes",
+      "sizes": null,
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "note": "Stock runner labels only (no custom images yet); Windows 'coming soon'. Outputs in /mnt/session/outputs billed as cache ($0.20/GB-month, 7-day TTL after last access). Only usable with Anthropic's Claude Managed Agents harness. Sizes: same presets and $/min as linux-x64, linux-arm64, linux-arm64-apple and macos-m4pro (hour = $/min x 60)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "No credit card to start; card required \"when you hit the free usage or credit limits\" (amount unpublished). Unlimited job concurrency on Linux/Windows (macOS per-org quota). Billed on the last day of each month, but accounts past a usage/history threshold may be charged mid-cycle. No refunds for usage-based products. AWS Marketplace billing available (billed daily; no free credits)."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Dedicated cloud, region-specific infra, 99.9% SLA, SAML SSO ($250/month add-on), SCIM."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": 120,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "regions": null,
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "harness_api": false,
+    "own_agent_api": false,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "CI-runner-only product (all modes flagged alt): machines exist only for a GitHub Actions job; not an interactive or agent sandbox.",
+    "Add-ons: cache storage $0.20/GB-month, cache write/restore $0.0001/op, snapshot restore $0.04/job, snapshot storage $0.025/hour per snapshot (~$18.25 per snapshot-month) — not per GiB, so snapshot_gib_month is null.",
+    "BYOC (your AWS/GCP/Azure): $0.002/min per Linux or Windows runner on top of your own cloud bill; not modelled.",
+    "Docker builders ($0.06-$0.88/min) not modelled.",
+    "Free usage amount not published.",
+    "macOS on Apple hardware: Apple macOS SLA: leasing a Mac requires a minimum lease of 24 consecutive hours with sole use by the lessee, and allows at most 2 additional macOS VMs per Mac.",
+    "Card category is \"macos\" only because the schema has no CI category; every regime sets product_class \"ci-runner\" and an explicit os, so Linux/Windows runners are not treated as macOS. All regimes keep flag alt (CI minutes); the engine ignores alt when the workload is shopping for a CI runner.",
+    "Snapshot runners: snapshots are auto-deleted after 15 days, so one retained snapshot costs at most ~$9 (360 h x $0.025) unless refreshed.",
+    "SSO (SAML 2.0 or OIDC) is now self-serve from Settings -> SSO at $250/month, billed after the first domain is verified (was enterprise-contact).",
+    "Removed on 2026-06-08: WarpBuild Cloud spot runners, Windows 2 vCPU runners, macOS 13, custom cloud runner configurations (spot now BYOC-only).",
+    "macOS memory: 6 vCPU = 22 GB and 12 vCPU = 44 GB until 2026-09-30; from 2026-10-01 14 GB / 28 GB at unchanged prices (card already uses the post-change values).",
+    "Docker builders auto-scaling in private beta (2026-09-25); prices unchanged $0.06-$0.88/min."
+  ],
+  "sources": [
+    "https://www.warpbuild.com/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "No card initially; pricing says card is needed when free usage/credit limits are reached.",
+    "tiers": null,
+    "notes": "Pricing advertises unlimited runner concurrency and no queue limit. No separate numeric new-account anti-abuse cap or approval time published. Null is used instead of inventing a finite maximum; stock/operational capacity still not guaranteed. Unlimited concurrency applies to GA features on Linux and Windows only; since 2026-07 the macOS fleet (and the Apple-silicon Linux xfast runners on the same hardware) is capped by an unpublished per-organization quota (raise via support@warpbuild.com); beta features may not have unlimited concurrency.",
+    "sources": [
+      "https://www.warpbuild.com/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 12,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 8
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/features/snapshot-runners",
+      "quote": "The runner always boots from the base image. Use `snapshot-save` action to capture a snapshot at the desired point in your workflow.",
+      "note": "Runners are ephemeral per-job VMs destroyed after the job ('The VMs are created on demand and destroyed after each build'); nothing is saved automatically. Agent-runner sessions persist only /mnt/session/outputs as a cache artifact (7-day TTL), not machine state.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://www.warpbuild.com/docs/ci/features/snapshot-runners",
+      "quote": "WarpBuild allows you to take snapshots of your runner VMs at any point during your workflow, enabling faster consecutive runs by reusing these snapshots.",
+      "note": "Via WarpBuilds/snapshot-save action inside the job (also Snapshotter API POST/GET/DELETE /snapshots). New runners boot from it with `snapshot.key=<alias>` (45-60 s boot). Disk only as far as documented ('/tmp directory will not persist state since this directory is cleaned on reboots'); no memory. WarpBuild Cloud Ubuntu runners only (not BYOC/Windows/macOS). Snapshots deleted after 15 days; $0.025/h per snapshot storage + $0.04 per restore.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://www.warpbuild.com/docs/ci/byoc/aws/security",
+      "quote": "While runners need outbound internet access, you can tighten egress rules.",
+      "note": "BYOC only: security-group egress rules and Network ACLs in YOUR AWS VPC (stack-level SG; import mode lets you pick an existing SG), i.e. IP/CIDR/port level and enforced outside the VM. Default SG 'All egress allowed (`0.0.0.0/0`)'. No egress controls documented for WarpBuild Cloud runners. Tailscale networking addon adds tailnet access (ACL tags), not an egress filter.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.warpbuild.com/docs/ci/byoc/aws/config",
+      "quote": "Create a security group that blocks all inbound traffic. This is to ensure that no unauthorized access to the runners is possible.",
+      "note": "BYOC: SG inbound rules (default ingress from VPC subnet CIDRs only; RDP 3389 not exposed by default). Cloud runners expose no ports; Action-Debugger SSH via gha.warp.build URL, restricted to the triggering GitHub user's SSH keys when set (`limit-access-to-actor`), otherwise anyone with the URL.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Each runner is its own VM ('Each runner runs in its own virtual machine') with sudo, mirroring GitHub runner images; iptables not mentioned.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "WarpBuild does not access or store any build secrets. Secrets are stored in your source code repository and are only accessible to your runner environment.",
+      "note": "GitHub Actions secrets land in the runner env. OIDC tokens (Tailscale addon) / BYOC instance profiles give short-lived cloud creds inside the VM; no credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "Each runner has its own encrypted storage volume that is created on demand and destroyed after each build.",
+      "note": "No attachable persistent volumes. Persistence only via cache (S3-backed, $0.20/GB-month), snapshots, BYOC standby disks (pre-booted pool, not attachable storage), auto-mounted local NVMe on BYOC instance types.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "Each runner has its own encrypted storage volume that is created on demand and destroyed after each build.",
+      "note": "No shared FS; shared state across runners only via cache API / Docker builder cache.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "Each runner runs in its own virtual machine. The virtual machines are created on demand and destroyed after each build, and they are not reused.",
+      "note": "WarpBuild describes only 'virtual machine' isolation on its own bare-metal fleet (per its uptime/reliability blog post, primarily bare-metal servers with hyperscaler fallback), not a named microVM technology like Firecracker (that is a competitor, Blacksmith). Nested-virtualization docs expose /dev/kvm to Linux x64 jobs, implying a KVM-based hypervisor for the guest VMs, so 'qemu-kvm' (full VM) is the closest documented fit rather than firecracker/cloud-hypervisor, which WarpBuild never claims for itself.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.warpbuild.com/answers/does-byoc-support-custom-vm-images",
+      "quote": "Yes. WarpBuild BYOC runs your own VM images on AWS, GCP, and Azure once they meet the documented requirements, and a custom runner selects the image.",
+      "note": "Custom images are cloud VM images (AMI/GCE image/Azure image) selected for BYOC custom runners, not Docker/OCI images used to start the machine itself; the hosted (non-BYOC) fleet does not accept any customer-supplied image at all.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.warpbuild.com/pricing",
+      "quote": "CI runners are billed on a per-minute basis.",
+      "note": "not offered: outside the product's scope. WarpBuild sells ephemeral GitHub Actions CI runner VMs; a managed/real browser is not part of the product (users may install/cache Playwright browsers themselves inside a job, but WarpBuild does not provide or manage one).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.warpbuild.com/pricing",
+      "quote": "CI runners are billed on a per-minute basis.",
+      "note": "not offered: outside the product's scope. This is a GitHub Actions CI runner product, not a browsing/scraping agent product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.warpbuild.com/pricing",
+      "quote": "CI runners are billed on a per-minute basis.",
+      "note": "not offered: outside the product's scope. No CAPTCHA-solving capability is documented anywhere on warpbuild.com; the product is CI compute, not a browser/agent automation service.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://www.warpbuild.com/blog/uptime-reliability",
+      "quote": "We prioritize bare metal servers for runners whenever possible... Hyperscalers: Windows runners, ARM64 Linux runners, and Docker builders run on hyperscalers... we primarily use AWS with passive backup stacks on GCP and Azure.",
+      "note": "Runner outbound IPs come from WarpBuild's own colocation bare-metal fleet or AWS/GCP/Azure hyperscaler ranges (or the customer's own cloud account on BYOC) — ordinary datacenter/cloud IP space, not residential or mobile.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://www.warpbuild.com/docs/ci/byoc/standby-disks",
+      "quote": "A standby disk is a VM of the runner's instance type, booted once so networking and machine setup complete, then shut down. When GitHub requests a runner, WarpBuild boots one from the pool, which puts job start at roughly 15 seconds.",
+      "note": "BYOC-only feature: a pool of pre-warmed, shut-down standby VMs is automatically powered back on when a job request arrives, rather than booting cold. Not available on the hosted/non-BYOC fleet, on Windows/macOS labels, or with Spot instances.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "Each runner runs in its own virtual machine. The virtual machines are created on demand and destroyed after each build, and they are not reused.",
+      "note": "not offered: outside the product's scope. Runners are ephemeral, one VM per job; there is no long-running machine whose CPU/RAM could be changed live — resizing means picking a different runner label/instance type for the next job.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/mcp",
+      "quote": "WarpBuild hosts a Model Context Protocol server at https://mcp.warpbuild.com/mcp, and an MCP host connected to it can interact with the WarpBuild API to create runners, create runner images, and read what already exists.",
+      "note": "not offered: outside the product's scope. WarpBuild's MCP server/API manages CI runner infrastructure (create runners/images, read job/cost data), not a first-party API that prompts/streams/follow-ups a coding agent harness inside the sandbox. The 'agent-runner' mode only runs Anthropic's own Claude Managed Agents harness on stock runner labels; WarpBuild provides no API of its own to drive that harness.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.warpbuild.com/pricing",
+      "quote": "CI runners are billed on a per-minute basis.",
+      "note": "not offered: outside the product's scope. WarpBuild has no first-party browser/computer-use/research task agent of its own; it only sells GitHub Actions CI compute plus an MCP server/API for managing that CI infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://www.warpbuild.com/docs/ci/preinstalled-software",
+      "quote": "The Linux x86-64 runner images have the same tooling installed as GitHub-hosted runners, which is why actions/setup-node, actions/setup-python, actions/setup-go, and the rest resolve against preinstalled versions instead of downloading a toolchain on every job.",
+      "note": "Python ships preinstalled on Linux/macOS/Windows runner images, matching GitHub-hosted runner images.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://www.warpbuild.com/docs/ci/preinstalled-software",
+      "quote": "Node, Python, Go, Rust, Docker, the AWS CLI, and the rest of the standard inventory are present, so actions/setup-* steps resolve against preinstalled versions instead of downloading them.",
+      "note": "Node.js ships preinstalled on the runner images.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/byoc/aws/security",
+      "quote": "While runners need outbound internet access, you can tighten egress rules.",
+      "note": "Egress control is at IP/CIDR/port level via AWS security groups and Network ACLs in the customer's own BYOC VPC (card's own feature_evidence records egress_allowlist_level as 'ip'); no HTTP method/path-level egress rule engine is documented, and the hosted (non-BYOC) fleet has no documented egress controls at all.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://trust.warpbuild.com/",
+      "quote": "SOC 2 Type 2 with three Trust Services Criteria: Security, Availability, and Confidentiality.",
+      "note": "WarpBuild's own trust center, security docs, and enterprise pages advertise only SOC 2 Type 2 (plus SAML/OIDC SSO); no HIPAA-eligibility or BAA claim appears anywhere on warpbuild.com, unlike some direct competitors (e.g. Blacksmith states GDPR/HIPAA-in-progress) that the provider's own comparison pages explicitly contrast against WarpBuild's SOC-2-only posture.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://www.warpbuild.com/enterprise/data-residency-eu",
+      "quote": "WarpBuild places GitHub Actions runners in the EU two ways: a hosted EU region on the enterprise tier, or BYOC runners in your own AWS or GCP account.",
+      "note": "EU region availability is on the enterprise tier for the hosted fleet, or via BYOC in the customer's own EU cloud region; the runner instance, its disk, and the cache/artifact bucket all stay in the EU region.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 120,
+      "source": "https://www.warpbuild.com/llms-full.txt",
+      "quote": "GitHub's own fleet stops a job at 6 hours. Registered runners get 5 days, and WarpBuild registers itself as a self-hosted runner in the Default runner group (id 1) of your organization... so a WarpBuild job runs under the 5 day ceiling rather than the 6 hour one.",
+      "note": "WarpBuild runners register with GitHub as self-hosted runners, which GitHub caps at 5 days (120 hours) of job execution, versus the 6-hour cap on GitHub-hosted runners. This is GitHub's platform ceiling that WarpBuild's registration mechanism runs under, not a WarpBuild-published SLA number of its own.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "Each runner has its own encrypted storage volume that is created on demand and destroyed after each build.",
+      "note": "Runners are per-job ephemeral VMs; disk does not survive job end. Only persistence primitives are the cache API (S3-backed) and on-demand snapshots (a new runner boots from a saved image, but the original disk is still destroyed).",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "Each runner has its own encrypted storage volume that is created on demand and destroyed after each build.",
+      "note": "No pause/resume API is documented anywhere in the docs or pricing pages; runners are created for one job and destroyed after it (job-scoped lifecycle, not pausable/resumable).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/features/snapshot-runners",
+      "quote": "The runner always boots from the base image. Use `snapshot-save` action to capture a snapshot at the desired point in your workflow.",
+      "note": "Snapshot-runners only let a NEW runner boot from a previously saved disk image later; there is no operation that clones an existing machine into siblings.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/features/snapshot-runners",
+      "quote": "WarpBuild allows you to take snapshots of your runner VMs at any point during your workflow, enabling faster consecutive runs by reusing these snapshots.",
+      "note": "Snapshot-save happens inside the job that keeps running to completion and is then destroyed; a later, separate runner boots from the saved disk (45-60s cold boot) - not a clone of the still-running machine.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/features/snapshot-runners",
+      "quote": "The `/tmp` directory will not persist state since this directory is cleaned on reboots",
+      "note": "Snapshots documented as disk-image only; no memory/process-state capture or restore, and no fork API at all.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.warpbuild.com",
+      "quote": "High-performance CI/CD runners that are 2x faster and 50% cheaper than standard GitHub Actions runners.",
+      "note": "Product is GitHub Actions CI runners (job-scoped VMs), not an interactive sandbox; no VNC/RDP/streamed desktop is offered anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.warpbuild.com",
+      "quote": "High-performance CI/CD runners that are 2x faster and 50% cheaper than standard GitHub Actions runners.",
+      "note": "No screenshot+click driving API; product is a CI-runner fleet, outside the scope of a computer-use API.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://www.warpbuild.com/docs/ci/security",
+      "quote": "Each runner has its own encrypted storage volume that is created on demand and destroyed after each build.",
+      "note": "No attachable/shared persistent volume product; matches the existing feature_evidence for volume_attach/volume_shared already on the card.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.warpbuild.com/byoc/aws/networking",
+      "quote": "a security group attached to every runner instance that blocks all inbound traffic ... Inbound can be blocked entirely, because the runner agent polls outbound.",
+      "note": "Both WarpBuild Cloud and BYOC runners are documented as no-inbound by design; the only inbound path is an outbound-initiated SSH debug tunnel (Action Debugger), not an HTTPS URL to reach an app port.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.warpbuild.com/byoc/aws/security-checklist",
+      "quote": "Block all inbound connections. Runner agents open outbound connections and hold them, so no inbound rule is required for a job to run. Remove every inbound rule from the runner security group.",
+      "note": "Even where a BYOC runner sits in a public subnet, no public IPv4 is exposed/documented as a reachable, user-facing address - inbound is uniformly blocked, so there is no supported 'public IPv4 per machine' feature.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://www.warpbuild.com/guides/static-ip-github-actions-runners",
+      "quote": "Static egress IPs for GitHub Actions runners are a BYOC capability on AWS, GCP, and Azure. ... On WarpBuild, static IPs are a BYOC capability on AWS, GCP, and Azure, switched on per custom runner",
+      "note": "CORRECTION: this is a documented first-party feature (opt-in per BYOC custom runner; addresses are the NAT gateway/Cloud NAT elastic IPs). Unavailable on WarpBuild Cloud (non-BYOC) runners, but available overall via BYOC, so the provider-level flag should be true.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://www.warpbuild.com/blog/claude-managed-agents",
+      "quote": "WarpBuild's Linux and macOS runners can now be the self-hosted execution environment for Claude Managed Agents. ... These same runners can now be the execution environment for Claude Managed Agents.",
+      "note": "CORRECTION: WarpBuild ships a dedicated 'Agent Runners' dashboard/product that runs Anthropic's Claude Managed Agents coding-agent harness on stock WarpBuild runner VMs (any stock Linux/macOS runner is selectable for a session) - a first-party offered integration for a coding agent, matching the card's own 'agent-runner' mode.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.warpbuild.com/llms.txt",
+      "quote": "High-performance CI/CD runners that are 2x faster and 50% cheaper than standard GitHub Actions runners.",
+      "note": "No 'gpu' mention anywhere across the full docs/blog/guides sitemap (llms.txt, ~830 pages) or the pricing page; only CPU runner sizes (2-32 vCPU) are sold.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.warpbuild.com/products/enterprise",
+      "quote": "Enterprise-grade GitHub Actions runners with SOC2 compliance, BYOC deployment, SSO, and 99.9% SLA. 40% cheaper than self-hosting on Kubernetes.",
+      "note": "WarpBuild positions itself as a managed alternative TO self-hosting (BYOC still means WarpBuild's control plane manages runners in your cloud account); there is no downloadable/self-hostable WarpBuild runner-control-plane software.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.warpbuild.com/pricing",
+      "quote": "Pricing - GitHub Actions Runners | WarpBuild",
+      "note": "Core product is a paid, metered SaaS (per-minute billed runners, paid plans, Enterprise sales) with no published OSI license for the runner platform/control-plane; only a small support utility (\"open-source Action Debugger\") is separately called out as open source, not the core product.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "linux-x64": "dedicated",
+        "linux-arm64": "dedicated",
+        "windows-x64": "dedicated",
+        "macos-m4pro": "dedicated",
+        "linux-arm64-apple": "dedicated"
+      },
+      "source": "https://www.warpbuild.com/products/ci/x86-runners",
+      "quote": "Dedicated hardware resources for compute-intensive CI/CD workloads. Baremetal Performance: Direct access to high-performance hardware without virtualization overhead for maximum throughput.",
+      "note": "WarpBuild's x86-64 runner product page explicitly advertises 'dedicated hardware resources' and bare-metal (no virtualization-overhead) access, and its own architecture post (https://www.warpbuild.com/blog/uptime-reliability) says it 'primarily' runs Linux/macOS runners on its own bare-metal fleet with 'complete hardware isolation' and 'nested virtualization to ensure the builder instance is completely isolated from the host' (docker-builders blog: 'Dedicated cores of fast, high single core performance processors'). Each GitHub Actions job also gets a fresh, non-reused VM ('created on demand and destroyed after each build ... not reused'), so there is no cross-job/cross-customer CPU sharing on a given runner. Windows runners and the AWS-Graviton-5-powered ARM64 runners are documented as running on hyperscaler AWS/GCP/Azure instances instead of WarpBuild's own bare metal (per the uptime/reliability blog: 'Hyperscalers: Windows runners, ARM64 Linux runners, and Docker builders run on hyperscalers'); WarpBuild does not publish a separate CPU-sharing statement for those two platforms, so 'dedicated' here is inferred (lower confidence for windows-x64/linux-arm64) from the same per-job-VM, no-reuse lifecycle and the absence of any burstable/shared-vCPU or oversubscription language anywhere in WarpBuild's docs, blog, or pricing pages (unlike Namespace/Blacksmith, who use similar per-job VM models and are treated as full dedicated-VM isolation). macOS (macos-m4pro) and the same-hardware linux-arm64-apple SKU run on real Apple Silicon Mac hardware under Apple's macOS VM licensing terms (minimum 24-consecutive-hour lease with 'sole use by the lessee'), which grants the leasing customer exclusive (not multi-tenant) access to that physical Mac's cores for the lease duration, supporting 'dedicated' rather than 'shared' for those two modes as well, though WarpBuild does not itself publish a CPU-pinning/no-oversubscription guarantee across the up-to-3 concurrent VMs a lessee may run on one Mac.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://www.warpbuild.com/docs/ci/mcp",
+      "quote": "WarpBuild hosts a Model Context Protocol server at https://mcp.warpbuild.com/mcp, and an MCP host connected to it can interact with the WarpBuild API to create runners, create runner images, and read what already exists.",
+      "note": "granularity: per-sandbox; cost: yes; MCP server and WarpBuild API can read job and cost data per runner (per-sandbox granularity); runners are ephemeral per-job VMs.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://www.warpbuild.com/pricing",
+  "locations_quote": "WarpBuild does not publish a documented list of specific regions or locations where runners are deployed. EU data residency is available on enterprise tier, but the exact region names/cities are not detailed on the pricing page.",
+  "locations_checked": "2026-10-01"
+}

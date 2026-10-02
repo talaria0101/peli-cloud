@@ -1,0 +1,909 @@
+{
+  "id": "huawei-cloud",
+  "name": "Huawei Cloud AgentArts",
+  "url": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
+  "category": "agent-sandbox",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "base-cu",
+      "label": "Base CU tariff, mainland China (public beta): code interpreter/browser/runtime",
+      "flags": [
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "container"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.165531779128,
+      "ram_gib_h": 0.016553177913,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 2,
+      "max_ram_gib": 8,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Native CNY public list/reference quote; rates converted using fx.json. Unknown: reviewed pricing source does not explicitly establish VAT/tax inclusion."
+    },
+    {
+      "key": "ecs-payg-sg",
+      "label": "ECS pay-per-use, AP-Singapore (international site, USD): general computing S6 / X1 / C9",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "s6.medium.2",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 0,
+          "hour": 0.033,
+          "month_cap": null
+        },
+        {
+          "name": "s6.large.2",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.066,
+          "month_cap": null
+        },
+        {
+          "name": "s6.large.4",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.08,
+          "month_cap": null
+        },
+        {
+          "name": "s6.xlarge.2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.132,
+          "month_cap": null
+        },
+        {
+          "name": "s6.xlarge.4",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.16,
+          "month_cap": null
+        },
+        {
+          "name": "s6.2xlarge.2",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.264,
+          "month_cap": null
+        },
+        {
+          "name": "s6.2xlarge.4",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.32,
+          "month_cap": null
+        },
+        {
+          "name": "x1.16u.32g",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.5584,
+          "month_cap": null
+        },
+        {
+          "name": "x1.16u.64g",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.6848,
+          "month_cap": null
+        },
+        {
+          "name": "c9.8xlarge.2",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 1.4144,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Linux list prices, USD/hour, from the international calculator API for ap-southeast-3, cross-checked with the rating inquiry API (s6.xlarge.2.linux = $0.132/h). Other Singapore 4 vCPU / 8 GiB flavors: c9 $0.1768, c7n $0.186, x1 $0.1396, Kunpeng kc1 $0.11. EVS system disk and EIP are billed separately.",
+      "cpu_class": "shared"
+    },
+    {
+      "key": "ecs-payg-latam",
+      "label": "ECS pay-per-use, LA-Mexico City2 (cheapest international region): S6 / X1",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "s6.medium.2",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 0,
+          "hour": 0.027,
+          "month_cap": null
+        },
+        {
+          "name": "s6.large.2",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.054,
+          "month_cap": null
+        },
+        {
+          "name": "s6.large.4",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.06,
+          "month_cap": null
+        },
+        {
+          "name": "s6.xlarge.2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.108,
+          "month_cap": null
+        },
+        {
+          "name": "s6.xlarge.4",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.12,
+          "month_cap": null
+        },
+        {
+          "name": "s6.2xlarge.2",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.216,
+          "month_cap": null
+        },
+        {
+          "name": "s6.2xlarge.4",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.24,
+          "month_cap": null
+        },
+        {
+          "name": "x1.16u.32g",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.368,
+          "month_cap": null
+        },
+        {
+          "name": "x1.16u.64g",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.416,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "USD/hour for la-north-2. Region spread for s6.xlarge.2 (4 vCPU / 8 GiB): LatAm $0.108, Bangkok $0.12, Dublin $0.13, Singapore/HK $0.132, Johannesburg $0.148, Sao Paulo $0.168, Paris $0.213. There is no US region.",
+      "cpu_class": "shared"
+    },
+    {
+      "key": "ecs-monthly-sg",
+      "label": "ECS yearly/monthly subscription, AP-Singapore",
+      "flags": [
+        "alt",
+        "commit"
+      ],
+      "commit_term": "1-month",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "s6.large.2",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 35.92,
+          "month_cap": 35.92
+        },
+        {
+          "name": "s6.xlarge.2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 71.83,
+          "month_cap": 71.83
+        },
+        {
+          "name": "s6.2xlarge.2",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 143.66,
+          "month_cap": 143.66
+        },
+        {
+          "name": "x1.16u.32g",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 293.5,
+          "month_cap": 293.5
+        }
+      ],
+      "requires_always_on": true,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "note": "Monthly prepaid is about 74.5% of 730 h pay-per-use ($71.83 vs $96.36 for s6.xlarge.2). 1-year prepaid for s6.xlarge.2 is $718.32 ($59.86/month). Stopping the instance gives no refund.",
+      "cpu_class": "shared"
+    },
+    {
+      "key": "ecs-burstable-t6-sg",
+      "label": "ECS general computing-basic T6 (burstable, 20% average baseline), AP-Singapore",
+      "flags": [
+        "alt",
+        "burstable"
+      ],
+      "baseline_pct": 20,
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "t6.large.2",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.046,
+          "month_cap": null
+        },
+        {
+          "name": "t6.xlarge.2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.092,
+          "month_cap": null
+        },
+        {
+          "name": "t6.2xlarge.2",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.184,
+          "month_cap": null
+        },
+        {
+          "name": "t6.4xlarge.2",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.368,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "note": "Burstable with CPU credits. The calculator also lists t7/at7 at $0.0274/$0.0233 per hour for 4 vCPU / 8 GiB, but their baseline is not documented on the intl T6 page.",
+      "cpu_class": "shared"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": 0,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0.114,
+    "ipv4_month": 0,
+    "ipv4_available": null,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "出站网络类型，当前支持如下2种： PUBLIC: 表示公网出口。 VPC: 表示虚拟私有云出口。 ... 默认取值 : PUBLIC。",
+          "url": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown quotas are not confirmed unlimited. "
+    },
+    {
+      "name": "Enterprise Professional (企业专业版)",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 496.6,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": 168,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Price not published. Includes 3,000 CU/month with no rollover, and 200 members. Ticket only."
+    },
+    {
+      "name": "Enterprise Flagship (企业旗舰版)",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 1800.99,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": 168,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Price not published. Includes 10,880 CU/month with no rollover, and 1,000 members. Ticket only."
+    },
+    {
+      "name": "Team Standard (团队标准版)",
+      "fee": 17.73,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 13.24,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": 168,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "CNY 119/month (the price is labelled an example in the billing doc) = $17.73. Includes 80 CU/month (worth CNY 88.86 = $13.24 at the base CU rate), with no rollover and 10 members. Overage CU is billed on demand at the tiered rate. Not open for self-serve purchase (ticket only)."
+    },
+    {
+      "name": "Team Advanced (团队高级版)",
+      "fee": 177.33,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 129.11,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": 168,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "CNY 1,190/month (example price) = $177.33. Includes 780 CU/month (worth CNY 866.42 = $129.11), with no rollover and 50 members. Ticket only."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": 3.310635582565
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": 168,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": true,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "asia",
+      "other"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "isolation": "container",
+    "image_oci": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": true,
+    "secret_proxy": "ai-only",
+    "guest_firewall": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "4-vCPU/8-GiB tool sizing and concurrency not confirmed; worked example is conditional CU arithmetic.",
+    "Other AgentArts activity consumes same monthly CU tiers; engine approximates base band only.",
+    "CU billed to 0.0001 precision monthly; wall-clock metering increment not specified.",
+    "Unknowns remain null, not free; generic infrastructure modes are opt-in alt.",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Unknown: reviewed pricing source does not explicitly establish VAT/tax inclusion.",
+    "Residency: China AgentArts public-beta documentation; Beijing-four legacy service differs from newer platform. Region and 4/8 configurable tool support need confirmation.",
+    "Re-checked 2026-09-28 (AgentArts 计费说明 v04, 2026-09-28): the only sandbox billing items are CPU (1 CU per vCPU-h) and memory (0.1 CU per GiB-h) for runtime, code interpreter and browser tool; disk/storage is not a billing item, so disk_gib_month=0 (sandbox disk size itself is unpublished). No snapshot or public-network egress item is listed; both stay null (unknown).",
+    "Mainland-China console (support.huaweicloud.com, CNY); every feature is labelled 公测 (public beta) on the release-notes page. No SSH is documented (session API only) and the browser tool offers LiveView of the browser via noVNC, not a full desktop: ssh=false, desktop=false.",
+    "CU annual pack (beta): example 20,000 CU for CNY 21,105/year (CNY 1.05525/CU, ~5% below on-demand), valid 1 year, needs an existing plan; ~$3,145 prepaid. Not modelled as a mode because the prepaid pack floor cannot be encoded."
+  ],
+  "sources": [
+    "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
+    "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_164.html",
+    "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+    "https://support.huaweicloud.com/wtsnew-agentarts/index.html",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "audit_2026_09_29": {
+    "applied": 14,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 7
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/agentarts_faq/agentarts_09_0081.html",
+      "quote": "未持久化到外部存储的文件会随沙箱释放而丢失。",
+      "note": "Translation (table row 'temporary files inside the sandbox: cleared'): 'Files not persisted to external storage are lost when the sandbox is released.' Idle timeout (default 15 min, 1 min-7 d) or max lifetime (default 24 h, max 168 h) ends the session and destroys the microVM ('停止会话 ... 销毁沙箱实例，释放计算资源。会话内临时文件自动清除', agentarts_10_119); a later call with no live sandbox 'wakes a new microVM' (唤醒新的microVM, agentarts_10_006). The only state carried over is the opt-in 'session storage' (会话存储: OBS-backed FUSE mount, one per-session subdirectory) plus user SFS Turbo/OBS mounts; that is persistent_disk-style, not a snapshot, and memory is never kept. Same for the code interpreter and browser tools. The only 'checkpoint' mention (agentarts_03_0010) is a generic glossary definition of what a harness does, not a product feature.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_119.html",
+      "quote": "停止会话（销毁沙箱）和删除会话状态（清除持久化存储）是两个独立操作。",
+      "note": "Translation: 'Stopping a session (destroying the sandbox) and deleting session state (clearing persistent storage) are two independent operations.' The full AgentArts API catalogue (runtime, code interpreter, browser, sessions, gateway, ~150 operations; saved in raw/huawei-cloud--api-network-catalogue-f3.txt) has no snapshot/checkpoint/fork operation, and no user-guide page mentions one. The nearest things are SaveBrowserProfile ('将会话保存至配置文件': saves browser cookies/local-storage profile for reuse by later browser sessions, not a machine snapshot) and immutable runtime versions (image + config, not live state). False rather than null because the complete API reference lacks it; downgrade to null if the coordinator requires an explicit denial. ECS (alt modes) does have on-demand EVS disk snapshots and private images (standard IaaS, not re-verified in this pass).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/managedagents-agentarts/agentarts_13_0028.html",
+      "quote": "调用智能体是Managed Agents的核心使用环节。通过WebSocket协议向已创建的智能体发送消息，智能体在沙箱环境中自主决策、调用工具、执行任务，并将流式结果实时返回给调用方。",
+      "note": "Translation: 'Invoking the agent is the core of Managed Agents. You send messages over WebSocket to the created agent; the agent decides autonomously, calls tools and executes tasks inside the sandbox environment, and streams results back to the caller in real time.' Harness = Huawei's own Managed Agents harness only (public beta, launched 2026-09): you declare model (Huawei MaaS or custom OpenAI-protocol providers), system prompt, built-in tools (bash, read_file, write_file, edit_file, glob, list_files, grep), Skills, environment; then drive it at ws://{endpoint}/runtimes/{runtime_name}/ws with IAM/API Key/OAuth auth; stream frames (e2a.chunk / e2a.complete with status in_progress/succeeded/failed); multi-turn by reusing a session ID; 'send new content to change direction, or terminate/pause the current task' (干预与中断). Runs in a microVM sandbox. No first-party support for driving Claude Code / Codex / OpenCode / Gemini CLI inside the sandbox (those names appear only for the Memory plugin). The plain Runtime product just proxies HTTP/MCP to your own container (InvokeRuntime), which is not a harness API.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/managedagents-agentarts/agentarts_13_0013.html",
+      "quote": "沙箱向外发起网络请求的能力，是基础设施层的安全边界，优先级高于系统提示词、工具权限，即使提示词被注入攻击，网络层依然可以拦截非法访问。",
+      "note": "Translation: 'The sandbox's ability to make outbound requests is an infrastructure-layer security boundary, taking priority over the system prompt and tool permissions; even if the prompt is injected, the network layer can still block illegal access.' Options per environment / runtime / code interpreter / browser: 公网访问 PUBLIC (open internet, no filtering documented) or 私网访问 VPC ('打通您的企业私有VPC内网，只能访问内网资源，流量不经过互联网' = only internal resources, no internet) with your VPC, subnet and up to 10 security groups (API: network_config.network_mode PUBLIC|VPC, vpc_config.security_group_ids). So: a no-internet mode plus IP/port control via VPC security-group outbound rules and your VPC routing/NAT (security-group egress semantics are inferred from standard Huawei VPC behaviour, not stated on the AgentArts pages). No hostname allowlist in AgentArts itself. Egress mode is immutable after creation for Managed Agents environments. IAM condition keys agentarts:AllowEgressPublicAccess / AllowIngressPublicAccess let admins forbid public egress/ingress.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_068.html",
+      "quote": "自定义网络配置：可创建关闭公网访问并关联VPC的网络配置，基于VPC内网通信，满足企业网络隔离的安全合规要求",
+      "note": "Translation: 'Custom network config: you can create a network config with public access disabled and associated with a VPC, communicating over the VPC intranet, meeting enterprise isolation/compliance requirements.' Inbound traffic always goes through the AgentArts inbound gateway (max 5; default 'defaultgw' has public access on): public domain toggle, VPC association (CreateCoreIngressNetwork), and mandatory inbound identity auth per runtime/agent (IAM AK/SK signature, API Key, or OAuth 2.0 JWT with allowed audiences/clients/scopes/claims; agentarts_10_227 '对每一个到达智能体运行时的请求进行身份验证'). Code interpreter and browser require IAM or API Key auth. Exposed surface is the runtime's HTTP/MCP endpoints (invocations, custom paths, commands, files); no arbitrary raw ports; no IP allowlist documented.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_124.html",
+      "quote": "存储配置用于将外部存储资源挂载到运行时沙箱容器中，实现数据持久化、文件共享和会话状态保存。AgentArts运行时支持SFS Turbo、会话存储和OBS三种存储类型",
+      "note": "Translation: 'Storage config mounts external storage into the runtime sandbox container for persistence, file sharing and session state. The runtime supports SFS Turbo, session storage and OBS.' Up to 5 SFS Turbo (NFS) file systems + up to 10 OBS mounts (5 buckets) + 1 session storage; SFS Turbo and OBS only in VPC (private) network mode; mount paths under /home, /mnt, /data, /tmp; read-write or read-only per mount. Applies to Runtime and Managed Agents environments; the code interpreter and browser tool APIs have no storage fields. No block volumes. SFS Turbo / OBS are billed by those services, not AgentArts CU.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_124.html",
+      "quote": "模型文件、共享数据：优先选择SFS Turbo，支持多实例共享读写。",
+      "note": "Translation: 'Model files, shared data: prefer SFS Turbo, which supports shared read-write across multiple instances.' Also FAQ agentarts_09_0041: 'SFS Turbo是高性能共享文件系统，支持多实例同时挂载读写' (multiple instances mount read-write concurrently) and agentarts_13_0013: 'same runtime's versions mounting the same directory share automatically'. Read-write or read-only per mount; NFS (hard mount), same VPC required. OBS bucket mounts can also be shared by many sessions (read-mostly). Session storage is per-session isolated (not shared).",
+      "checked": "2026-09-29"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_006.html",
+      "quote": "使用任意Agent开发框架完成Agent开发，构建Docker镜像，发布到SWR镜像仓库。",
+      "note": "not offered: outside the product's scope. Docker is how you package YOUR agent to deploy as a runtime image; the sandbox itself is a managed microVM/container execution environment with no documented nested-container capability.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_008.html",
+      "quote": "代码解释器是AgentArts的核心组件之一，为Agent提供安全隔离的代码执行环境。Agent可以在代码解释器中执行代码、处理文件、运行命令，所有操作在受控环境中完成，不影响宿主系统。",
+      "note": "not offered: outside the product's scope. AgentArts sandboxes (runtime, code interpreter, browser) are managed, restricted execution environments for agent code/tools; no /dev/kvm or nested-virtualization capability is documented anywhere in the API/user guides.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_164.html",
+      "quote": "浏览器是AgentArts平台为智能体提供的内置工具之一，通过在安全隔离的沙箱容器中运行云端浏览器，使智能体具备访问任意网站、操作页面、获取截图、执行多步表单填写等Web自动化能力。",
+      "note": "not offered: outside the product's scope. The browser tool's documented capabilities are session mgmt, LiveView/noVNC, profile persistence and proxy config; no stealth/fingerprint-evasion feature against bot detection is mentioned.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_164.html",
+      "quote": "浏览器工具支撑以下业务场景：信息检索、自动化办公、Web表单处理、UI自动化测试、可视化Agent。",
+      "note": "not offered: outside the product's scope. No CAPTCHA-solving capability is documented for the browser tool or anywhere else in AgentArts.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "network_mode 是 String 参数解释: 出站网络类型，当前支持如下2种： PUBLIC: 表示公网出口。 VPC: 表示虚拟私有云出口。",
+      "note": "Outbound traffic is either Huawei Cloud's shared public egress (PUBLIC mode) or routed through the customer's own VPC/NAT (VPC mode) — both are cloud-datacenter IP ranges, never residential/mobile. No evidence the IP is static per sandbox.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_119.html",
+      "quote": "停止会话（销毁沙箱）和删除会话状态（清除持久化存储）是两个独立操作。",
+      "note": "The full AgentArts API reference (~150 operations across runtime/code-interpreter/browser/sessions/gateway/model) has no snapshot/checkpoint operation; stopping a session destroys the microVM and clears temp files. Only opt-in persistent storage (session storage/SFS/OBS mounts) survives, which is disk-level persistence, not a snapshot.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/agentarts/v3_support_leftmenu_fragment.html",
+      "quote": "创建runtime - CreateCoreRuntime / 查询runtime列表 / 更新runtime / 删除runtime",
+      "note": "The full API left-nav for runtimes, code interpreters, browsers and sessions only exposes create/list/show/update/delete-style lifecycle operations; no clone/fork operation exists anywhere in the documented API surface.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/agentarts/v3_support_leftmenu_fragment.html",
+      "quote": "创建runtime - CreateCoreRuntime / 查询runtime列表 / 更新runtime / 删除runtime",
+      "note": "No fork operation of any kind (running or not) is documented; see 'fork'.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_119.html",
+      "quote": "停止会话（销毁沙箱）和删除会话状态（清除持久化存储）是两个独立操作。",
+      "note": "There is no snapshot capability at all (see 'snapshot'), so a memory-preserving fork/clone is not possible; confirmed absent from the API reference.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/agentarts/v3_support_leftmenu_fragment.html",
+      "quote": "停止会话（销毁沙箱）",
+      "note": "Only 'stop session' (destroys the sandbox/microVM and releases resources) is documented; there is no pause/suspend-and-resume operation for runtimes, code interpreters or browser sessions.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_006.html",
+      "quote": "如果session-id找不到对应的microVM，唤醒新的microVM，然后转发路由。",
+      "note": "The Agent Gateway automatically launches ('wakes') a fresh microVM for any incoming request whose session-id has no live instance, then routes to it — functionally auto-wake-on-request, though it always creates a brand-new instance rather than resuming saved state (snapshot=none).",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_124.html",
+      "quote": "存储配置用于将外部存储资源挂载到运行时沙箱容器中，实现数据持久化、文件共享和会话状态保存。AgentArts运行时支持SFS Turbo、会话存储和OBS三种存储类型",
+      "note": "Session storage (OBS-backed) plus optional SFS Turbo / OBS bucket mounts persist files across sandbox stop/start and across sessions; the sandbox's own ephemeral local disk is wiped on release.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_006.html",
+      "quote": "版本（Versions）：智能体运行时的不可变版本，每次编辑运行时配置都会产生新版本。",
+      "note": "CPU (cpu_milli_cores) and memory (memory_size) are fixed per immutable runtime version; changing them creates a new version (redeploy), not a live resize of a running instance.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/managedagents-agentarts/agentarts_13_0028.html",
+      "quote": "调用智能体是Managed Agents的核心使用环节。通过WebSocket协议向已创建的智能体发送消息，智能体在沙箱环境中自主决策、调用工具、执行任务，并将流式结果实时返回给调用方。",
+      "note": "Managed Agents lets you configure your own model + tools + prompt inside Huawei's own harness; no preinstalled/templated coding-agent harnesses (Claude Code, Codex, OpenCode, Gemini CLI) are offered — those names only appear elsewhere for an unrelated Memory plugin.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/managedagents-agentarts/agentarts_13_0028.html",
+      "quote": "通过WebSocket协议向已创建的智能体发送消息，智能体在沙箱环境中自主决策、调用工具、执行任务，并将流式结果实时返回给调用方。",
+      "note": "Managed Agents is Huawei's own first-party task-agent product (model + tools + prompt, browser/code-interpreter tool access), driven over a WebSocket API with multi-turn sessions and mid-task intervene/terminate — this is the provider's own agent API, not a coding-harness driver.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "protocol 否 String 参数解释: 智能体运行时支持的协议类型。 HTTP: HTTP协议 MCP: MCP协议",
+      "note": "AgentArts runtimes can themselves speak the MCP protocol (host your own MCP tool server) and there is a template gallery for building MCP tools, but Huawei does not ship a first-party MCP server that lets an external MCP client (e.g. Claude Desktop) control/manage AgentArts sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/api-agentarts/ExecuteCode.html",
+      "quote": "language 否 String 参数解释： 要执行的代码所使用的编程语言...取值范围： python：Python编程语言。 typescript：TypeScript编程语言。",
+      "note": "The code interpreter's execute_code operation supports python and typescript, i.e. a Node.js-based JS/TS runtime is available out of the box.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "network_mode 是 String 参数解释: 出站网络类型...PUBLIC: 表示公网出口。VPC: 表示虚拟私有云出口。",
+      "note": "Runtimes/tools are reached through Agent Gateway HTTPS domains, not a dedicated public IPv4 per machine; network_config only exposes PUBLIC (shared egress) or VPC (private) modes, with no per-instance EIP feature documented.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_068.html",
+      "quote": "自定义网络配置：可创建关闭公网访问并关联VPC的网络配置，基于VPC内网通信，满足企业网络隔离的安全合规要求",
+      "note": "By default the inbound gateway exposes public HTTPS endpoints (invocation URLs) for runtimes/code-interpreter/browser, secured with mandatory IAM/API-Key/OAuth inbound authentication; a VPC-only mode can be chosen instead.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/managedagents-agentarts/agentarts_13_0013.html",
+      "quote": "沙箱向外发起网络请求的能力，是基础设施层的安全边界，优先级高于系统提示词、工具权限，即使提示词被注入攻击，网络层依然可以拦截非法访问。",
+      "note": "Egress control is only at the network-mode level (PUBLIC open internet vs VPC-only) plus VPC security-group IP/port rules; there is no documented HTTP method/path-level egress rule (matches the card's existing egress_allowlist_level: 'ip').",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_252.html",
+      "quote": "模型提供商是模型服务的管理实体，定义统一的访问端点（base_url）、出站身份认证和网络配置。通过创建模型提供商，可以将外部模型服务（如OpenAI、Anthropic等）接入AgentArts平台，由网关统一管理推理请求的路由和认证。",
+      "note": "The Model Provider/Model Proxy feature stores model-vendor credentials (API Key or IAM) server-side and injects them when the gateway routes /inference/ requests to OpenAI, Anthropic, etc.; the sandbox never sees the key. This is scoped to model-provider inference endpoints only, not arbitrary HTTP APIs.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "network_mode 是 String 参数解释: 出站网络类型...PUBLIC: 表示公网出口。VPC: 表示虚拟私有云出口。",
+      "note": "No fixed/static outbound-IP feature is documented; PUBLIC mode egresses via Huawei Cloud's shared pool, and a static IP in VPC mode would depend entirely on the customer's own NAT gateway/EIP setup outside AgentArts.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "specs 否 CoreRuntimeSpecsReq object 参数解释: 运行时所需的规格，包含CPU和内存规格。",
+      "note": "not offered: outside the product's scope. Runtime/code-interpreter/browser sandbox specs are limited to cpu_milli_cores and memory_size; no GPU spec option is documented anywhere in the AgentArts API or pricing pages.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "arch 否 String 参数解释： Agent运行时架构...取值范围： 只允许填写arm64或者x86_64。",
+      "note": "not offered: outside the product's scope. Only arm64/x86_64 Linux container images are supported for runtimes; no Windows OS option exists for any AgentArts sandbox tool.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "arch 否 String 参数解释： Agent运行时架构...取值范围： 只允许填写arm64或者x86_64。",
+      "note": "not offered: outside the product's scope. AgentArts is a Linux container/microVM sandbox platform; no macOS machines are offered.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "arch 否 String 参数解释： Agent运行时架构，用于标明运行时需要运行在arm或者x86平台架构...取值范围： 只允许填写arm64或者x86_64。默认取值 : arm64。",
+      "note": "Runtimes can be created with arch=arm64 (the documented default) or x86_64.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_006.html",
+      "quote": "运行时是安全隔离、框架无关的托管执行环境",
+      "note": "not offered: outside the product's scope. AgentArts is delivered only as a Huawei-managed cloud platform; no self-hosted/on-prem deployment package is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_006.html",
+      "quote": "运行时是安全隔离、框架无关的托管执行环境",
+      "note": "not offered: outside the product's scope. No bring-your-own-cloud-account deployment mode is documented; sandboxes run only in Huawei Cloud's own regions.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_006.html",
+      "quote": "运行时是安全隔离、框架无关的托管执行环境，其核心是入站网关与安全沙箱的分层协作。",
+      "note": "AgentArts is a proprietary Huawei Cloud service; no OSI-licensed core codebase or public source repository is published for the platform.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.huaweicloud.com/intl/en-us/securecenter/compliance.html",
+      "quote": "Security standards: ISO 27001, ISO 27017, CSA STAR Gold Certificate, \"DJCP\" (graded protection) level 3 and 4 by China's Ministry of Public Security (MPS), and PCI DSS and NIST cyber security framework (CSF) for the card payments.",
+      "note": "Huawei Cloud's own Trust Center FAQ enumerates the certifications it holds (ISO 27001/17/18/701, 29151, 27799, BS 10012, CSA STAR, DJCP, PCI DSS, NIST CSF); SOC 2 is not among them.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.huaweicloud.com/intl/en-us/securecenter/compliance.html",
+      "quote": "Take the Database Security Service (DBSS) as an example. It complies with the HIPAA, SOX, and PCI DSS, meeting your auditing requirements.",
+      "note": "HIPAA is cited only as a capability of the separate Database Security Service helping customers pass audits, not as a platform-wide Huawei Cloud certification or BAA offer; AgentArts itself has no HIPAA/BAA mention.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://support.huaweicloud.com/intl/en-us/usermanual-iam/iam_08_0002.html",
+      "quote": "Huawei Cloud supports identity federation with Security Assertion Markup Language (SAML)...Huawei Cloud functions as a service provider (SP) and enterprises function as identity providers (IdPs).",
+      "note": "Account-wide IAM supports SAML 2.0 identity federation (virtual user SSO) for console/API login, which covers access to the AgentArts console/APIs.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/highcode-agentarts/agentarts_10_008.html",
+      "quote": "代码解释器是AgentArts的核心组件之一，为Agent提供安全隔离的代码执行环境。Agent可以在代码解释器中执行代码、处理文件、运行命令，所有操作在受控环境中完成，不影响宿主系统。",
+      "note": "derived: the card classifies AgentArts sandbox isolation as container-level (shared kernel), not a full VM/microVM, and no AgentArts doc (runtime, code interpreter, browser, sessions, gateway APIs) documents root/sudo or CAP_NET_ADMIN access, or any iptables/nftables capability inside the sandbox; access is via a restricted runtime/code-interpreter/browser API (commands, file I/O), not an unrestricted root shell. Session API only, no SSH (ssh=false per card). Absent an established full-VM + root combination, guest-side nftables/iptables control is not established, so this is derived as false rather than an unconfirmed true.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "ecs-payg-sg": "shared",
+        "ecs-payg-latam": "shared",
+        "ecs-monthly-sg": "shared",
+        "ecs-burstable-t6-sg": "burstable:20"
+      },
+      "source": "https://support.huaweicloud.com/intl/en-us/productdesc-ecs/ecs_01_0020.html",
+      "quote": "General computing ECSs provide a balance of compute, memory, and networking resources and a baseline level of vCPU performance with the ability to burst above the baseline. ... Notes: S6 ECS burstable performance is neither restricted by CPU credits nor billed for additional credits.",
+      "note": "The ecs-payg-sg / ecs-payg-latam / ecs-monthly-sg modes use S6 (general computing), X1 (FlexusX general computing) and C9 (general computing-plus/compute) flavors. Huawei's own ECS Types doc (en-us_topic_0035470096.html, Table 6 'Differences between dedicated and shared ECSs') states standard pay-per-use ECS instances (as opposed to a purchased Dedicated Host) are 'Shared ECS': 'CPUs are shared and CPU contention may occur.' The General Computing family page (ecs_01_0020.html) explicitly describes S6/X1 as baseline+burst instances, and S6 specifically runs on the CPU-credit mechanism (like T6) though its burst is not throttled by credits -- consistent with shared/oversubscribed vCPUs rather than a dedicated-core guarantee; no Huawei doc states S6/X1/C9 have dedicated/reserved cores. classified as 'shared', medium confidence since no page uses the word 'shared' specifically for C9. For ecs-burstable-t6-sg: the ECS General Computing-Basic T6 spec page (ecs_01_0024.html, Table 2) publishes an explicit 'Average CPU Baseline (%)' column per flavor -- e.g. t6.large.2 / t6.xlarge.2 / t6.2xlarge.2 = 20% (matching the card's baseline_pct:20; t6.4xlarge.2 is separately documented at 15%) -- and CPU Credits doc (ecs_01_0061.html) states 'General computing-basic T6 ECSs are shared ECSs restricted by CPU credits,' confirming burstable:20 for the sizes the card models.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://support.huaweicloud.com/api-agentarts/CreateCoreRuntime.html",
+      "quote": "The AgentArts API documentation covers runtime, code interpreter, browser, session and gateway lifecycle operations (create/list/show/update/delete/invoke/execute); the ~150 operations in the reference lack any usage query, cost export, or billing export endpoint for querying consumption of a specif",
+      "note": "granularity: per-sandbox; cost: no; Huawei Cloud AgentArts bills per-runtime in CU (compute units: 1 CU per vCPU-h, 0.1 CU per GiB-h for base-cu mode; USD/hour for ECS alt modes), and each sandbox is independently tracked, but there is no documented API endpoint (REST, SDK, or CLI) to retrieve historical or current usage/cost for a specific runtime instance or group identified by metadata. The billing occurs automatically and appears only on the account invoice; users can only view billing in the account dashboard, not via programmatic access per resource.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Beijing",
+      "provider_region": "cn-north-4",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Mexico City",
+      "provider_region": "la-north-2",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
+  "locations_quote": "AgentArts base-cu mode available in mainland China (public beta). ECS available in ap-southeast-3 (Singapore) and la-north-2 (Mexico City). Pricing notes reference additional regions: Bangkok, Dublin, Hong Kong, Johannesburg, Sao Paulo, Paris.",
+  "locations_checked": "2026-10-01"
+}

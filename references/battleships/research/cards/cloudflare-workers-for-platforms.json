@@ -1,0 +1,3339 @@
+{
+  "id": "cloudflare-workers-for-platforms",
+  "name": "Cloudflare Workers for Platforms",
+  "url": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/",
+  "category": "paas",
+  "isolation": "isolate",
+  "modes": [
+    {
+      "key": "dispatch-isolates",
+      "label": "User Workers (V8 isolates), per request + CPU-ms",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.072,
+      "ram_gib_h": 0,
+      "cpu_basis": "active",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        1
+      ],
+      "min_vcpu": null,
+      "max_vcpu": 1,
+      "max_ram_gib": 0.125,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 3e-7,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Added 2026-09-28 (missing-providers audit). https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/platform/pricing/: $0.02 per additional million CPU-ms => $0.072 per CPU-hour (cpu_basis active: CPU time = wall time x utilisation); $0.30 per additional million requests => start_fee $0.0000003 (one session = one request); memory not billed. Isolate limits (https://developers.cloudflare.com/workers/platform/limits/): 128 MB memory, WfP pricing page: max 30 s CPU per invocation (15 min per Cron Trigger/Queue consumer), unlike standard Workers Paid (default 30 s, up to 5 min). Duration/wall time not billed."
+    },
+    {
+      "key": "dynamic-workers",
+      "label": "Dynamic Workers (Worker Loader isolates), Workers Paid plan",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.072,
+      "ram_gib_h": 0,
+      "cpu_basis": "active",
+      "ram_basis": "alloc",
+      "max_vcpu": 1,
+      "max_ram_gib": 0.125,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0.0020003,
+      "product_class": "code-interpreter",
+      "note": "Requires Workers Paid ($5/month minimum per account; includes 10M requests + 30M CPU-ms, shared with normal Workers). $0.002 per unique Dynamic Worker (Worker ID + code) per day beyond 1,000/month; .load(code) without ID = 1 per invocation. Requests $0.30/M, CPU $0.02/M CPU-ms incl. isolate startup. Limit: 4 distinct Dynamic Workers in flight per Worker request, 10 per Durable Object. Changelog 2026-03-24 'open beta'; docs no longer show a beta label. Could alternatively be its own card."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Workers for Platforms",
+      "fee": 25,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 7.2,
+      "per_seat": 0,
+      "waives_start_fee": false,
+      "included_applies_to_modes": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$25/month incl. 20M requests ($6.00 at overage rate) + 60M CPU-ms ($1.20) + 1,000 scripts; extra scripts $0.02 each (not modelled). included_usd = $7.20."
+    },
+    {
+      "name": "Workers Paid (Dynamic Workers)",
+      "fee": 5,
+      "fee_is_credit": false,
+      "included_usd": 3.6,
+      "per_seat": 0,
+      "included_applies_to_modes": [
+        "dynamic-workers"
+      ],
+      "concurrency": null,
+      "note": "$5/month minimum per account; 10M requests ($3.00) + 30M CPU-ms ($0.60) included; 1,000 Dynamic Workers/month included (~$2 at $0.002) not encoded in included_usd."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "price_expires": null,
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": false,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": false,
+    "systemd": false,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": true,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": false,
+    "lang_rust": null,
+    "lang_java": false,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": true,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "egress_allowlist_level": "domain",
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "secret_proxy": "any-http",
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "v8-isolate",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [],
+  "caveats": [
+    "Isolates, not VMs: 128 MB memory, one thread; workloads needing more RAM are ineligible.",
+    "One estimator session = one request; CPU billed on CPU time only (cpu_util x wall time), wall-clock/idle not billed.",
+    "Per-script fee ($0.02 beyond 1,000 scripts) not modelled.",
+    "Dynamic Workers (Worker Loader) are priced separately on the Workers Paid plan ($5/month): 1,000 unique Dynamic Workers/month included then $0.002 per Dynamic Worker per day, plus Workers Standard requests ($0.30/M beyond 10M) and CPU ($0.02/M CPU-ms beyond 30M, including isolate startup time). See additions.",
+    "Dynamic Workers concurrency: only 4 distinct Dynamic Workers can have in-flight requests per parent Worker request (10 per Durable Object); many concurrent sandboxes need fan-out across requests/DOs.",
+    "WfP bills 1 request across dispatch Worker -> user Worker -> outbound Worker; CPU is charged across all three. Custom per-customer CPU/subrequest limits can be set in the dispatch Worker (spend-control lever). Script limit is unlimited (billing $0.02/script beyond 1,000)."
+  ],
+  "sources": [
+    "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/platform/pricing/",
+    "https://developers.cloudflare.com/workers/platform/limits/"
+  ],
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/runtime-apis/nodejs/fs/index.md",
+      "quote": "However, the contents of `/tmp` are not persistent and are unique to each request.",
+      "note": "WfP user Workers are stateless V8 isolates invoked per request; there is no machine state to checkpoint. Durable state lives in bindings (KV, D1, R2, Durable Objects). (Sandbox SDK/Containers also lose all state on sleep: 'Containers restart after inactivity or failures'.)",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/runtime-apis/nodejs/fs/index.md",
+      "quote": "The Workers Virtual File System (VFS) is a memory-based file system",
+      "note": "No snapshot/checkpoint API for Workers isolates. Differs in Sandbox SDK: createBackup()/restoreBackup() snapshot a sandbox directory (disk only, no memory) to R2 and can restore into a sandbox later (sandbox/api/backups).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/platform/pricing/",
+      "quote": "User Workers (V8 isolates), per request + CPU-ms",
+      "note": "not offered: outside the product's scope - WfP exposes an API to deploy/dispatch/manage customer-authored Workers (scripts), not a first-party API that drives a coding-agent harness (prompt/stream events/follow-ups) inside the sandbox. No such API is documented anywhere in the Workers or Workers for Platforms docs.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/outbound-workers/index.md",
+      "quote": "Create, allow, or block lists for hostnames requested by user Workers.",
+      "note": "Via an Outbound Worker (code you write, runs outside the user Worker) that intercepts every fetch() from user Workers; enabling it disables connect() TCP sockets. Caveat from the same page: 'Outbound Workers do not intercept fetch requests made from Durable Objects or mTLS certificate bindings.' Programmable, so any URL-based rule (incl. IP-literal hosts) is possible. Sandbox SDK differs: declarative allowedHosts/deniedHosts with hostnames, IPs and CIDRs, enableInternet=false.",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/how-workers-for-platforms-works/index.md",
+      "quote": "**Modify requests** - Add authentication headers or transform requests before they leave your platform",
+      "note": "Outbound Worker receives the full Request (method, URL, headers, body) and can block/modify it in code. Sandbox SDK outbound handlers likewise ('denying specific HTTP requests').",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/how-workers-for-platforms-works/index.md",
+      "quote": "**Runs platform logic** - Executes authentication, rate limiting, or request validation before customer code runs",
+      "note": "User Workers are invoked only through your dynamic dispatch Worker (env.DISPATCHER.get), which is the entry point for all requests and can authenticate/route/reject. Plus standard Cloudflare zone controls (WAF etc.). Sandbox SDK preview URLs carry a token in the hostname.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "V8 isolates: no kernel, no root, no iptables/nftables. (Sandbox SDK containers: not documented.)",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/outbound-workers/index.md",
+      "quote": "Configure authentication to your APIs behind the scenes (without end developers needing to set credentials).",
+      "note": "Programmable: the Outbound Worker (your code, outside the user Worker) holds secrets and adds headers to any intercepted fetch(); user Worker never sees them. HTTP fetch only (TCP connect() disabled; Durable Object fetches not intercepted). Dispatch Worker can also pass capabilities (RPC stubs) so credentials stay in the dispatcher. Sandbox SDK has the same pattern explicitly: 'Securely inject credentials ... they can hold secrets that the sandbox itself never sees' (outboundByHost).",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/runtime-apis/nodejs/fs/index.md",
+      "quote": "The Workers Virtual File System (VFS) is a memory-based file system",
+      "note": "No disks/volumes for Workers; storage is via bindings (R2, KV, D1, Durable Objects), not filesystem mounts. Sandbox SDK differs: mountBucket() mounts R2/S3-compatible buckets as a filesystem (s3fs/FUSE), optionally readOnly.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/runtime-apis/nodejs/fs/index.md",
+      "quote": "The Workers Virtual File System (VFS) is a memory-based file system",
+      "note": "No mounted filesystem exists to share between Workers; shared state is via bindings (APIs), consistent with the card's own feature_evidence.volume_shared note.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "v8-isolate",
+      "source": "https://developers.cloudflare.com/workers/platform/limits/",
+      "quote": "Workers run in V8 isolates rather than containers or virtual machines",
+      "note": "Workers for Platforms dispatches requests to user Workers, which are V8 isolates (128 MB memory, one thread each; see card's own isolation field 'isolate').",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/platform/pricing/",
+      "quote": "User Workers (V8 isolates), per request + CPU-ms",
+      "note": "not offered: outside the product's scope - WfP user Workers are JS/Wasm code deployed via the Workers API, not machines booted from a Docker/OCI image. (Cloudflare's separate 'Containers' product supports container images, but that is not this product.)",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/platform/pricing/",
+      "quote": "User Workers (V8 isolates), per request + CPU-ms",
+      "note": "not offered: outside the product's scope - WfP is a multi-tenant serverless isolate dispatch platform for running customer code, not a browser/stealth automation product. Cloudflare Bot Management is a separate WAF-side product, not a WfP sandbox feature.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/platform/pricing/",
+      "quote": "User Workers (V8 isolates), per request + CPU-ms",
+      "note": "not offered: outside the product's scope - no browser or CAPTCHA-solving capability documented for Workers/Workers for Platforms.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/outbound-workers/index.md",
+      "quote": "Create, allow, or block lists for hostnames requested by user Workers.",
+      "note": "Outbound fetch() traffic from user Workers egresses through Cloudflare's shared global edge network (anycast datacenter IPs), not a dedicated static or residential IP; card confirms static_egress_ip=false and public_ipv4=false.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/platform/pricing/",
+      "quote": "User Workers (V8 isolates), per request + CPU-ms",
+      "note": "not offered: outside the product's scope - WfP has no first-party browser/computer-use/research agent product or API of its own; it only runs customer-authored Workers.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://github.com/cloudflare/mcp-server-cloudflare",
+      "quote": "cloudflare / mcp-server-cloudflare Public ... MCP servers ... deploy and manage resources on the Cloudflare developer platform",
+      "note": "Cloudflare ships official MCP servers (mcp-server-cloudflare monorepo, plus docs-linked Observability and Builds MCP servers) that let MCP clients like Claude manage Workers/Workers for Platforms resources (deployments, logs, builds) via natural language.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://developers.cloudflare.com/workers/languages/python/",
+      "quote": "Python Workers Overview ... The pywrangler CLI tool - To run a Python Worker locally, install packages, and deploy it to Cloudflare, you use pywrangler",
+      "note": "Python is a supported Workers language (via Pyodide) and can be deployed as a user Worker under Workers for Platforms, same runtime/dispatch mechanism.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": true,
+      "source": "https://github.com/cloudflare/workerd",
+      "quote": "workerd, Cloudflare's JavaScript/Wasm Runtime ... Apache-2.0 license",
+      "note": "workerd, the open-source (Apache-2.0) runtime that executes Workers, is what Workers for Platforms dispatches user code into; the runtime core is open source though the managed WfP control plane/dispatch service itself is not self-hostable.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.cloudflare.com/trust-hub/compliance-resources/",
+      "quote": "HIPAA - The Health Insurance Portability and Accountability Act (HIPAA) sets the standard for protecting sensitive patient data. Contact your account team to request the HIPAA AoC.",
+      "note": "HIPAA Assurance/BAA is available for Cloudflare (Enterprise), covering the Cloudflare platform including Workers/Workers for Platforms; requires contacting an account team.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://developers.cloudflare.com/data-localization/",
+      "quote": "The Data Localization Suite (DLS) is a collection of tools that enable customers to choose the location where Cloudflare inspects and stores data ... Regional Services - Comply with regional restrictions by choosing which Cloudflare data centers are allowed to decrypt and process your HTTPS traffic.",
+      "note": "Enterprise-only paid add-on (Data Localization Suite / Regional Services) lets customers restrict processing/keys/logs to EU data centers; applies at the Cloudflare account level covering Workers traffic.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://developers.cloudflare.com/workers/platform/limits/",
+      "quote": "There is no hard limit on duration for HTTP-triggered Workers. As long as the client remains connected, the Worker can continue processing, making subrequests, and streaming a response body.",
+      "note": "Not a VM/session concept: each invocation is a stateless per-request isolate execution. Wall-clock duration is uncapped while the client stays connected (waitUntil() extends up to 30s after response); CPU time is capped separately (WfP: 30s CPU per invocation, 15 min for Cron/Queue triggers) but that is compute billing, not a session-length stop.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/runtime-apis/nodejs/fs/index.md",
+      "quote": "The Workers Virtual File System (VFS) is a memory-based file system... However, the contents of `/tmp` are not persistent and are unique to each request.",
+      "note": "User Worker isolates have no durable filesystem; the only writable path (/tmp) is memory-based and scoped to a single request. Durable state must go through bindings (KV/D1/R2/Durable Objects), not a disk.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "A given isolate has its own scope, but isolates are not necessarily long-lived. An isolate may be spun down and evicted for a number of reasons... Workers are fundamentally preemptible (unlike containers or VMs).",
+      "note": "No checkpoint/snapshot API exists for isolates; there is no VM/container image to snapshot in the first place.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "An isolate may be spun down and evicted for a number of reasons: Resource limitations on the machine. A suspicious script... Individual resource limits.",
+      "note": "Isolates are transparently evicted/recreated by the runtime with no user-facing pause/resume control and no state preserved across eviction (state lives only in external bindings).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "V8 orchestrates isolates: lightweight contexts that provide your code with variables it can access and a safe environment to be executed within.",
+      "note": "There is no process/VM concept to fork; a Worker is JS/Wasm code invoked per-request in isolates the platform creates and destroys itself. No fork API is documented anywhere in the Workers/WfP docs.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "V8 orchestrates isolates: lightweight contexts that provide your code with variables it can access and a safe environment to be executed within.",
+      "note": "Same isolate model as `fork`: no live-instance forking primitive exists for Workers.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "Instead of creating a virtual machine for each function, an isolate is created within an existing environment. This model eliminates the cold starts of the virtual machine model.",
+      "note": "No memory-snapshot-based fork/restore mechanism; isolates aren't VMs and have no addressable memory image to snapshot/fork.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/security-model/index.md",
+      "quote": "The layer 2 sandbox uses Linux namespaces and `seccomp` to prohibit all access to the filesystem and network... Cloudflare can (and does) use a totally empty filesystem (mount namespace) and uses `seccomp` to block absolutely all filesystem-related system calls.",
+      "note": "V8-isolate JS/Wasm code has no OS/syscall access at all, so it cannot spawn or run Docker/containers inside it.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/security-model/index.md",
+      "quote": "In Cloudflare Workers, tenants are isolated from each other using V8 isolates — not processes nor VMs.",
+      "note": "No hardware virtualization exposed to user code; isolates cannot run hypervisors or nested VMs.",
+      "checked": "2026-09-30"
+    },
+    "root": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/security-model/index.md",
+      "quote": "Currently, Workers does not allow any access to the local filesystem. Therefore, Cloudflare does not expose a filesystem API at all. No API means no access.",
+      "note": "There is no OS/kernel underneath user code to have root on; only sandboxed JS APIs are exposed.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/security-model/index.md",
+      "quote": "The layer 2 sandbox also totally prohibits network access. Instead, the process is limited to communicating only over local UNIX domain sockets to talk to other processes on the same system.",
+      "note": "No shell/OS process exists to SSH into; a Worker is JS/Wasm executed inside a V8 isolate with no exposed network listener other than the HTTP handler contract.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "V8 orchestrates isolates: lightweight contexts that provide your code with variables it can access and a safe environment to be executed within.",
+      "note": "Plainly outside the product: a headless JS/Wasm request-handler isolate has no display server or desktop environment.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/security-model/index.md",
+      "quote": "Currently, Workers does not allow any access to the local filesystem... Today, Workers are allowed to talk to the rest of the world only via HTTP — both incoming and outgoing.",
+      "note": "No browser runtime inside the isolate (Cloudflare's separate Browser Rendering product remotely controls headless Chromium elsewhere; it isn't a browser running inside the Worker/WfP isolate itself).",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "V8 orchestrates isolates: lightweight contexts that provide your code with variables it can access and a safe environment to be executed within.",
+      "note": "No GUI/OS surface for computer-use style control; product is a request-scoped JS/Wasm execution sandbox.",
+      "checked": "2026-09-30"
+    },
+    "custom_image": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/platform/limits/index.md",
+      "quote": "Worker size | 64 MiB | 64 MiB",
+      "note": "Deployment unit is a bundled JS/Wasm script up to 64 MiB, not a container/VM image; there is no custom base-image mechanism for Workers/WfP.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/runtime-apis/nodejs/fs/index.md",
+      "quote": "The Workers Virtual File System (VFS) is a memory-based file system that allows you to read modules included in your Worker bundle as read-only files, access a directory for writing temporary files...",
+      "note": "No disk/volume attach mechanism; storage is exclusively through bindings (R2/KV/D1/Durable Objects), matching the existing feature_evidence.volume_attach=false entry on the card.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "Workers functions run on Cloudflare's global network - a growing global network of thousands of machines distributed across hundreds of locations... a single instance of the runtime can run hundreds or thousands of user-defined applications.",
+      "note": "Isolates share Cloudflare's anycast edge; there is no per-Worker/customer dedicated public IPv4 address (inbound is via *.workers.dev / custom domains routed through Cloudflare's shared network, not a dedicated IP).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/configuration/outbound-workers/index.md",
+      "quote": "Create, allow, or block lists for hostnames requested by user Workers.",
+      "note": "Outbound traffic controls are hostname/URL based (Outbound Workers), not IP-based; no dedicated/static egress IP is offered for outbound fetch() from Workers/WfP (outbound requests originate from Cloudflare's shared edge IP ranges).",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/",
+      "quote": "Build a multi-tenant platform that runs untrusted code in secure, isolated sandboxes.",
+      "note": "not offered: outside the product's scope - Workers for Platforms is a dispatch/isolation layer for running your own customers' JS/Wasm Workers; there are no preinstalled/templated coding-agent harnesses (Claude Code, Codex, OpenCode, etc.) for this product. Cloudflare's separate Sandbox SDK / Containers product has agent-related tutorials, but that is a different product from WfP's V8-isolate dispatch.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/platform/limits/index.md",
+      "quote": "Memory per isolate | 128 MB",
+      "note": "Workers isolates are CPU-only JS/Wasm sandboxes with a 128 MB memory cap; no GPU attach exists for this product (GPU inference on Cloudflare is via separate Workers AI, not exposed to arbitrary WfP user code).",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "Instead of creating a virtual machine for each function, an isolate is created within an existing environment. This model eliminates the cold starts of the virtual machine model.",
+      "note": "Plainly outside the product: there is no OS selection at all, isolates run inside V8, not a Windows or Linux guest OS chosen by the user.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "Instead of creating a virtual machine for each function, an isolate is created within an existing environment. This model eliminates the cold starts of the virtual machine model.",
+      "note": "Same reasoning as windows: no macOS guest OS option exists for a V8-isolate execution product.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "V8 orchestrates isolates: lightweight contexts that provide your code with variables it can access and a safe environment to be executed within.",
+      "note": "CPU architecture is fully abstracted by V8/Wasm; Cloudflare does not expose an ARM64 vs x86 choice to Workers/WfP customers.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "Rather than running on an individual's machine... Workers functions run on Cloudflare's global network - a growing global network of thousands of machines distributed across hundreds of locations.",
+      "note": "Workers for Platforms is a managed Cloudflare-network-only product; there is no way to run the WfP dispatch/runtime infrastructure on your own infrastructure (workerd being open source does not make the WfP hosted product self-hostable).",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/reference/how-workers-works/index.md",
+      "quote": "Workers functions run on Cloudflare's global network - a growing global network of thousands of machines distributed across hundreds of locations.",
+      "note": "No bring-your-own-cloud/account option; Workers for Platforms only runs on Cloudflare's own network, not in a customer's AWS/GCP/Azure account.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/platform/limits/index.md",
+      "quote": "Memory per isolate | 128 MB",
+      "note": "Memory (128 MB) and CPU-time limits are fixed platform limits (CPU-time cap is configurable per-Worker at deploy time up to 5 min, but there is no live/runtime resizing of a running isolate's resources).",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://developers.cloudflare.com/workers/observability/metrics-and-analytics/",
+      "quote": "In the dashboard, this appears as Metrics > Errors > Invocation Statuses. In analytics and Logpush, the invocation outcome is exceededCpu",
+      "note": "granularity: account-only; cost: no; Cloudflare Workers and Workers for Platforms expose usage metrics (requests, CPU-ms) in the dashboard and via Logpush (for logs), but do not provide a programmatic REST API to query billable usage per-Worker or per-isolate. No usage or billing endpoint exists in the Cloudflare REST API for Workers resources; usage data is account-only via the dashboard/invoicing system.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "NM",
+      "city": "Albuquerque",
+      "provider_region": "us-southwest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "AK",
+      "city": "Anchorage",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "GA",
+      "city": "Atlanta",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Austin",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "ME",
+      "city": "Bangor",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MA",
+      "city": "Boston",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NY",
+      "city": "Buffalo",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "AB",
+      "city": "Calgary",
+      "provider_region": "na-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NC",
+      "city": "Charlotte",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IL",
+      "city": "Chicago",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Cincinnati",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Cleveland",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CO",
+      "city": "Denver",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MI",
+      "city": "Detroit",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NC",
+      "city": "Raleigh-Durham",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "NS",
+      "city": "Halifax",
+      "provider_region": "na-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "HI",
+      "city": "Honolulu",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Houston",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IN",
+      "city": "Indianapolis",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "FL",
+      "city": "Jacksonville",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MO",
+      "city": "Kansas City",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NV",
+      "city": "Las Vegas",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TN",
+      "city": "Memphis",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "FL",
+      "city": "Miami",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MN",
+      "city": "Minneapolis",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montréal",
+      "provider_region": "na-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TN",
+      "city": "Nashville",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NJ",
+      "city": "Newark",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Norfolk",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OK",
+      "city": "Oklahoma City",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NE",
+      "city": "Omaha",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "PA",
+      "city": "Philadelphia",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "AZ",
+      "city": "Phoenix",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "PA",
+      "city": "Pittsburgh",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Richmond",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Sacramento",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "UT",
+      "city": "Salt Lake City",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "San Antonio",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Diego",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Jose",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "SK",
+      "city": "Saskatoon",
+      "provider_region": "na-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "WA",
+      "city": "Seattle",
+      "provider_region": "us-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "SD",
+      "city": "Sioux Falls",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MO",
+      "city": "St. Louis",
+      "provider_region": "us-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "FL",
+      "city": "Tallahassee",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "FL",
+      "city": "Tampa",
+      "provider_region": "us-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "na-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "BC",
+      "city": "Vancouver",
+      "provider_region": "na-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "MB",
+      "city": "Winnipeg",
+      "provider_region": "na-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Americana",
+      "provider_region": "sa-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Aracatuba",
+      "provider_region": "sa-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Arica",
+      "provider_region": "sa-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PY",
+      "state": null,
+      "city": "Asuncion",
+      "provider_region": "sa-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CO",
+      "state": null,
+      "city": "Barranquilla",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Belo Horizonte",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Belém",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Blumenau",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CO",
+      "state": null,
+      "city": "Bogota",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Brasília",
+      "provider_region": "sa-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BB",
+      "state": null,
+      "city": "Bridgetown",
+      "provider_region": "caribbean",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AR",
+      "state": null,
+      "city": "Buenos Aires",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CO",
+      "state": null,
+      "city": "Cali",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Campinas",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Campos dos Goytacazes",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Caçador",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Chapeco",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Concepción",
+      "provider_region": "sa-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AR",
+      "state": null,
+      "city": "Cordoba",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Cuiabá",
+      "provider_region": "sa-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Curitiba",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Florianópolis",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Fortaleza",
+      "provider_region": "sa-northeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GY",
+      "state": null,
+      "city": "Georgetown",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Goiânia",
+      "provider_region": "sa-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GT",
+      "state": null,
+      "city": "Guatemala City",
+      "provider_region": "ca-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "EC",
+      "state": null,
+      "city": "Guayaquil",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Joinville",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Juazeiro do Norte",
+      "provider_region": "sa-northeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JM",
+      "state": null,
+      "city": "Kingston",
+      "provider_region": "caribbean",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BO",
+      "state": null,
+      "city": "La Paz",
+      "provider_region": "sa-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PE",
+      "state": null,
+      "city": "Lima",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Manaus",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CO",
+      "state": null,
+      "city": "Medellín",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Mexico City",
+      "provider_region": "ca-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AR",
+      "state": null,
+      "city": "Neuquen",
+      "provider_region": "sa-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Palmas",
+      "provider_region": "sa-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PA",
+      "state": null,
+      "city": "Panama City",
+      "provider_region": "ca-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SR",
+      "state": null,
+      "city": "Paramaribo",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TT",
+      "state": null,
+      "city": "Port of Spain",
+      "provider_region": "caribbean",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Porto Alegre",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Queretaro",
+      "provider_region": "ca-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "EC",
+      "state": null,
+      "city": "Quito",
+      "provider_region": "sa-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Recife",
+      "provider_region": "sa-northeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Ribeirão Preto",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Rio de Janeiro",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Salvador",
+      "provider_region": "sa-northeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CR",
+      "state": null,
+      "city": "San José",
+      "provider_region": "ca-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PR",
+      "state": null,
+      "city": "San Juan",
+      "provider_region": "caribbean",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HN",
+      "state": null,
+      "city": "San Pedro Sula",
+      "provider_region": "ca-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DO",
+      "state": null,
+      "city": "Santiago de los Caballeros",
+      "provider_region": "caribbean",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Santiago",
+      "provider_region": "sa-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DO",
+      "state": null,
+      "city": "Santo Domingo",
+      "provider_region": "caribbean",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Sorocaba",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GD",
+      "state": null,
+      "city": "St. George's",
+      "provider_region": "caribbean",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São José do Rio Preto",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São José dos Campos",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HN",
+      "state": null,
+      "city": "Tegucigalpa",
+      "provider_region": "ca-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Timbo",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Uberlândia",
+      "provider_region": "sa-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Valparaíso",
+      "provider_region": "sa-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Vitoria",
+      "provider_region": "sa-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GR",
+      "state": null,
+      "city": "Athens",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Barcelona",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RS",
+      "state": null,
+      "city": "Belgrade",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Berlin",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "Brussels",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RO",
+      "state": null,
+      "city": "Bucharest",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HU",
+      "state": null,
+      "city": "Budapest",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MD",
+      "state": null,
+      "city": "Chișinău",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DK",
+      "state": null,
+      "city": "Copenhagen",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Düsseldorf",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Geneva",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Gothenburg",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Hamburg",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Helsinki",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TR",
+      "state": null,
+      "city": "Istanbul",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TR",
+      "state": null,
+      "city": "Izmir",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RU",
+      "state": null,
+      "city": "Krasnoyarsk",
+      "provider_region": "eu-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "UA",
+      "state": null,
+      "city": "Kyiv",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PT",
+      "state": null,
+      "city": "Lisbon",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SI",
+      "state": null,
+      "city": "Ljubljana",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "LU",
+      "state": null,
+      "city": "Luxembourg City",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Lyon",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "Manchester",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Marseille",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BY",
+      "state": null,
+      "city": "Minsk",
+      "provider_region": "eu-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RU",
+      "state": null,
+      "city": "Moscow",
+      "provider_region": "eu-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Munich",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CY",
+      "state": null,
+      "city": "Nicosia",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NO",
+      "state": null,
+      "city": "Oslo",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Palermo",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CZ",
+      "state": null,
+      "city": "Prague",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IS",
+      "state": null,
+      "city": "Reykjavík",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "LV",
+      "state": null,
+      "city": "Riga",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Rome",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RU",
+      "state": null,
+      "city": "Saint Petersburg",
+      "provider_region": "eu-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MK",
+      "state": null,
+      "city": "Skopje",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BG",
+      "state": null,
+      "city": "Sofia",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Stuttgart",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "EE",
+      "state": null,
+      "city": "Tallinn",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GR",
+      "state": null,
+      "city": "Thessaloniki",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AL",
+      "state": null,
+      "city": "Tirana",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AT",
+      "state": null,
+      "city": "Vienna",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "LT",
+      "state": null,
+      "city": "Vilnius",
+      "provider_region": "eu-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Wrocław",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HR",
+      "state": null,
+      "city": "Zagreb",
+      "provider_region": "eu-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zürich",
+      "provider_region": "eu-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JO",
+      "state": null,
+      "city": "Amman",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IQ",
+      "state": null,
+      "city": "Baghdad",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IQ",
+      "state": null,
+      "city": "Basra",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "LB",
+      "state": null,
+      "city": "Beirut",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SA",
+      "state": null,
+      "city": "Dammam",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "QA",
+      "state": null,
+      "city": "Doha",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Dubai",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IQ",
+      "state": null,
+      "city": "Erbil",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Haifa",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SA",
+      "state": null,
+      "city": "Jeddah",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KW",
+      "state": null,
+      "city": "Kuwait City",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BH",
+      "state": null,
+      "city": "Manama",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "OM",
+      "state": null,
+      "city": "Muscat",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IQ",
+      "state": null,
+      "city": "Najaf",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IQ",
+      "state": null,
+      "city": "Nasiriyah",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PS",
+      "state": null,
+      "city": "Ramallah",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SA",
+      "state": null,
+      "city": "Riyadh",
+      "provider_region": "me-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IQ",
+      "state": null,
+      "city": "Sulaymaniyah",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "me-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CI",
+      "state": null,
+      "city": "Abidjan",
+      "provider_region": "af-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GH",
+      "state": null,
+      "city": "Accra",
+      "provider_region": "af-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ET",
+      "state": null,
+      "city": "Addis Ababa",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DZ",
+      "state": null,
+      "city": "Algiers",
+      "provider_region": "af-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DZ",
+      "state": null,
+      "city": "Annaba",
+      "provider_region": "af-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MG",
+      "state": null,
+      "city": "Antananarivo",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "EG",
+      "state": null,
+      "city": "Cairo",
+      "provider_region": "af-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Cape Town",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DZ",
+      "state": null,
+      "city": "Constantine",
+      "provider_region": "af-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SN",
+      "state": null,
+      "city": "Dakar",
+      "provider_region": "af-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TZ",
+      "state": null,
+      "city": "Dar Es Salaam",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DJ",
+      "state": null,
+      "city": "Djibouti",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CM",
+      "state": null,
+      "city": "Douala",
+      "provider_region": "af-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Durban",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BW",
+      "state": null,
+      "city": "Gaborone",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZW",
+      "state": null,
+      "city": "Harare",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Johannesburg",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "UG",
+      "state": null,
+      "city": "Kampala",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RW",
+      "state": null,
+      "city": "Kigali",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CD",
+      "state": null,
+      "city": "Kinshasa",
+      "provider_region": "af-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NG",
+      "state": null,
+      "city": "Lagos",
+      "provider_region": "af-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AO",
+      "state": null,
+      "city": "Luanda",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZM",
+      "state": null,
+      "city": "Lusaka",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MZ",
+      "state": null,
+      "city": "Maputo",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KE",
+      "state": null,
+      "city": "Mombasa",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KE",
+      "state": null,
+      "city": "Nairobi",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DZ",
+      "state": null,
+      "city": "Oran",
+      "provider_region": "af-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BF",
+      "state": null,
+      "city": "Ouagadougou",
+      "provider_region": "af-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MU",
+      "state": null,
+      "city": "Port Louis",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RE",
+      "state": null,
+      "city": "Saint-Denis",
+      "provider_region": "af-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TN",
+      "state": null,
+      "city": "Tunis",
+      "provider_region": "af-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NA",
+      "state": null,
+      "city": "Windhoek",
+      "provider_region": "af-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CI",
+      "state": null,
+      "city": "Yamoussoukro",
+      "provider_region": "af-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Agra",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Ahmedabad",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KZ",
+      "state": null,
+      "city": "Aktobe",
+      "provider_region": "as-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KZ",
+      "state": null,
+      "city": "Almaty",
+      "provider_region": "as-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KZ",
+      "state": null,
+      "city": "Astana",
+      "provider_region": "as-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AZ",
+      "state": null,
+      "city": "Astara",
+      "provider_region": "as-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AZ",
+      "state": null,
+      "city": "Baku",
+      "provider_region": "as-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BN",
+      "state": null,
+      "city": "Bandar Seri Begawan",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Bangalore",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Bhubaneswar",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KG",
+      "state": null,
+      "city": "Bishkek",
+      "provider_region": "as-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PH",
+      "state": null,
+      "city": "Cagayan de Oro",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PH",
+      "state": null,
+      "city": "Cebu",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Chandigarh",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Chennai",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Chiang Mai",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BD",
+      "state": null,
+      "city": "Chittagong",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Coimbatore",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "LK",
+      "state": null,
+      "city": "Colombo",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "VN",
+      "state": null,
+      "city": "Da Nang",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Denpasar",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BD",
+      "state": null,
+      "city": "Dhaka",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TJ",
+      "state": null,
+      "city": "Dushanbe",
+      "provider_region": "as-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Fukuoka",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "VN",
+      "state": null,
+      "city": "Hanoi",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "VN",
+      "state": null,
+      "city": "Ho Chi Minh City",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Hyderabad",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PK",
+      "state": null,
+      "city": "Islamabad",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Jalandhar",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Jamnagar",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Johor Bahru",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Kannur",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Kanpur",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Kaohsiung City",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PK",
+      "state": null,
+      "city": "Karachi",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NP",
+      "state": null,
+      "city": "Kathmandu",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Kochi",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Kolkata",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuching",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PK",
+      "state": null,
+      "city": "Lahore",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Ludhiana",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MO",
+      "state": null,
+      "city": "Macau",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Malang",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MV",
+      "state": null,
+      "city": "Male",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PH",
+      "state": null,
+      "city": "Manila",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Nagpur",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Naha",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "New Delhi",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Patna",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KH",
+      "state": null,
+      "city": "Phnom Penh",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Pune",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Sambalpur",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Surat Thani",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Taipei",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PH",
+      "state": null,
+      "city": "Tarlac City",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GE",
+      "state": null,
+      "city": "Tbilisi",
+      "provider_region": "as-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BT",
+      "state": null,
+      "city": "Thimphu",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "as-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Udaipur",
+      "provider_region": "as-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MN",
+      "state": null,
+      "city": "Ulaanbaatar",
+      "provider_region": "as-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "LA",
+      "state": null,
+      "city": "Vientiane",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AM",
+      "state": null,
+      "city": "Yerevan",
+      "provider_region": "as-west",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Yogyakarta",
+      "provider_region": "as-southeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Anshung",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Baoji",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Beijing",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Changde",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Changsha",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Changzhou",
+      "provider_region": "cn-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Chengdu",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Chengmai",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Chongqing",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Dalian",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Foshan",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Fuzhou",
+      "provider_region": "cn-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Guangzhou",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Guiyang",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Haikou",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Hengshui",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Jiaxing",
+      "provider_region": "cn-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Jinan",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Kunming",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Langfang",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Luoyang",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Meishan",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Nanchang",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Qingdao",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Shanghai",
+      "provider_region": "cn-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Shaoxing",
+      "provider_region": "cn-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Shenzhen",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Shijiazhuang",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Taizhou",
+      "provider_region": "cn-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Tongren",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Xiangyang",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Xianning",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Xingyi",
+      "provider_region": "cn-south",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Yangquan",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Zhengzhou",
+      "provider_region": "cn-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Zibo",
+      "provider_region": "cn-north",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Adelaide",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NZ",
+      "state": null,
+      "city": "Auckland",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Brisbane",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Canberra",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NZ",
+      "state": null,
+      "city": "Christchurch",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GU",
+      "state": null,
+      "city": "Hagatna",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Hobart",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NC",
+      "state": null,
+      "city": "Nouméa",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Perth",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FJ",
+      "state": null,
+      "city": "Suva",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PF",
+      "state": null,
+      "city": "Tahiti",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NZ",
+      "state": null,
+      "city": "Wellington",
+      "provider_region": "oceania",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.cloudflare.com/network/",
+  "locations_quote": "Every service runs in every data center... 348 cities · 8 regions... Cloudflare will only use data centers that are physically located within the specified region to decrypt and service HTTPS traffic.",
+  "locations_checked": "2026-10-01"
+}

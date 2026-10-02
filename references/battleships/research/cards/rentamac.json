@@ -1,0 +1,792 @@
+{
+  "id": "rentamac",
+  "name": "RentaMac (rentamac.io)",
+  "url": "https://rentamac.io/pricing",
+  "category": "macos",
+  "isolation": "dedicated-host",
+  "modes": [
+    {
+      "key": "daily",
+      "label": "Daily rental ($19/day)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Dedicated Mac mini M4 10-core, 16 GB, 256 GB (daily)",
+          "vcpu": 10,
+          "ram_gib": 16,
+          "disk_gib": 256,
+          "hour": 0.791667,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 86400,
+      "granularity_s": 86400,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Billing cycle \"Daily $19/day\". Whole physical Mac mini, full admin, SSH + DeskIn remote desktop, 1 Gbps.",
+      "regions": [
+        "eu",
+        "us"
+      ],
+      "stock_note": "Daily plans are only sold in a datacenter while its free stock exceeds dailyPlanAvailabilityThreshold (8 in Cyprus, 10 in Texas, 5 in India on 2026-09-29)."
+    },
+    {
+      "key": "weekly",
+      "label": "Weekly rental ($59/week)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Dedicated Mac mini M4 10-core, 16 GB, 256 GB (weekly)",
+          "vcpu": 10,
+          "ram_gib": 16,
+          "disk_gib": 256,
+          "hour": 0.35119,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 604800,
+      "granularity_s": 604800,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "\"Weekly $8.43/day\", total \"$59 Billed weekly\".",
+      "regions": [
+        "eu",
+        "us",
+        "asia"
+      ]
+    },
+    {
+      "key": "always-on-commit",
+      "label": "Monthly rental ($119/month)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Dedicated Mac mini M4 10-core, 16 GB, 256 GB (monthly)",
+          "vcpu": 10,
+          "ram_gib": 16,
+          "disk_gib": 256,
+          "hour": 0.163014,
+          "month_cap": 119
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "Billed monthly, cancel anytime.",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "\"Monthly $3.97/day\", total \"$119 Billed monthly\".",
+      "regions": [
+        "eu",
+        "us",
+        "asia"
+      ]
+    },
+    {
+      "key": "reserved-3m",
+      "label": "3-month prepay ($339 / 3 months)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Dedicated Mac mini M4 10-core, 16 GB, 256 GB (3-month prepay)",
+          "vcpu": 10,
+          "ram_gib": 16,
+          "disk_gib": 256,
+          "hour": 0.154795,
+          "month_cap": 113
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "\"$3.77/day Save 5%\", total \"$339 Billed every 3 months\".",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "month = $339 / 3.",
+      "regions": [
+        "eu",
+        "us",
+        "asia"
+      ]
+    },
+    {
+      "key": "reserved-6m",
+      "label": "6-month prepay ($639 / 6 months)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Dedicated Mac mini M4 10-core, 16 GB, 256 GB (6-month prepay)",
+          "vcpu": 10,
+          "ram_gib": 16,
+          "disk_gib": 256,
+          "hour": 0.14589,
+          "month_cap": 106.5
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "\"$3.55/day Save 10%\", total \"$639 Billed every 6 months\" (includes SIP customization).",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "month = $639 / 6.",
+      "regions": [
+        "eu",
+        "us",
+        "asia"
+      ]
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 256,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Self-serve",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Storage add-ons (external USB drive): 512 GB (+256 GB external) and 768 GB (+512 GB external). Not available on the Daily plan. Weekly: +$9.90 / +$14.90 per WEEK ($68.90 / $73.90 total). Monthly: +$9.90 / +$14.90 per month ($128.90 / $133.90). 3 months: $368.70 / $383.70. 6 months: $698.40 / $728.40, i.e. $9.90 or $14.90 per month. Sold out in USA · Texas on 2026-09-29."
+    },
+    {
+      "name": "Enterprise volume",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Volume calculator: 5% off at 5-14 instances and 10% off at 15+ instances (monthly: $113.05 and $107.10 per instance-month). Term discounts are 5% for 3 months and 10% for 6-12 months ($113.00 and $106.50 per month). The two discounts are NOT cumulative, so the floor is $106.50 per Mac-month. The calculator leads to 'Get custom quote' (SLA guarantees)."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": false,
+    "windows": false,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": false,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu",
+      "us",
+      "asia"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "ingress_rules": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": false,
+    "isolation": "bare-metal",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Live pricing page (after hydration) differs from providers/rentamac.json ($3.30/day, $49/week, $99/month, taken from the vendor blog): now $19/day, $59/week, $119/month, $339/3 mo, $639/6 mo. The server-rendered HTML still shows \"$99 billed monthly\" before JavaScript runs.",
+    "Same prices shown for Cyprus (EU), Texas (US) and India locations.",
+    "A REST API exists (https://api.rentamac.io, OpenAPI spec published). It covers creating subscriptions (buy a Mac with a saved card, preferred/forced datacenter), restart, wipe, enable/disable SSH, startup scripts, cancel and reactivate, and public stock availability. Hourly subscriptions are disabled. There is no per-second or per-hour lifecycle: wiping a Mac cancels the subscription immediately and gives no refund.",
+    "Egress / IPv4 not stated (1 Gbps connection).",
+    "Apple macOS SLA: leasing a Mac requires a minimum lease of 24 consecutive hours with sole use by the lessee, and allows at most 2 additional macOS VMs per Mac.",
+    "Billing periods: daily = 24 h, weekly = 7 days, monthly = 31 days. Cancelling stops renewal only; the current period is not refunded (refunds only for outages, or unused time at RentaMac's discretion). The Mac is wiped when the subscription expires, so nothing persists between rentals.",
+    "Stale marketing pages: rentamac.io/pricing (server-rendered), /dedicated-mac/, /mac-vps/ and llms.txt still show $99/month and 'from $3.30/day'. Checkout (portal.rentamac.io) and the homepage show $119/month and 'From $3.97/day'. Use the portal numbers.",
+    "A Yearly subscription type exists in the API (subscriptionType 5=Yearly) and the FAQ mentions 'yearly plans' (SIP customization). No yearly price is published; the volume calculator prices 12 months at the 6-month rate ($106.50 per month)."
+  ],
+  "sources": [
+    "https://rentamac.io/pricing",
+    "https://rentamac.io/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": "Payment before provisioning.",
+    "tiers": null,
+    "notes": "Dedicated Macs advertised ready after checkout, with volume pricing. No public new-account concurrent Mac count, bulk approval criteria or quota-review SLA found; instant single-order provisioning does not guarantee fleet stock.",
+    "sources": [
+      "https://portal.rentamac.io/dashboard/pricing",
+      "https://rentamac.io/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 4
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "No. Mac instances are wiped upon subscription completion and the files are lost.",
+      "note": "No stop/sleep/idle lifecycle: the Mac runs 24/7 while the subscription is active ('Your dedicated server runs around the clock, connected or not'). The disk persists during the rental only; at expiry (or on the wipe API call) the Mac is fully wiped. No backups mentioned.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Complete API reference for RentAmac Portal endpoints",
+      "note": "The complete API reference (Auth, Users, Devices, Scripts, Subscription, Payment, Feedback, Maintenance, Availability) has no snapshot, image, backup or clone endpoint. Device actions are only label, restart, restart-deskin, wipe, enable/disable SSH and SSH full-disk access. The FAQ adds that reinstalling macOS 'requires manual intervention from our technical team'. Physical bare-metal Mac mini, so there is no VM image to snapshot.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Create a new startup script that will run on Mac rentals. Scripts must begin with a valid shebang (e.g., #!/bin/bash). Maximum 5 scripts per user.",
+      "note": "The only way the API runs code on the Mac is shell startup scripts (max 5, 50 KB each). There is no agent or harness endpoint. The blog has OpenClaw setup guides (self-installed by the user), but nothing is preinstalled or API-driven.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "Is there a firewall or access control panel to manage inbound/outbound connections? No, we don't offer that level of control over the firewall.",
+      "note": "No provider-side egress control. Their own OpenClaw blog tells users to install LuLu or Little Snitch inside macOS to watch outbound connections, but that runs on the Mac itself, not provider-side.",
+      "checked": "2026-09-29"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "No, we don't offer that level of control over the firewall.",
+      "note": "No provider-side network policy of any kind, so there are no HTTP-level rules either.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "Do you provide port-forwarding? I need to run an HTTP server on the Mac. No, we don't provide port forwarding, but you can achieve the same result by using a tunnel instead.",
+      "note": "The Mac has no public IP or port exposure ('Network customization at that level is not available'), and there are no user-configurable inbound rules, preview URLs or IP allowlists. The only provider-side inbound path is the SSH gateway, which the API can switch on or off: 'Turn on reverse-tunnel SSH for a device. This queues the open-ssh script over MDM; the device then opens a reverse SSH tunnel to the RentAmac SSH gateway' (sshUrl e.g. gate1.rentamac.io:20143). DeskIn/Parsec remote desktop and user-run tunnels such as Tailscale are the other ways in. The service is private by default, not controllable, hence false.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://rentamac.io/secure-openclaw-mac-mini/",
+      "quote": "4. Enable the macOS firewall",
+      "note": "Dedicated physical Mac mini M4 (no VM) with full administrator/root, so the macOS application firewall and pf (not nftables/iptables) can be configured. The vendor's blog tells users to turn on the macOS firewall. Derived; not a product doc.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Create a new startup script that will run on Mac rentals.",
+      "note": "No secrets, env-var or credential-injection feature anywhere in the API reference or FAQ. Credentials the user needs live on the Mac itself (their blog notes OpenClaw stores LLM keys 'in plaintext JSON under ~/.openclaw/'). Non-HTTP protocols are not covered either.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Attach an extra (external storage drive) to a device's existing subscription. Extras are only available for Weekly plans and above.",
+      "note": "External USB drive add-on: 256 GB (+$9.90 per period) or 512 GB (+$14.90 per period). Pricing page: '512 GB 256 GB + 256 GB external +$9.90'. Available when you buy or later via add-extra, not on Daily plans, subject to per-datacenter stock (datacenter256GbDriveAvailable flag). It persists only for the life of the subscription.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Stripe product ID for the extra: 1=Additional Storage 256GB, 2=Additional Storage 512GB",
+      "note": "The only storage product is a physical external drive attached to one device (a per-device externalDrive field). There is no network or shared filesystem product. File transfer is via the DeskIn file manager or SSH.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "bare-metal",
+      "source": "https://rentamac.io/faq/",
+      "quote": "Is my dedicated machine, or is it shared? Each machine is fully dedicated with no other users involved.",
+      "note": "A whole physical Mac mini M4 is leased to one customer at a time (no VM/hypervisor layer between customers) — closest enum match is bare-metal, matching the card's own 'dedicated-host' classification.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "What software is pre-installed on the instances? Xcode comes pre-installed and ready to use, alongside the standard software from a fresh macOS installation. No other third-party software is pre-installed... Am I able to select the macOS version I want to boot into? Instances come pre-installed with macOS. You can upgrade to the latest version, but specific versions cannot be chosen.",
+      "note": "Fixed macOS install per physical Mac; no API or dashboard option to boot from a custom Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://rentamac.io/pricing",
+      "quote": "Rent a real Mac mini M4 in the Cloud. Your Mac mini M4 is dedicated to you. Full admin access, no restrictions.",
+      "note": "not offered: outside the product's scope — RentaMac sells dedicated Mac mini hardware rentals, not a browser/scraping stealth product; no anti-bot/fingerprinting feature is mentioned anywhere in the FAQ, pricing, or API docs.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://rentamac.io/pricing",
+      "quote": "Rent a real Mac mini M4 in the Cloud. Your Mac mini M4 is dedicated to you. Full admin access, no restrictions.",
+      "note": "not offered: outside the product's scope — a dedicated bare-metal Mac rental has no CAPTCHA-solving service; nothing in the FAQ or API docs mentions it.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://rentamac.io/faq/",
+      "quote": "High-speed connection from our Cyprus datacenter: up to 1 Gbps download and ~200 Mbps upload.",
+      "note": "Each Mac is a dedicated physical machine sitting in one of RentaMac's own datacenters (Cyprus/Texas/India) for the life of the rental, so its outbound IP is a fixed datacenter IP even though RentaMac does not market a 'static IP' feature per se (dedicated IPv4/IPv6 as a product is explicitly declined, see static_egress_ip).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://rentamac.io/pricing",
+      "quote": "Dedicated Mac mini M4 10-core, 16 GB, 256 GB",
+      "note": "Only one fixed hardware configuration is sold (10-core/16GB/256GB); there is no CPU/RAM resize option for a running rental — you would need to cancel and rent a different machine.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Create a new startup script that will run on Mac rentals. Scripts must begin with a valid shebang (e.g., #!/bin/bash). Maximum 5 scripts per user.",
+      "note": "The API only offers subscription/device management (create, restart, wipe, SSH toggle, startup scripts). No first-party browser/computer-use/research agent or API to drive one.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Complete API reference for RentAmac Portal endpoints",
+      "note": "No MCP server, GitHub org, or docs page referencing Model Context Protocol was found; the only integration surface is the REST API covering account/device/subscription actions.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://rentamac.io/faq/",
+      "quote": "What software is pre-installed on the instances? Xcode comes pre-installed and ready to use, alongside the standard software from a fresh macOS installation.",
+      "note": "Xcode (and its command-line tools) ship pre-installed on every Mac, which provides a working /usr/bin/python3 on macOS out of the box; no separate Python product is advertised but it is available without extra install.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "What software is pre-installed on the instances? Xcode comes pre-installed and ready to use, alongside the standard software from a fresh macOS installation. No other third-party software is pre-installed, but you have full admin access to install anything you need.",
+      "note": "Node.js is not part of a stock macOS install or Xcode, and the FAQ states no other third-party software is pre-installed; you would install it yourself via the full admin access.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "Do you offer dedicated IPv4 and IPv6 addresses (e.g. a /64 subnet)? Network customization at that level is not available.",
+      "note": "Explicitly declined as a product feature, even though the physical Mac's outbound IP is effectively fixed for the rental's duration.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://rentamac.io/pricing",
+      "quote": "Rent a real Mac mini M4 in the Cloud. Your Mac mini M4 is dedicated to you.",
+      "note": "not offered: outside the product's scope — no security/trust/compliance page exists on rentamac.io (security, trust, and enterprise paths all 404) and no SOC 2 mention appears in the FAQ, pricing, or API docs; this is a small dedicated-hardware rental service, not an enterprise-audited platform.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://rentamac.io/pricing",
+      "quote": "Rent a real Mac mini M4 in the Cloud. Your Mac mini M4 is dedicated to you.",
+      "note": "not offered: outside the product's scope — no BAA, HIPAA, or healthcare-compliance language found anywhere on the site; a consumer/dev Mac-mini rental service does not offer this.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Complete API reference for RentAmac Portal endpoints",
+      "note": "Account/auth endpoints in the API docs cover regular email/password login only; no SAML/OIDC SSO is mentioned in the FAQ, pricing, or API reference.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://rentamac.io/pricing",
+      "quote": "High-speed connection from our Cyprus datacenter: up to 1 Gbps download and ~200 Mbps upload.",
+      "note": "RentaMac operates a Cyprus (EU) datacenter alongside Texas (US) and India, and the checkout/API lets the customer choose or force a specific datacenter, so an EU-region Mac (with its disk) can be kept entirely in the EU for the life of the rental.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://rentamac.io/faq/",
+      "quote": "Is there a minimum term? Early cancellation is allowed, but plans remain active until the end of the period (24 hours for daily, 7 days for weekly, 31 days for monthly).",
+      "note": "The Mac runs continuously ('Your dedicated server runs around the clock') for as long as the subscription is active; there is no maximum single-session runtime limit imposed by the provider, only billing-period granularity.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Attach an extra (external storage drive) to a device's existing subscription. Extras are only available for Weekly plans and above.",
+      "note": "Contradiction confirmed: the card's own feature_evidence.volume_attach is true (external USB drive add-on, 256/512 GB, attached via API/checkout, persists for the life of the subscription), so top-level features.volumes=false is wrong. Correct value: true (attach-only; no shared/network volume — volume_shared stays false).",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Complete API reference for RentAmac Portal endpoints",
+      "note": "The full portal API surface (Auth, Users, Devices, Scripts, Subscription, Payment, Feedback, Maintenance, Availability) has no snapshot/image/backup/clone endpoint; device actions are limited to label, restart, restart-deskin, wipe, enable/disable SSH. FAQ confirms: 'Mac instances are wiped upon subscription completion and the files are lost.' Physical bare-metal Mac mini, so there is no VM image to snapshot at all.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Billing is time-based, not usage-based, so turning the Mac off does not pause your subscription.",
+      "note": "No provider-side pause/resume: shutting the Mac off yourself does not stop billing and there is no API action to pause/resume the instance (only restart, wipe, SSH toggles). A failed-payment 'remote access paused' state ('the Mac keeps running and none of your files are touched — only remote access is paused') is a billing lockout, not a user-invocable pause/resume feature.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Create a new startup script that will run on Mac rentals. Scripts must begin with a valid shebang (e.g., #!/bin/bash). Maximum 5 scripts per user.",
+      "note": "The complete documented API (device actions: label, restart, restart-deskin, wipe, enable/disable SSH, SSH full-disk access; plus subscription/payment/scripts) has no clone/fork/duplicate endpoint. Each subscription maps to one physical dedicated Mac, so there is nothing to fork.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Create a new startup script that will run on Mac rentals. Scripts must begin with a valid shebang (e.g., #!/bin/bash). Maximum 5 scripts per user.",
+      "note": "Same as fork: no clone/fork endpoint anywhere in the documented API, and the product is one dedicated physical Mac mini per subscription, so live-forking a running instance is not offered.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Create a new startup script that will run on Mac rentals. Scripts must begin with a valid shebang (e.g., #!/bin/bash). Maximum 5 scripts per user.",
+      "note": "No memory-state snapshot/checkpoint or fork-from-memory feature anywhere in the API or FAQ; physical bare-metal Mac with no hypervisor layer to snapshot memory from.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://rentamac.io/",
+      "quote": "You receive your credentials by email for DeskIn remote access. DeskIn is free for non-commercial use. Once connected, you have full admin access to the macOS desktop.",
+      "note": "Screen/mouse/keyboard access is only via DeskIn (or Parsec) remote desktop for a human operator; there is no programmatic computer-use / agent screen-control API. The portal API's only code-execution path is uploading shell startup scripts (max 5, 50 KB each) -- no screenshot, mouse, or keyboard endpoints.",
+      "checked": "2026-09-30"
+    },
+    "custom_image": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "Instances come pre-installed with macOS. You can upgrade to the latest version, but specific versions cannot be chosen.",
+      "note": "No custom/bring-your-own image feature: you get the vendor's fixed macOS 26 'Tahoe' image with Xcode preinstalled, cannot choose an OS version, and even reinstalling/recovering macOS 'requires manual intervention from our technical team'.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://rentamac.io/dedicated-mac/",
+      "quote": "Your dedicated server runs around the clock, connected or not.",
+      "note": "The dedicated Mac is always-on for the whole subscription period ('24/7... Yes. Your dedicated machine stays online as long as the subscription is active') with no serverless/idle model, so there is no wake-on-request mechanism -- there's nothing to wake.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Billing is time-based, not usage-based, so turning the Mac off does not pause your subscription.",
+      "note": "Billing is purely time-based for the whole rental period regardless of usage; there is no idle-detection auto-stop, and the FAQ confirms the machine 'runs around the clock' the entire time -- powering it off yourself does not stop the meter.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "Do you provide port-forwarding? I need to run an HTTP server on the Mac. No, we don't provide port forwarding, but you can achieve the same result by using a tunnel instead.",
+      "note": "No provider-managed inbound HTTPS/port-forwarding; the vendor explicitly tells users to bring their own tunnel (e.g. ngrok/Tailscale) to expose an HTTP server.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "Do you offer dedicated IPv4 and IPv6 addresses (e.g. a /64 subnet)? Network customization at that level is not available.",
+      "note": "No dedicated/public IPv4 (or IPv6) address is offered; matches network.ipv4_available=false already on the card.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Create a new startup script that will run on Mac rentals. Scripts must begin with a valid shebang (e.g., #!/bin/bash). Maximum 5 scripts per user.",
+      "note": "No preinstalled or API-driven agent harness. The vendor's blog has manual OpenClaw setup guides for users to install themselves, but nothing is bundled or provisioned by the product/API.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "Mac Mini M4 with a 10-core CPU, 16 GB unified memory, and a 256 GB SSD.",
+      "note": "The only hardware offered is a fixed Mac mini M4 configuration (Apple Silicon SoC's integrated GPU only); there is no discrete/dedicated GPU option or GPU-accelerated instance type, so 'gpu' as a selectable compute resource is outside what this product offers.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://rentamac.io/faq/",
+      "quote": "The OS version is macOS 26 “Tahoe”.",
+      "note": "The product is exclusively dedicated Apple Mac mini M4 hardware running macOS; Windows is outside what this product is (no VM layer to run another OS, and Apple's macOS SLA restricts additional VMs to macOS guests).",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://rentamac.io/",
+      "quote": "The machines are hosted in secure datacenters and you connect over a remote desktop connection.",
+      "note": "RentaMac is a hosted rental service on the vendor's own hardware in its own datacenters (Cyprus, Texas, Mumbai); there is no self-hosted / run-the-platform-yourself option -- self-hosting is outside what this product is.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://rentamac.io/",
+      "quote": "The machines are hosted in secure datacenters and you connect over a remote desktop connection.",
+      "note": "No bring-your-own-cloud option is offered or mentioned anywhere; customers rent a specific physical Mac mini in RentaMac's own three datacenters, not compute in the customer's own cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://rentamac.io/",
+      "quote": "Our service gives you flexible access to Apple devices through simple subscription plans.",
+      "note": "RentaMac is a closed, proprietary commercial rental/portal platform; no open-source repository, license, or self-hostable code for the platform itself is published anywhere on the site or API docs.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://portal.rentamac.io/dashboard/api-docs",
+      "quote": "Complete API reference for RentAmac Portal endpoints: Auth, Users, Devices, Scripts, Subscription, Payment, Feedback, Maintenance, Availability",
+      "note": "granularity: none; cost: no; Billing is time-based per subscription period (daily/weekly/monthly at fixed rates), not usage-based. The complete API (subscription, device management, payment, scripts) has no usage, metrics, or cost-breakdown endpoint. No per-VM or per-tag usage tracking is exposed.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "CY",
+      "state": null,
+      "city": null,
+      "provider_region": "eu",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": null,
+      "provider_region": "us",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": null,
+      "provider_region": "asia",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://rentamac.io/pricing",
+  "locations_quote": "Daily plans are only sold in a datacenter while its free stock exceeds dailyPlanAvailabilityThreshold (8 in Cyprus, 10 in Texas, 5 in India on 2026-09-29).",
+  "locations_checked": "2026-10-01"
+}

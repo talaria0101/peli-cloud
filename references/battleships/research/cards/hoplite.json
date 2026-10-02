@@ -1,0 +1,559 @@
+{
+  "id": "hoplite",
+  "name": "Hoplite",
+  "url": "https://hoplite.sh",
+  "category": "agent-sandbox",
+  "isolation": "gvisor",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native service",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "max",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 16,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Hardware and complete resource tariff unverified.",
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 140,
+      "per_seat": null,
+      "concurrency": 5,
+      "max_session_h": null,
+      "max_vcpu": 2,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Pro monthly one seat",
+      "fee": 99,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": 99,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Per seat. $82.50/seat/month on yearly billing (save 17%). Includes an unquantified 'Monthly usage allowance per seat'; beyond that, prepaid credits (1 credit = US$1). 14-day Pro trial for up to 3 seats for eligible Free workspaces. Plus is 'in development'. The legacy Scale plan is no longer sold."
+    },
+    {
+      "name": "Enterprise annual",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": true,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "isolation": "gvisor",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": true,
+    "egress_ip_type": "datacenter",
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Free 5 concurrent 2CPU/8GB sessions, 2 projects, card required but no charge. Pro $99/seat monthly or $82.50/seat with annual commitment, credits/limits not quantified. Enterprise annual custom. Free 2-CPU offer cannot satisfy 4-CPU workload; no public unit rate.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Hoplite is a coding-agent product: billing is prepaid credits (1 credit = US$1) drawn mainly by LLM tokens at per-model rates. Sandbox compute runs on Modal (default) or Daytona; per-sandbox provider charges appear only when the provider itemizes them, and no Hoplite CPU/RAM unit price is published. Keep the mode flagged alt and unpriced.",
+    "When subscription access expires, new cloud runs are blocked and active cloud runs are cancelled; a run on an empty prepaid balance stalls until credits are added (hard stop, no automatic overage)."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/hoplite",
+    "https://hoplite.sh/",
+    "https://hoplite.sh/pricing",
+    "https://hoplite.sh/docs",
+    "https://hoplite.sh/llms.txt"
+  ],
+  "fleet": {
+    "default_max_instances": 5,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Card required at Free signup (prepaid cards not accepted); nothing charged",
+    "tiers": "Free 5 concurrent cloud sessions; Pro and Enterprise higher usage but numeric concurrency not established.",
+    "notes": "Free sessions are 2 CPU/8 GB. Marketing hundreds of sandboxes does not establish a guaranteed paid account quota. No exact self-serve path to 10/50/300/1,000 verified.",
+    "sources": [
+      "https://hoplite.sh/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 16,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Modal snapshot-replace workspaces (the default for new workspaces) archive after the organization's idle policy and before the provider's maximum runtime, then transparently restore the worktree for the next thread operation.",
+      "note": "Triggered by idle policy / provider max runtime; filesystem (worktree) only, processes and previews must restart. Also: 'While active work is running, Modal also keeps a baseline recovery snapshot and refreshes it periodically' and auto-restores it if the runtime dies; plus a durable workspace checkpoint is saved automatically on each agent reply ('Rewind points on replies', /docs/cli/acp).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/threads/run",
+      "quote": "To restore saved workspace state through the API, [list checkpoints](/docs/api/listThreadCheckpoints) and explicitly [restore the selected checkpoint](/docs/api/restoreCheckpoint).",
+      "note": "Checkpoints are created automatically per agent reply and can be listed/restored on demand (API, MCP, ACP 'Rewind to here'), but the OpenAPI spec has no create-checkpoint/snapshot endpoint and no fork/boot-new-workspace-from-checkpoint. No memory.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/factory",
+      "quote": "The public API gives your application repository-backed projects, persistent thread workspaces, agent execution, diffs, checkpoints, and PR operations.",
+      "note": "Drives Hoplite's own coding agent (models incl. Claude/GPT, BYOK, ChatGPT/Claude subscription routing): REST createThread (prompt), appendThreadMessage (follow-ups), listThreads/listThreadMessages, SSE /api/events/stream, stopRun/retryThread, tool-approval resolution; also MCP server (api.hoplite.sh/mcp), CLI and ACP. CLI handoff imports Claude Code / Codex / OpenCode / Cursor session transcripts into a Hoplite thread; those harnesses themselves are not driven. The agent loop runs on Hoplite's side and executes tools in the sandbox.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/workspace/security",
+      "quote": "Preview links require Hoplite sign-in and membership in the owning workspace.",
+      "note": "Ports are chosen in .hoplite/settings.json (ports.preview/additional); previews go through Hoplite's authenticated proxy on a separate origin; API integrations use a 5-minute gateway credential. Docker Compose published ports are forced to loopback.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Commands in a Docker Compose workspace run as an unprivileged user without `sudo`.",
+      "note": "Standard runtime is a Modal sandbox (gVisor) where toolchains are installed 'so no root access is needed'; Docker Compose VM runtime is explicitly non-root and Docker requests pass a policy proxy rejecting added capabilities/host network. No way to run nftables/iptables documented.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/agent/models",
+      "quote": "Eligible cloud runs can use the initiating member's connected Claude subscription. The connection stays outside the thread sandbox.",
+      "note": "Not a proxy for the sandbox's own outbound traffic. Model credentials (platform keys, BYOK, ChatGPT/Claude subscriptions, gateways) are used by Hoplite's agent loop OUTSIDE the sandbox, so they never enter it (arguably 'ai-only' in effect, set false for consistency with omnara). MCP secrets are KMS-encrypted and decrypted by the worker. Project secrets for arbitrary APIs are plain env vars injected into every sandbox command (readable by code), and a short-lived GitHub token is stored in private config inside the sandbox.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "gvisor",
+      "source": "https://hoplite.sh/docs/workspace/security",
+      "quote": "Standard runtime is a Modal sandbox (gVisor) where toolchains are installed 'so no root access is needed'",
+      "note": "Per feature_evidence.guest_firewall in the card; standard runtime is a Modal gVisor sandbox. Docker Compose runtime uses an isolated VM instead, but the default/primary runtime is gVisor.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/scripts",
+      "quote": "Before your setup script runs, Hoplite installs the language toolchains your repository declares, in the workspace user's home through mise, so no root access is needed.",
+      "note": "No documented way to start a workspace from a customer-supplied Docker/OCI image; toolchains are auto-provisioned by Hoplite via mise from repo config instead. OpenAPI spec's only 'image' fields are model-vision attachment uploads, not sandbox base images.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Standard runtime is a Modal sandbox (gVisor)... Commands in a Docker Compose workspace run as an unprivileged user without `sudo`.",
+      "note": "gVisor sandboxes do not expose /dev/kvm; the alternate Docker Compose VM runtime is also documented as non-root with a capability-restricting policy proxy, no nested KVM mentioned anywhere.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/desktop",
+      "quote": "Use the Hoplite macOS app to work with cloud threads and local Codex or Claude Code sessions in one place.",
+      "note": "not offered: outside the product's scope. The 'Desktop app' is a native macOS client for chatting with the coding agent, not a graphical desktop (VNC/RDP) inside the sandbox. No GUI/VNC/RDP for the sandbox itself is documented; sandboxes are headless dev environments with Preview/Terminal panels.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/agent/tools",
+      "quote": "Commands, tests, file searches, browser automation | `shell` | Thread workspace",
+      "note": "The agent's shell tool performs browser automation against the dev server/preview inside the sandbox, implying a real browser is available in the workspace.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/factory",
+      "quote": "The public API gives your application repository-backed projects, persistent thread workspaces, agent execution, diffs, checkpoints, and PR operations.",
+      "note": "not offered: outside the product's scope. Hoplite is a coding-agent platform driven by text prompts/diffs/PRs; there is no screenshot+click computer-use API documented anywhere in the API reference or docs.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "The agent can install dependencies, run tests, start your dev server, and drive a browser against it.",
+      "note": "not offered: outside the product's scope. Hoplite's browser automation targets the agent's own dev-server preview for testing, not scraping/anti-detection of third-party sites; no stealth/fingerprinting feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://hoplite.sh/",
+      "quote": "Hoplite is a cloud coding-agent platform for starting, supervising, and reviewing work in GitHub-backed repositories.",
+      "note": "not offered: outside the product's scope. No CAPTCHA-solving feature is documented; the product is a coding-agent, not a scraping/automation service.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/previews",
+      "quote": "Use **Terminal** to inspect the workspace directly when needed... Terminal and internal browser-control URLs are short-lived and stop working when the sandbox generation changes.",
+      "note": "Hoplite offers a web/CLI Terminal panel into the sandbox but no documented SSH endpoint/key-based SSH access anywhere in the docs, CLI reference, or OpenAPI spec.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Modal snapshot-replace workspaces (the default for new workspaces) archive after the organization's idle policy and before the provider's maximum runtime, then transparently restore the worktree for the next thread operation.",
+      "note": "Restores the worktree (filesystem) only; running processes/previews must restart, so this is a filesystem-level snapshot, not full memory snapshot.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/threads/run",
+      "quote": "To restore saved workspace state through the API, [list checkpoints](/docs/api/listThreadCheckpoints) and explicitly [restore the selected checkpoint](/docs/api/restoreCheckpoint).",
+      "note": "Checkpoints restore state back into the same thread's workspace; there is no documented API/UI action to clone a workspace into a new, independent machine (no createSandboxFromSnapshot/fork endpoint in the OpenAPI spec).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/threads/run",
+      "quote": "list checkpoints ... and explicitly restore the selected checkpoint",
+      "note": "No fork capability exists at all (see 'fork'), so cloning a running machine without stopping it is not offered.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Native suspension remains an alternate provider behavior... a recovery returns the workspace to its last snapshot",
+      "note": "No fork feature exists, and existing snapshots are filesystem-only (processes restart), so a memory-preserving fork is not offered.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Depending on the provider, archiving may suspend the runtime or save a filesystem artifact before terminating it, and the next thread operation resumes or restores it behind the same thread.",
+      "note": "Idle/archived workspaces are suspended or snapshotted and transparently resumed/restored on the next operation, consistent with card's auto_stop_idle:true and wake_on_request:true.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "This **thread workspace** holds the task's files and processes across follow-up runs.",
+      "note": "Files persist across follow-up runs, archive/restore, and recovery (subject to snapshot recency).",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/resources",
+      "quote": "| Resource | Ceiling | | --- | --- | | CPU | 16 vCPU | | Memory | 32 GiB | | Disk | 10 GiB |",
+      "note": "Only a single fixed disk ceiling is documented per sandbox ('Modal does not support disk resizing'); no separate attachable/detachable volume feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Separate cloud threads have separate workspaces.",
+      "note": "Each thread has its own isolated workspace/disk; no documented feature to mount one volume across multiple running sandboxes simultaneously.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/resources",
+      "quote": "Changing the reservation replaces the sandbox with a snapshot restore: it takes a couple of minutes and restarts running processes; the agent is told this so it can restart dev servers afterwards.",
+      "note": "Bursting happens automatically without a resize, but an explicit reservation resize is disruptive (snapshot-restore, restarts running processes), not a live in-place change.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/desktop",
+      "quote": "Install and sign in to Codex or Claude Code on your Mac. Hoplite uses that provider's existing login.",
+      "note": "Claude Code and Codex CLIs are directly supported (locally supervised, and cloud threads can be started via CLI handoff import of their session transcripts). Hoplite's own cloud agent is the primary execution mode.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/factory",
+      "quote": "The public API gives your application repository-backed projects, persistent thread workspaces, agent execution, diffs, checkpoints, and PR operations.",
+      "note": "Same as card's harness_api evidence: REST createThread/appendThreadMessage/SSE events/etc. drives Hoplite's own coding agent.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/sandboxes/scripts",
+      "quote": "the idiomatic version files (`.nvmrc`, `.node-version`, `.python-version`, `.ruby-version`, `.go-version`, `.java-version`, `.sdkmanrc`)",
+      "note": "Hoplite auto-provisions Python via mise from `.python-version`/toolchain config before running setup scripts.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://hoplite.sh/docs/sandboxes/scripts",
+      "quote": "a bounded `engines.node` range in `package.json`",
+      "note": "Node.js is auto-provisioned via mise from `.nvmrc`/`.node-version`/`package.json` engines; Node is also the default/most common stack for previews (pnpm/Turborepo/Nx inference).",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/previews",
+      "quote": "Hoplite puts a small proxy in front of your dev server inside the workspace... Share the preview's `usehoplite.com` URL.",
+      "note": "Access to sandbox ports is exclusively via Hoplite's authenticated HTTPS preview proxy on a shared domain; no per-sandbox public IPv4 address is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/workspace/security",
+      "quote": "Remote URLs cannot target loopback, private, link-local, or internal hosts.",
+      "note": "No documented HTTP method/path-level egress rule feature for the sandbox's own outbound traffic; only a fixed SSRF guard on MCP remote URLs exists.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/resources",
+      "quote": "On the default platform policy a sandbox's reservation can grow up to: | Resource | Ceiling | | --- | --- | | CPU | 16 vCPU | | Memory | 32 GiB | | Disk | 10 GiB |",
+      "note": "not offered: outside the product's scope. Resource ceilings list only CPU/memory/disk; no GPU option appears anywhere in docs, pricing, or OpenAPI spec. Hoplite is a coding-agent platform, not a compute/GPU cloud.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "The agent can install dependencies, run tests, start your dev server, and drive a browser against it.",
+      "note": "not offered: outside the product's scope. Sandboxes are Linux-only (Modal/Daytona container/VM runtimes with mise-based Unix toolchains); no Windows machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/desktop",
+      "quote": "The current build requires Apple silicon.",
+      "note": "not offered: outside the product's scope. macOS only appears as the local client app requirement; cloud thread sandboxes themselves are Linux (Modal/Daytona), no macOS sandbox/VM is offered.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://hoplite.sh/",
+      "quote": "Hoplite is a cloud coding-agent platform for starting, supervising, and reviewing work in GitHub-backed repositories.",
+      "note": "not offered: outside the product's scope. Only a hosted SaaS (Free/Pro/Enterprise) is offered; no on-prem/self-hosted deployment option is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://hoplite.sh/pricing",
+      "quote": "Enterprise ... Networking & retention private ... Custom pricing, shaped around your deployment.",
+      "note": "Enterprise offers 'private' networking/retention and a custom deployment conversation, but no page documents deploying Hoplite's control plane into the customer's own cloud account (BYOC); sandboxes run on Hoplite-operated Modal/Daytona.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://hoplite.sh/",
+      "quote": "Hoplite is a cloud coding-agent platform for starting, supervising, and reviewing work in GitHub-backed repositories.",
+      "note": "No public repository or OSI license is advertised for the core Hoplite product; it is presented as a closed commercial SaaS.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://trust.hoplite.sh",
+      "quote": "SOC 2 Type 2 In progress",
+      "note": "Hoplite's own Vanta-style trust center (trust.hoplite.sh) lists compliance status as 'SOC 2 Type 2 / In progress', i.e. not yet certified. Confirms the card's false value; no report is currently issuable. Provider docs security page (/docs/workspace/security) does not mention SOC2 at all.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://hoplite.sh/docs/sandboxes",
+      "quote": "Cloud threads execute repository code in separate sandbox workspaces.",
+      "note": "derived: sandboxes run on Hoplite-operated Modal/Daytona cloud infrastructure shared across customers; no static, residential, or mobile egress IP feature is documented anywhere in docs/pricing, so outbound traffic uses ordinary shared datacenter IPs.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/workspace/security",
+      "quote": "Remote URLs cannot target loopback, private, link-local, or internal hosts.",
+      "note": "not offered: outside the product's scope. The only outbound restriction documented is a fixed SSRF guard on MCP remote-server URLs; there is no customer-configurable outbound allow/deny list, no-internet mode, or security-group egress rule feature anywhere in the docs, pricing, or OpenAPI spec (inbound access has documented controls via preview auth, but egress does not).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/resources",
+      "quote": "Sandboxes scale compute elastically.",
+      "note": "not offered: outside the product's scope. No fixed/dedicated outbound IP is documented for sandbox workspaces; Enterprise pricing only advertises 'Networking & retention: PRIVATE' as a custom, unspecified arrangement, not a published static egress IP feature.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/sandboxes/resources",
+      "quote": "Preset\tCPU\tMemory X Small\t1 vCPU\t2 GiB Small\t2 vCPU\t4 GiB Medium\t4 vCPU\t8 GiB Large\t8 vCPU\t16 GiB X Large\t16 vCPU\t32 GiB 2X Large\t16 vCPU\t64 GiB",
+      "note": "not offered: outside the product's scope. Hoplite exposes only fixed vCPU/memory box-size presets with no CPU-architecture selection anywhere in docs, pricing, or the OpenAPI spec; the product is a coding-agent sandbox, not an infrastructure/VM provider where architecture choice is a customer-facing option.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://trust.hoplite.sh",
+      "quote": "SOC 2 Type 2 In progress",
+      "note": "Hoplite's own trust center lists only SOC 2 Type 2 (in progress) under 'Compliance overview'; no HIPAA / BAA program is listed there or anywhere in docs/pricing, so HIPAA eligibility is not offered.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://hoplite.sh/docs/workspace",
+      "quote": "Invite teammates by email under Settings → Workspace → Members. Invitations grant membership on acceptance.",
+      "note": "Team access documentation covers email invitations and a company-domain auto-join feature, but nowhere mentions SAML/OIDC single sign-on; Enterprise pricing only lists 'Security & governance: ADVANCED' without naming SSO. No SSO/SAML/OIDC feature is documented anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://hoplite.sh/pricing",
+      "quote": "Networking & retention PRIVATE",
+      "note": "No region selection or EU-residency option is documented for thread workspaces anywhere in docs/pricing; Enterprise only advertises an unspecified 'private' networking/retention arrangement negotiated per deployment, not a published EU data-residency feature.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "native": "dedicated"
+      },
+      "source": "https://hoplite.sh/docs/sandboxes/resources",
+      "quote": "the CPU and memory a sandbox is created with are a reservation — a guaranteed paid floor — while the workload can use spare host capacity up to a separate conditional burst limit",
+      "note": "The reservation is explicitly described as a guaranteed floor (not shared/oversubscribed with no guarantee), so it fits 'dedicated' best among the allowed values; extra opportunistic bursting above the reservation is additional headroom, not a published per-vCPU baseline percentage, so it does not cleanly fit the 'burstable:NN' format either.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://hoplite.sh/openapi.json",
+      "quote": "GET /api/threads/{id}/usage with operationId getThreadUsage returns usage object with totalCostMicros (money), vmCostMicros, llmCostMicros, vmCpuSeconds, vmRamGbSeconds, vmDiskGbSeconds, and requires usage:read permission. Also GET /api/usage returns organization usage with totalCostMicros.",
+      "note": "granularity: per-sandbox; cost: yes; Hoplite's REST API provides two endpoints for usage: (1) per-thread/sandbox via GET /api/threads/{id}/usage returning billable cost and resource metrics, and (2) organization-wide via GET /api/usage. Both require API key with usage:read permission. Cost is returned in micros (1/1,000,000 USD). Resource metrics (vCPU-seconds, RAM-GB-seconds) are available per sandbox.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://hoplite.sh/docs/sandboxes",
+  "locations_quote": "Depending on the provider, archiving may suspend the runtime or save a filesystem artifact before terminating it, and the next thread operation resumes or restores it behind the same thread. Modal snapshot-replace workspaces (the default for new workspaces) archive after the organization's idle poli",
+  "locations_checked": "2026-10-01"
+}

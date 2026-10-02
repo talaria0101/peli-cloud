@@ -1,0 +1,678 @@
+{
+  "id": "alibaba-agentrun",
+  "name": "Alibaba Cloud Agent Sandbox / FC / AgentRun",
+  "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "economy",
+      "label": "Economy (per second, allocated)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia",
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.013716,
+      "ram_gib_h": 0.006876,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 1,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "International-site USD list price for China (Hong Kong) and regions outside China; pick a mainland-China region with the Region knob. Billed per second (<1 s counts as 1 s). VAT inclusion not stated."
+    },
+    {
+      "key": "default",
+      "label": "Default (per second, allocated)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia",
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.017856,
+      "ram_gib_h": 0.008928,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 1,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "International-site USD list price for China (Hong Kong) and regions outside China; pick a mainland-China region with the Region knob. Billed per second (<1 s counts as 1 s). VAT inclusion not stated."
+    },
+    {
+      "key": "performance",
+      "label": "Performance (per second, allocated)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia",
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.027324,
+      "ram_gib_h": 0.013896,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 1,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Performance is Flash-only. International-site USD list price for China (Hong Kong) and regions outside China; pick a mainland-China region with the Region knob. Billed per second (<1 s counts as 1 s). VAT inclusion not stated."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 15,
+    "disk_gib_month": 0.1847,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.1847,
+    "paused_ram_billed": null,
+    "deep_hibernation_billing": "memory size + disk size, no 15 GiB free allowance, charged at disk rate",
+    "light_hibernation_billing": "memory and disk billed; vCPU free; 15 GiB disk allowance"
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": 24,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown quotas are not confirmed unlimited. "
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": null,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 24,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "asia",
+      "us"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "isolation": "vm",
+    "image_oci": true,
+    "pause_resume_note": "currently allowlist-only",
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "egress_allowlist_level": "both",
+    "egress_http_rules": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": "any-http",
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "wake_on_request": true,
+    "live_resize": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "mcp_server": true,
+    "lang_python": true,
+    "lang_node": true,
+    "eu_data_residency": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [
+    {
+      "id": "region_site",
+      "label": "Region / account site",
+      "kind": "select",
+      "min": null,
+      "max": null,
+      "step": null,
+      "default": 1,
+      "unit": null,
+      "options": [
+        {
+          "value": 1,
+          "label": "Hong Kong / outside China (international site, list)"
+        },
+        {
+          "value": 0.68,
+          "label": "Chinese mainland, international site (×0.68)"
+        },
+        {
+          "value": 0.65,
+          "label": "Chinese mainland, China site aliyun.com (×0.65, CNY; Chinese account)"
+        }
+      ],
+      "effect": "rate_factor",
+      "modes": null,
+      "map": null,
+      "why": "Mainland-China regions are ~32% cheaper on the international site (USD 0.00936 vs 0.013716 per vCPU-h economy) and ~35% cheaper on the China site (CNY, FX-converted). Mainland regions need ICP filing for public services and a China-site account for the CNY price. China-site overseas regions are within ±3% of the international price (FX noise), so no separate option."
+    }
+  ],
+  "caveats": [
+    "Regimes merged 2026-09-28: 12 region x site x tier rows -> 3 tiers at the international-site outside-China price, with a Region knob for mainland China. Disk: outside-mainland USD 0.0000000703/GiB-s (= $0.185/GiB-month) beyond 15 GiB free while active; mainland is USD 0.0000000886/GiB-s ($0.233) and the knob does not adjust disk.",
+    "New Agent Sandbox/FC quotas not transferred from legacy AIO. SDK compatibility is not full E2B feature parity.",
+    "CNY per-second versus printed per-hour discrepancies retained in raw capture.",
+    "Flash and Container have different isolation implementations; no unified VM isolation assigned.",
+    "Unknowns remain null, not free; generic infrastructure modes are opt-in alt.",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Unknown: reviewed pricing source does not explicitly establish VAT/tax inclusion.",
+    "Residency: Mainland China, Hong Kong, Singapore and US releases verified; exact edition availability differs. Region choice is not a guarantee that every supporting service remains in that region.",
+    "SSH not documented (billing overview, 2026-09-28). Egress price not published."
+  ],
+  "sources": [
+    "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+    "https://www.alibabacloud.com/help/en/agent-sandbox/product-overview/billing-overview",
+    "https://www.alibabacloud.com/help/en/agentrun/agenrun-sandbox-upgrade-fc-cloud-sandbox-scheme",
+    "https://www.alibabacloud.com/help/en/agentrun/aio-sandbox-1",
+    "https://www.alibabacloud.com/help/en/functioncompute/feature-release-log-for-fc-agent-sandbox-2026",
+    "https://www.alibabacloud.com/help/en/functioncompute/sandbox-functions-using-constraints",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "For Team-quota management: activated Function Compute/Flash Edition, support allowlist, Team and RAM quota-management permissions; general new-account KYC not established.",
+    "tiers": null,
+    "notes": "AgentRun sandbox is transitioning to Agent Sandbox / FC Cloud Sandbox. Current Flash Edition Team quota API sets CPU/memory caps, but examples/admin-assigned caps are not a provider default for new accounts. Team-quota management requires service activation, support allowlisting, Team and authorized AccessKey; this does not prove all sandbox use itself is sales-gated. Numeric account quota/raise SLA unresolved.",
+    "sources": [
+      "https://www.alibabacloud.com/help/en/agent-sandbox/user-guide/quota-management",
+      "https://www.alibabacloud.com/help/en/agentrun/agenrun-sandbox-upgrade-fc-cloud-sandbox-scheme"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 4,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/product-overview/billing-overview",
+      "quote": "An idle sandbox instance automatically enters the light hibernation state through request sensing and memory snapshot technologies to reduce costs.",
+      "note": "Flash Edition only. Trigger: idle (CPU < 0.01 core, or network < 1,000 B/s, or no requests); wakes on next request (~1 ms claimed). Memory included (processes kept); vCPU not billed, RAM + disk still billed. Separately, deep hibernation 'The entire sandbox instance state, including memory, is saved as a snapshot in persistent storage' (Flash and Container); AgentRun overview says 'Instances with no traffic for an extended period enter a more power-efficient deep sleep mode' (https://www.alibabacloud.com/help/en/agentrun/what-is-agentrun), but Agent Sandbox docs only show deep hibernation via explicit sandbox.pause() (allowlist-only), with auto-resume on connect. autoPause/autoResume create options are mentioned on the Snapshot page but not documented.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/snapshot-invited-test",
+      "quote": "Snapshot 保存运行中沙箱的文件系统与内存状态，可从快照秒级启动同样状态的新沙箱。",
+      "note": "Translation: 'Snapshot saves the filesystem and memory state of a running sandbox; new sandboxes with the same state can be started from it in seconds.' Flash Edition: invite-only (allowlist), second-gen MicroVM runtime only, running sandboxes only, retained 7 days by default, named/tagged, Sandbox.create(snapshotId) = 1:N fork. Container Edition: Checkpoint via E2B create_snapshot or Checkpoint CR, filesystem only (memory not supported yet), clone via Sandbox.create(snapshotId), optional TTL. Billed as disk (memory + disk size, no 15 GiB allowance).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/user-guide/network-access-control",
+      "quote": "Each entry in allowOut can be a CIDR / bare IP / domain (\"example.com\", \"*.example.com\"); denyOut also supports IP / CIDR / domain.",
+      "note": "Flash Edition: allowInternetAccess=false (deny-all) + allowOut/denyOut, updatable at runtime via updateNetwork (the E2B compatibility page contradicts this: 'Network Config Update currently returns success without applying an actual network change'). Domain matching only on HTTP:80 Host and TLS:443 SNI; other ports IP/CIDR only; DNS 8.8.8.8 auto-allowed. VPC mode: the customer security group 'controls outbound access'. Container Edition: Kubernetes NetworkPolicy / TrafficPolicy CRD (CIDR, Service, FQDN) and node security groups.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/user-guide/manage-agent-sandbox-egress-traffic",
+      "quote": "In addition to general L7 control dimensions such as domain, path, HTTP method, request headers, and query parameters, SecurityProfile can also control MCP (Model Context Protocol) tool calls",
+      "note": "Container Edition only (ACK/ACS, enhanced-traffic-policy mode with a traffic-proxy sidecar and egress gateway); block rules by domain/path (prefix/exact/regex)/method/headers/query/port, plus MCP tool-level ACL; HTTPS needs TLS termination enabled per domain. Flash Edition only has per-domain header add/override (network.rules), no HTTP-level block rules.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/user-guide/network-access-control",
+      "quote": "allowPublicTraffic: false: every request to the public URL must carry the e2b-traffic-access-token header, whose value is the trafficAccessToken returned when the sandbox was created; requests without the token or with an invalid token return 403.",
+      "note": "Default allowPublicTraffic=true: any port's getHost() URL is public without auth. Tokenized mode set at creation only. Private access via PrivateLink endpoint (<region>-vpc domain) inside your VPC. Container Edition: TrafficPolicy ingress rules, SandboxGateway for data-plane ingress, TrafficAccessToken auto-rotation. No IP allowlist on the public URL documented for Flash.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/runtime-gen1-vs-gen2",
+      "quote": "仅支持 Ubuntu/Debian 系镜像。镜像需保留 systemd、openssh-server、sudo、chrony、fuse3、iptables 等系统组件，或保证 apt-get 可用；不支持 Alpine、BusyBox 等精简 rootfs",
+      "note": "Second-gen runtime (MicroVM, beta) images must keep sudo and iptables and support Docker inside, which implies own kernel + root, so in-guest iptables should work (not stated explicitly). First-gen runtime (container, no Docker-in-sandbox) unknown. Container Edition docs mention NET_ADMIN only as something L7 policies cannot override.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/user-guide/outbound-request-header-transformation",
+      "quote": "With network.rules, when the sandbox sends HTTP/HTTPS requests to specified domains, the platform can add or override request headers, or replace credential placeholders in header values. Real credentials never enter the sandbox as environment variables, files, or code.",
+      "note": "Flash Edition: per-domain full-header injection or placeholder replacement at the node egress proxy (TLS inspection with platform CA; images built after 2026-08-15 / official v0.0.44+). Container Edition: SecurityProfile tokenTransformation at the egress gateway, API-key injection for arbitrary third-party APIs and Alibaba Cloud AK/SK/STS injection with request re-signing, secrets from Kubernetes Secret, KMS or RAM-role STS via CredentialProvider, gated per AgentIdentity (https://help.aliyun.com/zh/agent-sandbox/user-guide/inject-credentials-for-agent-sandbox-egress: '真实凭据存储在集群侧（Kubernetes Secret 或 CredentialProvider），由平台统一管理。'). HTTP(S) headers only; no DB/SSH/git protocols.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/user-guide/mount-oss-volume",
+      "quote": "When creating a sandbox, use volume_mounts to mount an existing OSS Volume to a specified directory. The sandbox can then access OSS through file paths, and the data is not deleted when the sandbox is released.",
+      "note": "Network/bucket filesystems, not block volumes: OSS Volume and AgenticFS (NAS) Volume (invited preview), dynamic OSS mount via metadata; gen1 runtime also NAS, PolarLakebase, JuiceFS Enterprise. Mounted at create time; read_only flag. Container Edition: OSS/AgenticFS/NAS PVs via CSI, incl. dynamic mount while running. Storage billed by OSS/NAS, not by Agent Sandbox.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/user-guide/acs-agent-sandbox-security-best-practices",
+      "quote": "Unless write access is explicitly required, always mount shared storage volumes as read-only.",
+      "note": "Read-write or read-only. Container Edition OSS/AgenticFS PVs use accessModes ReadWriteMany; Flash Edition named Volumes are Team-level configs mounted by name at sandbox creation, and the API list says 'Data that must be retained, shared, or preserved across sandboxes should be written to external storage such as NAS or OSS.' No explicit statement of concurrent multi-sandbox mounts on the Flash Volume pages.",
+      "checked": "2026-09-29"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "Browser Use：CDP over WebSocket 协议，兼容 Puppeteer / Playwright，提供稳定的浏览器自动化环境",
+      "note": "not offered: the browser capability is a generic CDP/Puppeteer/Playwright automation environment; no stealth/anti-fingerprinting feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "Browser Use：CDP over WebSocket 协议，兼容 Puppeteer / Playwright，提供稳定的浏览器自动化环境",
+      "note": "not offered: outside the product's scope; no CAPTCHA-solving feature documented for the sandbox/browser-use capability.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/network-access-control",
+      "quote": "出网访问控制（出站 / egress）：沙箱主动访问外部网络时，允许或拒绝哪些目标。",
+      "note": "Outbound traffic is routed through Alibaba Cloud's own network/egress proxy (with domain/CIDR allow-deny lists and header/credential injection); no residential or mobile IP option is documented, consistent with standard hyperscaler datacenter egress.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/runtime-gen1-vs-gen2",
+      "quote": "镜像需保留 systemd、openssh-server、sudo、chrony、fuse3、iptables 等系统组件，或保证 apt-get 可用",
+      "note": "openssh-server must be kept in gen2 images as a base-OS component requirement, but no page documents a customer-facing SSH connection method into the sandbox; access is via SDK/API/CLI (E2B-style) and HTTPS URLs, not SSH. Card caveat also notes 'SSH not documented (billing overview, 2026-09-28)'.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/snapshot-invited-test",
+      "quote": "Snapshot 保存运行中沙箱的文件系统与内存状态，可从快照秒级启动同样状态的新沙箱。",
+      "note": "Snapshot is taken from a running sandbox (without requiring it to stop) and used to fork 1:N new sandboxes; Flash Edition, invite-only feature.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/snapshot-invited-test",
+      "quote": "Snapshot 保存运行中沙箱的文件系统与内存状态，可从快照秒级启动同样状态的新沙箱。",
+      "note": "Flash Edition second-gen runtime snapshot/fork includes memory state, so forked instances resume with running-process state, not just disk. Container Edition's Checkpoint currently supports filesystem only (memory not yet supported).",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "浅休眠毫秒级唤醒：对短暂空闲的沙箱实例自动进入浅休眠，有请求到达时可在毫秒级完成唤醒，几乎无冷启动感知",
+      "note": "Light hibernation wakes automatically on the next incoming request (millisecond scale, Flash Edition); deep hibernation also auto-resumes on connect at second scale.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+      "quote": "深休眠状态：沙箱实例的全部状态（含内存）通过快照固化至持久化存储...唤醒后从断点恢复运行。",
+      "note": "Disk state (and, in deep hibernation, memory) is preserved in persistent storage across stop/hibernate and restored on resume; card storage block also shows disk billed while stopped/hibernated.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+      "quote": "浅休眠...空闲的判定条件如下，满足其一即可：CPU 消耗 < 0.01 core；网络流量 < 1,000 Bytes/s；无请求触发。",
+      "note": "Idle sandboxes automatically enter light hibernation (and eventually deep hibernation) with no user API call required.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+      "quote": "根据创建沙箱实例时指定的 vCPU 和内存规格计费。极速版严格校验资源规格。",
+      "note": "not offered: Flash Edition resource specs (vCPU/RAM) are fixed and strictly validated at creation time; no documented API to change vCPU/RAM of a running sandbox without recreating it.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "框架开放、不被锁定：提供适配主流 Agent 框架的集成能力，可与 LangChain、AgentScope、CrewAI、Google ADK 等框架结合使用",
+      "note": "not offered: AgentRun integrates with agent-building frameworks (LangChain, AgentScope, CrewAI, Google ADK) so you can build/host your own agent code; no evidence of preinstalled coding-agent harnesses like Claude Code, Codex, or OpenCode as templates.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "提供统一的 HTTP API（兼容 OpenAI Chat Completions 等协议），方便在任意语言、任意后端服务中直接调用 Agent、模型和工具",
+      "note": "not offered: the first-party API drives whatever agent code the customer deploys on AgentRuntime; there is no documented API specifically for driving a pre-existing third-party coding harness (Claude Code/Codex/etc.) inside the sandbox.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "在现有服务中调用托管在 AgentRun 上的 Agent",
+      "note": "not offered: the API drives agents that the customer builds and hosts on AgentRun (or the Sandbox's generic Code Interpreter/Browser Use), not a distinct first-party 'Alibaba task agent' product (e.g. a built-in research/browser agent) with its own dedicated API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "MCP 与 Function Call 双协议：一切皆可 MCP：Agent、Sandbox、API 工具等都可以一键 MCP 化",
+      "note": "AgentRun can expose Sandbox (and Agent/tools) as MCP servers/gateways with one click, and the Sandbox documentation lists MCP-tool-based integration alongside SDK calls.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "多语言运行时：Python 3.10/3.12、Node.js 18/20、Java 8/11/17 等；Sandbox 运行时内置 50+ 语言执行环境",
+      "note": "Python runtime is first-party supported for both AgentRuntime and Sandbox (Code Interpreter).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "多语言运行时：Python 3.10/3.12、Node.js 18/20、Java 8/11/17 等；Sandbox 运行时内置 50+ 语言执行环境",
+      "note": "Node.js runtime is first-party supported for both AgentRuntime and Sandbox (Code Interpreter), and Node.js/TypeScript SDK is documented.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/network-access-control",
+      "quote": "公网访问鉴权（入站）：沙箱对外暴露的公网 URL 是否需要携带令牌才能访问。",
+      "note": "not offered: inbound access is via an HTTPS gateway URL (optionally token-gated) per exposed port, not a dedicated public IPv4 address per sandbox.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+      "quote": "中国站定价 地域 QoS 等级 vCPU 定价 内存定价 磁盘定价 ...（经济型/通用型/性能型，无 GPU 计费项）",
+      "note": "not offered: the Agent Sandbox pricing catalog only lists vCPU, memory, and disk SKUs; no GPU line item is published for the sandbox product (GPU elasticity is instead mentioned for AgentRun's separate model runtime, not the Sandbox).",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": true,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/runtime-gen1-vs-gen2",
+      "quote": "多操作系统支持：通过多 VMM 架构接入 Windows，支持 Computer Use、OSWorld 等桌面交互任务... 支持 Linux 和 Windows，支持范围持续扩展中",
+      "note": "Windows sandboxes are supported by the gen2 (MicroVM, Beta) runtime for desktop/Computer-Use tasks; gen1 runtime is Linux-only.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/runtime-gen1-vs-gen2",
+      "quote": "多操作系统支持：通过多 VMM 架构接入 Windows... 支持 Linux 和 Windows",
+      "note": "not offered: outside the product's scope; only Linux and Windows are documented as supported operating systems, no macOS.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "AgentRun 是以高代码为核心、开放生态、灵活组装的一站式 Agentic AI 基础设施平台...",
+      "note": "not offered: outside the product's scope; AgentRun/Agent Sandbox is a managed Alibaba Cloud service, not software distributed for customers to run on their own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "数据与记忆的灵活部署：支持“一键托管”模式和“绑定已有部署”（VPC/IDC 模式），企业可以选择核心数据私有化部署，一般数据托管上云",
+      "note": "not offered as full BYOC: only the memory/data layer (e.g. Mem0/RAGFlow) can bind to an existing customer VPC/IDC deployment; the Agent Sandbox compute itself runs in Alibaba Cloud's own account/regions, not deployed into the customer's cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agentrun/what-is-agentrun",
+      "quote": "AgentRun 是以高代码为核心、开放生态、灵活组装的一站式 Agentic AI 基础设施平台...",
+      "note": "not offered: outside the product's scope; AgentRun/Agent Sandbox is a proprietary managed Alibaba Cloud service, no OSI-licensed core product is published.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/trust-center/compliance",
+      "quote": "SOC 2 Report — Service Organization Controls - SOC 2 Type 2 Report",
+      "note": "Platform-wide Alibaba Cloud attestation (SOC 2 Type 2), applicable to services including Agent Sandbox/AgentRun run on Alibaba Cloud.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/trust-center/compliance",
+      "quote": "HIPAA (United States)",
+      "note": "Alibaba Cloud publishes HIPAA compliance materials/BAA support at the platform level; description meta also states 'HIPAA for healthcare' as part of Alibaba Cloud's compliance commitments.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/ram/user-guide/what-is-sso",
+      "quote": "Alibaba Cloud supports single sign-on (SSO) through identity federation, allowing users from an external identity provider (IdP) to access Alibaba Cloud resources... SAML 2.0",
+      "note": "Account-level RAM feature: SAML 2.0 SSO with external IdPs (AD FS, Entra ID, Okta, Google Workspace, etc.), applicable to accounts used to manage Agent Sandbox/AgentRun.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/functioncompute/sandbox-functions-using-constraints",
+      "quote": "Sandbox functions can be selected... in the following regions: Chinese mainland: China (Hangzhou), China (Shanghai), China (Beijing), and China (Shenzhen); China (Hong Kong) and overseas: China (Hong Kong) and Asia Pacific SE 1 (Singapore)",
+      "note": "not offered: documented Agent Sandbox regions are limited to Chinese mainland, Hong Kong, and Singapore (plus a US release per the card); no EU region is listed for the sandbox product.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 24,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+      "quote": "Pay as you go plan: max_session_h 24 (per card plans block, sourced from provider billing/quota docs); legacy AgentRun AIO sandboxes had a maximum six-hour lifetime.",
+      "note": "Current Agent Sandbox pay-as-you-go plan caps a single session at 24 hours per the card's existing plans data; the older/legacy AgentRun AIO sandbox had a stricter 6-hour maximum lifetime, now superseded by Agent Sandbox Flash/Container editions.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/runtime-gen1-vs-gen2",
+      "quote": "二代基于轻量虚拟机隔离，为复杂 Agent 工作负载提供新的运行时架构。",
+      "note": "derived: both runtimes are microVM/container-based isolation layers (gen2 = lightweight VM / MicroVM, similar to Firecracker); no page documents /dev/kvm being passed through to the guest or nested virtualization support. Gen2 newly added the ability to run Docker inside the sandbox, but that is containers-in-guest, not VM-in-VM, and no KVM/nested-virt capability is mentioned anywhere in the runtime, security-isolation, or constraints docs.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://help.aliyun.com/zh/agent-sandbox/user-guide/network-access-control",
+      "quote": "network.egressProxy：出网 SOCKS5 代理 ｜ 暂不支持 ｜ — 。 egressProxy 暂不支持，传入不会生效。",
+      "note": "Egress network control is via allowOut/denyOut IP-CIDR/domain lists and an L7 header/credential-injection proxy (network.rules), and VPC mode routes outbound traffic through the customer's own security group; the one field that could deliver a fixed outbound IP (egressProxy, a SOCKS5 proxy) is explicitly 'not yet supported'. No page documents a dedicated/static egress IP per sandbox; card's egress_ip_type is plain 'datacenter'.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agent-sandbox/product-overview/billing-overview",
+      "quote": "A bill is generated every hour... Actual charges are based on your bill in the Expenses and Costs console.",
+      "note": "granularity: account-only; cost: no; Agent Sandbox billing shows vCPU, memory, and disk costs through the Expenses and Costs dashboard console only. AgentRun offers Token-level cost attribution and multi-dimensional cost analysis through its observability platform, but no REST API, SDK, or CLI endpoint for programmatic access to per-sandbox or per-tag billable usage was found in the documentation. Billing data access is restricted to the account-level dashboard.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Hangzhou",
+      "provider_region": "cn-hangzhou",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Shanghai",
+      "provider_region": "cn-shanghai",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Beijing",
+      "provider_region": "cn-beijing",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Shenzhen",
+      "provider_region": "cn-shenzhen",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "cn-hongkong",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Jose",
+      "provider_region": "us-west-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.alibabacloud.com/help/en/functioncompute/feature-release-log-for-fc-agent-sandbox-2026",
+  "locations_quote": "FC Agent Sandbox now supports China (Hong Kong), Singapore, US (Virginia), and US (Silicon Valley). It is currently available in China North 2 (Beijing), China East 2 (Shanghai), China East 1 (Hangzhou), China South 1 (Shenzhen), China (Hong Kong), Singapore, US (Virginia), and US (Silicon Valley).",
+  "locations_checked": "2025-01-01"
+}

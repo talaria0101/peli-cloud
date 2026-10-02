@@ -1,0 +1,298 @@
+{
+  "id": "azure-dev-box",
+  "name": "Microsoft Dev Box (closed to new customers; retiring 2028-09-18)",
+  "url": "https://azure.microsoft.com/en-us/products/dev-box/",
+  "category": "windows",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Hourly compute + monthly storage, capped at SKU max monthly price",
+      "flags": [
+        "sales",
+        "legacy"
+      ],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "8 vCPU / 32 GB / 256 GB SSD",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 256,
+          "hour": null,
+          "month_cap": null
+        },
+        {
+          "name": "16 vCPU / 64 GB / 512 GB SSD",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 512,
+          "hour": null,
+          "month_cap": null
+        },
+        {
+          "name": "32 vCPU / 128 GB / 2048 GB SSD",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 2048,
+          "hour": null,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Official model (Microsoft): monthly storage fee until deleted + compute per hour of active use; billing stops once the instance reaches its SKU's max monthly price. Rates are NOT publicly available: the pricing page showed '$-' and as of 2026-09-29 the pricing URL 301-redirects to azure.microsoft.com/en-us/pricing; the public Retail Prices API returns 0 items for serviceName 'Microsoft Dev Box' (checked 2026-09-29). 2023 GA press figures ($138.20 and $628.80 max/month for the smallest/largest SKU; storage $19-152/month) are third-party-reported and stale, so not encoded. Requires per-user Windows 11 Enterprise + Intune + Entra ID P1 licences. Lifecycle verified 2026-09-28 (learn.microsoft.com/azure/dev-box/overview-what-is-microsoft-dev-box): \"The service begins its closing-down period at 16:00 UTC on 14 September 2026\"; \"Microsoft Dev Box retires at 17:00 UTC on 18 September 2028\". Flagged legacy (never priced)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 256,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Azure subscription + per-user M365/Windows Enterprise licences",
+      "fee": null,
+      "flags": [
+        "sales",
+        "legacy"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Licence prerequisites are per user and often exceed compute cost; not encoded."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": false,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": null,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": null,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": null,
+    "wake_on_request": null,
+    "live_resize": null,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "RETIRING: closing-down period began 2026-09-14, retirement 2028-09-18; Microsoft recommends Windows 365 and says not to create new long-lived dependencies.",
+    "No public prices: all mode prices are null, so the engine cannot price this card. Mode flagged 'sales' (signed-in pricing only).",
+    "Hibernation supported; storage billed until the dev box is deleted, even while stopped/hibernated.",
+    "Closed to new customers since 2025-11-01 (Microsoft: 'new sign-ups will no longer be accepted as of November 1, 2025'); only existing Dev Box customers can use it until retirement 2028-09-18.",
+    "Hibernation (compute not billed, state kept) only on 8 and 16 vCPU SKUs; 32 vCPU SKUs can only shut down.",
+    "Stop-on-disconnect grace period is 60-480 minutes, so every session keeps billing compute for at least 1 extra hour after the user disconnects (unless stopped manually or by schedule).",
+    "Smallest SKU is 8 vCPU / 32 GB; 4-core SKUs are not supported.",
+    "Automatic snapshots every 12 h (short) and 7 days (long), 14 retained over 28 days, plus manual snapshots; restore can take hours. No separate snapshot price is documented.",
+    "Serverless GPU (preview): GPU shells run in Azure Container Apps and are billed by ACA, not Dev Box; project must be in BrazilSouth, CanadaCentral, CentralUS, EastUS, EastUS2, SouthCentralUS or WestUS3.",
+    "Licences confirmed live: each user needs Windows 11/10 Enterprise + Microsoft Intune + Microsoft Entra ID P1 (included in M365 F3/E3/E5/A3/A5/Business Premium)."
+  ],
+  "sources": [
+    "https://azure.microsoft.com/en-us/pricing/details/dev-box/",
+    "https://learn.microsoft.com/en-us/azure/dev-box/dev-box-retirement-guide",
+    "https://prices.azure.com/api/retail/prices",
+    "https://infragap.com/tools/microsoft-dev-box/",
+    "https://devclass.com/2023/07/11/microsoft-hits-ga-with-dev-box-already-in-use-internally-but-pricey-for-the-rest-of-us/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Azure signup uses phone and non-prepaid card for identity verification.",
+    "tiers": null,
+    "notes": "New sign-ups closed since 2025-11-01 (existing customers only); closing-down period since 2026-09-14; retirement 2028-09-18. Existing customers raise the per-subscription Dev Box vCPU quota via the Quota Management System (Quotas > Dev Box > Request adjustment) or a support request; default vCPU quota not published.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/azure/dev-box/how-to-request-quota-increase",
+      "https://learn.microsoft.com/en-us/azure/dev-box/dev-box-roadmap",
+      "https://azure.microsoft.com/free/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/dev-box/how-to-hibernate-your-dev-box",
+      "quote": "Hibernation is a power-saving state that saves your running applications to your hard disk and then shuts down the virtual machine (VM). When you resume the VM, all your previous work is restored.",
+      "note": "Memory included (Windows hibernation). Automatic triggers: 'Automate hibernation for pools of dev boxes by using auto-stop schedules or stopping on session disconnect' (how-to-configure-dev-box-hibernation) plus hibernate-on-no-connect after a grace period. Stop-on-disconnect only works for hibernation-enabled definitions; hibernation only on 8/16 vCPU SKUs (32 vCPU can only shut down). Separately, SCHEDULED disk snapshots (not this feature): 'Microsoft Dev Box automatically takes short snapshots every 12 hours and long snapshots every seven days. It retains snapshots for 28 days on a rotating basis' (10 short + 4 long).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/dev-box/how-to-restore-from-snapshot",
+      "quote": "Take manual snapshots of your dev box to create restore points before making significant changes to your dev box, such as installing new software or making configuration changes.",
+      "note": "Developer portal 'Take snapshot', and data-plane REST `captureSnapshot` (added api-version 2024-10-01-preview) / `listSnapshots` / `restoreSnapshot` (routes.tsp). Disk-only (no memory). Restore is IN PLACE on the same dev box ('deletes data and apps added since the chosen snapshot. The restore process can take hours'); no documented way to boot a new dev box from a snapshot (no fork/template; images come from Azure Compute Gallery instead).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/dev-box/overview-what-is-dev-box-mcp-server",
+      "quote": "Dev Box lifecycle management**: Create, delete, start, stop, restart, and repair dev boxes across all your projects",
+      "note": "The Dev Box MCP Server lets an external AI agent manage dev boxes (lifecycle, schedules, customization tasks); it does not start/stream/resume an agent harness inside the dev box. No harness API documented.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/dev-box/how-to-configure-network-connections",
+      "quote": "An organization can control network ingress and egress by using a firewall, network security groups, and even Microsoft Defender.",
+      "note": "Only with an Azure network connection (bring-your-own vNet): NSG egress rules (IP/port/service tag) and Azure Firewall application rules (FQDN/FQDN tags) apply at the vNet level, outside the VM, per pool/subnet rather than per dev box. With the Microsoft-hosted network, Microsoft manages the network and no egress controls are offered. Required AVD/Intune/Windows 365 endpoints must stay allowed.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/dev-box/concept-dev-box-architecture",
+      "quote": "Dev box connectivity is provided by Azure Virtual Desktop. No inbound connections direct from the internet are made to the dev box.",
+      "note": "No public IP/ports; access only through Azure Virtual Desktop (RDP via Windows App/browser) authenticated with Microsoft Entra ID and Intune Conditional Access, or (preview) Dev Tunnels for VS Code, also governable by Conditional Access. BYO vNet adds NSG inbound rules. No way to publish an app port to the internet.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full Windows 11 Enterprise VM; pools can make users Local Administrators ('You can assign users to be either Local Administrators or Standard Users', how-to-manage-dev-box-pools), so Windows Defender Firewall rules can be configured inside (no nftables/iptables on Windows; WSL2 has its own kernel). Intune can also push firewall policy.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/dev-box/how-to-configure-customization-tasks",
+      "quote": "You can use secrets from your Azure key vault in your YAML configurations to clone private repositories or run tasks that require an access token.",
+      "note": "Only Key Vault secret references resolved into customization tasks (e.g. git PAT) inside the dev box; no credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/rest/api/consumption/usage-details/list",
+      "quote": "May be used to filter usageDetails by properties/resourceGroup, properties/resourceName, properties/resourceId, properties/chargeType, properties/reservationId, properties/publisherType or tags. The filter supports 'eq', 'lt', 'gt', 'le', 'ge', and 'and'.",
+      "note": "granularity: per-sandbox; cost: yes; Azure Consumption Usage Details API (legacy) and Cost Management Cost Details API (recommended) both support filtering by resourceId (per-sandbox) or tags (per-tag/project). Dev Box instances are Azure resources queryable through these endpoints. Usage Details API is deprecated; Cost Details API is the current standard for billing/cost queries.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=dev-box",
+  "locations_quote": "The region of the virtual network specified in a network connection determines the region for a dev box. You can create multiple network connections based on the regions where you support developers.",
+  "locations_checked": "2026-10-01"
+}

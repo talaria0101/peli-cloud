@@ -1,0 +1,1428 @@
+{
+  "id": "hyperstack",
+  "name": "Hyperstack",
+  "url": "https://www.hyperstack.cloud/gpu-pricing",
+  "category": "gpu-cloud",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand-h100-pcie",
+      "label": "H100 PCIe 80GB (n3-H100x1) on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 180,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100-PCIe": 2.5
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: H100 PCIe 80GB (n3-H100x1) $2.5/GPU-h on-demand, billed per minute; per GPU max 28 pCPU / 180 GB RAM (pricing table). 1x flavour listed in https://docs.hyperstack.cloud/docs/hardware/flavors. Multi-GPU (x2/x4/x8) flavours scale linearly.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-a100-pcie",
+      "label": "A100 80GB PCIe (n3-A100x1) on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 120,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 1.35
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: A100 80GB PCIe (n3-A100x1) $1.35/GPU-h on-demand, billed per minute; per GPU max 28 pCPU / 120 GB RAM (pricing table). 1x flavour listed in https://docs.hyperstack.cloud/docs/hardware/flavors. Multi-GPU (x2/x4/x8) flavours scale linearly.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-rtx-pro-6000",
+      "label": "RTX Pro 6000 SE (n3-RTX-PRO6000-SEx1) on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 225,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-PRO-6000": 1.85
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: RTX Pro 6000 SE (n3-RTX-PRO6000-SEx1) $1.85/GPU-h on-demand, billed per minute; per GPU max 31 pCPU / 180 GB RAM (pricing table). 1x flavour listed in https://docs.hyperstack.cloud/docs/hardware/flavors. Multi-GPU (x2/x4/x8) flavours scale linearly.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-l40",
+      "label": "L40 (n3-L40x1) on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 58,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L40": 1
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: L40 (n3-L40x1) $1/GPU-h on-demand, billed per minute; per GPU max 28 pCPU / 120 GB RAM (pricing table). 1x flavour listed in https://docs.hyperstack.cloud/docs/hardware/flavors. Multi-GPU (x2/x4/x8) flavours scale linearly.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-rtx-a6000",
+      "label": "RTX A6000 (n3-RTX-A6000x1) on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 58,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-A6000": 0.5
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: RTX A6000 (n3-RTX-A6000x1) $0.5/GPU-h on-demand, billed per minute; per GPU max 28 pCPU / 58 GB RAM (pricing table). 1x flavour listed in https://docs.hyperstack.cloud/docs/hardware/flavors. Multi-GPU (x2/x4/x8) flavours scale linearly.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-rtx-a4000",
+      "label": "RTX A4000 (n3-RTX-A4000x1) on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 21,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-A4000": 0.15
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: RTX A4000 (n3-RTX-A4000x1) $0.15/GPU-h on-demand, billed per minute; per GPU max 6 pCPU / 24 GB RAM (pricing table). 1x flavour listed in https://docs.hyperstack.cloud/docs/hardware/flavors. Multi-GPU (x2/x4/x8) flavours scale linearly.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-h100-sxm-8x",
+      "label": "H100 SXM5 (n3-H100-SXM5x8) 8-GPU node, on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other",
+        "us"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 192,
+      "max_ram_gib": 1800,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 3.2
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: H100 SXM5 (n3-H100-SXM5x8) $3.2/GPU-h on-demand; only an 8-GPU flavour is listed in https://docs.hyperstack.cloud/docs/hardware/flavors, so priced as 8 GPUs. Per GPU 24 pCPU / 240 GB RAM.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-h100-nvlink-8x",
+      "label": "H100 NVLink (n3-H100x8) 8-GPU node, on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 252,
+      "max_ram_gib": 1440,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100-NVL": 2.6
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: H100 NVLink (n3-H100x8) $2.6/GPU-h on-demand; only an 8-GPU flavour is listed in https://docs.hyperstack.cloud/docs/hardware/flavors, so priced as 8 GPUs. Per GPU 31 pCPU / 180 GB RAM.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-h200-sxm-8x",
+      "label": "H200 SXM5 (n3-H200-SXM5x8) 8-GPU node, on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 176,
+      "max_ram_gib": 1800,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H200": 3.99
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: H200 SXM5 (n3-H200-SXM5x8) $3.99/GPU-h on-demand; only an 8-GPU flavour is listed in https://docs.hyperstack.cloud/docs/hardware/flavors, so priced as 8 GPUs. Per GPU 22 pCPU / 225 GB RAM.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-a100-sxm-8x",
+      "label": "A100 SXM4 (n3-A100-SXM4x8) 8-GPU node, on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 192,
+      "max_ram_gib": 960,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-SXM-80GB": 1.6
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: A100 SXM4 (n3-A100-SXM4x8) $1.6/GPU-h on-demand; only an 8-GPU flavour is listed in https://docs.hyperstack.cloud/docs/hardware/flavors, so priced as 8 GPUs. Per GPU 24 pCPU / 120 GB RAM.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-b200-8x",
+      "label": "B200 SXM6 (n3-B200-SXM6x8) 8-GPU node, on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "features": {
+        "pause_resume": false,
+        "snapshot": "none"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 252,
+      "max_ram_gib": 2048,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "B200": 6
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: B200 SXM6 (n3-B200-SXM6x8) $6/GPU-h on-demand; only an 8-GPU flavour is listed in https://docs.hyperstack.cloud/docs/hardware/flavors, so priced as 8 GPUs. Per GPU 31 pCPU / 256 GB RAM.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-b300-8x",
+      "label": "B300 SXM6 (n3-B300-SXM6x8) 8-GPU node, on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 224,
+      "max_ram_gib": 1920,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "B300": 7.4
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: B300 SXM6 (n3-B300-SXM6x8) $7.4/GPU-h on-demand; only an 8-GPU flavour is listed in https://docs.hyperstack.cloud/docs/hardware/flavors, so priced as 8 GPUs. Per GPU 28 pCPU / 240 GB RAM.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "spot-h100-pcie",
+      "label": "H100-PCIe spot VM",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 180,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100-PCIe": 2
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: Spot VM H100-PCIe $2/GPU-h (interruptible).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "spot-rtx-pro-6000",
+      "label": "RTX-PRO-6000 spot VM",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 31,
+      "max_ram_gib": 180,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-PRO-6000": 1.48
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: Spot VM RTX-PRO-6000 $1.48/GPU-h (interruptible).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "spot-a100-pcie",
+      "label": "A100-80GB spot VM",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 120,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 1.08
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: Spot VM A100-80GB $1.08/GPU-h (interruptible).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "spot-l40",
+      "label": "L40 spot VM",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 58,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L40": 0.8
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: Spot VM L40 $0.8/GPU-h (interruptible).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "spot-rtx-a6000",
+      "label": "RTX-A6000 spot VM",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": null,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 58,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-A6000": 0.4
+      },
+      "note": "Added 2026-09-28 (missing-providers audit). https://www.hyperstack.cloud/gpu-pricing: Spot VM RTX-A6000 $0.4/GPU-h (interruptible).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-a100-nvlink-8x",
+      "label": "A100 80GB PCIe NVLink (n3-A100x8-NVLink) 8-GPU node, on-demand",
+      "flags": [],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "max_vcpu": 252,
+      "max_ram_gib": 1920,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "gpu": {
+        "A100-80GB": 1.4
+      },
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-cpu",
+      "label": "CPU-only VM (n1-cpu-*) on-demand",
+      "flags": [],
+      "regions": [
+        "other",
+        "eu"
+      ],
+      "gpu_only": false,
+      "pricing": "sizes",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "sizes": [
+        {
+          "name": "n1-cpu-small",
+          "vcpu": 4,
+          "ram_gib": 4,
+          "disk_gib": 100,
+          "hour": 0.35,
+          "month_cap": null
+        },
+        {
+          "name": "n1-cpu-medium",
+          "vcpu": 8,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.65,
+          "month_cap": null
+        },
+        {
+          "name": "n1-cpu-large",
+          "vcpu": 16,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "hour": 1.3,
+          "month_cap": null
+        },
+        {
+          "name": "n1-cpu-xlarge",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 100,
+          "hour": 1.9,
+          "month_cap": null
+        },
+        {
+          "name": "n1-cpu-xxlarge",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 100,
+          "hour": 3.74,
+          "month_cap": null
+        }
+      ],
+      "note": "Pricing-page list prices. xlarge/xxlarge are CANADA-1 only (plus 512/1024 GB ephemeral). n1-cpu-large has 100 GB root in NORWAY-1 vs 200 GB in CANADA-1, and CPU-only flavors are priced per core + per GB RAM + per GB local disk, so the NORWAY-1 large is likely cheaper than $1.30 (not published). Stopped (SHUTOFF) VMs bill in full.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "reserved",
+      "label": "Reserved GPUs (contract)",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "commit_term": null,
+      "gpu_only": true,
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "gpu": {
+        "H200": 2.79,
+        "H100": 2.72,
+        "H100-NVL": 1.82,
+        "H100-PCIe": 1.75,
+        "A100-SXM-80GB": 1.36,
+        "RTX-PRO-6000": 1.3,
+        "A100-80GB": 0.95,
+        "L40": 0.7,
+        "RTX-A6000": 0.35,
+        "RTX-A4000": 0.11,
+        "B200": 5.1
+      },
+      "note": "'Starting from' reservation prices; term and minimum GPU count not published (contact sales); invoiced monthly. A100 NVLink reserve $0.98 not mappable to a distinct gpu key.",
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 100,
+    "disk_gib_month": 0.0706,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.0706,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": 4.91,
+    "ipv4_available": true,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "virtual machines come with pre-configured firewall rules permitting outgoing IPv4 and IPv6 traffic using any internet protocol, on any port (1-65536), and to any destination IP address (0.0.0.0/0)",
+          "url": "https://docs.hyperstack.cloud/docs/network/firewalls"
+        },
+        {
+          "quote": "initially configured without any firewall rules allowing incoming traffic",
+          "url": "https://docs.hyperstack.cloud/docs/network/firewalls"
+        },
+        {
+          "quote": "No, there are no additional charges for bandwidth or data transfer.",
+          "url": "https://www.hyperstack.cloud/gpu-pricing"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Prepaid on-demand",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "waives_start_fee": false,
+      "included_applies_to_modes": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Prepaid balance, billed per minute. Reservations (from $1.75/GPU-h H100 PCIe, $2.72 H100 SXM) by contract."
+    },
+    {
+      "name": "Postpaid / Premium Postpaid",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "note": "Invoiced monthly on net terms; enabled by emailing sales. Premium adds higher billing thresholds and priority support."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "price_expires": null,
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "H100-PCIe",
+      "H100",
+      "H100-NVL",
+      "H200",
+      "A100-80GB",
+      "A100-SXM-80GB",
+      "RTX-PRO-6000",
+      "L40",
+      "RTX-A6000",
+      "RTX-A4000",
+      "B200",
+      "B300"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu",
+      "other",
+      "us"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "volume_attach": true,
+    "volume_shared": false,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [],
+  "caveats": [
+    "Per-GPU vCPU/RAM are \"max per GPU\" figures from the pricing table; region availability varies by flavour.",
+    "Volume storage $0.000096774/GB-h (~$0.07/GB-month); public IP $0.00672043/h; egress/ingress free.",
+    "Reserved pricing (from $1.75/h H100 PCIe) not encoded (contract).",
+    "Flavor docs list the 1x H100 PCIe in CANADA-1 only (region class \"other\"); other regions not verified.",
+    "SHUTOFF (stopped) VMs are billed at the full flavor rate, GPU included; only HIBERNATED (root disk ~$0.07/GB-month + retained IP) or DELETED stop GPU billing. Restoring from hibernation needs the flavor in stock.",
+    "Prepaid: to deploy, balance must cover all running resources plus the new VM for 1 hour. At $0 balance VMs are hibernated (or deleted if the flavor can't hibernate: spot, large-root-disk, K8s clusters) and billing continues into negative balance.",
+    "API rate limit 500 requests/minute per source IP across all endpoints (raise via support). No published VM-count quota or start-rate limit.",
+    "Object storage $0.000019397/GB-h (~$14.29/TB-month). Kubernetes: worker nodes at flavor rate + public IPs; master/LB/bastion not billed."
+  ],
+  "sources": [
+    "https://www.hyperstack.cloud/gpu-pricing",
+    "https://docs.hyperstack.cloud/docs/hardware/flavors"
+  ],
+  "audit_2026_09_29": {
+    "applied": 17,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 9
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/hibernation.md",
+      "quote": "If your account balance falls below $0, all active VMs will be immediately transitioned into a hibernated state.",
+      "note": "Hibernation (config + root disk saved, CPU/GPU/RAM deallocated; disk only - RESTORING = 'The VM operating system and software are restarting') is user-initiated via UI/API; the only automatic trigger is billing enforcement at negative balance (flavors without hibernation are deleted instead). No idle/stop-triggered state save. SHUTOFF keeps the disk (persistent disk) but bills at full flavor rate.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/snapshots.md",
+      "quote": "A virtual machine (VM) snapshot captures an image of the VM's system at a specific point in time by saving its configuration and bootable volume data to disk for future restoration.",
+      "note": "Disk only, no memory ('If the VM is **`ACTIVE`**, it is temporarily **`SHUTOFF`** during the snapshot'). API: POST /core/virtual-machines/{id}/snapshots, POST /core/snapshots/{id}/restore. New VMs can boot from it via custom images ('users can create custom operating system (OS) images from previously created snapshots', custom-images.md). Limits: max 100 GB, one at a time, not for K8s nodes or VMs booted from bootable volumes, flavor-dependent. Billed ~$0.07/GB-month.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/ai-studio/integrations/claude-code",
+      "quote": "Install Claude Code and the Claude Router ... Base URL: http://127.0.0.1:5001/chat/completions (because our proxy is running locally on port 5001.) ... Try sending a prompt like Generate a Python class for user authentication and confirm the response is returned from your AI Studio model.",
+      "note": "The Claude Code / opencode / roocode / kilo-code / cursor 'integrations' route those tools (run on the user's own machine) to AI Studio's OpenAI-compatible inference API via a local proxy — an inference backend, not a first-party API that drives a coding harness inside a Hyperstack sandbox.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.hyperstack.cloud/docs/network/firewalls.md",
+      "quote": "It contains rules that govern inbound and outbound traffic for virtual machines, allowing or denying access based on properties such as the direction of traffic, source or destination IP, protocol, ethertype, and port range.",
+      "note": "Cloud (OpenStack-style security-group) firewall per VM: direct rules or reusable firewalls attached to VMs, via UI/API. Default egress allow-all ('pre-configured firewall rules permitting outgoing IPv4 and IPv6 traffic ... to any destination IP address (0.0.0.0/0)') which can be deleted to restrict outgoing traffic. IP/CIDR + protocol + port; no hostnames.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.hyperstack.cloud/docs/network/firewalls.md",
+      "quote": "New virtual machines are secure by default, initially configured without any firewall rules allowing incoming traffic. To enable incoming traffic, users must create firewall rules tailored to their needs.",
+      "note": "Inbound rules by remote IP prefix, protocol, port range. Public IP is optional/attachable (private IPs otherwise); bastion servers documented. No HTTPS preview URLs.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VMs (OpenStack-based) with root on Ubuntu images; iptables/nftables/ufw should work. Not documented explicitly.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.hyperstack.cloud/docs/storage/volumes/shared-storage-volumes.md",
+      "quote": "After creation, volumes can be attached to any VM for data storage. Each virtual machine can have a maximum of **10 volumes** attached at any given time.",
+      "note": "Shared Storage Volumes (SSV) = network SSD block storage, ~$0.07/GB-month, persist beyond VM lifecycle; K8s CSI driver available.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/storage/volumes/shared-storage-volumes.md",
+      "quote": "Currently, we do not support attaching a single volume to multiple VMs simultaneously.",
+      "note": "Despite the name, SSVs are single-attach block volumes. 'High-Performance File Storage (In-Development)' shared file system is waitlist-only. S3-compatible object storage exists (not a first-party mount).",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.hyperstack.cloud/docs/hardware/flavor-labels",
+      "quote": "typically due to limitations in the underlying hardware or virtualization technology that prevent saving and restoring VM states",
+      "note": "Hyperstack is an OpenStack-based GPU IaaS cloud (full VMs, root access, SSH, hibernation/snapshot of VM state); OpenStack's standard hypervisor is KVM/QEMU, but no docs page names the hypervisor explicitly. Derived, medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/custom-images",
+      "quote": "In addition to the default images provided in Hyperstack, users can create custom operating system (OS) images from previously created snapshots.",
+      "note": "Custom images are built only from snapshots of your own Hyperstack VMs, not imported from a Docker/OCI image. Docker itself runs fine inside the VM (docs/tutorials/docker-support) but that's containers-inside-a-VM, not booting the VM from an OCI image.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is NexGen Cloud's flagship GPU-as-a-Service platform, built to power the next generation of AI, ML and HPC workloads.",
+      "note": "not offered: outside the product's scope (GPU VM/Kubernetes IaaS, no managed/real browser product)",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is NexGen Cloud's flagship GPU-as-a-Service platform, built to power the next generation of AI, ML and HPC workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is NexGen Cloud's flagship GPU-as-a-Service platform, built to power the next generation of AI, ML and HPC workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.hyperstack.cloud/docs/network/public-ip",
+      "quote": "These addresses can be allocated dynamically or statically. Dynamic public IP addresses are assigned from a pool and can change when the VM is stopped or deallocated. In contrast, static public IP addresses remain consistent, ensuring reliability for applications needing stable IP configurations.",
+      "note": "Datacenter (OpenStack cloud) IPs; the same public IP used for inbound is used for outbound, and can be requested as static.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/hibernation",
+      "quote": "If your account balance falls below $0, all active VMs will be immediately transitioned into a hibernated state.",
+      "note": "The only automatic stop/hibernate trigger documented is a negative billing balance, not idle/inactivity. VMs otherwise run until the user stops/hibernates/deletes them.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/ai-studio",
+      "quote": "AI Studio is Hyperstack's inference platform: an OpenAI-compatible API over a catalog of text and image models, with playgrounds and knowledge bases.",
+      "note": "not offered: outside the product's scope. AI Studio is model inference (and routes third-party coding agents like Claude Code to its own models via a local proxy); there is no first-party browser/computer-use/research task-agent API.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.hyperstack.cloud/docs/libraries/javascript",
+      "quote": "Use the SDK for JavaScript and TypeScript to streamline cloud operations and management from your codebase.",
+      "note": "First-party JavaScript/TypeScript SDK for the management API (alpha); VMs themselves are plain Linux images where Node.js can be installed.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/network/firewalls",
+      "quote": "It contains rules that govern inbound and outbound traffic for virtual machines, allowing or denying access based on properties such as the direction of traffic, source or destination IP, protocol, ethertype, and port range.",
+      "note": "Firewall rules operate at IP/CIDR + protocol + port level only; no HTTP method/path-level egress control.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is NexGen Cloud's flagship GPU-as-a-Service platform, built to power the next generation of AI, ML and HPC workloads.",
+      "note": "not offered: outside the product's scope. Plain GPU/CPU VM IaaS; no first-party credential-injection proxy documented (only cloud-init and manual env vars/files).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.hyperstack.cloud/docs/network/public-ip",
+      "quote": "In contrast, static public IP addresses remain consistent, ensuring reliability for applications needing stable IP configurations, such as those using DNS or specific firewall rules.",
+      "note": "Static public IPs are assignable and retained across stop/hibernate if the user chooses to keep them; that IP is used for outbound traffic too.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/faq",
+      "quote": "NexGen Cloud has also achieved SOC 2 Type 2, an independent audit of its security controls.",
+      "note": "Security/compliance pages (FAQ, shared responsibility model) mention only SOC 2 Type 2 and data-center tier certification; no HIPAA/BAA mention anywhere in docs, pricing, or trust pages.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/resource-management/organization",
+      "quote": "log in to their existing Hyperstack account or create a new account using one of the supported Email or Single Sign-On (SSO) methods",
+      "note": "The 'SSO' referenced is a social/OAuth login option for individual account signup (alternative to email/password), not an enterprise SAML/OIDC SSO integration for an organization's identity provider; no such enterprise SSO feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.hyperstack.cloud/docs/resource-management/regions",
+      "quote": "NORWAY-1 Vestland, Norway Sustainably Powered Region",
+      "note": "NORWAY-1 is an EEA/European data-center region where resources and data can be kept; the card's own regions list includes 'eu'.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/hibernation",
+      "quote": "This functionality is especially useful when you want to retain a VM for future use without incurring costs for idle resources.",
+      "note": "No maximum runtime is documented anywhere (FAQ, VM lifecycle, hibernation, billing states); VMs run until the user stops/hibernates/deletes them or the account balance goes negative.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/change-vm-flavor",
+      "quote": "Hyperstack does not support changing a flavor on an existing VM in place. Instead, flavor changes are performed using a snapshot-and-redeploy workflow.",
+      "note": "No clone/fork VM endpoint exists anywhere in the API reference (checked sitemap: VM operations are create/get/list/delete/start/stop/hibernate/resize/snapshot only, no clone/fork). Duplicating a VM requires manually snapshotting the disk, making a custom image, and deploying a brand-new VM from it — a manual multi-step workflow, not a first-party fork feature.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/snapshots",
+      "quote": "A virtual machine (VM) snapshot captures an image of the VM's system at a specific point in time by saving its configuration and bootable volume data to disk for future restoration. ... If the VM is ACTIVE, it is temporarily SHUTOFF during the snapshot",
+      "note": "Snapshotting (the only path to duplicate a VM's disk) briefly stops the VM; there is no clone-while-running capability, let alone one preserving in-memory state.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/snapshots",
+      "quote": "A virtual machine (VM) snapshot captures an image of the VM's system at a specific point in time by saving its configuration and bootable volume data to disk for future restoration.",
+      "note": "Snapshots save disk/config only, not RAM/process state (no mention of memory in the snapshot or hibernation docs); there is no fork feature at all to include memory.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/console-logs",
+      "quote": "View a virtual machine's console logs to see storage, networking, cloud-init, and service details. ... The console logs provide a detailed record of a virtual machine's boot process, capturing each stage from hardware initialization to system service startup.",
+      "note": "The only 'console' feature is text boot/serial logs, not a graphical desktop (no VNC/RDP/streaming desktop is documented anywhere in the docs).",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is a cloud GPU platform by Nexgen Cloud, offering on-demand access to high-performance GPUs for AI, ML, and computational workloads.",
+      "note": "Plain GPU/CPU IaaS (VMs, K8s, storage, AI Studio inference API); no screenshot+click computer-use API is documented anywhere in the API reference or docs.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/hibernation",
+      "quote": "In Hyperstack, you can hibernate a Virtual Machine Using the UI ... any public IP address attached to a VM that is hibernated due to insufficient balance will be automatically released.",
+      "note": "Hibernation is triggered manually (UI/API) or automatically only by negative billing balance; restoring requires an explicit API/UI restore call. No mechanism wakes a stopped/hibernated VM automatically when an inbound request arrives.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/network/firewalls",
+      "quote": "New virtual machines are secure by default, initially configured without any firewall rules allowing incoming traffic. To enable incoming traffic, users must create firewall rules tailored to their needs.",
+      "note": "Firewall rules only gate raw IP/port/protocol traffic to a VM's own public IPv4; there is no provider-managed HTTPS URL / TLS-terminating ingress feature (you'd have to run and cert your own web server on the VM's IP).",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/images",
+      "quote": "Image requirement: Ubuntu Server 24.04 LTS",
+      "note": "VMs boot from plain Ubuntu (or custom images you build yourself); no coding-agent harness (Claude Code, Codex, OpenCode, etc.) is preinstalled or offered as a template/flavor.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.hyperstack.cloud/docs/libraries/mcp-server/",
+      "quote": "The Hyperstack API MCP Server enables natural-language infrastructure management through MCP-compatible AI clients, translating plain-English requests into authenticated Hyperstack API operations. Connect your client to the server Hyperstack hosts, or run your own instance. ... This MCP server can create, modify, and delete real Hyperstack resources, which may incur charges on your account.",
+      "note": "Hyperstack ships a first-party MCP server (hosted and self-hosted options) that controls VMs/infrastructure via the Hyperstack API — this is exactly the mcp_server feature (provider ships an MCP server to control its sandboxes/VMs). Card's false is incorrect; correcting to true.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/images",
+      "quote": "Image requirement: Ubuntu Server 24.04 LTS",
+      "note": "Only Linux (Ubuntu) images are listed on the flavors/images pages; no Windows image or OS option is documented anywhere in hardware/flavors, images, or custom-images docs.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is a cloud GPU platform by Nexgen Cloud, offering on-demand access to high-performance GPUs for AI, ML, and computational workloads.",
+      "note": "GPU cloud running KVM-based Linux VMs on NVIDIA GPU hardware; macOS is outside what the product is (no Apple hardware/macOS VM offering anywhere in docs).",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/hardware/flavors",
+      "quote": "GPU and CPU configurations, specs, and regional availability",
+      "note": "All listed flavors (n1-cpu-*, n3-*) and OS images are x86_64 (Ubuntu Server 24.04 LTS on NVIDIA GPU/Intel-AMD CPU hosts); no ARM/aarch64 flavor or image is documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is a cloud GPU platform by Nexgen Cloud, offering on-demand access to high-performance GPUs for AI, ML, and computational workloads.",
+      "note": "Hyperstack is Nexgen Cloud's own multi-tenant public cloud service (VMs/K8s/storage on Hyperstack-owned data centers); no on-prem/self-hosted software distribution is offered.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is a cloud GPU platform by Nexgen Cloud, offering on-demand access to high-performance GPUs for AI, ML, and computational workloads.",
+      "note": "Resources run in Hyperstack/Nexgen Cloud's own regions (CANADA-1, NORWAY-1, US-1); no bring-your-own-cloud-account deployment option is documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.hyperstack.cloud/gpu-pricing",
+      "quote": "Hyperstack is a cloud GPU platform by Nexgen Cloud, offering on-demand access to high-performance GPUs for AI, ML, and computational workloads.",
+      "note": "Proprietary commercial cloud platform (OpenStack-based infrastructure underneath is not the same as Hyperstack itself being open source); no OSI-licensed core product is published. Only the docs/API MCP server client tooling is open (self-hostable), not the core platform.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/virtual-machines/change-vm-flavor",
+      "quote": "Hyperstack does not support changing a flavor on an existing VM in place. Instead, flavor changes are performed using a snapshot-and-redeploy workflow.",
+      "note": "Changing CPU/RAM/GPU requires snapshotting the disk, converting to a custom image, and deploying a brand-new VM with the new flavor — the running VM is not resized in place.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "on-demand-h100-pcie": "dedicated",
+        "on-demand-a100-pcie": "dedicated",
+        "on-demand-rtx-pro-6000": "dedicated",
+        "on-demand-l40": "dedicated",
+        "on-demand-rtx-a6000": "dedicated",
+        "on-demand-rtx-a4000": "dedicated",
+        "on-demand-h100-sxm-8x": "dedicated",
+        "on-demand-h100-nvlink-8x": "dedicated",
+        "on-demand-h200-sxm-8x": "dedicated",
+        "on-demand-a100-sxm-8x": "dedicated",
+        "on-demand-b200-8x": "dedicated",
+        "on-demand-b300-8x": "dedicated",
+        "spot-h100-pcie": "dedicated",
+        "spot-rtx-pro-6000": "dedicated",
+        "spot-a100-pcie": "dedicated",
+        "spot-l40": "dedicated",
+        "spot-rtx-a6000": "dedicated",
+        "on-demand-a100-nvlink-8x": "dedicated",
+        "on-demand-cpu": "dedicated",
+        "reserved": "dedicated"
+      },
+      "source": "https://docs.hyperstack.cloud/docs/hardware/parallel-workloads",
+      "quote": "All our virtual machine flavors are dedicated and adhere to a 1:1 mapping with physical resources, ensuring optimal performance without oversubscription.",
+      "note": "This statement applies to 'all our virtual machine flavors' (not just the x4/x8 NUMA-pinned ones described elsewhere on the same page), so it covers every GPU flavor (on-demand, spot, reserved) and the CPU-only flavors alike: dedicated 1:1 vCPU-to-physical-core mapping, no oversubscription/sharing.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.hyperstack.cloud/docs/faq",
+      "quote": "Navigate to the Billing page and select Resource Activity to see a breakdown by snapshot. [... available through] https://console.hyperstack.cloud/billing. The status of your virtual machines can also be accessed through the List virtual machines Infrahub API endpoint by making a GET request to /cor",
+      "note": "granularity: account-only; cost: yes; Hyperstack provides a web-based Billing dashboard (https://console.hyperstack.cloud/billing) with Resource Activity breakdown, but no REST API endpoint for retrieving billable usage (cost, GPU-hours, CPU-seconds) per sandbox/VM. The Infrahub API exposes VM state information only (/core/virtual-machines endpoint), not usage/cost. Billing is available only through the console UI and email balance alerts.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "NO",
+      "state": null,
+      "city": "Vestland",
+      "provider_region": "NORWAY-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Quebec",
+      "provider_region": "CANADA-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Texas",
+      "provider_region": "US-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.hyperstack.cloud/docs/resource-management/regions",
+  "locations_quote": "Hyperstack provides multiple regions (e.g., CANADA-1, NORWAY-1, US-1), each corresponding to a dedicated data center located in the country reflected in its name. Region Comparison Table: NORWAY-1 Vestland, Norway; CANADA-1 Quebec, Canada; US-1 Texas, United States.",
+  "locations_checked": "2026-10-01"
+}

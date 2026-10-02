@@ -1,0 +1,723 @@
+{
+  "id": "tenki",
+  "name": "Tenki Sandbox",
+  "url": "https://tenki.cloud/pricing",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Sandbox session (allocated vCPU + RAM per second while running)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm",
+        "image_oci": false
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.0504,
+      "ram_gib_h": 0.0162,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 1,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "$0.000014/vCPU-s, $0.0000045/GiB-s; 'no minimums or per-seat fees'. Default shape 2 vCPU / 4 GiB / 5 GiB root disk. Starter max 4 cores / 8 GB, Team 16 / 64 GB, Enterprise larger. Sandbox disk $0.00000003/GiB-s beyond 5 GiB free. Paused sessions: no compute, don't count toward concurrency, preserved memory+disk counts against the workspace storage pool ($0.20/GiB-month). Non-sticky sessions pause at max duration; sticky sessions run (and bill) until terminated. A create whose wait times out may still reach RUNNING and bill until max duration. Basis check 2026-09-28: 'Sandbox vCPU and memory are metered per second while a sandbox is active' (https://tenki.cloud/pricing): per second in the RUNNING state at the configured shape, with no usage metering, so alloc. Changelog 2026-09-18: 'Removed the --idle-timeout option from sandbox create, which never had any effect' (https://www.tenki.cloud/docs/changelog), so auto_stop_idle stays false."
+    },
+    {
+      "key": "ci-runner-x64",
+      "label": "Tenki Runners, Linux x64 GitHub Actions (per core-minute)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "pause_resume": false,
+        "fork": false,
+        "snapshot": "none",
+        "persistent_disk": false,
+        "ssh": false,
+        "inbound_https": false,
+        "wake_on_request": false,
+        "fork_running": false,
+        "memory_snapshot_fork": false,
+        "isolation": "bare-metal-vm",
+        "image_oci": null
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 32,
+      "sizes": [
+        {
+          "name": "tenki-standard-small-2c-4g",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 86,
+          "hour": 0.24,
+          "month_cap": null
+        },
+        {
+          "name": "tenki-standard-medium-4c-8g",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 150,
+          "hour": 0.48,
+          "month_cap": null
+        },
+        {
+          "name": "tenki-standard-large-8c-16g",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "hour": 0.96,
+          "month_cap": null
+        },
+        {
+          "name": "tenki-standard-large-plus-16c-32g",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 300,
+          "hour": 1.92,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "$0.002/core-minute = $0.12/core-hour, RAM and disk included; billed per second of job runtime (each started second rounded up), queue time free. Bare-metal AMD EPYC, one ephemeral VM per job, ~15 s cold start. Not an interactive sandbox: CI jobs only. Starter: 2c/4g (4c/8g with card); Team up to 16c/32g. Shares the plan's concurrent-session limit with sandboxes."
+    },
+    {
+      "key": "ci-runner-macos",
+      "label": "Tenki Runners, macOS (Apple M4 Pro) GitHub Actions (per core-minute)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "pause_resume": false,
+        "fork": false,
+        "snapshot": "none",
+        "persistent_disk": false,
+        "ssh": false,
+        "inbound_https": false,
+        "macos": true,
+        "arm64": true,
+        "wake_on_request": false,
+        "fork_running": false,
+        "memory_snapshot_fork": false,
+        "isolation": "vm",
+        "image_oci": null
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 32,
+      "sizes": [
+        {
+          "name": "tenki-macos-26-mini",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 140,
+          "hour": 2.4,
+          "month_cap": null
+        },
+        {
+          "name": "tenki-macos-26-small",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 140,
+          "hour": 4.8,
+          "month_cap": null
+        },
+        {
+          "name": "tenki-macos-26-medium",
+          "vcpu": 6,
+          "ram_gib": 16,
+          "disk_gib": 140,
+          "hour": 7.2,
+          "month_cap": null
+        },
+        {
+          "name": "tenki-macos-26-large",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 140,
+          "hour": 9.6,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "$0.020/core-minute = $1.20/core-hour (hour = cores x $1.20). CI jobs only, macOS 26 Tahoe (macOS 15 labels also listed in docs). Plan size gating for macOS labels not documented beyond the general Starter/Team limits."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 5,
+    "disk_gib_month": 0.07884,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": 0.2,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 5,
+      "max_session_h": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "note": "$100 one-time sign-up credit (first workspace only). 5 members, 5 concurrent sessions (shared by runner jobs and sandboxes), 100 GiB storage pool. Balance-gated: prepaid top-ups min $20, purchased credits never expire; optional daily spending limit."
+    },
+    {
+      "name": "Team (monthly)",
+      "fee": 250,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 100,
+      "per_seat": 0,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "$250/month billed monthly; $100/month credits, no rollover; 50 members; 100 concurrent; 1,000 GiB storage pool; priority support. Upgrading drains any remaining Starter sign-up credit."
+    },
+    {
+      "name": "Team (annual)",
+      "fee": 200,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 100,
+      "per_seat": 0,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "$200/month billed yearly ($2,400/yr up-front commitment, '20% saved'); otherwise identical to Team monthly. Flagged 'sales' per ENGINE_CARD (annual commit = opt-in), so the default estimate uses the $250 monthly price (docs/pricing.md: '$200/mo billed yearly, $250/mo billed monthly')."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Discounted rates, larger machines, higher/unlimited concurrency, more storage, SLA, custom invoicing, on-demand dedicated servers (custom pricing). Unpublished."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 100
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": true,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "isolation": "vm",
+    "image_oci": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "fast_boot": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": 690.89,
+    "burst_tti_ms": 925,
+    "dax_s": 116.2
+  },
+  "perf_source": "benchmarks.json computesdk: cold_start_tti median 690.89 ms (2026-08-07), burst_tti median 925 ms at 100 concurrency (2026-09-25), DAX total 116.2 s (2026-09-25; env 8 logical CPUs / 15.8 GiB / x86_64). Measured the sandbox product, not runners. No hpc CPU run.",
+  "knobs": [],
+  "caveats": [
+    "One credit pool per workspace is shared by sandboxes, CI runner minutes and code reviews ($1.00/review); plan concurrency (5 / 100) is also shared between runner jobs and sandbox sessions.",
+    "Two storage meters: 'Sandbox Disk' $0.00000003/GiB-s (= $0.000108/GiB-h, $0.07884/GiB-month at 730 h) beyond 5 GiB free per session, presumably while the session exists/runs (engine charges per month); and 'Storage' $0.20/GiB-month from the first byte ($0.000000076/GiB-s on the pricing page) for snapshots, volumes, runner caches and paused-session state, one pool per workspace capped at 100 GiB (Starter) / 1,000 GiB (Team).",
+    "Whether 'Sandbox Disk' keeps billing while a session is paused is undocumented; card assumes paused state is billed only via the $0.20 storage pool (disk_billed_when_stopped false).",
+    "No idle auto-pause: the --idle-timeout option was removed on 2026-09-18 because it 'never had any effect'. Non-sticky sessions pause at their max duration (since 2026-09-11); the default max duration value is unpublished. Sticky sessions bill until terminated.",
+    "Pricing-page plan cards now show '$100 sign-up credit' for Starter, but the pricing-page FAQ still says 'Starter's $10/month goes to your oldest workspace'; docs (llms-full billing section) say the $100 sign-up credit is a one-time grant per account (first workspace, no card) and pre-existing workspaces 'no longer receive the $10 monthly Starter credit'. Card uses $100 one-time.",
+    "Team is $250/month billed monthly or $200/month billed yearly (docs pricing table); the pricing page shows $200 with '20% Saved'. Team's $100/month credit is separate from the fee (fee_is_credit false) and does not roll over.",
+    "Other one-time credits: $10 for sharing a Tenki Runners post (one per user); startup program up to $50K credits and grants.",
+    "Runner modes are CI minutes (product class ci-runner, not flagged alt): they rank in CI questions and show as a different kind of product elsewhere. Runner RAM and disk are bundled in the per-core price, so $/h is higher than the sandbox rate for the same 4c/8g ($0.48 vs $0.3312).",
+    "Egress/ingress pricing not published (null): re-checked 2026-09-28 on https://tenki.cloud/pricing and https://tenki.cloud/docs/pricing.md, neither lists any network/egress charge (not stated as free either). No public IPv4; HTTPS preview URLs (20 per workspace plan) and SSH.",
+    "Region: docs mention a default 'US region' for the SSH gateway; other regions not documented. Owned hardware (Luxor Technology); hypervisor not named.",
+    "Starter per-session limit 4 cores / 8 GB; Team 16 / 64 GB; runners on Team only up to 16c/32g.",
+    "Outbound allowlists (features.egress_allowlist) are not self-serve: 'Tenki must enable session egress policies for your workspace first' (contact support).",
+    "Named preview-URL slugs (a stable wildcard under *.sb.tenki.sh) are Team-plan only, one per workspace."
+  ],
+  "sources": [
+    "https://tenki.cloud/pricing",
+    "https://tenki.cloud/docs/pricing.md",
+    "https://tenki.cloud/docs/account/billing",
+    "https://tenki.cloud/docs/runners/limits-and-concurrency.md",
+    "https://tenki.cloud/docs/runners/sizes.md",
+    "https://tenki.cloud/docs/sandbox/concepts.md",
+    "https://tenki.cloud/docs/sandbox/sessions.md",
+    "https://tenki.cloud/docs/sandbox/chrome.md",
+    "https://tenki.cloud/llms-full.txt",
+    "https://www.computesdk.com/benchmarks/sandboxes/"
+  ],
+  "fleet": {
+    "default_max_instances": 5,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Starter 5; Team 100; Enterprise higher custom.",
+    "notes": "Concurrent sessions are shared by runner jobs and sandbox sessions. 10/50 need Team; 300/1,000 require Enterprise. Storage and allowed machine sizes additional constraints.",
+    "sources": [
+      "https://tenki.cloud/docs/pricing.md",
+      "https://tenki.cloud/docs/runners/limits-and-concurrency.md"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 3,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://tenki.cloud/docs/changelog.md",
+      "quote": "Paused sandboxes at their maximum duration so their state is preserved.",
+      "note": "Changelog 2026-09-11. The only trigger is reaching max duration (non-sticky sessions). There is NO idle trigger: '--idle-timeout ... never had any effect' was removed 2026-09-18. Pause keeps memory and disk (concepts: 'Pause it to free compute while preserving files and memory'). A process started over exec keeps its PID across a pause. /tmp is cleared, and open TCP/SSH/preview connections close. Resume is an explicit call; there is no wake-on-request. pauseRetentionMs controls how long paused state is kept. Sticky sessions never auto-pause.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://tenki.cloud/docs/sandbox/concepts.md",
+      "quote": "A snapshot captures both a session's disk and memory, so a restored session comes back with its running processes and in-memory state intact, not just its files.",
+      "note": "Memory included. One-to-many: 'you can start many new sessions from the same snapshot' (fork). The session 'briefly pauses, then keeps running'. Snapshots take an optional expires_at and can be published to the workspace registry as images. Attached volumes are not captured or re-attached. Available via CLI, TS/Python/Go SDKs and MCP.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/sdk.md",
+      "quote": "OpenCode then runs inside the session. The SDKs enable it at create time but do not expose an API for driving it programmatically once the session is running.",
+      "note": "enableOpenCode/openCodeProvider only installs and wires OpenCode at create time. Prebuilt images for Grok, Droid (droid exec), Pi and Anchor are driven through the generic exec API. The Tenki MCP server (@tenkicloud/mcp, plus hosted OAuth MCP) runs the other way round: an outside agent drives sandboxes, not an agent inside them.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://tenki.cloud/docs/sandbox/sessions.md",
+      "quote": "Set allowed domains or IPv4 CIDRs when you create a session to restrict its outbound destinations.\nTenki must enable session egress policies for your workspace first.",
+      "note": "Per-session allowDomains (hostnames, *. wildcards) and allowCidrs (IPv4) are create-time only. allowOutbound:false blocks all outbound. Workspace-level network restrictions sit on top: 'An allowlist cannot override disabled outbound access or widen workspace network permissions.' Not self-serve: support has to enable it for the workspace, otherwise create fails with failed_precondition. Enforcement mechanism (SNI vs DNS vs IP) is not documented.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://tenki.cloud/docs/sandbox/sessions.md",
+      "quote": "`allow_inbound` enables inbound exposure workflows; with `allow_inbound=false`, port exposure is rejected",
+      "note": "Ports are exposed one at a time by explicit call (preview-url create/expose), with an optional TTL (added 2026-09-18) and unbind/delete. There is no public IPv4. BUT preview URLs carry no auth: chrome.md says the preview URL 'is the only thing standing between the public internet and full keyboard and mouse control ... Treat it as a bearer secret'. No IP allowlist and no private/authenticated preview mode. A private alternative is dial(), a byte stream to a guest Unix socket over the authenticated data plane ('nothing is published on the internet'). SSH goes through Tenki's SSH gateway using authorized keys.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full VM ('Hardware-isolated VMs — Its own kernel, not a shared-kernel container'), with passwordless sudo, Docker and systemd. The hypervisor is not named. nftables/iptables are not mentioned in the docs.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/sessions.md",
+      "quote": "Environment variables are plaintext configuration, not a secret-management channel.\nDo not pass long-lived credentials through `env`.",
+      "note": "No credential-injecting proxy. Runtime secrets can only go in as env vars or files (the Anchor blog passes ANCHOR_API_KEY via --env). Template buildSecrets are encrypted and 'never reach the runtime', but they cover builds only. The githubToken create option is documented as letting 'private clones work without provisioning credentials inside the guest'; whether this is proxied is not explained. Runners: 'Tenki does not operate a secrets store' (GitHub Actions secrets).",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://tenki.cloud/docs/sandbox/volumes.md",
+      "quote": "Persistent volumes are workspace-scoped block storage that survives the session it was used in.",
+      "note": "1 MiB to 50 GiB, resizable. Attach at create or on a running session, with a read-only option. Billed from the $0.20/GiB-month workspace storage pool.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/volumes.md",
+      "quote": "The one worth handling is in-use: the volume is still attached to another session, so detach it from that session or wait, then retry.",
+      "note": "Block volumes attach to one session at a time (an 'in-use' error when attached elsewhere). Concepts mentions 'datasets shared across sessions', but that means sequential reuse. Nothing documents concurrent read-only multi-attach. No network FS or bucket mount.",
+      "checked": "2026-09-29"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/anchor.md",
+      "quote": "Anchor Chromium: a hardened Chromium fork with humanized fingerprints and human-like mouse and keystroke behavior. Stealth mode, proxies, captcha solving, and Cloudflare Web Bot Auth are available as add-ons.",
+      "note": "Stealth/anti-fingerprinting is a third-party integration (Anchor Browser, a separate company/product) that Tenki's docs show how to connect to over CDP; it is not a Tenki-operated feature. Tenki itself ships a plain sandbox/CI VM with no built-in browser stealth. not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/anchor.md",
+      "quote": "Stealth mode, proxies, captcha solving, and Cloudflare Web Bot Auth are available as add-ons.",
+      "note": "Captcha solving is offered only through the third-party Anchor Browser integration, not by Tenki itself. not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://tenki.cloud/docs/runners/networking.md",
+      "quote": "Tenki operates a dedicated public subnet, a fixed CIDR that all Tenki Runner traffic egresses from. By default, the range is shared across all tenants on the fabric, with multiple runners sharing a single egress IP through NAT.",
+      "note": "Documented for Tenki Runners' egress fabric (shared datacenter subnet, NAT'd); no separate sandbox-specific egress-IP page exists, but sandboxes ride the same bare-metal network fabric. No residential/mobile IP options are mentioned anywhere.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/concepts.md",
+      "quote": "The session briefly pauses, then keeps running... A snapshot is one-to-many: you can start many new sessions from the same snapshot.",
+      "note": "Forking new sessions from a running one goes through a snapshot, which briefly pauses the source session while it is captured; there is no clone-while-running-uninterrupted primitive.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/changelog.md",
+      "quote": "Removed the --idle-timeout option from sandbox create, which never had any effect.",
+      "note": "No idle-based pausing exists, and resume/unpause is always an explicit API/CLI call; nothing in the docs auto-wakes a paused/sticky session when a request arrives (e.g. against a preview URL).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/cli.md",
+      "quote": "--vcpu <n> / --ram <size>: shape at create time",
+      "note": "vCPU/RAM shape is a create-time parameter; the docs describe volume resize (extra block storage) but never a running session's compute shape being changed without recreating it.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/anchor.md",
+      "quote": "Your sandbox gives agents a place to run. Anchor gives them a browser they can actually use once they get there.",
+      "note": "Tenki has no first-party browser/computer-use/research agent of its own to drive via API; browser-agent capability is provided entirely by the third-party Anchor Browser integration. not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/sessions.md",
+      "quote": "Domains must be hostnames such as pypi.org, without a URL scheme, path, or port. ... CIDRs must be IPv4 prefixes, such as 203.0.113.10/32 for one address.",
+      "note": "Session egress allowlists operate only at the domain/CIDR level; there is no HTTP method- or path-level rule support documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://tenki.cloud/docs/runners/networking.md",
+      "quote": "If you require a dedicated IP block, for example to allowlist only your CI traffic in a partner's firewall, we can sub-allocate a range to your workspace. A dedicated allocation costs $100 per IP per month.",
+      "note": "Documented for Tenki Runners as a paid add-on (dedicated/fixed IP sub-allocation); no separate confirmation for the sandbox product specifically, but it is offered on the same network fabric under the Networking & Egress docs.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://tenki.cloud/docs/sandbox/cli.md",
+      "quote": "--sticky: discard --max-duration, report a warning, run until terminated, and keep sticky enabled across manual pause and resume",
+      "note": "Non-sticky sessions have an unpublished default max duration (after which they auto-pause), but marking a session sticky removes any duration cap entirely and it runs until you terminate it, so the provider does not enforce a hard ceiling on session length.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://tenki.cloud/docs/sandbox/concepts.md",
+      "quote": "A snapshot captures both a session's disk and memory, so a restored session comes back with its running processes and in-memory state intact, not just its files.",
+      "note": "Contradiction confirmed: pause/resume and snapshot both keep the session's disk (files) intact, and persistent volumes ('workspace-scoped block storage that survives the session it was used in') are also offered. Default on timeout/idle is now pause (preserves disk+memory), not delete, since non-sticky sessions auto-pause at max duration. persistent_disk should be true; the false value in the card is wrong.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/chrome.md",
+      "quote": "A visible browser needs a display and a way to see it from outside. A whole desktop environment is overkill for that, and so is a window manager: Chrome sizes and places its own window from its flags.",
+      "note": "No managed desktop/VNC/RDP product. The docs show a DIY tutorial where the customer installs Xvfb+x11vnc+noVNC themselves inside a plain Ubuntu VM to get a single browser window visible; there is no first-party desktop environment.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/chrome.md",
+      "quote": "A sandbox session is a full Linux VM, so a browser runs in it the same way it runs on any Ubuntu box. This guide installs Google Chrome once, captures it in a snapshot...",
+      "note": "Chrome/Chromium is not preinstalled or managed; the customer must apt-install it and bake it into their own snapshot/template. No first-party managed browser is shipped.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/chrome.md",
+      "quote": "Run Chrome-family browsers headless or headed in a Tenki Sandbox, connect over CDP, watch through noVNC, and give a computer-use agent control.",
+      "note": "This is a customer-built DIY guide (systemd units for Xvfb/x11vnc/noVNC + raw CDP), not a provider-hosted computer-use API/screenshot-and-click endpoint. No first-party computer-use product.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/templates.md",
+      "quote": "A few things are out of scope today: ... Dockerfile ingestion and full devcontainer features.",
+      "note": "Custom environments are built via Tenki's own template system (base image + Git context + build steps), not by starting a session from an arbitrary Docker/OCI image; Dockerfile/devcontainer ingestion is explicitly unsupported.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.tenki.cloud/docs/changelog",
+      "quote": "Removed the --idle-timeout option from sandbox create, which never had any effect",
+      "note": "No idle-based auto-pause/stop exists. Non-sticky sessions only auto-pause on reaching a max duration timer (not idleness); sticky sessions bill until explicitly terminated.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/sessions.md",
+      "quote": "`expose` returns HTTPS preview URLs that carry WebSocket traffic ... use the returned URL rather than constructing your own, the hostname pattern isn't a stable contract.",
+      "note": "Sandbox inbound access is only via shared-hostname HTTPS preview URLs and an SSH gateway; there is no per-machine dedicated public IPv4. (Runners docs even describe egress-only 'dedicated IP allocation' for outbound CI traffic, separate from inbound sandbox IPv4.)",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/sandbox/chrome.md",
+      "quote": "Xvfb runs an X server in memory, with no GPU or monitor.",
+      "note": "No GPU instance type is offered anywhere in pricing or docs; the card's own features.gpu_types is empty. Only CPU-only Linux VMs and CPU CI runners exist.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://tenki.cloud/llms-full.txt",
+      "quote": "If you do not use Homebrew, GitHub Releases ship archives for macOS, Linux, and Windows.",
+      "note": "That line is about the third-party 'Crabbox' CLI tool shipping a Windows binary, not a Tenki-hosted Windows machine. No Tenki sandbox or runner OS is Windows; offerings are Linux VMs and (separately) macOS CI runners.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://tenki.cloud/docs/runners/macos-runners.md",
+      "quote": "Tenki macOS Runners run on Apple Silicon M4 Pro hardware in four sizes, from 2 to 8 vCPU. Standard runners are available with macOS 15 Sequoia or macOS 26 Tahoe.",
+      "note": "Tenki does offer real macOS machines (as CI runners, a separate product from the interactive Linux sandbox, but still a first-party Tenki-hosted machine type). features.macos should be true; the card's own ci-runner-macos mode already records os:['macos'] and macos:true.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://tenki.cloud/docs/runners/macos-runners.md",
+      "quote": "Tenki macOS Runners run on Apple Silicon M4 Pro hardware",
+      "note": "The macOS runner fleet is Apple Silicon (arm64) hardware, so Tenki does offer arm64 machines. features.arm64 should be true, matching the card's ci-runner-macos mode (arm64:true). The interactive sandbox product itself is x86-64 only, but the provider overall offers ARM machines.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://tenki.cloud/company/security.md",
+      "quote": "All Tenki compute runs in SOC 2-attested data-center facilities with physical access controls, environmental monitoring, and audit logging.",
+      "note": "Tenki is a SaaS platform running on its own/parent-company (Luxor) owned data-center hardware; there is no documented product, image, or license that lets a customer run the Tenki Sandbox/Runners control plane or hypervisor on their own infrastructure. The Terms of Service contain one unexplained boilerplate reference to a capitalized 'Self-Hosted Services' term, and the only concrete 'self-hosted' references in the docs are to GitHub's own self-hosted Actions runners (a GitHub concept, not a Tenki one), so this is kept false but not high confidence.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://tenki.cloud/llms-full.txt",
+      "quote": "Private connectivity (PrivateLink, VPC peering) ... AWS PrivateLink and VPC peering are not currently configured on our fabric.",
+      "note": "No bring-your-own-cloud deployment model is documented anywhere; Tenki runs its own hardware (Luxor Technology) and doesn't even offer private network peering into a customer's cloud account yet, let alone deploying its control/data plane into one.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://tenki.cloud/llms-full.txt",
+      "quote": "Tenki's public tenki/pi:stable image ... pins Pi, an open source minimal terminal coding harness",
+      "note": "Only bundled third-party agent tools (Pi, etc.) are open source; the Tenki Sandbox/Runners platform itself has no published license, source repo, or open-source claim anywhere in the docs or pricing pages.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://tenki.cloud/llms-full.txt",
+      "quote": "Legacy SSH gateway discovery defaults to the US region; session-aware clients still use the sandbox's own region.",
+      "note": "The only region ever named in docs, pricing, or the changelog is 'US'; no EU/other region is offered or documented, so there is no way to keep machines/data in an EU region.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://tenki.cloud/company/security.md",
+      "quote": "Tenki is aligned with SOC 2 Type II and ISO 27001 security practices... Is Tenki GDPR-compliant? Tenki processes customer data in alignment with the EU General Data Protection Regulation (GDPR). A Data Processing Agreement (DPA) is available on request... Full GDPR certification is on our compliance roadmap.",
+      "note": "Tenki's dedicated security/compliance page and FAQ explicitly enumerate its compliance posture (SOC 2 Type II via parent Luxor, SOC 2/ISO 27001-attested data centers, GDPR alignment + DPA, and notes GDPR certification as a roadmap item) but never mentions HIPAA, a BAA, or PHI handling anywhere in that page or the rest of the docs/llms-full.txt. Given how explicit and current this compliance page is about what it does and doesn't yet support, absence of any HIPAA/BAA claim indicates it is not currently offered.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://tenki.cloud/llms-full.txt",
+      "quote": "Launched new Login Methods feature, allowing users to link multiple login options including email/password and GitHub... Added Google sign-in and sign-up.",
+      "note": "Tenki's documented login/account methods are email+password, GitHub OAuth, and Google sign-in, plus optional 2FA on the account. No SAML, OIDC enterprise SSO, Okta/Entra/identity-provider integration, or 'SSO'/'single sign-on' term appears anywhere in the docs, changelog, pricing, or security pages, including the Enterprise plan's listed perks (custom credits, SLA, dedicated support/Slack channel) which do not mention SSO.",
+      "checked": "2026-09-30"
+    },
+    "fast_boot": {
+      "value": true,
+      "source": "https://www.computesdk.com/benchmarks",
+      "quote": "burst of 100: p95 938 ms, 100% started",
+      "note": "ComputeSDK sandbox benchmark 2026-09-25",
+      "checked": "2026-09-25"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://tenki.cloud/docs/account/billing.md",
+      "quote": "For each of your workspaces, we track the number of billable events generated during the month... An invoice is generated and the payment is processed. For every workspace, we monitor the total number of billable events created during the month.",
+      "note": "granularity: account-only; cost: no; Tenki provides usage information only through the web dashboard UI (Usage tab showing quota and preview URL usage, Billing page with balance usage charts) and monthly invoices. No REST API endpoint, SDK method, or CLI command exists to programmatically retrieve billable usage by resource, tag, or project. The SDKs (@tenkicloud/sandbox TypeScript, tenki Python, tenki-sdk-go Go) support session lifecycle, volumes, snapshots, and registry operations but have no usage/billing methods.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://tenki.cloud/llms-full.txt",
+  "locations_quote": "Legacy SSH gateway discovery defaults to the US region",
+  "locations_checked": "2026-10-01"
+}

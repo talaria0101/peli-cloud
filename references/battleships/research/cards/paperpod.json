@@ -1,0 +1,513 @@
+{
+  "id": "paperpod",
+  "name": "PaperPod",
+  "url": "https://www.paperpod.dev/",
+  "category": "agent-sandbox",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "native-meter",
+      "label": "Native product meter; not a general-purpose 4-vCPU/8-GiB VM",
+      "flags": [
+        "alt",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Not auto-rankable for generic VM workloads. Native price and usage limits are preserved in provider rate_cards/extras and regimes. Empty sizes intentionally prevents inventing CPU/RAM capacity or treating missing rates as zero.",
+      "metering_example": "The official example prices 50 runs averaging 400 ms as 20 aggregate seconds and $0.002; the underlying billing-clock precision is still not stated."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay per request",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Prepaid via MPP / Tempo / Stripe; no public subscription fee.",
+      "hard_stop_when_credits_exhausted": true
+    }
+  ],
+  "free": {
+    "one_time_credit": 5,
+    "monthly_credit": null,
+    "conditions": "New accounts receive $5 once; signup uses an email magic link and requires no credit card. Credit expiry is not published."
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": null,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "container",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "egress_ip_type": "datacenter",
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "vCPU/RAM, concurrency and session ceilings not published; execution-hour cost is not a 4/8 VM quote.",
+    "Compute, process, and browser operations have separate meters; WebSocket usage is billed per operation, not per connection. Exact rounding of overlapping operations remains unpublished.",
+    "Sandbox filesystem is ephemeral; Agent Memory is persistent but only 10 MB, not 50 GiB snapshots.",
+    "Prepaid 20/100 dollar packs include 10%/20% bonuses; these are credit offers, not permanent unit-rate cuts.",
+    "Browser/session lifecycle overhead, billing minimum and exact paused-retention terms not established.",
+    "Native billing cannot be reduced to a 4-vCPU/8-GiB price. No matching engine sizes, by design.",
+    "Background processes started via the HTTP API auto-terminate after 15 min (use the 'ppod start' CLI for longer)."
+  ],
+  "sources": [
+    "https://www.paperpod.dev/",
+    "https://paperpod.dev/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "Email magic-link authentication documented; no ID/business-document requirement stated.",
+    "tiers": null,
+    "notes": "Public API descriptor describes per-user container execution and paid requests. No numeric account parallel-container fleet quota or increase process established; simultaneous commands inside a container are not distinct VMs.",
+    "sources": [
+      "https://www.paperpod.dev/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"sandboxFiles\": \"Ephemeral - lost when session ends. Use /workspace or /tmp paths.\"",
+      "note": "Only persistence is Agent Memory (10 MB key/file store via /memory/* API, R2-backed) which 'survives session resets'; no machine-state save on session end.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"agentMemory\": \"Persistent - survives session resets. 10MB quota. Use /memory/* endpoints.\"",
+      "note": "The root JSON is the complete public endpoint list (execute, files, process, expose, browser, ai, memory, ws); no snapshot/checkpoint/fork endpoint or CLI command.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"description\": \"Agent-native, pay-per-execution compute infrastructure\"",
+      "note": "PaperPod is the runtime an external agent (Claude Code, OpenClaw, ...) drives via CLI/HTTP; the full endpoint list has only exec/process/file/browser/AI-inference endpoints, no API to start or drive an agent harness inside the sandbox.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"networkAccess\": \"Outbound network works: DNS lookups, git clone, HTTP requests all allowed\"",
+      "note": "No egress control parameter on any endpoint. Browser endpoints have provider-side SSRF protection ('Internal/private IPs blocked'), which is not a user-configurable allowlist.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "**Sandbox is ephemeral** — use Agent Memory (`/memory/*`) for persistence",
+      "note": "No mountable volumes; Agent Memory is a 10 MB per-user API store, not a filesystem mount.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "**Sandbox is ephemeral** — use Agent Memory (`/memory/*`) for persistence",
+      "note": "Agent Memory is per-user and readable from any session via API, but it is not a mounted shared filesystem.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://paperpod.dev/",
+      "quote": "\"isolation\": \"Each user gets their own container with a full Linux environment - you can only affect your own ephemeral sandbox\"",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"description\": \"Agent-native, pay-per-execution compute infrastructure\"",
+      "note": "not offered: full endpoint list (execute/files/process/expose/browser/ai/memory) has no image/custom-image parameter or registry-pull endpoint; sandboxes run a fixed pre-installed toolset.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "50+ tools (ffmpeg, sqlite, pandoc, imagemagick)... Runtimes: python, node, npm, bun, pip",
+      "note": "not offered: pre-installed tool list has no docker/podman/containerd; the sandbox is itself a container (shared kernel), so docker-in-docker is not documented or implied.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"isolation\": \"Each user gets their own container with a full Linux environment\"",
+      "note": "not offered: outside the product's scope; container isolation gives no /dev/kvm access, and no such capability is documented.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"browser\": \"Screenshots, PDFs, scraping (Playwright)\"",
+      "note": "not offered: outside the product's scope; PaperPod exposes headless Playwright automation (screenshot/pdf/scrape/markdown/content), not a graphical VNC/RDP desktop.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "POST /browser/screenshot \"Capture screenshot of a URL\"",
+      "note": "not offered: outside the product's scope; browser endpoints capture/scrape a given URL, there is no screenshot+click driving API for a desktop or browser session.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"ssrfProtection\": \"Internal/private IPs blocked (localhost, 127.x.x.x, 10.x.x.x, 172.16-31.x.x, 192.168.x.x)\"",
+      "note": "not offered: outside the product's scope; the only documented browser security feature is provider-side SSRF protection, not stealth/fingerprint evasion against bot detection.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"description\": \"Agent-native, pay-per-execution compute infrastructure\"",
+      "note": "not offered: outside the product's scope; PaperPod is a code-exec/browser-automation sandbox, no CAPTCHA-solving endpoint exists in its API surface.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "endpoints: execute, execute/stream, files/*, process/*, expose, browser/*, ai/*, memory/*, ws/session, ws",
+      "note": "not offered: the complete endpoint list has no SSH access; the sandbox is reached only via HTTP/CLI/WebSocket exec calls.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "\"sandboxFiles\": \"Ephemeral - lost when session ends. Use /workspace or /tmp paths.\"",
+      "note": "Only persistence is the separate 10MB Agent Memory key/file API; no filesystem or memory snapshot/checkpoint mechanism exists.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "endpoints: execute, files/*, process/*, expose, browser/*, ai/*, memory/*, login, topup, balance, ws",
+      "note": "not offered: no clone/fork endpoint exists in the documented API.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "endpoints: execute, files/*, process/*, expose, browser/*, ai/*, memory/*, login, topup, balance, ws",
+      "note": "not offered: no fork/clone capability at all, so a running-clone variant does not exist either.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "endpoints: execute, files/*, process/*, expose, browser/*, ai/*, memory/*, login, topup, balance, ws",
+      "note": "not offered: no fork or memory-snapshot capability exists in the API.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "endpoints: execute, files/*, process/*, expose, browser/*, ai/*, memory/*, login, topup, balance, ws",
+      "note": "not offered: no pause/resume/suspend endpoint; sandboxes are ephemeral and billed per-second of active use, not paused.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"sessionId\":{\"type\":\"string\",\"required\":false,\"description\":\"Reuse sandbox\"}",
+      "note": "Pay-per-execution model spins up a container automatically for a request (with optional sessionId reuse); there is no explicit 'start machine' step, consistent with wake-on-request behavior.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "\"Sandbox is ephemeral\" — use Agent Memory (`/memory/*`) for persistence",
+      "note": "Sandboxes are described as ephemeral/session-based with background processes auto-terminating after 15 minutes, implying idle sandboxes are torn down automatically rather than left running indefinitely.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"description\": \"Agent-native, pay-per-execution compute infrastructure\"",
+      "note": "not offered: no CPU/RAM sizing or resize parameter appears anywhere in the API; the product has no configurable machine sizes to resize between.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "Pre-installed Tools (50+): Runtimes (python, node, npm, bun, pip), Version Control (git, gh), ...",
+      "note": "not offered: the pre-installed tool list has no coding-agent harness (Claude Code, Codex, OpenCode, etc.) offered as a template.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "POST /ai/generate \"Text generation using LLMs (Llama, Qwen, Mistral, etc.)\"",
+      "note": "not offered: the AI endpoints are raw model inference (text/embed/image/transcribe) via Workers AI, not a first-party browsing/computer-use/research task agent that PaperPod itself drives.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"discovery\": {\"cli\": \"ppod help\", \"http\": \"GET / returns JSON schema, GET /docs returns HTML docs\", \"skillMd\": \"GET /SKILL.md or /.well-known/skill.md for Agent Skills format\"}",
+      "note": "not offered: PaperPod documents an Agent Skills file (SKILL.md) for LLM agents to read, but no MCP server package or endpoint is published.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"urlFormat\": \"https://{port}-{sessionId}-p{port}_v1.paperpod.work\"",
+      "note": "Ports are reached via subdomain preview URLs (paperpod.work), not a per-machine public IPv4 address.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "POST /expose \"Expose port and get preview URL\" ... \"Preview URLs are stable across restarts.\"",
+      "note": "not offered: /expose returns an open preview URL with no documented auth/allowlist/private-URL option to control who can reach it.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "\"networkAccess\": \"Outbound network works: DNS lookups, git clone, HTTP requests all allowed\"",
+      "note": "not offered: no method/path-level egress rule parameter exists on any endpoint; only provider-side browser SSRF protection blocking private IP ranges is documented.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"isolation\": \"Each user gets their own container with a full Linux environment\"",
+      "note": "Isolation is container (shared kernel), not a full VM/microVM, so the guest_firewall derivation condition (VM/microVM with root=true) does not apply.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"env\":{\"type\":\"object\",\"required\":false}",
+      "note": "not offered: /execute accepts a plain env object; no documented first-party credential-injection proxy for outbound HTTP calls.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "\"networkAccess\": \"Outbound network works: DNS lookups, git clone, HTTP requests all allowed\"",
+      "note": "not offered: no fixed/static outbound IP feature is documented; sandboxes are ephemeral multi-tenant containers.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "POST /ai/generate \"Text generation using LLMs (Llama, Qwen, Mistral, etc.)\" ... pricing \"$0.02/1K neurons\"",
+      "note": "not offered: outside the product's scope; AI inference is a managed 'neurons'-billed model API (Workers AI style), not a raw GPU machine offering.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "\"environment\": {\"isolation\": \"Each user gets their own container with a full Linux environment\"}",
+      "note": "not offered: outside the product's scope; the sandbox is explicitly a Linux container environment.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://paperpod.dev/SKILL.md",
+      "quote": "\"environment\": {\"isolation\": \"Each user gets their own container with a full Linux environment\"}",
+      "note": "not offered: outside the product's scope; only Linux containers are offered.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"baseUrl\": \"https://paperpod.dev\"",
+      "note": "not offered: PaperPod is offered only as PaperPod's own hosted multi-tenant service (paperpod.dev); no self-hosting package or on-prem deployment is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://paperpod.dev/",
+      "quote": "\"baseUrl\": \"https://paperpod.dev\"",
+      "note": "not offered: no bring-your-own-cloud / dedicated deployment into a customer's own account is documented; it is a single shared SaaS endpoint.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://registry.npmjs.org/@paperpod/cli",
+      "quote": "npm package @paperpod/cli metadata has no repository or homepage field linking to a source repo",
+      "note": "Only the CLI is distributed via npm with no linked source repository; the backend/sandbox service itself is not published as open source.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "\"authentication\": {\"flow\": \"Email magic link → PaperPod token (pp_sess_...)\"}",
+      "note": "The only documented authentication method is email magic-link tokens; no SAML/OIDC SSO option is mentioned.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.paperpod.dev/SKILL.md",
+      "quote": "description: Isolated agent runtime for code execution, live preview URLs, browser automation, 50+ tools (ffmpeg, sqlite, pandoc, imagemagick), LLM inference, and persistent memory — all via CLI or HTTP, no SDK or API keys required.",
+      "note": "not offered: no security/trust/compliance page exists on the site (/security and /trust both 404) and none of the official docs mention SOC 2; this is a single-maintainer, early-stage (npm CLI v0.1.x/2.0.4 skill) pay-per-execution sandbox with no published compliance program.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.paperpod.dev/SKILL.md",
+      "quote": "description: Isolated agent runtime for code execution, live preview URLs, browser automation, 50+ tools (ffmpeg, sqlite, pandoc, imagemagick), LLM inference, and persistent memory — all via CLI or HTTP, no SDK or API keys required.",
+      "note": "not offered: no security/compliance page (/security, /trust return 404) and no BAA/HIPAA mention anywhere in the root API descriptor or SKILL.md; a solo-maintained, magic-link-auth, pay-per-second execution sandbox with no compliance program documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.paperpod.dev/",
+      "quote": "\"regions\": []",
+      "note": "not offered: the provider card's own regions list is empty and no official page offers a region/data-residency selector; the root API descriptor and SKILL.md never mention regions or EU hosting.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://www.paperpod.dev/",
+      "quote": "\"persistence\": { \"sandboxFiles\": \"Ephemeral - lost when session ends. Use /workspace or /tmp paths.\", \"agentMemory\": \"Persistent - survives session resets. 10MB quota. Use /memory/* endpoints.\" }",
+      "note": "Provider's own root API descriptor explicitly states sandbox files are ephemeral and lost on session end (default, no opt-in to keep them). The only persistent store is Agent Memory, a 10MB key/file API-backed quota (R2-backed), not a mounted disk/volume — same is repeated verbatim in SKILL.md ('Sandbox is ephemeral — use Agent Memory (/memory/*) for persistence'). No pause/resume or snapshot mechanism that preserves the filesystem is offered. Confirms the card's false value with a direct quote.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://paperpod.dev/",
+      "quote": "\"networkAccess\": \"Outbound network works: DNS lookups, git clone, HTTP requests all allowed\"",
+      "note": "derived: PaperPod is a multi-tenant, ephemeral per-request container sandbox (\"Each user gets their own container with a full Linux environment\") with no static/residential/mobile egress IP feature documented anywhere in the API schema, docs, or SKILL.md (static_egress_ip is explicitly false). Outbound traffic is described only as generically working; absent any dedicated/residential IP offering, shared datacenter egress is the standard default for this class of pay-per-execution container product.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://paperpod.dev/docs",
+      "quote": "Endpoints documented: execute, execute/stream, files/*, process/*, expose, browser/*, ai/*, memory/*, ws/session, ws, login, topup, balance. Only 'balance' endpoint returns account-level credit balance; no per-sandbox, per-tag, or per-project usage tracking endpoint exists.",
+      "note": "granularity: account-only; cost: yes; PaperPod offers pay-per-execution billing with separate meters for compute, process, and browser operations. The 'balance' endpoint returns remaining account credits (cost-bearing), but no API exists to query billable usage (execution time, operations count, or cost) of individual sandboxes, tagged sessions, or metadata groups. Billing/cost visibility is account-level only via the balance endpoint and implicit in the topup/prepaid credit flow.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://paperpod.dev/docs",
+  "locations_quote": "\"baseUrl\": \"https://paperpod.dev\"; regions: []",
+  "locations_checked": "2026-10-01"
+}

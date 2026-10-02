@@ -1,0 +1,547 @@
+{
+  "id": "wasmer",
+  "name": "Wasmer",
+  "url": "https://wasmer.io/pricing",
+  "category": "paas",
+  "isolation": "isolate",
+  "modes": [
+    {
+      "key": "edge",
+      "label": "WebAssembly Edge",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.1,
+      "ram_gib_h": 0.01,
+      "cpu_basis": "active",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": 0.05,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": 150,
+    "egress_gib": 0.1,
+    "ipv4_month": 1,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pro",
+      "fee": 10,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 5,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Includes the same 6 active CPU-hours, 400 GB-hours RAM, 150 GB bandwidth, 1 GB volume/package storage, 1M requests and 1,000 build minutes as Hobby; overages $0.10/CPU-h, $0.01/GB-h RAM, $0.10/GB egress, $0.05/GB storage, $0.50/M requests, $0.005/build-min, $0.25/app after 100, $0.01/domain after 50, $0.001/email; database $0.01/MB; one daily backup then $0.20/backup."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Hobby",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "note": "Free forever; 1 member, 100 apps, 500 deploys/month, 1M requests, 150 GB bandwidth, 6 active CPU-hours, 400 GB-hours memory, 1 GB volume and package storage, 100 MB database per app, 1,000 build minutes, 50 custom domains; low execution priority; no SSH/SFTP."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": false,
+    "open_source": true,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": [
+      "eu",
+      "other",
+      "us"
+    ],
+    "lang_python": true,
+    "lang_node": "beta",
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "wasm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Wasmer WebAssembly execution is not a full Linux VM; card isolation isolate is approximate because engine lacks wasm enum. Pricing uses active CPU plus provisioned memory.",
+    "Pro includes separate 6 active CPU-hours, 400 GB-hours memory, 150 GB bandwidth, 1 GB volume and package storage, 1M requests and 1000 build-minutes. These category-specific allowances cannot be collapsed into fully fungible credits.",
+    "Pro $10/mo; extra seats $5, app beyond 100 $0.25, requests $0.50/M, builds $0.005/min, volumes/packages $0.05/GB-month; databases and backups separate.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/wasmer",
+    "https://wasmer.io/pricing",
+    "https://wasmer.io/",
+    "https://wasmer.io/llms.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 8,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/faq",
+      "quote": "one of the features on our roadmap is persistent instances, which will keep running, and won't be dynamically spawned or terminated",
+      "note": "Instances are ephemeral (terminated after a few idle minutes or evicted); nothing saves an instance's state at stop. InstaBoot is automatic but different: Edge warms up a fresh instance, snapshots it (journal+memory) per app version and boots new instances from that snapshot; it does not carry a stopped instance's state forward. Durable state only via volumes/databases.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "Workloads are WebAssembly/WASIX instances on the Wasmer runtime, not a Linux VM or container: there is no guest kernel netfilter, so nftables/iptables cannot run.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/learn/secrets",
+      "quote": "You can manage secure environment variables - from now on simply _secrets_ -",
+      "note": "App secrets are environment variables injected into the app (CLI wasmer app secrets create/list/reveal/update/delete, or dashboard); no injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.wasmer.io/edge/learn/volumes",
+      "quote": "Volumes provide persistent disk storage for applications.",
+      "note": "Declared in app.yaml (name + mount path), multiple per app, single region only; also S3-API remote access and SFTP. $0.05/GB-month on pricing page.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.wasmer.io/edge/learn/volumes",
+      "quote": "Keep in mind that volumes can be accessed concurrently, and even from different nodes.",
+      "note": "Read-write-many ('volumes at the moment only provide *read-write-many* semantics'); all auto-scaled instances of an app share them, including across nodes in the one region. Not recommended for single-writer databases.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "wasm",
+      "source": "https://docs.wasmer.io/edge/architecture",
+      "quote": "WebAssembly enables secure, sandboxed execution of untrusted code, without the burden of additional emulation layers like containers or virtual machines.",
+      "note": "Apps run as compiled WASM/WASIX packages on Wasmer's own runtime, not in Linux containers or VMs.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/learn/apps",
+      "quote": "Each app is based on a package from the registry, which is then deployed to the Wasmer Edge cloud.",
+      "note": "not offered: outside the product's scope — apps are built from Wasm packages published to the Wasmer Registry, not from Docker/OCI images.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/architecture",
+      "quote": "Wasmer Edge does not inherit the technical debt and constraints of other hypervisor and virtualization platforms such as virtual machines and Kubernetes as it builds up a full virtualized and sand-boxed layer built on the WASM runtime itself",
+      "note": "not offered: outside the product's scope — the runtime is a WASM/WASIX sandbox with no container engine or Docker daemon inside it.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/architecture",
+      "quote": "a full virtualized and sand-boxed layer built on the WASM runtime itself with minimal complexity",
+      "note": "not offered: outside the product's scope — a WASM instance has no /dev/kvm or hypervisor access.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Find the perfect plan for your project ... Deploy Git repositories on Wasmer Edge",
+      "note": "not offered: outside the product's scope — Wasmer Edge hosts stateless HTTP apps/WordPress/static sites, not a graphical desktop.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Find the perfect plan for your project",
+      "note": "not offered: outside the product's scope — no managed/real browser product.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Find the perfect plan for your project",
+      "note": "not offered: outside the product's scope — no desktop to drive by screenshots/clicks.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Find the perfect plan for your project",
+      "note": "not offered: outside the product's scope — Wasmer Edge is a WASM app-hosting PaaS, not a browser/scraping product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Find the perfect plan for your project",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.wasmer.io/edge/learn/regions",
+      "quote": "us-hillsboro, us-ashburn, us-losa1, ca-beau1, fr-roub1, de-falkenstein",
+      "note": "Edge nodes run in standard commercial datacenters; no residential/mobile IP product offered.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.wasmer.io/edge/learn/instaboot",
+      "quote": "InstaBoot allows fast startup by creating a snapshot of your app that is fully initialized and ready to serve requests.",
+      "note": "InstaBoot snapshots are an automatic, per-app-version boot-speed optimization (memory+journal warm-up), not a user-invoked snapshot/restore of a specific running instance's state. Instances themselves are stateless/ephemeral; durable state only via volumes/databases.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/learn/instaboot",
+      "quote": "Snapshots are created by starting a new application instance and warming it up with a series of warm-up requests.",
+      "note": "Snapshotting is InstaBoot's automatic warm-up mechanism triggered by deployment, not an on-demand API/CLI checkpoint of a running instance.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/learn/apps",
+      "quote": "App instances are currently stateless and ephemeral. They will automatically be started to serve requests, and shut down again after a short idle period.",
+      "note": "not offered: outside the product's scope — no clone-a-machine primitive; new instances are auto-spawned from the app package, not forked from a running instance.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/learn/apps",
+      "quote": "App instances are currently stateless and ephemeral.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/learn/apps",
+      "quote": "App instances are currently stateless and ephemeral.",
+      "note": "not offered: outside the product's scope — no forking primitive at all.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.wasmer.io/edge/learn/volumes",
+      "quote": "Volumes provide persistent disk storage for applications.",
+      "note": "App instances themselves are ephemeral, but attached Volumes persist across deploys/restarts.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://docs.wasmer.io/edge/learn/apps",
+      "quote": "They will automatically be started to serve requests, and shut down again after a short idle period.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Active CPU ... 6 hours (then $0.10 per active CPU hour) ... Provisioned Memory ... 400 GB-hours (then $0.01 per GB-hour)",
+      "note": "not offered: outside the product's scope — a serverless auto-scaled model with no user-controlled CPU/RAM sizing of a running instance was found.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Deploy Git repositories on Wasmer Edge",
+      "note": "not offered: outside the product's scope — Wasmer Edge is a web-app/WordPress/static-site hosting PaaS; no coding-agent (Claude Code/Codex/OpenCode) templates found.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Deploy Git repositories on Wasmer Edge",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Deploy Git repositories on Wasmer Edge",
+      "note": "not offered: outside the product's scope — no first-party browser/computer-use/research agent product.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://wasmer.io/llms.txt",
+      "quote": "Python Deployments: Run Python applications using WebAssembly containers.",
+      "note": "Also has a dedicated 'Python Flask Server' guide and a py2wasm Python-to-Wasm compiler.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": true,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Dedicated IP ... - ... 1 (then $1 per IP) ... Custom",
+      "note": "Dedicated IPv4 is a paid add-on on Pro (1 included, then $1/IP) and available on Enterprise; not included on free Hobby.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Active CPU ... Provisioned Memory",
+      "note": "not offered: outside the product's scope — Wasmer Edge pricing/plans only cover CPU and memory; no GPU instance type found.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/architecture",
+      "quote": "Wasmer Edge abstracts regions away for most stateless applications; the platform will route requests to the closest healthy region automatically.",
+      "note": "not offered: outside the product's scope — Edge is a WASM PaaS with no selectable machine/CPU architecture (Wasm bytecode itself is architecture-neutral, compiled by the host runtime); no ARM machine type is offered to choose.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.wasmer.io/edge/learn/regions",
+      "quote": "fr-roub1 France Roubaix ... de-falkenstein Germany Falkenstein",
+      "note": "Apps (and databases/volumes for fr-roub1) can be pinned to EU regions via locality.regions in app.yaml.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://wasmer.io/",
+      "quote": "Run your apps in lightweight WebAssembly sandboxes: locally or on our cloud. Deploy and scale apps and AI agents on Wasmer Edge.",
+      "note": "Wasmer Edge runs apps as WebAssembly/WASIX instances on the Wasmer runtime, not as guest VMs with a selectable OS; there is no Windows guest offering. Windows for this WASM sandbox product is outside what the product is, same as the card's edge mode os:[\"linux\"].",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://wasmer.io/",
+      "quote": "Run your apps in lightweight WebAssembly sandboxes: locally or on our cloud. Deploy and scale apps and AI agents on Wasmer Edge.",
+      "note": "Same reasoning as windows: Wasmer Edge executes WebAssembly/WASIX modules, not full guest operating systems, so there is no macOS guest offering.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/configuration",
+      "quote": "kind, name, package, env, cli_args, debug, redirect, capabilities (instaboot, cdn_cache, ssh, database), health_checks, locality, scaling, jobs",
+      "note": "not offered: outside the product's scope — the full app.yaml schema and Edge docs expose no IP allowlist / private-URL / security-group style control over who can reach an app's exposed HTTP port; apps are reachable via their public *.wasmer.app / custom-domain URL to anyone.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/architecture",
+      "quote": "Wasmer Edge uses a virtual networking overlay exposed directly to the WASIX sandbox... we will continue to unlock more core networking functionality.",
+      "note": "not offered: outside the product's scope — no allow/deny-list, no-internet mode, or security-group egress control is documented anywhere in the app.yaml config or architecture docs; outbound networking is plain POSIX sockets via the WASIX sandbox.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.wasmer.io/edge/configuration",
+      "quote": "kind, name, package, env, cli_args, debug, redirect, capabilities, health_checks, locality, scaling, jobs",
+      "note": "not offered: outside the product's scope — no HTTP method/path-level egress rule mechanism is documented; same evidence as egress_allowlist.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Dedicated IP ... - ... 1 (then $1 per IP) ... Custom",
+      "note": "The only fixed-IP feature documented is a paid 'Dedicated IP' add-on, which is an inbound public IPv4 for reaching the app, not a fixed outbound/egress IP; no static egress IP is mentioned anywhere in the docs or pricing pages.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://wasmer.io/pricing",
+      "quote": "Enterprise & Subhosting ... All in Pro plan plus: Unlimited users, Subhosting, Private dedicated locations, 99.95% SLA, Compliance, Advanced support",
+      "note": "not offered: outside the product's scope — Enterprise offers 'private dedicated locations' within Wasmer's own multi-tenant Edge network (and 'subhosting' for reselling), not deployment of the managed service into a customer-owned cloud account; no BYOC/VPC-deploy offering is documented.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.wasmer.io/",
+      "quote": "Wasmer Edge pricing is tracked through the dashboard and invoices based on active CPU hours, GB-hours of memory, bandwidth, and storage, but no public API endpoint exists for querying billable usage of individual apps or deployments.",
+      "note": "granularity: account-only; The Wasmer GraphQL API at registry.wasmer.io/graphql is for package discovery and registry queries only, not for usage metrics. The wasmer CLI provides app management commands (wasmer app info, wasmer app list) but no usage/billing endpoints. Usage visibility appears limited to account-level invoices and dashboard UI.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Roubaix",
+      "provider_region": "fr-roub1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Beauharnois",
+      "provider_region": "ca-beau1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-losa1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-ashburn",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Hillsboro",
+      "provider_region": "us-hillsboro",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Falkenstein",
+      "provider_region": "de-falkenstein",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.wasmer.io/edge/learn/regions",
+  "locations_quote": "Right now, this are the regions that you can use Wasmer Edge in (by default apps are available in all regions): Region Country City Databases Volumes fr-roub1 France Roubaix ✅ ✅ ca-beau1 Canada Beauharnois ✅ ✅ us-losa1 United States Los Angeles, California ✅ ✅ us-ashburn United States Ashburn, Virgi",
+  "locations_checked": "2026-10-01"
+}

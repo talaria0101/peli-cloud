@@ -1,0 +1,962 @@
+{
+  "id": "ubicloud",
+  "name": "Ubicloud",
+  "url": "https://www.ubicloud.com/docs/about/pricing",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "dedicated-vm",
+      "label": "Dedicated VMs Germany",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu",
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "standard-2",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 40,
+          "hour": 0.0624,
+          "month_cap": null
+        },
+        {
+          "name": "standard-4",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 80,
+          "hour": 0.1248,
+          "month_cap": null
+        },
+        {
+          "name": "standard-8",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 160,
+          "hour": 0.2496,
+          "month_cap": null
+        },
+        {
+          "name": "standard-16",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 320,
+          "hour": 0.4986,
+          "month_cap": null
+        },
+        {
+          "name": "standard-30",
+          "vcpu": 30,
+          "ram_gib": 120,
+          "disk_gib": 600,
+          "hour": 0.9354,
+          "month_cap": null
+        },
+        {
+          "name": "standard-60",
+          "vcpu": 60,
+          "ram_gib": 240,
+          "disk_gib": 1200,
+          "hour": 1.8702,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "",
+      "product_class": "vm",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "burstable",
+      "label": "Shared burstable VMs",
+      "flags": [
+        "burstable"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu",
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "burstable-1",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 10,
+          "hour": 0.0156,
+          "month_cap": null
+        },
+        {
+          "name": "burstable-2",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 20,
+          "hour": 0.0312,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Shared CPU: \"Each VM can utilize host cpu capacity up to 50% of the allocated vCPU and additionally burst up to 100% of the allocated vCPU at micro-intervals\" (ubicloud.com/docs/about/pricing, checked 2026-09-28).",
+      "baseline_pct": 50,
+      "cpu_class": "shared"
+    },
+    {
+      "key": "ci-standard",
+      "label": "Standard x64 CI",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "docker_inside": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "2",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.075,
+          "month_cap": null
+        },
+        {
+          "name": "4",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.15,
+          "month_cap": null
+        },
+        {
+          "name": "8",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.3,
+          "month_cap": null
+        },
+        {
+          "name": "16",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 0.6,
+          "month_cap": null
+        },
+        {
+          "name": "30",
+          "vcpu": 30,
+          "ram_gib": 120,
+          "disk_gib": null,
+          "hour": 1.125,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). Re-verified on https://www.ubicloud.com/docs/about/pricing: standard x64 2 vCPU $0.00125/min; per-minute billing. ",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "ci-premium",
+      "label": "Premium x64 CI",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "docker_inside": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "2",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.12,
+          "month_cap": null
+        },
+        {
+          "name": "4",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.24,
+          "month_cap": null
+        },
+        {
+          "name": "8",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.48,
+          "month_cap": null
+        },
+        {
+          "name": "16",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 0.96,
+          "month_cap": null
+        },
+        {
+          "name": "30",
+          "vcpu": 30,
+          "ram_gib": 120,
+          "disk_gib": null,
+          "hour": 1.7999999999999998,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). Re-verified on https://www.ubicloud.com/docs/about/pricing: standard x64 2 vCPU $0.00125/min; per-minute billing. ",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "ci-arm",
+      "label": "arm64 CI",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "docker_inside": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "2",
+          "vcpu": 2,
+          "ram_gib": 6,
+          "disk_gib": null,
+          "hour": 0.075,
+          "month_cap": null
+        },
+        {
+          "name": "4",
+          "vcpu": 4,
+          "ram_gib": 12,
+          "disk_gib": null,
+          "hour": 0.15,
+          "month_cap": null
+        },
+        {
+          "name": "8",
+          "vcpu": 8,
+          "ram_gib": 24,
+          "disk_gib": null,
+          "hour": 0.3,
+          "month_cap": null
+        },
+        {
+          "name": "16",
+          "vcpu": 16,
+          "ram_gib": 48,
+          "disk_gib": null,
+          "hour": 0.6,
+          "month_cap": null
+        },
+        {
+          "name": "30",
+          "vcpu": 30,
+          "ram_gib": 90,
+          "disk_gib": null,
+          "hour": 1.125,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). Re-verified on https://www.ubicloud.com/docs/about/pricing: standard x64 2 vCPU $0.00125/min; per-minute billing. ",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "gpu-vm",
+      "label": "GPU VMs (access on request)",
+      "flags": [
+        "sales"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu",
+        "other"
+      ],
+      "gpu_only": true,
+      "pricing": "resource",
+      "vcpu_h": 0.020885,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "granularity_s": 60,
+      "min_billed_seconds": null,
+      "gpu": {
+        "A100-80GB": 1.2261,
+        "B200": 3
+      },
+      "note": "Per-minute rates from config/billing_rates/vm_metal.yml: Gpu 20b5 (NVIDIA A100 80GB PCIe) hetzner-fsn1 $0.020435/min = $1.226/GPU-h; Gpu 2901 (NVIDIA B200) tr-ist-u1 (Istanbul) $0.05/min = $3.00/GPU-h; host vCPU standard-gpu family $0.0003480863/vCPU-min ($0.0209/vCPU-h) in Germany, standard $0.0003050596/vCPU-min in Istanbul. GPU counts 1/2/4/8. vCPU/RAM per GPU not published. B300 exists only in a private location (price $0 = contract). Access: 'Projects without GPU access enabled will see a helpful message explaining how to request access to NVIDIA B200 and RTX PRO 6000 GPUs by contacting support.'",
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": 0.0855,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.15208236,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": 625,
+    "egress_gib": 0.003,
+    "ipv4_month": 3,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Usage",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 2.5,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "",
+      "included_applies_to_modes": [
+        "ci-standard",
+        "ci-premium",
+        "ci-arm"
+      ]
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "eu",
+      "us",
+      "other"
+    ],
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "cloud-hypervisor",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Separate dedicated VM, burstable VM, standard/premium x64 CI and arm64 CI tariffs. All below from official Germany rate card; US described as comparable, not exact same price.",
+    "VM monthly illustrative figures disagree with 730h×per-minute rates. Normalize authoritative explicit per-minute rates; do not assume monthly cap.",
+    "Burstable baseline up to 50% of allocated vCPU with micro-interval bursts to 100%; dedicated RAM/disk.",
+    "VM IPv4 is $3/mo per minute prorated; runners include IPv4. VM allowance 0.625 TB egress per 2 vCPUs, then $3/TB; scope is per-VM not account-wide.",
+    "Machine images billed compressed archive size $0.0000034722/GiB/min, approximated $0.15/GiB-month. CI $2.50 monthly credit only, not VM credit. New CI users default to premium.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "2026-09-28 fix pass: category paas -> hyperscaler (plain IaaS VMs, DIY: no sandbox API). VM boot/provisioning time is not published, so boot_overhead_s stays null (billing is per minute). No managed desktop/browser/computer-use product (IaaS only), so desktop/browser/computer_use=false. arm64 runners cost the same per minute as standard x64 runners but have 3 GiB/vCPU instead of 4, so ci-arm stays a separate regime. The CI regimes keep flag alt: they are GitHub Actions runner minutes, not general VMs (the engine ignores alt when the workload is CI).",
+    "All Ubicloud accounts receive a $2.50/month credit (pricing docs, 2026-09-28), encoded as free.monthly_credit.",
+    "CI runners use images built from GitHub actions/runner-images templates (\"fully compatible with default runners\"), which ship Docker Server/Client; docker_inside=true on ci-* modes.",
+    "Two 2026 price rises: +26% for new deployments from 2026-05-01 (existing from 2026-06-01; Germany/Finland/Virginia, not premium runners) and +25% for Germany/Finland from 2026-09-01 (VMs, Postgres, K8s, standard AND premium runners; Virginia/AWS/GCP unaffected). The card's rates already equal the post-2026-09-01 Germany rates (standard-2 $0.00104/min = 2 x $0.0004804689 vCPU-min + 40 x $0.0000019531 GiB-min). Pre-May standard-2 was $26.60/mo -> $33.52 (May) -> $41.89 (Sept), i.e. +57.5% in 5 months.",
+    "The '/mo' figures on the pricing page are 672-hour (28-day) months: the console code computes monthly = unit_price x 60 x 672. A 730-hour month of standard-2 is $45.51, not $41.89. The card correctly uses per-minute rates.",
+    "Invoices under $0.50 are not charged (minimum_invoice_charge_threshold 0.5). Tax/VAT added on top."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/ubicloud",
+    "https://www.ubicloud.com/docs/about/pricing",
+    "https://www.ubicloud.com/docs/llms-full.txt",
+    "https://www.ubicloud.com/",
+    "https://www.ubicloud.com/docs/overview",
+    "https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md"
+  ],
+  "audit_2026_09_29": {
+    "applied": 16,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 7
+  },
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": 32,
+    "default_max_gpus": 0,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Credit card on file required before creating resources; accounts signing up with a free-mail domain start 'limited'.",
+    "tiers": "VM vCPU quota: limited 16 / new 32 / verified 256; a project becomes 'verified' automatically once an invoice over $5 is paid; above 256 via support@ubicloud.com. GitHub runner vCPU concurrency: limited 128 / new 300 / verified 300 (arm64 50/100/100). GPU VMs need a per-project feature flag granted by support.",
+    "notes": "From the provider's official open-source repo (config/default_quotas.yml, model/invoice.rb, model/account.rb); not stated on the public docs pages. 32 vCPU = e.g. 16 x standard-2 or 32 x burstable-1.",
+    "sources": [
+      "https://github.com/ubicloud/ubicloud/blob/main/config/default_quotas.yml",
+      "https://github.com/ubicloud/ubicloud/blob/main/model/invoice.rb",
+      "https://www.ubicloud.com/docs/github-actions-integration/quickstart"
+    ],
+    "researched": "2026-09-29"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "When a VM is stopped, all configuration, storage, and compute resources remain fully reserved to ensure immediate availability upon restart. Billing continues as if the instance were still running.",
+      "note": "Changelog 'VM Stop and Start': stop keeps the VM and its disk reserved (persistent_disk), no snapshot/memory save; nothing automatic documented.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://ubicloud.com/docs/machine-images/overview.md",
+      "quote": "Ubicloud Machine Images let you capture a virtual machine's disk as a reusable, versioned image and boot new VMs from it.",
+      "note": "Disk only, no memory; source VM must be stopped and have a single disk <= 40 GiB; versioned images; new VMs boot from them (template/fork), same location. Billed on compressed archive size.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/llms.txt",
+      "quote": null,
+      "note": "Plain IaaS (VMs, Postgres, K8s, load balancers, CI runners, inference endpoints); the full API reference index has no agent-harness endpoints.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/networking/firewall.md",
+      "quote": "Firewalls in Ubicloud only allow inbound traffic based on explicitly defined rules. If no rules are specified, all inbound traffic is blocked except for communication within the private subnet. We currently do not support outbound rules.",
+      "note": "No provider-side egress control; only in-guest firewall.",
+      "checked": "2026-09-29"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/networking/firewall.md",
+      "quote": "We currently do not support outbound rules.",
+      "note": null,
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://ubicloud.com/docs/networking/firewall.md",
+      "quote": "You can specify rules based on IP addresses and port numbers. You can input a CIDR range and define the continuous port range to be allowed.",
+      "note": "Stateful inbound firewall (nftables, host-side) attached per private subnet, CIDR + port ranges, via console/API; by default Ubicloud adds an allow-all rule. IPv4 optional per VM (enable_ip4); private subnets; load balancers.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VM (Cloud Hypervisor) with root/sudo; own kernel.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud provides IaaS cloud features on bare metal providers, such as Hetzner, Leaseweb, or AWS Bare Metal. ... Ubicloud is an open, free, and portable cloud. Think of it as an alternative to public cloud providers.",
+      "note": "No secret store or credential-injection proxy product documented; secrets for VMs would be supplied via init scripts/SSH like any plain IaaS VM. Outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ubicloud/ubicloud/main/openapi/openapi.yml",
+      "quote": "Requested storage size in GiB",
+      "note": "createVM takes a single storage_size; no block-volume resource or attach endpoint in the API reference. Only Managed Kubernetes has local-NVMe PVCs (UbiCSI, preview).",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ubicloud/ubicloud/main/openapi/openapi.yml",
+      "quote": "Requested storage size in GiB",
+      "note": "createVM only takes a single per-VM storage_size; no block-volume or shared-filesystem resource/attach endpoint anywhere in the OpenAPI reference or docs. The only multi-attach-adjacent feature is Managed Kubernetes' local-NVMe UbiCSI PVCs (preview), which are per-node, not a volume shared by several running machines at once.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "cloud-hypervisor",
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "We use Linux KVM for full virtualization and Cloud Hypervisor as our virtual machine monitor (VMM); and each instance of the VMM is contained within Linux namespaces for further isolation and security.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/machine-images/overview.md",
+      "quote": "Ubicloud Machine Images let you capture a virtual machine's disk as a reusable, versioned image and boot new VMs from it.",
+      "note": "Custom boot images are captured from a stopped Ubicloud VM's own disk, not imported Docker/OCI images; base boot images are fixed OS templates (Ubuntu/Debian/AlmaLinux). No 'start VM from your OCI/Docker image' feature documented.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud expects Linux with KVM running on these servers... We use Cloud Hypervisor as our virtual machine monitor (VMM)",
+      "note": "derived: full KVM VM with root/sudo and its own kernel runs Docker like any Linux VM; explicitly confirmed for CI runner images (docker_inside=true there), not separately documented for plain VMs but same underlying VM type.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable... general purpose and the most demanding workloads.",
+      "note": "not offered: outside the product's scope (plain IaaS VMs/CI runners, no browser/stealth product)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable... general purpose and the most demanding workloads.",
+      "note": "not offered: outside the product's scope (plain IaaS VMs/CI runners, no browser automation product)",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud creates each VM in a private subnet. For free, each VM gets a private IPv4 and IPv6 address. The VM also gets a public IPv6 address for free. For a public IPv4 address, we charge $3.00/month pro-rated per minute.",
+      "note": "A dedicated public IPv4 is attached directly to the VM for its lifetime (datacenter IP, not shared/NAT), so outbound traffic also exits on that fixed IP.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/machine-images/overview.md",
+      "quote": "source VM must be stopped and have a single disk <= 40 GiB",
+      "note": "Machine Images (the closest thing to a fork) require the source VM to be stopped first; no clone-while-running feature.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "When a VM is stopped, all configuration, storage, and compute resources remain fully reserved to ensure immediate availability upon restart. Billing continues as if the instance were still running.",
+      "note": "Stop/start is a manual API/console action; no documented feature that wakes a stopped VM automatically on an incoming request.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "When a VM is stopped, all configuration, storage, and compute resources remain fully reserved to ensure immediate availability upon restart. Billing continues as if the instance were still running.",
+      "note": "No idle-detection auto-stop documented for VMs; stop is a manual/explicit action (CI job VMs are ephemeral per-job, which is a different mechanism).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/managed-kubernetes/resize-cluster",
+      "quote": "You can resize your Kubernetes cluster at any time to meet changing workload demands... by adding or removing nodes.",
+      "note": "Resize is documented for Managed Postgres (storage/instance size, with a failover/maintenance window) and Kubernetes node pools, but no CPU/RAM live-resize of a running VM without recreating it was found; VM sizes appear fixed at creation.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable.",
+      "note": "not offered: outside the product's scope (plain IaaS VMs/CI runners/Postgres/K8s; no coding-agent templates)",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable.",
+      "note": "not offered: outside the product's scope; Ubicloud has no browser/computer-use/research task agent product",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": null,
+      "note": "No MCP server for controlling Ubicloud resources found in docs, changelog, or GitHub org listing (API/CLI/Terraform/console only).",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable.",
+      "note": "not offered: outside the product's scope. Plain Linux VM you fully control (root/ssh); no first-party managed Python runtime/code-exec API. (Ubuntu images may include python3, but that is not a documented product feature.)",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable.",
+      "note": "not offered: outside the product's scope. Plain Linux VM you fully control; no first-party managed Node.js runtime/code-exec API.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/networking/firewall.md",
+      "quote": "You can specify rules based on IP addresses and port numbers.",
+      "note": "Ubicloud gives a raw public IPv4/IPv6 with an inbound firewall (IP+port rules); there is no managed HTTPS gateway/URL for reaching a VM's ports (that exists only for Kubernetes LoadBalancer services). Users must run and terminate TLS themselves.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "For a public IPv4 address, we charge $3.00/month pro-rated per minute.",
+      "note": "The optional public IPv4 is dedicated to the VM for its lifetime, so it also serves as a fixed outbound/egress IP.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud now supports provisioning GPU VMs with powerful NVIDIA B200 chips in our new Türkiye (Istanbul) location.",
+      "note": "GPU VMs (A100 80GB, B200, and B300 in a private location) available on request/feature-flag.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable.",
+      "note": "not offered: outside the product's scope. All VM/runner OS images documented are Linux (Ubuntu/Debian/AlmaLinux); no Windows VM product.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "We offer two server families - Standard and Burstable.",
+      "note": "not offered: outside the product's scope. Linux-only KVM/Cloud Hypervisor VMs; no macOS machines.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud arm64 runners are powered by Ampere Altra Q80-30 processors, with each arm64 vCPU backed by a dedicated physical core.",
+      "note": "Confirmed for GitHub Actions arm64 runners (ubicloud-standard-*-arm sizes). General dedicated/burstable VM pricing tables list only x64 sizes.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": true,
+      "source": "https://ubicloud.com/docs/managed-postgresql/byoc",
+      "quote": "Currently BYOC is privately supported for select customers.",
+      "note": "Bring-your-own-cloud (AWS) exists for Managed PostgreSQL, but only privately for select customers, not self-serve, and not documented for the general VM/CI product this card models.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/about/terms-of-service",
+      "quote": "you agree not to use any of our Services to create, receive, maintain, transmit or otherwise process any information that includes or constitutes “Protected Health Information” as defined under HIPAA Privacy Rule (45 C.F.R. Section 160.103)... unless agreed to separately in writing between us.",
+      "note": "No BAA/HIPAA-eligible offering documented; standard ToS forbids PHI processing unless separately negotiated.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.ubicloud.com/docs/about/pricing",
+      "quote": "When a VM is stopped, all configuration, storage, and compute resources remain fully reserved to ensure immediate availability upon restart. Billing continues as if the instance were still running.",
+      "note": "Dedicated/burstable VMs are billed per minute and run until the customer stops them; no maximum session duration is documented (CI runner jobs are bounded by GitHub Actions' own job timeout, not a Ubicloud VM limit).",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "You can now stop and start VMs. When a VM is stopped, all configuration, storage, and compute resources remain fully reserved to ensure immediate availability upon restart. Billing continues as if the instance were still running.",
+      "note": "Ubicloud only offers stop/start, not pause/resume: the changelog explicitly says billing continues as if running while stopped (no billing pause or reduction), so it fails the field definition ('billing paused or reduced'). Disk persists (persistent_disk=true) but that's a separate field.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://ubicloud.com/docs/machine-images/overview.md",
+      "quote": "Ubicloud Machine Images let you capture a virtual machine's disk as a reusable, versioned image and boot new VMs from it.",
+      "note": "Fork/clone capability (machine images) only captures the disk, not memory/process state; source VM must be stopped to create the image, so no running-memory clone exists.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud provides IaaS cloud features on bare metal providers, such as Hetzner, Leaseweb, or AWS Bare Metal. ... Ubicloud is an open, free, and portable cloud. Think of it as an alternative to public cloud providers.",
+      "note": "Plain IaaS (VMs, Managed PostgreSQL, Kubernetes, GitHub Actions runners, GPU VMs, inference); no managed graphical desktop/VNC/RDP product documented anywhere in the docs, pricing, or overview pages. Outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud provides IaaS cloud features on bare metal providers, such as Hetzner, Leaseweb, or AWS Bare Metal. ... Ubicloud is an open, free, and portable cloud. Think of it as an alternative to public cloud providers.",
+      "note": "No managed/pre-installed browser product; customers get bare VMs/CI runners and would install any browser themselves. Outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "Ubicloud provides IaaS cloud features on bare metal providers, such as Hetzner, Leaseweb, or AWS Bare Metal. ... Ubicloud is an open, free, and portable cloud. Think of it as an alternative to public cloud providers.",
+      "note": "No screenshot/click driving API of any kind; plain IaaS VM/Postgres/K8s/CI/inference product. Outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "dedicated-vm": "dedicated",
+        "burstable": "burstable:50",
+        "ci-standard": "dedicated",
+        "ci-premium": "dedicated",
+        "ci-arm": "dedicated",
+        "gpu-vm": "dedicated"
+      },
+      "source": "https://www.ubicloud.com/docs/llms-full.txt",
+      "quote": "We offer two server families - Standard and Burstable. Standard provides a dedicated CPU and 4GB of memory per vCPU. ... Burstable provides a shared CPU with 2GB of memory per vCPU. ... Each VM can utilize host cpu capacity up to 50% of the allocated vCPU and additionally burst up to 100% of the allocated vCPU at micro-intervals.",
+      "note": "dedicated-vm (Standard family) = dedicated CPU per official pricing page. burstable = shared/burstable, baseline 50% of allocated vCPU with bursts to 100% at micro-intervals (matches card's existing baseline_pct:50). CI runners: x64 standard runners are 'every two x64 vCPUs corresponding to one physical core' (dedicated core allocation, not oversubscribed/shared) and arm64 runners have 'each arm64 vCPU backed by a dedicated physical core' (docs.ubicloud.com GitHub Actions integration pages); premium runners (AMD Ryzen 9 7950X3D) are marketed for 'fast CI execution'/'high CPU clock speeds' with no shared-CPU language, so treated as dedicated like standard runners. gpu-vm: GPU VM host vCPU is billed from the 'standard-gpu' family (same VM sizing/CPU model family as dedicated Standard VMs, config/billing_rates/vm_metal.yml), no shared/burstable language found for GPU VMs, so treated as dedicated.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ubicloud/ubicloud/main/openapi/openapi.yml",
+      "quote": "OpenAPI spec contains no /invoice, /billing, /usage, or /cost endpoints; Ubicloud billing is per-minute usage metered and shown via monthly invoices through the console, not via API per resource/VM/sandbox.",
+      "note": "granularity: account-only; cost: no; The API supports metrics endpoints for Kubernetes clusters and PostgreSQL databases (monitoring data like cpu_usage), and GitHub Actions cache usage reporting per repository, but no general billable-usage API exists for VMs or other resources. Billing statements are dashboard/invoice-only at account level.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Falkenstein",
+      "provider_region": "eu-central-h1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Helsinki",
+      "provider_region": "eu-north-h1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Manassas",
+      "provider_region": "us-east-a2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TR",
+      "state": null,
+      "city": "Istanbul",
+      "provider_region": "tr-ist-u1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.ubicloud.com/docs/llms-full.txt",
+  "locations_quote": "Each Ubicloud region can be mapped to particular provider and its data center. Below you can find the mapping of existing Ubicloud regions. eu-central-h1 Hetzner Falkenstein, Germany; eu-north-h1 Hetzner Helsinki, Finland; us-east-a2 Leaseweb Manassas, VA, US. Ubicloud now supports provisioning GPU ",
+  "locations_checked": "2026-10-01"
+}

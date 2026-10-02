@@ -1,0 +1,589 @@
+{
+  "id": "sealos-devbox",
+  "name": "Sealos DevBox",
+  "url": "https://sealos.io/pricing/",
+  "category": "dev-env",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "pool",
+      "label": "Monthly resource package (flat, shared by all DevBoxes/apps in the plan)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "container"
+      },
+      "pricing": "pool",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": [
+        {
+          "name": "Starter (2 vCPU / 2Gi / 10Gi disk / 10GB traffic / 4 NodePorts)",
+          "month": 34,
+          "vcpu": 2,
+          "ram_gib": 2,
+          "max_vms": null
+        },
+        {
+          "name": "Hobby (4 vCPU / 4Gi / 20Gi / 50GB / 8 NodePorts)",
+          "month": 70,
+          "vcpu": 4,
+          "ram_gib": 4,
+          "max_vms": null
+        },
+        {
+          "name": "Standard (8 vCPU / 16Gi / 50Gi / 300GB / 16 NodePorts)",
+          "month": 128,
+          "vcpu": 8,
+          "ram_gib": 16,
+          "max_vms": null
+        },
+        {
+          "name": "Pro (16 vCPU / 32Gi / 200Gi / 1TB)",
+          "month": 512,
+          "vcpu": 16,
+          "ram_gib": 32,
+          "max_vms": null
+        },
+        {
+          "name": "Team (64 vCPU / 128Gi / 500Gi / 3TB)",
+          "month": 2030,
+          "vcpu": 64,
+          "ram_gib": 128,
+          "max_vms": null
+        },
+        {
+          "name": "Enterprise (256 vCPU / 1024Gi / 1024Gi / 10TB)",
+          "month": 12451,
+          "vcpu": 256,
+          "ram_gib": 1024,
+          "max_vms": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Flat monthly price for a fixed resource package; the same price whether DevBoxes run 1 h or 730 h. No overage: allocating more than the package requires a manual upgrade. Disk and traffic caps per tier are in the tier names. Upgrades apply immediately; downgrades and cancellation only take effect at the billing-cycle date, so the current month's package is a floor. Taxes and optional services are billed separately in Cost Center. Payment by major credit card via Stripe.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Plan capacity is what you can allocate at once (sum of DevBox/app CPU and memory), shared with managed DBs and object storage. Whether a sleeping (normal shutdown) DevBox still holds its CPU/RAM against the package is undocumented; it does keep its NodePort. [basis verified 2026-09-28] Confirmed flat allocation package (pool mode, basis fields ignored): \"Your plan price covers the resources listed on the plan card ... allocating more resources requires a manual plan upgrade\" (sealos.io/pricing). No usage metering."
+    },
+    {
+      "key": "pool-new-user",
+      "label": "New-user price on first paid plan (Starter $7, Hobby $25)",
+      "flags": [
+        "promo"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "container"
+      },
+      "pricing": "pool",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": [
+        {
+          "name": "Starter new-user",
+          "month": 7,
+          "vcpu": 2,
+          "ram_gib": 2,
+          "max_vms": null
+        },
+        {
+          "name": "Hobby new-user",
+          "month": 25,
+          "vcpu": 4,
+          "ram_gib": 4,
+          "max_vms": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "'First paid plan purchase · Eligibility confirmed in Cost Center'. Whether it recurs after the first month is not stated.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Promotional; flag 'promo' (non-standard) so the engine only prices it on opt-in."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false
+  },
+  "plans": [
+    {
+      "name": "Monthly resource package",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "The package price is carried by the pool modes (fee 0 here to avoid double counting). AI credits bundled: 100 / 300 / 800 on Starter / Hobby / Standard."
+    },
+    {
+      "name": "Custom",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "'A resource package and support plan built around your needs' — contact sales."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": false,
+    "open_source": false,
+    "regions": [],
+    "soc2": null,
+    "hipaa": null,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": true,
+    "lang_rust": true,
+    "lang_java": true,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": null,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "isolation": "container",
+    "image_oci": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": true,
+    "ingress_rules": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "max_session_unlimited": true,
+    "volume_attach": false,
+    "secret_proxy": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Not a metered sandbox: flat monthly resource packages with no overage. Traffic (10GB-10TB) and disk (10-1024Gi) caps are per tier; exceeding needs an upgrade. Engine egress/disk fields left null because allowances are tier-bound.",
+    "Starter/Hobby give only 1 GiB RAM per vCPU; a 4 vCPU / 8 GiB DevBox needs Standard ($128) or larger.",
+    "Whether an account can stack several packages (e.g. 4 x Team instead of Enterprise) is not documented.",
+    "No pay-as-you-go option is published any more. The 'CPU $40 / RAM $20 / Volume $3 / Egress $2.50' figures that search engines attribute to Sealos are Railway's rates from Sealos's comparison calculator ($20/avg vCPU, $10/avg GB, $0.15/GB volume, $0.05/GB egress, verified 2026-08-21) and must not be used for Sealos.",
+    "New-user price ($7 Starter, $25 Hobby) applies to the 'first paid plan purchase'; recurrence unclear. Modeled as a separate 'promo'-flagged pool mode.",
+    "7-day no-card free trial (4 vCPU, 4GB, 5GB storage, 500MB bandwidth, 100 AI credits); not represented as credit.",
+    "Since the SSH Gateway (blog 2026-01-22) all DevBox SSH goes through one shared port 2233 and uses zero NodePorts, so sleeping DevBoxes no longer burn NodePort quota just for SSH. NodePorts (4/8/16/32 on Starter/Hobby/Standard/Pro) are only consumed by services you expose. Whether a normally shut-down DevBox still holds CPU/RAM against the package is still undocumented.",
+    "Isolation is Kubernetes containers. Regions not published on sealos.io; separate China cloud (sealos.run, CNY) not researched.",
+    "Self-hosted Sealos is source-available (Sealos Sustainable Use License), not OSI open source.",
+    "No benchmark data.",
+    "Plans are aggregate resource pools, not one sandbox of the displayed size: 50 concurrent 4 vCPU / 8 GiB workers need 200 vCPU / 400 GiB allocated at once, so the smallest fitting published pool is Enterprise ($12,451/mo); low CPU utilisation does not shrink the allocation. Taxes/optional services billed separately in Cost Center. (patch v10-regional, 2026-09-28)",
+    "Some Sealos docs (llms.txt 'How Much Does It Cost?' section) still list Starter $7 / Hobby $25 as the plain monthly prices; the live pricing page shows these only as first-purchase new-user prices (regular $34 / $70). Use the pricing page."
+  ],
+  "sources": [
+    "https://sealos.io/pricing/",
+    "https://sealos.io/products/devbox/",
+    "https://sealos.io/docs/guides/devbox",
+    "https://sealos.io/docs/guides/devbox/release/",
+    "https://sealos.io/blog/ssh-gateway-kubernetes-nodeport-solution/",
+    "https://github.com/labring/sealos"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": 4,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Seven-day trial no card required; new-user paid promotional eligibility confirmed in Cost Center.",
+    "tiers": "Trial 4 vCPU/4 GB/5 GB storage; paid fixed resource packages with higher aggregate pools; Enterprise custom.",
+    "notes": "No published instance count. Trial at 4 vCPU/8 GiB workload is insufficient memory. Paid package pool limits must be checked for each fleet; multiple concurrent package stacking not documented. 10/50/300/1,000 machines not derivable without shape and pool choice.",
+    "sources": [
+      "https://sealos.io/pricing/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 1,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://sealos.io/docs/advanced/architecture",
+      "quote": "System auto-saves user environment changes under specific conditions",
+      "note": "Filesystem only (no memory/processes): changes are \"packaged as image layers\" and committed to an internal registry; \"On subsequent startups, system boots from the most recent image\". The trigger ('specific conditions', presumably shutdown) is not specified. Two shutdown modes exist: normal (keeps its NodePort) and cold (releases it) (SSH gateway blog). This is how DevBox persistence works, not a separately controllable feature.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://sealos.io/docs/guides/devbox/template-market",
+      "quote": "Locate the version you want to convert into a template",
+      "note": "Via console Releases: \"+ Add new release\" builds an OCI image of the DevBox (tag + description). Releases can be deployed as apps or turned into private/public templates, and new DevBoxes can start from a template. Filesystem/image only, no memory. The llms.txt Next.js guide says: \"Each release creates a snapshot of your current code\". No public REST API for it was found (devbox-sdk has pause/shutdown but no snapshot).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/labring/codex-gateway/main/README.md",
+      "quote": "HTTP/SSE gateway for Codex. Each session starts one `codex app-server` child process over stdio; the gateway runs turns against it, streams its events to the client over SSE",
+      "note": "First-party (labring) open-source gateway for Codex only, built \"to run inside a disposable sandbox (a Sealos Devbox)\". It gives sessions, a POST turn with a prompt, an SSE event stream, interrupt, and resumeThreadId. It is used by Sealos Brain (its AI deploy agent). It is self-deployed, NOT a documented managed DevBox API, hence low confidence. No Claude Code/OpenCode support.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://sealos.io/llms.txt",
+      "quote": "Toggle the switch to enable internet access for your DevBox. This allows external users to access your Next.js application through the public internet using the provided domain.",
+      "note": "You choose which container ports to expose ('Add Port') and toggle public access per port (Sealos subdomain or custom domain). SSH goes through a shared SSH gateway (port 2233) with key auth. No IP allowlists or authenticated preview URLs are documented.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox/intro",
+      "quote": "Runtime options | 20+ pre-configured | Limited or BYO",
+      "note": "DevBox environments start from Sealos's 20+ pre-configured runtime templates or from your own saved Template Market templates (which are themselves built from a DevBox Release, not an arbitrary external image). No path to start a fresh DevBox from your own external Docker/OCI image was found; DevBox's own comparison table contrasts itself (pre-configured only) with traditional CDEs that offer BYO images.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://sealos.io/docs/advanced/architecture",
+      "quote": "Sealos DevBox is an advanced development environment solution that leverages cloud-native Container and Kubernetes technologies... The Container-shim layer provides automated maintenance",
+      "note": "derived: the DevBox runtime itself is a Kubernetes-managed container (not a VM); no documentation of a Docker socket, privileged mode, or Docker-in-Docker support inside a DevBox was found.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://sealos.io/docs/advanced/architecture",
+      "quote": "Sealos DevBox is built on a layered architecture... simulating a traditional virtual machine experience while maintaining containerization benefits",
+      "note": "derived: isolation is a Kubernetes container (shared kernel); no /dev/kvm passthrough or nested-virtualization support is documented.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox/intro",
+      "quote": "DevBox is a fully-managed cloud development environment built on Kubernetes. It provides consistent, production-ready workspaces accessible from any device, through your favorite IDE.",
+      "note": "not offered: outside the product's scope — DevBox is a coding/dev-environment product (SSH/IDE/terminal access), not a browser-automation product.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox/intro",
+      "quote": "DevBox is a fully-managed cloud development environment built on Kubernetes.",
+      "note": "not offered: outside the product's scope — no browser/scraping stealth features documented for a coding dev-environment product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox/intro",
+      "quote": "DevBox is a fully-managed cloud development environment built on Kubernetes.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://sealos.io/docs/guides/devbox/template-market",
+      "quote": "Locate the version you want to convert into a template ... Click 'More' ... Select 'Convert to Template' ... Spin up new DevBox runtimes in seconds",
+      "note": "Fork is image/template-based: convert a committed Release version into a (private or public) Template, then create new independent DevBoxes from it — not a live clone of a currently running box.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox/template-market",
+      "quote": "Select a Version ... Locate the version you want to convert into a template",
+      "note": "Cloning requires first converting a committed Release version (an OCI image) into a Template; no documented way to clone a currently running DevBox directly without that release/template step.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://sealos.io/docs/advanced/architecture",
+      "quote": "Changes are packaged as image layers ... New layers are appended to the base image as commits",
+      "note": "The fork/template mechanism preserves the filesystem/OCI image only; no process/memory state is captured or restored.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://sealos.io/llms.txt",
+      "quote": "Your workspace persists between sessions. Stop and resume anytime without losing state.",
+      "note": "Resume is a manual console/CLI action; no documentation of a stopped DevBox automatically waking on an inbound request.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://sealos.io/pricing/",
+      "quote": "2 vCPU · 2Gi RAM · 10Gi Disk",
+      "note": "not offered: outside the product's scope — each DevBox has its own disk from the plan's package; no multi-attach/shared-volume-across-machines feature is documented for DevBox.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox/create-a-project",
+      "quote": "In the Sealos Dashboard, simply describe your requirements, and Sealos will automatically configure your development environment.",
+      "note": "not offered: outside the product's scope — the natural-language 'Sealos Brain' assistant provisions dev environments/apps from a description; it is not a first-party API for driving a browser/computer-use/research task agent.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://sealos.io/pricing/",
+      "quote": "10GB Traffic",
+      "note": "Egress is controlled only via a flat per-plan traffic quota; no allow/deny list, no-internet mode, or security-group-style egress rule feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://sealos.io/pricing/",
+      "quote": "10GB Traffic",
+      "note": "No HTTP method/path-level egress control is documented; only a flat traffic quota per plan.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://sealos.io/docs/advanced/architecture",
+      "quote": "Sealos DevBox ... leverages cloud-native Container and Kubernetes technologies",
+      "note": "Isolation is a Kubernetes container (shared host kernel), not a full VM/microVM with root network-stack control, so the 'derived: true' case for guest_firewall does not apply here.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://sealos.io/pricing/",
+      "quote": "ipv4_available: false (no public IPv4 per machine is offered)",
+      "note": "No fixed/static outbound IP feature is documented; outbound traffic goes through the shared cluster network.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://sealos.io/pricing/",
+      "quote": "Starter 2 vCPU · Hobby 4 vCPU · Standard 8 vCPU · Pro 16 vCPU · Team 64 vCPU · Enterprise 256 vCPU (all CPU/RAM/disk/traffic, no GPU line item)",
+      "note": "not offered: outside the current DevBox product — none of the published DevBox resource packages include a GPU option.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox/intro",
+      "quote": "Choose from 20+ pre-configured runtimes (Node.js, Python, Go, Java, Rust, etc.)",
+      "note": "No arm64 DevBox runtime/architecture option is documented; the only 'amd64 and arm64' references found are for the separate self-hosted Sealos Kubernetes cluster-image tooling, not the managed DevBox product.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://github.com/labring/sealos",
+      "quote": "DevBox is not self-hosted ... DevBox is a managed service on Sealos Cloud.",
+      "note": "Sealos itself is source-available and can be self-hosted by the customer (DIY), but no managed 'we deploy into your cloud account' (BYOC) offering is documented; Enterprise 'Custom' is a contact-sales resource package, not a stated BYOC deployment model.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://sealos.io/docs/msa/privacy-policy",
+      "quote": "Personal Information: Name, email address, phone number, account credentials, and billing/payment information.",
+      "note": "No SAML/OIDC single sign-on feature is documented anywhere in the reachable pricing/docs/privacy pages; sign-in appears to be standard account credentials.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://sealos.io/docs/msa/privacy-policy",
+      "quote": "Labring Inc. is headquartered in the United States. Data collected may be transferred to and processed in the U.S. or other countries... For transfers of data from the EEA, UK, or Switzerland, we utilize European Commission-approved SCCs",
+      "note": "The privacy policy describes EU data being transferred to and processed in the U.S. under SCCs/DPF, with no EU-region data-residency option offered; no regions are published on sealos.io at all.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://sealos.io/llms.txt",
+      "quote": "Your workspace persists between sessions. Stop and resume anytime without losing state.",
+      "note": "DevBox is billed as a flat monthly resource package (not per-hour) and runs until you stop it; no maximum single-session runtime limit is documented.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://sealos.io/llms.txt",
+      "quote": "In the [Sealos Desktop](https://os.sealos.io), click on the \"DevBox\" icon to enter the DevBox application.",
+      "note": "\"Sealos Desktop\" is the name of the web management console (os.sealos.io), not a VNC/RDP graphical desktop for the DevBox itself. DevBox is a headless container reached via SSH/Cursor/VS Code Remote; no streamed GUI/VNC/RDP is documented anywhere in the docs or llms.txt.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox",
+      "quote": "Zero infrastructure overhead – No Kubernetes expertise required. DevBox handles orchestration, scaling, and networking.",
+      "note": "DevBox is a remote coding runtime (SSH + IDE remote dev), not a GUI environment. No screenshot/click computer-use API is documented; not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://sealos.io/llms.txt",
+      "quote": "Toggle the switch to enable internet access for your DevBox. This allows external users to access your Next.js application through the public internet using the provided domain.",
+      "note": "Exposure is via a Sealos-provided subdomain/custom domain (ingress) or the shared SSH gateway (port 2233), not a dedicated public IPv4 address per DevBox. No 'public IP' / 'elastic IP' feature is documented anywhere in the docs or llms.txt.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://sealos.io/llms.txt",
+      "quote": "Public templates: Community-shared templates accessible to all users for creating common DevBox runtimes.",
+      "note": "The DevBox Template Market templates are language/framework runtime presets (e.g. Python, Java, Go, Next.js) for setting up a coding environment, not preinstalled coding-agent harnesses (Claude Code/Codex/OpenCode). The only agent-adjacent artifact found is labring's own codex-gateway (self-deployed OSS repo, already captured under harness_api), not a first-party managed template/offering.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox",
+      "quote": "DevBox handles orchestration, scaling, and networking.",
+      "note": "DevBox runtimes are Kubernetes containers; the product only lists Linux language runtimes (Python, Node, Go, Java, etc.) as templates. No Windows machine option is documented anywhere; not offered: outside the product's scope (container-based Linux dev environment).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox",
+      "quote": "DevBox handles orchestration, scaling, and networking.",
+      "note": "Same as windows: DevBox is a Kubernetes-container Linux dev environment; no macOS machine option is documented. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/labring/sealos/main/LICENSE.md",
+      "quote": "You may not: - Use it to provide any form of cloud services—including public, private, or managed services—to third parties, whether free or paid",
+      "note": "labring/sealos is licensed under the 'Sealos Sustainable Use License' (source-available, not OSI-approved): GitHub's own license detector reports license.key=\"other\"/spdx_id=\"NOASSERTION\", and the README states 'Not a standard open source license'. Confirms card's existing false value.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://sealos.io/pricing/",
+      "quote": "Starter 2 vCPU · 2Gi RAM · 10Gi Disk / Hobby ... 20Gi / Standard ... 50Gi / Pro ... 200Gi / Team ... 500Gi / Enterprise ... 1024Gi",
+      "note": "not offered: each DevBox gets exactly one fixed-size disk from its plan tier; no documented way to attach an additional/extra persistent volume to a DevBox. The 'Persistent Storage' volume-attach feature that exists in Sealos docs (sealos.io/docs/guides/app-deploy/persistent-volume) belongs to the separate App Deploy/Launchpad product for deployed apps, not to the DevBox dev-environment product this card models.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://sealos.io/llms.txt",
+      "quote": "Your workspace persists between sessions. Stop and resume anytime without losing state.",
+      "note": "Stopping/resuming a DevBox is described as a manual action ('Stop and resume anytime') via console/CLI; no idle-timeout or automatic-sleep-on-inactivity behavior is documented anywhere in the docs, pricing, or architecture pages.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://sealos.io/docs/guides/devbox",
+      "quote": "DevBox is Sealos's fully managed cloud development environment built on Kubernetes. It delivers production-ready runtimes you can reach from Cursor, VS Code, JetBrains Gateway, or a browser terminal",
+      "note": "not offered: no first-party credential-injection proxy for third-party HTTP APIs (or model-provider keys) is documented; DevBox exposes configuration only via environment variables and container mounts (card's own credential_injection field is also null/undocumented).",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://sealos.io/pricing/",
+      "quote": "Flat monthly price for a fixed resource package; the same price whether DevBoxes run 1 h or 730 h. No overage: allocating more than the package requires a manual upgrade.",
+      "note": "granularity: account-only; cost: yes; Sealos DevBox uses flat monthly resource packages (pool-based pricing) with no per-sandbox metering. The pricing page explicitly states the plan covers fixed resources for a fixed monthly fee regardless of actual runtime hours. Cost Center provides account-level cost visibility but not per-sandbox breakdown. Individual DevBox usage (running time, vCPU-seconds, GB-seconds) is not available via API.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://sealos.io/pricing/",
+  "locations_quote": "No region selection or documentation found on pricing or docs pages",
+  "locations_checked": "2026-10-01"
+}

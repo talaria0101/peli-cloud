@@ -1,0 +1,603 @@
+{
+  "id": "rivet",
+  "name": "Rivet (Actors & agentOS)",
+  "url": "https://rivet.dev/pricing/",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "pricing": "resource",
+      "vcpu_h": 0.1188,
+      "ram_gib_h": 0.01044,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "instance_h": 0.00005,
+      "key": "agentos",
+      "label": "agentOS sandbox (V8 isolates + WebAssembly)",
+      "flags": [],
+      "features": {
+        "isolation": "v8-isolate + wasm",
+        "docker_inside": false,
+        "nested_virt": false,
+        "root": false,
+        "ssh": false,
+        "custom_image": false,
+        "image_oci": false,
+        "lang_node": true,
+        "lang_python": true,
+        "persistent_disk": true,
+        "agent_harnesses": true,
+        "browser": null
+      },
+      "max_ram_gib": 4,
+      "note": "rivet.dev/agentos (2026-09-29): \"Powered by WebAssembly and V8 isolates\", runs \"in-process with no VM boot, network hop, or disk image\"; each agent gets a persistent POSIX filesystem, Bash, Node.js and Python. Defaults: V8 heap 128 MiB, JS CPU time 30 s, Python timeout 5 min, WASM memory 128 MiB, 256 sockets (rivet.dev/agentos/docs/resource-limits). On Rivet Cloud it runs as Actors, billed like them: from $0.0000330/vCPU-s + $0.0000029/GiB-s while awake plus $0.05 per 1k Awake Actor Hours; no separate agentOS price is published. Claude Code / Codex agents and browser automation are marked beta."
+    },
+    {
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "pricing": "resource",
+      "vcpu_h": 0.1188,
+      "ram_gib_h": 0.01044,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "instance_h": 0.00005,
+      "key": "actors",
+      "label": "Rivet Actors (Node / Bun processes)",
+      "flags": [
+        "alt"
+      ],
+      "features": {
+        "isolation": null
+      },
+      "max_ram_gib": 4,
+      "note": "rivet.dev pricing (2026-09-29): compute \"From $0.0000330 per vCPU-second + $0.0000029/GiB-s\" = $0.1188/vCPU-h + $0.01044/GiB-h, only while awake (\"Sleeping Actors are not billed for active execution\"), plus $0.05 per 1k Awake Actor Hours. Actors run on native Node.js / Bun (\"no custom V8 runtime\"); the tenant isolation boundary on Rivet Cloud is not documented. Adjacent product: an actor/durable-object platform, not a Linux sandbox."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 5,
+    "disk_gib_month": 0.4,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0.15,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "Network access is governed by the VM permission policy. By default the guest cannot reach the network; grant it, or allow only specific destinations:",
+          "url": "https://rivet.dev/agentos/docs/networking/"
+        },
+        {
+          "quote": "Egress 100GB max ... Free plan values are hard monthly limits.",
+          "url": "https://rivet.dev/pricing/"
+        },
+        {
+          "quote": "Egress 1TB included ... $0.15 per GB of egress",
+          "url": "https://rivet.dev/pricing/"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "trial_only": true,
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 1,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Hard limits, no overage: $5/month compute max, 1 vCPU max, 100,000 Awake Actor Hours, 5 GB storage, 100 GB egress. Not sizeable for a real workload.",
+      "egress_cap_gib": 100
+    },
+    {
+      "name": "Hobby",
+      "fee": 20,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 20,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "egress_free_gib": 931.32,
+      "note": "$20/mo + usage. Includes 400,000 Awake Actor Hours ($20 at $0.05/1k, the only included usage; compute is not included), 5 GB storage, 25B reads, 50M writes, 1 TB egress. 8 vCPU max."
+    },
+    {
+      "name": "Team",
+      "fee": 200,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 20,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "egress_free_gib": 931.32,
+      "note": "$200/mo + usage, same allowances as Hobby (400,000 Awake Actor Hours, 1 TB egress), Slack support."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom (BYOC: control plane in your VPC, FoundationDB, multi-tenancy, ACLs, SLA)."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": null,
+    "hipaa": false,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "isolation": "v8-isolate + wasm (agentOS); processes (Actors)",
+    "snapshot_auto": false,
+    "harness_api": true,
+    "egress_allowlist_level": "domain",
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_on_demand": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Two products on one bill: agentOS sandboxes (V8 isolates + WebAssembly, persistent POSIX filesystem, Bash/Node/Python) and Rivet Actors (stateful Node/Bun processes). Both are billed as Actors on Rivet Cloud.",
+    "Compute: $0.0000330/vCPU-s + $0.0000029/GiB-s ($0.1188/vCPU-h + $0.01044/GiB-h) only while awake; sleeping actors pay only for persisted state ($0.40/GB-month beyond 5 GB). Awake Actor Hours $0.05 per 1k (400k included on paid plans). Reads $0.20/M, writes $1/M on persisted state, not modelled.",
+    "An isolate is not a Linux machine: no Docker, no root, no nested virtualisation, no arbitrary binaries beyond the WebAssembly-compiled toolset.",
+    "Memory cap: the pricing calculator stops at 4 GiB; agentOS defaults are 128 MiB V8 heap and 128 MiB WASM memory (configurable).",
+    "Free plan is capped at $5/month of compute and 1 vCPU with no overage, so it is left out of pricing.",
+    "Also from Rivet, not compute: the open-source Sandbox Agent SDK (github.com/rivet-dev/sandbox-agent) drives coding agents inside other providers' sandboxes (E2B, Daytona, ...); it is not hosted compute and is not priced here.",
+    "Null values mean unknown, not free/unlimited."
+  ],
+  "sources": [
+    "https://rivet.dev/",
+    "https://rivet.dev/pricing/",
+    "https://rivet.dev/cloud/",
+    "https://rivet.dev/agentos/",
+    "https://rivet.dev/agentos/docs/",
+    "https://rivet.dev/agentos/docs/resource-limits/",
+    "https://rivet.dev/llms.txt",
+    "https://www.ycombinator.com/companies/rivet"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Free pricing shows max vCPU 1 and $5/month compute cap; Hobby/Team max vCPU 8 with usage billing; enterprise BYOC.",
+    "notes": "Pricing does not make clear whether max-vCPU label is per-instance or aggregate, so default_max_vcpu remains null. Actor count/hours and sleeping state do not map one-to-one to machines. New-account fleet cap and review timing unknown.",
+    "sources": [
+      "https://rivet.dev/cloud/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "checked": "2026-09-29",
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/persistence.md",
+      "quote": "agentOS persists the `/home/agentos` filesystem, durable session catalog, and completed session history across actor sleep. A later client call wakes a fresh VM. Adapter processes, running commands, shells, live subscriptions, and in-progress ACP deltas do not survive VM shutdown.",
+      "note": "Actor sleeps after idle timeout (RivetKit default 30 s) and the VM shuts down; /home/agentos lives in the actor's SQLite and is continuously persisted (this is persistent_disk, not a snapshot). Running processes, shells and in-memory mounts are explicitly lost; the agent session is restored lazily via ACP session/resume or session/load on next prompt.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://rivet.dev/agentos/docs/agents/claude.md",
+      "quote": "await agent.sessions.open({\n\tagent: \"claude\",\n\tenv: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY! },\n});\n\nconst result = await agent.sessions.prompt({",
+      "note": "First-party ACP-based sessions API: sessions.open / sessions.prompt, conn.on(\"sessionEvent\") streaming, listSessions / readHistory / getSession, resume after sleep (\"Native ACP `session/resume`\"), permission requests (ask/allow_all/reject_all), dashboard Transcript tab. Harnesses: Pi (default), Claude Code (beta), Codex (beta), OpenCode, custom agents. Source for listing: https://rivet.dev/agentos/docs/sessions.md \"Also SQLite-only reads: `getSession`, `listSessions`, `getSessionConfig`\".",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://rivet.dev/agentos/docs/permissions.md",
+      "quote": "For `network`, a pattern matches a resource, not a bare hostname: `dns://<host>` for name resolution and `tcp://<host>:<port>` for the connection. Allowing a host needs both, and `*` matches any port. The operations are `fetch`, `http`, `dns`, and `listen`.",
+      "note": "Default-deny network (\"External DNS and network connections are denied until you opt in\"); rules are host(+port) patterns enforced by the trusted sidecar/kernel outside the V8/WASM executor, with DNS pinning and blocking of restricted ranges (architecture/networking). Patterns are host:port; IP/CIDR patterns are not documented explicitly, so level = domain (ports also filterable). Set by the trusted host config, not by the guest.",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/permissions.md",
+      "quote": "Every non-`fs` scope matches by `patterns` instead of `paths`. For `network`, a pattern matches a resource, not a bare hostname: `dns://<host>` for name resolution and `tcp://<host>:<port>` for the connection.",
+      "note": "Network policy matches only dns/tcp host:port resources; no method/path/header rules documented. Custom HTTP-level mediation would have to be built with host functions.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://rivet.dev/agentos/docs/networking.md",
+      "quote": "Preview URLs are port forwarding for VM services: a time-limited, public URL that proxies HTTP to a port inside the VM, for browser or external access (use `httpRequest` for server-to-server). Preview creation is intentionally actor-only through the native `createPreviewUrl` and `expirePreviewUrl` actions",
+      "note": "Guest listeners are loopback-only by default; exposure is per port via signed, expiring, revocable preview tokens (max lifetime configurable, default cap 24 h) or trusted per-port loopbackExemptPorts; server-to-server access via authenticated actor httpRequest. Actor connections authenticated in onBeforeConnect.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/limitations.md",
+      "quote": "It implements a focused subset of the kernel surface, so a few Linux-specific features are not available:\n\n- Kernel modules and eBPF",
+      "note": "agentOS is a virtual POSIX kernel over V8 isolates + WASM, no root, no apt/arbitrary binaries (registry only); no netfilter/iptables in the virtual kernel. Network control is the host-side permission policy instead. Derived from architecture, not an explicit 'no iptables' statement.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/models-and-credentials.md",
+      "quote": "Pass LLM provider keys via the `env` option on `openSession`.",
+      "note": "Model keys enter the VM as session env vars (and are stored plaintext in the per-VM SQLite). The alternative pattern is host functions: \"Credentials ... Stay on the host. Host functions run your functions server-side; agents see only inputs and outputs\" (versus-sandbox) - an RPC tool mechanism, not a transparent outbound credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://rivet.dev/agentos/docs/filesystem.md",
+      "quote": "Back a guest path with external storage by adding it to the `mounts` config. Each mount takes a `path` and an optional `readOnly` flag, and the guest only ever sees the mounted subtree, never the wider host.",
+      "note": "Built-in mount plugins: host directory, S3 / S3-compatible (block-store format, 4 MB chunks), Google Drive, in-memory, external-sandbox filesystem; dynamic mountFs()/unmountFs(). Storage is the customer's own bucket/drive; Rivet sells no separate volume product. Host/remote mounts read-only by default, writable opt-in.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/limitations.md",
+      "quote": "You cannot download and install arbitrary binaries (for example via `curl` or `apt`), and standard Linux package managers (`apt`, `yum`) are not available since agentOS runs a streamlined Linux environment rather than a full distribution.",
+      "note": "agentOS boots V8-isolate/WASM VMs from a fixed software registry, not a customer-supplied Docker/OCI image; Rivet Actors run plain Node/Bun processes, not container images either.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/limitations.md",
+      "quote": "It implements a focused subset of the kernel surface, so a few Linux-specific features are not available:\n\n- Kernel modules and eBPF\n- Container runtimes (e.g. Docker)\n- File watching (`inotify`, `fs.watch`)",
+      "note": "Explicitly unavailable inside agentOS; a full external sandbox (a different, non-agentOS product) must be mounted for Docker workloads.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/limitations.md",
+      "quote": "The VM has no access to GPUs, USB devices, or other hardware.",
+      "note": "agentOS is itself a virtual POSIX kernel over V8 isolates + WebAssembly with no host hardware access, so /dev/kvm-style nested virtualization is not available; Actors are plain Node/Bun processes with no VM layer at all.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/versus-sandbox.md",
+      "quote": "Spin up a sandbox when the workload needs a real Linux kernel: ... GUI applications and VNC sessions",
+      "note": "not offered: Rivet's own compute (agentOS VMs, Actors) has no graphical desktop; GUI/VNC work is explicitly pushed to a third-party 'external sandbox' extension, outside Rivet's own product.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/browser.md",
+      "quote": "The page loads in a real browser in Browserbase's cloud and comes back as clean content — the VM never runs a browser.",
+      "note": "not offered: browser access is delegated to the third-party Browserbase service; Rivet's own VM/Actor compute never runs a browser.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/pricing/",
+      "quote": "agentOS sandbox (V8 isolates + WebAssembly)",
+      "note": "not offered: outside the product's scope — no desktop/browser rendering surface exists to drive with a screenshot+click API.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://rivet.dev/pricing/",
+      "quote": "Managed container orchestration for durable, stateful workloads: Actors and agentOS VMs billed by vCPU-second and GiB-second.",
+      "note": "not offered: outside the product's scope — Rivet is a compute/orchestration platform for Actors and agent VMs, not a browser/anti-detection product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://rivet.dev/pricing/",
+      "quote": "Managed container orchestration for durable, stateful workloads: Actors and agentOS VMs billed by vCPU-second and GiB-second.",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving capability documented for a compute/orchestration platform.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://rivet.dev/agentos/docs/architecture/networking.md",
+      "quote": "Guest outbound to host or external. Connections that do not target a VM-owned listener take the external network path: permission checks, DNS pinning, then a real host `TcpStream`.",
+      "note": "Outbound connections leave through Rivet's own cloud infrastructure hosts; no residential/mobile egress product is documented, so it is ordinary datacenter egress.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/security-model.md",
+      "quote": "There are no host escapes: guest code cannot spawn a real host process, touch the real host filesystem, or open a real host network socket.",
+      "note": "No SSH access is documented; agentOS/Actors are reached only through the client SDK / RivetKit API, not a shell login.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://rivet.dev/agentos/docs/persistence.md",
+      "quote": "agentOS persists the `/home/agentos` filesystem, durable session catalog, and completed session history across actor sleep. ... Running processes ... Active shells ... In-memory mounts | VM memory | No",
+      "note": "State survives sleep via continuous SQLite persistence of the filesystem/session catalog, but there is no documented point-in-time snapshot/restore artifact (fs or mem) that a customer can create; it is a persistence model, not a snapshot feature.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/persistence.md",
+      "quote": "The native sidecar reads and writes filesystem chunks directly through the actor's authenticated SQLite Unix socket.",
+      "note": "No API/CLI to take an explicit on-demand snapshot/checkpoint is documented; persistence is continuous and automatic, not a customer-triggered checkpoint.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://rivet.dev/actors/docs/lifecycle.md",
+      "quote": "Manual Lifecycle Controls\nYou can also trigger lifecycle transitions from the Rivet Cloud API. These endpoints are useful for operational workflows, debugging, and forcing an actor to move through the same sleep or reschedule path that the platform would normally trigger.",
+      "note": "Documented lifecycle controls cover sleep/wake/destroy; no clone/fork-a-machine-into-a-new-one capability is documented for Actors or agentOS VMs.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://rivet.dev/actors/docs/lifecycle.md",
+      "quote": "Manual Lifecycle Controls",
+      "note": "No fork capability at all is documented, so cloning a running machine without stopping it is not offered.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://rivet.dev/actors/docs/lifecycle.md",
+      "quote": "Manual Lifecycle Controls",
+      "note": "No fork capability at all is documented, so a memory-preserving fork is not offered.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://rivet.dev/actors/docs/lifecycle.md",
+      "quote": "\"https://cloud-api.rivet.dev/actors/$ACTOR_ID/sleep?namespace=$NAMESPACE\"",
+      "note": "A manual Cloud API call can force an actor/agentOS VM to sleep; it wakes automatically on the next request (wake_on_request). Sleeping actors are not billed for active compute, only persisted-state storage.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/filesystem.md",
+      "quote": "Back a guest path with external storage by adding it to the `mounts` config. Each mount takes a `path` and an optional `readOnly` flag, and the guest only ever sees the mounted subtree, never the wider host.",
+      "note": "Mounts (host dir, S3, Google Drive, in-memory, external sandbox) are configured per-VM; no documented feature mounts one Rivet-managed volume across several running machines simultaneously.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://rivet.dev/actors/docs/limits.md",
+      "quote": "Soft Limit: Application-level limit, configurable in RivetKit. These cannot exceed the hard limit.",
+      "note": "No documented API to change CPU/RAM of a running actor/VM without recreating it; resource sizing is set at deploy/config time.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": true,
+      "source": "https://rivet.dev/agentos/docs/agents/claude.md",
+      "quote": "await agent.sessions.open({\n\tagent: \"claude\",\n\tenv: { ANTHROPIC_API_KEY: process.env.ANTHROPIC_API_KEY! },\n});",
+      "note": "Pi (default), Claude Code (beta), Codex (beta), and OpenCode are offered as installable agent harnesses inside agentOS VMs.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/agents/claude.md",
+      "quote": "await agent.sessions.open({\n\tagent: \"claude\", ... });",
+      "note": "not offered: Rivet's sessions API drives third-party/coding harnesses you choose (Pi, Claude Code, Codex, OpenCode) via ACP, not a first-party Rivet-branded browser/computer-use/research agent.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://rivet.dev/docs/mcp.md",
+      "quote": "The hosted endpoint is `https://mcp.rivet.dev/mcp`. ... Rivet MCP uses `search` to find `rivet.actors.list`, lists the matching `chat-room` Actors, and returns one concise result.",
+      "note": "First-party hosted and local MCP server to list/inspect/call Rivet Actors.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/networking.md",
+      "quote": "Preview URLs are port forwarding for VM services: a time-limited, public URL that proxies HTTP to a port inside the VM, for browser or external access",
+      "note": "Machines are reached only through Rivet's proxying endpoints/preview URLs and anycast routing, not a dedicated public IPv4 address per machine.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://rivet.dev/agentos/docs/networking.md",
+      "quote": "Preview URLs are port forwarding for VM services: a time-limited, public URL that proxies HTTP to a port inside the VM, for browser or external access",
+      "note": "HTTPS preview URLs proxy to a port inside the agentOS VM; Actors are likewise reached via HTTPS through the Rivet edge/gateway.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/architecture/networking.md",
+      "quote": "Guest outbound to host or external. Connections ... take the external network path: permission checks, DNS pinning, then a real host `TcpStream`.",
+      "note": "No fixed/dedicated outbound IP product is documented for agentOS or Actors.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/limitations.md",
+      "quote": "The VM has no access to GPUs, USB devices, or other hardware.",
+      "note": "Explicitly no GPU access in agentOS; no GPU machine type is offered for Actors either.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/limitations.md",
+      "quote": "agentOS is a Linux environment with a POSIX-compliant virtual kernel.",
+      "note": "not offered: outside the product's scope — agentOS and Actors are Linux/Node-based only, no Windows machine type.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://rivet.dev/agentos/docs/limitations.md",
+      "quote": "agentOS is a Linux environment with a POSIX-compliant virtual kernel.",
+      "note": "not offered: outside the product's scope — no macOS machine type is documented.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://rivet.dev/pricing/",
+      "quote": "Priority support & SLA. Hardening guidance for FedRAMP, HIPAA, regulated industries",
+      "note": "Rivet offers hardening guidance towards HIPAA for Enterprise BYOC/self-host, but does not state it is HIPAA-eligible or that a BAA is available on Rivet Cloud.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://rivet.dev/actors/docs/limits.md",
+      "quote": "Actor stop threshold | — | 30 minutes | Maximum time for an actor to stop before it is considered lost.",
+      "note": "No hard cap on total actor/VM lifetime is documented; actors run indefinitely, sleeping when idle (RivetKit default 30 s) and waking on the next request, so there is no fixed maximum session length.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://rivet.dev/changelog/2025-10-24-weekly-updates/",
+      "quote": "Support WebSockets/HTTP via path routing – no need for headers or custom protocols - AMD64 Docker image - Coolify support added",
+      "note": "Only an AMD64 Docker image is documented for running Rivet's worker/control plane (self-host/Coolify); no ARM64 build, image tag, or vCPU architecture option is published anywhere for Rivet Cloud, BYOC, or self-host. Derived from absence of any ARM64 mention across pricing, architecture, and changelog pages.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://rivet.dev/pricing/",
+      "quote": "Paid plans include a usage allowance, and metered pricing applies beyond it: Awake Actor Hours, storage, reads, writes, and egress. The free plan has fixed monthly limits; paid active execution has no included amount and is billed per usage. Rivet Cloud runs the control plane and storage; usage is v",
+      "note": "granularity: account-only; cost: yes; Rivet bills by vCPU-second, GiB-second, and Awake Actor Hours via a web dashboard on Rivet Cloud. No programmatic API (REST, SDK, or CLI with machine-readable output) is documented to retrieve per-sandbox/per-actor billable usage. Prometheus metrics are available (live performance metrics, not billable usage). Enterprise Edition mentions Advanced ClickHouse analytics but no API endpoint is documented. The Rivet Management API and HTTP API do not include usage/billing endpoints based on available documentation. Usage is accessible only via the web dashboard for individual customers, not as a per-resource-identifiable API output.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://rivet.dev/pricing/",
+  "locations_quote": "No documented region selection for agentOS or Actors in pricing or docs; regions not listed.",
+  "locations_checked": "2026-10-01"
+}

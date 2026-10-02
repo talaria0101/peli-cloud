@@ -1,0 +1,515 @@
+{
+  "id": "sf-tensor",
+  "name": "SF Tensor",
+  "url": "https://sf-tensor.com",
+  "category": "gpu-cloud",
+  "isolation": "gvisor",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt",
+        "sales"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Pass-through + savings share (Terms v1.1, 2025-12-31, s.3.3): Total Amount Due = Actual Costs (underlying AWS/GCP/Azure etc. GPU instance + infra cost, spot where possible) + Savings Fee = 10% (annual spend up to $50k) / 8% ($50k-$200k) / 6% (>$200k, rolling 12 months) of Savings vs a Reference Price = average on-demand us-east price across AWS, GCP and Azure for equivalent instances. Customer-Managed Profile (BYOC): pay the cloud directly, SF Tensor invoices only the Savings Fee. Company-Managed Profile: prepaid credits required. No fixed $/GPU-h, $/vCPU-h or $/GiB-h; rates stay null (not free). Reference-price list page (/legal/prices) is 404 today."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Savings-share (Terms s.3.3 / Model Foundry)",
+      "fee": 0,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Savings Fee 10%/8%/6% of savings vs AWS/GCP/Azure us-east on-demand average, tiered by rolling-12-month spend (<=$50k / $50k-200k / >$200k); custom % by written agreement. Company-Managed Profile must be pre-funded with credits (refundable minus transaction fees); jobs are not deployed and access can be suspended when credits run out. Customer-Managed (BYOC) profile invoiced in arrears for the fee only. Second engagement 'A research team and a model' is a fixed-price embedded-researcher engagement with compute billed separately; price not published. Service limited to US residents/US entities; EU residents excluded."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": null,
+    "gpu": true,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": null,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "secret_proxy": false,
+    "isolation": "gvisor",
+    "volume_attach": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "image_oci": true,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Live site sells Model Foundry (managed training, savings-share) and the Kernel Optimizer; the 2025 'Tensor Cloud' private beta is no longer in the navigation. /pricing and /legal/prices are 404. Published tariff = Terms s.3.3: underlying cloud cost pass-through + 10/8/6% of savings vs AWS/GCP/Azure us-east on-demand average. No fixed GPU/CPU/RAM rates; archived (Wayback, not live) price list showed 'Tensor Cloud $0.01 per GPU-hour' (v1.0, Nov 5 2025).",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/sf-tensor",
+    "https://sf-tensor.com/",
+    "https://sf-tensor.com/legal/terms",
+    "https://sf-tensor.com/news/tensor-cloud-launch",
+    "https://status.sf-tensor.com"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": "Account application + onboarding; US residents / US-organized entities only; EU residents excluded; Company-Managed Profile requires pre-funded credits.",
+    "tiers": null,
+    "notes": "Official site sells managed training outcomes and savings-share engagements, with planning/contact workflow. Claimed scale to 10,000 GPUs is not a new-account quota; underlying cloud/customer allocation remains relevant.",
+    "sources": [
+      "https://sf-tensor.com/",
+      "https://sf-tensor.com/legal/terms"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 4
+  },
+  "feature_evidence": {
+    "volume_shared": {
+      "value": true,
+      "source": "https://sf-tensor.com/news/stfs",
+      "quote": "STFS is our distributed read-through cache that fixes this: it makes an S3 bucket look like a filesystem, lets the cluster share cached ranges peer-to-peer and pulls those bytes over the fabric that is otherwise sitting idle.",
+      "note": "Read-only: STFS is a FUSE mount of an S3 bucket shared by all training nodes ('It is a cache, not a filesystem ... refusing to fake rich write semantics'). Part of Model Foundry ('Training-native storage ... shared, cluster-local caching'); described in a blog post, not reference docs.",
+      "checked": "2026-09-29"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope (a training-outcome/GPU-broker service, not a VM/sandbox platform exposing nested virtualization)",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet. Novel architectures, proprietary data, frontier scale.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://sf-tensor.com/",
+      "quote": "Best-priced across NVIDIA, AMD, TPU, Trainium ... 1 to 10,000 GPUs",
+      "note": "derived: underlying compute is provisioned from hyperscaler (AWS/GCP/Azure) GPU capacity, i.e. datacenter IP ranges; not separately stated.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://sf-tensor.com/labs",
+      "quote": "If a node fails, the run resumes from its last checkpoint on its own.",
+      "note": "not offered: outside the product's scope. This is an application-level training-checkpoint feature for job resumption, not a machine disk/memory snapshot capability.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://sf-tensor.com/labs",
+      "quote": "If a node fails, the run resumes from its last checkpoint on its own.",
+      "note": "not offered: outside the product's scope (job-checkpoint auto-resume exists; machine-level snapshot does not)",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope; no pause/resume billing mechanism documented",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope (dedicated training clusters, not request-driven sandboxes)",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://sf-tensor.com/news/stfs",
+      "quote": "Training data, model checkpoints and container images live durably upstream, usually in an S3-style bucket. That is the right place for them: it is cheap, durable and it is the source of truth.",
+      "note": "Training data/checkpoints are kept durably (S3-backed) across the job lifecycle.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Frontier scale. Take the experiments that worked to 10,000 GPUs across NVIDIA, AMD, TPU or Trainium without rewriting a line of code.",
+      "note": "Scaling is between runs/experiments, not documented as a live resize of a running machine.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "We build the stack between your idea and the hardware to let you go from first experiment to frontier-scale training run.",
+      "note": "not offered: outside the product's scope (a GPU training broker, not a coding-agent sandbox)",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "We build the stack between your idea and the hardware to let you go from first experiment to frontier-scale training run.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "We build the stack between your idea and the hardware to let you go from first experiment to frontier-scale training run.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "We build the stack between your idea and the hardware to let you go from first experiment to frontier-scale training run.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://sf-tensor.com/kernel-optimizer",
+      "quote": "A mathematical specification (PyTorch or JAX) of what the model computes",
+      "note": "Training jobs are specified/run in PyTorch/JAX (Python).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://sf-tensor.com/kernel-optimizer",
+      "quote": "A mathematical specification (PyTorch or JAX) of what the model computes",
+      "note": "not offered: outside the product's scope; the training stack is Python (PyTorch/JAX)-centric with no Node.js runtime documented",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope (a training-run compute service, not a web-app hosting platform)",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Plan a training run. Train what doesn't exist yet.",
+      "note": "not offered: outside the product's scope; no credential-injection proxy documented",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://sf-tensor.com/labs",
+      "quote": "1 to 10,000 GPUs ... NVIDIA, AMD, TPU and Trainium",
+      "note": "not offered: outside the product's scope (a Linux/CUDA-class GPU training stack; no Windows machines offered)",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://sf-tensor.com/labs",
+      "quote": "1 to 10,000 GPUs ... NVIDIA, AMD, TPU and Trainium",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://sf-tensor.com/enterprise",
+      "quote": "Your cloud: Train and deploy inside your existing cloud, networks and controls.",
+      "note": "Enterprise engagements can run inside the customer's own cloud account (BYOC), but SF Tensor's Model Foundry software/optimizer itself is not self-hostable open infrastructure the customer operates independently.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://sf-tensor.com/kernel-optimizer",
+      "quote": "Searched and proven for your architecture",
+      "note": "not offered: the Kernel Optimizer and STFS are proprietary; no OSI license found for the core product.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://sf-tensor.com/legal/terms",
+      "quote": "Our Services and Tensor Cloud are available only to (a) individuals who are residents of the United States, and (b) entities organized under the laws of the United States ... You must not be located in or a resident of the European Union.",
+      "note": "Service is contractually restricted to US residents/entities and explicitly excludes EU residents/entities.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "gvisor",
+      "source": "https://sf-tensor.com/careers/member-of-technical-staff-sandbox-infra--afb5ff4a1a",
+      "quote": "we're hiring a Member of Technical Staff for Sandbox Infrastructure to build the layer that makes it possible: a serverless GPU container service... customer workloads that require isolation, such as their RL rollouts, run on it too. We already do this on NVIDIA and AMD, including having rolled AMD GPU support in gVisor from scratch.",
+      "note": "SF Tensor's own careers page describes the sandbox stack that isolates untrusted/customer GPU workloads (RL rollouts) as a gVisor-based container service; not a customer-facing docs page, so medium confidence. The customer-facing product itself deploys jobs onto AWS/GCP/Azure GPU instances (Terms s.3.1) rather than exposing this sandbox directly.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://sf-tensor.com/legal/terms",
+      "quote": "Customer defines the job requirements, including the type and number of GPUs needed, and the Company deploys and manages the execution of such jobs on a cloud profile... The Company will deploy the job on the designated cloud profile and manage the execution of the workload.",
+      "note": "not offered: outside the product's scope. SF Tensor is a managed job-submission/training-outcome service (savings-share broker + embedded-researcher engagements), not an interactive VM/sandbox product; no docs describe direct SSH access to a machine.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://sf-tensor.com/legal/terms",
+      "quote": "Customer submits job specifications through the platform, including workload requirements, GPU type and quantity, and preferred cloud profile.",
+      "note": "not offered: outside the product's scope. No storage/volume API is documented; the product surface is job specs (GPU type/qty/cloud profile), not machine/volume management.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Train what doesn't exist yet... We handle everything between your idea and the silicon to let you iterate at the speed of light.",
+      "note": "not offered: outside the product's scope. SF Tensor runs training jobs, not networked services with exposed public IPs; no networking/ingress docs exist.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Train what doesn't exist yet... We handle everything between your idea and the silicon to let you iterate at the speed of light.",
+      "note": "not offered: outside the product's scope. No inbound networking/ingress control feature is documented for this training-job service.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://sf-tensor.com/",
+      "quote": "Train what doesn't exist yet... We handle everything between your idea and the silicon to let you iterate at the speed of light.",
+      "note": "not offered: outside the product's scope. No outbound-network allow/deny-list feature is documented; the product is a managed training-job broker, not a network-controlled sandbox.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://sf-tensor.com/careers/member-of-technical-staff-sandbox-infra--afb5ff4a1a",
+      "quote": "you'll build and maintain GPU virtualization below the runtime, including gVisor work at the driver and ioctl level",
+      "note": "derived: the documented isolation mechanism for workloads is gVisor (a syscall-filtering sandbox), not a full VM/microVM with guest root, so unrestricted in-guest nftables/iptables control is unlikely and undocumented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://sf-tensor.com/legal/terms",
+      "quote": "Customer submits job specifications through the platform, including workload requirements, GPU type and quantity, and preferred cloud profile.",
+      "note": "not offered: outside the product's scope. No fixed/static outbound IP feature is documented for this managed training-job service.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://sf-tensor.com/news/stfs",
+      "quote": "Training data, model checkpoints and container images live durably upstream, usually in an S3-style bucket.",
+      "note": "Training jobs are packaged/run as container images stored upstream of the fleet, consistent with launching jobs from a customer-supplied Docker/OCI image; not a dedicated docs page describing an image-push/registry API, so medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://sf-tensor.com/labs",
+      "quote": "If a node fails, the run resumes from its last checkpoint on its own.",
+      "note": "No fixed maximum session/run duration is documented anywhere (pricing, terms, or product pages); training runs are described as scaling to thousands of GPUs and resuming from checkpoints on failure, consistent with jobs running until completion/stopped by the customer rather than being cut off by a platform-imposed time limit.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://sf-tensor.com/legal/terms",
+      "quote": "Total Amount Due = Actual Costs + Savings Fee ... Annual Spending Tiers: Annual spending is calculated on a rolling 12-month basis. Tier adjustments are applied prospectively from the date the spending threshold is reached.",
+      "note": "granularity: account-only; cost: yes; SF Tensor's Terms (v1.1, s.3.3) specify account-level billing with tiered savings fees (10%/8%/6%) based on rolling 12-month total spend, not per-sandbox/per-job granularity. Section 3.6 mentions the Company retains 'Usage Data' including 'performance metrics, resource utilization statistics, pricing data' but no public API, SDK, or CLI for accessing this data is documented. The product is a managed training-job broker (customers submit job specs; SF Tensor deploys and manages); no programmatic usage endpoint is visible on their website, docs, terms, or career pages. References to 'track every run in one place' (labs page) do not specify API access or per-run billing export.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://sf-tensor.com/legal/terms",
+  "locations_quote": "Customer submits job specifications through the platform, including workload requirements, GPU type and quantity, and preferred cloud profile.",
+  "locations_checked": "2026-10-01"
+}

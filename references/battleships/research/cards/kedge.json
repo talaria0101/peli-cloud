@@ -1,0 +1,598 @@
+{
+  "id": "kedge",
+  "name": "Kedge",
+  "url": "https://kedge.dev/docs/billing",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "preview-workspace",
+      "label": "Persistent machine/workspace (preview price estimates)",
+      "flags": [
+        "beta",
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.02054794520547945,
+      "ram_gib_h": 0.00684931506849315,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 1,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Preview estimate pricing. Continuous 8-hour jobs must use persistent machine/workspace, not held sandbox API with 1-hour TTL cap. CPU scheduled time; RAM recently touched working set."
+    },
+    {
+      "key": "disposable-sandbox",
+      "label": "Disposable and held sandbox API (public preview)",
+      "flags": [
+        "beta"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.02054794520547945,
+      "ram_gib_h": 0.00684931506849315,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "granularity_s": 1,
+      "min_billed_seconds": 0,
+      "max_session_h": 1,
+      "note": "One-shot default: 256 MiB, 30 seconds. Held VM: 5-minute idle expiry by default, configurable TTL up to 1 hour; each command max 10 minutes; no ingress/persistence."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.05,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false,
+    "volume_retention": "App deletion, service removal, scale-down, and workspace deletion leave volumes retained until explicit removal."
+  },
+  "network": {
+    "egress_free_gib": 0,
+    "egress_gib": 0.01,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "Sandboxes have outbound network access by default. `-no-network` on `kedge eval` or `kedge sandbox` leaves the VM with only a loopback interface.",
+          "url": "https://kedge.dev/docs/sandboxes"
+        },
+        {
+          "quote": "Anonymous runs, including the front-page console, are always networkless regardless of what the request asks for.",
+          "url": "https://kedge.dev/docs/sandboxes"
+        },
+        {
+          "quote": "Egress: $0.01 / GiB",
+          "url": "https://kedge.dev/docs/billing.md"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Public preview",
+      "fee": 0,
+      "flags": [
+        "beta"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "5 USD monthly resource allowance encoded once in free.monthly_credit; separate 2 USD coding-model allowance excluded."
+    }
+  ],
+  "free": {
+    "monthly_credit": 5,
+    "one_time_credit": null,
+    "coding_model_monthly_usd": 2
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": true,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": true,
+    "scheduled_wakeups": true,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": true,
+    "mcp_server": false,
+    "isolation": "vm",
+    "image_oci": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Rates are estimates; actual paid billing had not started as of the Show HN (2026-07-29) and no evidence of paid top-ups since.",
+    "Maximum cpus / memory per VM and per-account concurrency not published.",
+    "Hypervisor not named ('hardware-isolated VM with its own Linux kernel').",
+    "Whether deploy snapshots / warm-pool clones count toward billed storage; whether memory billing of CoW-shared pages is per clone.",
+    "Ingress pricing not stated; public IPv 4 / static addresses not offered.",
+    "Coding-agent model token rates not published.",
+    "This mode is persistent machines/workspaces, not the disposable sandbox API capped at 1 hour. Flags beta+alt prevent default selection.",
+    "Memory snapshot billing remains unknown; retained volumes use 0.05/GiB-month separately.",
+    "An account can hold only a limited, unpublished number of sandboxes at once. Past the cap, create fails with a limit error rather than queuing.",
+    "Volumes publish local writes to object storage after 1 s or 16 MiB. The local writeback buffer is 4 GiB, and new writes fail when it fills."
+  ],
+  "sources": [
+    "https://kedge.dev/",
+    "https://kedge.dev/docs/billing",
+    "https://kedge.dev/docs/billing.md",
+    "https://kedge.dev/llms.txt",
+    "https://kedge.dev/llms-full.txt",
+    "https://kedge.dev/docs/sandboxes",
+    "https://kedge.dev/docs/performance",
+    "https://kedge.dev/docs/security",
+    "https://kedge.dev/docs/runtime",
+    "https://kedge.dev/docs/volumes",
+    "https://kedge.dev/docs/agents",
+    "https://kedge.dev/docs/app-model",
+    "https://kedge.dev/docs/network",
+    "https://kedge.dev/docs/coverage",
+    "https://kedge.dev/docs/configuration",
+    "https://kedge.dev/docs/shared-data",
+    "https://kedge.dev/docs/github-runners",
+    "https://kedge.dev/changelog",
+    "https://news.ycombinator.com/item?id=49099434",
+    "https://hn.algolia.com/api/v1/items/49099434",
+    "https://github.com/wjordan/syzy"
+  ],
+  "audit_2026_09_29": {
+    "applied": 18,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://kedge.dev/docs/volumes",
+      "quote": "`idle-suspend` makes an idle machine cheap without removing it. Set a delay and a machine with no inbound traffic pauses in place, keeping its address, volume, and host; the next packet restarts it. A paused machine bills no CPU and no memory.",
+      "note": "Trigger: idle (no inbound traffic + no guest CPU) on persistent machines with idle-suspend set; workspaces 'sleep after ten quiet minutes by default and wake on the next request' (docs/agents). Running processes appear preserved (an in-flight request 'resumes within seconds and the request completes slowly'; clock stepped forward on wake), i.e. memory included, though docs say 'pauses in place' rather than 'snapshot' and memory is not billed while paused. Pooled app instances instead restore from the deploy snapshot taken at listen() (not user state).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://kedge.dev/docs/cli",
+      "quote": "`kedge fork <app> [new-name]` — Copy an app and its current state",
+      "note": "Only as fork: CLI `kedge fork` / REST POST /apps/{appID}/fork copies a running app's current state (shared.db, /shared/, 'may reuse its snapshot'); volume docs mention 'ancestors still used by forks'. No named snapshots / restore-in-place API; no evidence the fork carries live memory (the reused snapshot is the deploy snapshot). Not documented for workspaces or held sandboxes.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://kedge.dev/docs/agents",
+      "quote": "kedge workspace run design-lab \"add keyboard navigation\"\nkedge workspace ps design-lab\nkedge workspace stop design-lab <execution>\nkedge workspace archive design-lab <execution>",
+      "note": "CLI/SSH (not in the public REST OpenAPI): `kedge agent [--app] [--verbose|--claude|--codex] prompt` starts Kedge's built-in app agent, Claude Code or Codex in a persistent workspace; follow-ups at the `>` prompt; `--verbose` streams tool activity; /agents lists sessions across workspaces; subscription sessions detach and keep running; browser session UI and provider remote-control. Harnesses: Kedge built-in agent, Claude (Claude Code), Codex.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://kedge.dev/docs/sandboxes",
+      "quote": "Sandboxes have outbound network access by default. `-no-network` on `kedge eval` or `kedge sandbox` leaves the VM with only a loopback interface.",
+      "note": "Only an all-or-nothing no-internet mode for disposable sandboxes (anonymous sandboxes always networkless). No domain/IP allowlist documented for sandboxes, apps, machines or workspaces; 'custom network drivers' not exposed (docs/network).",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://kedge.dev/docs/network",
+      "quote": "In Compose, `ports` publishes a service there and `expose` keeps it private. Services with persistent volumes are private by default",
+      "note": "Also app authentication policy 'protects any static site, HTML app, handler, or service at ingress' (docs/security); private account network ('Other accounts and the public internet cannot initiate traffic'); workspaces have a private session URL. Held sandboxes have no ingress. No IP allowlist documented.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Each instance/sandbox/workspace is a 'hardware-isolated VM with its own Linux kernel' (docs/security); root inside workspaces not explicitly documented (GitHub runner user has passwordless sudo).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://kedge.dev/docs/security",
+      "quote": "Keep secrets out of source with `kedge env` or Compose secrets. Generated secrets are stored outside Git and mounted under `/run/secrets`",
+      "note": "Secrets are env vars or files mounted in the guest. Coding-agent sessions can use Kedge's hosted model (separate $2/month allowance) or a connected Claude/Codex subscription, but no credential-injecting egress proxy is documented.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://kedge.dev/docs/volumes",
+      "quote": "A persistent volume is a private filesystem for software that expects local disk, such as Postgres, Redis, or a development environment. Attaching one makes the service stable",
+      "note": "`--volume /path --volume-size 20GiB`; one volume per machine ordinal ('each volume has one writer'); retained on scale-down/app deletion; $0.05/GiB-month written data.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://kedge.dev/docs/shared-data",
+      "quote": "Both mount points refer to the same replicated file tree. One service may currently mount one shared volume path.",
+      "note": "Read-write: every app's `/shared/` (replicated POSIX tree, byte-range last-writer-wins, no advisory locks/mmap/O_DIRECT) is mounted by all instances/services/regions; Compose `x-kedge: {shared: true}` mounts it elsewhere. Scoped to one app. Persistent block volumes themselves are single-writer.",
+      "checked": "2026-09-29"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://kedge.dev/docs/security",
+      "quote": "Every app instance, handler, sandbox, and GitHub Actions runner runs in a hardware-isolated VM with its own Linux kernel. Container images package the workload; the VM is the isolation boundary.",
+      "note": "No mention anywhere in the docs of /dev/kvm, nested virtualization, or running VMs/emulators inside a Kedge sandbox/workspace/machine; not offered: outside the product's documented scope.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://kedge.dev/docs/agents",
+      "quote": "The private workspace URL opens the full session UI in a browser. To connect from a phone or desktop, open the workspace page and choose **pair a device**.",
+      "note": "The workspace 'session UI' is a coding-agent chat/terminal session in a browser tab, not a graphical desktop (VNC/RDP/stream) of the machine itself. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://kedge.dev/",
+      "quote": "A lightweight, globally distributed cloud platform. Deploy static sites, HTML apps with live data, shebang handlers, container services, and databases from a source tree, a Git push, a prebuilt image, or a task for a coding agent in a persistent workspace.",
+      "note": "Kedge is an app-hosting/PaaS platform; no managed/real browser instance for automation is documented. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://kedge.dev/",
+      "quote": "A lightweight, globally distributed cloud platform. Deploy static sites, HTML apps with live data, shebang handlers, container services, and databases from a source tree, a Git push, a prebuilt image, or a task for a coding agent in a persistent workspace.",
+      "note": "No screenshot+click desktop-driving API is documented; the product's own agent is a coding agent, not a computer-use agent. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://kedge.dev/",
+      "quote": "A lightweight, globally distributed cloud platform. Deploy static sites, HTML apps with live data, shebang handlers, container services, and databases from a source tree, a Git push, a prebuilt image, or a task for a coding agent in a persistent workspace.",
+      "note": "Not offered: outside the product's scope (an app/coding-agent hosting platform, not a scraping/browser-automation product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://kedge.dev/",
+      "quote": "A lightweight, globally distributed cloud platform. Deploy static sites, HTML apps with live data, shebang handlers, container services, and databases from a source tree, a Git push, a prebuilt image, or a task for a coding agent in a persistent workspace.",
+      "note": "Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://kedge.dev/docs/network",
+      "quote": "Static addresses, host networking, custom network drivers, and cross-account networks are not exposed.",
+      "note": "Kedge runs machines in its own datacenter/cloud regions (docs/coverage); no residential/mobile IP product is offered, and outbound addresses are not static or dedicated, just ordinary shared datacenter egress.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://kedge.dev/docs/configuration",
+      "quote": "`cpus` | integer (≥ 1) | `2` | maximum vCPUs the service may use at once",
+      "note": "`cpus`/`memory` are burst ceilings set at deploy/config time (usage is metered per-second up to that cap), not a documented live-resize API that changes a running machine's allocation without recreating it. Not documented as live-resizable.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://kedge.dev/docs/agents",
+      "quote": "Kedge starts its built-in app agent directly. For a small new site or app, the agent usually publishes the first working demo and returns its URL.",
+      "note": "Kedge's own first-party agent is a coding/app-building agent (already reflected by harness_api/agent_harnesses), not a browser/computer-use/research task agent, so this field (which explicitly excludes coding harnesses) is not offered.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://kedge.dev/llms.txt",
+      "quote": "The compact deployment skill is at https://kedge.dev/.well-known/agent-skills/kedge/SKILL.md. The REST API is described by https://kedge.dev/api/openapi.json.",
+      "note": "Kedge ships an agent-skill file and a REST/OpenAPI spec for controlling it, but no MCP server for its sandboxes/workspaces is mentioned anywhere in the docs, llms.txt index, or changelog.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://kedge.dev/docs/sandboxes",
+      "quote": "Sandboxes have outbound network access by default. `-no-network` on `kedge eval` or `kedge sandbox` leaves the VM with only a loopback interface.",
+      "note": "Only an all-or-nothing outbound toggle (network on or loopback-only) is documented; no method/path-level HTTP egress rule engine exists.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://kedge.dev/docs/network",
+      "quote": "Static addresses, host networking, custom network drivers, and cross-account networks are not exposed.",
+      "note": "Explicitly stated as not exposed.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://kedge.dev/docs/billing",
+      "quote": "Kedge meters the resources an app actually consumes per second.",
+      "note": "No GPU instance type, GPU pricing meter, or GPU mention appears anywhere in the docs, pricing page, or llms-full.txt. Not offered: outside the product's current scope.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://kedge.dev/docs/github-runners",
+      "quote": "Each job gets a fresh Ubuntu 24.04 x86-64 VM with 4 vCPUs, 8 GiB of memory, and common archive and build tools, Python 3, Docker, Buildx, and Docker Compose.",
+      "note": "All documented machine images are Linux (Ubuntu); no Windows image or OS option is offered anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://kedge.dev/docs/github-runners",
+      "quote": "Each job gets a fresh Ubuntu 24.04 x86-64 VM with 4 vCPUs, 8 GiB of memory, and common archive and build tools, Python 3, Docker, Buildx, and Docker Compose.",
+      "note": "No macOS machines are documented anywhere; Kedge is a Linux-VM based platform. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://kedge.dev/docs/github-runners",
+      "quote": "Each job gets a fresh Ubuntu 24.04 x86-64 VM with 4 vCPUs, 8 GiB of memory, and common archive and build tools, Python 3, Docker, Buildx, and Docker Compose.",
+      "note": "The only architecture named anywhere in the docs is x86-64; no ARM/aarch64 option is documented for sandboxes, workspaces, or machines.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://kedge.dev/",
+      "quote": "A lightweight, globally distributed cloud platform. Deploy static sites, HTML apps with live data, shebang handlers, container services, and databases from a source tree, a Git push, a prebuilt image, or a task for a coding agent in a persistent workspace.",
+      "note": "Kedge is offered only as Kedge's own hosted multi-tenant cloud platform (kedge.dev); no self-hosted/on-prem distribution is documented. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://kedge.dev/",
+      "quote": "A lightweight, globally distributed cloud platform. Deploy static sites, HTML apps with live data, shebang handlers, container services, and databases from a source tree, a Git push, a prebuilt image, or a task for a coding agent in a persistent workspace.",
+      "note": "No bring-your-own-cloud / into-your-account deployment mode is documented; only Kedge's own regions/hosts are used. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://kedge.dev/",
+      "quote": "A lightweight, globally distributed cloud platform. Deploy static sites, HTML apps with live data, shebang handlers, container services, and databases from a source tree, a Git push, a prebuilt image, or a task for a coding agent in a persistent workspace.",
+      "note": "No public source repository for the Kedge platform itself is linked from the docs, llms.txt, or changelog; it is presented as a closed hosted service.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://kedge.dev/docs/billing",
+      "quote": "Kedge meters the resources an app actually consumes per second. The public preview includes a limited free trial; the rates on this page are estimates for future paid service and may change.",
+      "note": "No trust/security-compliance page exists in the docs index (llms.txt); as of this public preview (paid billing not yet started) no SOC2 attestation is claimed anywhere.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://kedge.dev/docs/billing",
+      "quote": "Kedge meters the resources an app actually consumes per second. The public preview includes a limited free trial; the rates on this page are estimates for future paid service and may change.",
+      "note": "No HIPAA/BAA mention anywhere in the docs; this early public-preview platform does not document any compliance program.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://kedge.dev/docs/security",
+      "quote": "SSH keys authenticate CLI and Git operations. GitHub authenticates the web console; expiring bearer tokens authenticate the REST API and can be restricted to named apps and operations.",
+      "note": "Authentication is SSH keys, GitHub OAuth login, and bearer tokens; no SAML/OIDC enterprise SSO is documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://kedge.dev/docs/coverage",
+      "quote": "`fsn` | Falkenstein, Germany\n`hel` | Helsinki, Finland",
+      "note": "Two of the ten compute regions are in the EU, and `kedge machines <app> migrate <ordinal> <region>` lets you place/move a machine to a chosen region, so EU-only placement is achievable, though no formal 'EU data residency' guarantee/product page is published.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://kedge.dev/docs/agents",
+      "quote": "Workspaces sleep after ten quiet minutes by default and wake on the next request.",
+      "note": "The card's modeled 'preview-workspace' mode (persistent machine/workspace) has no documented maximum lifetime — it idles/sleeps and wakes on request rather than being force-stopped after a fixed duration; contrast with the separate disposable-sandbox mode which is capped at 1 hour (already encoded in that mode's own max_session_h).",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://kedge.dev/docs/network",
+      "quote": "Static addresses, host networking, custom network drivers, and cross-account networks are not exposed.",
+      "note": "Apps get a shared anycast HTTPS hostname (name.kedge.run) or custom domain, not a dedicated/static public IPv4 address; GitHub Actions runners can only initiate (not accept) public IPv4 connections ('Jobs can initiate public IPv4 connections. They cannot accept inbound connections').",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://kedge.dev/docs/github-runners",
+      "quote": "The image includes Git, Git LFS, `jq`, common archive and build tools, Python 3, Docker, Buildx, and Docker Compose. ... - name: Exercise Docker\n  run: |\n    docker version\n    docker run --rm hello-world",
+      "note": "Confirmed working Docker (daemon + `docker run`) inside a Kedge-managed VM (GitHub Actions runner). Kedge's own security docs state every app instance, handler, sandbox, and runner alike 'runs in a hardware-isolated VM with its own Linux kernel' (docs/security: 'Container images package the workload; the VM is the isolation boundary'), so the same full-VM isolation underlies the card's modeled sandbox/workspace modes, making Docker-inside plausible there too, though the direct `docker run` proof is only published for the GitHub-runner product.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://kedge.dev/docs/billing.md",
+      "quote": "For automation, use the generated account REST operations (/account/usage and /account/usage/history endpoints).",
+      "note": "granularity: account-only; cost: yes",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "los-angeles",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "portland",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Washington",
+      "provider_region": "washington",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Sao Paulo",
+      "provider_region": "sao-paulo",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Falkenstein",
+      "provider_region": "fsn",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Helsinki",
+      "provider_region": "hel",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Cape Town",
+      "provider_region": "cape-town",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "mumbai",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "singapore",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "tokyo",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://kedge.dev/docs/coverage",
+  "locations_quote": "Latency-aware routing sends each client to a nearby edge; autoscaled instances follow demand across ten compute regions, plus an edge point of presence in Los Angeles.",
+  "locations_checked": "2026-10-01"
+}

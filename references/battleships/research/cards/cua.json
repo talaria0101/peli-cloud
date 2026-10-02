@@ -1,0 +1,615 @@
+{
+  "id": "cua",
+  "name": "Cua Fleet",
+  "url": "https://cua.ai/pricing",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Fleet pool, Ubuntu 24.04 desktop VM (per warm replica-hour)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.044625,
+      "ram_gib_h": 0.0223125,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Billed per warm pool replica on allocated vCPU/memory; replicas bill until the pool is scaled down or deleted, whether claimed or not. Size limits, granularity and minimums unpublished."
+    },
+    {
+      "key": "windows",
+      "label": "Fleet pool, Windows Server 2022 desktop VM",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.044625,
+      "ram_gib_h": 0.0223125,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Pricing page publishes a single rate card with no OS distinction. Fleet Windows images (Windows Server 2022) do not include a production/commercial Windows licence (BYOL, per os-image-catalog docs); licence cost not priced (windows_vcpu_h null, not 0)."
+    },
+    {
+      "key": "cloud-macos",
+      "label": "Cloud macOS (Apple Silicon, Lume/VZ), price not published",
+      "flags": [
+        "sales"
+      ],
+      "os": [
+        "macos"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm",
+        "image_oci": null
+      },
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Added 2026-09-28 (missing-providers audit). https://cua.ai/pricing: \"Cloud macOS — Run Sequoia and Tahoe on Cua's patented virtualization stack\" is listed, but the only published rate card (Fleet $0.044625/vCPU-h, $0.0223125/GiB-h) does not say it covers macOS, and Apple's SLA imposes a 24 h minimum lease per Mac; left unpriced (sales). Lume itself is open-source local macOS VM tooling."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false
+  },
+  "plans": [
+    {
+      "name": "Cua Fleet usage-based",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "No plan fee published; usage-based. Concurrency/account quotas unpublished."
+    },
+    {
+      "name": "Enterprise (BYOC / on-prem)",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "BYOC and on-prem deployments available; pricing unpublished."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": true,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "regions": [
+      "us"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "browser_control": true,
+    "desktop_control": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "ip_note": "Egress IP type, proxies and static IPs not documented.",
+    "isolation": "vm",
+    "image_oci": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [
+    {
+      "id": "warm_pool_overhead",
+      "label": "Warm pool replica-hours per claimed session-hour",
+      "kind": "slider",
+      "min": 1,
+      "max": 3.5,
+      "step": 0.1,
+      "default": 1,
+      "unit": "x",
+      "options": null,
+      "effect": "hours_factor",
+      "modes": null,
+      "why": "Cua Fleet bills warm pool replicas until the pool is scaled down or deleted, whether or not a claim is using them; TTL counts from creation, not idle. 1 = pool scaled exactly to use; ~3.3 = 8 h/day workload with the pool left warm 24/7."
+    }
+  ],
+  "caveats": [
+    "Only CPU and memory rates are published; storage, snapshots, egress, IPv4, billing granularity, minimums, concurrency and free credits are unpublished (null).",
+    "Pool-based billing: replicas consume capacity while warm, independent of claims. The engine's session hours only match cost if the pool is scaled to demand (see warm_pool_overhead knob).",
+    "Windows priced at the same rates as Linux per the single published card; a Windows licence surcharge is not listed (unverified).",
+    "Homepage markets Linux, Windows, macOS and Android, but SDK 0.7.0 docs accept only Ubuntu 24.04 VM and Windows Server 2022 VM images for Fleet; macOS/Android/Windows 11 are local-only. Card sets macos false.",
+    "Isolation for Fleet not stated; local runtimes are QEMU/Hyper-V VMs (card isolation 'vm').",
+    "SOC 2 Type I (not Type II). BYOC and on-prem available via sales.",
+    "Legacy 2025 Cua Cloud Sandbox sizes (Small 1/4, Medium 2/8, Large 8/32) had no published prices; superseded by Fleet per-resource pricing.",
+    "Third-party guides mention a free dev tier; not on the official pricing page (free credits set 0).",
+    "No benchmark data in benchmarks.json.",
+    "Windows: Cua images do not include a commercial Windows licence (BYOL); the estimate excludes licence cost. Source: https://cua.ai/docs/reference/sandbox-sdk/os-image-catalog",
+    "Snapshots: marketing says 'fork from snapshots', but cua-sandbox 0.7.0 docs say Sandbox.snapshot() is unimplemented for Fleet and Fleet rejects snapshot-derived images; card keeps snapshot 'none' per the versioned docs (conflict noted).",
+    "Closing a connection, releasing a claim and deleting a pool are separate; warm pool capacity keeps billing until the pool is scaled down/deleted (keep_pool can preserve pools).",
+    "2026-09-28 re-check: SSH not documented for Cua Fleet (docs describe computer-server as the control channel), so features.ssh stays null. Disk size per Fleet VM and any disk/storage price are unpublished (cua.ai/pricing lists only $0.044625/vCPU-h and $0.0223125/GiB-h); included_disk_gib and disk_gib_month stay null (unknown, not free).",
+    "Hosted macOS (\"Cloud macOS\") exists but has no published price; its mode is unpriced and flagged sales.",
+    "Fleet VMs run on KubeVirt (KVM VMs orchestrated by Kubernetes); pool templates take cpu_cores and memory (e.g. 4 cores / 8Gi Linux, 4 cores / 4Gi Windows in the Terraform examples); no published max size.",
+    "Custom Fleet images must be a prebuilt OCI containerDisk artifact carrying a bootable guest disk (/disk/disk.img); Dockerfiles / ordinary app containers are not accepted (image_oci false is correct).",
+    "Homepage now markets 'Windows 11 and Server 2025', but the SDK 0.7.0 docs still map only Windows Server 2022 (and reject Windows 11) for Fleet; Windows images carry no licence (BYOL)."
+  ],
+  "sources": [
+    "https://cua.ai/pricing",
+    "https://cua.ai/",
+    "https://cua.ai/docs/cloud-fleets.md",
+    "https://cua.ai/docs/how-to-guides/sandbox/create-fleet-capacity.md",
+    "https://cua.ai/docs/how-to-guides/sandbox/expire-pools-and-claims",
+    "https://cua.ai/docs/reference/sandbox-sdk/pool.md",
+    "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+    "https://cua.ai/blog/introducing-cua-cloud-containers",
+    "https://cua.ai/docs/reference/sandbox-sdk/os-image-catalog",
+    "https://cua.ai/docs/concepts/sandbox-lifecycle",
+    "https://cua.ai/docs/llms-full.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 3,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 7
+  },
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": 0,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "Payment method required before creating pools",
+    "tiers": null,
+    "notes": "No published account quotas; docs only say 'Registry access, account permissions, resource limits, capacity, and readiness are deployment requirements'. Terraform examples use autoscaling max_pool_size 5.",
+    "sources": [
+      "https://cua.ai/docs/llms-full.txt",
+      "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md"
+    ],
+    "researched": "2026-09-29"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "`Sandbox.snapshot()` | Not implemented | Not implemented; snapshot-derived image inputs are also rejected",
+      "note": "Fleet has no snapshot mechanism at all in cua-sandbox 0.7.0 docs; claims are released/deleted (warm pool replicas, TTL from creation), no documented auto-save on idle/stop. CLI `cua sb suspend` ('preserving memory state') applies to local/retired legacy VM API; for Fleet claims docs say use close()/Pool.delete().",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://cua.ai/docs/concepts/sandbox-lifecycle.md",
+      "quote": "`Sandbox.snapshot()` is not implemented for local sandboxes or Fleet creation paths, and Fleet rejects snapshot-derived images.",
+      "note": "Conflict: homepage markets 'Fork from snapshots, reproduce failures' (https://cua.ai/), but versioned SDK docs (0.7.0; PyPI now 0.8.0 whose release notes add nothing on snapshots) say not implemented; reusable state must be a prebuilt containerDisk boot artifact.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/cua-cli/cli-reference.md",
+      "quote": "Command reference for the cua CLI: authentication, sandboxes, images, platforms, one-shot automation, skills, and trajectories.",
+      "note": "No first-party API to start/stream/resume an agent harness in a Fleet VM. Cua exposes computer-use control (computer-server, Cua Driver MCP, shell/exec, files). Guides show users running Codex, Cursor Cloud Agent workers, OpenAI Agents API executors and OpenClaw inside Fleet VMs with their own controllers; Claude Code/Codex connect to Cua Driver over MCP from outside. Those are integrations, not a harness API.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://cua.ai/docs/how-to-guides/sandbox/share-service-with-signed-url.md",
+      "quote": "Use a signed service URL when a person or external system needs temporary access to a service running inside a Fleet sandbox. The URL is public, time-limited, and revocable. Requests still route only to the named service on the bound sandbox.",
+      "note": "Only services declared on the pool template (name, target_port, protocol, e.g. ssh:22, server:8000) are reachable; default access is authenticated named-service requests via Fleet credentials ('Use `sb.services.request()` for authenticated requests to a named service', runtime-support); signed URLs 60 s-24 h, list/revoke. No IP allowlists documented.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Fleet VMs are KubeVirt (KVM) guests booted from a containerDisk with root/admin; own kernel so iptables/nftables (Linux) or Windows Firewall should work. Not documented.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://cua.ai/docs/how-to-guides/sandbox/secrets.md",
+      "quote": "Pass task-specific credentials from the host into a sandbox at runtime. ... These commands contain the secret values. Shell quoting prevents shell interpretation; it does not redact command logs, traces, process inspection, or application output.",
+      "note": "Secrets are passed as env vars / temp files via shell.run() from the host; no proxy. Fleet auth itself supports workload identity (`cua wif-token`) for the CLI, not for guest workloads.",
+      "checked": "2026-09-29"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cua.ai/docs/llms-full.txt",
+      "quote": "This attachment route does not promise fewer CAPTCHAs or bypass site checks. Sites can still use network reputation, account history, browser state, and interaction patterns.",
+      "note": "Docs explicitly disclaim any stealth/fingerprint-evasion capability; Cua ships a real browser/desktop but no anti-bot feature.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cua.ai/docs/llms-full.txt",
+      "quote": "This attachment route does not promise fewer CAPTCHAs or bypass site checks.",
+      "note": "No CAPTCHA-solving service is offered; product is a computer-use/browser automation driver, not a CAPTCHA solver.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cua.ai/pricing",
+      "quote": "Run computer-use agent training, eval, and data-generation workloads in parallel on Linux, Windows, macOS, and Android machines.",
+      "note": "Fleet VMs run on cloud (KubeVirt/Kubernetes) infrastructure in the provider's own region (us-east-1); no residential/mobile IP product is mentioned anywhere, so egress is ordinary datacenter IP space. Not explicitly documented (medium confidence, derived).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://cua.ai/docs/concepts/sandbox-lifecycle",
+      "quote": "In `cua-sandbox` 0.7.0, `Sandbox.snapshot()` is not implemented for local sandboxes or Fleet creation paths, and Fleet rejects snapshot-derived images.",
+      "note": "A fork requires a snapshot of state to start a new machine from; the versioned docs say this mechanism is not implemented for Fleet (conflicts with older marketing copy 'Fork from snapshots, reproduce failures' on the homepage, which the docs supersede).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://cua.ai/docs/concepts/sandbox-lifecycle",
+      "quote": "Fleet also rejects snapshot-derived image inputs.",
+      "note": "No fork mechanism exists at all for Fleet, so cloning a running machine is not possible.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "`Sandbox.snapshot()` | Not implemented | Not implemented; snapshot-derived image inputs are also rejected",
+      "note": "No snapshot/fork mechanism at all, so no memory-preserving fork exists.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://cua.ai/docs/concepts/sandbox-lifecycle",
+      "quote": "On Fleet, `disconnect()` drops the connection without releasing the claim. Exiting a `pool.claim()` context releases the claim, but the pool can keep warm capacity available and incur cloud usage charges. Deleting the pool is a separate operation that removes its capacity and state.",
+      "note": "Fleet claims are released or deleted, not paused/resumed with reduced billing; a legacy CLI command `cua sb suspend` ('preserving memory state') applies to the retired local/legacy VM API, not Fleet claims, per docs guidance to use close()/Pool.delete() for Fleet.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://cua.ai/docs/how-to-guides/sandbox/expire-pools-and-claims",
+      "quote": "Registry access, account permissions, resource limits, capacity, and readiness are deployment requirements that SDK validation cannot establish.",
+      "note": "Fleet pools scale warm replicas to zero when idle (auto_stop_idle true) but a claim() call actively provisions/claims a replica synchronously; no documentation of a stopped machine automatically waking on an inbound network request to an exposed port.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://cua.ai/docs/concepts/sandbox-lifecycle",
+      "quote": "Deleting the pool is a separate operation that removes its capacity and state.",
+      "note": "Fleet has no stop/start-with-disk-retained lifecycle documented; a claim is released or the pool/replica is deleted (losing state) — there is no documented 'stopped but disk persists' state distinct from delete.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "Prebuilt registry artifact | Requires a compatible runtime and bootable guest payload | Accepted as the boot artifact; software must already be installed",
+      "note": "No documented mechanism to attach an extra persistent volume to a Fleet VM; state must be baked into the boot containerDisk artifact.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "Prebuilt registry artifact | Requires a compatible runtime and bootable guest payload | Accepted as the boot artifact; software must already be installed",
+      "note": "No shared-volume feature documented; not offered.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/pool.md",
+      "quote": "`Pool.apply()` derives and reconciles both the pool and its template.",
+      "note": "CPU/RAM are fixed on the pool template (cpu_cores/memory) at pool creation; no documented way to resize a running claimed VM's resources without recreating/re-templating the pool.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/cua-cli/cli-reference.md",
+      "quote": "Command reference for the cua CLI: authentication, sandboxes, images, platforms, one-shot automation, skills, and trajectories.",
+      "note": "No coding-agent harness (Claude Code, Codex, OpenCode, etc.) is preinstalled or offered as a template; guides show users bringing their own agent controllers (Codex, Cursor Cloud Agent, OpenAI Agents API, OpenClaw) into Fleet VMs. Cua provides the computer-use driver/MCP layer, not preinstalled coding-agent harnesses.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cua.ai/pricing",
+      "quote": "Cua Driver: The open-source background computer-use driver for native desktop apps. It lets agents click, type, scroll, inspect accessibility trees, and capture window state through the same MCP/CLI surface without stealing your cursor or focus.",
+      "note": "Cua Driver is a control surface (MCP/CLI) for driving whatever agent/model the caller brings; there is no first-party hosted task agent (browser/computer-use/research agent) that Cua itself runs and exposes via API — the caller supplies the model/agent loop.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://cua.ai/docs/llms-full.txt",
+      "quote": "The TypeScript Fleet SDK provides separate Node.js and browser entry points. ... npm install @trycua/fleet@0.1.2",
+      "note": "First-party TypeScript/Node.js SDK (@trycua/fleet) for creating pools and claiming/driving Fleet sandboxes; Node.js 20+ required.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "Fleet lifecycle through `FleetCloudTransport` | Implemented for numeric ports | Resolves the matching authenticated named-service URL; the template must declare the service",
+      "note": "Access to Fleet VM ports/services is via Fleet's authenticated proxy/service-URL layer, not a directly-addressable public IPv4 per machine. Card's network.ipv4_available is already false.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://cua.ai/docs/how-to-guides/sandbox/secrets.md",
+      "quote": "Pass task-specific credentials from the host into a sandbox at runtime. ... Shell quoting prevents shell interpretation; it does not redact command logs, traces, process inspection, or application output.",
+      "note": "No HTTP method/path-level egress rule feature documented anywhere; only inbound named-service/signed-URL access control is documented (ingress_rules true), not egress.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://cua.ai/trust",
+      "quote": "Cua has completed its SOC 2 Type I examination. The SOC 2 Type II audit is in progress.",
+      "note": "Trust center lists only SOC 2 Type I (complete) and Type II (in progress); no HIPAA/BAA mention anywhere on the trust/security page or docs.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://cua.ai/trust",
+      "quote": "Cua has completed its SOC 2 Type I examination. The SOC 2 Type II audit is in progress.",
+      "note": "No SAML/OIDC SSO feature is mentioned on the trust/security page, pricing page, or docs; early-stage compliance program (SOC 2 Type I only) with no SSO claim.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "The Fleet image path of `Sandbox.ephemeral()` in 0.7.0 accepts only the default `region='us-east-1'`; `Pool.apply()` has no region argument.",
+      "note": "Fleet only documents a single region, us-east-1; card regions list is [\"us\"]. No EU region or data-residency option is offered.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "`Sandbox.snapshot()` | Not implemented | Not implemented; snapshot-derived image inputs are also rejected",
+      "note": "Versioned SDK docs (cua-sandbox 0.8.0) confirm snapshot is unimplemented for both local sandboxes and Fleet, and Fleet rejects snapshot-derived images outright. Homepage marketing ('Fork from snapshots, reproduce failures') conflicts with this, but the docs are the authoritative, versioned source.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+      "quote": "Package and setup layers, including apt_install(), pip_install(), and run() | Applied through local image setup; commands must match the guest OS | Rejected ... Prebuilt registry artifact | Requires a compatible runtime and bootable guest payload | Accepted as the boot artifact; software must already be installed",
+      "note": "Fleet only accepts a prebuilt bootable VM disk (containerDisk) published to a registry; ordinary Dockerfile/OCI app images and build-time customization (apt/pip/run/env/copy) are rejected for Fleet. That is not 'start machines from your own Docker/OCI image' in the usual sense, so false is correct.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://cua.ai/docs/llms-full.txt",
+      "quote": "Lume VMs use Apple's paravirtualized GPU bridge ... it does not pass a physical GPU to the guest, patch the host, or change ... The sandbox GPU is the *Microsoft Basic Display Adapter*, which offers OpenGL 1.1.",
+      "note": "No dedicated/physical GPU instance type is offered anywhere on the pricing or docs pages; Windows Fleet guests get only a software display adapter and macOS guests get a paravirtualized graphics bridge (no passthrough). No CUDA/NVIDIA GPU offering found.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://cua.ai/",
+      "quote": "MACOS Fleets on Apple Silicon. Explore Cloud macOS Run Sequoia and Tahoe on Cua's patented virtualization stack, built to scale to thousands of machines.",
+      "note": "Cua markets a hosted 'Cloud macOS' product (Sequoia/Tahoe) as one of its Fleet machine types; the card itself already lists a 'cloud-macos' mode (flag: sales, price unpublished). Pricing is sales-gated and the public Fleet SDK (0.7.0/0.8.0) still rejects macOS as a Fleet image input, so this is a real but sales-only/limited offering -- corrected to true with medium confidence rather than the flat false.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://cua.ai/",
+      "quote": "MACOS Fleets on Apple Silicon. Explore Cloud macOS Run Sequoia and Tahoe on Cua's patented virtualization stack, built to scale to thousands of machines.",
+      "note": "The Cloud macOS product runs on Apple Silicon (arm64) hosts per Apple's virtualization licensing requirements, so Cua does offer arm64 machines -- but only via the sales-gated Cloud macOS product; the standard Linux/Windows Fleet path is x86_64 only (runtime-support.md: 'requires qemu-system-x86_64', Omarchy image listed as amd64). Corrected to true with medium confidence given the narrow scope.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://cua.ai/pricing",
+      "quote": "LINUX Browser and code work. Run Ubuntu containers or full VMs with browser, terminal, Python, and package installs.",
+      "note": "derived: Fleet Linux guests are full root-access Ubuntu 24.04 VMs (own kernel, KubeVirt/KVM) with package installs advertised; nothing in the docs restricts installing/running Docker inside the guest the way Fleet explicitly restricts build-time image customization (apt_install/pip_install/run rejected only for the *image build* path, not for commands run inside a live claimed sandbox via shell.run()). Not explicitly documented either way.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://cua.ai/docs/llms-full.txt",
+      "quote": "restrict egress to `api.openai.com`, `codex-cloud-environments.chatgpt.com`, and workload-specific destinations;",
+      "note": "This and similar 'restrict outbound access' lines are production-hardening advice telling the *user* to implement their own network policy (e.g. inside the guest OS); no provider-side egress allowlist/deny-list, no-internet mode, or security-group egress control is documented anywhere for Fleet.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://cua.ai/pricing",
+      "quote": "Run computer-use agent training, eval, and data-generation workloads in parallel on Linux, Windows, macOS, and Android machines.",
+      "note": "No static/fixed/elastic outbound IP product or add-on is mentioned on the pricing or docs pages; egress is ordinary shared datacenter IP space per the card's existing egress_ip_type='datacenter' (not documented).",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://cua.ai/docs/how-to-guides/sandbox/expire-pools-and-claims.md",
+      "quote": "Pools and claims accept an optional creation-age TTL. ... Without this argument, there is no creation-age TTL from this setting.",
+      "note": "TTL/expiry is entirely opt-in and user-set (any value, e.g. the guide's own examples use 1h/24h); the docs describe no platform-imposed maximum claim or pool lifetime. A claim/VM runs until explicitly released/deleted or an optional user-set TTL fires, so effectively 'none' (Fleet behaves like a VM you must stop yourself).",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://cua.ai/docs/llms-full.txt",
+      "quote": "A pool with one replica keeps cloud capacity available and can incur usage charges until it is deleted. Deleting the pool is a separate operation that removes its capacity and state.",
+      "note": "granularity: account-only; Cua Fleet SDK, CLI, and MCP server documentation provide no endpoint, CLI command, or API call to retrieve billable usage per sandbox, per tag, per project, or by any segmentation other than account-wide. Billing is based on pool replica-hours and resource allocation (vCPU-hours, RAM-hours), tracked per pool but not queryable programmatically; usage is only available through the account dashboard. No REST API for usage metrics, cost queries, or billing data is documented anywhere in the public SDK, CLI reference, or docs.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": null,
+      "city": null,
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://cua.ai/docs/reference/sandbox-sdk/runtime-support.md",
+  "locations_quote": "The Fleet image path of `Sandbox.ephemeral()` in 0.7.0 accepts only the default `region='us-east-1'`; `Pool.apply()` has no region argument.",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,549 @@
+{
+  "id": "claw2agent",
+  "name": "Claw 2 Agent",
+  "url": "https://claw2agent.com/pricing",
+  "category": "agent-sandbox",
+  "isolation": "dedicated-vm",
+  "modes": [
+    {
+      "key": "managed-workspace",
+      "label": "Managed workspace",
+      "flags": [
+        "beta",
+        "closed"
+      ],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Managed workspace",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": null,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Flat account bundle; resource/hardware entitlement unpublished. Unspecified guest OS is not a selectable OS guarantee."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "fee": 39,
+      "flags": [
+        "announced",
+        "closed"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "1 private workspace;1,000 managed provider credits; core+5 premium skills; BYOK.",
+      "managed_credit_expiry_days": 30
+    },
+    {
+      "name": "Pro",
+      "fee": 99,
+      "flags": [
+        "announced",
+        "closed"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "1 higher-limit workspace;2,000 provider credits; browser/code execution; API; all premium skills.",
+      "managed_credit_expiry_days": 30
+    },
+    {
+      "name": "Cloud Pilot",
+      "fee": null,
+      "flags": [
+        "promo",
+        "application",
+        "limited"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "concurrency": 1,
+      "max_session_h": 744,
+      "note": "Selected users may receive one month hosted access; fair-use provider limits, no production SLA, not automatic or universal."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": true,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": true,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": false,
+    "isolation_detail": "Separately provisioned cloud computer; isolation technology, OS, vCPU/RAM and region are not disclosed.",
+    "secret_proxy": "ai-only",
+    "isolation": "dedicated-vm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "harness_api": false,
+    "own_agent_api": true,
+    "ingress_rules": false,
+    "max_session_unlimited": true,
+    "guest_firewall": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Storage, snapshot GiB-month and public IPv 4 prices are not published in the reviewed sources; null is not free.",
+    "No guaranteed vCPU allocation published; browser-hour is not a verified 4-vCPU/8-GiB VM equivalent. The sizes card keeps unknown hardware null; do not coerce it to zero or auto-rank against resource-guaranteed VMs.",
+    "Browser RAM is not published unless a specific mode overrides it.",
+    "Provider credits are model/tool consumption, not cash deductible from compute. Broad browser and integration marketing is qualified by features page: Telegram and managed tools live; many integrations pending.",
+    "No public resource sizing, computer concurrency, OS selection, proxy/CAPTCHA/recording tariffs or paid-hour meter verified. Do not infer a 4/8 VM from private workspace wording.",
+    "Terms of service are not yet approved as binding: public signup, payments and customer production-data intake are closed pending legal review; the pilot is by selective application."
+  ],
+  "sources": [
+    "https://claw2agent.com/pricing",
+    "https://claw2agent.com/features",
+    "https://claw2agent.com/security"
+  ],
+  "audit_2026_09_29": {
+    "applied": 13,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://claw2agent.com/security",
+      "quote": "Current OpenClaw BYOK routing keeps provider keys in Vault and uses them from the Claw2Agent control plane when the instance is set to BYOK. The key is not automatically written into the OpenClaw server.",
+      "note": "Vault holds model-provider keys (and BYOK connectors) and the control plane relays calls server-side ('the safer default is a server-side relay that reads Vault at request time'); managed provider credits also cover LLM, Exa search, Firecrawl crawl without user keys. No arbitrary-host credential registration documented; non-HTTP protocols not covered.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "dedicated-vm",
+      "source": "https://claw2agent.com/",
+      "quote": "Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud). This means your data, processes, and API keys are completely isolated from other users — no shared infrastructure.",
+      "note": "Specific hypervisor (KVM etc.) not disclosed; described as a dedicated VPS per agent, not shared/container isolation.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace; Core + 5 premium skills; BYOK available when you want your own provider relationship",
+      "note": "not offered: outside the product's scope — Claw2Agent provisions a fixed managed OpenClaw workspace from templates/skills, not a customer-supplied Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Hosted OpenClaw for users who want the workspace online without maintaining Docker, VPS, tunnels, or routing glue.",
+      "note": "not offered: outside the product's scope — Docker is explicitly something Claw2Agent operates for you, not something exposed for the customer to run workloads inside.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://claw2agent.com/",
+      "quote": "Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud).",
+      "note": "not offered: outside the product's scope — a managed single-purpose OpenClaw agent workspace, no nested VM/emulator use case or capability disclosed.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 higher-limit AI agent workspace; All premium skills; Browser automation & code execution; Priority support + API access",
+      "note": "not offered: outside the product's scope — no VNC/RDP graphical desktop is offered; 'cloud computer' is marketing language for the isolated agent workspace, not a viewable GUI desktop.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "Browser automation & code execution",
+      "note": "not offered: outside the product's scope — browser automation is a skill the OpenClaw agent itself uses; no customer-facing screenshot+click driving API is documented.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Powerful Features — Everything you need to deploy, manage, and scale your AI agents with confidence.",
+      "note": "not offered: outside the product's scope — no stealth/fingerprinting-evasion capability is mentioned anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Powerful Features — Everything you need to deploy, manage, and scale your AI agents with confidence.",
+      "note": "not offered: outside the product's scope — no CAPTCHA solving feature is mentioned anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://claw2agent.com/",
+      "quote": "Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud).",
+      "note": "Underlying infra is Hetzner Cloud, a datacenter VPS provider; no residential/mobile IP offering is documented.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "The OpenClaw dashboard is not left as an open public admin panel. Access goes through your Claw2Agent account and runtime checks.",
+      "note": "not offered: outside the product's scope — access is exclusively through the web dashboard/API/channels (Telegram etc.); no SSH access to the underlying VPS is documented.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://claw2agent.com/features",
+      "quote": "Real-time status monitoring; One-click deployment and rollback; Memory and knowledge base management; Detailed execution logs",
+      "note": "No filesystem or memory snapshot/checkpoint capability is documented; 'rollback' refers to deployment/version rollback, not a VM snapshot.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Real-time status monitoring; One-click deployment and rollback",
+      "note": "not offered: outside the product's scope — no automatic state snapshot on stop/sleep is documented; workspaces are described as always-online.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Real-time status monitoring; One-click deployment and rollback",
+      "note": "not offered: outside the product's scope — no on-demand snapshot/checkpoint API or CLI is documented.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace",
+      "note": "not offered: outside the product's scope — no cloning/forking of a workspace is documented; plans are scoped to a fixed number of dedicated workspaces.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace",
+      "note": "not offered: outside the product's scope — no cloning capability at all is documented.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace",
+      "note": "not offered: outside the product's scope — no cloning capability at all is documented.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://claw2agent.com/",
+      "quote": "One-click cloud deployment for OpenClaw. 24/7 uptime, 5,000+ skills, zero local setup.",
+      "note": "The workspace is described as continuously online (24/7 uptime, 'Runs on a managed cloud computer while your laptop is closed'), not a sleep/wake-on-request model.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace",
+      "note": "not offered: outside the product's scope — the product provides a fixed workspace with persistent files/memory, not attachable extra volumes.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace",
+      "note": "not offered: outside the product's scope — each workspace is a single dedicated instance; no shared-volume-across-instances capability is documented.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://claw2agent.com/",
+      "quote": "One-click cloud deployment for OpenClaw. 24/7 uptime, 5,000+ skills, zero local setup.",
+      "note": "The workspace is marketed as always-online (24/7 uptime); no idle auto-stop/sleep behavior is documented.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace ... 1 higher-limit AI agent workspace",
+      "note": "not offered: outside the product's scope — CPU/RAM sizing is not published or exposed as a customer control; upgrading requires a plan change, not a live resize API.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Developer API. Programmatic access to manage instances, skills, and integrations through the API.",
+      "note": "not offered: outside the product's scope — OpenClaw is a browser/task/channel agent product, not a coding harness (Claude Code/Codex/OpenCode); no coding-harness driver API is documented.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://claw2agent.com/features",
+      "quote": "Developer API. Programmatic access to manage instances, skills, and integrations through the API.",
+      "note": "Pro plan pricing also lists 'Priority support + API access', for driving the provider's own OpenClaw agent (browser automation, skills, channels).",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Developer API. Programmatic access to manage instances, skills, and integrations through the API.",
+      "note": "not offered: outside the product's scope — only a REST-style Developer API is documented; no first-party MCP server for controlling instances is mentioned.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "Your OpenClaw workspace is provisioned separately, so its files, memory, and running state are not mixed with another customer's workspace.",
+      "note": "not offered: outside the product's scope — the underlying Hetzner VPS is an implementation detail; no customer-facing dedicated public IPv4 is documented as a feature.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "The OpenClaw dashboard is not left as an open public admin panel. Access goes through your Claw2Agent account and runtime checks.",
+      "note": "not offered: outside the product's scope — access is via the Claw2Agent dashboard/API/chat channels, not arbitrary inbound HTTPS to ports on the machine.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "The OpenClaw dashboard is not left as an open public admin panel. Access goes through your Claw2Agent account and runtime checks.",
+      "note": "not offered: outside the product's scope — no customer-configurable ingress/allowlist/security-group controls are documented; access control is Claw2Agent's own account/auth layer.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "Outside services when needed. A model, browser, search provider, or connected tool is called only when the task needs it.",
+      "note": "not offered: outside the product's scope — outbound calls are gated by which skills/tools are configured, not a customer-facing egress allow/deny list or no-internet mode.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "Outside services when needed. A model, browser, search provider, or connected tool is called only when the task needs it.",
+      "note": "not offered: outside the product's scope — no HTTP method/path-level egress control is documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://claw2agent.com/",
+      "quote": "Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud).",
+      "note": "not offered: outside the product's scope — no fixed/static outbound IP is advertised as a feature; each instance's own VPS IP is an infrastructure detail, not a documented guarantee.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "1 private AI agent workspace; Core + 5 premium skills",
+      "note": "not offered: outside the product's scope — a managed chat/browser/task agent workspace product with no GPU compute offering mentioned.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://claw2agent.com/",
+      "quote": "Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud).",
+      "note": "not offered: outside the product's scope — a Linux-based managed OpenClaw workspace on Hetzner Cloud VPS; no Windows machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://claw2agent.com/",
+      "quote": "Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud).",
+      "note": "not offered: outside the product's scope — no macOS machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Self-hosted or local OpenClaw. Open-source control is powerful, but uptime, security updates, server setup, and debugging stay with your team. You operate Docker, VPS, secrets, domain access, and runtime configuration.",
+      "note": "not offered: outside the product's scope — Claw2Agent explicitly positions itself as the managed alternative to self-hosting; the managed Claw2Agent platform itself is not something customers deploy on their own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://claw2agent.com/features",
+      "quote": "Best fit: Claw2Agent managed OpenClaw ... Maximum control: Self-hosted or local OpenClaw. Open-source control is powerful, but uptime, security updates, server setup, and debugging stay with your team.",
+      "note": "The underlying OpenClaw agent software is referenced as open-source/self-hostable elsewhere, but Claw2Agent's own managed platform (dashboard, billing, Vault, control plane) is a proprietary hosted product, not itself published under an OSI license.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "The security story is not a certificate badge. It is whether your workspace, dashboard, keys, and records have clear boundaries.",
+      "note": "No SOC 2 attestation is claimed anywhere on the security/trust page; the page explicitly frames security as practices rather than certifications.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "Sensitive customer data should be scoped before production use.",
+      "note": "No HIPAA-eligibility or BAA is mentioned; the security page instead tells users to scope/limit sensitive data before production use, implying no such compliance guarantee exists.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "The OpenClaw dashboard is not left as an open public admin panel. Access goes through your Claw2Agent account and runtime checks.",
+      "note": "Access is described as a normal account login; no SAML/OIDC single sign-on option is documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://claw2agent.com/security",
+      "quote": "Your OpenClaw workspace is provisioned separately, so its files, memory, and running state are not mixed with another customer's workspace.",
+      "note": "No region/data-residency selection (EU or otherwise) is documented anywhere on pricing, features, or security pages.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://claw2agent.com/",
+      "quote": "One-click cloud deployment for OpenClaw. 24/7 uptime, 5,000+ skills, zero local setup.",
+      "note": "The dedicated workspace is a subscription VPS advertised as always-on (24/7 uptime, 'Runs on a managed cloud computer while your laptop is closed'), not a time-boxed session; the 744h figure on the separate Cloud Pilot promo plan is a one-month pilot access window, not a per-session compute cap.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "Deploy Your 24/7 Personal OpenClaw in Seconds ... One-click cloud deployment for OpenClaw. 24/7 uptime, 5,000+ skills, zero local setup.",
+      "note": "not offered: the managed workspace is marketed and billed as an always-on dedicated server ('24/7 uptime', 'keeps it ready while your laptop sleeps'); no pause/resume-for-billing API or control is documented anywhere on pricing, features, security, or changelog pages.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://claw2agent.com/blog/openclaw-recommended-skills",
+      "quote": "openclaw skill install code-interpreter ... What it does: Runs Python, JavaScript, and other languages. Can perform calculations, data analysis, and generate charts.",
+      "note": "Evidence is the provider's own blog recommending the installable code-interpreter skill for the OpenClaw workspace it hosts (Pro plan advertises 'browser automation & code execution' and 'all premium skills'); no dedicated language/runtime doc page confirms this specifically for hosted Claw2Agent instances, hence medium not high.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://claw2agent.com/blog/openclaw-setup-guide",
+      "quote": "OpenClaw is a free, open-source personal AI agent created by Peter Steinberger. Unlike chatbots that only respond when you prompt them, OpenClaw runs as a long-running Node.js service that: ...",
+      "note": "The hosted product IS a managed OpenClaw workspace, and OpenClaw itself is documented (by Claw2Agent's own blog) as a Node.js service; the same recommended-skills page also shows the code-interpreter skill running JavaScript.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "How is each agent isolated? Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud). This means your data, processes, and API keys are completely isolated from other users — no shared infrastructure.",
+      "note": "derived: each agent gets its own dedicated Hetzner Cloud VPS (a full qemu/KVM virtual machine, not a shared-kernel container), so nftables/iptables inside the guest would work; the card's own 'root' field is unconfirmed for the customer-facing dashboard, so this is a medium-confidence derivation from the full-VM isolation model, not a documented firewall feature.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "How is each agent isolated? Each agent instance runs on its own dedicated virtual server (powered by Hetzner Cloud). This means your data, processes, and API keys are completely isolated from other users — no shared infrastructure.",
+      "note": "not offered: outside the product's scope — Claw2Agent sells a fixed managed OpenClaw workspace with no customer-selectable hardware/architecture; no ARM machine option is advertised anywhere on pricing, features, security, or blog pages, and the underlying Hetzner Cloud VPS type is unspecified/unpublished.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://claw2agent.com/pricing",
+      "quote": "Flat account bundle; resource/hardware entitlement unpublished. No public resource sizing, computer concurrency, OS selection, proxy/CAPTCHA/recording tariffs or paid-hour meter verified.",
+      "note": "granularity: account-only; cost: no; Claw2Agent is a subscription-based service (Starter $39/month, Pro $99/month) with fixed workspaces per plan, not metered compute billing. The Developer API (available on Pro plan) manages instances and skills but does not provide usage/cost metrics. Billing is plan-based, not per-sandbox usage.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://claw2agent.com/pricing",
+  "locations_quote": "No region/data-residency selection (EU or otherwise) is documented anywhere on pricing, features, or security pages.",
+  "locations_checked": "2026-10-01"
+}

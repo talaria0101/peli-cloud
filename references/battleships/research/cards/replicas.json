@@ -1,0 +1,578 @@
+{
+  "id": "replicas",
+  "name": "Replicas",
+  "url": "https://replicas.dev",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "team-flex",
+      "label": "Team Flex manual workspaces",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Team",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 32,
+          "hour": 0.96,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "For manual workspaces only; automated/API usage has separate billing."
+    },
+    {
+      "key": "developer-flex",
+      "label": "Developer Flex manual workspace",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "small",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 20,
+          "hour": 0.48,
+          "month_cap": null
+        }
+      ],
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "plans": [
+        "Developer"
+      ],
+      "note": "Manual workspace use at $0.008/min. Size inferred from the default small workspace (Team gets 'auto-upgraded' 4/16/32). The Developer plan has a hard 150-hour monthly manual allowance per seat, for both Full and Flex seats (a cap, not overage). Session usage rounds down to whole minutes with a one-minute minimum."
+    },
+    {
+      "key": "api-automation",
+      "label": "API and automation workspace",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "small",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 20,
+          "hour": 0.48,
+          "month_cap": null
+        },
+        {
+          "name": "large",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 32,
+          "hour": 0.96,
+          "month_cap": null
+        }
+      ],
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "plans": [
+        "Developer",
+        "Team"
+      ],
+      "note": "Session usage rounds down to whole minutes after a one-minute minimum; engine support is needed because ordinary 60-second ceiling rounding is wrong."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Team",
+      "fee": 200,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "At least one $200/month Full seat is required (the subscriber becomes the first Full seat; the last Full seat cannot be switched to Flex). Full seats have unlimited manual runtime; other seats default to Flex at $0.016/min. API/automation usage is metered separately at $0.008/min small or $0.016/min large. The 100 limit applies to metered API/Automation workspaces active or preparing; paid manual concurrency is not published."
+    },
+    {
+      "name": "Developer",
+      "fee": 50,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "At least one $50 Full seat required. Full and Flex seats each have a hard 150 manual-hour monthly allowance. Full is prepaid; Flex manual usage is $0.008/min, billed after the month. API/automation is metered separately. Concurrency 100 applies only to metered API/Automation workspaces."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": 120
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": true,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": false,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": true,
+    "audit_logs": true,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "isolation": "firecracker",
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Developer Flex $0.008/min ($0.48/h), Team Flex $0.016/min ($0.96/h). Full seats $50/150h and $200/unlimited MANUAL time; APIs/automations billed separately. Team documented 4vCPU/16GB/32GB disk. Unlimited seat runtime is not free API fleets; exact automation rates require billing docs.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/replicas",
+    "https://replicas.dev/",
+    "https://replicas.dev/pricing",
+    "https://replicas.dev/llms.txt"
+  ],
+  "fleet": {
+    "default_max_instances": 100,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "14-day trial explicitly no card.",
+    "tiers": null,
+    "notes": "Fourteen-day no-card trial and developer/team seats are public. Unlimited manual runtime is not unlimited automated/API fleet concurrency. Metered API/Automation workspaces are capped at 100 active or preparing per organization (trial and paid); trials allow 50 concurrent manual workspaces. Automation executions: Developer 20/hour per organization and 5/hour per automation; Team and trial unlimited. Raise turnaround not found.",
+    "sources": [
+      "https://replicas.dev"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "reviewed": 21
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "Workspaces sleep after one hour without activity. Sending a message wakes a sleeping workspace automatically and resumes its previous branch and agent session.",
+      "note": "Trigger: 1 h inactivity (also force-sleep, automation sleep-on-completion). Sleeping = 'Compute is paused and no workspace charges accrue.' Memory appears included: same page says the desktop and its processes 'survive sleep on the default pause mode.' Sleeping workspaces archive after 7 days (still paused) and are deleted after 30 days of archive inactivity. Underlying pause mechanism (memory snapshot vs. suspended VM) is not described in detail.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.replicas.dev/api-reference/environments/restore-warm-pool-snapshot",
+      "quote": "Creates a new warm-pool generation from a retained snapshot without rerunning the warm hook.",
+      "note": "No user-facing API/CLI to snapshot or fork an individual workspace. Only (a) force-sleep/archive of the same workspace and (b) platform-managed warm-pool filesystem snapshots produced by an environment's warm hook, which can be restored to seed new workspaces (template-like, but not taken whenever you want of a running workspace). 'Fork' in docs refers to chat/conversation forking between harnesses, and Slack 'Fork task' starts a fresh workspace with thread context.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.replicas.dev/api-reference/replica/create-replica",
+      "quote": "Creates a new replica in your organization and sends an initial message to the coding agent.",
+      "note": "REST API (POST /v1/replica with coding_agent, POST /v1/replica/{id}/messages follow-ups, GET /v1/replica/{id}/events SSE stream, read-history, list/create chats, list org conversations), plus CLI, MCP server and automations. Harnesses: Claude Code, Codex, Cursor, Muse Code, Opencode, Pi, Relay (also Kimi Code / fx per changelog). This is the core product (background coding agent).",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/cli",
+      "quote": "Require Replicas login cookies before the preview can be accessed.",
+      "note": "Ports are exposed only when registered (replicas preview create/add <port>); previews are public URLs with random hashes by default, optionally --authenticated (Replicas login required). Desktop viewer is always an authenticated preview. No IP allowlists documented.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Each workspace is described as 'an isolated virtual machine'; sudo is available (docs use 'sudo service docker start') and Docker networks work, implying root + CAP_NET_ADMIN in the guest. nftables/iptables not documented explicitly.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/plugins",
+      "quote": "Plugins give workspace agents access to external apps without adding an MCP server or exposing provider credentials.",
+      "note": "Partial / closest analogue: a server-side 'Replicas gateway' keeps credentials for Slack, Linear, Sentry and a curated catalog of 107 plugins (Stripe, Vercel, Modal, E2B, PlanetScale, etc., many via Composio) out of the workspace; agents call them through the @replicas/sdk (replicas.slack.call, replicas.plugins.execute), not a transparent HTTP proxy, and you cannot register arbitrary hosts. Coding-agent credentials (Claude OAuth / API keys etc.) and environment variables are delivered into the workspace (variables are decrypted and injected). Workspace identity (OIDC, 15-min JWTs minted inside the workspace) is an alternative to stored cloud keys, not a proxy. Static egress credential is held in workspace memory. So not 'any-http' and not 'ai-only'.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/environments",
+      "quote": "Environments define the repositories, variables, files, skills, MCP servers, hooks, warm pools, and system prompt used to create workspaces.",
+      "note": "Environment configuration covers repo/variables/files/hooks/skills, not a custom base VM/OCI image; no docs describe supplying your own Docker/OCI image to boot a workspace from.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "Docker is installed but starts on demand. To make it available during every workspace setup, add this command to a start hook: sudo service docker start",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "A workspace is an isolated virtual machine with your repositories, environment configuration, and chosen coding agent.",
+      "note": "No mention of /dev/kvm or nested virtualization anywhere in docs; derived as unavailable given the coding-agent sandbox scope.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://replicas.dev/",
+      "quote": "Send coding agents to work.",
+      "note": "not offered: outside the product's scope (a coding-agent workspace product, not a scraping/anti-bot browser platform)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://replicas.dev/",
+      "quote": "Send coding agents to work.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.replicas.dev/features/static-egress-ip",
+      "quote": "Workspaces normally reach the Internet from changing sandbox addresses. With a static egress IP, every outbound request from your workspaces leaves from one permanent address instead.",
+      "note": "Default outbound traffic is from changing cloud/datacenter sandbox addresses; a paid add-on (Team/Enterprise) routes traffic through a dedicated static datacenter exit in us-west-2. No residential/mobile IP option exists.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/cli",
+      "quote": "Opens an interactive SSH session to the workspace.",
+      "note": "`replicas connect <workspace>` opens SSH; unavailable only for the special Mothership workspace.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "mem",
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "The desktop and its processes continue running when you close the viewer. They also survive sleep on the default pause mode.",
+      "note": "Sleep/wake preserves the agent session, branch, and running desktop processes; exact mechanism (memory snapshot vs. suspended VM) not detailed, but process state is restored, so classified as mem rather than fs-only.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/workspaces/chat-forking",
+      "quote": "Move a chat to another coding agent harness without losing its context.",
+      "note": "'Fork' in Replicas docs means forking a chat/conversation to another harness, or Slack 'Fork task' starting a fresh workspace with thread context — not cloning a machine into a new independent machine via API.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/workspaces/chat-forking",
+      "quote": "Move a chat to another coding agent harness without losing its context.",
+      "note": "No machine-level fork exists at all (see fork), so a running-machine fork is not offered.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.replicas.dev/api-reference/environments/restore-warm-pool-snapshot",
+      "quote": "Creates a new warm-pool generation from a retained snapshot without rerunning the warm hook.",
+      "note": "Only platform-managed warm-pool filesystem snapshots (used to seed new workspaces faster) exist; not a user-triggered clone-with-memory of a specific running workspace.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "Workspaces sleep after one hour without activity. Sending a message wakes a sleeping workspace automatically and resumes its previous branch and agent session.",
+      "note": "Sleeping pauses compute charges; wakes automatically on next request.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/environments",
+      "quote": "Environments define the repositories, variables, files, skills, MCP servers, hooks, warm pools, and system prompt used to create workspaces.",
+      "note": "not offered: no documented API/UI to attach extra persistent volumes to a workspace beyond its own disk.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/environments",
+      "quote": "Environments define the repositories, variables, files, skills, MCP servers, hooks, warm pools, and system prompt used to create workspaces.",
+      "note": "not offered: no shared-volume mechanism documented; each workspace is its own isolated VM/disk.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://replicas.dev/pricing",
+      "quote": "Team Flex manual workspaces / small / large sizes",
+      "note": "not offered: workspace sizes (small 2vCPU/8GB, large/Team 4vCPU/16GB) are fixed plan-level tiers with no documented live vCPU/RAM resize API for a running workspace.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.replicas.dev/api-reference/replica/create-replica",
+      "quote": "Creates a new replica in your organization and sends an initial message to the coding agent.",
+      "note": "not offered: Replicas' first-party API drives the coding harness you choose (Claude Code, Codex, etc.) inside the workspace; there is no separate provider-owned browser/computer-use/research agent product distinct from the coding harnesses.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/cli",
+      "quote": "Workspaces include Codex, Claude Code, the Replicas CLI, Docker, and common development tools. Python, Node.js, C/C++, and Perl toolchains are preinstalled.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/cli",
+      "quote": "Workspaces include Codex, Claude Code, the Replicas CLI, Docker, and common development tools. Python, Node.js, C/C++, and Perl toolchains are preinstalled.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/cli",
+      "quote": "Expose a running workspace service with `replicas preview create <port>`.",
+      "note": "Access to workspace services is via Replicas-managed preview URLs (HTTPS), SSH through `replicas connect`, or `replicas tunnel`; no documented per-workspace public IPv4 address.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/cli",
+      "quote": "Expose a running workspace service with `replicas preview create <port>`, or ask your agent to create the preview. Open its link from the workspace Environment popover.",
+      "note": "Preview URLs expose ports over HTTPS; optionally --authenticated (Replicas login required).",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/static-egress-ip",
+      "quote": "Direct outbound traffic is denied at the sandbox provider, with the exit as the only permitted destination.",
+      "note": "The static-egress feature forces all outbound traffic through one fixed exit IP (for allowlisting on the customer's own external systems); it is not a customer-configurable allow/deny list of destinations from the workspace, and no such egress-restriction feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/static-egress-ip",
+      "quote": "Everything is covered without per-tool configuration: HTTPS, DNS, git, the GitHub CLI, npm, Bun, pip, apt, Chrome, and Docker containers.",
+      "note": "not offered: no HTTP method/path-level egress rule feature documented.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://replicas.dev/",
+      "quote": "Send coding agents to work.",
+      "note": "not offered: outside the product's scope; no GPU workspace type is documented anywhere in pricing or docs.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "Every workspace includes a Linux desktop with Chrome.",
+      "note": "not offered: outside the product's scope; workspaces are Linux VMs only (Windows/macOS mentions in docs refer only to the desktop client app operating system, not the sandbox machine).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "Every workspace includes a Linux desktop with Chrome.",
+      "note": "not offered: outside the product's scope; workspaces are Linux VMs only.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.replicas.dev/features/workspaces/overview",
+      "quote": "Every workspace includes a Linux desktop with Chrome.",
+      "note": "not offered: no ARM workspace option documented (arm64 mentions in docs are only about the desktop client app builds for macOS/Linux, not the sandbox machine architecture).",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": true,
+      "source": "https://docs.replicas.dev/features/workspaces/workspace-identity",
+      "quote": "For Replicas Cloud, use `https://api.replicas.dev` as the issuer URL. Dedicated and self-hosted deployments use their configured issuer, returned by `GET /v1/environments/{id}/workload-identity`.",
+      "note": "Docs distinguish 'Replicas Cloud' from 'dedicated and self-hosted deployments', implying an enterprise self-hosted deployment option, though it is not otherwise documented in detail.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://replicas.dev/",
+      "quote": "Send coding agents to work.",
+      "note": "not offered: no source repository or OSI license found for the core Replicas product; it is a closed commercial SaaS.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.replicas.dev/admin/billing",
+      "quote": "Full seats have unlimited manual runtime; other seats default to Flex.",
+      "note": "No hard maximum single-session runtime is documented; workspaces sleep after 1h idle (billing pauses, not a stop) and archive after 30 days idle, but an actively used workspace/session has no stated cap.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "firecracker",
+      "source": "https://replicas.dev/dpa",
+      "quote": "FoundryLabs, Inc. (E2B) — isolated virtual machines and memory jobs processing workspace code, files, prompts, outputs, commands and credentials.",
+      "note": "Replicas' own DPA (Appendix C, subprocessor register) names FoundryLabs/E2B as the infrastructure subprocessor that runs workspace sandboxes as isolated VMs. E2B's own site states its runtime is 'built on Firecracker with dedicated kernels' (https://e2b.dev/, quote: \"Every sandbox runs on E2B's proprietary MicroVM runtime, built on Firecracker with dedicated kernels and a custom memory and snapshot layer.\"). Replicas' own docs describe a workspace only as 'an isolated virtual machine' without naming the hypervisor, so the specific isolation technology is derived by combining the DPA's named subprocessor with that subprocessor's public documentation, not stated verbatim on a Replicas page.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://replicas.dev/enterprise",
+      "quote": "Enterprise customers run Replicas in our cloud, in a dedicated single-tenant deployment, or self-hosted inside their own infrastructure. Contact sales and we will scope the model that fits your review.",
+      "note": "not offered: the only non-multi-tenant-cloud options documented are (a) a dedicated single-tenant deployment, which the enterprise FAQ frames as still run by Replicas (contrasted with 'self-hosted'), and (b) fully self-hosted inside the customer's own infrastructure (self_host). No page describes Replicas deploying and managing the service inside the customer's own cloud account (BYOC) as a distinct third option.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://replicas.dev/dpa",
+      "quote": "This DPA is not a HIPAA business associate agreement and does not by itself authorize regulated-sector processing.",
+      "note": "Replicas' own Data Processing Addendum explicitly disclaims HIPAA BAA coverage and says the Service is not generally suited for processing that requires such protections; no BAA or HIPAA-eligibility offering is documented anywhere else on the site.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://replicas.dev/dpa",
+      "quote": "Amazon Web Services, Inc. — backend, operational logs and saved chats, files, media and memory; primary hosting in Ohio, United States. Supabase, Inc. — production database, authentication and encrypted credentials; primary database hosting in Ohio, United States.",
+      "note": "The DPA states primary hosting is in Ohio, US, and covers EU/UK/Swiss transfers only via Standard Contractual Clauses (international-transfer safeguards), not an EU-region hosting choice. No page offers a customer-selectable EU region or EU-only data residency option; regions are not documented as configurable at all.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.replicas.dev/openapi.json",
+      "quote": "The Replica API allows you to programmatically manage cloud workspaces for AI agents. Use this API to manage environments, create and manage replicas, send messages, manage chats, stream events, read connected repositories and repository sets, and configure automations. Every minute is attributable ",
+      "note": "granularity: account-only; cost: no; Usage tracking exists in the web dashboard and on monthly invoices, but no public REST API endpoint, SDK call, or CLI command exposes per-workspace billable usage metrics. The OpenAPI spec includes 45 GET endpoints but none for usage retrieval. Billing information and analytics are dashboard-only; invoice-only for account-level totals.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://replicas.dev/dpa",
+  "locations_quote": "Amazon Web Services, Inc. — backend, operational logs and saved chats, files, media and memory; primary hosting in Ohio, United States.",
+  "locations_checked": "2026-10-01"
+}

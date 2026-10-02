@@ -1,0 +1,485 @@
+{
+  "id": "autocomputer",
+  "name": "AutoComputer",
+  "url": "https://www.autocomputer.ai/",
+  "category": "windows",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": true,
+    "macos": false,
+    "arm64": null,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": null,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": null,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "browser_control": null,
+    "desktop_control": null,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": null,
+    "ip_note": "Product withdrawn: live autocomputer.ai is a holding page only (no product, API, pricing or docs). Historically (2025) it was an AI-RPA service; its Python SDK (autocomputer-sdk 0.9.0, last push 2025-11-11) provisioned remote computers via E2B (Linux) or RDP/WinRM (Windows) through api.autocomputer.ai, which no longer responds. No browser endpoint or proxy offering. Site sits behind a Vercel JS checkpoint (passable with a rendered browser).",
+    "image_oci": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "own_agent_api": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "ingress_rules": true,
+    "isolation": "firecracker",
+    "guest_firewall": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "No product is offered on autocomputer.ai as of 2026-09-29: the live site is a one-paragraph holding page ('We build autonomous AI systems to do long-horizon tasks on computers and the internet.') plus stub legal pages; /pricing and /api return 404 and api.autocomputer.ai does not accept connections. The earlier RPA product (Wayback 2025-06: Business 'starting from $999/month', 'Up to 100 instances'; Enterprise custom, 'Up to 1000 instances'; API in 'Developer beta') was withdrawn by 2025-11 ('Coming soon.'). The company now appears to ship RemoteMux (docs.remotemux.com), a different product (persistent remote coding-agent workspaces), not Windows cloud computers. Treat as discontinued; do not price.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/autocomputer",
+    "https://www.autocomputer.ai/",
+    "https://github.com/ms337/autocomputer-sdk",
+    "https://docs.remotemux.com/guides/pricing.md",
+    "http://web.archive.org/web/20250618031208/https://www.autocomputer.ai/pricing"
+  ],
+  "audit_2026_09_29": {
+    "applied": 1,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "image_oci": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/client.py",
+      "quote": "if provider == Provider.E2B: if template_id: payload[\"template_id\"] = template_id",
+      "note": "Only an E2B template_id (or RDP host/credentials) is selectable; no docs of starting from a user-supplied Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class E2BMetadata(BaseModel): tool_server_url: str vnc_url: str vnc_auth_key: Optional[str] ... class RDPMetadata(BaseModel): host: str port: int = 3389 ... display_width: int display_height: int",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "preferred_browser: Optional[str] = None",
+      "note": "Also demonstrated by the bundled 'web research and report' workflow example that browses multiple sources.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": true,
+      "source": "http://web.archive.org/web/20250618031208/https://www.autocomputer.ai/pricing",
+      "quote": "AutoComputer | RPA with AI Computer Use",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope; no stealth/fingerprinting feature documented anywhere in SDK or pricing page.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "http://web.archive.org/web/20250618031208/https://www.autocomputer.ai/pricing",
+      "quote": "Zero-shot robotic process automation with AI computer agents.",
+      "note": "not offered: outside the product's scope; no CAPTCHA-solving feature documented.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://github.com/ms337/autocomputer-sdk/blob/main/autocomputer_sdk/client.py",
+      "quote": "class ComputerNamespace(BaseNamespace): ... list / get / start / delete / upload_data_to_file / download_file / is_running",
+      "note": "The full computer-lifecycle API (list/get/start/delete/upload/download/status) has no snapshot or checkpoint endpoint.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://github.com/ms337/autocomputer-sdk/blob/main/autocomputer_sdk/client.py",
+      "quote": "class ComputerNamespace(BaseNamespace): ... list / get / start / delete / upload_data_to_file / download_file / is_running",
+      "note": "No auto-save/restore mechanism documented.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://github.com/ms337/autocomputer-sdk/blob/main/autocomputer_sdk/client.py",
+      "quote": "class ComputerNamespace(BaseNamespace): ... list / get / start / delete / upload_data_to_file / download_file / is_running",
+      "note": "No snapshot/checkpoint API call exists in the SDK.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://github.com/ms337/autocomputer-sdk/blob/main/autocomputer_sdk/client.py",
+      "quote": "class ComputerNamespace(BaseNamespace): ... list / get / start / delete / upload_data_to_file / download_file / is_running",
+      "note": "No clone/fork endpoint exists in the SDK.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://github.com/ms337/autocomputer-sdk/blob/main/autocomputer_sdk/client.py",
+      "quote": "class ComputerNamespace(BaseNamespace): ... list / get / start / delete / upload_data_to_file / download_file / is_running",
+      "note": "No fork capability at all; derived false.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://github.com/ms337/autocomputer-sdk/blob/main/autocomputer_sdk/client.py",
+      "quote": "class ComputerNamespace(BaseNamespace): ... list / get / start / delete / upload_data_to_file / download_file / is_running",
+      "note": "No fork/snapshot capability at all; derived false.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://github.com/ms337/autocomputer-sdk/blob/main/autocomputer_sdk/client.py",
+      "quote": "class ComputerNamespace(BaseNamespace): ... list / get / start / delete / upload_data_to_file / download_file / is_running",
+      "note": "Only start/delete exist; no pause/resume endpoint.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "This will: Start a remote computer ... Stream workflow execution messages",
+      "note": "not offered: outside the product's scope; machines are explicitly started via API, no sleep/auto-wake behavior documented.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope; the product ships its own single computer-use/RPA agent, not preinstalled coding-agent harnesses like Claude Code/Codex.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope; this is a computer-use/RPA agent API, not a coding-harness driver.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "client.run.astream() - Run a workflow with async streaming responses ... Use this SDK to provision remote computers ..., execute workflows, and stream progress back to your terminal.",
+      "note": "First-party API driving AutoComputer's own computer-use/RPA agent (workflows/run.astream), not a user's coding harness.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://api.github.com/repos/ms337/autocomputer-sdk/contents",
+      "quote": "README.md, autocomputer_sdk, examples, pyproject.toml, setup.py, tests",
+      "note": "No MCP server package/repo found under the AutoComputer/ms337 GitHub presence.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "Python 3.10+ ... pip install -e . ... from autocomputer_sdk.client import AutoComputerClient",
+      "note": "First-party SDK is Python; remote-computer control/code-exec is Python-based.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class WinRMSettings(BaseModel): ... password_secret_id: Optional[str] = None ... class RDPMetadata(BaseModel): ... credential_secret_id: Optional[str] = None",
+      "note": "Secret IDs are used only to store RDP/WinRM login credentials server-side, not a general HTTP credential-injection proxy for arbitrary APIs.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "http://web.archive.org/web/20250618031208/https://www.autocomputer.ai/pricing",
+      "quote": "Zero-shot robotic process automation with AI computer agents.",
+      "note": "not offered: outside the product's scope; product is an RPA/computer-use agent service, no GPU compute offering documented.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class StartRDPComputerRequest(BaseModel): host: str port: int = 3389 username: str password: str domain: Optional[str] ... class WinRMSettings(BaseModel): ...",
+      "note": "Windows machines reached via RDP/WinRM/Guacamole tunnel; card category is 'windows'.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "base_url: The base URL of the Flow API (e.g., http://localhost:8765)",
+      "note": "not offered: outside the product's scope; the SDK is a client to AutoComputer's hosted Flow API (api.autocomputer.ai), not a self-hostable server package.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "base_url: The base URL of the Flow API",
+      "note": "not offered: outside the product's scope; no bring-your-own-cloud deployment documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/LICENSE",
+      "quote": "MIT License Copyright (c) 2025 AutoComputer",
+      "note": "Only the client SDK (autocomputer-sdk) is MIT-licensed/open source; the hosted Flow API/server product itself is not open source.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope (a GUI computer-use/RPA agent, not a container/dev-runtime platform); no Docker/container capability is documented anywhere in the SDK or site.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope; no /dev/kvm or nested-VM capability is documented.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class E2BMetadata(BaseModel): tool_server_url: str; vnc_url: str; vnc_auth_key: Optional[str] = None; vnc_view_only: bool = False",
+      "note": "not offered on the modeled Linux/E2B computer path, which exposes only a VNC URL and a tool-server URL; an SSHMetadata type exists but is only nested under the separate Windows/RDP flow (host/port/username, 'available: bool = False').",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/client.py",
+      "quote": "async def start(...) -> RunningComputer: \"\"\"Start a new remote computer...\"\"\" ... async def delete(self, computer_id: str, ...) -> DeletedComputer",
+      "note": "not offered: computers are ephemeral start/delete sessions for one automation run; no disk-persistence or restart-with-state API is documented.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class Config(BaseModel): screen: ScreenConfig; os_name: OSName = OSName.LINUX; preferred_browser: Optional[str] = None; installed_apps: Optional[List[str]] = None",
+      "note": "not offered: outside the product's scope; no volume/storage-attach API exists in the SDK's computer configuration or lifecycle.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class Config(BaseModel): screen: ScreenConfig; os_name: OSName = OSName.LINUX; preferred_browser: Optional[str] = None; installed_apps: Optional[List[str]] = None",
+      "note": "not offered: outside the product's scope; no shared-volume concept exists anywhere in the SDK.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class Config(BaseModel): screen: ScreenConfig; os_name: OSName = OSName.LINUX; preferred_browser: Optional[str] = None; installed_apps: Optional[List[str]] = None",
+      "note": "not offered: outside the product's scope; the computer configuration exposes only screen size/OS/browser/apps, no CPU/RAM resize.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope; AutoComputer is a GUI/browser automation agent controlled via a Python SDK, not a Node.js code-execution runtime.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class E2BMetadata(BaseModel): tool_server_url: str; vnc_url: str; vnc_auth_key: Optional[str] = None; vnc_view_only: bool = False",
+      "note": "not offered: the computer is reached only via a provider-issued tool_server_url/vnc_url (proxied HTTPS), not a per-machine public IPv4 address.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class E2BMetadata(BaseModel): tool_server_url: str; vnc_url: str",
+      "note": "the running computer is reached via provider-issued tool_server_url and vnc_url endpoints, which are HTTPS URLs.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/client.py",
+      "quote": "async def start(self, config, ..., vnc_requires_auth: bool = False, vnc_view_only: bool = False, ...)",
+      "note": "the API lets the caller require auth on the VNC URL and/or make it view-only, i.e. provider-side control of who can reach the exposed access URL.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope; no method/path-level egress control is documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class OSName(str, Enum): DARWIN = \"darwin\"; WIN32 = \"win32\"; LINUX = \"linux\" ... class Provider(str, Enum): E2B = \"e2b\"; RDP = \"rdp\"",
+      "note": "not offered: the config type accepts os_name=darwin, but only two providers are actually implemented (E2B for Linux, RDP/WinRM for Windows) — no macOS provisioning path exists.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "firecracker",
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/client.py",
+      "quote": "provider: Provider = Provider.E2B ... if provider == Provider.E2B: if template_id: payload[\"template_id\"] = template_id",
+      "note": "AutoComputer's Linux computers are provisioned via E2B (the SDK's default provider), and E2B's own docs/marketing state its sandboxes run on Firecracker microVMs (https://e2b.dev, 'Firecracker'). No isolation tech is documented for the RDP/Windows path since the AutoComputer product is discontinued.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/README.md",
+      "quote": "The Python SDK for running natural-language automation workflows with AutoComputer's computer-use agent.",
+      "note": "not offered: outside the product's scope; no allow/deny-list or no-internet mode is documented anywhere in the SDK's computer-lifecycle or config types.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/ms337/autocomputer-sdk/main/autocomputer_sdk/types/computer.py",
+      "quote": "class E2BMetadata(BaseModel): tool_server_url: str vnc_url: str ... class RDPMetadata(BaseModel): host: str port: int = 3389",
+      "note": "not offered: outside the product's scope; root/sudo access inside the machine is not documented ('root' is null in the card) and no guest-level firewall control is described, so the 'derived from full VM + root=true' rule for a medium-confidence true does not apply here.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "http://web.archive.org/web/20250618031208/https://www.autocomputer.ai/pricing",
+      "quote": "Business starting from $999/month ... Up to 100 instances; Enterprise custom ... Up to 1000 instances",
+      "note": "granularity: account-only; cost: no; AutoComputer's SDK (autocomputer-sdk 0.9.0) provides only computer lifecycle operations (start/list/get/delete) with no usage, billing, cost, or metrics endpoints. The product is discontinued as of 2026-09-29 (api.autocomputer.ai no longer responds). Archived pricing shows fixed plan tiers with instance limits, not programmatic usage tracking per sandbox or tag.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://www.autocomputer.ai/",
+  "locations_quote": "No product is offered on autocomputer.ai as of 2026-09-29: the live site is a one-paragraph holding page ('We build autonomous AI systems to do long-horizon tasks on computers and the internet.') plus stub legal pages; /pricing and /api return 404 and api.autocomputer.ai does not accept connections.",
+  "locations_checked": "2026-10-01"
+}

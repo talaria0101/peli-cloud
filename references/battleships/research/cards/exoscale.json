@@ -1,0 +1,1094 @@
+{
+  "id": "exoscale",
+  "name": "Exoscale",
+  "url": "https://www.exoscale.com/pricing/",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "standard",
+      "label": "Standard",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "standard-micro",
+          "vcpu": 1,
+          "ram_gib": 0.5,
+          "disk_gib": 0,
+          "hour": 0.00729,
+          "month_cap": null
+        },
+        {
+          "name": "standard-tiny",
+          "vcpu": 1,
+          "ram_gib": 1,
+          "disk_gib": 0,
+          "hour": 0.01458,
+          "month_cap": null
+        },
+        {
+          "name": "standard-small",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": 0,
+          "hour": 0.02333,
+          "month_cap": null
+        },
+        {
+          "name": "standard-medium",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.04666,
+          "month_cap": null
+        },
+        {
+          "name": "standard-large",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.09333,
+          "month_cap": null
+        },
+        {
+          "name": "standard-extra_large",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.18667,
+          "month_cap": null
+        },
+        {
+          "name": "standard-huge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.37334,
+          "month_cap": null
+        },
+        {
+          "name": "standard-mega",
+          "vcpu": 12,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.74667,
+          "month_cap": null
+        },
+        {
+          "name": "standard-titan",
+          "vcpu": 16,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.49333,
+          "month_cap": null
+        },
+        {
+          "name": "standard-jumbo",
+          "vcpu": 24,
+          "ram_gib": 225,
+          "disk_gib": 0,
+          "hour": 2.24,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "USD list compute only; local root SSD minimum 10GB and priced separately. No monthly cap; compute meter stops powered off.",
+      "product_class": "vm"
+    },
+    {
+      "key": "cpu",
+      "label": "Cpu",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "cpu-extra_large",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.23333,
+          "month_cap": null
+        },
+        {
+          "name": "cpu-huge",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.46666,
+          "month_cap": null
+        },
+        {
+          "name": "cpu-mega",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.93333,
+          "month_cap": null
+        },
+        {
+          "name": "cpu-titan",
+          "vcpu": 40,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.86667,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "USD list compute only; local root SSD minimum 10GB and priced separately. No monthly cap; compute meter stops powered off.",
+      "product_class": "vm"
+    },
+    {
+      "key": "memory",
+      "label": "Memory",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "memory-extra_large",
+          "vcpu": 2,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.14,
+          "month_cap": null
+        },
+        {
+          "name": "memory-huge",
+          "vcpu": 4,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.28,
+          "month_cap": null
+        },
+        {
+          "name": "memory-mega",
+          "vcpu": 8,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.56,
+          "month_cap": null
+        },
+        {
+          "name": "memory-titan",
+          "vcpu": 12,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.12,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "USD list compute only; local root SSD minimum 10GB and priced separately. No monthly cap; compute meter stops powered off.",
+      "product_class": "vm"
+    },
+    {
+      "key": "storage",
+      "label": "Storage optimized",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "storage-extra_large",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 1000,
+          "hour": 0.14,
+          "month_cap": null
+        },
+        {
+          "name": "storage-huge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 2000,
+          "hour": 0.28,
+          "month_cap": null
+        },
+        {
+          "name": "storage-mega",
+          "vcpu": 12,
+          "ram_gib": 64,
+          "disk_gib": 3000,
+          "hour": 0.56,
+          "month_cap": null
+        },
+        {
+          "name": "storage-titan",
+          "vcpu": 16,
+          "ram_gib": 128,
+          "disk_gib": 5000,
+          "hour": 1.12,
+          "month_cap": null
+        },
+        {
+          "name": "storage-jumbo",
+          "vcpu": 24,
+          "ram_gib": 225,
+          "disk_gib": 10000,
+          "hour": 1.86667,
+          "month_cap": null
+        }
+      ],
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Hour = compute only. Mandatory minimum local disk (1/2/3/5/10 TB) billed at $0.00006/GiB-h on top: e.g. XL 1 TB adds ~$0.06/h (~$43.8/mo), so XL all-in ~$0.20/h vs standard-extra_large $0.18667+10 GB disk. Snapshots not available. Disk billed while stopped."
+    },
+    {
+      "key": "gpu-a30",
+      "label": "GPU A30",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "gpua30-small",
+          "vcpu": 12,
+          "ram_gib": 56,
+          "disk_gib": 0,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "gpu": {
+        "A30": 1.22645833
+      },
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Zone CH-GVA-2 only. 1-GPU size shown; multi-GPU sizes: medium 16c/90GB/2 GPU $1.79666666/h; large 24c/120GB/3 GPU $2.366875/h; huge 48c/225GB/4 GPU $2.961875/h. Local SSD extra (min 100 GB x $0.00014/GiB-h = $0.014/h). New orgs have GPU quota 0; access needs manual screening. "
+    },
+    {
+      "key": "gpu-v100",
+      "label": "GPU2 V100",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "gpu2-small",
+          "vcpu": 12,
+          "ram_gib": 56,
+          "disk_gib": 0,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "gpu": {
+        "V100": 1.375
+      },
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Zone AT-VIE-1 only. 1-GPU size shown; multi-GPU sizes: medium 16c/90GB/2 GPU $2.01389/h; large 24c/120GB/3 GPU $2.65278/h; huge 48c/225GB/4 GPU $3.31944/h. Local SSD extra (min 100 GB x $0.00014/GiB-h = $0.014/h). New orgs have GPU quota 0; access needs manual screening. "
+    },
+    {
+      "key": "gpu-a40",
+      "label": "GPU3 A40",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "gpu3-small",
+          "vcpu": 12,
+          "ram_gib": 56,
+          "disk_gib": 0,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "gpu": {
+        "A40": 1.0453
+      },
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Zone DE-FRA-1 only. 1-GPU size shown; multi-GPU sizes: medium 24c/120GB/2 GPU $2.0907/h; large 48c/224GB/4 GPU $4.1813/h; huge 96c/448GB/8 GPU $8.3627/h. Local SSD extra (min 100 GB x $0.00014/GiB-h = $0.014/h). New orgs have GPU quota 0; access needs manual screening. Large/Huge only on dedicated hypervisors."
+    },
+    {
+      "key": "gpu-a5000",
+      "label": "GPU A5000",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "gpua5000-small",
+          "vcpu": 12,
+          "ram_gib": 56,
+          "disk_gib": 0,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "gpu": {
+        "A5000": 1.34028
+      },
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Zone AT-VIE-2 only. 1-GPU size shown; multi-GPU sizes: medium 24c/112GB/2 GPU $2.47951/h; large 48c/224GB/4 GPU $4.55694/h. Local SSD extra (min 100 GB x $0.00014/GiB-h = $0.014/h). New orgs have GPU quota 0; access needs manual screening. "
+    },
+    {
+      "key": "gpu-3080ti",
+      "label": "GPU RTX 3080 Ti",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "gpu3080ti-small",
+          "vcpu": 12,
+          "ram_gib": 56,
+          "disk_gib": 0,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "gpu": {
+        "RTX 3080 Ti": 0.92361
+      },
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Zone AT-VIE-2 only. 1-GPU size shown; multi-GPU sizes: medium 24c/112GB/2 GPU $1.70868/h; large 48c/224GB/4 GPU $3.14028/h. Local SSD extra (min 100 GB x $0.00014/GiB-h = $0.014/h). New orgs have GPU quota 0; access needs manual screening. "
+    },
+    {
+      "key": "gpu-rtx6000pro",
+      "label": "GPU RTX Pro 6000",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "gpurtx6000pro-small",
+          "vcpu": 36,
+          "ram_gib": 120,
+          "disk_gib": 0,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "gpu": {
+        "RTX Pro 6000": 2.15277778
+      },
+      "granularity_s": 1,
+      "min_billed_seconds": null,
+      "start_fee": 0,
+      "multiplier": 1,
+      "note": "Zone DE-FRA-1, HR-ZAG-1, CH-DK-2 only. 1-GPU size shown; multi-GPU sizes: medium 72c/240GB/2 GPU $4.16666667/h; large 144c/480GB/4 GPU $8.19444444/h; huge 248c/960GB/8 GPU $15.9722222/h. Local SSD extra (min 100 GB x $0.00014/GiB-h = $0.014/h). New orgs have GPU quota 0; access needs manual screening. Huge only on dedicated hypervisors."
+    },
+    {
+      "key": "volume-commit",
+      "label": "Volume discount (12-month commit)",
+      "flags": [
+        "sales"
+      ],
+      "commit": true,
+      "commit_term": "1-year",
+      "pricing": "sizes",
+      "sizes": null,
+      "note": "Discount % unpublished (tiered, sales). Commit to minimum monthly usage for 12 months; shortfall billed; covers Standard/GPU/Optimized instances and SKS; billed by the minute."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.10219999999999999,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.10219999999999999,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 1036,
+    "egress_gib": 0.02,
+    "ipv4_month": 0,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Usage account",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Default quota 20 instances per organization (raise via Portal quota request); Mega, Titan, Jumbo and GPU types need support activation; GPU quota 0 by default (ticket). Pre-paid accounts are stopped/suspended when credit hits zero (volumes keep billing). Elastic IPs limited to 5 initially."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "A30",
+      "V100",
+      "A40",
+      "A5000",
+      "RTX 3080 Ti",
+      "RTX Pro 6000"
+    ],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": false,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "DIY infrastructure rather than an agent-managed sandbox: guest installation, HTTPS/domain setup, abuse controls and operations are customer responsibilities. Linux guest administrative capabilities are not preinstalled agent features. 30% guest CPU utilization does not reduce allocated-compute charges. Unknowns remain null; a partial subtotal is not a complete invoice.",
+    "Large 4/8 compute $0.09333/hour; 50GB root disk adds $0.007/hour. Root SSD is not included despite table minimum-storage column.",
+    "1.42GB outbound per running instance-hour pooled within organization, reset/accounted hourly; overage $0.02/GB. Static card allowance set to 0 conservatively; it overstates egress for the example, which is within aggregate allowance if distributed normally.",
+    "Primary management IP included; extra Elastic IP $0.01389/hour (~$10.1397/730h); no global free extra IPv4 assumption.",
+    "Deleting an instance deletes its snapshots; export or custom-template workflow needed for durable delete/recreate. Snapshot operations may take hours; 30 snapshots/account default, not nameable; storage-optimized snapshots unsupported.",
+    "Card represents compute+storage floor. Account transfer timing and disk retention must be modeled separately.",
+    "Boot time not published (community docs only say \"Launch virtual machines within seconds\") and not in benchmarks.json; boot_overhead_s left unset (2026-09-28).",
+    "Egress free allowance is 1.42 GiB per running instance-hour pooled across the organization (~1 TiB/month per always-on VM); card egress_free_gib=0 overstates egress cost for any workload with running VMs.",
+    "Trial credit: new accounts \"might be entitled\" to a one-time 20 EUR/CHF credit after saving a card (post-paid mode); Exoscale may withhold or expire it. Not modelled (card is USD, no stated FX).",
+    "Windows licence (not modelled; modes are Linux): $0.01111/h per VM up to 7 vCPU, $0.02222/h from 8 vCPU, billed from creation to deletion including while stopped (portal.exoscale.com/api/pricing/licenses)."
+  ],
+  "sources": [
+    "https://www.exoscale.com/pricing/",
+    "https://www.exoscale.com/compute/",
+    "https://portal.exoscale.com/api/pricing/opencompute",
+    "https://community.exoscale.com/platform/billing/",
+    "https://community.exoscale.com/product/compute/instances/overview/",
+    "https://community.exoscale.com/product/compute/instances/how-to/snapshot/"
+  ],
+  "fleet": {
+    "default_max_instances": 20,
+    "default_max_vcpu": null,
+    "default_max_gpus": 0,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Organization default is 20 instances. GPU and other special large instance types need support activation. Request quota increase in Portal; approval does not reserve stock.",
+    "sources": [
+      "https://community.exoscale.com/product/compute/instances/service-boundaries/limits-and-quotas/",
+      "https://community.exoscale.com/product/security/iam/service-boundaries/limits-and-quotas/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 17,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "extras": [
+    {
+      "name": "Support plans",
+      "items": [
+        {
+          "name": "Built-In",
+          "month": 0
+        },
+        {
+          "name": "Starter",
+          "month": 50
+        },
+        {
+          "name": "Pro",
+          "month": 500
+        },
+        {
+          "name": "Enterprise",
+          "month": "5% of usage, min 1,500"
+        }
+      ]
+    }
+  ],
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/how-to/snapshot/index.md",
+      "quote": "Snapshots provide a way to get point-in-time recovery for your instance.",
+      "note": "Snapshots are only user-initiated (portal 'CREATE SNAPSHOT', CLI, API /instance/{id}:create-snapshot). Stopping an instance just keeps its root disk (persistent_disk). No scheduled/automatic snapshot or backup feature found in docs or the v2 OpenAPI (262 paths).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://community.exoscale.com/product/compute/instances/how-to/snapshot/index.md",
+      "quote": "Snapshots are strongly tied to your instance: if you delete your instance, the snapshots will be deleted as well.",
+      "note": "Disk only (no memory); stopping the instance first is 'strongly encouraged'. Revert requires a stopped instance. New machines: export snapshot -> custom template ('used as input to create a new Custom Template'), or /snapshot/{id}:promote. Not available on storage-optimized instances. Block Storage volumes have separate snapshots (max 20/volume) that create new volumes ('forking').",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines ... You can provision and manage them through the Exoscale Portal, CLI, API, or infrastructure-as-code tools such as Terraform and Ansible.",
+      "note": "not offered: outside the product's scope. Exoscale's API only manages VM lifecycle/network/storage resources; there is no first-party API to prompt/stream/drive a coding agent harness running inside the instance.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://community.exoscale.com/product/networking/security-group/overview/index.md",
+      "quote": "As soon as you create an egress rule, only the matching traffic will be allowed.",
+      "note": "Security Groups 'managed at the hypervisor level' (outside the guest): egress by protocol / destination CIDR or security group / port; default allow-all egress until the first egress rule, then default-deny. Outbound SMTP blocked by default. Restricting egress requires allowing 185.19.28.0/22 and 159.100.240.0/20 on 80/8080 for password/SSH-key provisioning. No hostname rules. Changing an instance's groups requires stopping it; rules within a group can be edited live.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/networking/security-group/overview/index.md",
+      "quote": "Ingress and egress IP traffic can filtered by Protocol / destination / destination port.",
+      "note": "Security groups are L2-L4 only; no HTTP-level egress filtering product.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://community.exoscale.com/product/networking/security-group/overview/index.md",
+      "quote": "The rules are managed at the hypervisor level in order to restrict incoming and outgoing network traffic.",
+      "note": "Default deny all inbound; ingress rules by protocol/port with source CIDR or source security group; external sources; IPv6 rules. Private Networks for instance-to-instance traffic. Public IPv4 per instance (no HTTPS preview URLs).",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM virtual machine ('Exoscale Compute Instances are high-performance, KVM-based virtual machines') with root access; iptables/nftables inside works as on any VM.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "SSH keys, IAM permissions, and instance metadata control administrative and automated access.",
+      "note": "Credentials reach an instance via SSH keys / cloud-init user-data or the customer's own tooling; Exoscale's IAM issues scoped API keys and KMS manages encryption keys, but there is no outbound HTTP proxy that injects third-party credentials into requests for the guest.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://community.exoscale.com/product/storage/block-storage/overview/index.md",
+      "quote": "You can attach up to five Block Storage volumes to each instance, with a maximum capacity of 10 TiB per volume.",
+      "note": "Block Storage: NVMe-backed, replicated twice in-zone, 1 GiB-10 TiB, 5K IOPS/volume, attach/detach/resize via API/CLI; min instance size Small; same-zone only.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/storage/block-storage/overview/index.md",
+      "quote": "allowing only a single instance to attach a volume at any given time",
+      "note": "Block Storage is ReadWriteOnce. No managed shared file system (no SFS/NFS product in docs, pricing or the v2 API). Only DIY option: SOS (S3-compatible object storage) mounted with AWS's open-source Mountpoint client (documented how-to), which several instances could mount (read-heavy, no in-place edits); not a first-party mount.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "Full VM isolation on Exoscale-managed KVM hypervisors (shared multi-tenant hosts by default; Dedicated Hypervisors offer single-tenant hardware).",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/how-to/custom-templates/index.md",
+      "quote": "You can use custom templates to launch a custom operating system or custom template configuration on Exoscale... The exoscale Packer Builder creates an instance ... and then snapshots the storage volume ... to register a custom template.",
+      "note": "not offered: outside the product's scope. Custom Templates import VM disk images (qcow2/raw via Packer/manual import), not Docker/OCI container images; there is no 'boot a VM from an OCI image' feature.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. Exoscale is a general-purpose IaaS VM/cloud platform, not a browser-automation or scraping product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. Plain IaaS VM cloud, no CAPTCHA-solving product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://community.exoscale.com/product/networking/ip/overview/index.md",
+      "quote": "You can selectively enable IPv6 on new or existing instances. Once enabled, an IPv6 will be automatically configured on the first interface of your instance, along with its public IPv4 address.",
+      "note": "Datacenter IPv4 assigned to the instance at creation and tied to it for its lifetime (public instances cannot be converted to private and vice versa; IP shown as a persistent instance attribute in CLI output). No residential/mobile IP product.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://community.exoscale.com/product/compute/instances/how-to/snapshot/index.md",
+      "quote": "It is strongly encouraged to stop a Compute instance before creating a snapshot of its storage volume... We recommended you avoid performing any action on the related instance during a snapshot operation.",
+      "note": "Snapshotting (and thus exporting to a Custom Template to launch a new instance) is possible while the source instance keeps running; stopping first is only 'strongly encouraged' for data consistency, not required. Disk-only, no memory/process state (memory_snapshot_fork=false).",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. Plain IaaS VM: stopped instances stay stopped until explicitly started via Portal/CLI/API; no request-triggered auto-wake mechanism documented.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. No idle-detection auto-stop/sleep feature documented for Compute Instances; DIY infrastructure billed while running until customer stops it.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/how-to/instance-scaling/index.md",
+      "quote": "Please note that every scaling operation needs to be performed on a stopped instance.",
+      "note": "Both instance type (CPU/RAM) and disk resizing require the instance to be stopped first; no live resize of a running machine.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. Plain IaaS; the separate Concrete AI / Dedicated Inference product runs customer-selected LLMs for inference, not a first-party browser/computer-use/research task agent.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://community.exoscale.com/llms.txt",
+      "quote": "the official SDKs are Go (egoscale), Python (python-exoscale) and Java (exoscale-sdk-java); a community-maintained Pulumi provider exists (pulumiverse/pulumi-exoscale). For infrastructure as code, use the Terraform provider exoscale/exoscale.",
+      "note": "Exoscale documents CLI, API, SDKs (Go/Python/Java) and Terraform/Pulumi providers; no MCP server for controlling Compute instances is listed anywhere in the docs index.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Instances are fully self-contained environments and can run various operating systems (Linux, Windows, custom ISOs).",
+      "note": "not offered: outside the product's scope. Compute Instances boot from generic OS templates (Ubuntu/Debian/Windows/etc.); no managed Python runtime/SDK code-exec is provided out of the box, the customer installs it.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Instances are fully self-contained environments and can run various operating systems (Linux, Windows, custom ISOs).",
+      "note": "not offered: outside the product's scope. Generic OS VM templates; no managed Node.js runtime/SDK code-exec provided out of the box, the customer installs it.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://community.exoscale.com/product/compute/instances/how-to/private-instances/index.md",
+      "quote": "Instances initially assigned with an IPv4 address can be promoted to dual-stack (IPv4 and IPv6), but private instances remain without public IP assignments for their entire lifetime. Similarly, public instances cannot be converted to private, ensuring their public IP assignment persists throughout their lifecycle.",
+      "note": "The instance's own public IPv4 (used for both inbound and outbound traffic) is assigned once and persists for the instance's lifetime; an additional purchasable Elastic IP is also static. No rotating/shared egress IP.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://community.exoscale.com/platform/compliance/health-data/index.md",
+      "quote": "HIPAA alignment (USA) – through a dedicated Business Associate Subcontractor Agreement (BASA), available for customers processing Protected Health Information (PHI) under U.S. HIPAA and HITECH regulations",
+      "note": "Exoscale offers a Business Associate Subcontractor Agreement (BASA) for HIPAA/HITECH-regulated workloads, alongside HDS and BSI C5 Type 2 attestations.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "Plain IaaS VM: an instance runs indefinitely until the customer stops or deletes it; no maximum session/runtime limit is imposed by the provider.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://community.exoscale.com/reference/cli/exo/compute/instance/index.md",
+      "quote": "start / stop / reboot / reset (instance lifecycle commands; no pause or suspend action listed)",
+      "note": "Exoscale's KVM instance lifecycle only exposes start/stop/reboot/reset (confirmed via the CLI reference sitemap: .../instance/start/, .../instance/stop/, .../instance/reboot/, .../instance/reset/ — no pause/suspend endpoint). Stopping keeps the root disk (persistent_disk=true) but is a full power-off, not a hypervisor pause/resume with retained RAM state; billing note on the card already says 'compute meter stops powered off', i.e. stop, not pause.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/how-to/snapshot/index.md",
+      "quote": "Snapshots provide a way to get point-in-time recovery for your instance. ... It is strongly encouraged to stop a Compute instance before creating a snapshot of its storage volume",
+      "note": "Snapshots/forks (export snapshot -> Custom Template) are disk-only; instance is recommended to be stopped first and reverting also requires the instance to be stopped. No running-process/memory state is captured or restored, so cloned instances never include memory.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. Exoscale sells bare KVM VMs (Portal/CLI/API/Terraform managed); there is no first-party graphical desktop/VNC/RDP streaming product for these instances (RDP is just a port a customer could open on a self-installed Windows guest, not a managed desktop feature).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. No managed/pre-installed browser product; a customer could install a browser inside their own VM but that is DIY, not a first-party feature.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Exoscale Compute Instances are high-performance, KVM-based virtual machines designed for workloads ranging from small applications to complex distributed systems.",
+      "note": "not offered: outside the product's scope. Plain IaaS VM product; no screenshot/click driving API exists anywhere in the docs, CLI, or API reference.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/networking/nlb/overview/index.md",
+      "quote": "A Network Load Balancer (or NLB) is a Layer 4 (TCP/UDP) load balancer that distributes incoming traffic to Compute instances",
+      "note": "Exoscale gives a public IPv4/raw TCP path (raw_tcp_inbound=true) and its only managed load balancer (NLB) is strictly Layer 4 with no TLS termination or HTTPS routing; there is no managed HTTPS ingress/preview-URL product — customers must run and terminate their own TLS on the guest.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Template : A Template is a pre-configured disk image used to launch instances. Templates define the base OS and system configuration. You can use public templates provided by Exoscale or upload your own.",
+      "note": "Exoscale's public templates are plain OS images (Linux distros, Windows, custom ISOs); none of them are coding-agent harnesses (Claude Code/Codex/OpenCode). No such templates are mentioned anywhere in the Instance Templates docs.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Instances are fully self-contained environments and can run various operating systems (Linux, Windows, custom ISOs).",
+      "note": "Only Linux, Windows and custom ISO guests are documented; no macOS templates/instance type exist (Exoscale runs standard KVM on x86 hypervisors, which cannot legally or technically run macOS guests).",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "| Instance Family | Use Case | RAM Range | CPU Cores | Local Storage | Availability | | Standard | General-purpose workloads | 512MB - 225GB | 1 - 24 | 10GB - 1.6TB | All zones | | CPU Optimized | ... | | Memory Optimized | ... | | Storage Optimized | ... | | GPU Servers | ... |",
+      "note": "The complete list of instance families (Standard, CPU/Memory/Storage Optimized, GPU) is x86-64 KVM only; no ARM/aarch64 instance family or template is listed anywhere in the docs, pricing, or API.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Each Compute instance runs on an Exoscale-managed KVM hypervisor in a single Exoscale zone.",
+      "note": "not offered: outside the product's scope. Exoscale is a hosted cloud service run on Exoscale-owned/managed hypervisors in Exoscale's own datacenters; there is no distributable software package a customer can run on their own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://community.exoscale.com/product/compute/instances/overview/index.md",
+      "quote": "Each Compute instance runs on an Exoscale-managed KVM hypervisor in a single Exoscale zone.",
+      "note": "not offered: outside the product's scope. Instances only run on Exoscale's own zones/hypervisors; there is no option to deploy the Exoscale control plane into a customer's own cloud account (e.g. AWS/GCP/Azure).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.exoscale.com/about-us/",
+      "quote": "Exoscale is a European cloud provider offering high-performance compute, cloud storage, networking, IAM and database hosting solutions.",
+      "note": "Exoscale is a proprietary commercial cloud platform; only peripheral client tools (CLI, Terraform provider) are open source on GitHub, not the core compute/hypervisor platform itself.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://community.exoscale.com/platform/usage-report/",
+      "quote": "For programmatic access to usage reports, Exoscale provides an API endpoint available to all customers... You can find the usage details for every resource and service used on Exoscale during the given period via detailed usage reports (advanced support plans)",
+      "note": "granularity: per-sandbox; cost: no; Basic API returns aggregated usage by product type. Detailed usage reports (for advanced/premium support customers) include per-resource breakdown with entity_id for instances, buckets, etc. Basic API returns quantities only; costs shown in invoices/detailed reports. No tag/label-based filtering via API.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "DE-FRA-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Munich",
+      "provider_region": "DE-MUC-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AT",
+      "state": null,
+      "city": "Vienna",
+      "provider_region": "AT-VIE-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AT",
+      "state": null,
+      "city": "Vienna",
+      "provider_region": "AT-VIE-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Geneva",
+      "provider_region": "CH-GVA-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "CH-DK-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BG",
+      "state": null,
+      "city": "Sofia",
+      "provider_region": "BG-SOF-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HR",
+      "state": null,
+      "city": "Zagreb",
+      "provider_region": "HR-ZAG-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.exoscale.com/datacenters/",
+  "locations_quote": "Standard | General-purpose workloads | 512MB - 225GB | 1 - 24 | 10GB - 1.6TB | All zones",
+  "locations_checked": "2026-10-01"
+}

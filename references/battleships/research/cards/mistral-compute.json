@@ -1,0 +1,532 @@
+{
+  "id": "mistral-compute",
+  "name": "Mistral Compute / AI Cloud",
+  "url": "https://mistral.ai/products/aicloud/",
+  "category": "gpu-cloud",
+  "isolation": "bare-metal",
+  "modes": [
+    {
+      "key": "dedicated-ai",
+      "label": "Dedicated AI capacity",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "No public price exists (no EUR or USD list price, no FX conversion applied). Sales-only reserved/dedicated NVIDIA GB200/GB300/B300 capacity in the EU ('Reserve AI compute capacity in Europe for long-term growth'); every rate is null. VAT basis unknown."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Reserved capacity (contact sales)",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown quotas are not confirmed unlimited. "
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "gpu_types": [
+      "GB200",
+      "GB300",
+      "B300"
+    ],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": null,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "isolation": "bare-metal",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_shared": true,
+    "egress_ip_type": "datacenter",
+    "volume_attach": false,
+    "ingress_rules": false,
+    "guest_firewall": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Compute list price, currency, minimum commitment, GPU SKU and ordinary CPU availability unknown.",
+    "Unknowns remain null, not free; generic infrastructure modes are opt-in alt.",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Unknown: reviewed pricing source does not explicitly establish VAT/tax inclusion.",
+    "Residency: European dedicated capacity marketed; exact contracted facility, data control and subprocessor scope require contract.",
+    "Status 2026-09-29: live. Product now marketed as 'Mistral AI Cloud' (mistral.ai/products/mistral-compute redirects to /products/aicloud/). Timeline on the page: GB200 serving production Feb 2026, first external customers onboarded Mar 2026. The AI Cloud page also sells Regional Endpoints / Priority Tier model inference (token-priced, not a sandbox/VM) and SLURM-based cluster access; no per-GPU-hour, per-vCPU or storage/egress price is published anywhere."
+  ],
+  "sources": [
+    "https://mistral.ai/products/aicloud/",
+    "https://mistral.ai/pricing/",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Dedicated GPU infrastructure is presented as an enterprise/private Mistral-operated environment. No numeric new self-serve quota, verification checklist or capacity-approval turnaround established.",
+    "sources": [
+      "https://mistral.ai/",
+      "https://mistral.ai/industry/manufacturing/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 5,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 6
+  },
+  "feature_evidence": {
+    "isolation": {
+      "value": "bare-metal",
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "Product is sold as dedicated/reserved GPU racks (GB200/GB300/B300) per customer with Managed Slurm or Managed Kubernetes on top, not a shared multi-tenant hypervisor sandbox; derived from 'dedicated' capacity framing, not an explicit isolation-technology statement.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://mistral.ai/compute",
+      "quote": "Managed Kubernetes. Deploy and scale containerized AI workloads without managing the Kubernetes control plane or underlying infrastructure.",
+      "note": "Managed Kubernetes implies deploying customer-supplied container/OCI images; not explicitly documented as an 'image_oci' feature.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://mistral.ai/compute",
+      "quote": "Managed Kubernetes. Deploy and scale containerized AI workloads without managing the Kubernetes control plane or underlying infrastructure.",
+      "note": "Containerized workloads run via the managed Kubernetes offering.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope (dedicated GPU training/inference infrastructure with Slurm/Kubernetes, not a desktop product)",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope (GPU/HPC infrastructure, not a browser/scraping product)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth. Gain dedicated access with the scale, continuity, and control to execute your AI strategy.",
+      "note": "not offered: outside the product's scope (long-term reserved/dedicated capacity, not clonable ephemeral sandbox machines)",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth.",
+      "note": "not offered: outside the product's scope (dedicated reserved capacity is always allocated to the customer, not a sleep/wake serverless model)",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth. Gain dedicated access with the scale, continuity, and control to execute your AI strategy.",
+      "note": "not offered: outside the product's scope (dedicated reserved capacity billed/allocated continuously, not an idle-stop model)",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth.",
+      "note": "not offered: outside the product's scope; capacity is reserved/contracted rather than elastically resized per machine",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Applications. Build with Studio and Vibe on Mistral Compute, with the same regional controls, reliability, and underlying compute.",
+      "note": "not offered: outside the product's scope. Mistral's coding-agent products (Vibe, Vibe for code) are separate products that can run on top of Mistral Compute, but Compute itself does not ship preinstalled coding-agent templates.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Applications. Build with Studio and Vibe on Mistral Compute, with the same regional controls, reliability, and underlying compute.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope; no MCP server for controlling Mistral Compute infrastructure is documented",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Governance. SSO and SCIM out of the box. RBAC maps to SLURM accounts. Secrets, key management, audit trails, CI/CD webhooks.",
+      "note": "Provider offers its own secrets/key management, but no first-party HTTP-credential-injection proxy is documented, so this is treated as secrets-as-managed-values rather than an any-http/ai-only proxy.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "GPUs: GB200 • GB300 • B300 CPUs: Grace and x86. Frontier-grade compute for the most demanding AI workloads.",
+      "note": "not offered: outside the product's scope (GPU training/inference infrastructure with Grace/x86 CPUs for Slurm/Kubernetes AI workloads, not general-purpose Windows machines)",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "GPUs: GB200 • GB300 • B300 CPUs: Grace and x86. Frontier-grade compute for the most demanding AI workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Latest generation hardware. Use high-performance GPU infrastructure without sourcing the hardware, building the environment or operating it yourself.",
+      "note": "The product is Mistral-operated dedicated infrastructure that the customer reserves, not software the customer runs on their own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Control over where it runs. Run workloads on infrastructure Mistral operates in Europe, with enterprise security, governance and reliability built in.",
+      "note": "Infrastructure is Mistral-operated (Mistral's own EU data centers/racks), not deployed into the customer's own cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope; the Mistral Compute platform/orchestration stack is proprietary (Mistral's own models are open-weight, but that is a separate product line)",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://trust.mistral.ai",
+      "quote": "HIPAA Compliance with Mistral AI",
+      "note": "Listed as a compliance document on Mistral's org-wide Trust Center; not confirmed as Compute-specific (BAA availability not itemized per product).",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth. Gain dedicated access with the scale, continuity, and control to execute your AI strategy.",
+      "note": "Capacity is reserved/dedicated for the contract term (long-term growth), not a per-session time limit; jobs run under customer-managed Slurm/Kubernetes scheduling with no provider-imposed session cap documented.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Compute High-performance NVIDIA GPUs in Europe for demanding training and inference, without sourcing, building, or operating the hardware yourself.",
+      "note": "not offered: outside the product's scope — this is dedicated/reserved SLURM-scheduled GPU capacity for training/inference jobs, not a sandbox/VM product with snapshot/restore semantics.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Compute High-performance NVIDIA GPUs in Europe for demanding training and inference, without sourcing, building, or operating the hardware yourself.",
+      "note": "not offered: outside the product's scope (dedicated reserved capacity billed for the contract term, not a stop/sleep sandbox model).",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Compute High-performance NVIDIA GPUs in Europe for demanding training and inference, without sourcing, building, or operating the hardware yourself.",
+      "note": "not offered: outside the product's scope; no API/CLI snapshot/checkpoint capability is documented.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth. Gain dedicated access with the scale, continuity, and control to execute your AI strategy.",
+      "note": "not offered: outside the product's scope — capacity is reserved/contracted (sales-only), not billed per-instance with a pause/resume state; SLURM job suspend is a scheduler concept, not a billing pause feature.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Governance. SSO and SCIM out of the box. RBAC maps to SLURM accounts. Secrets, key management, audit trails, CI/CD webhooks.",
+      "note": "derived: SLURM HPC clusters standardly provide a persistent shared parallel filesystem across the cluster's lifetime; not explicitly documented for Mistral Compute specifically.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "RBAC maps to SLURM accounts.",
+      "note": "derived: SLURM-based HPC/GPU clusters conventionally mount a shared cluster-wide filesystem across all compute nodes; not explicitly stated on the page.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Frontier-grade compute for the most demanding AI workloads. Yours to build on. Run models, serve production workloads, and access dedicated compute in one place.",
+      "note": "derived: AI training/inference workloads on GPU clusters (Mistral's own model stack) are run in Python/PyTorch by convention; not itemized as a discrete feature on the page.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Compute High-performance NVIDIA GPUs in Europe for demanding training and inference, without sourcing, building, or operating the hardware yourself.",
+      "note": "not offered: outside the product's scope — a SLURM-scheduled GPU training/inference cluster is not marketed or documented as a Node.js runtime target.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Compute High-performance NVIDIA GPUs in Europe for demanding training and inference, without sourcing, building, or operating the hardware yourself.",
+      "note": "not offered: outside the product's scope — this is dedicated GPU training/inference capacity accessed via SLURM/APIs, not a sandbox that exposes per-job public HTTPS endpoints.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://mistral.ai/products/ai-cloud/",
+      "quote": "Compute High-performance NVIDIA GPUs in Europe for demanding training and inference, without sourcing, building, or operating the hardware yourself.",
+      "note": "not offered: outside the product's scope — no HTTP method/path-level egress control is documented for this dedicated GPU/SLURM cluster product.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": true,
+      "source": "https://mistral.ai/news/mistral-compute/",
+      "quote": "a private, integrated stack—GPUs, orchestration, APIs, products, and services in whatever form factor they need, from bare-metal servers to fully-managed PaaS",
+      "note": "derived: Mistral Compute explicitly offers bare-metal server access (not just a locked-down PaaS layer); on real bare-metal hardware /dev/kvm and nested virtualization are available to the customer's own OS. Not itemized as a discrete 'nested_virt' feature on any page.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://mistral.ai/compute",
+      "quote": "Security. Purpose-built security for large-scale AI workloads: EVPN-VXLAN network isolation, AES-256 encryption at rest with BYOK, and defined data wiping protocol.",
+      "note": "derived: this is dedicated GPU capacity in Mistral-operated EU data centers with EVPN-VXLAN network isolation; outbound traffic originates from Mistral's own EU datacenter IP ranges, not a residential/mobile proxy pool. No explicit statement of egress IP type.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": true,
+      "source": "https://mistral.ai/news/mistral-compute/",
+      "quote": "a private, integrated stack—GPUs, orchestration, APIs, products, and services in whatever form factor they need, from bare-metal servers to fully-managed PaaS",
+      "note": "derived: bare-metal server access plus 'Managed Slurm' (mistral.ai/compute: 'Schedule and run large-scale training and HPC workloads without setting up or operating the cluster yourself') conventionally exposes SSH to login/compute nodes for job submission and interactive access; not explicitly documented as an 'SSH' feature.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure.",
+      "note": "not offered: outside the product's scope as documented — this is a sales-only reserved-capacity contract with a shared cluster filesystem (RBAC maps to SLURM accounts), not a self-serve API/console to attach or detach extra block-storage volumes per machine.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Security. Purpose-built security for large-scale AI workloads: EVPN-VXLAN network isolation, AES-256 encryption at rest with BYOK, and defined data wiping protocol.",
+      "note": "derived: EVPN-VXLAN network isolation describes a private, segmented cluster network for training/inference nodes; no public-IPv4-per-machine capability is documented, consistent with a Slurm/Kubernetes-scheduled dedicated cluster rather than a public-IP VM product.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://mistral.ai/compute",
+      "quote": "Security. Purpose-built security for large-scale AI workloads: EVPN-VXLAN network isolation, AES-256 encryption at rest with BYOK, and defined data wiping protocol.",
+      "note": "not offered: outside the product's scope as documented — the product is a private, network-isolated training/inference cluster (Slurm/Kubernetes jobs), not a platform that publishes a per-port ingress-control mechanism (private URLs, IP allowlists, security groups) for exposed services.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://mistral.ai/news/mistral-compute/",
+      "quote": "a private, integrated stack—GPUs, orchestration, APIs, products, and services in whatever form factor they need, from bare-metal servers to fully-managed PaaS",
+      "note": "derived: bare-metal server access implies root-level control of the OS, so nftables/iptables would function inside; per field definition guidance for a full VM/bare-metal with root=true. Not explicitly documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://mistral.ai/compute",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth. Gain dedicated access with the scale, continuity, and control to execute your AI strategy.",
+      "note": "derived: capacity is dedicated/reserved long-term for a single customer (not a shared, dynamically-recycled fleet), so the allocated network range and its outbound IP would be fixed for the contract term; not explicitly stated as a 'static egress IP' feature.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://mistral.ai/products/aicloud/",
+      "quote": "Reserve AI compute capacity in Europe for long-term growth. Gain dedicated access with the scale, continuity, and control to execute your AI strategy.",
+      "note": "granularity: account-only; cost: no; Product is sold as reserved/dedicated GPU capacity (GB200/GB300/B300) via sales-only contract with Managed Slurm/Kubernetes orchestration. No public per-sandbox usage metering API is documented. Billing is contract-based for capacity reservation, not per-resource consumption.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://mistral.ai/compute",
+  "locations_quote": "Reserve dedicated, high-performance GPUs in Europe, without having to source, build, or operate infrastructure. Control over where it runs: Run workloads on infrastructure Mistral operates in Europe, with enterprise security, governance and reliability built in.",
+  "locations_checked": "2026-10-01"
+}

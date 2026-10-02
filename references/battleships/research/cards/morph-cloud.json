@@ -1,0 +1,608 @@
+{
+  "id": "morph-cloud",
+  "name": "Morph Cloud",
+  "url": "https://cloud.morph.so/web/subscribe",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "MorphVM instance / Devbox, pay-as-you-go MCU ($0.05)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.05,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        4
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 1,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "MCU/h = max(vCPU, ceil(RAM/4 GiB), ceil(disk/16 GiB)) x $0.05. Encoded as $0.05/vCPU-h with RAM free up to 4 GiB/vCPU (ram_per_vcpu max 4 makes the engine bump vCPU when RAM/4 binds, reproducing the max()). Disk above 16 GiB per billed MCU also raises MCU (not modelled). Team/Scale bundles are modelled as plan included_usd, so overage stays at $0.05. Billing granularity unpublished. Basis verified 2026-09-28 (cloud.morph.so/web/subscribe): 'MCUs = max(vCPUs, ceil(RAM/4GiB), ceil(disk/16GiB))', devboxes 'billed in MCUs/hour based on devbox resources' = configured size (alloc), not usage. Paused: 'You only get charged for the snapshot taken' (docs/.../instances/pause-resume). No automatic idle pause is documented; pausing when idle needs TTL (ttl_action=pause) + wake-on-request, modelled by the awake_share knob."
+    },
+    {
+      "key": "actions-runner",
+      "label": "Morph Actions GitHub runner (fixed sizes, billed per runner-hour, no idle pause)",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "auto_stop_idle": false,
+        "pause_resume": false,
+        "wake_on_request": false,
+        "isolation": "vm"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 16,
+      "sizes": [
+        {
+          "name": "Small",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 40,
+          "hour": 0.15,
+          "month_cap": null
+        },
+        {
+          "name": "Medium",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 80,
+          "hour": 0.25,
+          "month_cap": null
+        },
+        {
+          "name": "Large",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 160,
+          "hour": 0.5,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "CI runners billed hourly from the same MCU pool: 3/5/10 MCU/h at the $0.05 standard rate. Medium is 5 MCU (not 4) because 80 GiB disk > 64 GiB (disk-bound). Kept flags alt with product_class ci-runner: the engine ignores alt when the shopper is looking for CI runners, so it ranks normally in the CI view and as an adjacent product elsewhere. Runners are \"billed hourly from your MCU balance\" (cloud.morph.so/web/subscribe, 2026-09-28); finer granularity unpublished.",
+      "product_class": "ci-runner"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 16,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": 0.0073,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Developer",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "pool_vcpu": 64,
+      "pool_ram_gib": 256,
+      "pool_disk_gib": 1024,
+      "note": "0 starting MCUs: must buy pay-as-you-go top-up credits ($0.05/MCU). Org-wide limits 64 vCPU / 256 GB RAM / 1,024 GB storage; devboxes 8 concurrent / 32 total. EFS $0.12/GiB-month, 5 filesystems."
+    },
+    {
+      "name": "Team",
+      "fee": 40,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 50,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "pool_vcpu": 256,
+      "pool_ram_gib": 1024,
+      "pool_disk_gib": 4096,
+      "note": "$40/month buys 1,000 MCU ('20% discount, $50 value' = $0.04/MCU); overage $0.05/MCU. Encoded as fee 40 + included_usd 50 (valued at list MCU price). Rollover of unused MCU undocumented. Devboxes 32 concurrent / 128 total. EFS $0.15/GiB-month, 25 filesystems."
+    },
+    {
+      "name": "Scale",
+      "fee": 250,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 375,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "pool_vcpu": 1024,
+      "pool_ram_gib": 4096,
+      "pool_disk_gib": 16384,
+      "note": "$250/month buys 7,500 MCU ('33% discount, $375 value' = $0.0333/MCU); overage $0.05/MCU. Badge 'Enterprise' on the subscribe page. Devboxes 128 concurrent / 512 total. EFS $0.18/GiB-month, 100 filesystems."
+    }
+  ],
+  "extras": [
+    {
+      "item": "Morph EFS shared filesystem storage",
+      "price": "$0.12 (Developer) / $0.15 (Team) / $0.18 (Scale) per GiB-month of stored data"
+    },
+    {
+      "item": "Morph EFS on 'Free or trial access'",
+      "price": "1 concurrent filesystem; included allowance 'controlled by account policy' (no $ published)"
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": true,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": null,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": null,
+    "mcp_server": false,
+    "browser_control": false,
+    "desktop_control": null,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "ip_note": "No proxy or egress-IP details documented; a browser must be self-installed (docs example runs headless Chrome in Docker and exposes CDP port 9222).",
+    "isolation": "vm",
+    "image_oci": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": "ai-only",
+    "volume_attach": true,
+    "volume_shared": true,
+    "harness_api": true,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [
+    {
+      "id": "awake_share",
+      "label": "Share of session the instance is awake (wake-on-HTTP/SSH + ttl_action=pause)",
+      "kind": "slider",
+      "min": 0.05,
+      "max": 1,
+      "step": 0.05,
+      "default": 1,
+      "unit": "%",
+      "options": null,
+      "effect": "hours_factor",
+      "modes": [
+        "on-demand"
+      ],
+      "why": "A paused MorphVM \"stops consuming MCUs; you only get charged for the snapshot taken\" (RAM+disk at $0.00001/GB-h). With wake-on-HTTP/SSH and ttl_action=pause, idle stretches cost only snapshot storage, so billed MCU-hours = awake share of the session. Default 1 = awake the whole session.",
+      "source": "https://cloud.morph.so/docs/documentation/instances/pause-resume"
+    },
+    {
+      "id": "mcu_per_vcpu",
+      "label": "Billed MCU per vCPU (disk-bound instances)",
+      "kind": "slider",
+      "min": 1,
+      "max": 3,
+      "step": 0.25,
+      "default": 1,
+      "unit": "×",
+      "options": null,
+      "effect": "rate_factor",
+      "modes": [
+        "on-demand"
+      ],
+      "why": "MCU/h = max(vCPU, ceil(RAM/4 GiB), ceil(disk/16 GiB)) x $0.05. The card prices vCPU and RAM but not disk: more than 16 GiB disk per vCPU raises the MCU count (e.g. 4 vCPU with 80 GiB disk = 5 MCU = x1.25). Set to ceil(disk/16)/vCPU when disk binds. The 3x ceiling is a judgment call.",
+      "source": "https://cloud.morph.so/web/subscribe"
+    }
+  ],
+  "caveats": [
+    "Plan names corrected vs older research: subscribe-page columns are Developer ($0) / Team ($40) / Scale ($250) (badges Free / Popular / Enterprise), confirmed by sandbox.watch and the EFS plan table.",
+    "MCU = max(vCPU, ceil(RAM/4), ceil(disk/16)); encoded via ram_per_vcpu max 4 at $0.05/vCPU-h. Disk above 16 GiB per MCU raises the price (e.g. 4 vCPU with 80 GiB disk = 5 MCU) and is not captured; storage.included_disk_gib=16 is the 1-vCPU allowance (really 16 GiB per billed MCU).",
+    "Plans carry non-spec pool_vcpu/pool_ram_gib/pool_disk_gib: org-wide resource ceilings (Developer 64 vCPU => max 16 concurrent 4-vCPU VMs). Devbox concurrency 8/32/128 applies to the Devbox product.",
+    "Team/Scale are prepaid MCU bundles worth more than the fee (fee 40 -> $50, 250 -> $375 at list). Rollover/expiry undocumented; org is restricted when credits are exhausted unless topped up.",
+    "Paused instances bill only the snapshot (RAM+disk size) at $0.00001/GB-h (~$0.0073/GB-month); stopped instances are released and free. Snapshots have no default TTL.",
+    "Billing granularity, egress, IPv4, regions, compliance and enterprise pricing unpublished.",
+    "Windows / macOS guests are 'experimental' in devbox docs with no published price; modes are linux-only.",
+    "No free credit: Developer tier starts at 0 MCU.",
+    "No benchmark entry in benchmarks.json; third party claims <250 ms snapshot restore.",
+    "auto_stop_idle=true relies on user-set TTL (ttl_action=pause) + wake-on-request; docs recommend combining them 'to automatically pause idle instances' but do not say whether TTL resets on activity (it may be wall-clock). No built-in idle timer is documented (checked 2026-09-28).",
+    "Disk re-checked 2026-09-28: \"One MCU represents ... 1 vCPU-hour + 4 GB RAM-hours + 16 GB disk-hours\" (cloud.morph.so/web/subscribe). Disk has no separate $/GB price: it is free up to 16 GiB per billed MCU (64 GiB on a 4-vCPU box) and beyond that raises the MCU count (1 MCU per extra 16 GiB = $0.003125/GiB-h). The engine cannot express a per-vCPU allowance, so disk_gib_month stays null; use the mcu_per_vcpu knob when disk binds.",
+    "Egress re-checked 2026-09-28: not published on the subscribe page or docs (null).",
+    "Devboxes (not bare instances) document a built-in auto-sleep: 'Devboxes can branch to hundreds of parallel replicas or scale to zero after a period of inactivity, preserving all application and memory state' and prototyping users can 'optionally disable auto-sleep / TTL policies'. The default idle period is not published. Bare MorphVM instances still need ttl_action=pause + wake-on for scale-to-zero.",
+    "EFS estimates round non-zero sampled bytes up to the next GiB (min 1 GiB-month per filesystem once sampled); EFS billing applies only 'where EFS billing is enabled'."
+  ],
+  "sources": [
+    "https://cloud.morph.so/web/subscribe",
+    "https://cloud.morph.so/docs/documentation/setup/plans",
+    "https://cloud.morph.so/docs/documentation/instances/pause-resume",
+    "https://cloud.morph.so/docs/documentation/instances/ttl",
+    "https://cloud.morph.so/docs/documentation/instances/snapshot-ttl",
+    "https://cloud.morph.so/docs/documentation/instances/branch",
+    "https://cloud.morph.so/docs/documentation/instances/wake-on",
+    "https://cloud.morph.so/docs/efs/usage-and-billing",
+    "https://cloud.morph.so/docs/llms-full.txt",
+    "https://sandbox.watch/p/morph"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": 64,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Prepaid MCU purchase required; Team/Scale subscriptions include MCU credits.",
+    "tiers": "Developer 64 vCPU/256 GB RAM/1,024 GB storage; Team 256/1,024/4,096; Scale 1,024/4,096/16,384. Separate Devbox concurrency 8/32/128.",
+    "notes": "MorphVM fleet quota is aggregate resources, not Devbox count. At 4 vCPU/8 GiB the CPU pool allows 16/64/256 instances before other constraints; 300/1,000 that size not covered by published tiers. Developer has zero starting MCU allocation and must purchase credit.",
+    "sources": [
+      "https://cloud.morph.so/web/subscribe"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 1,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/documentation/instances/ttl",
+      "quote": "pause: The instance will be paused, preserving its memory state. This allows you to resume the instance later with all applications in the exact state they were in.",
+      "note": "Opt-in: instance TTL with ttl_action='pause' snapshots memory + disk when the TTL expires (pause = 'We create a new snapshot and suspend the VM'); wake_on_http / wake_on_ssh resume it automatically on the next request. Devboxes add auto-sleep 'after a period of inactivity, preserving all application and memory state' (default idle period unpublished). ttl_action='stop' discards state.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/documentation/instances/branch",
+      "quote": "Branching creates a snapshot of an instance and then launches a specified number of new instances from that snapshot.",
+      "note": "instance.snapshot() / `morphcloud instance snapshot` of a running instance ('save its current state'), memory + disk (Infinibranch); new instances start from snapshots with processes running, or boot disk-only with a resize; branch(count=N) forks; devbox /save checkpoints. Snapshots also get TTLs.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/documentation/instances/http-services",
+      "quote": "When auth_mode=\"api_key\" is enabled, requests to the service URL must include the Authorization: Bearer YOUR_MORPH_API_KEY header:",
+      "note": "Only ports you explicitly expose as named HTTP services get a public URL; optional auth_mode api_key (Morph API key as bearer). No IP allowlist, no raw TCP ingress (SSH via Morph gateway).",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full VM (MorphVM) with root, Docker and nested virt per card; iptables inside not explicitly documented.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://cloud.morph.so/docs/responses-proxy/getting-started",
+      "quote": "The data plane does not require a provider key such as an OpenAI key. Send your Responses Proxy key as the request bearer token; the proxy injects the selected provider credential after resolving the model alias.",
+      "note": "Responses Proxy is an LLM gateway (OpenAI Responses + Anthropic Messages for Claude Code/Codex): real provider keys stay in the proxy, clients hold an org-scoped proxy key (itself a bearer credential). No general-purpose HTTP credential injection; devbox secrets manager / user secrets API otherwise hand values to the machine. Managed CLI setup needs a 'private proxy plugin'.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/efs/concepts",
+      "quote": "Morph EFS means Morph Ephemeral File System. It provides named filesystems that can be mounted into a supported Linux environment and used through ordinary file operations.",
+      "note": "FUSE network filesystem mounted from inside the machine via `morphcloud efs mount` (needs /dev/fuse), not a block volume. Billed per GiB-month by plan where EFS billing is enabled; optional TTL.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/efs/concepts",
+      "quote": "The same EFS filesystem can be mounted from more than one supported host in the same Morph context.",
+      "note": "Read-write from all mounts; writes visible elsewhere after sync; concurrent writers must coordinate.",
+      "checked": "2026-09-29"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "Morph Devboxes are the simplest way to code with AI in the cloud... Full virtual machines capable of running any configuration of containers",
+      "note": "not offered: outside the product's scope. Morph is a general-purpose devbox/VM product with no managed browser (features.browser=false); a browser must be self-installed inside the VM (e.g. headless Chrome + CDP example in docs), and no stealth/anti-fingerprinting layer is documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cloud.morph.so/web/subscribe",
+      "quote": "MorphVM instance / Devbox, pay-as-you-go MCU",
+      "note": "not offered: outside the product's scope. Morph sells generic VM/devbox compute, not a browser-automation or scraping product; no CAPTCHA-solving feature is documented anywhere in the docs, API reference, or pricing pages.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "docker run -d --network morph-net --name headless-chrome zenika/alpine-chrome ... proxy_pass http://headless-chrome:9222",
+      "note": "No proxy or residential/mobile egress product is documented anywhere; instances are standard cloud VMs reaching the internet directly (a browser must be self-installed inside the machine, per the docs' headless-Chrome/CDP example), so egress is ordinary datacenter IP space, not a residential/mobile proxy product. Exact outbound IP type/ranges are unpublished.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/devboxes/development",
+      "quote": "Devboxes expose a full tmux API, which lets you programmatically manage coding agents like OpenAI Codex or Claude Code. These fully persistent sessions remain interactive and can be easily accessed through the devbox web interface, through SSH, or puppeteered through the Devbox API.",
+      "note": "Devbox API includes tmux endpoints to create sessions, send keystrokes, and capture output ('Automate CLI agents with tmux (API): create sessions, send keystrokes, capture state... good fit for running CLI agents (Codex, Claude Code, Gemini CLI) with human-in-the-loop supervision').",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cloud.morph.so/web/subscribe",
+      "quote": "MorphVM instance / Devbox, pay-as-you-go MCU",
+      "note": "not offered: outside the product's scope. Morph provides VM/devbox infrastructure and a tmux API to drive a user-installed coding harness (harness_api); it has no first-party browser/computer-use/research agent of its own to drive via API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://api.github.com/orgs/morph-labs/repos",
+      "quote": "morph-typescript-sdk, morph-python-sdk",
+      "note": "not offered: the morph-labs GitHub org ships only the Python and TypeScript SDKs (Apache-2.0); no MCP server repo or docs page for controlling Morph sandboxes via MCP was found.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/devboxes/prototyping",
+      "quote": "morphcloud devbox ssh \"$DEVBOX_ID\" bash -lc \"nohup python3 -m http.server 3000 >/tmp/http.log 2>&1 &\"",
+      "note": "Docs repeatedly invoke python3 directly on the default Debian-based morphvm-minimal image/devboxes without an install step; a first-party Python SDK (morphcloud) also exists.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/devboxes/getting-started",
+      "quote": "\"sequence\":[\"git clone https://github.com/morph-labs/example-app\",\"ENTER\",\"cd example-app\",\"ENTER\",\"npm install\",\"ENTER\",\"npm run dev\",\"ENTER\"]",
+      "note": "The tmux quickstart runs `npm install`/`npm run dev` directly on a freshly created devbox with no prior `apt install nodejs` step, implying Node.js is present by default; a separate bare-VM example does `apt install -y ... nodejs npm`, so availability may depend on image/template. A first-party TypeScript/Node SDK (morphcloud) also exists.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/actions/security-and-verification",
+      "quote": "Workflow code should be treated as privileged within that instance: it can use Docker, passwordless sudo, and outbound network access available to the runner.",
+      "note": "not offered: no provider-side outbound allow/deny list, security-group egress rule, or no-internet mode is documented anywhere in the API reference or docs; egress is described as unrestricted outbound network access.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/documentation/instances/http-services",
+      "quote": "When auth_mode=\"api_key\" is enabled, requests to the service URL must include the Authorization: Bearer YOUR_MORPH_API_KEY header",
+      "note": "not offered: documented networking controls (http_services auth_mode) govern inbound access to exposed ports only; no outbound HTTP method/path-level egress rule is documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://cloud.morph.so/web/subscribe",
+      "quote": "MorphVM instance / Devbox, pay-as-you-go MCU",
+      "note": "not offered: no fixed/static outbound IP feature or price is published on the pricing page, docs, or API reference (network.ipv4_available is also false in this card's basis).",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "Time to live settings for the instance. If not set, the instance will not expire.",
+      "note": "TTL (ttl_seconds/ttl_action) is opt-in per instance/devbox; if the user never sets one, the machine keeps running indefinitely (billed continuously) until stopped, so there is no provider-enforced maximum session length.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://cloud.morph.so/docs/documentation/instances/pause-resume",
+      "quote": "The pause and resume functionality allows you to temporarily suspend an instance while preserving its memory state, and later restart it exactly where it left off. ... You'll only be charged for storage, not compute resources.",
+      "note": "Contradiction confirmed: pause/resume keeps the disk+memory (paused instances bill only snapshot storage, per card's own storage note), and the separate resize doc says 'Filesystem is preserved across the resize.' Default behaviour: a plain Stop releases all resources and state is lost ('Stop: ... You'll lose the running state'); files persist only if you Pause (or snapshot) instead of Stop, i.e. persistence is opt-in via pause_resume/snapshot, not automatic on every stop.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/documentation/instances/http-services",
+      "quote": "Devboxes are the simplest way to code with AI in the cloud. ... Full virtual machines capable of running any configuration of containers ...",
+      "note": "No first-party managed browser product found in docs/llms-full.txt; a browser must be self-installed by the user (e.g. running headless Chrome yourself inside the VM and exposing its CDP port). Outside the product's scope: Morph is a dev-environment/VM cloud, not a browser-automation service.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "You can also programmatically configure devboxes for computer-use workflows or arbitrary web applications for full-stack development.",
+      "note": "This only says a devbox CAN be configured by the user for computer-use style workloads (i.e. you install/wire it up yourself); no first-party screenshot+click 'drive the desktop' API was found anywhere in the docs. Confirms false as offered/first-party feature.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "You can list all available base images provided by Morph Cloud.",
+      "note": "Machines are created from Morph's own fixed catalogue of base images (e.g. morphvm-minimal) plus your own build steps/snapshots on top of them; there is no documented way to import an arbitrary customer-supplied Docker/OCI image as the VM base image.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "When auth_mode=\"api_key\" is enabled, requests to the service URL must include the Authorization: Bearer YOUR_MORPH_API_KEY header",
+      "note": "No mention of a per-machine public IPv4 address anywhere in docs/llms-full.txt; inbound access is via named HTTP services (Morph-issued URLs) and an SSH gateway, not a raw IP. Consistent with the card's own network.ipv4_available:false.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/examples/claude-code",
+      "quote": "# Install claude-code and dev tooling inside the devbox\nmorphcloud devbox ssh \"$DEVBOX_ID\" bash -lc \"sudo apt update && sudo apt install -y git gh nodejs npm tmux\"\nmorphcloud devbox ssh \"$DEVBOX_ID\" bash -lc \"npm install -g @anthropic-ai/claude-code\"",
+      "note": "Morph's own Claude Code walkthrough has the user npm-install Claude Code into a plain devbox; it is not preinstalled or offered as a ready-made template. Devboxes just expose a tmux API 'to programmatically manage coding agents like OpenAI Codex or Claude Code' you bring yourself.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://cloud.morph.so/web/subscribe",
+      "quote": "MCUs = max(vCPUs, ceil(RAM/4GiB), ceil(disk/16GiB))",
+      "note": "Morph's entire billing/resource model (MCU) is a function of vCPU, RAM and disk only; no GPU dimension exists in pricing, plans, or the docs (features.gpu_types is already empty on the card). Outside the product's scope: Morph is a CPU VM/devbox cloud.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "Full virtual machines capable of running any configuration of containers: docker‑in‑docker, a local Kubernetes cluster, self‑hosted Supabase, etc. There is experimental support for Windows, OSX (x86), and nested virtualization as well.",
+      "note": "The only guest OS variety documented is x86 (Windows and 'OSX (x86)' explicitly called out); no ARM/aarch64 image or instance type is mentioned anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://morph.so",
+      "quote": "Morph Cloud - Infrastructure for AI agents with instant environment branching and burst scalability.",
+      "note": "Morph is offered only as Morph's own hosted service (cloud.morph.so); no docs, pricing, or GitHub org content describes running the platform on customer-owned infrastructure. Outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://morph.so",
+      "quote": "Morph Cloud - Infrastructure for AI agents with instant environment branching and burst scalability.",
+      "note": "No mention in docs/pricing of deploying the managed service into a customer's own cloud account (VPC peering, dedicated tenancy in customer's AWS/GCP, etc.); all plans (Developer/Team/Scale) are Morph-hosted multi-tenant accounts.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://api.github.com/orgs/morph-labs/repos",
+      "quote": "morph-typescript-sdk Apache-2.0 'A Typescript SDK for creating, managing, and interacting with Morph Cloud VMs.'; morph-python-sdk Apache-2.0",
+      "note": "The morph-labs GitHub org only publishes client SDKs (Apache-2.0) that talk to the hosted API; the core VM/snapshot/devbox platform itself is closed-source and only runs as Morph's proprietary hosted service.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cloud.morph.so/docs/documentation/instances/resizing-instances",
+      "quote": "Resize Morph Cloud instances by rebooting with new CPU, memory, and disk while keeping the same instance ID, filesystem, and URLs. ... Under the hood, Morph preserves your on‑disk changes and restarts with the new resources.",
+      "note": "Resize exists but is implemented as a reboot with new specs, not a hot/live resize of a running machine; confirms false for the strict 'without recreating/restarting it' definition.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cloud.morph.so/docs/llms-full.txt",
+      "quote": "GET /api/user/usage: For each instance, returns instance_cpu_time, instance_memory_time, instance_disk_time with period_start and period_end. Also GET /api/user/service/usage: returns estimated cost in integer cents for service resource usage grouped by service then resource_type.",
+      "note": "granularity: per-sandbox; cost: no; Morph Cloud exposes two usage endpoints: /api/user/usage breaks down resource consumption (CPU-time, memory-time, disk-time) by individual sandbox/instance via the items array, providing per-sandbox granularity but returning raw resource metrics, not billable cost. /api/user/service/usage returns actual billing cost in cents but aggregates by service and resource_type at account level, not per-instance. The per-sandbox endpoint exists but does not include cost data.",
+      "confidence": "high",
+      "checked": "2025-01-10"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://cloud.morph.so/web/subscribe",
+  "locations_quote": "Billing granularity, egress, IPv4, regions, compliance and enterprise pricing unpublished.",
+  "locations_checked": "2026-10-01"
+}

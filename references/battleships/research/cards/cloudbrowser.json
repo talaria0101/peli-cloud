@@ -1,0 +1,597 @@
+{
+  "id": "cloudbrowser",
+  "name": "CloudBrowser AI",
+  "url": "https://cloudbrowser.ai/",
+  "category": "browser",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "browser-hour-overage-unpublished",
+      "label": "Browser-hour overage unpublished",
+      "flags": [],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Browser-hour overage unpublished",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": null,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 30,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Unspecified guest OS is not a selectable OS guarantee."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Basic",
+      "fee": 25,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "30,000 units/month; one unit is 30 seconds per open tab (nominally 250 single-tab hours), so two tabs for one minute consume four units; 10 instances and 3 tabs per instance."
+    },
+    {
+      "name": "Premium",
+      "fee": 90,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 25,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "120,000 units/month; one unit is 30 seconds per open tab (nominally 1,000 single-tab hours), so concurrent tabs consume units separately; 25 instances and 3 tabs per instance."
+    },
+    {
+      "name": "Basic annual",
+      "fee": 20.833333333333332,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$250/year billed yearly; no free trial; 30,000 per-tab usage units monthly."
+    },
+    {
+      "name": "Premium annual",
+      "fee": 75,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 25,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$900/year billed yearly; no free trial; 120,000 per-tab usage units monthly."
+    },
+    {
+      "name": "Custom",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom hours/concurrency; dedicated proxies."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null,
+    "conditions": "Seven-day free trial applies to monthly Basic; annual plans are billed yearly and do not include a free trial. All paid plans advertise a 14-day money-back guarantee."
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [
+      "eu"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "browser_control": true,
+    "desktop_control": null,
+    "anti_bot": true,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "ip_note": "'Premium proxies' included on every plan (type not stated); bring your own proxy supported; no per-GB price.",
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "guest_firewall": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "container",
+    "image_oci": false,
+    "snapshot_auto": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Storage, snapshot GiB-month and public IPv4 prices are not published in the reviewed sources; null is not free.",
+    "No guaranteed vCPU allocation published; browser-hour is not a verified 4-vCPU/8-GiB VM equivalent. The sizes card keeps unknown hardware null; do not coerce it to zero or auto-rank against resource-guaranteed VMs.",
+    "Browser RAM is not published unless a specific mode overrides it.",
+    "Premium proxies included in plan feature list, but no published bandwidth allowance/overage found. Do not translate to unlimitedGB or $0/GB.",
+    "Saved cookies/local Storage supported; live remote desktop is browser viewing, not proof of full general-purpose Linux desktop. Docs/pricing paths resolved to same homepage."
+  ],
+  "sources": [
+    "https://cloudbrowser.ai/",
+    "https://cloudbrowser.ai/docs",
+    "https://cloudbrowser.ai/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Entry Basic 10; Premium 25; custom concurrent instances by contact.",
+    "notes": "A seven-day trial is offered, but its specific concurrent-browser allocation is not explicit; default remains null. Basic supports 10, while 50/300/1,000 need custom terms.",
+    "sources": [
+      "https://cloudbrowser.ai/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 6,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": null,
+      "note": "Complete HTTP API is Open / Close / Start+Stop Remote Desktop / Get Browsers / Session List / Session Remove; no endpoint to take a snapshot or checkpoint, and saved sessions cannot be forked into new machines beyond cookie/localStorage restore.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/mcp-server",
+      "quote": null,
+      "note": "Nothing runs an agent inside the browser container. The MCP server (18 browser tools) lets EXTERNAL agents (ChatGPT, Claude, Codex, Gemini CLI, Cursor) drive the browser; 'AI Functions' are stateless LLM calls on HTML (query/summarize/to-JSON), not a harness.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "Managed Chrome in a per-browser container; users get only CDP / remote desktop, no shell or root, so nothing like nftables can be configured.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": null,
+      "note": "Browser-as-a-service with no storage/volume API; only saved sessions (cookies/localStorage) persist.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": null,
+      "note": "No volumes. A saved session (label) can be recovered by later browsers, but that is cookie/localStorage restore, not a shared mounted filesystem.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://cloudbrowser.gitbook.io/docs/cloud-service/how-it-works.md",
+      "quote": "The service is designed to operate in a containerized environment, ensuring scalability and reliability. Each browser runs in its own container, isolated from others.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "This endpoint allows you to open a browser with advanced configurations, including custom browser arguments, custom proxy settings, and more.",
+      "note": "not offered: outside the product's scope. Open Browser only exposes Chrome/Chromium args, headless, stealth, proxy and session flags — no custom Docker/OCI image parameter.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud so ChatGPT, Claude and your own agents can browse, click, type and pull data from any website",
+      "note": "not offered: outside the product's scope. Users get a managed Chrome/CDP endpoint or remote desktop, never a shell inside the container.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud",
+      "note": "not offered: outside the product's scope. No shell/root or hypervisor access is exposed inside the browser container.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": true,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/mcp-server.md",
+      "quote": "start_remote_desktop - Starts VNC access to a browser",
+      "note": "Live remote desktop (VNC-based) streaming of the browser session is included on every plan.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "Give your AI agents a real browser.",
+      "note": "not offered: outside the product's scope. Access is via CDP WebSocket endpoint or live remote desktop only; no SSH to the underlying machine.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "saveSession: If true, the browser session is saved periodically and at the end, cookies and local storage, but not the open tabs.",
+      "note": "Only cookies/localStorage are saved and restored (saveSession/recoverSession); there is no disk or memory snapshot of the machine itself.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "saveSession: If true, the browser session is saved periodically and at the end, cookies and local storage, but not the open tabs.",
+      "note": "There is no automatic full machine/VM state snapshot on stop; periodic saveSession only persists cookies/localStorage, and only when the flag is explicitly enabled.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": "Open Browser, Close Browser, Get Browsers, Get Saved Sessions, Remove Saved Session",
+      "note": "No clone/fork endpoint exists; only opening new independent browsers or restoring a saved cookie/localStorage session.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": "Open Browser, Close Browser, Get Browsers, Get Saved Sessions, Remove Saved Session",
+      "note": "No API to clone a running browser without stopping it.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": "Open Browser, Close Browser, Get Browsers, Get Saved Sessions, Remove Saved Session",
+      "note": "No fork capability at all, so cloning with live memory/processes is not possible.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "keepOpen: Seconds of inactivity before the browser automatically closes.",
+      "note": "There is only close (destroy) after an idle timeout, no pause/resume of a running browser instance.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/cloud-service/how-it-works.md",
+      "quote": "Users send an HTTP request to our service's API to create a browser. ... the service configures and launches a new instance of a web browser.",
+      "note": "Browsers are freshly created synchronously per Open request; there is no sleeping/stopped instance that wakes on an inbound request.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "saveSession: ... cookies and local storage, but not the open tabs.",
+      "note": "Only cookies/localStorage persist via saveSession/recoverSession; there is no general persistent filesystem/disk that survives stop/start.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "keepOpen: Seconds of inactivity before the browser automatically closes. The value 0 is never, default is 300 seconds.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud",
+      "note": "not offered: outside the product's scope. No CPU/RAM sizing parameter exists at all for the abstracted browser container.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/mcp-server.md",
+      "quote": "Add CloudBrowser once and your assistant gets 18 browser tools — in chat, in your editor or inside your own agents.",
+      "note": "not offered: outside the product's scope. CloudBrowser exposes browser-automation tools for EXTERNAL agents/harnesses (Claude Code, Codex, Cursor, etc.) to call; it does not preinstall or template a coding agent harness inside its own machines.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/configurations/ai-functions.md",
+      "quote": "Currently, only OpenAI is supported as the AI provider. ... Every request must include an openAIConfiguration object ... apiKey: Your OpenAI API key.",
+      "note": "AI Functions is a pass-through wrapper that calls OpenAI with the caller's own API key to summarize/extract page content; it is not a first-party autonomous browser/computer-use agent driven by a CloudBrowser API.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": "[Python client](https://cloudbrowser.gitbook.io/docs/libraries/python-client.md)",
+      "note": "First-party Python client library.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": "[Node.js client](https://cloudbrowser.gitbook.io/docs/libraries/node.js-client.md)",
+      "note": "First-party Node.js client library, plus Node.js quickstart examples.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/cloud-service/load-balancers.md",
+      "quote": "We provide a list of IP addresses from our shared fleet for whitelisting purposes.",
+      "note": "Browsers are reached through a shared load-balanced fleet endpoint, not a dedicated public IPv4 per machine.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud",
+      "note": "not offered: outside the product's scope. The service exposes a CDP WebSocket endpoint to control the browser, not a general HTTPS ingress to arbitrary ports on the machine.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud",
+      "note": "not offered: outside the product's scope. There is no exposed port surface to apply ingress/allowlist rules to.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "proxy: Custom proxy configuration. If not specified, the service will use an automatically assigned proxy.",
+      "note": "Only outbound proxy selection (bring-your-own or provider-assigned) exists; no allow/deny list or no-internet mode for outbound traffic.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "proxy: Custom proxy configuration. If not specified, the service will use an automatically assigned proxy.",
+      "note": "No method/path-level outbound HTTP rules are offered, only whole-session proxy routing.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/configurations/ai-functions.md",
+      "quote": "openAIConfiguration: { apiKey: 'string', model: 'string' }",
+      "note": "API keys (e.g. OpenAI) are passed directly in the request body; no first-party credential-injection proxy for arbitrary HTTP APIs was found.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://cloudbrowser.ai/pricing",
+      "quote": "Custom: Custom browser hours, Custom concurrent instances, Dedicated proxies, Live remote desktop, Dedicated support manager",
+      "note": "Only the Custom/enterprise plan advertises 'dedicated proxies', implying a fixed outbound IP; Basic and Premium share 'premium proxies' with no dedicated-IP guarantee.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/pricing",
+      "quote": "Basic ... Premium ... Custom",
+      "note": "not offered: outside the product's scope. No GPU machine option exists; the product only sizes by browser-hours/concurrency.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud",
+      "note": "not offered: outside the product's scope. Only a managed Chrome/Chromium browser is offered, never a full Windows desktop machine.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud",
+      "note": "not offered: outside the product's scope. Only a managed Chrome/Chromium browser is offered, never a macOS machine.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud",
+      "note": "not offered: outside the product's scope. Only a hosted SaaS API/dashboard is offered; no self-hosted package.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/cloud-service/load-balancers.md",
+      "quote": "We use load balancing to distribute traffic to all our workers located in Amsterdam.",
+      "note": "Workers run only on CloudBrowser's own fleet (Amsterdam, with US/Asia planned); no bring-your-own-cloud deployment option is offered.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/pricing",
+      "quote": "The open-source MCP connector is free, and it adds no AI inference charge. Browser usage requires a CloudBrowser account and a paid plan after the 7-day Basic trial.",
+      "note": "Only the thin MCP connector is open source; the core browser-hosting platform/backend is closed-source and metered.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/mcp-server.md",
+      "quote": "Sign in with your CloudBrowser account (OAuth) or send your API token as a Bearer header.",
+      "note": "Sign-in is via the provider's own OAuth for the MCP connector or an API token; no SAML/OIDC enterprise SSO for the account/dashboard is documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://cloudbrowser.gitbook.io/docs/cloud-service/load-balancers.md",
+      "quote": "We use load balancing to distribute traffic to all our workers located in Amsterdam.",
+      "note": "All current workers/browsers run in Amsterdam (EU); there is no region selector, so EU residency is the default and only option today (US/Asia expansion is only planned).",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://cloudbrowser.gitbook.io/docs/get-started/browser-management/open-browser.md",
+      "quote": "keepOpen: Seconds of inactivity before the browser automatically closes. The value 0 is never, default is 300 seconds.",
+      "note": "keepOpen governs an idle timeout (default 300s, settable to 0 for never); no separate absolute maximum session duration is documented, so a session can in principle run indefinitely if kept active.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud so ChatGPT, Claude and your own agents can browse, click, type and pull data from any website",
+      "note": "not offered: outside the product's scope — CloudBrowser is a managed-Chrome browser-automation service with no machine/instance architecture selection (no CPU/arch option is exposed anywhere in the docs, pricing, or API), so an ARM64 choice does not apply.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cloudbrowser.ai/pricing",
+      "quote": "Premium Proxy ... Dedicated proxies",
+      "note": "Docs describe only 'premium proxies' / 'dedicated proxies' for a browser-automation product; no residential or mobile proxy type is advertised anywhere, and the product's own fleet is a shared datacenter container fleet (Amsterdam workers). Treated as datacenter-type egress, not verified as residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud so ChatGPT, Claude and your own agents can browse, click, type and pull data from any website",
+      "note": "not offered: outside the product's scope. No trust/security/compliance page exists (privacy, security, and trust URLs all resolve to the plain marketing homepage); a small browser-automation SaaS with no published SOC 2 attestation.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://cloudbrowser.ai/",
+      "quote": "CloudBrowser runs real Chrome in the cloud so ChatGPT, Claude and your own agents can browse, click, type and pull data from any website",
+      "note": "not offered: outside the product's scope. No compliance/trust page or BAA offering found; site has no HIPAA mention anywhere in docs, pricing, or marketing pages.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://cloudbrowser.gitbook.io/docs/llms.txt",
+      "quote": "Complete HTTP API is Open / Close / Start+Stop Remote Desktop / Get Browsers / Session List / Session Remove; no endpoint to take a snapshot or checkpoint",
+      "note": "granularity: account-only; cost: no; CloudBrowser bills by monthly plan (Basic $25 / Premium $90) with per-tab usage units (1 unit = 30 seconds). The documented HTTP API provides only browser lifecycle management (open, close, start/stop remote desktop, list browsers, list/remove saved sessions). No billing, usage metrics, or cost-retrieval endpoint exists. Usage tracking and billing are only available through the account dashboard, not via API. There is no per-sandbox or per-project usage API; billing is entirely at the account/plan level.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "amsterdam",
+      "self_serve": true,
+      "choosable": false
+    }
+  ],
+  "locations_source": "https://cloudbrowser.gitbook.io/docs/cloud-service/load-balancers.md",
+  "locations_quote": "We use load balancing to distribute traffic to all our workers located in Amsterdam. This mechanism ensures that the workload is evenly shared across multiple servers... Additionally, our system continuously monitors server health and adjusts traffic distribution to maintain optimal efficiency and u",
+  "locations_checked": "2026-10-01"
+}

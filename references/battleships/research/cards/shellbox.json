@@ -1,0 +1,661 @@
+{
+  "id": "shellbox",
+  "name": "shellbox",
+  "url": "https://shellbox.dev/",
+  "category": "agent-sandbox",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand (Firecracker VM, default)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "nested_virt": false,
+        "isolation": "firecracker"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "x1",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.02,
+          "month_cap": null
+        },
+        {
+          "name": "x2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.04,
+          "month_cap": null
+        },
+        {
+          "name": "x3",
+          "vcpu": 6,
+          "ram_gib": 12,
+          "disk_gib": 150,
+          "hour": 0.06,
+          "month_cap": null
+        },
+        {
+          "name": "x4",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "hour": 0.08,
+          "month_cap": null
+        },
+        {
+          "name": "x5",
+          "vcpu": 10,
+          "ram_gib": 20,
+          "disk_gib": 250,
+          "hour": 0.1,
+          "month_cap": null
+        },
+        {
+          "name": "x6",
+          "vcpu": 12,
+          "ram_gib": 24,
+          "disk_gib": 300,
+          "hour": 0.12,
+          "month_cap": null
+        },
+        {
+          "name": "x7",
+          "vcpu": 14,
+          "ram_gib": 28,
+          "disk_gib": 350,
+          "hour": 0.14,
+          "month_cap": null
+        },
+        {
+          "name": "x8",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 400,
+          "hour": 0.16,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Running: $0.02/h per x1 slot, billed per minute. Parked (stopped) boxes: $0.50/month per x1 slot, covering the memory snapshot + disk (encoded as storage.snapshot_gib_month = $0.50 / 50 GB x1 disk = $0.01/GiB-month). Default backend Firecracker (fast snapshots); Cloud Hypervisor boxes (--ch, nested virt) are the separate 'cloud-hypervisor' mode at the same slot rates. Do not multiply running price by CPU utilization."
+    },
+    {
+      "key": "cloud-hypervisor",
+      "label": "Cloud Hypervisor VM (--ch, nested virtualization)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "nested_virt": true,
+        "isolation": "cloud-hypervisor"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "x1",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.02,
+          "month_cap": null
+        },
+        {
+          "name": "x2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.04,
+          "month_cap": null
+        },
+        {
+          "name": "x3",
+          "vcpu": 6,
+          "ram_gib": 12,
+          "disk_gib": 150,
+          "hour": 0.06,
+          "month_cap": null
+        },
+        {
+          "name": "x4",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "hour": 0.08,
+          "month_cap": null
+        },
+        {
+          "name": "x5",
+          "vcpu": 10,
+          "ram_gib": 20,
+          "disk_gib": 250,
+          "hour": 0.1,
+          "month_cap": null
+        },
+        {
+          "name": "x6",
+          "vcpu": 12,
+          "ram_gib": 24,
+          "disk_gib": 300,
+          "hour": 0.12,
+          "month_cap": null
+        },
+        {
+          "name": "x7",
+          "vcpu": 14,
+          "ram_gib": 28,
+          "disk_gib": 350,
+          "hour": 0.14,
+          "month_cap": null
+        },
+        {
+          "name": "x8",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 400,
+          "hour": 0.16,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Same slot rates as the Firecracker default ('$0.02/hr per x1 slot, billed per minute' for both backends); created with `ssh shellbox.dev create mybox --ch`; /dev/kvm available inside."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.01,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Prepaid",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 16,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "16 running slots and 64 total slots per account; each box counts as its size in slots (x1 = 2 vCPU). So 16 x1, 8 x2 (4 vCPU/8 GB) or 2 x8 boxes can run at once: concurrency 16 is the x1 upper bound; max_total_vcpu 32 (= 16 slots x 2 vCPU) is the real cap (engine support requested). $10 minimum prepaid top-up; boxes stop below $5 balance and are deleted at $0.",
+      "max_total_vcpu": 32
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [
+      "eu"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": true,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "isolation": "firecracker",
+    "image_oci": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "ingress_rules": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Public list price per x1 slot. Running and parked are mutually exclusive time states. SSH key identifies account; prepaid $10 minimum top-up. Sizes scale linearly x1 to x8.",
+    "16 running slots and 64 total slots per account; a box counts as its size in slots, so a 4 vCPU/8 GB (x2) box allows 8 concurrent. Encoded as plan concurrency 16 (x1 bound) + max_total_vcpu 32; the engine does not yet enforce slot-weighted quota (see research/verify/engine-requests.md).",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free.",
+    "Parked fee $0.50/x1 slot-month is per slot, not per GiB; snapshot_gib_month 0.01 = $0.50 / 50 GB assumes the retained state equals the box disk size. Parked storage is otherwise free (\"memory snapshots ... on NVMe, rootfs images ... on HDDs\"). No desktop/GUI/browser image is documented (desktop/browser/computer_use=false). (shellbox.dev, 2026-09-28)"
+  ],
+  "sources": [
+    "https://shellbox.dev/"
+  ],
+  "fleet": {
+    "default_max_instances": 16,
+    "default_max_vcpu": 32,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "Account automatically identified by SSH-key fingerprint (no email/password signup). Prepaid $10 minimum via Paddle; no card stored by Shellbox.",
+    "tiers": "16 running x1-equivalent slots and 64 total slots/user; an xN box uses N slots. No documented paid quota ladder.",
+    "notes": "16-machine upper bound applies ONLY to smallest x1 (2 vCPU/4 GB); derived vCPU pool 16×2=32. A 4 vCPU/8 GB box consumes 2 slots, permitting only 8 running. 10 such machines or 50/300/1,000 any-size exceed defaults; raise procedure and timing unpublished.",
+    "sources": [
+      "https://shellbox.dev/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 8,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://shellbox.dev/",
+      "quote": "After the last SSH session disconnects, wait 120 seconds, then pause. Snapshot saves processes, shell history, and TCP state; restored on next connect.",
+      "note": "Trigger: last SSH session disconnects (+120 s grace), idle timeout in wakeup mode, end of a cron run window, or balance < $5. Memory included (Firecracker/CH memory snapshot on NVMe); restored transparently on next SSH/HTTP connect (~3 s claimed, blog says under a second).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://shellbox.dev/",
+      "quote": "Filesystem cloned. Memory snapshot copied.",
+      "note": "`ssh shellbox.dev stop <name>` snapshots (memory + disk) at any time; `duplicate <src> <new>` forks a box incl. its memory snapshot via btrfs reflink (FAQ: 'duplicate a stopped box as a point-in-time copy'). No named snapshot list / rollback-in-place; each copy is a whole box (billed as a parked slot).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Start a tmux or zellij session, launch your agent, and disconnect:",
+      "note": "The FAQ tells you to run Claude Code/Codex yourself inside the box over SSH; the complete command reference (help --json) has no agent/harness commands.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "HTTP requests to this URL are proxied to port 80 on your box.",
+      "note": "Every box gets a public HTTPS URL (port 80 only) plus a stable public IPv6 reachable for ssh/mosh/raw TCP-UDP while running. No auth, private-URL, IP allowlist or port-selection controls documented; custom domains only add hostnames. The fixed port-80 routing is the only provider-side restriction on the HTTPS path.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Firecracker (default) or Cloud Hypervisor microVMs, 'each with its own kernel and disk', login as root. Given the directly public IPv6, an in-guest firewall is the only way to filter inbound. Not documented explicitly.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Your private key never leaves your machine.",
+      "note": "No secret store or credential proxy. The docs recommend SSH agent forwarding for git (key stays on the client, but a live agent socket is exposed in the box while connected) or pasting tokens / copying private keys into the box.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Size is set at creation and cannot be changed — delete and recreate to resize.",
+      "note": "Disk is fixed by size multiplier (50 GB per x1, up to 400 GB at x8); no volume commands in the command reference.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "No shared kernels between boxes",
+      "note": "No shared/network filesystem or multi-box volume mount is documented; each box's disk is fixed at creation ('Size is set at creation and cannot be changed — delete and recreate to resize') and duplicate only clones a box (reflink copy), it doesn't share a live volume across boxes.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Firecracker microVM ... You SSH into a VM and run whatever processes you want inside it.",
+      "note": "not offered: outside the product's scope (a plain SSH-accessible Linux microVM, not a browser/scraping product; no browser, no stealth/fingerprinting features documented anywhere on the site)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Firecracker microVM ... You SSH into a VM and run whatever processes you want inside it.",
+      "note": "not offered: outside the product's scope (no browser or CAPTCHA-related feature is documented; this is a general-purpose SSH VM, not a scraping/automation product)",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://shellbox.dev/",
+      "quote": "Every new box gets a stable public IPv6 address derived from the box's network identity.",
+      "note": "Each box has its own dedicated, stable public IPv6 (no shared/NATed pool documented); servers run on Hetzner infra in Helsinki, Finland, i.e. datacenter IP space. No public IPv4 is offered.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "duplicate <source> <name> --json Copy a stopped box",
+      "note": "The `duplicate` command's own JSON help text and FAQ (\"duplicate a stopped box as a point-in-time copy\") both specify the source box must be stopped; no running-clone path is documented.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Size is set at creation and cannot be changed — delete and recreate to resize.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Start a tmux or zellij session, launch your agent, and disconnect: ... root@mybox:~# claude # or your agent of choice",
+      "note": "Coding agents (Claude Code, Codex, etc.) are things you install and run yourself over SSH inside a stock Ubuntu box; none are preinstalled or offered as a selectable template.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "The full API covers box lifecycle (create, list, show, duplicate, rename, stop, delete), modes (keepalive, wakeup, cron), OCI images ... billing ... and key management.",
+      "note": "not offered: outside the product's scope. The entire documented API/CLI surface is VM lifecycle management; there is no browser/computer-use/research agent product of Shellbox's own.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "The full API covers box lifecycle (create, list, show, duplicate, rename, stop, delete), modes (keepalive, wakeup, cron), OCI images ... billing ... and key management.",
+      "note": "No MCP server is mentioned anywhere on the site; the only documented control surfaces are the SSH-based CLI/JSON API.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://shellbox.dev/",
+      "quote": "$ python3 -m http.server 80 --bind 0.0.0.0",
+      "note": "Stock boxes ship Ubuntu 24.04 LTS; the FAQ uses `python3` directly as a working example with no install step shown, implying it is present out of the box.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Do boxes have public IPv6? Yes. Every new box gets a stable public IPv6 address...",
+      "note": "The FAQ documents public IPv6 only; IPv4 is never mentioned anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Firecracker microVM ... You SSH into a VM and run whatever processes you want inside it.",
+      "note": "not offered: outside the product's scope. No allow/deny-list, no-internet mode, or security-group egress feature is documented; the product is a bare root VM with full outbound access.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Firecracker microVM ... You SSH into a VM and run whatever processes you want inside it.",
+      "note": "not offered: outside the product's scope. No HTTP method/path-level egress control is documented anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://shellbox.dev/",
+      "quote": "Every new box gets a stable public IPv6 address derived from the box's network identity.",
+      "note": "Each box keeps one dedicated, stable IPv6 address for its lifetime (shown via `show`/`list`); not explicitly labeled 'egress IP' but it is the box's only network identity, so outbound traffic is not NATed through a shared/rotating pool.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Base box (x1): 2 vCPUs, 4GB RAM, 50GB SSD. Sizes scale up to x8 (16 vCPUs, 32GB RAM, 400GB SSD).",
+      "note": "not offered: outside the product's scope. All documented sizes (x1-x8) are CPU/RAM/disk only; no GPU option is mentioned anywhere.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Stock boxes ship with Ubuntu 24.04 LTS and Docker pre-installed.",
+      "note": "not offered: outside the product's scope. The product is Firecracker/Cloud Hypervisor Linux microVMs; no Windows image or OS option is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Stock boxes ship with Ubuntu 24.04 LTS and Docker pre-installed.",
+      "note": "not offered: outside the product's scope. Firecracker/Cloud Hypervisor cannot run macOS guests, and no macOS option is documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Currently in Europe (Helsinki, Finland). A US region is planned...",
+      "note": "not offered: outside the product's scope. Shellbox is offered only as a hosted SaaS on its own infrastructure; no self-hosted/on-prem distribution is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Currently in Europe (Helsinki, Finland). A US region is planned...",
+      "note": "not offered: outside the product's scope. No option to deploy Shellbox into a customer's own cloud account is documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/skariel/shellbox.issues",
+      "quote": "skariel/shellbox.issues",
+      "note": "The only public GitHub repo linked from the site is an issue tracker (shellbox.issues), not the product's source code; no license or source repo for the actual service is published.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "No signup, no email, no password required. ... Prepaid $10 minimum top-up via Paddle.",
+      "note": "not offered: outside the product's scope. This is a single self-serve prepaid plan for individual developers with no enterprise/compliance page; no SOC 2 attestation is mentioned anywhere.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "No signup, no email, no password required. ... Prepaid $10 minimum top-up via Paddle.",
+      "note": "not offered: outside the product's scope. No BAA/HIPAA-eligibility is mentioned; the product targets individual developers via anonymous SSH-key accounts.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "No signup, no email, no password required. The first time you connect, your account is created automatically from your SSH key fingerprint.",
+      "note": "not offered: outside the product's scope. Authentication is SSH-key-fingerprint-based with no accounts/org concept; no SAML/OIDC SSO is documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://shellbox.dev/",
+      "quote": "Where are the servers located? Currently in Europe (Helsinki, Finland). A US region is planned...",
+      "note": "All boxes currently run in the EU (Finland); this is the only available region today.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://shellbox.dev/",
+      "quote": "If you want a box to keep running after disconnect (e.g. for a background job), toggle keepalive: ssh shellbox.dev keepalive <name>",
+      "note": "With keepalive enabled a box runs indefinitely until explicitly stopped; no maximum session duration is documented.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "shellbox turns a Docker/OCI image into the root filesystem of a normal microVM. ... You SSH into a VM and run whatever processes you want inside it.",
+      "note": "Shellbox is an SSH-only Firecracker/Cloud-Hypervisor microVM box; the full FAQ, resource-limits, and command-reference sections never mention VNC/RDP/desktop streaming or a GUI image. Access is exclusively via SSH (and SFTP/port-forwarding over SSH).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Configure your browser or tools to use localhost:1080 as a SOCKS5 proxy.",
+      "note": "The only 'browser' references on the page are about using the user's own local browser/SOCKS proxy to reach a box's ports; no managed/hosted browser is offered or documented anywhere on the page.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Start a tmux or zellij session, launch your agent, and disconnect",
+      "note": "The FAQ's agent-workflow guidance is entirely SSH/CLI-based (tmux, agent binaries run manually); there is no screenshot+click computer-use API or product surface documented anywhere on the page.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Current OCI support focuses on: Public images (no private registries yet) linux/amd64 architecture",
+      "note": "Explicit OCI image support statement plus the API's `image status` example both show amd64 ('Architecture: amd64'); no arm64/aarch64 offering is mentioned anywhere on the page.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Stock boxes ship with Ubuntu 24.04 LTS and Docker pre-installed. No setup needed: ... docker run hello-world",
+      "note": "Node.js is not documented as preinstalled on stock boxes (only Docker and, per the FAQ python3 example, Python appear ready to use with no install step). Node.js only appears on the site as an OCI image starting point ('docker.io/library/node:22-bookworm') for create-from-oci boxes, which requires an explicit image-prepare step and boots a plain filesystem, not a managed language runtime feature. No first-party Node SDK/code-exec is offered.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://shellbox.dev/",
+      "quote": "Add --json to most commands to get structured JSON output instead of human-formatted text: $ ssh shellbox.dev billing --json. Errors still print as text to stderr with a non-zero exit code. Check the exit code first, then parse stdout as JSON.",
+      "note": "granularity: account-only; cost: yes; The billing --json command returns account balance and usage. Granularity is account-level only; the JSON response includes a 'balance' field (currency). No per-sandbox usage breakdown is documented.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Helsinki",
+      "provider_region": "eu",
+      "self_serve": true,
+      "choosable": false
+    }
+  ],
+  "locations_source": "https://shellbox.dev/",
+  "locations_quote": "Where are the servers located? Currently in Europe (Helsinki, Finland). A US region is planned...",
+  "locations_checked": "2026-10-01"
+}

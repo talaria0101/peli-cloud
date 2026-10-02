@@ -1,0 +1,529 @@
+{
+  "id": "vibrant-labs",
+  "name": "Vibrant Labs",
+  "url": "https://vibrantlabs.com/",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native service",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Hardware and complete resource tariff unverified."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Custom / unverified",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Vibrant Labs (Exploding Gradients Inc., the Ragas team) sells autoscaled RL post-training DATA (tasks, environments, verifiers) for frontier agents — tool-use and computer-use modalities — not rentable compute. No pricing (404), no docs, no API.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/vibrant-labs",
+    "https://vibrantlabs.com/"
+  ],
+  "audit_2026_09_29": {
+    "applied": 1,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "image_oci": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope; Vibrant Labs produces computer-use RL data/environments, it does not provide a computer-use API itself",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope; no coding-harness sandboxes/templates offered",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "no public API found; product is sold as generated data/environments, not an agent API",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope; no docs/GitHub org found publishing an MCP server",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope; no rentable machine with root access exposed",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/vibrant-labs",
+      "quote": "We work on methods to autonomously scaling evals/environments for post-training agents.",
+      "note": "not offered: outside the product's scope; product is a data/environments service, not distributed software",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "no evidence the core Vibrant Labs product/environments are released under an OSI license; not offered",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": null,
+      "note": "not offered: outside the product's scope; no regions/data-residency docs published",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://vibrantlabs.com/",
+      "quote": "We are an applied research lab working on the next generation of data harvesting techniques.",
+      "note": "not offered: outside the product's scope (data/environments provider, no rentable sandbox/VM with snapshot capability)",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": "Autoscaled RL data for frontier agents / Post-training data that scales without armies of human annotators",
+      "note": "not offered: outside the product's scope (no rentable code-execution machines; product is post-training data/environments, not a runtime)",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": "Autoscaled RL data for frontier agents / Post-training data that scales without armies of human annotators",
+      "note": "not offered: outside the product's scope (no rentable code-execution machines; product is post-training data/environments, not a runtime)",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": "Autoscaled RL data for frontier agents / Post-training data that scales without armies of human annotators",
+      "note": "not offered: outside the product's scope (no rentable machines of any kind, GPU or otherwise; the product is data/environments)",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": "Autoscaled RL data for frontier agents / Post-training data that scales without armies of human annotators",
+      "note": "not offered: outside the product's scope (no rentable machines of any architecture are sold)",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://vibrantlabs.com/",
+      "quote": "We are an applied research lab working on the next generation of data harvesting techniques.",
+      "note": "not offered: outside the product's scope (no rentable sandbox/session product with a session time limit exists)",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": "Autoscaled RL data for frontier agents / Post-training data that scales without armies of human annotators",
+      "note": "no security/trust/compliance page found on the marketing site; product is not offered as compliance-relevant hosted infrastructure",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": "Autoscaled RL data for frontier agents / Post-training data that scales without armies of human annotators",
+      "note": "no login/dashboard/docs found; not offered: outside the product's scope (no customer-facing product surface requiring SSO)",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://vibrantlabs.com/",
+      "quote": "Vibrant Labs sells autoscaled RL post-training DATA (tasks, environments, verifiers) for frontier agents — tool-use and computer-use modalities — not rentable compute. No pricing (404), no docs, no API.",
+      "note": "granularity: none; cost: no; Not applicable: Vibrant Labs is a data/environments provider for post-training, not a compute sandbox/VM provider. No rentable machines or customer API exposed.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": null,
+  "locations_quote": null,
+  "locations_checked": "2026-10-01"
+}

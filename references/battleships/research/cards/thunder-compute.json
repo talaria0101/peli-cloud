@@ -1,0 +1,585 @@
+{
+  "id": "thunder-compute",
+  "name": "Thunder Compute",
+  "url": "https://www.thundercompute.com/pricing",
+  "category": "gpu-cloud",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "gpu-bundles",
+      "label": "GPU instances (on-demand, per GPU incl. base vCPU/RAM)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 3.2,
+        "A100-80GB": 1.09,
+        "L40": 0.79,
+        "RTX-A6000": 0.35
+      },
+      "note": "Per-GPU price of the 1x bundle (https://www.thundercompute.com/pricing, 2026-09-28): H100 PCIe $3.20/h (4-16 vCPU, 32-128 GB), A100 80GB $1.09/h (8-16 vCPU, 64-128 GB), L40 $0.79/h (6-12 vCPU, 48-96 GB), RTX A6000 $0.35/h (6-8 vCPU, 48-64 GB), 100 GB disk included. The bundle includes the minimum vCPU count (4 H100 / 8 A100 / 6 L40, A6000) at 8 GB RAM per core; extra vCPU $0.04/vCPU-h is NOT modelled (vcpu_h 0), so workloads above the included vCPU are understated by $0.04 per extra vCPU-h. Billed per minute. H100 multi-GPU is linear (2x $6.40, 4x $12.80, 8x $25.60); A100/L40 at 4x/8x cost more per GPU than 1x (A100 4x $5.96, 8x $11.92; L40 4x $3.96, 8x $7.92), which the per-GPU price understates."
+    },
+    {
+      "key": "gpu-sandbox",
+      "label": "GPU sandbox (Firecracker, per second, TTL)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "pricing": "resource",
+      "vcpu_h": 0.051,
+      "ram_gib_h": 0.016,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "min_vcpu": 3,
+      "max_vcpu": 40,
+      "max_ram_gib": 320,
+      "requires_always_on": false,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "gpu": {
+        "H100": 2.95
+      },
+      "gpu_min_count": null,
+      "features": {
+        "isolation": "firecracker",
+        "snapshot": "none",
+        "persistent_disk": false,
+        "pause_resume": false,
+        "egress_allowlist": true,
+        "custom_image": true,
+        "auto_stop_idle": false
+      },
+      "plan_limits_exempt": true,
+      "note": "H100 SXM only (A6000/L40/A100 'Coming soon'; API lists sandbox_a100xl $1.95 but it is not launched). Only 1 GPU per sandbox is priced on the page. Disk 18-1024 GB at $0.00012/GB-h ($0.0876/GB-month), wiped at end, not modelled by the resource fields. Billed per second 'until they stop or their TTL runs out'. Network policy open/restricted (domain/CIDR allowlist)/closed. Images from Dockerfile or registry; without an image it is a bare Firecracker VM. Min billed time and start fee are not published (assumed 0). 4 vCPU/32 GiB + 1 H100 = $3.66/h."
+    },
+    {
+      "key": "reserved",
+      "label": "Reserved clusters (8-512+ GPUs, fixed term)",
+      "flags": [
+        "sales"
+      ],
+      "gpu_only": true,
+      "gpu_min_count": 8,
+      "commit": true,
+      "commit_term": "fixed term (unpublished)",
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "gpu": {},
+      "note": "Contact sales. The page only lists the on-demand reference rates ($3.20 H100 SXM, $1.09 A100, $0.79 L40, $0.35 A6000)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 100,
+    "disk_gib_month": 0.219,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": 0.05,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Usage",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [
+      "RTX A6000 1x",
+      "L40 1x",
+      "A100-80GB 1x",
+      "H100 SXM 1x",
+      "L40 2x",
+      "A100-80GB 2x",
+      "H100 SXM 2x",
+      "L40 4x",
+      "A100-80GB 4x",
+      "H100 SXM 4x",
+      "L40 8x",
+      "A100-80GB 8x",
+      "H100 SXM 8x"
+    ],
+    "regions": [
+      "us"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": true,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "ingress_rules": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "container",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "guest_firewall": true,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "All prices are complete base GPU-instance bundles at the minimum CPU count, not stand-alone GPU surcharges. Minute billing; no egress charge.",
+    "Additional CPU $0.04/core-h, usually 8 GB RAM included per core. Running disk first 100 GB included then $0.03/100GB-h; stopped storage uses snapshots $0.05/GB-month.",
+    "Multi-GPU non-linear: 4×/8× A100 and L40 cost more per GPU than 1×/2×. Do not multiply single-GPU price blindly.",
+    "GPU mode priced per GPU from the 1x bundles (vcpu_h/ram_gib_h 0 because base CPU/RAM is bundled). Extra vCPU ($0.04/vCPU-h) beyond the bundle minimum is not modelled; A100/L40 4x and 8x bundles cost more per GPU than 1x (understated). Running disk beyond 100 GB: $0.03 per 100 GB-hour = $0.219/GB-month at 730 h.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Instances bill 'for every minute they exist, from creation until you delete them'. There is no stop state, so an idle instance pays the full GPU bundle rate. The only cheap parked state is snapshot + delete ($0.05/GB-month; API snapshot_gb $0.00006849/GB-h).",
+    "Included disk is 100 GB PER GPU (8x instance includes 800 GB). Instance disk ranges 100-500 GB (1x) up to 100-4000 GB (8x). Disk can be expanded, not shrunk. The card's included_disk_gib 100 is right for 1 GPU only.",
+    "Multi-GPU bundles include more vCPU/RAM per GPU: A100 4x 36-60 vCPU/228-420 GB ($5.96), 8x 96-120 vCPU/648-840 GB ($11.92); H100 4x 60 vCPU/480 GB ($12.80), 8x 120 vCPU/960 GB ($25.60); L40 4x 24-40 vCPU ($3.96), 8x 48-80 ($7.92). A6000 is 1x only. Public API (GET /v2/pricing, no auth) confirms every rate, plus additional_vcpus $0.04/h and disk_gb $0.0003/GB-h.",
+    "Account restrictions: service unavailable in 18 countries (incl. Brazil, Mexico, China, Indonesia, Malaysia, Vietnam, Saudi Arabia) and B2B-only (VAT ID required) in 27 more (incl. India, South Korea, Switzerland, Turkey, UAE). One account per user. Preloaded credit never expires and is non-refundable. Promo credit is revocable. Cards are charged at rising 'threshold' checkpoints; there is no hard spend cap."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/thunder-compute",
+    "https://www.thundercompute.com/pricing",
+    "https://www.thundercompute.com/docs/technical-specs",
+    "https://www.thundercompute.com/docs/llms.txt",
+    "https://www.thundercompute.com/",
+    "https://www.thundercompute.com/docs/vscode/quickstart",
+    "https://www.thundercompute.com/llms.txt"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "Create account and add payment method.",
+    "tiers": null,
+    "notes": "Official September 2026 provider article says no GPU quota approval required. No fixed aggregate fleet maximum published; fast single-instance launch claim is not a 1,000-instance stock guarantee.",
+    "sources": [
+      "https://www.thundercompute.com/blog/aws-p5-vs-thunder-compute",
+      "https://www.thundercompute.com/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 14,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 4
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/guides/stopping-instances.md",
+      "quote": "Thunder does not have a native \"Stop\" feature for instances. Fortunately, you can achieve the same result by using snapshots.",
+      "note": "No stop/sleep state and no automatic snapshot; the documented 'stop' is manual snapshot + delete + restore. Sandboxes: 'Terminating it destroys its filesystem'.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/cli/operations/snapshots.md",
+      "quote": "Snapshotting happens in the background—you can continue using your instance immediately. The snapshot captures the exact state of the persistent disk at the moment you initiated it.",
+      "note": "Disk only (no memory); only from RUNNING instances; limit 50 snapshots; via CLI (tnr snapshot create), console, VS Code, API (POST snapshots), MCP. New instances boot from it ('create a new instance using your snapshot as the template'), so it doubles as template/fork. $0.05/GB-month. Not available for the new Sandbox product (no snapshot methods in the Sandbox SDK).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/guides/mcp-server.md",
+      "quote": "Use Thunder with AI coding agents like Claude Code, Cursor, Devin Desktop, and Codex via the Model Context Protocol (MCP).",
+      "note": "The MCP server lets an outside agent manage Thunder instances (create, snapshot, forward ports, run commands); it does not drive a harness running inside the instance. Sandbox SDK offers only exec/upload/download over SSH (durable jobs), no agent-harness API.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/api-reference/instances/atomically-update-forwarded-http-ports-on-an-instance.md",
+      "quote": "Atomically add and remove forwarded HTTP ports on a running instance in a single transaction.",
+      "note": "You choose which HTTP ports are forwarded to public https://<uuid>-<port>.thundercompute.net URLs; no authentication or IP allowlist on those URLs is documented, so control is only port selection (plus SSH key auth). Sandboxes: 'inbound access is limited to SSH' (org SSH certificates).",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/sandboxes/python-sdk.md",
+      "quote": "Environment variables set for SSH sessions.",
+      "note": "No secret store or credential-injecting proxy documented for instances or sandboxes; credentials go in as env vars (sandbox env param) or files you place on the machine.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "**Persistent Disk**: Your home directory and OS. Preserved across modifications and included in snapshots. Can be expanded but not shrunk.",
+      "note": "Only one storage type is listed (the instance's own persistent disk, 100-4000 GB, expandable). No extra block/network volumes documented. Sandboxes have only ephemeral storage ('Ephemeral disk size in GiB').",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "| Persistent Disk | 100 - 4000 GB, depending on GPU count. First 100 GB per GPU included. |",
+      "note": "No shared filesystem/volume product documented; the storage table lists only the per-instance persistent disk.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://www.thundercompute.com/docs/guides/using-docker-on-thundercompute.md",
+      "quote": "Because Thunder instances are themselves containers, running Docker on Thunder is like running Docker inside of Docker.",
+      "note": "Instances run on a custom GPU-over-TCP virtualization/orchestration layer (thunderd), with the customer's machine itself being a container, not a VM. Sandboxes use Firecracker microVMs (separate mode, already recorded in the card).",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/sandboxes/python-sdk.md",
+      "quote": "thunder.Image.from_registry(url, username=None, password=None, display_name=None)\nthunder.Image.from_dockerfile(directory_path, display_name=None)",
+      "note": "Sandbox product starts from a registry image or a Dockerfile. Persistent Instances also support Docker inside (docker run with --device nvidia.com/gpu=all) but there is no documented 'start instance from my own OCI image' path for Instances; the sandbox path covers image_oci.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/guides/using-docker-on-thundercompute.md",
+      "quote": "Because Thunder instances are themselves containers, running Docker on Thunder is like running Docker inside of Docker.",
+      "note": "Instances/sandboxes are containers or Firecracker microVMs run by Thunder's own orchestration layer; no /dev/kvm or nested virtualization is documented, and 'Docker inside Docker' framing implies no additional hardware-virtualization passthrough. Derived, not explicitly stated.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.thundercompute.com/",
+      "quote": "GPU sandboxes for AI agents and persistent GPU instances for developers. A100 and H100 GPUs with per-second and per-minute billing.",
+      "note": "not offered: outside the product's scope (SSH/CLI/API-driven GPU compute; no VNC/RDP graphical desktop documented anywhere in the docs).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.thundercompute.com/",
+      "quote": "GPU sandboxes for AI agents and persistent GPU instances for developers.",
+      "note": "not offered: outside the product's scope (no managed/embedded browser product documented).",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.thundercompute.com/",
+      "quote": "GPU sandboxes for AI agents and persistent GPU instances for developers.",
+      "note": "not offered: outside the product's scope. The MCP server lets an external coding agent manage instances (create/exec/snapshot), it does not drive a desktop via screenshots+clicks.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.thundercompute.com/",
+      "quote": "GPU sandboxes for AI agents and persistent GPU instances for developers.",
+      "note": "not offered: outside the product's scope (raw GPU compute, no browser/stealth/fingerprinting product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.thundercompute.com/",
+      "quote": "GPU sandboxes for AI agents and persistent GPU instances for developers.",
+      "note": "not offered: outside the product's scope (plain GPU cloud, no CAPTCHA-solving product).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "**IP Address**: Dynamic",
+      "note": "Standard cloud-datacenter dynamic public IPv4 per instance (screenshots of `tnr status` on the homepage show addresses like 34.42.159.182, 34.116.62.211 — GCP-range datacenter IPs), not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/cli/operations/snapshots.md",
+      "quote": "When you are ready to resume, create a new instance using your snapshot as the template.",
+      "note": "A snapshot (disk-only) can be used as a template to create one or more new instances, i.e. cloning a machine into new ones.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/cli/operations/snapshots.md",
+      "quote": "Snapshotting happens in the background—you can continue using your instance immediately.",
+      "note": "Snapshots are taken from a RUNNING instance without stopping it, and that snapshot can then be used as a template to create a new instance while the original keeps running — a disk-level fork of a running machine. Not a live memory clone (see memory_snapshot_fork).",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/cli/operations/snapshots.md",
+      "quote": "The snapshot captures the exact state of the persistent disk at the moment you initiated it.",
+      "note": "Snapshots/forks are disk-only; running processes are not captured or restored, so a forked instance boots fresh rather than resuming in-memory state.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/guides/stopping-instances.md",
+      "quote": "Thunder does not have a native \"Stop\" feature for instances.",
+      "note": "There is no sleeping/stopped-but-addressable state that wakes on an incoming request; the only 'pause' equivalent is snapshot + delete + manually restore a new instance.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/guides/stopping-instances.md",
+      "quote": "Thunder does not have a native \"Stop\" feature for instances.",
+      "note": "No idle auto-stop/sleep for instances; an idle instance keeps billing at the full rate until manually snapshotted and deleted. The separate GPU-sandbox mode also records auto_stop_idle=false (TTL-based hard stop instead).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/cli/operations/modifying-instances.md",
+      "quote": "Reconfigure compute instances using the CLI. Swap GPUs, add vCPUs and RAM, or increase storage space for your compute resources.",
+      "note": "`tnr modify <id> --gpu/--num-gpus/--vcpus/--disk` changes GPU type/count, vCPU, RAM (auto-derived) and disk size on an existing instance; no stop step is documented (and instances have no native stop state), implying this applies to the instance in place rather than via recreate.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/guides/using-instance-templates.md",
+      "quote": "We currently offer: Ollama – launches an Ollama server ... ComfyUI ... Forge Neo ... Unsloth – installs Unsloth Studio for LLM inference and fine-tuning",
+      "note": "Instance templates are for model-serving/inference/fine-tuning stacks (Ollama, ComfyUI, Forge Neo, Unsloth), not coding-agent harnesses (Claude Code/Codex/OpenCode). The MCP server lets outside coding agents control Thunder, but no coding-agent harness is preinstalled/offered as a template.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.thundercompute.com/",
+      "quote": "GPU sandboxes for AI agents and persistent GPU instances for developers.",
+      "note": "not offered: outside the product's scope. Thunder provides GPU infrastructure and an MCP server/SDKs to let YOUR agent or harness drive ITS sandboxes; it does not ship its own browser/computer-use/research task agent.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "**PyTorch**: Version 2.9.0+cu128 ... Additional scientific Python libraries (NumPy, Pandas, etc.) ... **JupyterLab**: Pre-installed",
+      "note": "Python + PyTorch + JupyterLab preinstalled on instances; Sandbox SDK is also Python-first (thunder_sandbox).",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": true,
+      "source": "https://www.thundercompute.com/",
+      "quote": "$ tnr status --no-wait\nID  UUID      STATUS    ADDRESS         MODE ...\n0   a0381d3d  RUNNING   34.42.159.182   production ...",
+      "note": "Homepage product screenshots show each running instance with its own public IPv4 ADDRESS, and technical-specs.md confirms 'IP Address: Dynamic' (i.e. a dynamic public IPv4 per instance, used directly for SSH).",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/sandboxes/python-sdk.md",
+      "quote": "block_network (boolean, default false): Blocks outbound internet access. ... outbound_cidr_allowlist ... outbound_domain_allowlist",
+      "note": "Documented for the Sandbox product: block-all, CIDR allowlist, and domain allowlist, settable at creation and updatable via update_network_policy. No equivalent egress-control feature is documented for persistent Instances.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/sandboxes/python-sdk.md",
+      "quote": "outbound_cidr_allowlist ... outbound_domain_allowlist ... CIDR and domain rules are independent",
+      "note": "Sandbox egress control is at CIDR/DNS-name granularity only; no HTTP method/path-level egress rule mechanism is documented.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "**Persistent Disk**: Your home directory and OS.",
+      "note": "derived: instances are root-accessible general-purpose Ubuntu machines (root=true, ssh=true) with a full OS, so nftables/iptables inside the guest should work; not separately documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "**IP Address**: Dynamic",
+      "note": "The instance's public IP is explicitly documented as dynamic (reassigned on restore/recreate), so there is no fixed outbound IP.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "Additional scientific Python libraries (NumPy, Pandas, etc.)... CUDA / PyTorch / JupyterLab preinstalled",
+      "note": "not offered: outside the product's scope. Instances are Linux (Ubuntu) GPU machines only; the schema.org listing 'operatingSystem: Web, Linux, Windows, macOS' refers to the client editor extension/CLI platforms, not the instance OS.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "Additional scientific Python libraries (NumPy, Pandas, etc.)",
+      "note": "not offered: outside the product's scope. Thunder machines are Linux GPU instances; no macOS machine offering is documented.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.thundercompute.com/pricing",
+      "quote": "RTX A6000, A100 80GB, and H100 PCIe GPUs",
+      "note": "not offered: outside the product's scope. All published instance/sandbox specs are x86 CUDA GPU machines; no ARM CPU option is documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.thundercompute.com/",
+      "quote": "Thunder Compute uses a custom orchestration layer and GPU virtualization stack to drive extremely high utilization",
+      "note": "The core cloud platform (thunderd orchestration, GPU virtualization stack) is proprietary; the GitHub org (github.com/Thunder-Compute) hosts client tooling, not the core service, under no stated OSI license for the platform itself.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/technical-specs.md",
+      "quote": "**Location**: North America",
+      "note": "The only published instance location is North America; the card's regions field is also ['us']. No EU region is offered.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.thundercompute.com/docs/guides/stopping-instances.md",
+      "quote": "Thunder does not have a native \"Stop\" feature for instances.",
+      "note": "Persistent Instances run until you explicitly delete them (billed 'for every minute they exist, from creation until you delete them'); there is no maximum session duration. (The separate GPU-sandbox mode is TTL/timeout-bounded and is recorded separately in the card's mode-level features.)",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/api-reference/sandboxes/get-a-sandbox.md",
+      "quote": "thundertypes.SandboxStatus: enum: - created - ready - finished - failed",
+      "note": "Sandboxes (the gpu-sandbox mode) have no pause/resume: 'Stop a sandbox' (POST /sandboxes/{id}/stop) sets stopped_at and the status becomes 'finished' — a terminal state, not a resumable pause — and 'Start a sandbox' (POST /sandboxes/start) only creates a brand-new sandbox from a spec, it does not resume a stopped one by ID. Quickstart confirms termination is destructive: 'Terminating it destroys its filesystem, so always download anything you need to keep.' Persistent instances (the separate gpu-bundles product) also lack pause/resume: 'Thunder does not have a native \"Stop\" feature for instances... To \"stop\" an instance... 1. Create a snapshot... 2. Delete the instance... 3. Restore the snapshot' — snapshot+delete+restore is not pause/resume (new instance ID, billed as a full new create, no running-paused state).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/technical-specs",
+      "quote": "Pre-installed Software: CUDA, CUDA Driver, PyTorch, JupyterLab, Additional scientific Python libraries (NumPy, Pandas, etc.)",
+      "note": "Documented pre-installed software and the first-party SDK (thunder_sandbox / tnr) are Python-only; no Node.js runtime or JS/TS SDK is documented anywhere in the docs index. General root/SSH access would let a user install Node manually, but that is not 'out of the box' or a first-party SDK, so recorded as not offered.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/guides/data-processing-addendum",
+      "quote": "Approved Subprocessors | https://www.thundercompute.com/sub-processors | Provider Security Contact | support@thundercompute.com | Security Policy | As defined in the Agreement.",
+      "note": "No HIPAA / BAA offering is mentioned anywhere in the DPA, pricing, enterprise, FAQ, or docs pages; the DPA only covers GDPR/CCPA-style data protection terms, not healthcare compliance. Small developer-focused GPU cloud with no published HIPAA eligibility or BAA process.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.thundercompute.com/products/enterprise",
+      "quote": "License Thunder Compute... Runs inside your VPC or on your own servers. Your workloads stay there, and here is exactly what Thunder sees.",
+      "note": "The 'Enterprise' page covers self-hosted/BYOC licensing of the orchestration software (thunderd), not account authentication. No SAML/OIDC single sign-on for the console/API is documented on pricing, enterprise, FAQ, or docs pages.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.thundercompute.com/docs/llms.txt",
+      "quote": "The comprehensive API reference lists only Get credit alert, Set credit alert, and Delete credit alert under billing endpoints; no endpoint retrieves billable usage per sandbox, per tag, or per project.",
+      "note": "granularity: account-only; cost: no; Thunder Compute's API (documented at llms.txt) provides billing alert management (setting thresholds for credit-balance notifications) but no mechanism to retrieve actual billable usage (CPU-time, GPU-hours, cost, or credits consumed) per sandbox or by resource group. The Billing page describes account-level payment options and billing mechanics, not a usage-reporting API. The Sandbox SDK and instance APIs support creation, management, and monitoring (via the MCP server), but billing/usage data is not accessible programmatically. Usage is visible only through the web console dashboard or invoice statements for the entire account.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://www.thundercompute.com/docs/technical-specs",
+  "locations_quote": "Location: North America",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,555 @@
+{
+  "id": "cloudcruise",
+  "name": "CloudCruise",
+  "url": "https://cloudcruise.com/pricing",
+  "category": "browser",
+  "isolation": "dedicated-vm",
+  "modes": [
+    {
+      "key": "browser",
+      "label": "Automation hours ($3/h after 2 free hours, Starter)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "desktop": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "automation hour (VM, proxies and AI included)",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 3,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "cloudcruise.com/pricing 2026-09-28: Starter free, \"2 automation hours, then $3/hour\"; \"1 automation hour = 60 minutes of workflow runtime. VM infrastructure, proxies, and AI usage are all included.\" Browser CPU/RAM not published. Scale ($700/mo) overage not published, so this regime is bound to Starter.",
+      "product_class": "browser",
+      "plans": [
+        "Starter"
+      ]
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Starter",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 6,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "2 automation hours included, then $3/h. Up to 3 seats. Standard BAA. Unlimited workflows, versioning/rollbacks, maintenance agent. Whether the 2 hours reset monthly is not stated."
+    },
+    {
+      "name": "Scale",
+      "fee": 700,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$700/month; priority support, unlimited seats; included hours / overage not published."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Enterprise: custom pricing. Adds (over Scale) SSO, RBAC, audit logs, reserved browser instances, custom SLAs, DPA, custom MSA; bring-your-own proxy is Enterprise-only."
+    },
+    {
+      "name": "Accelerate",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom/month. Everything in Scale plus dedicated workflow build support, white-glove migration, human maintenance fallback."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "browser_control": true,
+    "desktop_control": null,
+    "anti_bot": true,
+    "captcha_solving": true,
+    "egress_ip_type": null,
+    "ip_note": "Proxies included in the automation-hour price but OFF by default per workflow; managed pool selectable as random, static (closest to a target IP) or by country; bring-your-own proxy URL is Enterprise only. Proxy type (residential/datacenter) not documented.",
+    "harness_api": false,
+    "secret_proxy": false,
+    "image_oci": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": true,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "isolation": "dedicated-vm",
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Starter ($0/month, up to 3 seats) includes 2 automation hours then $3/hour. Scale is $700/month (unlimited seats, volume discounts; included hours and overage rate not published). Accelerate and Enterprise are custom-priced. Workflow maintenance and model runtime differ from raw browser hosting. CPU/RAM unspecified.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Priced as unsized automation-hours ($3/h includes AI usage and proxies, so it is not comparable to a raw browser or VM hour). Concurrency limits not published.",
+    "Product is now positioned for healthcare automation (payer portals, EHR, RCM, credentialing) and announced as generally available. Run video/screenshots/logs retained 30 days (custom retention on Scale). ToS: subscriptions auto-renew; fees non-refundable; billed via Stripe."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/cloudcruise",
+    "https://cloudcruise.com/pricing",
+    "https://cloudcruise.com/"
+  ],
+  "audit_2026_09_29": {
+    "applied": 15,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": 0,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Concurrency not published; runs beyond capacity are queued ('Smart queueing'); 'Reserved browser instances' only on Enterprise.",
+    "notes": "API rate limits per API key (workspace): 500 req/1 s, 1,000/15 s, 2,000/60 s. Homepage animation shows 'Active sessions allowed: 3 / Queued 6' (illustrative marketing graphic, not a stated limit).",
+    "sources": [
+      "https://docs.cloudcruise.com/concepts/rate-limits.md",
+      "https://cloudcruise.com/",
+      "https://cloudcruise.com/pricing"
+    ]
+  },
+  "feature_evidence": {
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/concepts/builder-agent",
+      "quote": "Fully deterministic; every run follows the same graph.",
+      "note": "The Run API starts runs of a pre-built deterministic workflow graph with input variables (webhook events, live view, interrupt, submit user-interaction/input), not a prompt-driven agent harness. The Builder Agent that turns a prompt into a workflow is started in the dashboard ('Open a new workflow in the dashboard and describe the task.'). The open-source CLI + 'cloudcruise install --skills' lets Claude Code/Cursor on YOUR machine manage workflows, not a harness inside CloudCruise.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/concepts/vault",
+      "quote": "The agent uses it, and immediately zeroises the buffer.",
+      "note": "Vault: client-side AES-256-GCM encrypted credentials (username/password/TOTP secret; optional 1Password binding resolved at run time) are decrypted in memory and typed into login forms by the browser agent inside the worker; 2FA codes via the CC 2FA Proxy (SMS/email/magic link). Not an outbound-request credential-injection proxy; the secret is present in the worker at runtime.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "1 automation hour = 60 minutes of workflow runtime. VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — CloudCruise runs a managed browser-automation worker for your workflow graph; there is no way to boot a customer-supplied OCI/Docker image.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no shell/container access inside the browser worker is exposed; interaction is limited to the workflow DSL nodes.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no /dev/kvm or general compute access is exposed to customers.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — CloudCruise exposes a live view of the browser session (iframe-embeddable), not a general-purpose VNC/RDP graphical desktop.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/concepts/workflow-dsl/click",
+      "quote": "execution: Execution type: STATIC (UI: \"Static\"), LLM_VISION (UI: \"AI (Screenshot)\"), or COORDINATES (UI: \"Coordinates\")",
+      "note": "not offered as a customer-facing API: screenshot-based clicking (LLM_VISION/COORDINATES) is an internal execution mode CloudCruise's own browser agent uses inside its workflow DSL; there is no first-party API letting a customer's own agent drive an arbitrary desktop via screenshots+clicks.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no SSH access to the underlying browser worker is documented or offered.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.cloudcruise.com/concepts/vault",
+      "quote": "Enable Cookies and Local Storage in your Vault entry to reuse sessions",
+      "note": "Session/auth state (cookies, local storage) can be persisted and reused across runs at the application level via the Vault, but there is no disk- or memory-level machine snapshot/restore feature exposed to customers.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/concepts/vault",
+      "quote": "Enable Cookies and Local Storage in your Vault entry to reuse sessions",
+      "note": "not offered: outside the product's scope — no automatic full-machine snapshot/restore on stop; only opt-in cookie/localStorage session reuse.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no API/CLI to checkpoint the worker machine itself; 'debug-snapshots' in the Run API refers to per-node execution debug data, not a machine snapshot.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no machine-cloning feature; concurrency is handled by spinning up new workers per run, not by forking a machine.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — see fork.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no machine forking of any kind is documented.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "1 automation hour = 60 minutes of workflow runtime.",
+      "note": "not offered: outside the product's scope — billing is per automation-hour of workflow runtime; there is no pause/resume of the underlying worker machine.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/concepts/webhooks",
+      "quote": "This event is sent when a run is queued and waiting for an available worker.",
+      "note": "Runs are queued and dispatched to a fresh/pooled worker on demand ('Smart queueing'), which is workflow-run scheduling, not a stopped/sleeping persistent machine that wakes on an inbound request.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no customer-attached persistent disk/filesystem; only Vault-stored credentials/session data and run artifacts (screenshots/videos/logs) persist.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no attachable volumes documented.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no shared-volume feature documented.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "1 automation hour = 60 minutes of workflow runtime.",
+      "note": "not offered: outside the product's scope — workers are provisioned per run rather than left running idle for a customer to auto-stop.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no customer-selectable CPU/RAM sizing is exposed at all, let alone live resize.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://github.com/CloudCruise/cloudcruise-cli",
+      "quote": "cloudcruise install --skills",
+      "note": "The open-source CLI adds skills so coding agents (Claude Code, Cursor) running on the USER's own machine can manage CloudCruise workflows; this is not a coding-agent harness preinstalled/running inside a CloudCruise-hosted sandbox.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://docs.cloudcruise.com/introduction",
+      "quote": "run = client.runs.start(workflow_id=\"your-workflow-id\", run_input_variables={...})",
+      "note": "The Run API is a first-party API that starts/streams/interrupts runs of CloudCruise's own browser-automation agent (Builder/Maintenance agents driving the workflow graph) — this is the provider's own task agent, not a customer's coding harness.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/llms.txt",
+      "quote": "CloudCruise docs index (Quickstart, Workflows, Run API, SDKs: TypeScript, Python, CLI)",
+      "note": "No MCP server is listed among CloudCruise's SDKs/CLI/docs; integration is via REST Run API, TypeScript/Python SDKs, webhooks, and a CLI — no mention of an MCP server.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — there is no customer-addressable machine with its own public IPv4; only outbound (egress) proxy IPs are relevant.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no inbound HTTPS URL to reach a port on the worker; access is via the Run API/webhooks/live-view iframe, not inbound networking to the machine.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — no inbound port exposure exists to control.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.cloudcruise.com/concepts/twofactor",
+      "quote": "If sing-box (the OS-level proxy router) dies mid-session, the worker fails the run rather than reverting to direct internet egress. This protects compliance use cases where all automation traffic must stay inside the customer's network.",
+      "note": "CloudCruise enforces routing of a workflow's outbound (target-site) traffic through a configured proxy and fails closed instead of falling back to direct egress, which is a provider-side outbound restriction (fail-closed proxy enforcement) for compliance.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/concepts/twofactor",
+      "quote": "Target-site traffic flows through your proxy.",
+      "note": "not offered: egress control is proxy-routing based (whole-connection), not documented at HTTP method/path granularity.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — customers get no root/shell access to configure iptables/nftables inside the worker.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/concepts/twofactor",
+      "quote": "static | target IP address | The managed proxy closest to that IP — ideal for geo-restricted content or region-specific testing",
+      "note": "The 'static' managed-proxy mode picks a proxy geographically closest to a target IP for consistency of region, not a guaranteed fixed/dedicated outbound IP assigned per customer; a truly fixed IP is only available by bringing your own proxy (Enterprise).",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "One platform for compliant automation.",
+      "note": "not offered: outside the product's scope — CloudCruise is a browser-workflow-automation platform; no GPU machines are offered.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "One platform for compliant automation.",
+      "note": "not offered: outside the product's scope — no customer-facing Windows machine option; CloudCruise automates target web/Citrix apps via a browser, it does not sell Windows VMs.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "One platform for compliant automation.",
+      "note": "not offered: outside the product's scope — no macOS machines offered.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "VM infrastructure, proxies, and AI usage are all included.",
+      "note": "not offered: outside the product's scope — compute architecture is not customer-selectable; no ARM option documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "One platform for compliant automation.",
+      "note": "not offered: outside the product's scope — CloudCruise is a hosted SaaS; only the CLI and language SDKs (client libraries) are distributed as open-source, not the core automation platform.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "Enterprise: Custom SLAs, Data processing agreement, Custom MSA",
+      "note": "No BYOC/dedicated-VPC deployment option is documented, even at the Enterprise tier; Enterprise adds SSO/RBAC/audit/SLA/DPA terms, not deployment into the customer's own cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/CloudCruise/cloudcruise-cli",
+      "quote": "Open source at https://github.com/CloudCruise/cloudcruise-cli",
+      "note": "Only the CLI and SDK client libraries (cloudcruise-cli, cloudcruise-js, cloudcruise-python) are open source; the core workflow/browser-automation platform itself is closed-source SaaS.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "Standard BAA",
+      "note": "CloudCruise is positioned around US healthcare compliance (HIPAA Business Associate Agreements on every plan, payer-portal/EHR/RCM/credentialing use cases) and no page in the docs, pricing, or marketing site mentions EU/Europe regions, GDPR, or any data-residency/region selection option. Treated as not offered given the exclusively US-healthcare-compliance framing and total absence of any region concept in the product.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "dedicated-vm",
+      "source": "https://cloudcruise.com/pricing",
+      "quote": "1 automation hour = 60 minutes of workflow runtime. VM infrastructure, proxies, and AI usage are all included.",
+      "note": "Pricing page states each automation hour's runtime includes 'VM infrastructure', i.e. each browser worker/session runs inside its own VM, but no docs page names the specific hypervisor (firecracker/qemu-kvm/cloud-hypervisor/etc.), so classified generically as dedicated-vm rather than a specific microVM technology.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.cloudcruise.com/llms.txt",
+      "quote": "CloudCruise Run API endpoints: Start a run, List runs, Retrieve run results, Get debug snapshots, Get workflow error analytics. No billing/usage/cost API listed in complete API reference.",
+      "note": "granularity: account-only; cost: no; CloudCruise charges per 'automation hour' ($3/hour after 2 free hours) but provides no programmatic API to query usage per sandbox, run, workflow, tag, or project. The Run API retrieves execution results (output data, screenshots, logs, error info) but not billable usage or cost metrics. Usage tracking, if available, is limited to account-level dashboard; no per-resource breakdown via API.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://cloudcruise.com/pricing",
+  "locations_quote": "One platform for compliant automation.",
+  "locations_checked": "2026-10-01"
+}

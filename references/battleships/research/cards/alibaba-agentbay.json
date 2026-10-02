@@ -1,0 +1,609 @@
+{
+  "id": "alibaba-agentbay",
+  "name": "Alibaba Cloud AgentBay",
+  "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions",
+  "category": "agent-sandbox",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "CodeSpace (international), CPU/RAM per second while running",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "container"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.027,
+      "ram_gib_h": 0.0113,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "FAQbills idle running sessions;8-hourlifetimeneedsimage-specificverification. OS-specificpremiumrates unverified; normalizedmodeLinuxCodeSpaceonly."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": 0.03285,
+    "paused_ram_billed": null,
+    "snapshot_free_gib_account": 100
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full",
+      "bandwidth_mbps": 10,
+      "evidence": [
+        {
+          "quote": "Each instance comes with free basic bandwidth with a peak of 10 Mbps. It is measured based on inbound traffic and does not include a Service-Level Agreement (SLA).",
+          "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions"
+        },
+        {
+          "quote": "Provides dedicated bandwidth resources with a customizable peak. A dedicated IP address is allocated per UID.",
+          "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions"
+        },
+        {
+          "quote": "Provides fine-grained access control for cloud computers, including network controls and application allowlists.",
+          "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/what-is-eds-agentbay"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Basic",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "100 GiB Context/replay storage,10 Mbps basic bandwidth; compute extra."
+    },
+    {
+      "name": "Pro",
+      "fee": 149,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 200,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "1 TiB Context/replay storage; custom images;10 Mbps basic bandwidth; compute extra."
+    },
+    {
+      "name": "Ultra",
+      "fee": 225,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 200,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "1 TiB Context/replay storage; expand concurrency above 200 at 1.50 USD/slot/month; compute extra."
+    }
+  ],
+  "free": {
+    "one_time_credit": null,
+    "monthly_credit": null,
+    "conditions": "Only Alibaba Cloud accounts; RAM users ineligible; one per account; compute only"
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "asia",
+      "us"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "isolation": "container",
+    "image_oci": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "own_agent_api": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": true,
+    "captcha_solving": true,
+    "egress_ip_type": "datacenter",
+    "guest_firewall": true,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "CPU and RAM actual usage time wording does not mean CPU utilization: FAQ explicitly charges running idle sessions.",
+    "Premium bandwidth$0.123/GB is **inbound**, not generic outbound egress; do not swap directions.",
+    "Included 100 GiB/1 TiB storage is Context and recordings, not root disk or guaranteed full VM snapshot retention.",
+    "Eight-hour sessions and region/image capacity not confirmed by pricing page alone.",
+    "Credits 0.0267 USD/unit meter LLM tokens only; subscription fees are not converted into compute credits.",
+    "SDK source is open, not proof of self-hostable hosted runtime.",
+    "Original public product launch date unverified here; public 2026 pricing update and SDK establish presence, not founding.",
+    "State retention priced at the Context storage overage $0.000045/GiB-h (= $0.0329/GiB-month) beyond the plan quota (100 GiB Basic, 1 TiB Pro/Ultra; engine uses the Basic 100 GiB). Context storage persists context data and session replays; full-VM snapshot semantics are not documented.",
+    "Egress set to 0: each instance gets free basic bandwidth (10 Mbps peak, no SLA); premium SLA bandwidth $0.123/GB is billed on inbound traffic. Throughput-capped, not unlimited.",
+    "Sandbox system-disk size and price not published (billing page and CodeSpace docs, 2026-09-28); disk beyond 0 GiB shows as unknown. SSH access not documented.",
+    "Pro and Ultra plans: up to 50 custom images, 5 enabled concurrently. Pro can upgrade to Ultra (prorated difference over remaining days/30); Ultra cannot downgrade to Pro. New users get 100 free trial points for environment compute (USD value of a point not published)."
+  ],
+  "sources": [
+    "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions",
+    "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-pricing-adjustment-announcement",
+    "https://www.alibabacloud.com/help/en/agentbay/product-overview/what-is-eds-agentbay",
+    "https://github.com/aliyun/wuying-agentbay-sdk",
+    "https://www.alibabacloud.com/help/en/agentbay/agentbay-codespace",
+    "https://www.alibabacloud.com/help/en/agentbay/computeruse",
+    "https://www.alibabacloud.com/help/en/agentbay/agentbay-mobile-use"
+  ],
+  "fleet": {
+    "default_max_instances": 10,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Basic PAYG 10; Pro 200; Ultra 200 plus purchasable scale-out at $1.50/concurrent session/month.",
+    "notes": "Slot licenses are distinct from compute charges. 10 fits Basic, 50 Pro, 300/1,000 require Ultra scale-out; no published upper expansion ceiling or approval turnaround. Account payment/identity prerequisites not resolved for all jurisdictions.",
+    "sources": [
+      "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 3,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "After release (manual or automatic), the session cannot be recovered - the session ID becomes invalid",
+      "note": "Idle timeout / max runtime (LifecyclePolicy, console policy) RELEASES the session; nothing is checkpointed. Only Context Sync directories are uploaded to OSS on delete (file-level persistence of chosen paths, not machine state).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "The Session Pause/Resume feature is currently in whitelist-only access.",
+      "note": "No snapshot/checkpoint/fork API anywhere in the SDK (all four languages). Closest: whitelist-only beta_pause()/beta_resume() ('All session state is preserved during beta pause and beta resume operations') - an in-place pause, not a restorable/forkable snapshot. Custom images are built in a console image builder or from a Dockerfile via CLI, not captured from a running session.",
+      "checked": "2026-09-29"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/advanced/agent-modules.md",
+      "quote": "Agent modules are specialized AI task execution units running in AgentBay windows/linux environment to execute tasks described in natural language.",
+      "note": "Provider's own agents only: ComputerUseAgent (windows_latest), BrowserUseAgent (beta), MobileUseAgent, driven via execute_task / get_task_status / terminate_task; WebSocket streaming of reasoning/tool-call events for MobileUseAgent only. Doc also says: 'for agent services ... we do not provide services for overseas users registered with alibabacloud.com' (so China-site only). No Claude Code/Codex harness API (an OpenClaw cookbook sample exists, not a first-party API).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/advanced/agent-modules.md",
+      "quote": "Agent modules are specialized AI task execution units running in AgentBay windows/linux environment to execute tasks described in natural language.",
+      "note": "Provider's own agents only: ComputerUseAgent (windows_latest), BrowserUseAgent (beta), MobileUseAgent, driven via execute_task / get_task_status / terminate_task; WebSocket streaming of reasoning/tool-call events for MobileUseAgent only. Doc also says: 'for agent services ... we do not provide services for overseas users registered with alibabacloud.com' (so China-site only). No Claude Code/Codex harness API (an OpenClaw cookbook sample exists, not a first-party API).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "It supports configuring the direction (inbound or outbound), action (allow or deny), priority, protocol type, port range, authorization object (IP address or CIDR block), and rule description. By combining rules with different scopes and priorities, administrators can achieve fine-grained, whitelist-based network access control.",
+      "note": "Admin/org-level security-group policies (IP/CIDR/port) plus domain-name control policies ('add a rule that denies access to \"*\" with the lowest priority' for allowlist mode, up to 300 rules). Domain rules: 'This feature is currently only supported for sandboxes with a Windows operating system.' Aliyun domains (*.aliyun.com, *.aliyuncs.com, ...) are always allowed. Source is the security white paper, not a how-to page; per-session API control not in SDK. SDK 'Network (Beta)' is local-egress redirection, not a filter.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "Sandbox instances are not assigned public IP addresses and have no network ports open to the public. By default, the security group only allows ASP protocol communication from the stream gateway, blocking all other inbound external traffic.",
+      "note": "Services are reached only via session.get_link() gateway URLs (Pro/Ultra only; 'Default open range: [30100, 30199]; other ports require whitelist approval'); whether the link URL itself is tokenized is not documented. Security-group inbound rules and custom-VPC sessions (vpc_ip/vpc_id) exist; inter-sandbox traffic denied by default.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/environment-variables.md",
+      "quote": "Configure API keys or tokens for tools | `session.env.set({\"API_KEY\": \"...\"})`",
+      "note": "Secrets go into the sandbox as environment variables (session.env). No credential-injecting proxy documented. Built-in agent LLM usage is billed via platform Credits (platform keys), but that is not a user-facing secret proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/data-persistence.md",
+      "quote": "Context Mount presents the context's storage as a **live mounted filesystem** — writes are persisted immediately, and reads always reflect the latest state.",
+      "note": "BetaContextMount (SDK v0.21.0, beta): OSS-backed FUSE (ossfs 1.0 STANDARD / ossfs 2.0 PERFORMANCE) mounted at create or dynamically; requires image aio-ubuntu-2404. Older Context Sync = download on start / upload on end (not a live volume). Context storage billed per GiB-h beyond plan quota.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/data-persistence.md",
+      "quote": "When the same context is mounted in multiple active sessions simultaneously, changes made in one session are **immediately visible** in the other sessions — no sync or refresh needed",
+      "note": "Read-write (default) or READ_ONLY access modes. No reliable cross-session file locks; object-store FUSE semantics. Beta, aio-ubuntu-2404 image only.",
+      "checked": "2026-09-29"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/command-execution.md",
+      "quote": "The `session.command` module provides programmatic access to execute shell commands in cloud sessions.",
+      "note": "not offered: no mention of a Docker/container runtime available inside the guest OS anywhere in the SDK docs (command execution, custom images built via console/Dockerfile happen server-side, not inside a running session). Derived from absence of any docker/containerd API.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "Each sandbox instance runs in a virtual machine with an independent guest operating system kernel.",
+      "note": "not offered: no mention of /dev/kvm or nested virtualization anywhere in the docs; sandboxes are themselves guest VMs on Alibaba Cloud's hypervisor, and nested virtualization is not exposed to tenants. Derived.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/browser-use/README.md",
+      "quote": "Advanced capabilities: Context management, IP proxy, and stealth/fingerprinting options",
+      "note": "AIBrowser supports use_stealth and browser fingerprint simulation (browser-fingerprint.md) for anti-bot-detection automation.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/browser-use/core-features/captcha.md",
+      "quote": "AIBrowser includes an intelligent CAPTCHA resolution system that automatically handles these verification challenges... Currently, the system only supports automatic resolution of slider-type CAPTCHAs.",
+      "note": "Opt-in via BrowserOption(solve_captchas=True); slider CAPTCHAs only (available since SDK v0.7.0), text-based CAPTCHAs not yet supported.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "While providing public bandwidth to meet users' network access needs, AgentBay employs multiple security mechanisms to prevent attacks from both external and internal sources.",
+      "note": "Default sandbox egress is via Alibaba Cloud VPC/NAT (datacenter IPs). AIBrowser separately offers an optional IP-proxy add-on (browser-proxies.md: custom/Wuying/managed proxy pools with residential/ISP geo-filtering) but that is a bring-your-own or contact-sales proxy layer, not the sandbox's own default egress IP type.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "Sandbox instances are not assigned public IP addresses and have no network ports open to the public. By default, the security group only allows ASP protocol communication from the stream gateway, blocking all other inbound external traffic.",
+      "note": "not offered: no SSH documented anywhere; access is via the SDK's command/file APIs, the ASP streaming protocol, or session.get_link() gateway URLs, not SSH.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "After release (manual or automatic), the session cannot be recovered - the session ID becomes invalid",
+      "note": "No snapshot/checkpoint API in any of the four SDKs. Only Context Sync (chosen directories uploaded to OSS) persists file data; no full disk or memory snapshot/restore exists.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "After release (manual or automatic), the session cannot be recovered - the session ID becomes invalid",
+      "note": "No clone/fork API exists in the SDKs; sessions are created fresh from an image ID each time.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "After release (manual or automatic), the session cannot be recovered - the session ID becomes invalid",
+      "note": "No fork API of any kind (running or otherwise) is documented.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "After release (manual or automatic), the session cannot be recovered - the session ID becomes invalid",
+      "note": "No snapshot or fork mechanism exists, so no memory-included fork is possible.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "The Session Pause/Resume feature is currently in whitelist-only access.",
+      "note": "beta_pause()/beta_resume() preserve all session state during an in-place pause, but the feature is whitelist-only (not generally available) as of the 2026-09-29 check.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/quickstart/basic-concepts.md",
+      "quote": "After timeout, the session is released and cannot be recovered",
+      "note": "Idle/max-runtime timeout releases (destroys) the session rather than sleeping it; there is no wake-on-request mechanism for a stopped session — a new session must be created.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/quickstart/basic-concepts.md",
+      "quote": "Persistent Data (Context): Data that survives across sessions. Must be explicitly configured.",
+      "note": "Persistence requires explicitly configuring a Context (OSS-backed) and mounting/syncing it; it is not automatic full-disk persistence across stop/start of the same session (default data is temporary and lost when a session ends).",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/basics/session-management.md",
+      "quote": "idle_release_timeout: Minutes of inactivity before auto-release (default: 5).",
+      "note": "Idle sessions are auto-released (destroyed, not just stopped) after the configured idle timeout unless manual_release=True is set.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/product-overview/what-is-eds-agentbay",
+      "quote": "AgentBay is a cloud-native execution platform for AI agents. Developers can use it to automate browsers, desktop applications, mobile devices, and code runtimes.",
+      "note": "not offered: no API or docs mention changing a running session's CPU/RAM; sessions are created with a fixed image/resource profile and released when no longer needed.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-codespace",
+      "quote": "Pre-built toolchain: Includes dependencies for common languages and frameworks, plus build and debug tools. Ready to use immediately.",
+      "note": "not offered: CodeSpace ships language toolchains, not preinstalled coding-agent harnesses (Claude Code/Codex/OpenCode). AgentBay's own Agent Modules (ComputerUseAgent/BrowserUseAgent/MobileUseAgent) are the provider's own task agents, not third-party coding harnesses.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/codespace/code-execution.md",
+      "quote": "CodeSpace provides a dedicated development environment optimized for running code in Python, JavaScript, R, and Java.",
+      "note": "session.code.run_code(code, \"python\") executes Python; Jupyter-like context persistence is supported for Python.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/codespace/code-execution.md",
+      "quote": "Multi-language Support - Run Python, JavaScript/Node.js, R, and Java code",
+      "note": "session.code.run_code(code, \"javascript\") executes JavaScript/Node.js.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "Sandbox instances are not assigned public IP addresses and have no network ports open to the public.",
+      "note": "Sandboxes are only reachable via the provider's stream/access gateway and session.get_link() URLs, never a direct public IPv4.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/advanced/session-link-access.md",
+      "quote": "Web Application Access - Access web services running in cloud sessions ... result = await session.get_link(\"https\", port) ... link = result.data  # https://gateway.../request_ai/.../path/",
+      "note": "HTTPS access to ports on the sandbox is via get_link() gateway URLs; default open port range [30100, 30199], other ports require whitelist approval; feature is Pro/Ultra-only.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "It supports configuring the direction (inbound or outbound), action (allow or deny), priority, protocol type, port range, authorization object (IP address or CIDR block), and rule description.",
+      "note": "Egress control is at security-group (IP/CIDR/port) and domain-name (wildcard hostname) granularity, not HTTP method/path level. Domain-name control policies are also documented as Windows-sandbox-only.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "Each sandbox instance runs in a virtual machine with an independent guest operating system kernel.",
+      "note": "derived: sandboxes are full VMs with an independent kernel and root access confirmed inside (file-operations.md: \"User: root\"), so nftables/iptables should work inside the guest; not separately documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/browser-use/core-features/browser-proxies.md",
+      "quote": "Restricted Strategy: Uses fixed proxy nodes ... The IP remains stable for the lifetime of the session.",
+      "note": "A fixed/stable outbound IP is only available as an opt-in AIBrowser proxy strategy (or a contact-sales managed proxy), not a default static egress IP for the sandbox's own network egress.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/product-overview/what-is-eds-agentbay",
+      "quote": "AgentBay is a cloud-native execution platform for AI agents. Developers can use it to automate browsers, desktop applications, mobile devices, and code runtimes.",
+      "note": "not offered: outside the product's scope; no GPU instance type is listed among the official images (linux_latest, windows_latest, browser_latest, code_latest, mobile_latest) or pricing/billing docs.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/quickstart/basic-concepts.md",
+      "quote": "Official System Images: `linux_latest` | Computer Use ... `windows_latest` | Computer Use ... `browser_latest` | Browser Use ... `code_latest` | CodeSpace ... `mobile_latest` | Mobile Use",
+      "note": "not offered: outside the product's scope; only Linux, Windows, Browser and Android(mobile) images are offered, no macOS.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/quickstart/basic-concepts.md",
+      "quote": "Official System Images: `linux_latest` | Computer Use ... `windows_latest` | Computer Use ... `browser_latest` | Browser Use ... `code_latest` | CodeSpace ... `mobile_latest` | Mobile Use",
+      "note": "no ARM/aarch64 image or architecture option documented for the x86 Computer Use / CodeSpace / Browser Use environments.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/product-overview/what-is-eds-agentbay",
+      "quote": "By providing isolated, elastically scalable cloud environments, AgentBay solves common problems with AI agent execution.",
+      "note": "not offered: outside the product's scope; AgentBay is a hosted Alibaba Cloud service reached via API key and region endpoints, not software you deploy on your own infrastructure. Only the client SDK is open source.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/configuration/sdk-configuration.md",
+      "quote": "region_id drives the endpoint via direct pattern substitution (agentbay.{region_id}.aliyuncs.com). ... | `cn-hangzhou` | ... | `ap-southeast-1` | ... | `us-east-1` |",
+      "note": "not offered: no bring-your-own-cloud-account deployment option documented; the service only runs in Alibaba's own regions (cn-hangzhou, ap-southeast-1, us-east-1).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk",
+      "quote": "wuying-agentbay-sdk",
+      "note": "Only the client SDK (Python/TypeScript/Golang/Java) and CLI are open source on GitHub; the hosted sandbox runtime itself is closed-source Alibaba Cloud infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "SOC 1/2/3 The Service Organization Controls (SOC) reports, established by the American Institute of Certified Public Accountants (AICPA), provide a standardized reporting framework for service providers.",
+      "note": "Listed as a compliance qualification held by Alibaba Cloud on AgentBay's own security whitepaper page, applicable to the underlying platform AgentBay is built on.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/agentbay/agentbay-security-white-paper",
+      "quote": "HIPAA Alibaba Cloud supports a Business Associate Addendum (BAA) to meet customer needs for compliance with the U.S. Health Insurance Portability and Accountability Act (HIPAA)",
+      "note": "BAA available at the Alibaba Cloud platform level, listed on AgentBay's own security whitepaper compliance table.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/configuration/sdk-configuration.md",
+      "quote": "| Region ID | Derived Endpoint | Notes | | `cn-hangzhou` | ... Default | | `ap-southeast-1` | ... | | `us-east-1` | ... |",
+      "note": "Only three regions are supported (Hangzhou/China, Singapore, Virginia/US); no EU region is offered for AgentBay sessions.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/python/docs/api/common/lifecycle-policy.md",
+      "quote": "manual_release: If True, disables all auto-release; session only ends via delete().",
+      "note": "Default max_runtime is only 30 minutes and is configurable (e.g. LifecyclePolicy(max_runtime=60)), but setting manual_release=True removes any auto-release limit entirely, so there is no hard platform-enforced ceiling on session duration.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/advanced/custom-images.md",
+      "quote": "The AgentBay CLI provides a programmatic approach to create custom images using Dockerfile-based definitions. ... agentbay image create myapp --dockerfile ./Dockerfile --imageId code_latest",
+      "note": "AgentBay CLI builds custom (CodeSpace) images from a user-supplied Dockerfile, then sessions are started from that image_id. This is a Docker/Dockerfile-based custom-image workflow, so image_oci should be true (scoped to CodeSpace images; Computer Use/Mobile Use custom images use a console-based visual builder instead, per the same doc: 'Computer Use and Mobile Use images should use the AgentBay Console for customization').",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://www.alibabacloud.com/help/en/ram/user-guide/sso-overview",
+      "quote": "Alibaba Cloud supports single sign-on (SSO) through identity federation, allowing users from an external identity provider (IdP) to access Alibaba Cloud resources without separate RAM user credentials.",
+      "note": "AgentBay is accessed through the Alibaba Cloud account/console (RAM users) rather than shipping its own separate auth system; Alibaba Cloud's RAM SSO (SAML-based identity federation) is the platform-level SSO mechanism that covers console/account access to services including AgentBay. No AgentBay-specific SSO doc page was found, so this is inferred from the shared Alibaba Cloud account/RAM layer rather than an AgentBay product page.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://github.com/aliyun/wuying-agentbay-sdk",
+      "quote": "No usage, billing, or cost query API found in Python SDK API reference or CLI documentation. AgentBay SDK provides session management, file operations, command execution, and code execution, but no methods to query billable usage per-sandbox or per-tag. Billing details are dashboard-only.",
+      "note": "granularity: account-only; cost: no; Billing information is available only via Alibaba Cloud console dashboard, not through REST API, SDK, or CLI. No per-sandbox, per-tag, or per-project usage query capability exposed.",
+      "confidence": "high",
+      "checked": "2026-01-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Hangzhou",
+      "provider_region": "cn-hangzhou",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Virginia",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://github.com/aliyun/wuying-agentbay-sdk/blob/main/docs/guides/common-features/configuration/sdk-configuration.md",
+  "locations_quote": "| Region ID | Derived Endpoint | Notes | | `cn-hangzhou` | ... Default | | `ap-southeast-1` | ... | | `us-east-1` | ... |",
+  "locations_checked": "2026-10-01"
+}

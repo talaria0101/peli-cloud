@@ -1,0 +1,1055 @@
+{
+  "id": "kakao-cloud",
+  "name": "KakaoCloud Virtual Machine",
+  "url": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "compute",
+      "label": "c2a on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "c2a.large",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": null,
+          "hour": 0.060386,
+          "month_cap": null
+        },
+        {
+          "name": "c2a.xlarge",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.120772,
+          "month_cap": null
+        },
+        {
+          "name": "c2a.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.240808,
+          "month_cap": null
+        },
+        {
+          "name": "c2a.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.482353,
+          "month_cap": null
+        },
+        {
+          "name": "c2a.8xlarge",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 0.963969,
+          "month_cap": null
+        },
+        {
+          "name": "c2a.12xlarge",
+          "vcpu": 48,
+          "ram_gib": 96,
+          "disk_gib": null,
+          "hour": 1.446322,
+          "month_cap": null
+        },
+        {
+          "name": "c2a.16xlarge",
+          "vcpu": 64,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 1.927938,
+          "month_cap": null
+        },
+        {
+          "name": "c2a.24xlarge",
+          "vcpu": 96,
+          "ram_gib": 192,
+          "disk_gib": null,
+          "hour": 2.892643,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Native KRW public list/reference quote; rates converted using fx.json. Published prices exclude VAT (VAT 별도).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "shared-burstable",
+      "label": "t1i burstable",
+      "flags": [
+        "burstable"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "t1i.nano",
+          "vcpu": 2,
+          "ram_gib": 0.5,
+          "disk_gib": null,
+          "hour": 0.00405,
+          "month_cap": null
+        },
+        {
+          "name": "t1i.micro",
+          "vcpu": 2,
+          "ram_gib": 1,
+          "disk_gib": null,
+          "hour": 0.008174,
+          "month_cap": null
+        },
+        {
+          "name": "t1i.small",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": null,
+          "hour": 0.016275,
+          "month_cap": null
+        },
+        {
+          "name": "t1i.medium",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": null,
+          "hour": 0.03255,
+          "month_cap": null
+        },
+        {
+          "name": "t1i.large",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.065099,
+          "month_cap": null
+        },
+        {
+          "name": "t1i.xlarge",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.130198,
+          "month_cap": null
+        },
+        {
+          "name": "t1i.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.260397,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Native KRW public list/reference quote; rates converted using fx.json. Published prices exclude VAT (VAT 별도). t1i is a credit-based burstable family: baseline = (credits earned per hour / vCPU) / 60; docs give t1i.large = 30% and t1i.nano = 5% but no per-size table for t1i.xlarge, so baseline_pct is null (unknown).",
+      "baseline_pct": null
+    },
+    {
+      "key": "general-m2a",
+      "label": "m2a general purpose on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "sizes": [
+        {
+          "name": "m2a.large",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.075114,
+          "month_cap": null
+        },
+        {
+          "name": "m2a.xlarge",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.150229,
+          "month_cap": null
+        },
+        {
+          "name": "m2a.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.300458,
+          "month_cap": null
+        },
+        {
+          "name": "m2a.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 0.600916,
+          "month_cap": null
+        },
+        {
+          "name": "m2a.8xlarge",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 1.201831,
+          "month_cap": null
+        },
+        {
+          "name": "m2a.12xlarge",
+          "vcpu": 48,
+          "ram_gib": 192,
+          "disk_gib": null,
+          "hour": 1.802747,
+          "month_cap": null
+        },
+        {
+          "name": "m2a.16xlarge",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": null,
+          "hour": 2.403663,
+          "month_cap": null
+        },
+        {
+          "name": "m2a.24xlarge",
+          "vcpu": 96,
+          "ram_gib": 384,
+          "disk_gib": null,
+          "hour": 3.605494,
+          "month_cap": null
+        }
+      ],
+      "note": "AMD EPYC 7000 3rd gen, 1:4 vCPU:GiB. KRW list, VAT excluded.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "memory-r2a",
+      "label": "r2a memory optimized on-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "sizes": [
+        {
+          "name": "r2a.large",
+          "vcpu": 2,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.09868,
+          "month_cap": null
+        },
+        {
+          "name": "r2a.xlarge",
+          "vcpu": 4,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.19736,
+          "month_cap": null
+        },
+        {
+          "name": "r2a.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 0.394719,
+          "month_cap": null
+        },
+        {
+          "name": "r2a.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 0.789438,
+          "month_cap": null
+        },
+        {
+          "name": "r2a.8xlarge",
+          "vcpu": 32,
+          "ram_gib": 256,
+          "disk_gib": null,
+          "hour": 1.578877,
+          "month_cap": null
+        },
+        {
+          "name": "r2a.12xlarge",
+          "vcpu": 48,
+          "ram_gib": 384,
+          "disk_gib": null,
+          "hour": 2.368315,
+          "month_cap": null
+        },
+        {
+          "name": "r2a.16xlarge",
+          "vcpu": 64,
+          "ram_gib": 512,
+          "disk_gib": null,
+          "hour": 3.157753,
+          "month_cap": null
+        },
+        {
+          "name": "r2a.24xlarge",
+          "vcpu": 96,
+          "ram_gib": 768,
+          "disk_gib": null,
+          "hour": 4.73663,
+          "month_cap": null
+        }
+      ],
+      "note": "1:8 vCPU:GiB. KRW list, VAT excluded.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "general-m3az",
+      "label": "m3az high-frequency general purpose",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "sizes": [
+        {
+          "name": "m3az.large",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.239335,
+          "month_cap": null
+        },
+        {
+          "name": "m3az.xlarge",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.478671,
+          "month_cap": null
+        },
+        {
+          "name": "m3az.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 0.957341,
+          "month_cap": null
+        },
+        {
+          "name": "m3az.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 1.914682,
+          "month_cap": null
+        },
+        {
+          "name": "m3az.6xlarge",
+          "vcpu": 24,
+          "ram_gib": 96,
+          "disk_gib": null,
+          "hour": 2.872024,
+          "month_cap": null
+        },
+        {
+          "name": "m3az.8xlarge",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 3.446428,
+          "month_cap": null
+        }
+      ],
+      "note": "AMD EPYC 9004 (4th gen), optimised for single-thread. ~3x m2a price.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "gpu",
+      "label": "GPU (gn1i T4 / p2i A100)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": true,
+      "pricing": "sizes",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "sizes": [
+        {
+          "name": "gn1i.xlarge",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "gpu": "T4",
+          "gpu_count": 1,
+          "hour": 0.477198
+        },
+        {
+          "name": "gn1i.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "gpu": "T4",
+          "gpu_count": 1,
+          "hour": 0.630372
+        },
+        {
+          "name": "gn1i.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "gpu": "T4",
+          "gpu_count": 1,
+          "hour": 0.936722
+        },
+        {
+          "name": "gn1i.8xlarge",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "gpu": "T4",
+          "gpu_count": 1,
+          "hour": 1.54942
+        },
+        {
+          "name": "gn1i.12xlarge",
+          "vcpu": 48,
+          "ram_gib": 192,
+          "gpu": "T4",
+          "gpu_count": 4,
+          "hour": 3.134188
+        },
+        {
+          "name": "gn1i.16xlarge",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "gpu": "T4",
+          "gpu_count": 1,
+          "hour": 2.774817
+        },
+        {
+          "name": "p2i.6xlarge",
+          "vcpu": 24,
+          "ram_gib": 192,
+          "gpu": "A100",
+          "gpu_count": 1,
+          "hour": 3.928045
+        },
+        {
+          "name": "p2i.12xlarge",
+          "vcpu": 48,
+          "ram_gib": 384,
+          "gpu": "A100",
+          "gpu_count": 2,
+          "hour": 7.856089
+        },
+        {
+          "name": "p2i.24xlarge",
+          "vcpu": 96,
+          "ram_gib": 768,
+          "gpu": "A100",
+          "gpu_count": 4,
+          "hour": 15.899228
+        }
+      ],
+      "note": "gf1i FuriosaAI WARBOY NPU sizes also listed (24/192 KRW 3,960/h; 48/384 KRW 7,920; 96/768 KRW 15,840).",
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.086013,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.043007,
+    "paused_ram_billed": true
+  },
+  "network": {
+    "egress_free_gib": 30,
+    "egress_gib": 0.066277466749,
+    "ipv4_month": 2.956711433287,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown quotas are not confirmed unlimited. "
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": 220.92
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "asia"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "VM stop/shelve state billing needs state-table verification.",
+    "t1i is burstable (CPU credits). Docs example: t1i.large baseline 30%, t1i.nano 5%; t1i.xlarge baseline not published, so the regime is flagged burstable with unknown baseline.",
+    "Unknowns remain null, not free. c2a / t1i are ordinary self-serve VMs (no longer flagged alt, fix 2026-09-28).",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Published prices exclude VAT (VAT 별도).",
+    "Residency: Calculator defaults kr-central-2; no EU workload-residency verified.",
+    "Windows Server 2019/2022 image surcharge KRW 33/instance-hour (~$0.0243, per instance not per vCPU); Windows 2019+MSSQL 2019 KRW 463 per hour per 4 vCPU. Free credits do not apply to Windows images. Monthly figures on the pricing page use a 30-day (720 h) month."
+  ],
+  "sources": [
+    "https://www.kakaocloud.com/services/virtual-machine/pricing",
+    "https://docs.kakaocloud.com/en/service/bcs/vm/vm-pricing",
+    "https://kakaocloud.com/pricing/calculator",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "fleet": {
+    "default_max_instances": 500,
+    "default_max_vcpu": 4000,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Published per-project quotas: 500 instances, 4,000 vCPU, 8,000 GiB memory, shared with bare-metal and GPU instances; volume quotas 1,000 volumes / 100,000 GB and 1,000 snapshots / 100,000 GB; all raisable via Helpdesk. GPU-specific count and new-account verification/SLA not established; project ceiling is not reserved capacity. Only general region is kr-central-2 (Seoul; kr-central-1 discontinued 2025-03-31); kr-gov-central-1/2 for public institutions.",
+    "sources": [
+      "https://docs.kakaocloud.com/en/service/bcs/vm/vm-pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 4
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Stop the instance (stop)",
+      "note": "Stop / Shut down (shelve) just power the VM off; volumes persist (persistent_disk), no memory checkpoint on stop is documented. Snapshot Schedules can create volume snapshots on a cron-like cycle with retention ('automatically create and delete snapshots of the current state of a volume according to a configured cycle') - that is scheduled backup, not stop-triggered.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-snapshot",
+      "quote": "You can create a new snapshot from the current state of a volume.",
+      "note": "Block-volume snapshots (full or incremental) via console and OpenAPI (POST /volumes/:volume_id/snapshots); restore creates a NEW volume ('스냅샷을 복원하여 신규 볼륨을 생성합니다', openapi/bcs/restore-snapshot). Custom images from an instance's root volume can boot new instances ('You can create an image from the current state of an instance. This custom image can then be used when creating an instance.', vm-manage-image). Disk only, no memory.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "\"title\":\"Virtual Machine\",\"keyword\":\"virtual-machine\" ... full KakaoCloud service catalog lists Compute (Virtual Machine, Bare Metal Server, Container Pack, Kubernetes Engine, Kubeflow), Storage, Networking, Data Store, Developer Tools, Analytics, Management, AI Service, Security -- no agent/harness product",
+      "note": "KakaoCloud VM is a plain IaaS/OpenStack-style virtual machine service (Beyond Compute Service OpenAPI covers instance/volume/image/network only). The full service catalog scraped from the pricing page's embedded state has no agent-harness or coding-agent product of any kind, so there is nothing an 'agent_harnesses'/'harness_api' claim could refer to -- the concept is outside what this product is. No official page claims or documents such a feature; confirming the recorded 'no'.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/networking/vpc/main/vpc-security-group",
+      "quote": "each rule controls the traffic based on protocols, source or destination CIDR ranges, and port numbers",
+      "note": "Security groups (stateful, allow-only, 'deny all traffic that is not explicitly allowed') with outbound rules: API direction [ingress, egress], remote_ip_prefix CIDR, protocol TCP/UDP/ICMP/ALL, port range. No hostname/FQDN rules documented.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/networking/vpc/main/vpc-security-group",
+      "quote": "The protocol for the rule (e.g., TCP, UDP, ICMP, ALL)",
+      "note": "Security-group rules are L3/L4 only (protocol, CIDR, port); no HTTP-level egress proxy or firewall product found in the docs sitemap.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/networking/vpc/main/vpc-security-group",
+      "quote": "KakaoCloud Security Groups act like virtual firewalls, allowing you to control the incoming and outgoing traffic at the instance level.",
+      "note": "Inbound rules by protocol/source CIDR/port; public IP is optional (associate/disassociate) and instances can stay private in the VPC.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM/OpenStack-style VM with root (sudo shown in volume guides); nftables/iptables inside the guest should work.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/security/secrets-manager",
+      "quote": "secret and secret value management, and API usage",
+      "note": "Only a Secrets Manager (API to store/fetch secret versions) that the workload reads itself; no credential-injecting egress proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-volume",
+      "quote": "To use the volume properly, you must attach the volume to the instance in the console",
+      "note": "Block Storage volumes attach/detach; per-instance attach limits by instance family.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/storage/file-storage/file-storage-overview",
+      "quote": "Multiple servers and applications can access the same file system at the same time",
+      "note": "File Storage (NFS; Infinite file system also SMB), read-write, NFS IP-based access control. Block volumes themselves: no multi-attach documented.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/vm-overview",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "OpenStack-style hyperscaler VM product (Beyond Compute Service); hypervisor not named on public pages but standard for this architecture is KVM/QEMU full-VM isolation, consistent with per-instance root/sudo, resize-in-stopped-state, and image-based cloning documented for the service.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-image",
+      "quote": "An image is a template that includes the operating system, applications, and configuration settings required to run a virtual machine.",
+      "note": "Instances boot from KakaoCloud VM images (base OS images or custom images captured from an instance's root volume), not from Docker/OCI container images.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Connect to instance Provide guidance for connecting to the instance through SSH or RDP",
+      "note": "Full Linux VM with root/sudo access via SSH; Docker can be installed and run like on any Linux VM. Not a documented managed feature, but not restricted.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems. It offers scalable computing resources in the cloud",
+      "note": "not offered: outside the product's scope (plain IaaS VM; no managed VNC/RDP/stream desktop product).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope (no managed/bundled browser product).",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope (plain IaaS VM, no screenshot/click driving API).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Associate public IP Associate a public IP with the instance",
+      "note": "Standard datacenter-allocated floating/public IPv4 in KakaoCloud's kr-central-2 region; no residential/mobile IP product.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-snapshot",
+      "quote": "You can create a new snapshot from the current state of a volume.",
+      "note": "Block-volume (disk) snapshots and image capture only; no memory/process-state snapshot is documented, and Stop/Shelve do not checkpoint RAM (see card feature_evidence.snapshot_auto).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-image",
+      "quote": "You can create an image from the current state of an instance. This custom image can then be used when creating an instance.",
+      "note": "Clone via custom image → launch new instance(s) from it.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "You can create an image when the instance is in the Stopped or Active state, but for data consistency, creating an image in the Stopped state is recommended.",
+      "note": "Image (fork source) can be created while the instance stays Active/running, though Stopped is recommended for consistency.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-image",
+      "quote": "An image is a template that includes the operating system, applications, and configuration settings required to run a virtual machine.",
+      "note": "New instances created from a custom image cold-boot from disk state only; no running-process/memory carryover.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Stop Stop the instance (stop) Stopped ... Start Start the instance (start) - Change an instance in the Stopped or Shelved_offloaded state to the Active state Active",
+      "note": "No dedicated 'pause' distinct from Stop, but Stop/Start functions as pause/resume; compute billing is reduced while Stopped per 'Billing by instance state' (disk still billed).",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Start Start the instance (start) - Change an instance in the Stopped or Shelved_offloaded state to the Active state",
+      "note": "Starting a stopped instance is a manual/API action; no documented automatic wake triggered by an inbound request.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Stop Stop the instance (stop) Stopped",
+      "note": "Only manual/API Stop is documented; no idle-detection auto-stop feature found for the VM product.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Change type Change the instance type (resize) - Type change is available only in the Stopped state",
+      "note": "Resize (vCPU/RAM change) explicitly requires the instance to be Stopped first; not live.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope (plain IaaS VM; no preinstalled coding-agent templates).",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope (no browser/computer-use/research agent product).",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/sitemap.xml",
+      "quote": "openapi/bcs/create-image, openapi/bcs/list-images ...",
+      "note": "Only a REST OpenAPI for Beyond Compute Service resources is offered; no first-party MCP server found.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "Associate public IP Associate a public IP with the instance",
+      "note": "Each instance can have a public IPv4; user can run/terminate their own HTTPS service and open port 443 via security-group rules. No managed HTTPS gateway/URL product, but inbound HTTPS to the machine itself is possible.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-instance",
+      "quote": "If you disconnect only the public IP without deleting the resource connected to it, the public IP is not released. In this case, it is billed even if you do not use the public IP.",
+      "note": "Floating/public IPv4 is a persistent resource assigned to the instance and used for both inbound and outbound NAT; it stays fixed unless explicitly disassociated.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "gn1i.xlarge ... gpu T4 ... p2i.6xlarge ... gpu A100",
+      "note": "GPU instance families gn1i (T4) and p2i (A100) are offered; gf1i FuriosaAI NPU sizes also listed.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-image",
+      "quote": "Ubuntu 20.04 ... CentOS Stream 9 ... Rocky Linux 8.10 ... Alma Linux 8.10 ... Windows 2019 ... Windows 2022",
+      "note": "Only Linux distributions and Windows Server images are offered; no macOS.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "m2a.large ... AMD EPYC 7000 3rd gen",
+      "note": "All published instance families (c2a, t1i, m2a, r2a, m3az) are x86-64 (Intel/AMD EPYC); no ARM/Graviton-class family found on the pricing or spec pages.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems. It offers scalable computing resources in the cloud",
+      "note": "not offered: outside the product's scope (public multi-tenant cloud service, not distributable software).",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope (hyperscaler-style public cloud, runs in KakaoCloud's own kr-central-2 datacenters, not deployed into a customer's own cloud account).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "KakaoCloud Virtual Machine (VM) is a virtual server reconstructed based on physical hardware systems.",
+      "note": "not offered: outside the product's scope (proprietary managed cloud platform; not published under an OSI license).",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/service/management/iam/iam-overview",
+      "quote": "IAM 카카오클라우드 리소스에 접근할 수 있는 사용자 권한을 중앙에서 관리하는 서비스",
+      "note": "IAM covers internal user/role/group/service-account management for KakaoCloud resources; no SAML/OIDC external identity-provider federation (SSO) documented.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "c2a.large ... hour 0.060386",
+      "note": "Ordinary always-on VM billed per hour with no maximum session length; runs until the user stops it.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+      "quote": "\"title\":\"Virtual Machine\",\"keyword\":\"virtual-machine\",\"description\":\"...\",\"regions\":[{\"name\":\"kr-central-2\",\"feeType\":\"PAID\"}]",
+      "note": "The pricing page's embedded service/region data lists exactly one region for every KakaoCloud service, including Virtual Machine: kr-central-2 (Seoul, South Korea). No EU/European region is offered anywhere in the catalog (also consistent with docs.kakaocloud.com/.../vm-pricing quota page and the card's fleet.notes, which record kr-central-1 discontinued 2025-03-31 and kr-gov-central-1/2 reserved for Korean public institutions). Confirming the recorded 'no' -- KakaoCloud has no EU data-residency option.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-create-instance",
+      "quote": "User script : Script that automatically runs user data at instance startup to configure the initial environment ... Ubuntu: sudo cat /var/log/syslog ... CentOS: sudo cat /var/log/messages",
+      "note": "not offered: outside the product's scope as a curated runtime feature. KakaoCloud VM boots from plain base OS images you choose (Ubuntu 20.04/22.04/24.04, CentOS Stream 9, Rocky Linux 8.10, Alma Linux 8.10, Windows 2019/2022) with no first-party 'language runtime' or code-exec SDK; any Python must be installed by the user via a startup user-script or manually, same as any generic IaaS VM.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/en/service/bcs/vm/how-to-guides/vm-manage-image",
+      "quote": "An image is a template that includes the operating system, applications, and configuration settings required to run a virtual machine.",
+      "note": "not offered: outside the product's scope. Base Images are generic OS templates (Ubuntu/CentOS/Rocky/Alma/Windows); KakaoCloud's own Marketplace (marketplace.kakaocloud.com) offers third-party enterprise software (security, DB, container platforms) but no first-party Node.js runtime image or code-exec SDK. No official page documents Node.js as available out of the box.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/whykakaocloud",
+      "quote": "ISMS-P ... CSAP 공공기관 클라우드 서비스 제공을 위한 정보보호 수준 평가·인증 ... ISO/IEC 27001 정보보호 관리체계에 대한 서비스 정보보호 인증",
+      "note": "KakaoCloud's own security/compliance page explicitly lists its full attestation set: ISMS-P (Korean information-security/personal-data management certification), CSAP (Korean public-sector cloud security assessment), and ISO/IEC 27001. SOC 2 is not among them, and no other KakaoCloud page claims a SOC 2 Type I/II attestation.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.kakaocloud.com/whykakaocloud",
+      "quote": "ISMS-P ... CSAP ... ISO/IEC 27001 ... 인증범위: 카카오엔터프라이즈(카카오클라우드, 카카오 i LaaS, CenterFlow) 서비스 운영",
+      "note": "KakaoCloud publishes only Korean/international certifications (ISMS-P, CSAP, ISO/IEC 27001) and operates exclusively from the kr-central-2 (Seoul) region for this product (plus kr-gov-central for Korean public institutions); no HIPAA-eligibility or BAA offering is mentioned anywhere in its docs or compliance page, consistent with a Korea-focused cloud with no documented US healthcare-compliance program.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "compute": "dedicated",
+        "general-m2a": "dedicated",
+        "memory-r2a": "dedicated",
+        "general-m3az": "dedicated",
+        "gpu": "dedicated",
+        "shared-burstable": "burstable:5-40"
+      },
+      "source": "https://docs.kakaocloud.com/en/service/bcs/bcs-specifications/general-purpose/burstable-main",
+      "quote": "Burstable instance is the only instance type that provides a baseline CPU utilization while allowing burstable CPU utilization beyond the baseline.",
+      "note": "KakaoCloud's own docs state t1i (shared-burstable) is the ONLY burstable family, implying c2a (compute), m2a (general-m2a), r2a (memory-r2a), m3az (general-m3az), and the gn1i/p2i GPU instances (gpu) all get their full advertised vCPU count with no baseline/credit cap, i.e. dedicated. For t1i itself, the instance-type page (https://docs.kakaocloud.com/en/service/bcs/bcs-specifications/general-purpose/instance-type) publishes an exact per-size baseline-usage/vCPU table: t1i.nano 5%, t1i.micro 10%, t1i.small/medium 20%, t1i.large 30%, t1i.xlarge/2xlarge 40% -- baseline is not a single number across the whole mode, so 'burstable:5-40' records the documented range rather than one NN value.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.kakaocloud.com/service/billing/billing-overview",
+      "quote": "KakaoCloud Billing provides overall financial features related to KakaoCloud service usage, such as estimated cost lookup, billing statements, and credit management.",
+      "note": "granularity: account-only; cost: yes; KakaoCloud offers a console-based Billing service with estimated costs viewable by project, service, region, product, and tag, plus downloadable invoices (PDF/Excel). However, there is no REST API, SDK, or CLI to programmatically access usage or cost data. The OpenAPI documentation (353 endpoints across bcs, networking, container-pack, storage, data-store, security, and management) has no billing or cost endpoint. All usage/cost data access is console UI only.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "kr-central-2",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+  "locations_quote": "\"regions\":[{\"name\":\"kr-central-2\",\"feeType\":\"PAID\"}]",
+  "locations_checked": "2026-10-01"
+}

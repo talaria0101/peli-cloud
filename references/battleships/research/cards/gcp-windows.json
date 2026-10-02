@@ -1,0 +1,921 @@
+{
+  "id": "gcp-windows",
+  "name": "Google Compute Engine (Windows Server)",
+  "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+  "category": "windows",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "E2 custom machine + Windows Server licence (us-central1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.02290217,
+      "ram_gib_h": 0.003069707,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        0.5,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 2,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.046,
+      "gpu": null,
+      "note": "E2 custom vCPU $0.02290217/h and memory $0.003069707/GiB-h (us-central1 on-demand, official pricing page rendered 2026-09-28). Windows Server licence $0.046 per visible vCPU-hour, 1-minute minimum then per-second. E2 shape limits (0.5-8 GiB per vCPU, max 32 vCPU / 128 GiB) are from GCP docs, not re-checked this pass.",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "key": "vm-tier",
+      "label": "E2 predefined machine types + Windows licence (us-central1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "e2-highcpu-2",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": 0,
+          "hour": 0.04947024,
+          "month_cap": null
+        },
+        {
+          "name": "e2-standard-2",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.06701142,
+          "month_cap": null
+        },
+        {
+          "name": "e2-highmem-2",
+          "vcpu": 2,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.09039966,
+          "month_cap": null
+        },
+        {
+          "name": "e2-highcpu-4",
+          "vcpu": 4,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.09894048,
+          "month_cap": null
+        },
+        {
+          "name": "e2-standard-4",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.13402284,
+          "month_cap": null
+        },
+        {
+          "name": "e2-highcpu-8",
+          "vcpu": 8,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.19788096,
+          "month_cap": null
+        },
+        {
+          "name": "e2-standard-8",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.26804568,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.046,
+      "gpu": null,
+      "note": "Predefined E2 on-demand prices (us-central1). Licence added on top at $0.046/vCPU-h.",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "key": "on-demand-eu",
+      "label": "E2 custom + Windows licence (europe-west1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.02519304,
+      "ram_gib_h": 0.003376895,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "ram_per_vcpu": [
+        0.5,
+        8
+      ],
+      "vcpu_options": null,
+      "min_vcpu": 2,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.046,
+      "gpu": null,
+      "note": "europe-west1 Default (on-demand) custom E2 rates; europe-west4 is $0.02521405 / $0.003379068. Licence $0.046/visible vCPU-h is not region-dependent on the premium-image page."
+    },
+    {
+      "key": "shared-burstable",
+      "label": "E2 shared-core + Windows licence (us-central1)",
+      "flags": [
+        "burstable"
+      ],
+      "baseline_pct": 50,
+      "os": [
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "e2-small",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": 0,
+          "hour": 0.016752855,
+          "month_cap": null
+        },
+        {
+          "name": "e2-medium",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.03350571,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.046,
+      "gpu": null,
+      "note": "Shared-core: e2-small sustains 2 vCPUs at 25% each, e2-medium 2 vCPUs at 50% each (baseline_pct is per-size: 25 for e2-small, 50 for e2-medium). Licence charged on 2 visible vCPUs = $0.092/h, so e2-medium Windows = $0.1255/h."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.1,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.05,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 1,
+    "egress_gib": 0.12,
+    "ipv4_month": 3.65,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay-as-you-go billing account (no plan fee)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 300
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": false,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Licence: 'All other machine types: $0.046 USD/hour per visible vCPU'; f1-micro/g1-small $0.023/h flat. Sustained/committed-use discounts and Spot do not discount the licence.",
+    "Disk: balanced PD $0.000136986/GiB-h (~$0.10/GiB-month); standard snapshots $0.000068493/GiB-h (~$0.05/GiB-month), billed on compressed incremental size.",
+    "Egress: Premium Tier to North America/Europe: first 1 GiB free, then $0.12/GiB up to 1 TiB, $0.11 to 10 TiB. Standard Tier has 200 GiB/month free but is not the default.",
+    "External IPv4 $0.005/h for in-use addresses (NAT pricing example on the network pricing page); unassigned static IPs cost more (not encoded).",
+    "$300 new-customer credit (Windows licences not covered by Always Free); 90-day expiry not modelled.",
+    "Base machine price for other families (N2/N4/C3) not encoded; E2 is the cheapest general-purpose family.",
+    "Free Trial: while the billing account is a non-billable Free Trial account you cannot create Windows Server VMs; you must upgrade to a Paid billing account first, and the $300 credit still expires 90 days after sign-up. Amortising the $300 over 12 months overstates the benefit for Windows.",
+    "Suspend (pause_resume) is not free: suspended instance memory and device state is billed at $0.000232877/GiB-hour (~$0.17/GiB-month, us-central1) plus disks and static IPs.",
+    "A static external IPv4 attached to a stopped VM is still 'in use' and billed $0.005/h; unassigned static IPv4 $0.01/h. Ephemeral IPs are released on stop.",
+    "Windows Server allows only two concurrent RDP sessions without purchasing RDS CALs.",
+    "E2 gets no sustained-use discount (SUD table lists N1/N2/N2D/C2/M1/M2 only); 1-yr/3-yr Flex/Resource CUDs cut E2 by ~28%/46%/37%/55% but never the Windows licence."
+  ],
+  "sources": [
+    "https://cloud.google.com/compute/disks-image-pricing",
+    "https://cloud.google.com/products/compute/pricing/general-purpose",
+    "https://cloud.google.com/vpc/network-pricing",
+    "https://docs.cloud.google.com/compute/docs/instances/windows/ms-licensing"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Paid billing account needed to request quota changes; established billing history can enable automatic GPU approval.",
+    "tiers": null,
+    "notes": "Per-region CPU and per-GPU-type quotas plus possible global CPU/GPU caps for new projects. No single universal fresh paid-account numeric value verified. Free Trial cannot raise quota. Quota is not a capacity reservation.",
+    "sources": [
+      "https://docs.cloud.google.com/compute/resource-usage",
+      "https://docs.cloud.google.com/compute/docs/gpus/create-vm-with-gpus"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/instances/stop-start-instance",
+      "quote": "When you stop a compute instance, or Compute Engine does so for a scheduled action, the instance retains its attached disks, configuration settings, IP addresses, MAC addresses, and instance metadata. If you also want to retain in-memory data and application state, then suspend the instance .",
+      "note": "Stop keeps disks (persistent_disk), no snapshot. Suspend (memory kept) is a user action. Snapshot schedules give periodic automatic disk backups (not on stop) - see scheduled-snapshots page.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/machine-images",
+      "quote": "Machine images can be used to clone instances.",
+      "note": "Disk snapshots (\"Standard snapshots incrementally back up data on a disk\") and machine images of running or stopped VMs via console/gcloud/API; new VMs/disks can boot from them. Memory NOT included (machine images do not collect \"Data in memory\"); only suspend keeps memory, and that is not forkable.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "Confirms existing feature_evidence entry: plain IaaS VM, no first-party API to drive/manage an agent harness inside the instance.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://cloud.google.com/firewall/docs/firewalls",
+      "quote": "Each firewall rule applies to incoming (ingress) or outgoing (egress) connections, not both.",
+      "note": "VPC firewall rules / Cloud NGFW policies allow/deny egress by IPv4/IPv6 CIDR, protocol and port, targeted by tags/service accounts; default-deny egress possible with a low-priority deny rule. Domain level via Cloud NGFW FQDN objects: \"Fully qualified domain name (FQDN) objects let you define firewall rules by using domain names instead of specific IP addresses.\" (fqdn-objects-overview).",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://cloud.google.com/secure-web-proxy/docs/overview",
+      "quote": "Evaluates request attributes such as methods, headers, or URLs if the traffic is unencrypted HTTP or if TLS inspection is enabled.",
+      "note": "Via Secure Web Proxy, a separate paid GCP product (explicit proxy; needs TLS inspection for HTTPS method/path/header rules). Not part of the VM itself.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://cloud.google.com/firewall/docs/firewalls",
+      "quote": "When specifying a source or destination for an ingress or egress rule by address, you can specify IPv4 or IPv6 addresses or blocks in CIDR notation.",
+      "note": "VPC ingress firewall rules (IP/CIDR, port, tags, service accounts); VMs can be internal-only (no external IP); IAP TCP forwarding for RDP/SSH.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/troubleshooting/troubleshooting-rdp",
+      "quote": "Ensure that the Windows firewall has Remote Desktop Connections enabled:",
+      "note": "Full KVM VM with Administrator: Windows Defender Firewall (netsh advfirewall) inside the guest; Linux images on GCE can use nftables/iptables.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://cloud.google.com/secret-manager/docs/overview",
+      "quote": "Secret Manager is a secrets and credential management service",
+      "note": "Secrets are fetched into the VM (Secret Manager, metadata server service-account tokens). No credential-injecting egress proxy for Compute Engine VMs.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/disks/add-persistent-disk",
+      "quote": "This document explains how to create a blank, non-boot zonal Persistent Disk volume and attach it to your VM.",
+      "note": "Persistent Disk / Hyperdisk block volumes; also Filestore (NFS) and Cloud Storage FUSE on Linux.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/disks/sharing-disks-between-vms",
+      "quote": "With multi-writer mode , multiple instances can read and write to the same disk.",
+      "note": "Read-only multi-attach (READ_ONLY_MANY) or multi-writer (READ_WRITE_MANY, e.g. SQL Server FCI / S2D on Windows) in the same zone; Filestore NFS is another shared-FS option.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://cloud.google.com/security/infrastructure/design",
+      "quote": "In addition, we are the largest submitter of CVEs and security bug fixes for the Linux KVM hypervisor.",
+      "note": "Compute Engine VMs (including Windows Server) run on Google's hypervisor, which is based on/derived from KVM; full hardware-virtualized VM isolation between tenants.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/images",
+      "quote": "An image is a Compute Engine resource that provides the base operating system... for the boot disk of your VM.",
+      "note": "not offered: Compute Engine VMs (Windows Server) boot from Compute Engine disk images (public/custom/machine images), not directly from a Docker/OCI image; container-on-VM support that exists on Compute Engine is a Linux/Container-Optimized-OS feature, outside this Windows VM product's boot model.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+      "quote": "Windows Server pricing for Compute Engine",
+      "note": "not offered: outside the product's scope (plain IaaS Windows Server VM, no built-in stealth/anti-fingerprinting feature)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+      "quote": "Windows Server pricing for Compute Engine",
+      "note": "not offered: outside the product's scope (plain IaaS Windows Server VM, no built-in CAPTCHA solving)",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cloud.google.com/vpc/network-pricing",
+      "quote": "External IP address pricing",
+      "note": "Outbound traffic uses Google Cloud datacenter IP ranges (ephemeral or static external IPv4/IPv6 assigned from GCP's own address pools), not residential/mobile IPs.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/instances/stop-start-instance",
+      "quote": "When you stop a compute instance, or Compute Engine does so for a scheduled action, the instance retains its attached disks, configuration settings, IP addresses, MAC addresses, and instance metadata.",
+      "note": "A stopped/suspended Compute Engine VM must be explicitly started via console/gcloud/API; there is no serverless-style auto-wake when a network request arrives at the machine.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance",
+      "quote": "If the VM is running, click stop Stop to stop the VM.",
+      "note": "Changing the machine type (vCPU/RAM) requires stopping the VM first; it cannot be resized while running.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+      "quote": "Windows Server pricing for Compute Engine",
+      "note": "not offered: outside the product's scope (plain IaaS VM; Google does not ship a first-party browser/computer-use/research task-agent API for Compute Engine)",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+      "quote": "Windows Server pricing for Compute Engine",
+      "note": "not offered: outside the product's scope; no first-party MCP server shipped by Google to control Compute Engine VMs specifically for agent sandboxing",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/images/os-details",
+      "quote": "Create a Windows Server VM",
+      "note": "not offered: outside the product's scope. Public Windows Server images are a bare OS image with no Python runtime preinstalled; users must install it themselves (only the gcloud/client-library docs use Python for local tooling, not on the guest).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/images/os-details",
+      "quote": "Create a Windows Server VM",
+      "note": "not offered: outside the product's scope. Public Windows Server images are a bare OS image with no Node.js runtime preinstalled; users must install it themselves.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://cloud.google.com/compute/docs/instances/stop-start-instance",
+      "quote": "When you stop a compute instance, or Compute Engine does so for a scheduled action, the instance retains its attached disks, configuration settings, IP addresses, MAC addresses, and instance metadata.",
+      "note": "On-demand (non-Spot/preemptible) Compute Engine VMs run indefinitely until the customer stops them; no forced maximum session length for this on-demand Windows Server mode.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "GCE is a plain IaaS VM service (create/stop/suspend/snapshot/clone-from-image). There is no first-party API to fork a live running VM's process/memory state into a new instance; the closest is booting a new VM from a disk snapshot or machine image, which is not a live fork.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "No documented capability to fork a currently-running instance in place; suspend/resume and machine images operate on disk/metadata, not a live running-process fork.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/machine-images",
+      "quote": "Machine images can be used to clone instances.",
+      "note": "Machine images clone disks/config but explicitly do not capture in-memory state (see feature_evidence.snapshot_on_demand already in the card); suspend keeps memory but suspend state cannot be used to launch new forked instances. No documented memory-snapshot-to-fork path.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/instances/nested-virtualization/overview",
+      "quote": "L1 VMs have the following restrictions: The only hypervisor supported in an L1 VM is Linux KVM; Microsoft Hyper-V isn't supported. You can't use the following VMs: E2 VMs ...",
+      "note": "Nested virtualization exists on GCE in general, but it explicitly excludes E2 machine types (the family this card is priced on) and requires the L1 hypervisor to be Linux KVM — Hyper-V (what a Windows guest would use to nest further VMs) isn't supported. So for this Windows-on-E2 configuration, nested virtualization is correctly false.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "GCE is a generic IaaS VM product; no first-party computer-use / GUI-agent action API is offered (browser/desktop access exists only via user-installed RDP/VNC, not a product API).",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/instances/schedule-instance-start-stop",
+      "quote": "Instance schedules let you start and stop virtual machine (VM) instances automatically. To use instance schedules, create a resource policy detailing the start and stop behavior ... Limit the run time of a VM: If you don't want to create resource policies, you can directly configure a VM to be automatically stopped or deleted when it reaches a specific time or duration.",
+      "note": "GCE's native automatic-stop features are calendar/time-based (fixed schedule) or a fixed max-runtime timer, not activity/idle detection. There is no first-party idle-based auto-stop.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://cloud.google.com/vpc/docs/firewalls",
+      "quote": "default-allow-rdp ingress 65534 0.0.0.0/0 allow tcp:3389 ... You can create similar firewall rules for networks other than the default network. ... Protocol and single port tcp:80 If you specify a protocol and a single destination port, the firewall rule applies to that...",
+      "note": "reviewed: proposed correction rejected (VPC firewall ingress rules can target any TCP port (e.g. tcp:443) exactly as the default rules target tcp:22/tcp:3389; combined with a public IPv4 (already true) this makes inbound HTTPS on port 443 straightforwardly supported. Corrected from false to true.)",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "No bundled/managed agent harness offering; GCE is a general-purpose VM product where any harness would have to be self-installed, same reasoning as harness_api.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/images/os-details",
+      "quote": "Operating system details | Compute Engine | Google Cloud Documentation",
+      "note": "The official OS-details page enumerates every supported public image family (AlmaLinux, CentOS, Debian, Rocky Linux, Ubuntu, Windows Server, etc.) and contains no macOS entry anywhere; Compute Engine (x86/ARM KVM hypervisor) does not offer macOS guests.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "Compute Engine is Google's own managed hyperscaler infrastructure; there is no self-hosted/on-prem distribution of the Compute Engine service itself.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "Compute Engine is itself the cloud infrastructure (like EC2/Azure VMs) — there is no bring-your-own-cloud deployment mode; it only runs inside Google Cloud.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://cloud.google.com/compute",
+      "quote": "Virtual Machines ... comparable to Amazon EC2 and Azure Virtual Machines.",
+      "note": "Compute Engine is a proprietary managed Google Cloud service, not open-source software.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cloud.google.com/billing/docs/how-to/export-data-bigquery",
+      "quote": "Cloud Billing export to BigQuery lets you export detailed Google Cloud billing data (including usage and costs) to BigQuery. You can then run SQL queries on the exported data to analyze your usage by resource, label, or project. The billing export includes columns for resource_id and labels, allowin",
+      "note": "granularity: per-resource; cost: yes; GCP supports querying billable usage (CPU-hours, memory-hours, costs) at the individual VM level via Billing Export to BigQuery with SQL queries, or programmatically through the Cloud Monitoring API to query metrics by resource ID or label. The granularity is per-resource (each instance) or per-label (custom labels applied to instances). Both quantities and costs are included in the export.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Council Bluffs",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "SC",
+      "city": "Myrtle Beach",
+      "provider_region": "us-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "us-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "The Dalles",
+      "provider_region": "us-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NV",
+      "city": "Las Vegas",
+      "provider_region": "us-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "UT",
+      "city": "Salt Lake City",
+      "provider_region": "us-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NJ",
+      "city": "Secaucus",
+      "provider_region": "us-east5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montreal",
+      "provider_region": "northamerica-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "northamerica-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "southamerica-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "europe-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "Brussels",
+      "provider_region": "europe-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Eemshaven",
+      "provider_region": "europe-west6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "europe-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Hamina",
+      "provider_region": "europe-north1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": "ENGLAND",
+      "city": "London",
+      "provider_region": "europe-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "europe-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Turin",
+      "provider_region": "europe-west9",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "europe-southwest1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "europe-west10",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Hanover",
+      "provider_region": "europe-west12",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Taipei",
+      "provider_region": "asia-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "asia-east2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "asia-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "asia-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Yokohama",
+      "provider_region": "asia-northeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "asia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "asia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": "MAHARASHTRA",
+      "city": "Mumbai",
+      "provider_region": "asia-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": "TELANGANA",
+      "city": "Hyderabad",
+      "provider_region": "asia-south2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "NSW",
+      "city": "Sydney",
+      "provider_region": "australia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "VIC",
+      "city": "Melbourne",
+      "provider_region": "australia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Dubai",
+      "provider_region": "me-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SA",
+      "state": null,
+      "city": "Riyadh",
+      "provider_region": "me-central1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://cloud.google.com/docs/geography-and-regions",
+  "locations_quote": "At a minimum, all regions will offer the following products at launch: Compute Engine, Google Kubernetes Engine, Cloud Storage, Persistent Disk, Cloud SQL, Virtual Private Cloud, Cloud VPN, Key Management Service, Cloud Identity and Secret Manager. ... A region consists of three or more zones housed",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,618 @@
+{
+  "id": "orkestr",
+  "name": "orkestr Sandboxes",
+  "url": "https://orkestr.eu/sandboxes",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "beta",
+      "label": "Pay-as-you-go sandbox (metered on actual use)",
+      "flags": [
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.051201,
+      "ram_gib_h": 0.017067,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        1,
+        2,
+        4
+      ],
+      "min_vcpu": 1,
+      "max_vcpu": 4,
+      "max_ram_gib": 8,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "orkestr.eu/pricing (Sandboxes tab, JS bundle, 2026-09-28): vCPU EUR 0.045/hour, RAM EUR 0.015/GiB-hour, storage EUR 0.10/GB-month; sizes small 1 vCPU/1 GB, medium 2 vCPU/4 GB, large 4 vCPU/8 GB ('cost shown at full utilization'). Metered 'per second, on actual usage - real on-CPU time and working-set RAM, not the provisioned size'. Converted at 1.1378 USD/EUR (ECB 2026-09-28). Prices in EUR, VAT applied where required."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": 0.11378,
+    "paused_ram_billed": null,
+    "snapshot_free_gib_account": 10
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "none",
+      "allowlist": "Curated 'restricted' mode: PyPI/pythonhosted, npm, Debian apt, GitHub/githubusercontent, model APIs (OpenAI, Anthropic, Google, Mistral, Cohere, Groq, Hugging Face).",
+      "gate": {
+        "kind": "verification",
+        "plan": "Pay as you go",
+        "usd": null,
+        "recurring": null
+      },
+      "evidence": [
+        {
+          "quote": "\"off\" (default) - no network at all.",
+          "url": "https://orkestr.eu/docs/sandboxes/networking"
+        },
+        {
+          "quote": "open (full egress, paid tier with verified billing)",
+          "url": "https://orkestr.eu/sandboxes"
+        },
+        {
+          "quote": "opt into a curated allowlist of dev hosts (PyPI, npm, GitHub, common LLM APIs), bring your own allowlist, or open egress when you need it.",
+          "url": "https://orkestr.eu/docs/sandboxes"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "trial_only": true,
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 3,
+      "max_session_h": 0.5,
+      "max_vcpu": 1,
+      "max_ram_gib": 1,
+      "sizes_allowed": null,
+      "note": "No card: 'EUR 5 credit, then it stops', 'Small only, 3 concurrent', '30-min sessions'. Trial only.",
+      "internet": "none"
+    },
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": 24,
+      "max_vcpu": 4,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "note": "Card on file: 'EUR 25 credit, then metered', all sizes, concurrency 'High' (number not published), sessions 'Up to 24 h', 10 snapshots, own spend cap.",
+      "internet": "full"
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Dedicated EU nodes, custom limits + SLA, audit logs, SSO. Custom price.",
+      "internet": "full"
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 28.445
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 24,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "domain",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": false,
+    "isolation": "dedicated-vm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Rates come from the Sandboxes tab of orkestr.eu/pricing (rendered from the site's JS bundle); the orkestr.eu/sandboxes page still says 'Published rates land once we have metered real workloads'. Treat as a published but early (beta) rate card. Billed on actual on-CPU time and working-set RAM, so idle sandboxes cost almost nothing. First 10 GB of held storage (snapshots + templates) free, then EUR 0.10/GB-month. Egress price unpublished; full egress needs a paid verified account.",
+    "Default network off; full egress needs paid verified account.",
+    "150–300 ms cold-start claims vary by page/template; no benchmark recorded.",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Unknown: reviewed pricing source does not explicitly establish VAT/tax inclusion.",
+    "Residency: Provider claims code, memory, snapshots and environment remain EU; Falkenstein DE, Helsinki FI, Roubaix FR; DPA available. Not independently audited.",
+    "Billing-basis conflict: the pricing FAQ says sandboxes bill actual on-CPU time and working-set RAM (idle almost free), but orkestr.eu/docs/sandboxes says each sandbox is 'metered per second of wall-clock time it's alive (whether or not the workload is busy)'. Idle-heavy estimates may be understated until the provider resolves this."
+  ],
+  "sources": [
+    "https://orkestr.eu/sandboxes",
+    "https://orkestr.eu/docs/sandboxes",
+    "https://orkestr.eu/pricing",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "Verified email earns starter credit, no card; card unlocks all sandbox sizes and paid metering.",
+    "tiers": null,
+    "notes": "Sandbox PAYG is independent of Platform subscription. Platform PR-preview concurrent deployments (1/5) are not Sandbox runtime quotas. No numeric new-account sandbox count or increase path found.",
+    "sources": [
+      "https://orkestr.eu/pricing",
+      "https://orkestr.eu/sandboxes"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 1,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/api-reference",
+      "quote": "on_timeout\tstring\tWhat happens at the deadline: kill (default) terminates the sandbox; pause snapshots it so a later /resume continues where it left off.",
+      "note": "Opt-in per sandbox at create (on_timeout=pause; default is kill). Triggered by the lifetime deadline; snapshot captures memory + disk (running processes resume). Pairs with auto_resume=true, which resumes automatically on the next exec/file call or preview-URL HTTP request. Free tier falls back to terminate when at its snapshot cap (1).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/api-reference",
+      "quote": "POST /v1/sandboxes/{id}/pause snapshots the sandbox and stops the compute meter. ... POST /v1/sandboxes/{id}/resume restores from the most recent snapshot for that sandbox. ... The snapshot is consumed by the resume - pause again to take a new one",
+      "note": "On-demand snapshot is pause-style: memory + disk captured (security page: 'the VM's memory and disk state are captured into a snapshot'), sandbox is suspended, and the snapshot is single-use, restoring the same sandbox only. No fork / boot-new-machines-from-snapshot documented; custom templates are built from a base image + recipe, not captured from a running sandbox. Retention 7 d free / 30 d carded / no expiry enterprise.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/claude-code",
+      "quote": "result = sbx.exec(\n    'npx claude -p \"Run the test suite and fix the first failing test\" '\n    \"--output-format json --dangerously-skip-permissions\",",
+      "note": "The official Claude Code guide drives the agent through the generic exec API (npm install, then claude -p / --resume via exec); no dedicated harness API. Separately, orkestr 'Workers' (preview) run orkestr's own ops agent on its hosted runtime with your model key (objective, skills, memory, approvals, run transcripts), but that is a platform-ops agent product, not a harness API for sandboxes.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/networking",
+      "quote": "When you pass allow_domains, those domains become the entire allowlist for that sandbox.",
+      "note": "Three modes per sandbox: off (default, no network device), restricted (HTTPS-only forward proxy with curated default allowlist or custom allow_domains; no raw sockets/DNS), open. Enforced by a provider-side proxy; allowlist can be baked into a template. Hostname-level only; 'Custom egress allowlist: yes' on all tiers (limits page), though API ref says '(paid plans)'.",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/networking",
+      "quote": "Entries are bare hostnames - no scheme, port, path or wildcard.",
+      "note": "Allowlist is hostname-only (HTTPS port 443); no method/path/header rules documented.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/networking",
+      "quote": "Pass preview_auth=True at create (previewAuth: true in JS) and the sandbox's preview URLs stop being public: every request must carry the minted preview_auth_token or the edge returns 401.",
+      "note": "Ports are exposed per port via get_host(port) at <port>-<id>.sbx.orkestr.run; public (unguessable URL) by default, token-gated with preview_auth. Needs networked mode + card on file. No IP allowlists documented.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Each sandbox is its own VM with its own kernel ('not a container sharing a host kernel'); recipe steps run as root and apt-get works at run time, so root is available. Egress policy is enforced outside the VM regardless (off = no NIC; restricted = proxy).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/security",
+      "quote": "Secrets you inject (as env vars or files) are visible to whatever code runs in that sandbox - including code a model wrote.",
+      "note": "Sandbox secrets are env vars/files inside the VM (kept in memory, persisted inside pause snapshots). The Claude Code guide passes ANTHROPIC_API_KEY as an env var. (Workers product keeps git credentials in the control plane, but that is not a sandbox egress proxy.)",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/volumes",
+      "quote": "A persistent volume is a named disk that survives a sandbox and follows you to the next one. Attach it and it mounts at /persist",
+      "note": "ext4 disk local to the host, checkpointed to EU object storage; default 10 GB, max 100 GB per volume; 1/10/50 volumes and 10 GB/200 GB/2 TB total per tier; billed GB-month on provisioned size; optional max_lifetime auto-destroy.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/volumes",
+      "quote": "A volume can back only one running (or paused) sandbox at a time. Attaching a volume that's already in use returns a 409 volume_in_use",
+      "note": "Single writer by design (ext4 RW); no read-only multi-attach or shared FS documented.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "dedicated-vm",
+      "source": "https://orkestr.eu/docs/sandboxes/security",
+      "quote": "Every sandbox is its own virtual machine with its own kernel, not a container sharing a host kernel. There is no shared container runtime and no syscall surface between tenants.",
+      "note": "Docs describe a per-sandbox VM with its own kernel/rootfs/network stack but never name the hypervisor (no Firecracker/cloud-hypervisor/QEMU mention found), so mapped to the generic dedicated-vm value.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/templates",
+      "quote": "Build once with a base image + a recipe (via the console, REST API, or MCP)... orkestr boots a short-lived build VM from your base image with a writable root filesystem, runs each recipe step in order, and captures the result as a new image",
+      "note": "Custom templates are base image + shell recipe, not an arbitrary imported Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes",
+      "quote": "orkestr Sandboxes are hardware-isolated, ephemeral Linux VMs you can spin up from any agent loop. Designed for AI agents that need to run untrusted code, build artifacts, run tests, or operate a stateful development environment",
+      "note": "not offered: outside the product's scope (headless code-exec sandbox, no VNC/RDP/desktop stream documented).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/base-images",
+      "quote": "Available bases: python-3.12, python-3.12-bare, code-interpreter, node-22, debian-12",
+      "note": "not offered: outside the product's scope. No managed/real browser is documented among base images or features.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes",
+      "quote": "orkestr Sandboxes are hardware-isolated, ephemeral Linux VMs you can spin up from any agent loop.",
+      "note": "not offered: outside the product's scope. No screenshot/click desktop-driving API found.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes",
+      "quote": "orkestr Sandboxes are hardware-isolated, ephemeral Linux VMs you can spin up from any agent loop.",
+      "note": "not offered: outside the product's scope (generic Linux code-exec sandbox, not a browser/scraping product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes",
+      "quote": "orkestr Sandboxes are hardware-isolated, ephemeral Linux VMs you can spin up from any agent loop.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://orkestr.eu/docs/sandboxes/data-residency",
+      "quote": "the sandbox fleet today runs in three regions across three countries and two providers: fsn1 Falkenstein, Germany - Hetzner Online GmbH; hel1 Helsinki, Finland - Hetzner Online GmbH; rbx Roubaix, France - OVH SAS",
+      "note": "Outbound traffic comes from Hetzner/OVH EU datacenter ranges; no residential/mobile IP option documented.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/cli",
+      "quote": "`orkestr sbx shell <id>` Line-buffered interactive exec loop against a running sandbox. Type commands, each runs via exec",
+      "note": "Access is via exec/run_code over the SDK, CLI, REST API or MCP - no SSH endpoint is documented anywhere in the sandbox docs.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/quickstart",
+      "quote": "`pause()` returns the sandbox id... Later, anywhere: sbx = Sandbox.resume(sandbox_id)",
+      "note": "Pause/resume restores the same sandbox from its own snapshot; no documented way to clone a sandbox into new, independent sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/api-reference",
+      "quote": "POST /v1/sandboxes/{id}/resume restores from the most recent snapshot for that sandbox.",
+      "note": "No forking API; resume always targets the same sandbox id, and pausing stops it rather than leaving it running while cloned.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/security",
+      "quote": "On pause: the VM's memory and disk state are captured into a snapshot stored on the host... The snapshot is consumed by the resume - pause again to take a new one",
+      "note": "Snapshot is memory+disk but single-use and resumes the same sandbox only; not a fork mechanism that boots new, independent running clones.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/python-sdk",
+      "quote": "auto_resume: When True, any exec or file call on a paused sandbox resumes it automatically first, then runs... and an HTTP request to one of its public preview URLs wakes it the same way, so a parked dev server comes back on the first browser hit.",
+      "note": "Opt-in per sandbox (default False).",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/volumes",
+      "quote": "A persistent volume is a named disk that survives a sandbox and follows you to the next one. Attach it and it mounts at /persist",
+      "note": "/workspace and /tmp are RAM-backed and lost on terminate; /persist volumes survive.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/python-sdk",
+      "quote": "on_timeout: What happens at the deadline: \"kill\" (default) terminates the sandbox; \"pause\" snapshots it so a later Sandbox.resume() continues where it left off. Paid tiers always pause; the free tier falls back to terminate at the snapshot cap.",
+      "note": "Behavior is a fixed countdown timeout (extendable via set_timeout) rather than true activity-based idle detection, but functionally auto-sleeps/terminates an unattended sandbox.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/limits",
+      "quote": "| Size | vCPU | Memory | Availability |\n| small | 1 vCPU | 1 GB RAM | default size |\n| medium | 2 vCPU | 4 GB RAM | paid tiers |\n| large | 4 vCPU | 8 GB RAM | paid tiers |",
+      "note": "Size is fixed at create time; no API to change vCPU/RAM of a running sandbox was found.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/claude-code",
+      "quote": "A plain npm install lands in the writable workspace and takes a few seconds. Skip this step entirely by baking the install into a custom template (step 6).",
+      "note": "Claude Code is documented as a guide you install yourself (npm install / exec), not a preinstalled harness template shipped by orkestr.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/workers",
+      "quote": "You give a Worker an objective and orkestr runs the agent for you - on demand, on a schedule, or in reaction to an event - driven by your own model. Every action is recorded.",
+      "note": "Workers is orkestr's own scoped ops/task agent (roles, skills, memory, approvals) driven via the console/API, distinct from the sandbox runtime and from bringing your own coding harness.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/base-images",
+      "quote": "python-3.12 - the default. Python 3.12 with pip, development headers and a C/C++ toolchain",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/base-images",
+      "quote": "node-22 - Node.js 22 with npm, a bundled Python and the build toolchain (so node-gyp native addons compile)",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/networking",
+      "quote": "Call sbx.get_host(port)... and you get back a hostname of the form <port>-<id>.sbx.orkestr.run",
+      "note": "Ports are exposed via hostname-based preview URLs, not a dedicated public IPv4 address per sandbox.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/networking",
+      "quote": "Every mode supports pause and resume - a networked sandbox's IP is held across the pause and restored on resume",
+      "note": "The IP is stable only for that one sandbox's own lifetime/pause-resume cycle; no documented account-level fixed outbound IP for allowlisting across sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/limits",
+      "quote": "| Size | vCPU | Memory | Availability |\n| small | 1 vCPU | 1 GB RAM |\n| medium | 2 vCPU | 4 GB RAM |\n| large | 4 vCPU | 8 GB RAM |",
+      "note": "not offered: outside the product's scope. Only CPU vCPU/RAM sizes are documented; no GPU size or option.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes",
+      "quote": "Sandboxes run a stripped-down Linux guest with one of the supported base images: Python 3.12 (full or bare), Node 22, or a real Debian 12",
+      "note": "not offered: outside the product's scope (Linux-only sandbox).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes",
+      "quote": "Sandboxes run a stripped-down Linux guest with one of the supported base images: Python 3.12 (full or bare), Node 22, or a real Debian 12",
+      "note": "not offered: outside the product's scope (Linux-only sandbox).",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/data-residency",
+      "quote": "orkestr is operated by WhiteCloud Project S.R.L., a company registered in Romania (EU)... Sandboxes are placed in one of our EU regions",
+      "note": "not offered: outside the product's scope. orkestr is a managed multi-tenant SaaS; no self-hosted/on-prem distribution documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/data-residency",
+      "quote": "Sandboxes are placed in one of our EU regions - you can pin one with the region parameter at create time, or let the control plane pick.",
+      "note": "not offered: outside the product's scope. Regions are orkestr's own EU datacenters (Hetzner/OVH), not customer cloud accounts.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://orkestr.eu/security",
+      "quote": "Security at orkestr... Every app deployed on orkestr is protected by multiple layers of security",
+      "note": "No OSI-license / open-source-core claim found anywhere in the docs, pricing, or security pages; proprietary managed platform.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://orkestr.eu/security",
+      "quote": "EU Hosting & GDPR: Your data never leaves the European Union... GDPR-compliant by design, Article 28 DPA on request.",
+      "note": "Compliance messaging covers only GDPR/EU residency; no SOC 2 attestation mentioned on the security, trust, or compliance pages.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://orkestr.eu/security",
+      "quote": "EU Hosting & GDPR: Your data never leaves the European Union... GDPR-compliant by design, Article 28 DPA on request.",
+      "note": "No HIPAA/BAA mention anywhere; compliance focus is GDPR-only.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://orkestr.eu/pricing",
+      "quote": "Enterprise ... Everything in Pro, plus: Dedicated single-tenant EU nodes, SSO / SAML + audit logs, 99.9% uptime SLA",
+      "note": "SSO/SAML is an Enterprise-plan feature of the platform account (which sandboxes run under), not available on Free/Pay-as-you-go.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/security",
+      "quote": "Every sandbox is its own virtual machine with its own kernel, not a container sharing a host kernel. There is no shared container runtime and no syscall surface between tenants.",
+      "note": "derived: each sandbox is a full VM with its own kernel and root access (recipe/build steps run as root, apt-get works on the debian-12 base), which is the condition the product itself states enables normal Linux tooling; running a container runtime (e.g. dockerd via apt-get install docker.io) is not blocked by anything documented, but no page explicitly confirms Docker/containers running inside a sandbox, so this is inferred rather than directly stated.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes",
+      "quote": "orkestr Sandboxes are hardware-isolated, ephemeral Linux VMs you can spin up from any agent loop. Designed for AI agents that need to run untrusted code, build artifacts, run tests, or operate a stateful development environment without touching your own infrastructure.",
+      "note": "not offered: outside the product's scope. Docs describe sandboxes as lightweight, ~200-300ms-boot ephemeral VMs for running code/scripts/builds, not as bare-metal-like environments exposing /dev/kvm for running further VMs/emulators inside; no page mentions nested virtualization or /dev/kvm passthrough.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://orkestr.eu/docs/sandboxes/base-images",
+      "quote": "The Python and Node bases are glibc-based, not musl. manylinux Python wheels and glibc-built Node native modules install and run without falling back to slow source builds - pip install and npm install behave the way they do on a normal Linux box.",
+      "note": "not offered: no ARM/aarch64 option is documented anywhere on the sandboxes product, docs, pricing, or base-images pages; only a single set of base images/architecture is offered from EU (Germany/Finland) data centers with no architecture selector in the create-sandbox API.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://orkestr.eu/docs/sandboxes/api-reference",
+      "quote": "GET /v1/sandboxes/{id}/metrics requires sandboxes:read. Returns the latest CPU and memory reading plus a rolling ~60s window of one-second samples (a sparkline in one call) and the sandbox's lifetime totals. The response includes lifetime: { cpu_seconds: X, gb_seconds: Y }.",
+      "note": "granularity: per-sandbox; cost: no; Billable usage is available per-sandbox via GET /v1/sandboxes/{id}/metrics, which returns cpu_seconds and gb_seconds (the billed quantities). Sandboxes can be listed and filtered by metadata using GET /v1/sandboxes?metadata[key]=value to group by project/tag. Individual metrics must be polled per sandbox id and aggregated by caller.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Falkenstein",
+      "provider_region": "de-falkenstein",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Helsinki",
+      "provider_region": "fi-helsinki",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Roubaix",
+      "provider_region": "rbx",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://orkestr.eu/docs/sandboxes/data-residency",
+  "locations_quote": "the sandbox fleet today runs in three regions across three countries and two providers: fsn1 Falkenstein, Germany - Hetzner Online GmbH; hel1 Helsinki, Finland - Hetzner Online GmbH; rbx Roubaix, France - OVH SAS",
+  "locations_checked": "2026-10-01"
+}

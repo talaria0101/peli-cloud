@@ -1,0 +1,610 @@
+{
+  "id": "clusy",
+  "name": "Clusy",
+  "url": "https://www.clusy.io/pricing",
+  "category": "dev-env",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity.",
+      "checkpoint_storage_gib": 5,
+      "checkpoint_retention": "3 days"
+    },
+    {
+      "name": "Plus",
+      "fee": 12,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 3,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": 16,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity.",
+      "checkpoint_storage_gib": 30,
+      "checkpoint_retention": "indefinite"
+    },
+    {
+      "name": "Pro",
+      "fee": 30,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 8,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": 32,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity.",
+      "checkpoint_storage_gib": 100,
+      "checkpoint_retention": "indefinite"
+    },
+    {
+      "name": "Max10x",
+      "fee": 90,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 12,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity.",
+      "checkpoint_storage_gib": 512,
+      "checkpoint_retention": "indefinite"
+    },
+    {
+      "name": "Max30x",
+      "fee": 200,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 24,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": 128,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity.",
+      "checkpoint_storage_gib": 2048,
+      "checkpoint_retention": "indefinite"
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 24,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "gpu_types": [
+      "T4",
+      "L4",
+      "A10",
+      "A100",
+      "H200"
+    ],
+    "regions": [
+      "us"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "isolation": "firecracker",
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Agent-native data science notebook, not a documented generic sandbox lifecycle API. Plans combine model usage and sandbox hardware allowances; absolute compute-hour allowance is unpublished. Higher usage multiples are not resource-hours.",
+    "Not fully priceable in ENGINE_CARD: unknown USD resource rates or machine shape. Null is not zero; do not rank as a free provider.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free."
+  ],
+  "sources": [
+    "https://www.clusy.io/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": 1,
+    "default_max_vcpu": null,
+    "default_max_gpus": 0,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Free 1; Plus 3; Pro 8; Max10x 12; Max30x 24; Enterprise higher limits by call.",
+    "notes": "Current pricing table publishes the previously missing paid concurrency ladder. 10 requires Max, 50/300/1,000 Enterprise. Free CPU-only; GPU-type access on higher plans is not a numeric aggregate GPU quota.",
+    "sources": [
+      "https://www.clusy.io/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 16,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "saves each live kernel, workspace files, and the package environment,",
+      "note": "Trigger: the 'leave' boundary (nobody connected and no agent run active, after 60 s grace; sandbox otherwise idles out after ~15 min). Kernel variables are pickled (unpicklable handles/connections/CUDA contexts excluded, 4 GiB cap per branch) plus workspace files and package list. CPU sandboxes pause and usually resume with memory present; GPU sandboxes are released and a fresh one restores the saved bundle. Single rolling restore point, not version history.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "You do not press Save. ... Saving every live kernel and the workspace takes real time, so it happens at these boundaries rather than after every cell. In particular, [fork/branching] does not create a durable checkpoint.",
+      "note": "Confirmed, not a contradiction. Clusy auto-checkpoints kernel state + workspace only at two fixed boundaries (Leave: nobody connected/no agent run active, after 60s grace; Transfer: hardware/RAM change with 'Transfer state'). There is no user- or API-triggered 'checkpoint now' action; the FAQ explicitly states 'It is not checkpointed after every cell or fork, which keeps execution and branching fast.' The 'fs' snapshot value (snapshot_auto=true) reflects this automatic boundary-triggered filesystem+kernel checkpoint, which is a distinct capability from on-demand snapshotting — so snapshot_on_demand=false stands alongside snapshot='fs' without contradiction.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "Sandbox types... Base, Machine learning, Documents & OCR, Web, APIs & scraping... All types are available on every plan.",
+      "note": "not offered: outside the product's scope — you pick from fixed preinstalled stack presets, not a custom Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "Every cell runs in an isolated sandbox with its own filesystem, Python and R sessions, and installed packages.",
+      "note": "not offered: outside the product's scope — this is a notebook kernel environment, not a general VM with device access.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "Web, APIs & scraping ... fastapi, flask, beautifulsoup4, yfinance, Playwright and Chromium",
+      "note": "A headless-browser-capable sandbox stack (Playwright/Chromium) is preinstalled for the Web sandbox type; not a GUI/streamed browser.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "Web, APIs & scraping ... Playwright and Chromium",
+      "note": "not offered: outside the product's scope — a plain Playwright/Chromium install, no stealth/anti-fingerprinting feature documented",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "Every cell runs in an isolated sandbox with its own filesystem, Python and R sessions, and installed packages.",
+      "note": "not offered: outside the product's scope — no SSH/shell access is documented anywhere; access is only via the notebook/agent UI.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/branches",
+      "quote": "Fork a branch at its latest cell, keep your loaded data and fitted models, and run several ideas side by side.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "A fork copies the parent namespace directly to another kernel in the same running sandbox. That makes it fast, but the new branch becomes durable only when the project next reaches a boundary.",
+      "note": "Forking copies a live kernel into a new kernel in the same running sandbox without stopping the parent.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "A fork copies the parent namespace directly to another kernel in the same running sandbox.",
+      "note": "Fork copies the live in-memory kernel namespace (DataFrames, fitted models, variables), not just files.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "saves each live kernel, workspace files, and the package environment, checks whether anyone returned, and pauses the sandbox only if the pro[ject stays idle]",
+      "note": "CPU sandboxes pause and usually resume with memory present; GPU sandboxes are released and a fresh one restores the saved bundle.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "60 sec when you return CPU · paused GPU · released ... RESUME OR RESTORE",
+      "note": "Returning to a paused/released project automatically resumes or restores it; no explicit start API call needed.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/guides/data-and-files",
+      "quote": "Workspace is the sandbox filesystem (/home/user), the kernel's working directory. This is the only filesystem your code can see.",
+      "note": "Workspace files persist via the checkpoint/restore mechanism across leave boundaries.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/guides/data-and-files",
+      "quote": "Datasets is project storage... Workspace is the sandbox filesystem (/home/user), the kernel's working directory.",
+      "note": "not offered: outside the product's scope — storage model is project Datasets storage + sandbox workspace, not attachable block volumes.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "one project cannot see another project's sandbox.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "Once both reach zero, Clusy waits 60 seconds and then: stops accepting new cells, gives running cells up to 30 seconds to finish, then interrupts any that remain, saves each live kernel, workspace files, and the package environment... and pauses the sandbox",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/state-persistence",
+      "quote": "Transfer: You change hardware or RAM and choose Transfer state",
+      "note": "Changing hardware/RAM requires an explicit 'Transfer state' action that saves and restores into a new sandbox, not a live in-place resize.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.clusy.io/llms-full.txt",
+      "quote": "pair your machine to run turns through your own Claude Code or Codex CLI with the local runner",
+      "note": "Clusy's own agent runs the notebook; Claude Code/Codex are only usable via a 'local runner' that pairs YOUR OWN machine, not a coding-harness template preinstalled inside Clusy's sandbox.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs.",
+      "note": "not offered: outside the product's scope — no API to drive an external coding harness inside the sandbox is documented.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs.",
+      "note": "No public API to drive Clusy's own notebook agent programmatically is documented; access is via the app UI/chat only.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/models/mcp-servers",
+      "quote": "An MCP server you add here is called from Clusy's cloud: the agent opens an outbound HTTPS connection to your URL and speaks MCP over it.",
+      "note": "Clusy is an MCP client (consumes third-party MCP servers for its agent); it does not ship its own MCP server for controlling its sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "its own filesystem, Python and R sessions, and installed packages.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "its own filesystem, Python and R sessions, and installed packages.",
+      "note": "not offered: outside the product's scope — only Python and R kernels are documented; no Node.js runtime is mentioned.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.clusy.io/security",
+      "quote": "Network segmentation separates edge, application, and data layers. Only required services are exposed.",
+      "note": "not offered: outside the product's scope — a notebook sandbox has no documented per-machine public IPv4.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.clusy.io/security",
+      "quote": "Network segmentation separates edge, application, and data layers. Only required services are exposed.",
+      "note": "not offered: outside the product's scope — no exposed-port/URL feature is documented for reaching services on the sandbox.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://www.clusy.io/security",
+      "quote": "Network segmentation separates edge, application, and data layers. Only required services are exposed.",
+      "note": "not offered: outside the product's scope — no ingress-control feature (IP allowlists, private URLs) is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/models/mcp-servers",
+      "quote": "localhost, private IP ranges, and cloud metadata addresses are rejected outright.",
+      "note": "This is a fixed platform-side SSRF guard for MCP server URLs, not a customer-configurable egress allow/deny list for the sandbox itself.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.clusy.io/security",
+      "quote": "Only required services are exposed.",
+      "note": "not offered: outside the product's scope — no per-path/method egress control is documented.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "Every cell runs in an isolated sandbox with its own filesystem, Python and R sessions, and installed packages.",
+      "note": "No root/shell access is documented inside the sandbox (only a Jupyter kernel), so nftables/iptables control cannot be assumed.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/guides/integrations",
+      "quote": "AGENT optional: Firecrawl key ... A KEY OPENS THE DOOR GITHUB ... The header is the whole of the authentication. Clusy sends it on every request it makes to that server",
+      "note": "Integration/MCP credentials are stored and used by Clusy's cloud on the user's behalf (headers), but this is scoped to named first-party integrations and user-added MCP servers, not a general any-HTTP-API credential-injection proxy.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs.",
+      "note": "not offered: outside the product's scope — sandboxes are Linux-based Python/R kernels; no Windows machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.clusy.io/pricing",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks.",
+      "note": "not offered: outside the product's scope — no OSI-licensed core product or public source repo is advertised.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.clusy.io/security",
+      "quote": "This page summarizes the controls we use to keep customer data, training artifacts, and platform metadata safe. Detailed documentation is available under NDA.",
+      "note": "No HIPAA/BAA mention anywhere on the security page.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 24,
+      "source": "https://docs.clusy.io/docs/reference/limits",
+      "quote": "A GPU sandbox has an absolute lifetime of 24 hours that a running cell cannot extend.",
+      "note": "GPU sandboxes are capped at 24h; CPU sandboxes are governed by the idle/leave boundary rather than a fixed session cap, but 24h is the documented hard ceiling for a running session.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "the stack (also called the sandbox type), which decides what software is preinstalled ... Base, Machine learning, Documents & OCR, Web, APIs & scraping",
+      "note": "not offered: outside the product's scope — Clusy is a fixed-image Jupyter-kernel notebook sandbox (locked software stack per project) with no documented shell/Docker access; no Docker/containers-inside-sandbox capability is mentioned anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.clusy.io",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks.",
+      "note": "not offered: outside the product's scope — Clusy is a notebook agent IDE with no exposed networking/egress configuration surface (no public IPv4, ingress, or egress-allowlist features either, per its docs); a fixed outbound IP is not part of what the product offers.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/concepts/runtime",
+      "quote": "CPU is the default and is fixed at 8 vCPUs and 8 GiB of RAM ... GPUs are available on paid plans ... T4, L4, A10, L40S, A100, H100, H200",
+      "note": "not offered: outside the product's scope — the hardware menu is a fixed CPU tier plus a fixed list of x86-hosted datacenter GPUs; no architecture choice (ARM/Graviton/Apple Silicon) is offered or mentioned.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/reference/faq",
+      "quote": "Where does code run? In an isolated sandbox, not on your computer.",
+      "note": "not offered: outside the product's scope — Clusy is exclusively a hosted cloud SaaS notebook IDE; no self-hosted/on-prem deployment option is documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.clusy.io",
+      "quote": "Clusy is the AI IDE for Jupyter notebooks. An agent writes and runs your cells on cloud CPUs and GPUs",
+      "note": "not offered: outside the product's scope — code always runs on Clusy's own managed cloud CPUs/GPUs; no bring-your-own-cloud-account deployment is mentioned in pricing, docs, or the security page.",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "firecracker",
+      "source": "https://www.clusy.io/privacy-policy",
+      "quote": "Your code runs on third party infrastructure, E2B for CPU and Modal for GPU.",
+      "note": "derived: Clusy's own privacy policy names E2B as the CPU sandbox executor; E2B's own documentation states its sandboxes are isolated via Firecracker microVMs. Clusy's own pages never name the hypervisor/isolation technology directly, so this is one inferential step from the provider's stated subprocessor.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.clusy.io/security",
+      "quote": "This page summarizes the controls we use to keep customer data, training artifacts, and platform metadata safe. Detailed documentation is available under NDA.",
+      "note": "not offered: the security page describes internal controls (access management, monitoring, vendor review, etc.) in detail but never claims a SOC 2 Type I/II attestation, and no compliance/trust-center page lists one. Absence across the dedicated security page plus privacy/terms pages is the basis for false rather than null.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.clusy.io/privacy-policy",
+      "quote": "We are based in the United States and our infrastructure runs mainly in the United States. ... Hosting for the API and agent, container images, object storage for your files, outputs and saved kernel state, and secret storage. United States (us-east-1).",
+      "note": "All primary infrastructure (AWS us-east-1) and named subprocessors (E2B, Modal, Supabase, etc.) are listed under 'United States'; no EU region option for sandboxes/data is offered, and EEA/UK/Switzerland customers are told their data is transferred out of their country via SCCs, not kept in-region.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.clusy.io/docs/account/usage",
+      "quote": "Settings → Billing shows the live meter and category breakdown.",
+      "note": "granularity: account-only; cost: no; Usage is displayed in the Clusy UI as an in-app dashboard showing Models, Sandbox, and Web tools consumption. No REST API, SDK, or CLI endpoint is documented for programmatic access to usage data per sandbox or project.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": false
+    }
+  ],
+  "locations_source": "https://www.clusy.io/privacy-policy",
+  "locations_quote": "We are based in the United States and our infrastructure runs mainly in the United States. Hosting for the API and agent, container images, object storage for your files, outputs and saved kernel state, and secret storage. United States (us-east-1).",
+  "locations_checked": "2026-10-01"
+}

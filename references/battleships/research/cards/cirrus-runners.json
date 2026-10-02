@@ -1,0 +1,368 @@
+{
+  "id": "cirrus-runners",
+  "name": "Cirrus Runners",
+  "url": "https://cirrus-runners.app/pricing/",
+  "category": "macos",
+  "isolation": "apple-vm",
+  "modes": [
+    {
+      "key": "always-on-commit",
+      "label": "$150/month per concurrent runner, unlimited minutes (monthly)",
+      "flags": [
+        "legacy"
+      ],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "macOS M4 Pro runner (4 vCPU / 16 GB)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.205479,
+          "month_cap": 150
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": 150,
+      "commit_note": "Subscription per concurrent runner slot; change any time. Unlimited minutes.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Flat $150/month per runner (month_cap); hour = 150/730 for reference. Linux x86 (16 vCPU/48 GB), Linux arm64 (8 vCPU/24 GB) and Linux GPU runners are the same $150 per runner.",
+      "product_class": "ci-runner"
+    },
+    {
+      "key": "reserved-1y",
+      "label": "Annual subscription (15% discount)",
+      "flags": [
+        "commit",
+        "legacy"
+      ],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "macOS M4 Pro runner (4 vCPU / 16 GB)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.174658,
+          "month_cap": 127.5
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": 127.5,
+      "commit_note": "'15% Annual Discount for 12 months subscription commitment' -> $127.50/runner/month.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Derived: $150 x 0.85.",
+      "product_class": "ci-runner",
+      "commit_term": "1-year"
+    },
+    {
+      "key": "always-on-commit-linux",
+      "label": "Linux x86 runner, $150/month flat",
+      "flags": [
+        "legacy"
+      ],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Linux x86 runner (16 vCPU / 48 GB, KVM)",
+          "vcpu": 16,
+          "ram_gib": 48,
+          "disk_gib": null,
+          "hour": 0.205479,
+          "month_cap": 150
+        },
+        {
+          "name": "Linux arm64 runner (8 vCPU / 24 GB)",
+          "vcpu": 8,
+          "ram_gib": 24,
+          "disk_gib": null,
+          "hour": 0.205479,
+          "month_cap": 150
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": 150,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Same flat $150/month per runner as macOS (pricing page 2026-09-28). The Linux GPU runner default class (xl) is 16 CPUs / 48 GB / Nvidia RTX 4000 / 100 GB and occupies 2.00 concurrency = $300/month (setup page; the pricing page still says 8 vCPU / 24 GB for $150); not encoded.",
+      "product_class": "ci-runner"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false
+  },
+  "plans": [
+    {
+      "name": "Per-runner subscription",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Priority Support included from 20 runners; monthly billing, cancel anytime, no refunds; Annual (15%) and Nonprofit (50%) discounts are mutually exclusive and applied by support on request."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": true,
+    "arm64": true,
+    "gpu": true,
+    "gpu_types": [
+      "RTX 4000"
+    ],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": false,
+    "docker_inside": null,
+    "nested_virt": true,
+    "root": null,
+    "systemd": false,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": null,
+    "static_egress_ip": null,
+    "private_network": false,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": null,
+    "soc2": true,
+    "hipaa": null,
+    "sso": null,
+    "lang_python": null,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": null,
+    "wake_on_request": null,
+    "live_resize": null,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": null,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Discontinued or closed to new customers, confirmed on the live site 2026-09-29. Pricing page unchanged: $150/month per runner, unlimited minutes, 15% annual (12-month) / 50% nonprofit. Home page still says 'Try Cirrus Runners for free' and shows the calculator, but the official Cirrus Labs announcement (cirruslabs.org, 2026-04-07) says no new customers; Cirrus CI shut down 2026",
+    "GitHub Actions runners only; a runner slot runs one job at a time, so 50 concurrent jobs need 50 slots = $7,500/month regardless of hours.",
+    "Engine encodes it as always-on: only priced for always-on instances; for bursty CI the flat fee per concurrency slot is what you pay.",
+    "Low-priority tasks can queue behind the subscription's concurrency. No Windows.",
+    "Cirrus Labs joined OpenAI (announced 2026-04-07); Cirrus Runners no longer accepts new customers, existing customers are served through their contract periods. The pricing page is stale marketing."
+  ],
+  "sources": [
+    "https://cirrus-runners.app/pricing/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Subscription purchase; special KYC requirements not published.",
+    "tiers": "Buy a subscription per concurrent runner; change subscription in pricing page or by email to sales.",
+    "notes": "Concurrency follows purchased runner quantity, so no universal new-account instance count. Unlimited minutes is not unlimited concurrent machines. Trial allowance and maximum self-serve quantity not established.",
+    "sources": [
+      "https://cirrus-runners.app/pricing/",
+      "https://cirrus-runners.app/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 2,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 4
+  },
+  "status": "closed to new customers; existing contracts served until they end",
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cirrus-runners.app/",
+      "quote": "Every job is executed in a reproducible isolated environment which is completely destroyed after the job is finished.",
+      "note": "Single-use VM per GitHub Actions job; nothing is saved when it ends.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://cirrus-runners.app/setup/",
+      "quote": "Cirrus Runners execute each workflow job in a single use virtual machine.",
+      "note": "No snapshot/checkpoint API or UI; runners are ephemeral and boot only from Cirrus-provided images (ghcr.io/cirruslabs/*), not user snapshots.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cirrus-runners.app/setup/",
+      "quote": "In order for Cirrus Runners to be used by your GitHub Actions workflow jobs, specify a desired image in the runs-on property:",
+      "note": "GitHub Actions runner service only; jobs are driven by GitHub Actions workflows, no agent-harness API.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://cirrus-runners.app/setup/",
+      "quote": "sudo xcodes select 16.2",
+      "note": "Full VMs (macOS on Tart/Apple Virtualization, Linux on KVM) with passwordless sudo, so pf/iptables/nftables inside the VM should work. Derived, not documented.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "No Cirrus secret feature; secrets are GitHub Actions secrets exposed to job steps as env vars/inputs inside the VM.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://cirrus-runners.app/setup/",
+      "quote": "Each Cirrus Runner you subscribe to comes with 10GB of storage space. Files in this storage are automatically deleted after 100 days to make room for new ones.",
+      "note": "Only a fixed per-class local disk (50-400 GB) plus the Omni Cache HTTP cache storage (GitHub Actions cache v2 / Bazel / Gradle / Docker layer cache protocols, served by a local sidecar). No attachable volumes.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://cirrus-runners.app/setup/",
+      "quote": "Omni Cache is a local sidecar cache server that supports the GitHub Actions cache v2 protocol and build system protocols like Bazel.",
+      "note": "The cache storage is shared across repositories but accessed via cache protocols, not mounted as a shared filesystem.",
+      "checked": "2026-09-29"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://cirrus-runners.app/",
+      "quote": "Unlimited monthly usage for a fixed price. No hidden fees. No surprises.",
+      "note": "granularity: account-only; cost: no; Cirrus Runners bills on a flat $150/month per concurrent runner subscription, not based on usage. No public API exposes usage metrics by sandbox or resource; usage is only viewable through their private dashboard UI. Service is closed to new customers as of 2026-04-07.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://cirrus-runners.app/pricing/",
+  "locations_quote": "Every job is executed in a reproducible isolated environment which is completely destroyed after the job is finished.",
+  "locations_checked": "2026-10-01"
+}

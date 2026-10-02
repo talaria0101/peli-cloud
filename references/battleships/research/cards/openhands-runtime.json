@@ -1,0 +1,575 @@
+{
+  "id": "openhands-runtime",
+  "name": "OpenHands Remote Sandbox / Cloud",
+  "url": "https://docs.openhands.dev/openhands/usage/sandboxes/remote",
+  "category": "dev-env",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "cloud",
+      "label": "Managed OpenHands Cloud",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "OpenHands Cloud bundles the sandbox runtime ('out-of-the-box runtime support'); no vCPU/RAM/hour meter is published. Billing = LLM usage at cost (no markup) or BYOK. Not comparable to per-hour sandbox pricing."
+    },
+    {
+      "key": "remote-self-host",
+      "label": "Remote agent server on own infrastructure",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Individual",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Free SaaS tier, 1 user, max 10 conversations per day. Sandbox/runtime compute is not metered separately; you pay only LLM usage (BYOK, or the OpenHands LLM provider at cost via prepaid credits). A concurrency cap exists but is unpublished (older conversations are paused)."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "concurrency": null,
+      "note": "Custom pricing; SaaS or self-hosted in your VPC; 'Unlimited concurrent convos per user'; SAML/SSO; multi-user RBAC; centralized team billing."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 12,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "us"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "ingress_rules": true,
+    "secret_proxy": "ai-only",
+    "isolation": "container",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "volume_shared": false,
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "volume_attach": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "OpenHands remote is a configurable backend/protocol, not always one vendor. Managed OpenHands Cloud is a public product; legacy remote runtime API pricing should not be assumed current.",
+    "Not fully priceable in ENGINE_CARD: unknown USD resource rates or machine shape. Null is not zero; do not rank as a free provider.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free.",
+    "Runtime API (runtime.all-hands.dev / runtime.eval.all-hands.dev) is the raw remote-sandbox service, key-gated, intended for benchmark evaluation; no public pricing. Do not model it as a self-serve sandbox product.",
+    "Organizations (shared credit pool across members) require a commercial Cloud subscription or Enterprise via sales; the Sept 2025 '$20/month' Cloud subscription announced in the blog no longer appears on the pricing page (Individual is now Free; unchanged in Wayback since at least 2026-05-02).",
+    "Self-hosted Enterprise: idle sandboxes are paused after a configurable idle time and deleted after a configurable deletion time; a single running session is force-paused after 12 hours (not configurable). Sandboxes run on a Kubernetes Sysbox node pool (min 4 vCPU per node)."
+  ],
+  "sources": [
+    "https://docs.openhands.dev/openhands/usage/runtimes/remote",
+    "https://github.com/OpenHands/software-agent-sdk/tree/main/openhands-workspace"
+  ],
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 5
+  },
+  "fleet": {
+    "default_max_instances": null,
+    "raise": "ticket",
+    "tiers": "Individual: 1 user, 10 conversations/day, unpublished concurrent-conversation cap (older conversations get paused); Enterprise: unlimited concurrent conversations per user.",
+    "sources": [
+      "https://docs.openhands.dev/openhands/usage/cloud/cloud-api.md",
+      "https://www.openhands.dev/pricing"
+    ]
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "After a conversation has been idle (no agent or user activity) for this long, its sandbox is **paused**, releasing CPU and memory. Activity resets the idle timer, so an actively-working agent is not paused for idleness. A paused conversation is resumed automatically on next access.",
+      "note": "Idle-pause (and a forced pause after 12 h of running) keeps the workspace (PVC) and resumes it automatically, but processes/memory are released. That is a persistent workspace disk, not a state snapshot. The runtime-api changelog mentions an internal 'snapshot_and_delete_idle_pvcs' cleanup job and an internal workspace archive taken at deletion ('not directly accessible to users'). These are storage housekeeping, not a user-facing snapshot/restore.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.openhands.dev/openhands/usage/api/v1.md",
+      "quote": "**Sandboxes**: list/start/pause/resume the execution environments that power conversations.",
+      "note": "The V1 sandbox API has only create/search/get/pause/resume/delete. There is no snapshot, checkpoint or template-from-sandbox endpoint. The SDK's 'Fork a Conversation' copies the conversation history, not the machine state. Custom images come from sandbox specs/Docker images.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "| Send a follow-up message | `POST /api/v1/app-conversations/{conversation_id}/send-message` |\n| Read events | `GET /api/v1/conversation/{conversation_id}/events/search` |",
+      "note": "Harness: the OpenHands agent (plus ACPAgent via the SDK/agent-server). The Cloud/Enterprise V1 REST API starts a conversation with a prompt (POST /api/v1/app-conversations, with a streaming stream-start variant), sends follow-ups, reads events, searches/lists conversations, downloads the trajectory, and pauses/resumes the sandbox. The Agent Server inside each sandbox also exposes HTTP/WebSocket conversation and event APIs (Python SDK: OpenHandsCloudWorkspace / APIRemoteWorkspace). The API docs name no third-party harnesses such as Claude Code or Codex (ACP agents only via the SDK).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/docker-in-sandbox.md",
+      "quote": "Controlling where sandboxes can reach on your *wider* network is governed by where you place the OpenHands Enterprise instance. Because the internal Kubernetes layer is managed as part of the appliance, the lever you own is the network around it: use your VPC and subnet placement, security groups, or on-premises firewall rules to constrain the instance's egress",
+      "note": "There are no per-sandbox egress controls in OpenHands Cloud or Enterprise. A self-hosted Enterprise install can only restrict egress for the whole instance, using your own VPC/security groups/firewall. The managed Cloud documents no egress controls at all.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.openhands.dev/sdk/guides/agent-server/cloud-workspace.md",
+      "quote": "sending your Cloud API key in the `Authorization` header plus the sandbox's `X-Session-API-Key`. That session key is issued by OpenHands Cloud for the running sandbox",
+      "note": "Each sandbox's agent-server API is reachable only with a per-sandbox session API key. VS Code is reached through a tokenized URL (/api/vscode/url). The remote-sandbox page says only 'Remote sandboxes may expose additional service URLs (e.g., VS Code, app ports) depending on the provider'. No IP allowlist or per-port public/private controls are documented.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://docs.openhands.dev/openhands/usage/llms/openhands-llms.md",
+      "quote": "The `openhands/` prefix tells the SDK to automatically route requests to the OpenHands LLM proxy—no need to manually set a base URL.",
+      "note": "Only the OpenHands LLM provider acts as a proxy. It is a LiteLLM gateway (llm-proxy.app.all-hands.dev), so the upstream model keys stay out of the sandbox, but an OpenHands LLM key is still used inside. Custom secrets are plain env vars: 'All custom secrets are automatically exported as environment variables in the agent's runtime environment' (secrets-settings). SDK LookupSecret values are 'resolved lazily by the agent-server inside the sandbox'. Output masking exists, but there is no credential-injecting proxy for arbitrary HTTP, git, databases or SSH.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://docs.openhands.dev/enterprise/docker-in-sandbox.md",
+      "quote": "each sandbox runs under a hardened container runtime that provides kernel-level isolation between the agent's workload and the host node... Root inside a nested container is not root on the node... The isolation runtime is chosen by the operator through a Kubernetes RuntimeClass",
+      "note": "Sandboxes are Kubernetes pods (one pod per sandbox) using a selectable hardened container RuntimeClass (the admin console exposes a 'Sandbox Isolation' setting, e.g. Sysbox-style user-namespace remapping), not a per-tenant hypervisor VM. Classified as shared-kernel container isolation with strong hardening, not firecracker/kata/gvisor/VM.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/custom-sandbox-image.md",
+      "quote": "Custom sandbox images let you prebake the repository, dependencies, compiled output, and test harness your agents need... Publish the image to a registry reachable from your OpenHands cluster.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/docker-in-sandbox.md",
+      "quote": "Agents in OpenHands Enterprise can run a Docker daemon inside their own sandbox... Docker is already installed in the standard Enterprise sandbox image, and the agent will start the Docker daemon the first time it needs it.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/vm-install/admin-console-configuration.md",
+      "quote": "`Enable /dev/kvm passthrough (QEMU/KVM)` | Makes host KVM acceleration available inside sandboxes. The node must expose `/dev/kvm`.",
+      "note": "Self-hosted Enterprise admin console setting; requires the underlying node to expose /dev/kvm.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.openhands.dev/openhands/usage/sandboxes/remote",
+      "quote": "A remote sandbox runs the agent server in a remote execution environment instead of on your local machine.",
+      "note": "not offered: outside the product's scope — the sandbox exposes a terminal/file-editor/browser-tool agent workspace (plus a VS Code URL); no VNC/RDP graphical desktop is documented.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": true,
+      "source": "https://docs.openhands.dev/sdk/guides/agent-browser-use.md",
+      "quote": "The BrowserToolSet integration enables your agent to interact with web pages through automated browser control. Built on top of browser-use, it provides capabilities for navigating websites, clicking elements, filling forms, and extracting content",
+      "note": "Managed, real (Chromium-based via browser-use/Playwright) browser tool available to the agent inside the sandbox.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.openhands.dev/sdk/guides/agent-browser-use.md",
+      "quote": "The BrowserToolSet integration enables your agent to interact with web pages through automated browser control.",
+      "note": "not offered: outside the product's scope — browser interaction is DOM/action-based (browser-use), and there is no documented desktop screenshot+click computer-use API (no desktop/GUI exists to drive).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.openhands.dev/sdk/guides/agent-browser-use.md",
+      "quote": "The BrowserToolSet integration enables your agent to interact with web pages through automated browser control.",
+      "note": "not offered: outside the product's scope — no stealth/fingerprinting-evasion capability is documented for the coding-agent browser tool.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.openhands.dev/sdk/guides/agent-browser-use.md",
+      "quote": "The BrowserToolSet integration enables your agent to interact with web pages through automated browser control.",
+      "note": "not offered: outside the product's scope — no built-in CAPTCHA-solving capability is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://app.vanta.com/openhands.dev/trust/an0kgh9goh7xyqkhsb6tlp",
+      "quote": "Google Cloud Platform • Cloud provider • us-central1",
+      "note": "Managed OpenHands Cloud sandboxes run on Kubernetes (GCP-hosted per the trust-center subprocessor list); outbound traffic is ordinary datacenter/cloud IP space, not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.openhands.dev/openhands/usage/sandboxes/remote",
+      "quote": "Remote sandboxes may expose additional service URLs (e.g., VS Code, app ports) depending on the provider.",
+      "note": "No documented SSH-into-sandbox feature; access to the sandbox is via the Agent Server HTTP/WebSocket API and tokenized service URLs (e.g. VS Code), not SSH. The only SSH references in the docs are about SSH-ing into your own self-hosting VM or SSH git remotes.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.openhands.dev/openhands/usage/api/v1.md",
+      "quote": "**Sandboxes**: list/start/pause/resume the execution environments that power conversations.",
+      "note": "No snapshot/checkpoint or template-from-sandbox endpoint exists (create/search/get/pause/resume/delete only). Pausing releases CPU/memory but keeps the PVC; there is no user-facing memory or filesystem snapshot/restore-to-new-machine capability.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.openhands.dev/sdk/guides/convo-fork.md",
+      "quote": "Fork a Conversation: Branch off an existing conversation for follow-up exploration without contaminating the original.",
+      "note": "'Fork' in OpenHands clones the conversation history/state, not the sandbox machine; there is no API to clone a running sandbox into a new one.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.openhands.dev/sdk/guides/convo-fork.md",
+      "quote": "Fork a Conversation: Branch off an existing conversation for follow-up exploration without contaminating the original.",
+      "note": "Same reasoning as fork: conversation-level branching only, not a running-machine clone.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.openhands.dev/sdk/guides/convo-fork.md",
+      "quote": "Fork a Conversation: Branch off an existing conversation for follow-up exploration without contaminating the original.",
+      "note": "No machine cloning/snapshot feature exists at all, so a memory-preserving fork is not offered.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "A paused conversation is resumed automatically on next access.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "After a conversation has been idle... for this long, its sandbox is paused, releasing CPU and memory... A paused conversation is resumed automatically on next access.",
+      "note": "Each sandbox's filesystem is backed by a Kubernetes PersistentVolumeClaim that survives pause/resume; only when the 'Deletion Time' elapses is the storage permanently deleted.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "A sandbox can contain one conversation or several, depending on placement... Two conversations in the same sandbox... share the sandbox's filesystem, credentials, compute limits, and failure domain.",
+      "note": "Filesystem sharing only happens between conversations placed in the same single sandbox; no mechanism shares one volume across multiple independently-running sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "Idle Time (seconds) — After a conversation has been idle (no agent or user activity) for this long, its sandbox is paused, releasing CPU and memory.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/vm-install/admin-console-configuration.md",
+      "quote": "`Memory Request` | Memory reserved for each sandbox. | `Memory Limit` | Maximum memory available to each sandbox. | `CPU Request` | CPU reserved for each sandbox. | `CPU Limit` | Maximum CPU available to each sandbox.",
+      "note": "CPU/RAM are fixed, deployment-wide admin settings applied per new sandbox; no documented API to change a single running sandbox's CPU/RAM without recreating it.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "Start a conversation | `POST /api/v1/app-conversations` |",
+      "note": "not offered: outside the product's scope — the first-party API drives OpenHands' own coding agent (already captured by harness_api); there is no separate first-party browser/computer-use/research task-agent API distinct from the coding harness.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.openhands.dev/sdk/arch/mcp.md",
+      "quote": "The MCP Integration system enables agents to use external tools via the Model Context Protocol (MCP). It provides a bridge between MCP servers and the Software Agent SDK's tool system",
+      "note": "OpenHands acts as an MCP client that connects to external MCP servers; it does not ship its own MCP server for controlling its sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/custom-sandbox-image.md",
+      "quote": "ghcr.io/openhands/agent-server:<release>-python, which already includes Python and Node.js.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/custom-sandbox-image.md",
+      "quote": "ghcr.io/openhands/agent-server:<release>-python, which already includes Python and Node.js.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/vm-install/admin-console-configuration.md",
+      "quote": "`Sandbox Routing Mode` | Uses subdomains or another supported routing mode for sandbox traffic.",
+      "note": "Sandbox traffic is routed by subdomain/ingress and tokenized service URLs (e.g. VS Code); no documented per-sandbox public IPv4 address.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/vm-install/admin-console-configuration.md",
+      "quote": "`Sandbox Routing Mode` | Uses subdomains or another supported routing mode for sandbox traffic.",
+      "note": "Sandboxes expose additional service URLs (VS Code, app ports) reachable over HTTPS via subdomain routing plus per-sandbox session/token auth.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/docker-in-sandbox.md",
+      "quote": "Controlling where sandboxes can reach on your wider network is governed by where you place the OpenHands Enterprise instance... use your VPC and subnet placement, security groups, or on-premises firewall rules to constrain the instance's egress",
+      "note": "Only whole-instance network placement/firewalling is documented; no per-sandbox HTTP method/path-level egress rule feature exists.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/docker-in-sandbox.md",
+      "quote": "Sandbox processes run as a non-root user, and nested containers are confined by user namespaces. Root inside a nested container is not root on the node.",
+      "note": "Sandboxes are unprivileged, non-root Kubernetes pods (not a full VM/microVM with true root), so guest-side nftables/iptables control of the sandbox's own network namespace is not guaranteed.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.openhands.dev/openhands/usage/how-to/cli-mode.md",
+      "quote": "`--gpu` | Enable GPU support via nvidia-docker",
+      "note": "not offered: outside the product's scope for the managed/remote sandbox — the documented `--gpu` flag is for the local `openhands serve` CLI using your own machine's NVIDIA GPU via nvidia-docker, not a GPU sandbox offered by OpenHands Cloud or Enterprise.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.openhands.dev/openhands/usage/sandboxes/remote",
+      "quote": "A remote sandbox runs the agent server in a remote execution environment instead of on your local machine.",
+      "note": "not offered: outside the product's scope — sandboxes are Linux containers (agent-server base images are Linux-based); no Windows machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.openhands.dev/openhands/usage/sandboxes/remote",
+      "quote": "A remote sandbox runs the agent server in a remote execution environment instead of on your local machine.",
+      "note": "not offered: outside the product's scope — sandboxes are Linux containers; no macOS machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://www.openhands.dev/enterprise",
+      "quote": "Self-hosted in your VPC via Kubernetes. Your code never leaves your environment. No shared tenancy.",
+      "note": "OpenHands Enterprise (one of this card's two modeled modes) is deployed into the customer's own Kubernetes/VPC, so a customer can choose an EU region for the sandbox/data plane; the managed OpenHands Cloud SaaS itself only lists a GCP us-central1 subprocessor with no EU region offered.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 12,
+      "source": "https://docs.openhands.dev/enterprise/conversations-and-sandboxes.md",
+      "quote": "a single running session is capped at a maximum of 12 hours. This cap applies even to a continuously-active conversation: once a session has been running for 12 hours it is force-paused... This maximum session duration is not currently configurable.",
+      "note": "Documented for self-hosted Enterprise (one of this card's modeled modes); resuming starts a new 12-hour window (pause/resume, not a hard delete), so it is a run-length cap rather than an absolute lifetime limit. Not separately confirmed for the managed Cloud SaaS mode.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.openhands.dev/enterprise/vm-install/admin-console-configuration.md",
+      "quote": "Additional Host Path Mounts | Host paths mounted into every sandbox, one per line as host_path:container_path[:ro|rw].",
+      "note": "Self-hosted Enterprise admin console lets an operator mount extra host-path storage into every sandbox beyond the base per-sandbox 'Storage Size' PVC. This is a deployment-wide admin setting, not a per-conversation/per-API volume attach call, and is only documented for the self-hosted Enterprise/Kubernetes install (not for managed OpenHands Cloud).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://openhands.dev/assets/docs/OHE_Security_FAQ_22-July-2026.pdf",
+      "quote": "Q: What outbound internet access does the install need? Persistent application data stays in the customer's chosen environment; outbound access requirements depend on the install model.",
+      "note": "The Security FAQ's dedicated egress/networking section (§7, 'Infrastructure & Network Security') describes customer-side network policies, VPC/firewall placement, and per-install required outbound endpoints, but documents no provider-assigned fixed/static outbound IP for sandboxes on either OpenHands Cloud or self-hosted Enterprise. Egress IPs follow whatever the customer's own cluster/VPC networking assigns.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.openhands.dev/enterprise/custom-sandbox-image.md",
+      "quote": "docker buildx build --platform linux/amd64 ... Use `--platform linux/amd64` because the Enterprise Replicated VM runs on `x86-64`.",
+      "note": "Enterprise (Replicated VM) sandboxes run on x86-64 only per the docs' explicit build instructions. The public ghcr.io/openhands/agent-server image itself is multi-arch (amd64+arm64 per `docker manifest inspect`), but the product's documented Enterprise deployment path is amd64-only and no ARM sandbox offering is advertised for managed OpenHands Cloud either.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://openhands.dev/assets/docs/OHE_Security_FAQ_22-July-2026.pdf",
+      "quote": "System and Organization Controls (SOC) 2 Type II is in progress (Type II audit engagement underway) ... An engagement letter is available as evidence.",
+      "note": "SOC 2 is explicitly in-progress/not yet attested as of the July 2026 Security FAQ (engagement letter only, no report). Not a current SOC 2 attestation.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://openhands.dev/assets/docs/OHE_Security_FAQ_22-July-2026.pdf",
+      "quote": "Q: What certifications / audit reports do you hold? SOC 2 Type II is in progress ... ISO/IEC 27001, an existing SOC 2 report, a Standardized Information Gathering (SIG) questionnaire, and a Consensus Assessments Initiative Questionnaire (CAIQ) are not currently held.",
+      "note": "The Security FAQ's Governance & Compliance section (§4) lists every certification/audit artifact the company holds or is pursuing (SOC 2 in progress; ISO 27001, SIG, CAIQ not held) and does not mention HIPAA or a BAA anywhere in the document or the Vanta trust center. No HIPAA-eligibility or BAA offering is documented.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.openhands.dev/pricing",
+      "quote": "OpenHands Cloud bundles the sandbox runtime ('out-of-the-box runtime support'); no vCPU/RAM/hour meter is published. Billing = LLM usage at cost (no markup) or BYOK.",
+      "note": "granularity: account-only; cost: no; The V1 REST API provides sandbox lifecycle operations (create/search/get/pause/resume/delete) and conversation management, but no usage/metering endpoint. Sandbox compute is bundled into the LLM usage cost; there is no separate billable unit for per-sandbox CPU-seconds or GB-seconds. Cost tracking is therefore account-wide or per-conversation (LLM charges only), not per-resource.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Council Bluffs",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://app.vanta.com/openhands.dev/trust/an0kgh9goh7xyqkhsb6tlp",
+  "locations_quote": "Google Cloud Platform • Cloud provider • us-central1",
+  "locations_checked": "2026-10-01"
+}

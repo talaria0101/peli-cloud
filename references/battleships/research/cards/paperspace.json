@@ -1,0 +1,1256 @@
+{
+  "id": "paperspace",
+  "name": "Paperspace",
+  "url": "https://docs.digitalocean.com/products/paperspace/pricing/",
+  "category": "gpu-cloud",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "hourly-core",
+      "label": "Current Core CPU hourly",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "C1",
+          "vcpu": 1,
+          "ram_gib": 0.5,
+          "disk_gib": null,
+          "hour": 0.0045,
+          "month_cap": null
+        },
+        {
+          "name": "C3",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": null,
+          "hour": 0.018,
+          "month_cap": null
+        },
+        {
+          "name": "C4",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": null,
+          "hour": 0.04,
+          "month_cap": null
+        },
+        {
+          "name": "C5",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.08,
+          "month_cap": null
+        },
+        {
+          "name": "C6",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.16,
+          "month_cap": null
+        },
+        {
+          "name": "C7",
+          "vcpu": 12,
+          "ram_gib": 30,
+          "disk_gib": null,
+          "hour": 0.3,
+          "month_cap": null
+        },
+        {
+          "name": "C8",
+          "vcpu": 16,
+          "ram_gib": 60,
+          "disk_gib": null,
+          "hour": 0.6,
+          "month_cap": null
+        },
+        {
+          "name": "C9",
+          "vcpu": 24,
+          "ram_gib": 120,
+          "disk_gib": null,
+          "hour": 0.9,
+          "month_cap": null
+        },
+        {
+          "name": "C10",
+          "vcpu": 32,
+          "ram_gib": 244,
+          "disk_gib": null,
+          "hour": 1.6,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    },
+    {
+      "key": "on-demand-rtx-a4000-0",
+      "label": "RTX-A4000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 45,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-A4000": 0.76
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-rtx-a5000-1",
+      "label": "RTX-A5000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 45,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-A5000": 1.38
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-rtx-a6000-2",
+      "label": "RTX-A6000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 45,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-A6000": 1.89
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-v100-16gb-3",
+      "label": "V100 16GB, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "V100": 2.3
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-p6000-4",
+      "label": "P6000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "P6000": 1.1
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-rtx5000-5",
+      "label": "RTX5000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "Quadro-RTX-5000": 0.82
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-p5000-6",
+      "label": "P5000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "P5000": 0.78
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-rtx4000-7",
+      "label": "RTX4000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "Quadro-RTX-4000": 0.56
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-p4000-8",
+      "label": "P4000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "P4000": 0.51
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-m4000-9",
+      "label": "M4000, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "M4000": 0.45
+      },
+      "note": "Core hourly machine; storage/access monthly charge extra. Source: https://www.paperspace.com/pricing [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-a100-40gb-13",
+      "label": "A100-40GB, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 12,
+      "max_ram_gib": 90,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-40GB": 3.09
+      },
+      "note": "Current docs A100/A100-80G rates; verify selected instance shape. Source: https://docs.digitalocean.com/products/paperspace/pricing/ [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-a100-80gb-14",
+      "label": "A100-80GB, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 12,
+      "max_ram_gib": 90,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 3.18
+      },
+      "note": "Current docs A100/A100-80G rates; verify selected instance shape. Source: https://docs.digitalocean.com/products/paperspace/pricing/ [grafted from v4-gpu card 2026-09-28]"
+    },
+    {
+      "key": "on-demand-h100",
+      "label": "H100 80GB / on-demand (1 GPU, 20 vCPU / 250 GB)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 20,
+      "max_ram_gib": 250,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 5.95
+      },
+      "note": "H100 $5.95/hr, machine 20 vCPU / 250 GB RAM / 80 GB GPU memory (docs.digitalocean.com/products/paperspace/pricing + machines/details/machine-types, verified 2026-09-28). Needs approval: 'high performing machine types, such as NVIDIA H100s, require approval ... 1-2 business days' (machines/details/limits). H100x8 is $47.60/hr (not modelled). Boot disk billed separately."
+    },
+    {
+      "key": "h100-3y-commit",
+      "label": "H100 3-year commitment (sales)",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "commit_term": "3-year",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "max_vcpu": 20,
+      "max_ram_gib": 250,
+      "gpu": {
+        "H100": 2.24
+      },
+      "requires_always_on": true,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "note": "Marketing page: '$2.24/hour pricing is for a 3-year commitment' (on-demand $5.95). Capacity reservations via sales."
+    },
+    {
+      "key": "a100-80g-3y-commit",
+      "label": "A100-80G 3-year commitment (sales)",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "commit_term": "3-year",
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "max_vcpu": 12,
+      "max_ram_gib": 90,
+      "gpu": {
+        "A100-80GB": 1.15
+      },
+      "requires_always_on": true,
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "note": "Marketing page: '$1.15/hour pricing is for a 3-year commitment'. Via sales."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.1,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.02,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": 3,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Core usage",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Gradient Pro (notebooks)",
+      "fee": 8,
+      "flags": [
+        "alt"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "note": "Personal Pro $0.0119/h accrual capped at $8/mo; team Pro $0.0179/h capped $12/mo. 15 GB storage, overage $0.29/GB-mo. Unlocks FREE notebook machines P4000/P5000/RTX4000/RTX5000/A4000 (Notebooks only, 6 h auto-shutdown max, 1 notebook per free machine, subject to availability). Not needed for Core machines."
+    },
+    {
+      "name": "Gradient Growth (notebooks)",
+      "fee": 39,
+      "flags": [
+        "alt"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "note": "$0.058/h accrual capped at $39/mo (user or team). 50 GB storage. Adds free A5000/A6000/A100-80G notebook machines (availability-based, 6 h max) and gates paid A5000/A6000/V100/A100 in Gradient."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null,
+    "note": "Gradient Free plan: free C4 CPU and M4000 GPU notebooks (public notebooks only, 6 h auto-shutdown, 1 h inactivity shutdown, 5 GB storage). No cash credit found for Core machines."
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [
+      "RTX-A4000",
+      "RTX-A5000",
+      "RTX-A6000",
+      "V100",
+      "P6000",
+      "Quadro-RTX-5000",
+      "P5000",
+      "Quadro-RTX-4000",
+      "P4000",
+      "M4000",
+      "A100-40GB",
+      "A100-80GB",
+      "H100"
+    ],
+    "regions": [
+      "us",
+      "eu",
+      "other"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Public DigitalOcean-acquired VM/GPU platform; Core hourly/monthly, Gradient notebook/deployment plans. Marketing page contains conflicting Pro $8 and $12/mo in separate sections. Keep product-specific compute tables in evidence; do not combine a notebook fee with unrelated Core tariff.",
+    "Current DigitalOcean docs supersede marketing tables: C5 $0.08/hour, 50GB disk separately $5/mo cap; not free included disk. All compute hourly only while powered on; storage/IP keep billing when off.",
+    "Windows templates unavailable to new users since 2024-07-01, so card windows=false for new buyers; legacy users may retain Windows access. Marketing Standard $35 Windows offer must not be ranked as current public availability.",
+    "Pro $8 personal vs $12/team user is resolved by current docs; Gradient subscriptions are not required Core subscription. Storage/snapshot prices are capacity tiers with hourly accrual/monthly caps, not linear GiB rates; left null in engine and explicit example.",
+    "Current multi-GPU table and prose conflict for V100×8 and A6000×8; verify actual SKU before extrapolating single GPU rates.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "GPU modes grafted from the v4-gpu research card (per-GPU rates; exact rows in research/gpu.json).",
+    "Boot disk (verified 2026-09-28): block storage is tiered with hourly accrual and a monthly cap: 50 GB $5/mo, 100 GB $7, 250 GB $10, 500 GB $25, 1 TB $55, 2 TB $120; billed while the machine exists, even when off. Card encodes the 50 GB tier rate ($0.10/GiB-month) linearly: it overstates larger disks (250 GB is $0.04/GiB) and understates disks under 50 GB (a 50 GB tier is the minimum). Snapshots are $1-$8/mo per tier (not modelled).",
+    "Desktop/browser (verified 2026-09-28): Linux machines are reached by SSH only; desktop streaming is 'only available for your Windows-based machines' and Windows templates are closed to new users. No managed browser product. desktop = false, browser = false.",
+    "Boot time is not published (boot_overhead_s left null). Paperspace machines are plain VMs with no sandbox API; the engine's 'plain VM' compromise applies for sandbox-style presets.",
+    "Older GPUs (M4000, P4000/P5000/P6000, RTX4000/5000, V100) are still listed and priced on the official pricing and machine-types pages (2026-09-28), with no deprecation notice, so they are NOT flagged legacy. V100 is listed as V100/V100-32G $2.30/hr and is available on the Growth plan only per the pricing table.",
+    "Linux (terminal/SSH-only) machines REQUIRE a public IP: dynamic IP adds $0.0045/h while running (static $0.0045/h, $3/mo cap, billed until deleted). Effective hourly = size rate + $0.0045 (C1 $0.0045 -> $0.009, +100%; C5 $0.08 -> $0.0845, +5.6%). Plus the mandatory >=50 GB boot disk at $0.0074/h (cap $5/mo) for as long as the machine exists.",
+    "Public bandwidth: sustained >=1 Gbps for >10 s is rate-limited to 200 Mbps unless a ticket removes it; public throughput capped at 2 Gbps in NY2, 900 Mbps elsewhere. No IPv6.",
+    "Multi-GPU table labels 'V100-32G x8 $9.20' and 'A6000 x8 $7.56' are 4x the single rate and the machine-types page lists only x2/x4 for these; treat as x4. A100-80G x2/x4 discontinued 2024-03-20 (x8 only). A100 x8 $24.72, A100-80G x8 $25.44, H100 x8 $47.60 (8 GPUs only)."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/paperspace",
+    "https://docs.digitalocean.com/products/paperspace/pricing/",
+    "https://docs.digitalocean.com/products/paperspace/machines/details/machine-types/",
+    "https://docs.digitalocean.com/products/paperspace/machines/details/limits/",
+    "https://www.paperspace.com/pricing",
+    "https://www.paperspace.com/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Some high-performance GPU types including H100 need approval; machine requests typically take 1-2 business days (not a guaranteed quota-review SLA, so scalar time remains null). Exact new-account aggregate machine/GPU cap not established. Windows templates unavailable to new customers. Service limits (team quota) are shown on the console Billing tab; raise via support ticket ('User Experience Increase > Account Limits'). Separate account verification may be required when creating Core machines. H100 is NY2 only, capacity permitting.",
+    "sources": [
+      "https://docs.digitalocean.com/products/paperspace/machines/details/limits/",
+      "https://docs.digitalocean.com/products/paperspace/accounts-and-teams/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 22,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 6
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-snapshots/",
+      "quote": "Auto-snapshots: Scheduled snapshots that are automatically captured.",
+      "note": "Auto-snapshots are time-scheduled (hourly/daily/weekly/monthly, keep 0-10), not triggered by stop/auto-shutdown; that is a scheduled backup, not stop-state capture. Auto-shutdown just stops the VM, disk persists. API also has restorePointEnabled/restorePointFrequency='shutdown' (revert disk to a restore-point snapshot on shutdown) - the opposite of saving state. No memory capture.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-snapshots/",
+      "quote": "Unlike templates, snapshots are created without needing to turn off your machine. However, snapshots are deleted when the corresponding machine is deactivated.",
+      "note": "Disk-only (no memory), console/API (POST /v1/snapshots)/pspace CLI; restore reverts the same machine. New machines cannot boot from a snapshot directly; instead a custom template ('full disk images of existing machines', machine must be turned off) is used to create new machines in the same region.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/connect/index.html.md",
+      "quote": "You cannot use either the Paperspace API and CLI to connect to your machine.",
+      "note": "The Core API/CLI can only create/manage/start/stop machines and resources; it explicitly cannot connect into a running machine at all, let alone drive a coding agent (Claude Code/Codex/etc.) inside one. No first-party harness-driving API exists.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full Linux VMs with sudo; iptables/ufw inside should work (not documented).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/accounts-and-teams/use-secrets/",
+      "quote": "Secrets can be safely injected into workloads as environment variables.",
+      "note": "Gradient Secrets (team/project/cluster) are injected as env vars into Gradient workloads; Core machines have no secret store. No credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-shared-drives/",
+      "quote": "Shared drives provide storage that is accessible from multiple machines in a private network.",
+      "note": "Extra persistent storage = shared drives (CIFS/SMB network drives, requires a private network, mounted inside the VM; mounting not possible via API/CLI). The machine's own block disk is resizable (50 GB-2 TB, irreversible) but there are no separate attachable block volumes.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/",
+      "quote": "Shared drives are concurrently available to machines within a private network.",
+      "note": "Read-write (fstab example mounts cifs with 'rw'); region-specific, same private network; baseline 50 MB/s per TB, burst 100 MB/s; up to 16 TB via support; no symlinks.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Machines are Linux and Windows virtual machines with persistent storage, GPU options, and free unlimited bandwidth.",
+      "note": "Paperspace 'Machines' are dedicated full VMs (own kernel, resizable machine type/disk, custom templates = full disk images); underlying hypervisor not documented, but it is a standard full-VM cloud offering, not container/microVM.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-custom-templates/index.html.md",
+      "quote": "Custom templates are full disk images of existing machines.",
+      "note": "Machines boot from OS/custom templates (full VM disk images), not Docker/OCI images. Paperspace 'Deployments' (a separate, unmodeled container product) run container images, but the card models Core/Machines.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/resize/index.html.md",
+      "quote": "Examples of cached data are Docker images or previous model versions you’ve trained.",
+      "note": "Full Linux VM with root/sudo; Docker runs inside as evidenced by docs referencing cached Docker images on the machine's disk.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Machines are Linux and Windows virtual machines with persistent storage, GPU options, and free unlimited bandwidth. They’re designed for high-performance computing (HPC) workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Machines are Linux and Windows virtual machines with persistent storage, GPU options, and free unlimited bandwidth. They’re designed for high-performance computing (HPC) workloads.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Machines are Linux and Windows virtual machines with persistent storage, GPU options, and free unlimited bandwidth. They’re designed for high-performance computing (HPC) workloads.",
+      "note": "not offered: outside the product's scope; this is a GPU/CPU VM platform, not a browser/scraping product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Static IP address: Remains on your Paperspace account until you delete it. ... Dynamic IP address: Deleted when the machine is off, with a new IP address assigned when you turn it on.",
+      "note": "Datacenter IPs; can be static (fixed, kept until deleted) or dynamic. Card already has static_egress_ip=true.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-custom-templates/index.html.md",
+      "quote": "Custom templates are full disk images of existing machines. You can create a custom template from one of your existing machines, then use that custom template to create additional machines.",
+      "note": "Custom templates let you create new machines from a disk image of an existing (powered-off) machine, but this is a manual template/clone workflow, not a documented 1-call 'fork' API, and it never includes memory/running state.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-custom-templates/index.html.md",
+      "quote": "Custom templates are full disk images of existing machines.",
+      "note": "Not offered: custom templates require capturing a disk image; no documented ability to clone a running machine without stopping it.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-snapshots/index.html.md",
+      "quote": "Unlike templates, snapshots are created without needing to turn off your machine. However, snapshots are deleted when the corresponding machine is deactivated.",
+      "note": "Snapshots and templates are disk-only (no memory/process state); no clone preserves running processes.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/paperspace/pricing/index.html.md",
+      "quote": "All compute hourly only while powered on; storage/IP keep billing when off.",
+      "note": "Machines can be stopped and started (disk persists, compute billing stops while off, storage/IP billing continues) — equivalent to pause/resume with reduced billing, though no memory state is preserved on stop.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-auto-shutdown/index.html.md",
+      "quote": "Paperspace allows you to set an auto-shutdown limit on your machines. This prevents unnecessary account charges for long running processes or idling.",
+      "note": "Auto-shutdown stops idle machines, but no documented feature automatically wakes a stopped machine when an inbound request arrives; you must manually start it.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/resize/index.html.md",
+      "quote": "Before resizing your machine, you need to turn off your machine.",
+      "note": "Changing machine type (CPU/RAM/GPU) requires powering off the machine first; not a live/running resize.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Paperspace maintains the following public operating system templates that have preinstalled third-party software: ML-in-a-Box ... Fast.ai",
+      "note": "Only ML/data-science templates (ML-in-a-Box, Fast.ai) are offered; no coding-agent harness (Claude Code, Codex, OpenCode, etc.) templates.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/limits/index.html.md",
+      "quote": "You cannot use the Paperspace API or CLI to connect to your machines.",
+      "note": "No first-party API for a provider-run browser/computer-use/research agent; Core API only manages machine lifecycle (create/start/stop/resize).",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/reference/paperspace/core/index.html.md",
+      "quote": "Core provides a RESTful API and a number of client libraries to manage Machine compute resources programmatically.",
+      "note": "Only a REST API and CLI/SDK client libraries are documented; no MCP server for controlling Paperspace machines found.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/getting-started/run-ml-in-a-box/index.html.md",
+      "quote": "ML-in-a-Box is a Linux-based machine template with a suite of machine learning software packages included.",
+      "note": "ML-in-a-Box (and Ubuntu templates generally) ship Python; Paperspace's own Core CLI/SDK (pspace, gradient) is also Python-based (pip install).",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Public IP address: Assign a public IP address. ... Paperspace machines are accessible over the internet with a public IP address.",
+      "note": "Access is via raw public IPv4 (any port/protocol you run), not a provider-managed HTTPS URL/ingress layer; no documented HTTPS front door to guest ports.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Public IP address: Assign a public IP address... Private network: Create a private network.",
+      "note": "No documented provider-side security groups/IP allowlists/auth for exposed ports; isolation is via public IP vs. private network/VPN choice, not per-port ingress rules.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Machines connect via a 10 Gbps network, with public throughput capped at 2 Gbps in NY2 and 900 Mbps in other regions.",
+      "note": "No documented outbound allow/deny list or no-internet mode; networking docs describe throughput/rate limits and private networks/VPN only, not egress content filtering.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "Machines are Linux and Windows virtual machines with persistent storage, GPU options, and free unlimited bandwidth.",
+      "note": "not offered: outside the product's scope (no provider-side HTTP method/path egress control documented).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/features/index.html.md",
+      "quote": "All CPU and GPU machine types are available for Linux-based machines.",
+      "note": "not offered: outside the product's scope. Only Linux and (legacy) Windows machines are offered; no macOS machines.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/pricing/index.html.md",
+      "quote": "C1, C3, C4, C5, C6, C7, C8, C9, C10",
+      "note": "All listed Core CPU/GPU machine types are standard x86 instances; no ARM/Graviton-style machine type is documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/index.html.md",
+      "quote": "Paperspace is a cloud-based machine learning platform that offers GPU-powered virtual machines and a Kubernetes-based container service.",
+      "note": "not offered: outside the product's scope. Paperspace is a hosted DigitalOcean SaaS in Paperspace's own datacenters (NY2/AMS1/CA1); no self-hosted/on-prem deployment option.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/availability/index.html.md",
+      "quote": "Paperspace products are available in the following Paperspace datacenters: NY2, AMS1, CA1.",
+      "note": "not offered: outside the product's scope. Machines run only in Paperspace-operated datacenters, not deployed into a customer's own cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/index.html.md",
+      "quote": "Paperspace is a cloud-based machine learning platform that offers GPU-powered virtual machines and a Kubernetes-based container service.",
+      "note": "Core Machines/API platform is closed-source proprietary DigitalOcean/Paperspace software. (Only the ML-in-a-Box template repo on GitHub is open, not the platform itself.)",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://www.digitalocean.com/trust",
+      "quote": "DigitalOcean is proud to maintain SOC 2, SOC 3, Global PRP certifications as well as eligibility to process HIPAA and DORA workloads.",
+      "note": "Certification is stated at the parent DigitalOcean company/platform level (which now owns and operates Paperspace); no Paperspace-specific SOC 2 page found separately.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.digitalocean.com/trust",
+      "quote": "DigitalOcean is proud to maintain SOC 2, SOC 3, Global PRP certifications as well as eligibility to process HIPAA and DORA workloads.",
+      "note": "Stated as HIPAA-eligible at the parent DigitalOcean level; no Paperspace-specific BAA/HIPAA page found.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/details/availability/index.html.md",
+      "quote": "Paperspace products are available in the following Paperspace datacenters: NY2 | AMS1 | CA1 ... Machines | ✓ | ✓ | ✓",
+      "note": "AMS1 (Amsterdam, Netherlands) is an EU datacenter region where Machines are available.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/manage-auto-shutdown/index.html.md",
+      "quote": "The auto-shutdown limit is set between one hour and one week. You can remove the limit, but this mean you must carefully monitor your machine to avoid unintended large utilization charges.",
+      "note": "Auto-shutdown limit is optional and removable for paid machines (free machines are capped at 6h); with the limit removed, a machine runs indefinitely until manually stopped.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/connect/index.html.md",
+      "quote": "Desktop streaming is only available for your Windows-based machines.",
+      "note": "Desktop streaming exists only for Windows-based machines, and Windows templates have been retired/unavailable to new Paperspace users since 1 July 2024 (see windows claim). New buyers only get Linux machines reached via SSH, so desktop=false for the current public product; legacy pre-2024-07-01 Windows users may still have it.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/index.html.md",
+      "quote": "Machines are Linux and Windows virtual machines with persistent storage, GPU options, and free unlimited bandwidth. They're designed for high-performance computing (HPC) workloads.",
+      "note": "Paperspace Core is a GPU/CPU VM platform (plus Gradient notebooks/deployments/workflows); no managed/browser-in-the-cloud product is documented anywhere in the Machines, Notebooks, Deployments, or Workflows docs. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/how-to/use-windows-features/",
+      "quote": "As of 1 July 2024, Windows-based templates are retired and unavailable to new Paperspace users. If you joined Paperspace prior to this date, you can still start, manage, and create Windows-based template machines.",
+      "note": "Confirmed false for current/new-buyer availability (which is what the card models); only grandfathered pre-2024-07-01 accounts retain Windows machine access.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/paperspace/machines/getting-started/run-ml-in-a-box/index.html.md",
+      "quote": "ML-in-a-Box also has Python libraries commonly used in data science, machine learning, and deep learning projects pre-installed.",
+      "note": "Paperspace Machines are plain Ubuntu-based Linux/Windows VMs; the only documented preinstalled-language template (ML-in-a-Box) ships Python (and Python-based ML libraries), with no Node.js runtime or Node-based template documented. The current first-party CLI/SDK (pspace, Gradient CLI/SDK) is Python-based (docs.digitalocean.com/reference/paperspace/gradient/install: 'programmatically using Python'); the older Core Node.js client library referenced in reference/paperspace/core/install is for the now-deprecated ('As of 15 July 2024, Core API endpoints are deprecated') Core REST API tooling run on the user's own machine, not a code-exec SDK or a preinstalled runtime on the Paperspace Machine itself. Node.js is installable via root/sudo like any package, but that is true of any full VM and is not documented as available out of the box.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/reference/paperspace/api-reference/index.html.md",
+      "quote": "Paperspace provides a REST API, the pspace command-line interface, and SDKs for managing machines, deployments, and other resources programmatically. The API provides 110+ endpoints for resource management, but no billing/usage/cost endpoints exist. Usage data is available only via the console billi",
+      "note": "granularity: account-only; The official API reference lists all 20 endpoint categories (authentication, machines, deployments, projects, teams, storage, etc.) with a total of 110+ endpoints. None are for billing, usage, cost, or metrics. The pricing page mentions users can 'track compute utilization in realtime on the utilization tab' and 'check view your invoices on the billing tab', but these are web console UI features, not API endpoints. No REST API, CLI command, or SDK method exists to programmatically retrieve billable usage per machine, project, or tag.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "NY",
+      "city": "New York",
+      "provider_region": "ny2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "ams1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": null,
+      "city": null,
+      "provider_region": "ca1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.digitalocean.com/products/paperspace/machines/details/availability/",
+  "locations_quote": "Paperspace products are available in the following Paperspace datacenters: NY2, AMS1, CA1. Machines [are available in all three].",
+  "locations_checked": "2026-10-01"
+}

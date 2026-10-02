@@ -1,0 +1,533 @@
+{
+  "id": "notte",
+  "name": "Notte",
+  "url": "https://www.notte.cc/pricing",
+  "category": "browser",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "browser-session",
+      "label": "Browser session",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Browser session",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Runtime free; proxy, LLM, account and functions can bill. Unspecified guest OS is not a selectable OS guarantee."
+    },
+    {
+      "key": "browser-function",
+      "label": "Browser function",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Browser function",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.05,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Serverless function runtime separate from free browser session; billed per billing policy. Unspecified guest OS is not a selectable OS guarantee."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "residential_proxy_gib": 10,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 5,
+      "max_session_h": 0.25,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$10 once; 5 vaults/personas; features included per current pricing."
+    },
+    {
+      "name": "Developer",
+      "fee": 20,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 25,
+      "max_session_h": 2,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$20 monthly credits; 25 agents/functions; 50 vaults/personas."
+    },
+    {
+      "name": "Startup",
+      "fee": 100,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 100,
+      "max_session_h": 5,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$100 monthly credits; BYOK/BYOP; 200 vaults/personas."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom limits, BYOC/on-prem, SSO, HIPAA, SLA."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 10
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": null,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 24,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "browser_control": true,
+    "desktop_control": null,
+    "anti_bot": true,
+    "captcha_solving": true,
+    "egress_ip_type": "residential",
+    "ip_note": "Residential proxies $10/GB, billed only when proxies are enabled, BUT managed residential proxies are ON by default (API/SDK `proxies` default true; best-effort US exit). Every session bills $10/GB of its traffic unless the caller passes proxies=false or a BYO proxy. IP used with proxies off is undocumented. BYO HTTP/HTTPS proxy and Tailscale egress; BYO proxy listed on Startup/Enterprise only.",
+    "snapshot_auto": false,
+    "own_agent_api": true,
+    "harness_api": false,
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "isolation": "container",
+    "image_oci": false,
+    "snapshot_on_demand": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "wake_on_request": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "live_resize": false,
+    "mcp_server": true,
+    "lang_python": true,
+    "lang_node": false,
+    "egress_http_rules": false,
+    "eu_data_residency": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Storage, snapshot GiB-month and public IPv4 prices are not published in the reviewed sources; null is not free.",
+    "No guaranteed vCPU allocation published; browser-hour is not a verified 4-vCPU/8-GiB VM equivalent. The sizes card keeps unknown hardware null; do not coerce it to zero or auto-rank against resource-guaranteed VMs.",
+    "Browser RAM is not published unless a specific mode overrides it.",
+    "docs.notte.cc/pricing and /rate-limits now 307-redirect to www.notte.cc/pricing (the authoritative source). Stale figures survive only in the docs llms-full.txt bundle (100 forever/100 monthly/500 monthly browser hours, Free concurrency 2, Developer 30 min, Startup 3 h, credit packs $100/$200/$500) and on the functions invocations page ('Free: 10 concurrent runs, Pro: 50 concurrent runs'). Ignore those; use the pricing page.",
+    "Free browser time is not free proxies/inference/serverless functions. No 4/8 resource guarantee and no general snapshots.",
+    "Included monthly fees are credits, not fee+full usage. Top-ups and signup $10 never expire; monthly balances do.",
+    "os set to linux (fix 2026-09-28): hosted cloud browser sessions run server-side; the guest OS is not published but they are not a macOS/Windows desktop.",
+    "Managed residential proxies are enabled by default on every session (proxies=true default) and bill $10/GB; pass proxies=false (or a BYO proxy on Startup+) to keep a session near $0. Default proxy exit is best-effort US.",
+    "Browser runtime was $0.05/hour until about 2026-09-01 (docs PR #923 'Browser usage is now $0/hour'); no end date is published for $0/hour, so price_expires stays null, but it is a recent cut worth re-checking.",
+    "open_source=true only in the loose sense: the nottelabs/notte repo is SSPL-1.0 (source-available, not OSI), and it is the agent/SDK framework, not the hosted browser platform (on-prem is Enterprise-only).",
+    "API request rate limit: documented via X-RateLimit-* headers with an example limit of 100 requests per window (window length not published); 429 on excess; higher limits via sales ('Contact us ... enterprise options'). Per-plan start/creation rate limits are not published.",
+    "Enterprise-only: multi-region (llms-full lists us-east, us-west, eu-west, ap-southeast), static IPs, browser pools (pre-warmed), on-prem/BYOC; advanced_stealth is approval-gated. Self-serve region is not published (features.regions left null).",
+    "Functions gained an 'extended' runtime (SDK v1.8.41, 2026-09-09) for longer cloud execution; the pricing page only lists one $0.05/hour function rate, so extended-runtime pricing is unpublished."
+  ],
+  "sources": [
+    "https://www.notte.cc/pricing",
+    "https://docs.notte.cc/llms-full.txt",
+    "https://docs.notte.cc/pricing",
+    "https://docs.notte.cc/rate-limits"
+  ],
+  "fleet": {
+    "default_max_instances": 5,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Free 5; Developer 25; Startup 100; Enterprise custom.",
+    "notes": "Browser and agent/function concurrency published separately with same 5/25/100 ladder. 10 fits Developer, 50 Startup, 300/1,000 Enterprise. Credits and session-duration limits additionally apply.",
+    "sources": [
+      "https://www.notte.cc/pricing",
+      "https://docs.notte.cc/rate-limits"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 6
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.notte.cc/features/sessions/browser-profiles",
+      "quote": "`True` - Save browser state to the profile when the session ends",
+      "note": "Opt-in browser-profile persistence (profile persist=True, or cookie_file) saves cookies/browser storage when the session ends and reloads it in the next session; treated as a persistent-profile (persistent_disk analogue), not a machine snapshot. No memory/tabs/process state; no general snapshots documented.",
+      "checked": "2026-09-29"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://docs.notte.cc/features/agents/lifecycle",
+      "quote": "Stream agent logs in real-time via WebSocket:",
+      "note": "Notte's own browser agent only: POST /agents/start with a task (plus session, vault, persona, max_steps, response format), GET status with steps, WebSocket log streaming, stop, list agents, MP4 replay, export run as workflow code. No follow-up/continue endpoint documented. Claude Code/Claude Managed Agents etc. use Notte from outside via CLI/MCP.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.notte.cc/features/agents/lifecycle",
+      "quote": "Stream agent logs in real-time via WebSocket:",
+      "note": "Notte's own browser agent only: POST /agents/start with a task (plus session, vault, persona, max_steps, response format), GET status with steps, WebSocket log streaming, stop, list agents, MP4 replay, export run as workflow code. No follow-up/continue endpoint documented. Claude Code/Claude Managed Agents etc. use Notte from outside via CLI/MCP.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.notte.cc/features/sessions/embed-iframe",
+      "quote": "The returned URL is signed with a short-lived JWT scoped to that session",
+      "note": "No user-exposed ports; session API/CDP needs the API key and the live-view/embed URL is a short-lived session-scoped JWT link. No IP allowlists documented.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "Hosted cloud browser (card isolation: container) reachable only through API/CDP; no shell/root, so no nftables/iptables. Serverless Functions run user Python but no root/network-namespace details are documented.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.notte.cc/concepts/vaults",
+      "quote": "The significant security benefit of this approach is that the LLM never actually sees the actual credentials.",
+      "note": "Not an outbound HTTP credential proxy. Vaults substitute real credentials for dummy values in the agent's fill actions (passwords, cards, MFA/TOTP), so the LLM never sees them, but the value is typed into the browser. Workspace /secrets store: 'llm_provider' keys used server-side by agents (BYOK) and 'function_env' values injected into function runs as env. The Claude Managed Agents guide's placeholder substitution is Anthropic's vault, not Notte's.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://www.notte.cc/pricing",
+      "quote": "os set to linux; hosted cloud browser sessions run server-side, guest OS not published",
+      "note": "Card-level field carried over: hosted managed browser/Functions platform, no VM/microVM details published; treated as shared-kernel container isolation, medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts, vaults, personas, mailboxes.",
+      "note": "not offered: outside the product's scope. No custom Docker/OCI image support documented for sessions or Functions; Functions are Python scripts (run() entrypoint) deployed as source code, not container images.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.notte.cc/features/functions/overview",
+      "quote": "Functions are Python scripts with a `run()` function that serves as the entry point.",
+      "note": "not offered: outside the product's scope. No Docker/container runtime documented inside browser sessions or the Functions Python runtime.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts.",
+      "note": "not offered: outside the product's scope. No shell/root access or /dev/kvm is documented; product is a managed browser/Python-function API, not a general VM.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.notte.cc/api-reference/sessions/session-start",
+      "quote": "Notte gives your agent a browser",
+      "note": "not offered: outside the product's scope. Notte exposes a browser (live-view iframe/CDP), not a general graphical desktop with VNC/RDP for a full OS.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts, vaults, personas, mailboxes.",
+      "note": "not offered: outside the product's scope. No SSH/shell access to the underlying browser or Function machine is documented; access is only via the HTTP/SDK/CDP/MCP API.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.notte.cc/features/sessions/browser-profiles",
+      "quote": "A profile is a saved snapshot of a browser's user data directory. By default, each Notte session uses a fresh browser state to ensure isolation.",
+      "note": "Only opt-in browser-profile persistence (cookies/local storage of the user-data dir) exists, not a general machine disk or memory snapshot with running processes restored. No documented full-machine snapshot/restore feature for sessions or Functions.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.notte.cc/features/sessions/browser-profiles",
+      "quote": "A profile is a saved snapshot of a browser's user data directory.",
+      "note": "Profile save happens on session end/via API for cookies/storage, not an on-demand full machine checkpoint. No general snapshot/checkpoint API documented.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.notte.cc/sdk-reference/nottefunction/fork",
+      "quote": "Fork a shared function into your own private function",
+      "note": "Only Notte Functions (Python code/config) can be forked (copy code from marketplace/teammate into your own account); this is a code copy, not cloning a running browser session/machine. No session/machine fork documented.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.notte.cc/sdk-reference/nottefunction/fork",
+      "quote": "Fork a shared function into your own private function",
+      "note": "not offered: Function fork copies code (function not running at fork time); no running-session/machine clone-without-stopping capability documented.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.notte.cc/sdk-reference/nottefunction/fork",
+      "quote": "Fork a shared function into your own private function",
+      "note": "not offered: fork only copies Function source code; no memory/process state is included since there is no running-machine fork feature at all.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.notte.cc/api-reference/sessions/session-start",
+      "quote": "Idle timeout in minutes. Session closes after this period of inactivity (resets on each operation).",
+      "note": "Idle sessions are closed (terminated) after the idle timeout, not paused for later resume; no pause/resume-with-reduced-billing API is documented.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.notte.cc/api-reference/sessions/session-start",
+      "quote": "Idle timeout in minutes. Session closes after this period of inactivity (resets on each operation).",
+      "note": "Sessions close on idle timeout rather than sleep; a new request starts a new session rather than waking a suspended one. No auto-wake-on-request feature documented.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://docs.notte.cc/features/sessions/browser-profiles",
+      "quote": "By default, each Notte session uses a fresh browser state to ensure isolation.",
+      "note": "Sessions are ephemeral by default; only opt-in browser-profile (cookies/storage) persists across sessions, which is a narrow persisted-profile feature, not a general persistent filesystem/disk surviving stop/start.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts, vaults, personas, mailboxes.",
+      "note": "not offered: outside the product's scope. No attachable persistent volume feature is documented; per-session file storage (upload/download session files) is session-scoped, not an attachable volume.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts, vaults, personas, mailboxes.",
+      "note": "not offered: outside the product's scope. No shared-volume-across-machines feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Runtime free; proxy, LLM, account and functions can bill.",
+      "note": "not offered: outside the product's scope. No published vCPU/RAM sizing exists for browser sessions to begin with (sizes card leaves vcpu/ram null), so there is no documented live-resize-of-a-running-machine capability.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.notte.cc/mcp-server",
+      "quote": "This works with Claude Code, Cursor, Windsurf, and other MCP-compatible assistants.",
+      "note": "not offered: outside the product's scope. Notte connects to external coding assistants (Claude Code, Cursor, Windsurf) as an MCP tool client from the user's own machine; it does not preinstall or offer coding-agent harnesses running inside its own sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://docs.notte.cc/mcp-server",
+      "quote": "Give any MCP client access to Notte.",
+      "note": "First-party MCP server at https://api.notte.cc/mcp/ (streamable HTTP, bearer auth) exposing sessions, browser agents, scraping, functions, vaults and personas as MCP tools.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.notte.cc/features/functions/overview",
+      "quote": "Functions are Python scripts with a `run()` function that serves as the entry point.",
+      "note": "Serverless Functions execute user-authored Python code server-side; Python SDK (notte_sdk) is also first-party.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.notte.cc/features/functions/overview",
+      "quote": "Functions are Python scripts with a `run()` function that serves as the entry point.",
+      "note": "Notte Functions only execute Python; the Node/TypeScript SDK (notte-sdk) is a client for calling the API from Node, not a runtime that executes JS/TS code inside the sandbox.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.notte.cc/features/sessions/static-ip",
+      "quote": "Static IPs provide dedicated, unchanging IP addresses for your browser sessions... available exclusively for enterprise customers.",
+      "note": "not offered on self-serve: outside default product scope. Documented IP features are outbound-only (residential proxy egress IP, enterprise static egress IP); no inbound public IPv4 per machine is offered since the product is not general inbound compute.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts, vaults, personas, mailboxes.",
+      "note": "not offered: outside the product's scope. Only the session live-view/embed URL (short-lived JWT-scoped) is exposed inbound; there is no general capability to expose arbitrary ports on the machine over HTTPS.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts, vaults, personas, mailboxes.",
+      "note": "not offered: outside the product's scope. No documented provider-side outbound allow/deny list or no-internet mode; egress is a browsing/proxy configuration (residential proxy on/off, BYO proxy, Tailscale egress), not a security-group-style allowlist.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts, vaults, personas, mailboxes.",
+      "note": "not offered: outside the product's scope. No HTTP method/path-level egress control is documented.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "Notte gives your agent a browser -- sessions, a serverless Function runtime for Python scripts.",
+      "note": "not offered: outside the product's scope. No GPU machine option is published for a browser-automation/Python-function API.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "hosted cloud browser sessions run server-side; the guest OS is not published but they are not a macOS/Windows desktop",
+      "note": "not offered: outside the product's scope. Confirmed by card research: guest OS is not a selectable Windows desktop.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.notte.cc/pricing",
+      "quote": "hosted cloud browser sessions run server-side; the guest OS is not published but they are not a macOS/Windows desktop",
+      "note": "not offered: outside the product's scope. Confirmed by card research: guest OS is not a selectable macOS desktop.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.notte.cc/features/sessions/multi-region",
+      "quote": "Data residency - Keep data processing within specific regions ... Multi-Region Support is available exclusively for enterprise customers.",
+      "note": "Multi-region support (llms-full.txt lists us-east, us-west, eu-west, ap-southeast) is documented as an Enterprise-only, sales-gated feature enabling EU-region processing; not available self-serve on Free/Developer/Startup.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://api.notte.cc/openapi.json",
+      "quote": "GET /usage returns account-level usage with browser_usage_cost, proxy_usage_cost, llm_usage_cost, function_usage_cost, total_cost, session_count, and function_count; no per-session breakdown endpoint documented. /usage/logs provides operational logs only (created_at, duration_ms, endpoint), not bill",
+      "note": "granularity: account-only; cost: yes; Notte's /usage endpoint aggregates costs and session/function counts at the account level. The /usage/logs endpoint provides operational metrics (duration, endpoint) but not cost breakdown per individual session or sandbox. No documented endpoint returns billable usage by session ID, tag, project, or label.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.notte.cc/features/sessions/multi-region",
+  "locations_quote": "Multi-Region Support is available exclusively for enterprise customers. Contact andrea@notte.cc to learn more about enterprise plans and regional deployment options.",
+  "locations_checked": "2026-10-01"
+}

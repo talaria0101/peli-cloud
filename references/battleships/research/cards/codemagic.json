@@ -1,0 +1,755 @@
+{
+  "id": "codemagic",
+  "name": "Codemagic (mobile CI)",
+  "url": "https://codemagic.io/pricing/",
+  "category": "macos",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Pay-as-you-go macOS minutes",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Mac mini M2 (8-core CPU / 12 GB)",
+          "vcpu": 8,
+          "ram_gib": 12,
+          "disk_gib": 294,
+          "hour": 5.7,
+          "month_cap": null,
+          "per_minute_usd": 0.095
+        },
+        {
+          "name": "Mac mini M4 (10-core CPU / 16 GB)",
+          "vcpu": 10,
+          "ram_gib": 16,
+          "disk_gib": 294,
+          "hour": 6.84,
+          "month_cap": null,
+          "per_minute_usd": 0.114
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "PAYG, billed monthly. Specs from docs.codemagic.io/specs/versions-macos. M4 access on request.",
+      "product_class": "ci-runner"
+    },
+    {
+      "key": "windows",
+      "label": "Pay-as-you-go Windows minutes",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Windows VM (8 vCPU / 32 GB)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 150,
+          "hour": 2.7,
+          "month_cap": null,
+          "per_minute_usd": 0.045
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "'Linux X2 and Windows minutes $0.045 / minute'. Spec from docs.codemagic.io/specs/versions-windows.",
+      "product_class": "ci-runner"
+    },
+    {
+      "key": "pool",
+      "label": "Fixed price annual plan: unlimited minutes, 3 concurrent builds",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "pricing": "pool",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": [
+        {
+          "name": "Fixed M2 ($3,990/yr)",
+          "month": 332.5,
+          "vcpu": 24,
+          "ram_gib": 36,
+          "max_vms": 3
+        },
+        {
+          "name": "Fixed M4 ($5,400/yr)",
+          "month": 450,
+          "vcpu": 30,
+          "ram_gib": 48,
+          "max_vms": 3
+        },
+        {
+          "name": "Fixed M4 Max ($9,000/yr)",
+          "month": 750,
+          "vcpu": 48,
+          "ram_gib": 96,
+          "max_vms": 3
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Annual commitment; extra concurrency $1,500/yr (M2), $1,800/yr (M4), $3,000/yr (M4 Max).",
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Unlimited macOS/Linux/Windows minutes within 3 concurrent builds. M4 Max plan $9,000/yr not encoded (Mac Studio spec not published). Pool vCPU/RAM = 3 x the Mac mini spec.",
+      "product_class": "ci-runner",
+      "commit_term": "1-year"
+    },
+    {
+      "key": "linux",
+      "label": "Pay-as-you-go Linux X2 minutes",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Linux X2 (8 vCPU / 32 GB)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 155,
+          "hour": 2.7,
+          "month_cap": null,
+          "per_minute_usd": 0.045
+        }
+      ],
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": 0,
+      "multiplier": 1,
+      "product_class": "ci-runner",
+      "note": "Linux X2 8 vCPU/32 GB (Ubuntu 24.04, GCP kernel), $0.045/min. No free minutes on Linux. Linux X4 16 vCPU/64 GB only on M4/M4 Max annual and Enterprise; Linux arm64 on request.",
+      "features": {
+        "docker_inside": true
+      }
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false
+  },
+  "plans": [
+    {
+      "name": "Free (individual)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 1,
+      "max_session_h": 2,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "500 free Mac mini M2 minutes/month (= $47.50 at $0.095), single user."
+    },
+    {
+      "name": "Pay as you go (team)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 1,
+      "max_session_h": 2,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$0 base, 1 concurrent build; \"$49 / concurrency\" per month for each extra parallel build (pricing page 2026-09-28; no maximum stated)."
+    },
+    {
+      "name": "Pay as you go (team, 2 concurrent)",
+      "fee": 49,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 2,
+      "max_session_h": 2,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$0 base + 1 extra concurrencies x $49/month."
+    },
+    {
+      "name": "Pay as you go (team, 3 concurrent)",
+      "fee": 98,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 3,
+      "max_session_h": 2,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$0 base + 2 extra concurrencies x $49/month."
+    },
+    {
+      "name": "Pay as you go (team, 4 concurrent)",
+      "fee": 147,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 4,
+      "max_session_h": 2,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$0 base + 3 extra concurrencies x $49/month."
+    },
+    {
+      "name": "Enterprise",
+      "fee": 1000,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 3,
+      "max_session_h": 3,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Starting from $12,000/year."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": 2,
+    "custom_image": false,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": null,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": false,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "apple-vm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "CI-only; 120-minute build limit on Free/PAYG/Fixed.",
+    "Free 500 M2 minutes apply to the individual plan only (not encoded as monthly_credit because they are M2-only).",
+    "Rounding to whole minutes assumed; not stated.",
+    "Team concurrency: +$49/month per extra parallel build (pricing page 2026-09-28), encoded as one plan per concurrency level (2..20). Fixed annual plans: 3 parallel builds included, extra $1,500 (M2) / $1,800 (M4) per concurrency per year (not encoded). Linux X2 minutes $0.045/min not encoded: Linux X2 vCPU/RAM spec not captured.",
+    "Fixed annual plans: 3 concurrent builds + up to 10 extra ($1,500 M2 / $1,800 M4 / $3,000 M4 Max per concurrency-year) = max 13. Burstable concurrencies (from 10 concurrencies, 95th-percentile billing, bursted slots at 1/3 price): M2 $50 above / $150 below baseline, M4 $60 / $180. M4 and M4 Max annual plans are 'request this plan' (contact).",
+    "Default build timeout is 60 min (configurable 30-120 min; Enterprise 180 min). Builds that time out or fail because of a Codemagic service error are not billed. Cache storage 3 GB per build (Free) / 10 GB (PAYG, Fixed)."
+  ],
+  "sources": [
+    "https://codemagic.io/pricing/",
+    "https://docs.codemagic.io/specs/versions-macos/",
+    "https://docs.codemagic.io/specs/versions-windows/",
+    "https://docs.codemagic.io/specs/machine-type/"
+  ],
+  "fleet": {
+    "default_max_instances": 1,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Paid team billing for additional concurrency.",
+    "tiers": "Free and PAYG start with 1 concurrent build. Extra concurrency is purchased in Billing; annual/Enterprise recommended beyond 3 simultaneous builds.",
+    "notes": "Build slots, not persistent VMs. Additional concurrency is $49/month according to billing docs; no special approval SLA established.",
+    "sources": [
+      "https://docs.codemagic.io/billing/pricing/",
+      "https://docs.codemagic.io/getting-started/teams/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 4,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 11
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "It is destroyed immediately after the build has completed, leaving no trace of your source code or",
+      "note": "Ephemeral CI build VMs; only a per-workflow dependency cache (cache_paths) persists between builds, which is not a machine snapshot.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "At the beginning of each build, your source code is cloned to a new virtual machine instance where the build is run.",
+      "note": "No snapshot/checkpoint/custom-image-from-VM feature documented; custom base images only via Enterprise (sales). Cache API (GET/DELETE /apps/:id/caches) manages dependency caches only.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.codemagic.io/troubleshooting/codemagic-init/",
+      "quote": "codemagic-init is a CLI tool that brings Codemagic knowledge directly into AI agents running locally on a developer's machine.",
+      "note": "Codemagic's AI tooling is skills for local agents; the REST API only triggers builds. No API to drive an agent harness on the build VM.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.codemagic.io/troubleshooting/accessing-builder-machine-via-ssh/",
+      "quote": "All virtual machines are located within the private network. In order to allow users to connect to the virtual machine, Codemagic allows a temporary SSH or VNC/RDP access through the public gateway using a unique SSH key or user credentials that are generated before each build.",
+      "note": "Build VMs are not publicly reachable; SSH/VNC/RDP must be enabled manually per build and uses per-build credentials revoked after the build. No user-exposed ports/URLs or IP allowlists.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full VMs (macOS on Apple silicon, Linux, Windows) with sudo/root ('The sudo command is available on Linux/macOS so you can execute all commands with root privileges'); pf/iptables should work but not documented.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.codemagic.io/yaml-basic-configuration/configuring-environment-variables/",
+      "quote": "The variable will be transferred securely to the build machine and made available only while the build is running.",
+      "note": "Secrets are encrypted environment variables (variable groups) delivered into the build VM; readable via printenv. No credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.codemagic.io/yaml-basic-configuration/yaml-getting-started/",
+      "quote": "cache: defines the paths to be cached and stored on Codemagic.",
+      "note": "Only per-workflow build caches (3 GB Free / 10 GB paid per build); no attachable persistent volumes documented.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.codemagic.io/yaml-basic-configuration/yaml-getting-started/",
+      "quote": "Each workflow has its own cache.",
+      "note": "No shared filesystem between concurrent build VMs.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "apple-vm",
+      "source": "https://docs.codemagic.io/knowledge-testing/testing-android/",
+      "quote": "Due to limitations by Apple silicon, the Apple Virtualization API doesn't support nested virtualization required for Android emulators.",
+      "note": "Card model is macOS CI (category: macos). macOS build machines are Apple silicon Mac minis/Studios isolated via Apple's Virtualization Framework (apple-vm); Linux/Windows minutes run on standard cloud VMs.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://codemagic.io/pricing/",
+      "quote": "special requirements such as an NDA, DPA, dedicated hosts, custom base images, or other account management services",
+      "note": "Custom base images exist only as a bespoke Enterprise/sales negotiation, not a self-serve Docker/OCI image feature; format is not documented as OCI.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.codemagic.io/specs/versions-linux/",
+      "quote": "docker `29.2.1`",
+      "note": "Docker is pre-installed and usable inside Linux build machines (not listed on macOS/Windows tool lists).",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": true,
+      "source": "https://docs.codemagic.io/knowledge-testing/testing-android/",
+      "quote": "If you are planning to run instrumentation tests with Android emulators, it is advised to use Linux instances. Please note that Android emulators are not available on macOS M2 VMs due to the Apple Virtualization Framework not supporting nested virtualization.",
+      "note": "derived: Android emulators (hardware-accelerated) run on Linux build machines, implying KVM/nested virtualization is available there, unlike Apple silicon macOS machines which explicitly lack it.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://codemagic.io/pricing/",
+      "quote": "Boost your mobile app development with continuous integration and delivery. Replace manual intervention and build, test and deliver mobile apps 20% faster with CI/CD for mobile",
+      "note": "not offered: outside the product's scope (mobile CI/CD build platform, not a browser/scraping product)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://codemagic.io/pricing/",
+      "quote": "Boost your mobile app development with continuous integration and delivery. Replace manual intervention and build, test and deliver mobile apps 20% faster with CI/CD for mobile",
+      "note": "not offered: outside the product's scope (mobile CI/CD build platform, not a browser automation product)",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://codemagic.io/api/v3/meta",
+      "quote": "address_prefixes: 34.74.234.56/32, 35.185.76.207/32, 38.22.7.112/29, 66.185.17.80/29, 66.185.18.0/29, 162.253.134.16/29, 207.254.42.240/29",
+      "note": "Codemagic publishes a fixed, documented set of datacenter IP ranges that build machines use to reach customer git repos, for firewall allowlisting; shared across customers, not dedicated per-account.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "At the beginning of each build, your source code is cloned to a new virtual machine instance where the build is run.",
+      "note": "not offered: outside the product's scope. Codemagic provisions a fresh ephemeral VM per triggered build rather than waking a stopped/sleeping persistent machine.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.codemagic.io/knowledge-codemagic/machine-type/",
+      "quote": "To switch between build machines, instance_type needs to be configured when working with codemagic.yaml",
+      "note": "Machine/instance type is chosen before a build starts via config; no documented API to change CPU/RAM of a running build machine.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.codemagic.io/troubleshooting/codemagic-init/",
+      "quote": "codemagic-init is a CLI tool that brings Codemagic knowledge directly into AI agents running locally on a developer's machine.",
+      "note": "Codemagic's AI tooling only equips third-party local coding agents with Codemagic knowledge/skills; there is no first-party API driving a Codemagic-owned browser/computer-use/research agent.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://github.com/orgs/codemagic-ci-cd/repositories",
+      "quote": "codemagic-init, codemagic-skills, codemagic-docs, cli-tools … (repository list)",
+      "note": "No MCP server repo/product found in Codemagic's docs, site, or GitHub org (codemagic-ci-cd).",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.codemagic.io/specs/versions-linux/",
+      "quote": "python `3.12.5`",
+      "note": "Python is preinstalled on Linux, macOS (python/python3 3.12.7), and Windows (python 3.9.6 via pyenv-win) build machines.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.codemagic.io/specs/versions-linux/",
+      "quote": "node `22.14.0`",
+      "note": "Node.js is preinstalled on Linux, macOS (node 24.21.0), and Windows (node 20.12.2) build machines.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://codemagic.io/pricing/",
+      "quote": "A Virtual Private Cloud (VPC) of dedicated Mac mini M4 or Mac Studio M4 Max hosts can be set up for your organization.",
+      "note": "No self-serve outbound allow/deny-list or no-internet-mode feature is documented; only a bespoke Enterprise dedicated-host VPC option exists, with no published egress-control API.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://codemagic.io/pricing/",
+      "quote": "A Virtual Private Cloud (VPC) of dedicated Mac mini M4 or Mac Studio M4 Max hosts can be set up for your organization.",
+      "note": "not offered: no HTTP method/path-level egress rules documented anywhere in Codemagic's docs.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.codemagic.io/getting-started/adding-apps/",
+      "quote": "The following IP addresses must be allowed through the firewall (whitelisted)",
+      "note": "Codemagic publishes a fixed set of IP address ranges (via https://codemagic.io/api/v3/meta) that its build machines use for outbound repo access, for customers to allowlist on their private repos/firewalls; shared pool rather than a per-account dedicated IP.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://codemagic.io/pricing/",
+      "quote": "Codemagic is SOC 2 Type II audited and the report is available on request.",
+      "note": "not offered: no HIPAA-eligibility or BAA is mentioned anywhere in Codemagic's docs/pricing/security pages; only SOC 2 Type II is documented.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "At the beginning of each build, your source code is cloned to a new virtual machine instance where the build is run. It is destroyed immediately after the build has completed, leaving no trace of your source code or secret variables.",
+      "note": "Build VM is fresh per build and destroyed after; only per-workflow dependency caches (not a persistent disk) survive between builds. Default is delete-on-completion, no opt-in persistent disk exists.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "It is destroyed immediately after the build has completed, leaving no trace of your source code or secret variables.",
+      "note": "No snapshot/checkpoint or custom-image-from-VM feature documented anywhere in the docs; only a dependency cache API (Caches API) exists, which is not a machine snapshot.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "It is destroyed immediately after the build has completed",
+      "note": "Build VMs are ephemeral per-build; there is no pause/resume of a build machine documented. SSH/VNC debug access stays open only 10 minutes after a build finishes, then the machine is gone.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "At the beginning of each build, your source code is cloned to a new virtual machine instance where the build is run.",
+      "note": "New builds start from a fresh stock VM image, not a clone of a user's existing running/stopped machine. No fork feature documented.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "It is destroyed immediately after the build has completed, leaving no trace of your source code or secret variables.",
+      "note": "No mechanism to clone a running build machine; machines are single-use and destroyed after the build.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "It is destroyed immediately after the build has completed",
+      "note": "No memory-state snapshot/fork capability documented anywhere in Codemagic's docs; consistent with an ephemeral CI build VM product.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "Codemagic is a cloud-based Continuous Integration/Continuous Delivery (CI/CD) product specifically designed for mobile developers building apps with Flutter, React Native, native iOS, native Android, Unity, Kotlin Multiplatform Mobile, .NET MAUI and Ionic.",
+      "note": "Codemagic is a mobile CI/CD build service. It offers VNC/RDP for human debugging of build VMs, but there is no screenshot+click driving API for an AI agent (\"computer use\"); plainly outside what the product is.",
+      "checked": "2026-09-30"
+    },
+    "custom_image": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "All the virtual machines come preloaded with the most common software you would need for building mobile apps such as Xcode, Android Studio, and a variety of CLI tools and frameworks.",
+      "note": "Machines run Codemagic's own fixed images (Linux/macOS/Windows specs pages); no user-supplied custom VM/container image feature is documented for standard plans.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://docs.codemagic.io/yaml-basic-configuration/yaml-getting-started/",
+      "quote": "cache: defines the paths to be cached and stored on Codemagic.",
+      "note": "Only per-workflow build caches (3 GB Free / 10 GB paid) exist; no attachable/persistent volume feature documented.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.codemagic.io/troubleshooting/accessing-builder-machine-via-ssh/",
+      "quote": "All virtual machines are located within the private network. In order to allow users to connect to the virtual machine, Codemagic allows a temporary SSH or VNC/RDP access through the public gateway using a unique SSH key or user credentials that are generated before each build.",
+      "note": "Only temporary SSH/VNC/RDP debug access through a gateway is offered, manually enabled per build and revoked afterward; no HTTPS ingress to ports on the build machine is documented.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.codemagic.io/troubleshooting/accessing-builder-machine-via-ssh/",
+      "quote": "All virtual machines are located within the private network.",
+      "note": "Build VMs sit in a private network behind a gateway; no dedicated/public IPv4 per machine is documented (SSH/VNC access uses a gateway host/port, not the VM's own public IP).",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.codemagic.io/troubleshooting/codemagic-init/",
+      "quote": "codemagic-init is a CLI tool that brings Codemagic knowledge directly into AI agents running locally on a developer's machine.",
+      "note": "Codemagic's AI tooling helps a locally-run coding agent write codemagic.yaml; it does not preinstall/offer coding-agent harnesses (Claude Code, Codex, OpenCode, etc.) inside the build sandbox itself.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.codemagic.io/specs/machine-type/",
+      "quote": "Codemagic's infrastructure is centered around the powerful Apple silicon M2 (arm64) machines... Linux and Windows machines are also available for all customers.",
+      "note": "Only CPU-based Mac mini (Apple silicon), Linux, and Windows build machines are listed across the specs pages; no GPU instance type is offered anywhere in the docs or pricing.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "Codemagic's engineers continuously monitor system availability and take care of updating software like Xcode and checking everything works when building with new versions so you don't have to worry about running and maintaining your own systems.",
+      "note": "Codemagic is explicitly positioned as a hosted service run by Codemagic (\"so you don't have to worry about running and maintaining your own systems\"); no self-hosted/on-prem deployment option is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "Codemagic's infrastructure is centered around the powerful Apple silicon M2 (arm64) machines allowing for faster builds than the previous generation of macOS machines.",
+      "note": "All plans, including Enterprise, run on Codemagic-owned infrastructure/data centers (\"Our data centers are located in the US\"); no bring-your-own-cloud-account deployment option is documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+      "quote": "Configurations can be easily extended with Bash or Python scripts in addition to Codemagic's open-source CLI tools that make tasks such as build versioning, publishing, and code signing much simpler.",
+      "note": "Only auxiliary CLI helper tools (e.g. codemagic-cli-tools) are open source; the core CI/CD build platform itself is closed-source SaaS/Enterprise software, not released under an OSI license.",
+      "checked": "2026-09-30"
+    },
+    "private_network": {
+      "value": false,
+      "source": "https://docs.codemagic.io/troubleshooting/accessing-builder-machine-via-ssh/",
+      "quote": "All virtual machines are located within the private network.",
+      "note": "This describes Codemagic's own internal network isolation of build VMs, not a user-facing feature to place multiple machines on a shared private network the customer controls; no such customer-facing private networking feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.codemagic.io/rest-api/codemagic-rest-api/",
+      "quote": "The Codemagic REST API provides numerous possibilities for integrating your CI/CD builds with other tools or for managing advanced workflow chains. APIs for starting and managing app builds are currently available: Applications API, Artifacts API, Builds API, Caches API.",
+      "note": "granularity: account-only; cost: yes; Codemagic has no billing or usage API. The Builds API only supports starting and canceling builds. Billing is only accessible via the web dashboard or invoices (account-level aggregation). No programmatic access to per-build or per-project usage metrics exists.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": null,
+      "city": null,
+      "provider_region": "us",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": null,
+      "provider_region": "eu",
+      "self_serve": false,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.codemagic.io/getting-started/about-codemagic/",
+  "locations_quote": "Our data centers are located in the US, but it is possible to set up dedicated macOS hosts in the EU on request.",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,626 @@
+{
+  "id": "scrapingbee",
+  "name": "Scraping Bee",
+  "url": "https://www.scrapingbee.com/pricing/",
+  "category": "browser",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "browser-api-request--not-time-priced",
+      "label": "Browser API request (not time-priced)",
+      "flags": [
+        "alt"
+      ],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Browser API request (not time-priced)",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": null,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Headless browser accessed as a request/JS-scenario API. JS rendering is ON by default, so a default request costs 5 credits, not 1. Each request is capped at 140 s. Only successful 200/404/410 (and, per the rendered docs, 413) responses are billed. Effective price per 1,000 default JS requests ranges from $1.27 (Hobby: $19/75k credits) to $0.37 (Business+: $599/8M credits). No browser-hour price."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Hobby",
+      "fee": 19,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 25,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "75,000 API credits/month; VAT excluded. JS rendering, rotating+premium proxies, geotargeting, screenshots/extraction/Google API and dedicated scraper APIs are included. NO priority email support, dedicated account manager or team management (Business and Business+ only). Credits expire at the end of the billing cycle (no rollover)."
+    },
+    {
+      "name": "Freelance",
+      "fee": 49,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 50,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "250,000 API credits/month; VAT excluded. No priority support, account manager or team management. Credits don't roll over."
+    },
+    {
+      "name": "Startup",
+      "fee": 99,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "1,000,000 API credits/month; VAT excluded. No priority support, account manager or team management. Credits don't roll over."
+    },
+    {
+      "name": "Business",
+      "fee": 249,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 200,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "3,000,000 API credits/month; VAT excluded; paid features shared."
+    },
+    {
+      "name": "Business+",
+      "fee": 599,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 400,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "8,000,000 API credits/month; VAT excluded; paid features shared."
+    },
+    {
+      "name": "Custom",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "More credits or concurrency by quote."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": 0.039,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [
+      "eu"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "browser_control": false,
+    "desktop_control": false,
+    "anti_bot": true,
+    "captcha_solving": false,
+    "egress_ip_type": "residential+datacenter",
+    "ip_note": "Default classic rotating proxies (type unstated); premium_proxy=residential (25 credits with JS) and stealth_proxy pool (75 credits), both geotargetable; own_proxy BYO; billed per request, no per-GB price.",
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "image_oci": false,
+    "own_agent_api": false,
+    "secret_proxy": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Storage, snapshot GiB-month and public IPv4 prices are not published in the reviewed sources; null is not free.",
+    "No guaranteed vCPU allocation published; browser-hour is not a verified 4-vCPU/8-GiB VM equivalent. The sizes card keeps unknown hardware null; do not coerce it to zero or auto-rank against resource-guaranteed VMs.",
+    "Browser RAM is not published unless a specific mode overrides it.",
+    "Request API is adjacent to long-lived agent browsers. JS scenarios/screenshots do not establish an eight-hour persistent CDP session product. Browser-hour and 4/8 normalized prices remain null.",
+    "Proxy consumption is packaged into request credits; do not also invent a GB fee. Browser profiles, recording storage and independent GPU/OS tiers are not published.",
+    "Credit allowance divided by fee is not a guaranteed overage rate. Auto-mode can select more expensive request configurations; cap via max_cost parameter.",
+    "FAQ on running out: 'Either upgrade your plan for the current month ... Or you can early renew your current subscription in two clicks.' There is no per-credit overage rate.",
+    "Stealth proxy without JS is 'coming soon'. Only stealth+JS (75 credits) is live.",
+    "Usage API (credits and concurrency readout) is rate-limited to 6 calls/min. Exceeding plan concurrency returns 429 (not billed): 'Please upgrade your plan or contact sales.'",
+    "Credits expire every billing cycle (no rollover). The cycle ends EARLY when credits run out, and the subscription then auto-renews. Running out therefore means paying the next full plan fee early, i.e. overage is billed in whole-plan chunks, or you upgrade. Without renewal or upgrade, requests fail with 401."
+  ],
+  "sources": [
+    "https://www.scrapingbee.com/pricing/",
+    "https://www.scrapingbee.com/documentation/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Trial: no card needed. A payment method is required for any subscription.",
+    "tiers": "Paid Hobby 25, Freelance 50, Startup 100, Business 200, Business+ 400; higher by product expert.",
+    "notes": "Free 1,000-credit trial has no numeric simultaneous-request quota verified here, so default null rather than 25 paid slots. 10 fits Hobby, 50 Freelance, 300 Business+, 1,000 custom. Requests not retained VMs.",
+    "sources": [
+      "https://www.scrapingbee.com/pricing/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/llms/html-api.txt",
+      "quote": "Reuses an IP for 5 minutes.",
+      "note": "N/A by design: stateless per-request scraping API (GET/POST/PUT https://app.scrapingbee.com/api/v1/ with a url). There is no user machine or persistent browser session. The only continuity is session_id, which keeps the same proxy IP for 5 minutes, plus cookies you pass per request.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/llms/html-api.txt",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "No machine/session to snapshot; screenshots are page images, not state checkpoints.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/llms/chatgpt-api.txt",
+      "quote": "Ask a GPT model through ScrapingBee, optionally with web-enhanced search.",
+      "note": "AI features are one-shot prompt->answer endpoints (ChatGPT/Gemini APIs, ai_query/ai_extract_rules extraction). Remote MCP and LangChain expose ScrapingBee as tools to external agents. No agent harness runs inside a ScrapingBee sandbox.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/llms/html-api.txt",
+      "quote": "Endpoint: `https://app.scrapingbee.com/api/v1/` ... Recommended authentication: `Authorization: Bearer YOUR_API_KEY`.",
+      "note": "Customers never get a machine or exposed port; the only inbound surface is ScrapingBee's own API endpoint (auth via Bearer API key) and the Remote MCP endpoint (API key in URL). There is nothing customer-side to apply ingress/allowlist rules to, so provider-side control over 'who reaches exposed ports' does not apply to this product.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "No shell or machine access. Only js_scenario/evaluate page JavaScript runs in ScrapingBee's headless browser.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/llms/html-api.txt",
+      "quote": "Non-HTML downloads are limited to 2 MB per request.",
+      "note": "No storage product. Outputs are returned in the HTTP response; the CLI writes exports locally.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/llms/html-api.txt",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "ScrapingBee is a stateless request/response scraping API (single endpoint https://app.scrapingbee.com/api/v1/, no persistent machine). There is no volume/disk product at all, so a volume mounted by several machines at once is plainly outside the product; docs and pricing page never mention storage or volumes.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope (stateless scraping API, no customer machine/image to boot)",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, no machine access is given to run Docker",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, no machine or /dev/kvm access exists",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope; it is a headless-browser request API, not a graphical desktop/VNC product",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/features/javascript-scenario/",
+      "quote": "Click, scroll and type before scraping",
+      "note": "The JavaScript Scenario feature drives page interactions via a declarative instruction list (click/scroll/type/wait), not a screenshot+click computer-use API against a visible desktop.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/blog/web-scraping-without-getting-blocked/",
+      "quote": "Basic visual CAPTCHA challenges could be solved with software like OCR ... Services like 2Captcha and Death by Captcha use real people to solve CAPTCHAs for a fee.",
+      "note": "ScrapingBee's own guidance points users to third-party CAPTCHA-solving services rather than describing a built-in solver; ScrapingBee's stealth/premium proxies aim to avoid triggering CAPTCHAs, not solve them.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "residential+datacenter",
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "For some hard-to-scrape websites, you may need to use premium proxies (or residential proxies)... Each request with this parameter will count as 25 API credits with Javascript enabled.",
+      "note": "Default classic rotating proxies are datacenter-type; premium_proxy and stealth_proxy pools are residential/anti-detect. own_proxy lets customers bring their own proxy too.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, no shell/machine access; access is via HTTPS API only",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://www.scrapingbee.com/llms/html-api.txt",
+      "quote": "Reuses an IP for 5 minutes.",
+      "note": "Stateless per-request API; no machine or persistent browser session exists to snapshot.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, there is no machine to clone",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, there is no running machine to clone",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, no machine/process state exists to include in a fork",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, requests are billed and completed individually, no machine to pause",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, there is no stopped/sleeping customer machine to wake",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, each request is independent and stateless; no disk persists between requests",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, no persistent customer machine exists to idle-stop",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, there is no customer machine with CPU/RAM to resize",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/cli/",
+      "quote": "Use ScrapingBee inside Claude Code / Use ScrapingBee inside Codex / Scrape without leaving Cursor",
+      "note": "ScrapingBee integrates as a tool used FROM Claude Code/Codex/Cursor (and via its MCP server); it does not run or preinstall coding-agent harnesses inside a sandbox of its own.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/features/fast-search/",
+      "quote": "Get real-time SERP results in under 1 second for your AI agents, dashboards, and production workflows.",
+      "note": "not offered: outside the product's scope. ChatGPT/Gemini/Employee-Search/Fast-Search are one-shot data/search retrieval endpoints for use by external agents, not a first-party browser/computer-use/research agent that ScrapingBee itself drives.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Install the Python ScrapingBee library",
+      "note": "Official Python client library documented alongside Node, Go, Java, PHP, Ruby, CLI, cURL.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "name: 'NodeJS'",
+      "note": "Official NodeJS client library tab present in ScrapingBee's documentation code samples.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope, there is no customer-addressable machine to give a public IPv4",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope; ScrapingBee is called by the customer, it does not expose customer-run services to the internet",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope; no customer machine egress to restrict, only the target url parameter",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Fetch arbitrary URLs through ScrapingBee, with JavaScript rendering, proxy controls, browser interactions, screenshots, downloads, and data extraction.",
+      "note": "not offered: outside the product's scope; no method/path-level egress control product exists",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "If you want to use our infrastructure with your own proxy, you can use the own_proxy parameter.",
+      "note": "own_proxy lets you route through your own proxy credentials, but ScrapingBee does not inject third-party API credentials on your behalf; no any-http/ai-only credential-injection proxy is offered.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "Headless browser accessed as a request/JS-scenario API.",
+      "note": "not offered: outside the product's scope, a browser-rendering request API has no GPU compute tier",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "Headless browser accessed as a request/JS-scenario API.",
+      "note": "not offered: outside the product's scope, no customer OS/machine choice exists",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "Headless browser accessed as a request/JS-scenario API.",
+      "note": "not offered: outside the product's scope, no customer OS/machine choice exists",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "Headless browser accessed as a request/JS-scenario API.",
+      "note": "not offered: outside the product's scope, no customer-selectable machine architecture exists",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "ScrapingBee API handles headless browsers and rotates proxies for you.",
+      "note": "SaaS-only offering; no self-hosted deployment option is published.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "ScrapingBee API handles headless browsers and rotates proxies for you.",
+      "note": "SaaS-only offering; no bring-your-own-cloud deployment option is published.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "ScrapingBee API handles headless browsers and rotates proxies for you.",
+      "note": "Proprietary hosted SaaS API; only client SDKs/CLI are open, not the core scraping/proxy infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://www.scrapingbee.com/data-processing-agreement/",
+      "quote": "ScrapingBee may satisfy this obligation by providing an up-to-date SOC 2 Type II report, ISO 27001 certificate, or equivalent third-party assurance report",
+      "note": "DPA states ScrapingBee can satisfy customer audit rights via its own SOC 2 Type II report.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/data-processing-agreement/",
+      "quote": "ScrapingBee may satisfy this obligation by providing an up-to-date SOC 2 Type II report, ISO 27001 certificate, or equivalent third-party assurance report",
+      "note": "No mention of HIPAA eligibility or a BAA anywhere in the DPA, privacy policy, or GDPR notice.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/pricing/",
+      "quote": "Team management (Business and Business+ only).",
+      "note": "Business plans mention team management but no SAML/OIDC single sign-on is documented on pricing, docs, or legal pages.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Reuses an IP for 5 minutes.",
+      "note": "The only IP-continuity feature documented is session_id, which pins the same rotating/premium/stealth proxy IP for 5 minutes per session, not a fixed dedicated outbound IP. own_proxy lets the customer BYO a proxy, but ScrapingBee itself does not offer a static egress IP; no page advertises one.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://www.scrapingbee.com/data-processing-agreement/",
+      "quote": "Processing Locations Primarily – EU. All cross-border transfers are governed by EU SCCs as set out in Exhibit 2.",
+      "note": "DPA Exhibit 1 states processing locations are primarily EU, and Exhibit 2 lists the main infrastructure sub-processors (Google Cloud Platform - Paris main with EU multi-DC backup; Datapacket - Netherlands/France/Czech Republic) as EU-based with no transfer mechanism required (EEA). There is no customer-selectable region picker, but the provider's own infrastructure keeps data in the EU by default.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.scrapingbee.com/documentation/",
+      "quote": "Usage API (credits and concurrency readout) is rate-limited to 6 calls/min.",
+      "note": "granularity: account-only; cost: no; The API provides account-level readout of credits consumed and concurrency limits, but returns quantities not monetary cost. No per-sandbox, per-tag, or per-project granularity is documented.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": null,
+      "self_serve": true,
+      "choosable": false
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": null,
+      "provider_region": null,
+      "self_serve": true,
+      "choosable": false
+    },
+    {
+      "country": "CZ",
+      "state": null,
+      "city": null,
+      "provider_region": null,
+      "self_serve": true,
+      "choosable": false
+    }
+  ],
+  "locations_source": "https://www.scrapingbee.com/data-processing-agreement/",
+  "locations_quote": "Processing Locations Primarily – EU. All cross-border transfers are governed by EU SCCs as set out in Exhibit 2. DPA Exhibit 1 states processing locations are primarily EU, and Exhibit 2 lists the main infrastructure sub-processors (Google Cloud Platform - Paris main with EU multi-DC backup; Datapac",
+  "locations_checked": "2026-10-01"
+}

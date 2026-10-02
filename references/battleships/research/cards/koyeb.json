@@ -1,0 +1,971 @@
+{
+  "id": "koyeb",
+  "name": "Koyeb Sandboxes",
+  "url": "https://www.koyeb.com/pricing",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "eco",
+      "label": "Eco instances (2 GB/vCPU, older Milan CPUs, was/fra/sin)",
+      "flags": [
+        "burstable"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "volumes": false,
+        "isolation": "cloud-hypervisor"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 0.1,
+      "max_vcpu": 8,
+      "max_ram_gib": 16,
+      "sizes": [
+        {
+          "name": "eco-nano",
+          "vcpu": 0.1,
+          "ram_gib": 0.25,
+          "disk_gib": 2,
+          "hour": 0.00216,
+          "month_cap": null
+        },
+        {
+          "name": "eco-micro",
+          "vcpu": 0.25,
+          "ram_gib": 0.5,
+          "disk_gib": 4,
+          "hour": 0.0036,
+          "month_cap": null
+        },
+        {
+          "name": "eco-small",
+          "vcpu": 0.5,
+          "ram_gib": 1,
+          "disk_gib": 8,
+          "hour": 0.0072,
+          "month_cap": null
+        },
+        {
+          "name": "eco-medium",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 16,
+          "hour": 0.0144,
+          "month_cap": null
+        },
+        {
+          "name": "eco-large",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 20,
+          "hour": 0.0288,
+          "month_cap": null
+        },
+        {
+          "name": "eco-xlarge",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 20,
+          "hour": 0.0576,
+          "month_cap": null
+        },
+        {
+          "name": "eco-2xlarge",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 20,
+          "hour": 0.1152,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Same $/h ladder as standard but double RAM per vCPU. Eco = AMD EPYC Milan (\"half the cores\" of the same-priced standard type), max 20 GB disk, no volumes, only in Washington D.C./Frankfurt/Singapore. Offered on Starter/Pro/Scale (instance catalog require_plan). Whether sandboxes may use eco types is not documented. Per second while running. Eco does NOT support Scale-to-Zero at all (docs: Scale-to-Zero needs a Standard CPU or GPU Instance; catalog light_sleep_enabled=false): an eco sandbox never sleeps, so it bills at the full rate until it is deleted (delete_after_delay min 60 s; delete_after_inactivity_delay depends on scale-to-zero and so does not apply). The SDK default sandbox (idle_timeout=300 -> min scale 0) assumes scale-to-zero, so eco sandboxes may be rejected or need idle_timeout=0 (always on).",
+      "cpu_class": "shared",
+      "baseline_pct": 50
+    },
+    {
+      "key": "standard",
+      "label": "Standard instances (1 GB/vCPU up to 2xlarge, Genoa, all regions)",
+      "flags": [
+        "burstable"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "cloud-hypervisor"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 0.25,
+      "max_vcpu": 40,
+      "max_ram_gib": 128,
+      "sizes": [
+        {
+          "name": "nano",
+          "vcpu": 0.25,
+          "ram_gib": 0.25,
+          "disk_gib": 2,
+          "hour": 0.0036,
+          "month_cap": null
+        },
+        {
+          "name": "micro",
+          "vcpu": 0.5,
+          "ram_gib": 0.5,
+          "disk_gib": 5,
+          "hour": 0.0072,
+          "month_cap": null
+        },
+        {
+          "name": "small",
+          "vcpu": 1,
+          "ram_gib": 1,
+          "disk_gib": 10,
+          "hour": 0.0144,
+          "month_cap": null
+        },
+        {
+          "name": "medium",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": 20,
+          "hour": 0.0288,
+          "month_cap": null
+        },
+        {
+          "name": "large",
+          "vcpu": 4,
+          "ram_gib": 4,
+          "disk_gib": 40,
+          "hour": 0.0576,
+          "month_cap": null
+        },
+        {
+          "name": "xlarge",
+          "vcpu": 8,
+          "ram_gib": 8,
+          "disk_gib": 80,
+          "hour": 0.1152,
+          "month_cap": null
+        },
+        {
+          "name": "2xlarge",
+          "vcpu": 16,
+          "ram_gib": 16,
+          "disk_gib": 160,
+          "hour": 0.2304,
+          "month_cap": null
+        },
+        {
+          "name": "3xlarge",
+          "vcpu": 24,
+          "ram_gib": 32,
+          "disk_gib": 240,
+          "hour": 0.4608,
+          "month_cap": null
+        },
+        {
+          "name": "4xlarge",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 320,
+          "hour": 0.9216,
+          "month_cap": null
+        },
+        {
+          "name": "5xlarge",
+          "vcpu": 40,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 1.8432,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "4 vCPU/8 GiB needs xlarge (8 vCPU/8 GB, $0.1152/h). Local NVMe disk included. The docs say CPU is 'at least 0.25 dedicated vCPU per GB memory, burstable to all cores'. Regions fra, was, sin, tyo, par, sfo (preview); AWS regions on Scale.",
+      "cpu_class": "shared",
+      "baseline_pct": 25
+    },
+    {
+      "key": "gpu",
+      "label": "GPU instances (bundled vCPU/RAM/disk per GPU)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {
+        "isolation": "cloud-hypervisor"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 15,
+      "max_ram_gib": 240,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-4000-SFF-ADA": 0.5,
+        "RTX-A6000": 0.75,
+        "L40S": 1.2,
+        "A100-80GB": 1.6,
+        "A100-SXM-80GB": 2.15,
+        "RTX-PRO-6000": 2.2,
+        "H100": 2.5,
+        "H200": 3
+      },
+      "note": "GPU instance price includes the bundled vCPU/RAM/disk (e.g. H100 = 15 vCPU/180 GB/320 GB), so vCPU/RAM are 0 here. Regions per the pricing-page instance catalog (2026-09-28): RTX-4000-SFF-ADA in fra/eu only; all other available GPUs in \"na\" (North America) only. L4 ($0.70) and B200 ($5.50) and 4x H200 / all 8x GPU types are listed but status RESTRICTED with no regions (request access), so L4/B200 are left out of the priced map. Multi-GPU is linear (2x/4x H100 $5/$10). GPU concurrency: Pro 20, Scale 40."
+    },
+    {
+      "key": "savings-plan",
+      "label": "Savings plan / long-term reservation (up to 50% off, best case)",
+      "flags": [
+        "sales"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "cloud-hypervisor"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 0.1,
+      "max_vcpu": 40,
+      "max_ram_gib": 128,
+      "sizes": [
+        {
+          "name": "eco-xlarge",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 20,
+          "hour": 0.0576,
+          "month_cap": null
+        },
+        {
+          "name": "eco-2xlarge",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 20,
+          "hour": 0.1152,
+          "month_cap": null
+        },
+        {
+          "name": "xlarge",
+          "vcpu": 8,
+          "ram_gib": 8,
+          "disk_gib": 80,
+          "hour": 0.1152,
+          "month_cap": null
+        },
+        {
+          "name": "2xlarge",
+          "vcpu": 16,
+          "ram_gib": 16,
+          "disk_gib": 160,
+          "hour": 0.2304,
+          "month_cap": null
+        },
+        {
+          "name": "3xlarge",
+          "vcpu": 24,
+          "ram_gib": 32,
+          "disk_gib": 240,
+          "hour": 0.4608,
+          "month_cap": null
+        },
+        {
+          "name": "4xlarge",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 320,
+          "hour": 0.9216,
+          "month_cap": null
+        },
+        {
+          "name": "5xlarge",
+          "vcpu": 40,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 1.8432,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Pricing page: 'Long-term reservations get up to 50% off the on-demand price.' Term, minimum and the actual discount are negotiated; 0.5 is the published best case.",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 0.5,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Best-case reading of 'up to 50% off'; sales-only. Verified 2026-09-28: sizes/rates equal the on-demand catalogue (eco-xlarge $0.0576/h, eco-2xlarge $0.1152/h, xlarge $0.1152/h ... https://www.koyeb.com/docs/reference/instances) x 0.5, so eco-xlarge on the plan costs the same as on-demand eco-large by construction, not a data error."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 20,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 1000,
+    "egress_gib": 0.02,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Starter (legacy pay-as-you-go)",
+      "fee": 0,
+      "flags": [
+        "legacy"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Closed to new signups around 2026-02-26 after the Mistral AI acquisition; existing accounts keep it. Light Sleep fixed at 5 min, deep sleep max 1 h 05."
+    },
+    {
+      "name": "Pro",
+      "fee": 29,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 10,
+      "per_seat": 0,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$29/mo with $10 included compute. 10 users, 100 services (each sandbox is a service), 'CPU concurrency 100' (unit ambiguous: instances or vCPU), GPU concurrency 20, 1 TB bandwidth, 7 regions."
+    },
+    {
+      "name": "Scale",
+      "fee": 299,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 100,
+      "per_seat": 0,
+      "concurrency": 1000,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "$299/mo with $100 included compute. 50 users, 1,000 services, CPU concurrency 1,000, GPU 40, AWS regions, 99.9% SLA."
+    },
+    {
+      "name": "Enterprise",
+      "fee": 1000,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 500,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "'Starting at $1000/mo' with $500 included usage (comparison table). Custom CPU/RAM/GPU, 50 regions, BYOC, dedicated racks, SSO/RBAC/audit, ISO27001/SOC2, 99.99% SLA."
+    }
+  ],
+  "extras": [
+    {
+      "item": "Custom domains beyond included (100 Pro / 500 Scale)",
+      "price": "$0.20/month each (not charged yet)"
+    },
+    {
+      "item": "Bandwidth overage Asia",
+      "price": "$0.04/GB"
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "RTX-4000-SFF-ADA",
+      "L4",
+      "RTX-A6000",
+      "L40S",
+      "A100-80GB",
+      "A100-SXM-80GB",
+      "RTX-PRO-6000",
+      "H100",
+      "H200",
+      "B200"
+    ],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": true,
+    "lang_rust": true,
+    "lang_java": true,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": null,
+    "memory_snapshot_fork": true,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": false,
+    "mcp_server": true,
+    "isolation": "cloud-hypervisor",
+    "image_oci": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "guest_firewall": true,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [
+    {
+      "id": "sleep_idle_tail",
+      "label": "Idle period before scale-to-zero (x session hours)",
+      "kind": "slider",
+      "min": 1,
+      "max": 3,
+      "step": 0.05,
+      "default": 1,
+      "unit": "x",
+      "options": null,
+      "effect": "hours_factor",
+      "modes": [
+        "eco",
+        "standard",
+        "gpu"
+      ],
+      "why": "Between the last request and the idle period expiring the instance bills its full rate; the minimum idle period is 5 min on all plans (Light Sleep windows 5 min-3 h Pro / 6 h Scale). Deep sleep is $0 and Light Sleep is free only during preview. Factor = (session + idle period) / session, e.g. 5 min on 30-min sessions = 1.17x.",
+      "source": "https://www.koyeb.com/docs/run-and-scale/scale-to-zero"
+    }
+  ],
+  "caveats": [
+    "Plan fees are only partly usage credit: Pro $29 includes $10, Scale $299 includes $100, Enterprise from $1,000 includes $500. Starter (no fee) is closed to new signups since about 2026-02-26 (flag legacy).",
+    "Eco eligibility for sandboxes is undocumented. Eco-xlarge fits 4/8 exactly at $0.0576/h; standard needs xlarge 8/8 at $0.1152/h. Eco = older Milan CPUs, 20 GB disk max, no volumes, was/fra/sin only.",
+    "Light Sleep (~200 ms wake) is free only during public preview; a GA price is announced but unpublished. Deep sleep and paused services are $0. The idle period before sleeping (min 5 min) is billed at the full rate.",
+    "'CPU concurrency' 100 (Pro) / 1,000 (Scale) may count vCPUs rather than instances; if vCPUs, 50 x 4-vCPU sandboxes require Scale.",
+    "Sandbox snapshots (FILESYSTEM, or FULL with running processes) and spawn-from-snapshot exist only in the official SDK (koyeb-sdk >= 1.5.2, 2026-08-27, labelled experimental); not documented on koyeb.com and no snapshot price published (snapshot_gib_month null). Volumes (preview, 1-10 GB, was/fra, standard/GPU only, not eco) and volume snapshots were 'free during the public preview' (blog); an unverified search snippet cites 10 GB free then $0.08/GB-month.",
+    "Bandwidth: pricing page = 1 TB/mo included on Pro/Scale then $0.02/GB US/EU, $0.04/GB Asia; the older FAQ says 100 GB free then $0.04/GB. Engine uses the pricing page.",
+    "features.max_session_h set null (the features file's 24 h is the optional auto-delete maximum, not a forced session limit). delete_after_inactivity_delay max 12 h after scale-to-zero.",
+    "Savings-plan mode uses the published best case (50% off); actual discounts are negotiated.",
+    "CPU guarantee is 'at least 0.25 dedicated vCPU per GB memory, burstable to all cores', so a standard 1 GB/vCPU instance may get less than its nominal vCPUs under contention.",
+    "Startup program up to $30k credits (not in free).",
+    "No benchmark data for Koyeb in benchmarks.json.",
+    "Verifier 2026-09-28 (pricing page embedded instance catalog): GPU regions corrected from us/eu/asia to us (na) + eu (RTX-4000-SFF-ADA only); L4 and B200 removed from the priced GPU map because their catalog status is RESTRICTED (no regions); eco instances have light_sleep_enabled=false (deep sleep only). Standard, eco and GPU hourly prices, plan fees/included usage, concurrency and bandwidth re-confirmed.",
+    "Data residency (DPA): Customer Data stays in the selected region but may move between datacenters within it; global edge routing is not extra compute regions. Core regions FRA, PAR, SIN, TYO, WAS, aws-us-east-1; SFO preview on paid plans. Eco only FRA/WAS/SIN. Egress: $0.02/GB US/EU, $0.04/GB Asia after 1 TB/month (card egress_gib is the US/EU rate). eco-nano hour = per-second $0.0000006 x 3600 = $0.00216 (display rounds to $0.0022). (patches v10-regional, v5-calculators, 2026-09-28)",
+    "Official pages conflict: the live pricing page omits Starter and says Enterprise starts at $1,000/month, while the organization reference (updated May 27, 2026) says Starter is available to all users with a valid payment method and Enterprise has a $700/month committed cost. Keep pricing-page values for ranking, but do not present Starter closure or $1,000 as undisputed.",
+    "Aggregate cap: the General FAQ says 'With the Scale plan, you can use up to 1TB of memory and up to 1000 services.' So Scale is also capped at ~1 TB of concurrently running RAM (e.g. 125 x 8 GiB sandboxes), and 'CPU concurrency' 100/1,000 most likely counts vCPUs, not instances (unconfirmed). Large fleets need Enterprise.",
+    "Sandbox SDK defaults: instance_type 'micro' (0.5 vCPU/512 MB, $0.0072/h), region 'na', idle_timeout 300 s -> deep sleep after 5 min (min scale 0); Light Sleep for sandboxes is only an '_experimental_enable_light_sleep' flag. idle_timeout=0 means always-on (min scale 1).",
+    "Billing clock: 'Paid usage begins when an Instance has been created and the Deployment has a Starting status', so image pull/boot time is billed (boot_overhead_s unknown). Usage 'accounted per second and billing is rounded up to the nearest unit'; no minimum billed duration is documented.",
+    "Terms: Fees depend on Authorized Users and Services; exceeding the plan's included users/services is 'charged based on usage' but no per-user/per-service price is published. Starter orgs are limited to 1 member (org doc)."
+  ],
+  "sources": [
+    "https://www.koyeb.com/pricing",
+    "https://www.koyeb.com/docs/reference/instances",
+    "https://www.koyeb.com/docs/faqs/pricing",
+    "https://www.koyeb.com/docs/run-and-scale/scale-to-zero",
+    "https://www.koyeb.com/docs/sandboxes",
+    "https://www.koyeb.com/docs/sandboxes/sandbox-lifecycle",
+    "https://www.koyeb.com/docs/reference/volumes",
+    "https://www.koyeb.com/docs/reference/snapshots",
+    "https://www.koyeb.com/blog/koyeb-sandboxes-fast-scalable-fully-isolated-environments-for-ai-agents",
+    "https://www.koyeb.com/blog/new-eco-instances-the-most-affordable-way-to-deploy-apps-globally",
+    "https://www.koyeb.com/blog/snapshots-create-a-point-in-time-copy-of-your-high-performance-volumes",
+    "https://www.koyeb.com/blog/koyeb-is-joining-mistral-ai-to-build-the-future-of-ai-infrastructure",
+    "https://github.com/robhunter/agentdeals/issues/2180"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Credit card, $29 preauthorization (immediately cancelled) plus prorated subscription charge; billing details validated and extra information may be requested.",
+    "tiers": "Current Pro: 100 services and CPU concurrency 100, GPU concurrency 20; Scale 1,000 services/CPU concurrency 1,000, GPU concurrency 40; Enterprise custom.",
+    "notes": "Default left null because entry-page CPU concurrency units and new-account validation overrides do not establish one universal machine-count quota. New signup selects Pro; Starter downgrade/legacy eligibility language conflicts across existing card and FAQ. Validation usually minutes, sometimes up to 3 business days, not an increase SLA.",
+    "sources": [
+      "https://www.koyeb.com/pricing",
+      "https://www.koyeb.com/docs/faqs/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 8,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 9
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://www.koyeb.com/docs/run-and-scale/scale-to-zero",
+      "quote": "The Light Sleep state utilizes snapshotting to enable Instances to spin up significantly faster after scaling to zero, allowing for a 200 ms start time.",
+      "note": "Trigger: idle scale-to-zero (no inbound traffic for the idle period) with Light Sleep enabled; wake on next request. Memory included: engineering blog says pause_with_snapshot 'Saves the full VM state to disk' (https://www.koyeb.com/blog/scale-to-zero-wake-vms-in-200-ms-with-light-sleep-ebpf-and-snapshots). Opt-in; for sandboxes it is the SDK flag _experimental_enable_light_sleep (default is Deep Sleep, where the VM is discarded, 1-5 s cold start). Light Sleep is public preview, CPU only (not GPU). Free during preview.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://github.com/koyeb/koyeb-python-sdk/blob/HEAD/docs/sandbox.md",
+      "quote": "Captures the current state of the sandbox's filesystem (and optionally running processes for FULL type) so it can be restored later.",
+      "note": "Sandbox.snapshot(name, snapshot_type=FILESYSTEM|FULL); FULL includes running processes (memory). Sandbox.create_from_snapshot() / Sandbox.create(snapshot=...) boots new sandboxes from it (fork/template); Sandbox.template() declarative snapshot builder. Only in the Python SDK reference (experimental), not on koyeb.com docs; the koyeb.com 'Snapshots' page covers volume snapshots only. Snapshot price unpublished.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://github.com/koyeb/koyeb-python-sdk/blob/HEAD/docs/sandbox.md",
+      "quote": null,
+      "note": "SDK reference exposes exec/launch_process/filesystem/expose_port/snapshot only; no method to start or stream an agent harness. Tutorials (Claude Agent SDK, Codex, Copilot CLI, Mistral Vibe) run agents inside sandboxes via generic exec. Koyeb MCP server and Agent Skills let agents drive Koyeb from outside, the opposite direction.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://github.com/koyeb/koyeb-python-sdk/blob/HEAD/docs/sandbox.md",
+      "quote": "`outbound_allowlist` - List of IPs/CIDRs allowed as outbound destinations;\n  all other outbound traffic is blocked. Bare IPs are normalized to\n  /32 (IPv4) or /128 (IPv6). Mutually exclusive with block_network.",
+      "note": "Also block_network=True (no internet). update_network_policy() changes it at runtime but triggers a redeployment (in-memory state lost). IP/CIDR only; no hostname entries (EgressPolicyError if an entry is not a valid IP/CIDR). JS SDK has examples/21_egress_policy.ts. Not documented on koyeb.com docs.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://github.com/koyeb/koyeb-python-sdk/blob/HEAD/docs/sandbox.md",
+      "quote": "`block_network` - If True, block all outbound network access from the sandbox",
+      "note": "The only network-policy knobs are block_network and an IP/CIDR outbound_allowlist; nothing at HTTP method/path/header level.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.koyeb.com/docs/build-and-deploy/exposing-your-service",
+      "quote": "Public: Whether the port is exposed publically. If unselected, the port will only be accessible to other Services running on Koyeb’s service mesh.",
+      "note": "Sandboxes: expose_port()/unexpose_port() choose the single public port (one at a time); optional TCP proxy; private service mesh (sandboxes excluded by default, enable_mesh). No IP allowlist for inbound documented.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/reference/secrets",
+      "quote": "You can attach a Secret to your Service by setting its value to an environment variable in the Service configuration.",
+      "note": "Koyeb Secrets are env vars (or registry credentials); no outbound credential-injecting proxy documented. sandbox_secret in the SDK is only executor authentication. No non-HTTP coverage.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://www.koyeb.com/docs/reference/volumes",
+      "quote": "Koyeb volumes are block storage devices that can be provisioned to provide persistent storage across deployments.",
+      "note": "Public preview, 1-10 GB, was/fra only, standard and GPU instances only (no eco), scale-of-one Services. Sandboxes are Services, but the sandbox SDK has no volume parameter, so attaching to a sandbox is via the Service API/console only (unverified for sandboxes).",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/reference/volumes",
+      "quote": "At the moment, once a volume is attached to a Service, it cannot currently be detached except if the Service is deleted. The Volume can’t be attached to another Service.",
+      "note": "Also 'Volumes currently only work with Services with a scale of one.' Local, single-machine block device, read-write.",
+      "checked": "2026-09-29"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/reference/instances",
+      "quote": "Koyeb Instances run on cloud-hypervisor micro-VMs.",
+      "note": "No mention of /dev/kvm, nested virtualization, or the ability to run VMs/emulators inside a Koyeb instance anywhere in the docs or SDK reference (exec/launch_process only run processes). Cloud-hypervisor microVM guests do not expose KVM passthrough by default and Koyeb documents none, so treated as not offered.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/sandboxes",
+      "quote": "The Koyeb Sandbox SDK provides a Python interface for programmatically creating, managing, and interacting with Koyeb sandboxes — ephemeral compute environments designed for isolated code execution on the Koyeb platform.",
+      "note": "not offered: outside the product's scope (generic code-execution/compute sandboxes and app hosting, not a browser-automation/scraping product; no stealth or fingerprinting features documented)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/sandboxes",
+      "quote": "The Koyeb Sandbox SDK provides a Python interface for programmatically creating, managing, and interacting with Koyeb sandboxes — ephemeral compute environments designed for isolated code execution on the Koyeb platform.",
+      "note": "not offered: outside the product's scope (generic code-execution/compute sandboxes and app hosting, not a browser/CAPTCHA-solving product)",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://www.koyeb.com/docs/reference/instances",
+      "quote": "Koyeb Instances run on cloud-hypervisor micro-VMs.",
+      "note": "Koyeb is a standard cloud compute/hosting platform (own datacenters/cloud regions: fra, par, sin, tyo, was, aws-us-east-1). No residential/mobile IP product is offered anywhere in the docs; outbound traffic uses Koyeb's own datacenter IP ranges (egress_allowlist works on IP/CIDR, static_egress_ip is false).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/koyeb/koyeb-python-sdk/HEAD/docs/sandbox.md",
+      "quote": "def update_lifecycle(delete_after_delay: Optional[int] = None, delete_after_inactivity_delay: Optional[int] = None)",
+      "note": "The Sandbox/AsyncSandbox SDK only exposes update_lifecycle() (auto-delete timers) and update_network_policy() (egress rules) as runtime updates; there is no method to change instance_type/vCPU/RAM on a running sandbox. Changing instance_type requires creating a new sandbox/service (redeploy), so a running machine's size cannot be changed in place.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/sandboxes",
+      "quote": "You should use a sandbox to: Execute untrusted or user-generated code securely, Prototype applications quickly, Test APIs or libraries in clean environments...",
+      "note": "not offered: outside the product's scope. Koyeb ships an MCP server and Agent Skills so external coding agents can drive Koyeb infrastructure, and tutorials show running third-party agents (Claude Agent SDK, Codex, Copilot CLI) inside sandboxes, but Koyeb has no first-party browser/computer-use/research task agent of its own.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/koyeb/sandbox-container/main/Dockerfile",
+      "quote": "FROM ubuntu:22.04 ... CARGO_HOME=/root/.cargo",
+      "note": "derived: isolation is cloud-hypervisor (full microVM per instance, not a shared-kernel container) and the default sandbox image's Dockerfile sets no USER directive and installs to /root, so the guest runs as root by default — nftables/iptables would work inside a full VM with root, consistent with docker_inside=true. Not directly documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/koyeb",
+      "quote": "High-performance serverless infrastructure for AI. Run inference, sandboxes, and intensive workloads on CPUs, GPUs & accelerators.",
+      "note": "The core platform (control plane/orchestrator that runs koyeb.com) is closed-source SaaS; only client-side pieces are open source under Apache-2.0 (koyeb-python-sdk, koyeb-sandbox-sdk-js, sandbox-container default image, koyeb CLI). The product itself cannot be self-hosted (features.self_host = false), so the core product is not open source.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.koyeb.com/pricing",
+      "quote": "ISO27001 and SOC2 Certifications",
+      "note": "The Enterprise plan's compliance list (pricing page comparison table) names ISO27001 and SOC2 only; HIPAA/BAA is not mentioned there or in the Master Service Agreement, Service Level Agreement, or Data Processing Agreement docs, so treated as not offered.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.koyeb.com/docs/sandboxes/sandbox-lifecycle",
+      "quote": "For all plans (Starter, Pro, and Scale), auto-deletion can be configured with a minimum delay of 60 seconds and a maximum of 24 hours, or 12 hours after scaling to zero.",
+      "note": "24h/12h are optional, caller-configured auto-delete/auto-deletion-after-inactivity timers (delete_after_delay / delete_after_inactivity_delay), not a forced platform-imposed session cap. If left unset, a sandbox (a billed running VM/service) keeps running until explicitly deleted or the account/plan limits are hit, so no hard maximum session length is documented.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://www.koyeb.com/docs/reference/volumes",
+      "quote": "Koyeb volumes are block storage devices that can be provisioned to provide persistent storage across deployments. Unlike the local ephemeral storage available for Instances, volume storage can be reattached to new deployments, saving important context and configuration that would otherwise be lost.",
+      "note": "Card already sets features.volumes=true and pause_resume=true (Light Sleep 'Saves the full VM state to disk') while persistent_disk is false — a direct contradiction. Volumes (public preview, 1-10 GB, was/fra only, standard/GPU Services, not eco/free) give first-party persistent storage that survives redeployment/pause; default without a volume is ephemeral local SSD that is lost on redeploy/stop. Corrected value: persistent_disk=true (opt-in via Volumes; default is not persistent).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": null,
+      "was": false,
+      "note": "doubtful \"no\" could not be confirmed: Checked the Python SDK reference (Sandbox.snapshot(FILESYSTEM|FULL) + Sandbox.create_from_snapshot()) and the sandbox lifecycle/quickstart docs and the sandboxes announcement blog. None state whether the source sandbox must be stopped/paused before or during snapshot(), nor whether the original keeps running once a new sandbox is spawned from the snapshot. No explicit 'fork without stopping the original' statement found anywhere; genuinely undocumented, so left unclear rather than asserting true or false.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/build-and-deploy/cli/reference",
+      "quote": "koyeb instances exec",
+      "note": "Koyeb's own remote-access primitive is the CLI 'koyeb instances exec' (generic command exec), not an SSH command; there is no 'koyeb ssh' or built-in SSH client/agent. The only path to true SSH is the generic (currently public-preview) TCP Proxy feature, which the docs describe only as an example: 'TCP Proxy lets you expose the TCP ports of your Services to the Internet, enabling direct TCP connections such as SSH' (https://www.koyeb.com/docs/run-and-scale/tcp-proxy) — that requires the user to run their own sshd inside the container/sandbox image; it is not a managed SSH-into-the-sandbox feature. Confirmed as false but medium confidence because a workaround exists.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://github.com/koyeb/koyeb-python-sdk/blob/HEAD/docs/sandbox.md",
+      "quote": "Launch new sandbox instances Wait for readiness and TCP proxy availability Expose or unexpose internal ports Execute background processes and list or terminate them Access sandbox filesystem and execution interfaces",
+      "note": "Sandbox SDK surface (exec/filesystem/expose_port/snapshot) has no VNC/RDP/streamed-desktop capability; no mention of 'desktop', 'VNC', or 'GUI' anywhere in the sandbox docs, lifecycle page, or SDK reference.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/sandboxes",
+      "quote": "The Koyeb Sandbox SDK provides a Python interface for programmatically creating, managing, and interacting with Koyeb sandboxes — ephemeral compute environments designed for isolated code execution on the Koyeb platform.",
+      "note": "Sandbox docs, lifecycle page, SDK reference, and the sandboxes announcement blog describe only isolated code execution (filesystem, process exec, port exposure, snapshots); no managed/pre-installed browser or browser automation surface is mentioned anywhere.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://github.com/koyeb/koyeb-python-sdk/blob/HEAD/docs/sandbox.md",
+      "quote": "Access sandbox filesystem and execution interfaces",
+      "note": "No screenshot/click-driving API exists in the sandbox SDK; interaction is limited to exec/filesystem/ports/snapshots. No computer-use/GUI-automation feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/reference/edge-network",
+      "quote": "All Koyeb Apps are automatically accessible via a subdomain of koyeb.app routed via our Global Edge Network. ... Our Global Edge Network provides native load balancing, TLS encryption.",
+      "note": "Inbound traffic (including the sandbox TCP Proxy) is always routed through Koyeb-managed domains/edge network, never a dedicated public IPv4 attached to the instance. Matches card's network.ipv4_available=false.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/faqs/general",
+      "quote": "dig +short outbound-ips.infra.prod.koyeb.com Note: Please keep in mind that IP addresses may be added or removed from the pool without notice. If you are relying on these addresses for populating an allow list for another service, you will have to recheck and update the values periodically. As an alternative to the above solution, you may want to consider a cloud-aware static IP service. Providers include: Fixie Noble IP QuotaGuard",
+      "note": "Koyeb only publishes a mutable outbound IP pool (no per-app/per-instance static egress IP) and explicitly points customers to third-party static-IP add-on services as the workaround, confirming Koyeb itself has no static egress IP feature.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/reference/instances",
+      "quote": "Instances are microVMs which serve as a thin, isolated, high performance wrapper around your code.",
+      "note": "The full GPU/Standard/Eco instance-type tables list only Linux container/microVM instance types (nano..5xlarge, eco-*, gpu-nvidia-*); no Windows instance type, image, or OS option exists anywhere on the instances reference or pricing page.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/reference/instances",
+      "quote": "Instances are microVMs which serve as a thin, isolated, high performance wrapper around your code.",
+      "note": "Same instance-type tables show only Linux-container-based microVM types; Koyeb is a container/microVM PaaS with no macOS hardware or VM offering documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.koyeb.com/docs/reference/instances",
+      "quote": "GPU Instance types ... Standard Instance types ... Eco Instance types (available in Washington, D.C., Frankfurt, and Singapore)",
+      "note": "The complete published instance catalog (GPU/Standard/Eco) lists no ARM/Graviton/Apple-Silicon instance type or architecture selector; all documented instances imply x86_64 (Intel/AMD Milan/Genoa CPUs referenced in card notes). No ARM option found on instances, pricing, or sandbox docs, so kept as false at medium confidence (no explicit 'x86_64-only' statement was found, only absence of any ARM listing).",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://www.koyeb.com/docs/faqs/general",
+      "quote": "Our core locations can run on any Cloud Service Provider. Koyeb also supports edge and on-premise deployments for Enterprises workload. Please contact us if you have such a need.",
+      "note": "Koyeb's own FAQ documents on-premise (self-hosted) deployment of the platform for Enterprise customers, distinct from the already-true BYOC (deploy-into-your-cloud-account) feature. It is sales-gated/custom ('contact us'), so kept at medium confidence, but the card's blanket self_host=false with no evidence is contradicted by this official statement. Corrected value: self_host=true (Enterprise-only, contact sales).",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "standard": "burstable:25",
+        "eco": "burstable:50"
+      },
+      "source": "https://www.koyeb.com/docs/faqs/general",
+      "quote": "All of your apps and services are running on top of bare metal servers with high-end CPUs. Paid containers receive a share of CPU with at least 0.25 dedicated vCPU per GB of memory and can burst to full speed with all the cores exposed to the container.",
+      "note": "Koyeb publishes the guarantee as 'at least 0.25 dedicated vCPU per GB of memory, burstable to all cores' rather than as a direct per-vCPU baseline percentage, so the NN value is derived from each mode's published GB-per-vCPU ratio: Standard is 1 GB RAM per vCPU -> 0.25 vCPU guaranteed per 1 vCPU nominal = 25% baseline (burstable:25). Eco is 2 GB RAM per vCPU -> 0.25*2 = 0.5 vCPU guaranteed per 1 vCPU nominal = 50% baseline (burstable:50). Both can burst to use all cores on the host when available. GPU and savings-plan modes not included: no separate CPU-guarantee statement was found for GPU instances (bundled vCPU/RAM per GPU), and savings-plan mixes eco+standard sizes so a single NN would not be accurate.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/koyeb/koyeb-python-sdk/HEAD/docs/api.md",
+      "quote": "MetricsApi.get_metrics(service_id, instance_id, name, start, end, step) returns operational metrics (CPU, memory) per instance or service, not billable usage or cost. Billing data exists via NextInvoiceReply endpoints but is account-level, not per-sandbox.",
+      "note": "granularity: none; cost: no; Koyeb exposes MetricsApi with per-instance/per-service metrics querying, but these return operational metrics (CPU/memory/network) only. Billable usage and cost require accessing account-level invoice endpoints (NextInvoiceReply, HasUnpaidInvoicesReply) which do not break down by individual sandbox/instance. No per-sandbox billing/cost query API found; usage is dashboard-only or invoice-based.",
+      "confidence": "medium",
+      "checked": "2026-01-15"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Washington",
+      "provider_region": "was",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Arlington",
+      "provider_region": "aws-us-east-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "fra",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "par",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "sin",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "tyo",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Francisco",
+      "provider_region": "sfo",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.koyeb.com/docs/reference/instances",
+  "locations_quote": "Regions fra, was, sin, tyo, par, sfo (preview); AWS regions on Scale. Eco only FRA/WAS/SIN.",
+  "locations_checked": "2026-10-01"
+}

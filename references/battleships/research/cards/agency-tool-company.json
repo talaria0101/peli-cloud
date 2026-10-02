@@ -1,0 +1,498 @@
+{
+  "id": "agency-tool-company",
+  "name": "Agency Tool Company",
+  "url": "https://agencytool.com",
+  "category": "dev-env",
+  "isolation": "bare-metal",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [
+        "beta",
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": null,
+    "hipaa": false,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": null,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "harness_api": false,
+    "own_agent_api": false,
+    "secret_proxy": false,
+    "isolation": "bare-metal",
+    "ingress_rules": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "guest_firewall": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Official site: ATC Build (coming soon) = CI runner on hosted NVIDIA Jetson (Orin Nano, NX, AGX, Thor); Raspberry Pi, Rockchip and specialty x86 only on request ('Need something else? Reach out'). ATC Deploy (beta) is OTA software delivery/fleet management for robots, not compute. No published price.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Checked 2026-09-29: still no pricing, docs or signup; ATC Deploy 'IN BETA TODAY', install link 'withheld until launch'; ATC Build 'COMING SOON' as a GitHub Actions / GitLab CI runner ('runs-on: atc-build'). Waitlist only."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/agency-tool-company",
+    "https://agencytool.com/",
+    "https://agencytool.com/llms.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 1,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "image_oci": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Deploy is built to support ... OCI-compatible container images, configuration, models, and device-specific content.",
+      "note": "not offered: OCI images are a deployment artifact shipped to customer-owned robots, not a way to boot a provider-hosted machine",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "A CI runner backed by hosted embedded compute (NVIDIA Jetson: Orin Nano, NX, AGX, Thor).",
+      "note": "not offered: outside the product's scope (embedded ARM CI boards, no VM/emulation feature published)",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope (robotics OTA/CI infra, not browser automation)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope (physical robots and CI hardware cannot be cloned)",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "A CI runner backed by hosted embedded compute (NVIDIA Jetson: Orin Nano, NX, AGX, Thor).",
+      "note": "not offered: outside the product's scope (fixed physical embedded boards, not resizable cloud instances)",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "provides a CLI designed for developers and agents, and a rich web interface for fleet operators",
+      "note": "not offered: 'agents' here means deployment automation/scripts, not preinstalled coding-agent harnesses; outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "provides a CLI designed for developers and agents, and a rich web interface for fleet operators",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "per-robot calibrations and per-customer configs ship alongside common software",
+      "note": "credentials/config are shipped as deployment artifacts, not injected via a first-party HTTP credential proxy",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "https://agencytool.com/llms.txt",
+      "quote": "A CI runner backed by hosted embedded compute (NVIDIA Jetson: Orin Nano, NX, AGX, Thor).",
+      "note": "ATC Build (coming soon) runs jobs on hosted NVIDIA Jetson boards, which include an onboard GPU",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Deploy will ship software to any Linux-based target.",
+      "note": "not offered: outside the product's scope (Linux-based robot targets and Linux embedded CI boards only)",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Deploy will ship software to any Linux-based target.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://agencytool.com/llms.txt",
+      "quote": "A CI runner backed by hosted embedded compute (NVIDIA Jetson: Orin Nano, NX, AGX, Thor); Raspberry Pi, Rockchip and specialty x86 only on request.",
+      "note": "NVIDIA Jetson boards (Orin Nano/NX/AGX/Thor) are ARM64",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "bare-metal",
+      "source": "https://agencytool.com/",
+      "quote": "No emulation, no \"worked on my machine\" surprises... Use all the hardware, including CUDA, NVENC, DLA, and specialty accelerators, to make sure your software really works.",
+      "note": "ATC Build runs CI jobs on hosted real NVIDIA Jetson boards (Orin Nano/NX/AGX/Thor), explicitly avoiding emulation/virtualization to expose real accelerators; no isolation mechanism (containers/VM) is documented, consistent with direct/bare-metal access to dedicated embedded hardware.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://agencytool.com/",
+      "quote": "Cached artifacts and Docker builds keep pipelines short, so devs and test techs stop waiting on pushes.",
+      "note": "ATC Build supports Docker builds as part of the CI pipeline; ATC Deploy also ships OCI-compatible container images.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Fast CLI for engineers and agents; ergonomic web console for operations.",
+      "note": "Only a CLI and web console are mentioned for controlling ATC Deploy/Build; no MCP server is advertised anywhere on the site, blog, or llms.txt.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope — ATC Build is a CI job runner and ATC Deploy is an OTA fleet-management tool; neither is a network-addressable sandbox/VM product with exposed public IPs.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope — no inbound service/ports concept exists in a CI runner or OTA deployment product.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "The Jetson build hardware and deployment service are described as hosted by Agency Tool Company; no self-hosted/on-prem deployment option is offered.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "No mention of deploying the ATC control plane into a customer's own cloud account; the service is run by Agency Tool Company on hardware it hosts.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company gives robotics teams reliable infrastructure to build, deploy, manage, and operate real-world robots.",
+      "note": "No OSI license or open-source repository is referenced for ATC Deploy or ATC Build; the products are presented as a proprietary hosted/beta commercial service.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Agency Tool Company builds deployment infrastructure for robotics teams: over-the-air updates, fleet management, and CI on real robot hardware.",
+      "note": "not offered: outside the product's scope — a robotics OTA/CI deployment tool has no relation to protected health information workflows.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Your engineers are up after midnight SSH’d into robots to upgrade the fleet.",
+      "note": "not offered: SSH is described only as the manual pain-point ATC Deploy replaces on customers' own robots; no SSH access to ATC's hosted Jetson build machines or Deploy infrastructure is offered. Outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope — ATC Build is an ephemeral CI job runner and ATC Deploy is an OTA delivery tool; no snapshot/checkpoint feature of a machine is documented.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "A one-line change puts real target hardware into the build and test pipeline you already have — GitHub Actions or GitLab CI.",
+      "note": "not offered: outside the product's scope — ATC Build jobs run to completion as CI jobs; no pause/resume-billing concept for a machine is documented.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "Cached artifacts and Docker builds keep pipelines short, so devs and test techs stop waiting on pushes.",
+      "note": "not offered: only build-cache/artifact caching between CI runs is mentioned, not a persistent disk on a stoppable/startable machine; outside the product's scope as modeled (a CI runner, not a sandbox/VM).",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope — CI jobs run and finish; no idle-machine concept is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope — no outbound network control feature is documented anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "No emulation, no \"worked on my machine\" surprises... Use all the hardware, including CUDA, NVENC, DLA, and specialty accelerators.",
+      "note": "not offered: isolation is bare-metal embedded boards (not a VM/microVM with root), and no guest-firewall/nftables capability is documented; outside the product's scope as modeled.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure.",
+      "note": "not offered: outside the product's scope — no networking/IP feature of any kind is documented for the hosted CI runners.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://agencytool.com/",
+      "quote": "ATC Build is a CI runner backed by our hosted specialized embedded compute infrastructure. ATC Deploy is an over-the-air software delivery and fleet-management system. No usage API, billing endpoint, or metrics documentation is published.",
+      "note": "granularity: none; cost: no; Products are in beta/coming-soon stage. No REST API, SDK, or CLI endpoint documented for querying billable usage (job/machine run-time, vCPU-seconds, GB-seconds, credits, or cost) per CI job, sandbox, robot, or deployment. No billing export or cost API published. Dashboard-only usage visibility; no programmatic access.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": null,
+  "locations_quote": "ATC Build (coming soon) = CI runner on hosted NVIDIA Jetson... ATC Deploy (beta) is OTA software delivery/fleet management for robots, not compute. No published price.",
+  "locations_checked": "2026-10-01"
+}

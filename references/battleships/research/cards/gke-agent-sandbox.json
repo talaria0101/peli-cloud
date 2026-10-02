@@ -1,0 +1,929 @@
+{
+  "id": "gke-agent-sandbox",
+  "name": "GKE Agent Sandbox",
+  "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+  "category": "hyperscaler",
+  "isolation": "gvisor",
+  "modes": [
+    {
+      "key": "autopilot",
+      "label": "GKE Autopilot sandbox pods",
+      "flags": [
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "gvisor"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.0445,
+      "ram_gib_h": 0.0049225,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "GKE Autopilot general-purpose Pod rates, default table on cloud.google.com/kubernetes-engine/pricing (2026-09-28; matches us-central1): $0.0445/vCPU-h, $0.0049225/GiB-h, ephemeral SSD $0.0001389/GiB-h. Billed on Pod resource requests. \"Agent Sandbox is offered at no extra charge in GKE. GKE pricing applies to the resources that you create.\" gVisor is enforced by the sandbox core policy. SandboxWarmPool keeps pre-warmed Pods (billed while running) so claims start in under a second.",
+      "product_class": "sandbox-api"
+    },
+    {
+      "key": "autopilot-spot",
+      "label": "GKE Autopilot Spot sandbox pods",
+      "flags": [
+        "spot",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "gvisor"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.0133,
+      "ram_gib_h": 0.0014767,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Autopilot Spot Pod rates from the same table: $0.0133/vCPU-h, $0.0014767/GiB-h (\"Spot prices are dynamic and can change up to once every 30 days\"; 60-91% off). Pods can be preempted. Whether Agent Sandbox (gVisor) pods can use Spot capacity is not stated in the Agent Sandbox docs (unverified).",
+      "product_class": "sandbox-api"
+    },
+    {
+      "key": "standard",
+      "label": "GKE Standard sandbox nodes",
+      "flags": [
+        "alt",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "gvisor"
+      },
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "GKE Standard: nodes billed at Compute Engine prices (per second, 1-minute minimum) plus $0.10/cluster-h; not priced here (depends on the node machine type)."
+    },
+    {
+      "key": "autopilot-flex-cud-1y",
+      "label": "Autopilot default — Compute Flexible CUD 1 year",
+      "flags": [
+        "commit",
+        "beta"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.03204,
+      "ram_gib_h": 0.0035442,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "granularity_s": 1,
+      "min_billed_seconds": 0,
+      "commit_note": "1-year hourly spend commitment"
+    },
+    {
+      "key": "autopilot-flex-cud-3y",
+      "label": "Autopilot default — Compute Flexible CUD 3 years",
+      "flags": [
+        "commit",
+        "beta"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.02403,
+      "ram_gib_h": 0.00265815,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "granularity_s": 1,
+      "min_billed_seconds": 0,
+      "commit_note": "3-year hourly spend commitment"
+    },
+    {
+      "key": "autopilot-gke-cud-1y",
+      "label": "Autopilot default — GKE CUD 1 year",
+      "flags": [
+        "commit",
+        "beta"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.0356,
+      "ram_gib_h": 0.003938,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "granularity_s": 1,
+      "min_billed_seconds": 0,
+      "commit_note": "1-year GKE commitment"
+    },
+    {
+      "key": "autopilot-gke-cud-3y",
+      "label": "Autopilot default — GKE CUD 3 years",
+      "flags": [
+        "commit",
+        "beta"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.024475,
+      "ram_gib_h": 0.002707375,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "granularity_s": 1,
+      "min_billed_seconds": 0,
+      "commit_note": "3-year GKE commitment"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.02,
+    "paused_ram_billed": null,
+    "ephemeral_ssd_gib_h": 0.0001389
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go (one Autopilot cluster)",
+      "fee": 73,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 74.4,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Cluster management fee $0.10 per cluster per hour ($73/month) is covered for one zonal/Autopilot cluster by the GKE free tier ($74.40/month per billing account), so fee 0 for a single cluster. Project quotas (vCPU per region) apply."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": 300
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": false,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": true,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "isolation": "gvisor",
+    "image_oci": true,
+    "isolation_alternative": "Kata Containers (open-source, customer-managed; no Google support/SLA)",
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Autopilot rates are for the default region on the GKE pricing page (us-central1); other regions cost ~5-30% more. You run and operate your own GKE cluster (Agent Sandbox CRDs, warm pools, templates); regional quotas apply. Minimum Pod sizes / CPU:memory ratios of Autopilot are not modelled.",
+    "Compute is billed on Pod requests (not usage). Egress follows standard Google Cloud network pricing (not captured; null).",
+    "Harbor GKE backend and ADK GKE codeexecutor use customer GKE infrastructure. Agent Sandbox orchestration is not a separate all-inclusive VM rate. Price depends on Autopilot/Standard, location, machine, warm pool and storage.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free.",
+    "Warm pools: pre-warmed sandboxes are running Pods that accrue requested CPU, RAM and ephemeral storage before any claim (startup typically under 1 s; replicas user-configured). Platform overhead: the sandbox-router alone requests 100m CPU / 512 MiB, plus controller and networking resources; not modelled.",
+    "Nested virtualization set to no: every sandbox runs under gVisor, which gives the workload its own user-space kernel and no /dev/kvm device (no KVM-based emulators or VMs inside). Docker inside is a separate question."
+  ],
+  "sources": [
+    "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+    "https://github.com/laude-institute/harbor/blob/main/src/harbor/environments/gke.py",
+    "https://cloud.google.com/kubernetes-engine/pricing",
+    "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Google Cloud project with billing/service APIs/IAM configured; underlying compute quota eligibility applies.",
+    "tiers": "GKE cluster limits: Autopilot 5,000 nodes per cluster, 200,000 Pods per cluster, 100 concurrent operations; quota adjustments via Google Cloud console/support, and underlying Compute Engine quotas also apply.",
+    "notes": "Kubernetes Sandbox CRDs on customer GKE clusters, not a standalone sandbox account. Fleet bounded by GKE nodes/Compute Engine regional and global quotas, warm-pool resources and IP capacity. No independent default sandbox count; quota requests go through Google Cloud.",
+    "sources": [
+      "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/how-install-agent-sandbox",
+      "https://docs.cloud.google.com/compute/resource-usage"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 29,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots",
+      "quote": "A snapshot can be triggered in two ways:",
+      "note": "Only two triggers: manual (PodSnapshotManualTrigger CR) or workload trigger (the app inside signals readiness). Suspend (operatingMode: Suspended) does not snapshot by itself; the Python SDK's suspend(snapshot_before_suspend=True) takes one client-side. shutdownTime/shutdownPolicy just deletes. No idle auto-snapshot.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/concepts/pod-snapshots",
+      "quote": "A Pod snapshot saves the entire Pod state, including memory and file system changes. When you create new replicas, they're restored from the snapshot, letting the workload resume instead of starting from a new state.",
+      "note": "GKE Pod snapshots (gVisor only; not E2; GKE >= 1.35.3) stored in your Cloud Storage bucket. Memory included (whole-pod scope) or rootfs-only scope. PVCs/emptyDir/tmpfs excluded. New sandboxes can boot from it (golden-snapshot warm pools; 'use it as a base to start multiple new sandboxes'). Restore needs same machine series. Python SDK: sandbox.snapshots.create(), suspend()/resume().",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/examples/agentclientprotocol/README.md",
+      "quote": null,
+      "note": "SDKs (Python/Go/TS) expose sandbox lifecycle, commands.run, files; no first-party agent-harness API. Only community examples (ACP Go client driving `gemini --acp`, Aider, OpenClaw, Hermes, self-hosted Anthropic Managed Agents worker).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "egress is a list of egress rules to be applied to the sandbox.<br />Traffic is allowed out of the sandbox if it matches at least one rule.<br />If this list is empty, all egress traffic is blocked (Default Deny).",
+      "note": "SandboxTemplate.networkPolicy = standard Kubernetes NetworkPolicy (IP/CIDR/port), controller-managed default deny of internal networks + metadata server. Domain-level via GKE FQDNNetworkPolicy (Dataplane V2; 'control egress communication between Pods and resources outside of the Google Kubernetes Engine (GKE) cluster using fully qualified domain names'), which needs cluster DNS (kube-dns/Cloud DNS) - note the agent-sandbox secure default overrides DNS to public resolvers, so FQDN policies need a custom template. Enforced by node dataplane, outside gVisor.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "ingress is a list of ingress rules to be applied to the sandbox.<br />Traffic is allowed to the sandbox if it matches at least one rule.<br />If this list is empty, all ingress traffic is blocked (Default Deny).",
+      "note": "Secure default: ingress only from the Sandbox Router in agent-sandbox-system; everything else denied. Exposure via router / Gateway / Services is yours to configure (GKE LB, IAP, Cloud Armor available).",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "No first-party credential-injecting proxy. Secrets reach the sandbox as Kubernetes Secrets / Secret Manager add-on mounts / env vars, and GCP access via Workload Identity (metadata server tokens inside the pod).",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "volumeClaimTemplates is a list of claims that the sandbox pod is allowed to reference.<br />When creating a sandbox, PVCs will be created from these templates.",
+      "note": "Any GKE PVC (Persistent Disk / Hyperdisk, Filestore, Lustre, GCS FUSE).",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/examples/latebind-storage-gke-sandbox/README.md",
+      "quote": "**Collaborative Workspaces:** Multiple coordinating agent pods mount the exact same shared subdirectory in Read-Write (RW) mode to collaboratively update files in real-time.",
+      "note": "RWX Filestore (NFS) or Managed Lustre shared across gVisor sandbox pods, read-write or read-only; example uses a privileged node daemon for late-binding into warm-pool pods (GKE >= 1.36.0-gke.3302001). Source is the upstream open-source repo, not a Google docs page.",
+      "checked": "2026-09-29"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods",
+      "quote": "If your workload needs any of the following, GKE Sandbox might not be a good fit because it prevents direct access to the host kernel on the node: Direct access to the node's hardware, Kernel-level virtualization features, Privileged containers",
+      "note": "Agent Sandbox Pods run under gVisor (RuntimeClass gvisor). GKE Sandbox docs explicitly say privileged containers and kernel-level virtualization are unsupported, which Docker-in-Docker/nested containers normally require; card also has nested_virt:false, root:false.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+      "quote": "Agent Sandbox... is a Kubernetes-native solution for running stateful, isolated agentic workloads such as AI agents and coding assistants",
+      "note": "not offered: outside the product's scope — it is a headless Kubernetes Pod/CRD orchestrator, no managed VNC/RDP desktop stream. A community 'chrome-sandbox' example (Chrome debug port) exists but is not a first-party desktop feature.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/examples/chrome-sandbox/README.md",
+      "quote": "This example runs Chrome in an isolated environment... Currently, it uses a Docker-based setup.",
+      "note": "No managed/first-party browser ships with the product; a browser is only available if you build/bring your own image (community example, not a shipped feature).",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/examples/gemini-cu-sandbox/README.md",
+      "quote": "This example implements a simple Python server in a sandbox container that can run the computer-use-preview agent.",
+      "note": "not offered: computer-use is only a third-party community example wired to Gemini's separate computer-use-preview project, not a first-party screenshot+click API from GKE/Agent Sandbox.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+      "quote": "Agent Sandbox... is a Kubernetes-native solution for running stateful, isolated agentic workloads",
+      "note": "not offered: outside the product's scope — it is generic compute/isolation infrastructure, not a browser/anti-detection product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+      "quote": "Agent Sandbox... is a Kubernetes-native solution for running stateful, isolated agentic workloads",
+      "note": "not offered: outside the product's scope — generic sandbox compute infrastructure, no CAPTCHA-solving service.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "egress is a list of egress rules to be applied to the sandbox... Traffic is allowed out of the sandbox if it matches at least one rule.",
+      "note": "Egress leaves through the GKE cluster's node/Cloud NAT IPs, which are standard Google Cloud datacenter IP ranges (not residential/mobile).",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/examples/containarium-ssh-sandbox/README.md",
+      "quote": "Most agent runtimes reach a sandbox via kubectl exec, which requires the agent (or its orchestrator) to hold cluster credentials. This example shows an alternative access pattern layered on top of the Sandbox CRD.",
+      "note": "First-party access is via kubectl exec/port-forward, not SSH; SSH access is only a third-party community example layered on top, not a shipped feature.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/kubernetes-engine/docs/how-to/agent-sandbox-pod-snapshots",
+      "quote": "A snapshot can be triggered in two ways:",
+      "note": "Pod snapshots (memory+disk) can be taken via a manual trigger or a workload-signalled trigger while the sandbox Pod keeps running (only Suspended mode stops the Pod); new sandboxes can then be created from that snapshot, i.e. a running sandbox can be cloned without stopping it.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/roadmap.md",
+      "quote": "Auto Suspend/Resume `📅 Planned` - Automatically suspend inactive sandboxes and resume them upon traffic or API invocation.",
+      "note": "Listed as a 2026 roadmap item (Planned), not yet shipped; today Suspend/Resume is a manual operatingMode change, not an automatic wake-on-request.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/roadmap.md",
+      "quote": "Scale to Zero `📅 Planned` - Suspend sandboxes when inactive, preserving underlying resources while maintaining rapid resume paths.",
+      "note": "Idle-based auto-suspend is a roadmap item (Planned), not shipped. Today's Lifecycle.shutdownTime is a fixed absolute expiry time you set, not idle detection.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://api.github.com/repos/kubernetes-sigs/agent-sandbox/contents/examples",
+      "quote": "aider-sandbox, openclaw-gvisor-sandbox, hermes-agent, nemoclaw-sandbox, nullclaw-sandbox, pi-code-agent",
+      "note": "not offered as an official template/preinstall: these are community example manifests in the OSS repo showing how to wire various coding agents into a Sandbox image; Google/the project does not ship preinstalled coding-agent images as a product feature.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+      "quote": "Agent Sandbox... is a Kubernetes-native solution for running stateful, isolated agentic workloads",
+      "note": "not offered: outside the product's scope — it is generic infrastructure for running any agent you bring; there is no first-party browser/computer-use/research task agent of its own.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/roadmap.md",
+      "quote": "Agent Sandbox MCP (Model Context Protocol) Server `📅 Planned` - Integrate an MCP server endpoint via the router or SDK, making Agent Sandbox a native tool for MCP-enabled LLM runtimes.",
+      "note": "Listed as Planned (not yet built); an 'mcp-server-sandbox' folder exists only as a community example running a user-authored MCP server inside a sandbox via kubectl exec, not a first-party MCP server shipped by the project.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/README.md",
+      "quote": "To interact with the agent-sandbox programmatically from Python, use the Python SDK: pip install k8s-agent-sandbox",
+      "note": "First-party Python SDK for managing/using sandboxes; guest images (BYOI) commonly run Python (e.g. python-runtime-sandbox example).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/roadmap.md",
+      "quote": "Typescript SDK Support `⏳ In Progress` - Implement high-level TypeScript SDK support for modern web application frontends.",
+      "note": "No released first-party Node/TypeScript SDK yet (listed as In Progress on the roadmap); Node.js can still run as a guest workload if you bring your own image, but that is not an out-of-the-box/first-party runtime.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "podIPs are the IP addresses of the underlying pod.",
+      "note": "Sandboxes get cluster-internal Pod IPs by default; a public IPv4 is not automatic per-sandbox and requires the user to provision a GKE LoadBalancer Service themselves.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "ingress is a list of ingress rules to be applied to the sandbox. Traffic is allowed to the sandbox if it matches at least one rule.",
+      "note": "Ingress to a sandbox is user-configurable via the Sandbox Router, Kubernetes Service/Gateway/Ingress, which supports HTTPS termination on GKE; not automatic but supported.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "egress is a list of egress rules to be applied to the sandbox.",
+      "note": "Egress control is Kubernetes NetworkPolicy (IP/CIDR/port) or GKE FQDNNetworkPolicy (domain-based); neither operates at HTTP method/path granularity.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods",
+      "quote": "Linux kernel security modules such as Seccomp, Apparmor, or Selinux, Sysctl, NoNewPrivileges, bidirectional MountPropagation, or ProcMount [are not supported]",
+      "note": "derived: sandboxes are unprivileged gVisor Pods (root:false, no privileged mode, restricted sysctl/NoNewPrivileges), so setting up nftables/iptables inside the guest is not expected to work reliably.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+      "quote": "GKE runs that Pod in a sandbox",
+      "note": "A fixed outbound IP is achievable via a standard GKE/Cloud NAT static IP at the cluster/VPC level (not a sandbox-specific per-machine feature); not stated as automatic per-sandbox.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods",
+      "quote": "In GKE version 1.29.2-gke.1108000 and later, GKE Sandbox supports the use of NVIDIA GPUs.",
+      "note": "GKE Sandbox (the gVisor RuntimeClass Agent Sandbox uses) supports NVIDIA GPU workloads (CUDA only, subset of GPU models) and TPUs, at no additional cost over normal GKE pricing.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/sandbox-pods",
+      "quote": "You cannot use GKE Sandbox on Windows Server node pools.",
+      "note": "gVisor-based sandbox Pods are Linux-only; Windows node pools/containers are explicitly excluded.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+      "quote": "GKE runs that Pod in a sandbox",
+      "note": "not offered: outside the product's scope — Google Cloud/GKE does not offer macOS compute at all.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": true,
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/README.md",
+      "quote": "kubectl apply -f https://github.com/kubernetes-sigs/agent-sandbox/releases/latest/download/sandbox-with-extensions.yaml",
+      "note": "Agent Sandbox is an open-source (Apache-2.0) Kubernetes CRD/controller you install on any Kubernetes cluster you control, not exclusively GKE-managed.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://cloud.google.com/security/compliance/soc-2",
+      "quote": "SOC 2: compliance | Google Cloud",
+      "note": "Google Cloud (including GKE) is SOC 2 attested; independent third-party audit reports are available to customers.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/resources/hipaa-compliance",
+      "quote": "GKE is included in Google Cloud's HIPAA Business Associate Agreement (BAA).",
+      "note": "GKE (the platform Agent Sandbox runs on) is HIPAA-eligible under Google Cloud's BAA.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://cloud.google.com/architecture/identity/single-sign-on",
+      "quote": "Google Cloud supports federating your external identities using SAML 2.0 or OIDC for single sign-on.",
+      "note": "Google Cloud/Cloud Identity supports SAML/OIDC SSO for console and IAM access to the GKE project running Agent Sandbox.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+      "quote": "GKE runs that Pod in a sandbox",
+      "note": "GKE clusters (and therefore Agent Sandbox Pods) can be created in EU regions (e.g. europe-west*), keeping data/compute within the EU.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://github.com/kubernetes-sigs/agent-sandbox/blob/main/docs/api.md",
+      "quote": "If unset, the Sandbox never expires and lives until it is explicitly deleted.",
+      "note": "Lifecycle.shutdownTime is optional and unset by default; with no shutdownTime set, a Sandbox Pod runs indefinitely until the user deletes it, i.e. no platform-imposed maximum session length.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://gvisor.dev/docs/user_guide/compatibility/",
+      "quote": "Applications Linux/arm64 Linux/amd64",
+      "note": "derived: gVisor (the sandbox runtime GKE Sandbox / Agent Sandbox uses) upstream-supports both Linux/amd64 and Linux/arm64. GKE's Arm node docs (arm-on-gke, C4A/N4A/T2A requirements and limitations) list many excluded features (Confidential Nodes, GPUs, SMT, nested virtualization, local SSD, etc.) but do not list GKE Sandbox/gVisor as unsupported on Arm node pools, and the sandbox-pods docs don't restrict to a specific CPU architecture. No explicit first-party page states 'Agent Sandbox pods run on Arm nodes' though, so this is inferred rather than directly confirmed.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": true,
+      "source": "https://cloud.google.com/kubernetes-engine/docs/concepts/verticalpodautoscaler",
+      "quote": "The InPlaceOrRecreate mode aims to reduce service disruption by attempting to update Pod resources without re-creating the Pod... This mode relies on the resizePolicy field defined in your workload manifest to determine if a resource change requires a restart... in-place updates are attempted.",
+      "note": "General GKE/Kubernetes capability (VPA InPlaceOrRecreate mode, Preview, GKE 1.34.0-gke.2201000+) that can change a running Pod's CPU/RAM requests without recreating it; applies to Autopilot Pods including sandboxed ones (no Agent-Sandbox-specific exclusion found). It is a Preview feature and falls back to evict+recreate when the QoS class would change, capacity is insufficient, or resizePolicy requires RestartContainer, so it is not a guaranteed/always-available resize.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cloud.google.com/billing/docs/reference/rest/v1/projects.costInsights",
+      "quote": "Cloud Billing API supports filtering costs by resource labels. You can apply Kubernetes labels to Pods and Namespaces, then query billable costs per label via the Cloud Billing API or export detailed billing data to BigQuery for granular per-resource analysis.",
+      "note": "granularity: per-tag; cost: yes; GKE Agent Sandbox Pods are billed via standard Google Cloud Billing for vCPU and memory requests. Cloud Billing API and BigQuery export support querying costs filtered by resource labels/tags. Customers can label individual sandbox Pods or Namespaces with a unique sandbox ID and query usage by that label. Granularity is per-tag (Kubernetes label) rather than built-in per-sandbox, requiring user label discipline.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Iowa",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "SC",
+      "city": "South Carolina",
+      "provider_region": "us-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Northern Virginia",
+      "provider_region": "us-east4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Oregon",
+      "provider_region": "us-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "UT",
+      "city": "Salt Lake City",
+      "provider_region": "us-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NV",
+      "city": "Las Vegas",
+      "provider_region": "us-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "Belgium",
+      "provider_region": "europe-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "europe-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "europe-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Netherlands",
+      "provider_region": "europe-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "europe-west6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "europe-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Finland",
+      "provider_region": "europe-north1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "europe-north2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "europe-southwest1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "europe-west8",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "europe-west9",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Berlin",
+      "provider_region": "europe-west10",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Turin",
+      "provider_region": "europe-west12",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Taiwan",
+      "provider_region": "asia-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "asia-east2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "asia-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "asia-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "asia-northeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "asia-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Delhi",
+      "provider_region": "asia-south2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "asia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "asia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "asia-southeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "asia-southeast4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "australia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "australia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://cloud.google.com/kubernetes-engine/pricing",
+  "locations_quote": "Regional cluster hours per month... Iowa (us-central1), Taiwan (asia-east1), Hong Kong (asia-east2), Tokyo (asia-northeast1), Osaka (asia-northeast2), Seoul (asia-northeast3), Mumbai (asia-south1), Delhi (asia-south2), Singapore (asia-southeast1), Jakarta (asia-southeast2), Bangkok (asia-southeast3)",
+  "locations_checked": "2026-10-01"
+}

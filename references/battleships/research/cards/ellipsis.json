@@ -1,0 +1,597 @@
+{
+  "id": "ellipsis",
+  "name": "Ellipsis",
+  "url": "https://www.ellipsis.dev/pricing",
+  "category": "agent-sandbox",
+  "isolation": "qemu-kvm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-demand",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.141912,
+      "ram_gib_h": 0.024192,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 2,
+      "max_vcpu": 32,
+      "max_ram_gib": 64,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1.2,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Environment schema: compute.cpu 2-32 vCPU (default 2), compute.memory 4 GB-64 GB (default 4 GB); compute.timeout 60 s to 1 h (default 1 h), meaning not defined further. Org compute is paid from prepaid credits that carry the 20% platform fee (multiplier 1.2).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "byoc",
+      "label": "Own AWS VPC",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "byoc": true
+      },
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "AWS infrastructure (billed by AWS) plus Ellipsis 20% platform fee; rates depend on AWS.",
+      "product_class": "byoc"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Managed usage",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Personal account",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "note": "CPU and memory are free on personal accounts; tokens via Ellipsis credits (+20% fee) or $0 when using your own Claude/Codex subscription. Only sessions you start yourself."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null,
+    "note": "No sign-up credit on the pricing page; open-source maintainers get free usage case by case. Credits are prepaid, do not expire; paid requests stop when balance or a spend limit is exhausted; automatic recharge is opt-in."
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 1,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": true,
+    "audit_logs": true,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "secret_proxy": "ai-only",
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Managed SaaS CPU $0.142/vCPU-hour and memory $0.024/GB-hour plus a 20% platform fee (charged on credit purchases, i.e. on token and compute spend). No per-seat or idle charges. Active lifecycle is not confirmed per-core utilization billing.",
+    "BYOC uses customer AWS compute and a 20% platform fee; cannot reuse SaaS resource rates. Support $5k/$10k/$15k per month is optional, not required plan.",
+    "YC mentions $100 credit; current pricing page did not confirm eligibility, so no unconditional free credit encoded.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Re-checked 2026-09-28 (ellipsis.dev/pricing, ellipsis.dev/llms.txt): Managed SaaS CPU $0.142/vCPU-h and memory $0.024/GB-h confirmed; NO published disk, snapshot or egress price, no SSH, desktop or browser statement, no sandbox size limit or billing granularity. These stay null (unknown, not free/absent).",
+    "Coding-agent platform: sandboxes run Ellipsis agent sessions (automations, @ellipsis), billed tokens + 20% platform fee (not modeled).",
+    "Session budget default $250 and hard max $250 per session; agent/handler defaults $1,000/day, $10,000/week, $40,000 per 28 days. Support packages $5,000/$10,000/$15,000 per month are optional."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/ellipsis",
+    "https://www.ellipsis.dev/pricing",
+    "https://www.ellipsis.dev/docs",
+    "https://www.ellipsis.dev/",
+    "https://www.ellipsis.dev/llms.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 11,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 9
+  },
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "API > Limits shows per-account API request limits, storage quotas, concurrency limits and spending ceilings; values are not published. Increases are requested in the shared Slack channel with the Ellipsis team or via Help.",
+    "sources": [
+      "https://www.ellipsis.dev/llms-full.txt"
+    ],
+    "researched": "2026-09-29"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/api/session-events.md",
+      "quote": "`snapshot` (saving the prepared environment for reuse), `restore` (bringing a saved environment back for a later turn)",
+      "note": "Automatic, no API call: the platform snapshots the prepared environment after setup hooks and restores a saved environment when a follow-up message arrives after the sandbox went cold (conversation.warm=false). environments.md: 'A resumed session keeps its workspace, including uncommitted changes.' and 'Saved results keep files and running services' (setup-cache snapshots include running services, i.e. memory state). OpenAPI: 'Paused session workspaces have a separate lifetime'; reusable environment snapshots retained 7-28 days. Backed by Freestyle VM snapshots (OpenAPI VMImage.snapshot_id: 'Freestyle snapshot backing this reusable VM image'). Whether memory is kept for paused session workspaces is not stated.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/openapi.v1.json",
+      "quote": "VMImageResponse.snapshot_id: 'Freestyle snapshot backing this reusable VM image.' Only GET operations exist for /v1/vm-images, /v1/vm-images/{image_id}, /v1/vms, /v1/vms/{vm_id} — no POST/create endpoint for images, snapshots, or forks anywhere in the spec.",
+      "note": "Not a contradiction once checked: the only other 'snapshot' occurrence is an unrelated WebSocket frame type ('type: snapshot' = the initial session-state push on the /v1/sessions/{id}/stream socket, per llms-full.txt and docs/api/session-events.md), not a VM/disk snapshot feature. The actual VM-image snapshot mechanism (Freestyle-backed, per VMImageResponse.snapshot_id) is entirely platform-managed: images are built and cached automatically from environment setup (build_base/after_checkout hooks) and reused by cache_key; the OpenAPI spec exposes only read (GET) operations on vm-images/vms, with no user-triggered create/checkpoint/fork call. This matches feature_evidence's existing note ('only control is force_rebuild') that force_rebuild just discards the cache rather than letting the user create/name a snapshot on demand. So snapshot_on_demand=false is confirmed; snapshot_auto=true (automatic caching/restore) stands and is not in tension with it.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/sessions.md",
+      "quote": "A session is a conversation with [Claude Code or Codex](/docs/harnesses) in its own cloud environment. The agent keeps working when you close the page or disconnect.",
+      "note": "Core product. REST API + Python/TypeScript SDKs + CLI: start a session with a prompt (claude_code or codex block), stream frames/records (native claude_jsonl / Codex events), send follow-ups (POST /v1/sessions/{id}/messages), stop turns, list/search/get sessions and turns, download transcripts, get diff/commits/PRs. Harnesses: Claude Code (incl. GLM-5.2, MiniMax M3 models) and Codex.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": "ai-only",
+      "source": "https://github.com/ellipsis-dev/cli/blob/main/skills/ellipsis/SKILL.md",
+      "quote": "Model calls route through Ellipsis with a per-session key. A real provider key never enters an environment.",
+      "note": "Only model-provider credentials (Ellipsis credits or connected Claude/Codex subscription) are kept out of the sandbox via the Ellipsis LLM proxy (ELLIPSIS_LLM_PROXY_URL is a reserved variable). User secrets are plain env vars: 'The agent can read every secret its environment sets' (docs/secrets); MCP server headers get ${SECRET} substituted at session start. GitHub access uses short-lived, permission-scoped tokens minted by the GitHub App (in-sandbox). No arbitrary-host proxy; non-HTTP not covered.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://www.ellipsis.dev/openapi.v1.json",
+      "quote": "Freestyle VM ID, shared across session resumes. / Freestyle snapshot backing this reusable VM image.",
+      "note": "Ellipsis's own OpenAPI spec identifies its sandbox backend as Freestyle VMs. Freestyle's own product page states: 'Every Freestyle VM runs on full hardware virtualization — not containers, not microVMs sharing a kernel. Each VM gets its own isolated kernel, memory, and networking stack' (full KVM support). Derived via the named subprocessor, not an Ellipsis statement of hypervisor tech.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.cpu | 2 to 32 vCPUs; default 2 ... hooks.build_base | Script or {run, inputs}; installs dependencies",
+      "note": "Environments are built from Ellipsis's own base image plus build_base/after_checkout setup scripts (apt/npm/pip installs); there is no field or endpoint to supply a customer Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.cpu | 2 to 32 vCPUs; default 2",
+      "note": "not offered: Ellipsis's own docs/API expose only cpu/memory/timeout for a coding-agent sandbox; no /dev/kvm or nested-VM capability is documented for Ellipsis sessions (the underlying Freestyle VM supports KVM, but Ellipsis does not surface it to users).",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/sessions.md",
+      "quote": "A session is a conversation with Claude Code or Codex in its own cloud environment.",
+      "note": "not offered: outside the product's scope — Ellipsis runs headless coding-agent harnesses (Claude Code/Codex) in a sandbox; no VNC/RDP/streamed desktop is documented anywhere in the docs, dashboard, or API.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/enterprise",
+      "quote": "npx playwright install chromium",
+      "note": "not offered: a browser is only what a customer's own before_start hook installs (e.g. Playwright/Chromium) for running tests; Ellipsis itself does not manage or provide a browser as a platform feature.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/sessions.md",
+      "quote": "A session is a conversation with Claude Code or Codex in its own cloud environment.",
+      "note": "not offered: outside the product's scope — no screenshot/click driving API exists; the agent acts through file edits, shell commands, and git, not a GUI.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/pricing",
+      "quote": "Ellipsis is a cloud platform for coding agents.",
+      "note": "not offered: outside the product's scope — a coding-agent CI/PR platform has no stealth/fingerprinting feature.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/pricing",
+      "quote": "Ellipsis is a cloud platform for coding agents.",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving capability is documented for this coding-agent platform.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://www.ellipsis.dev/openapi.v1.json",
+      "quote": "Freestyle VM ID, shared across session resumes.",
+      "note": "Sandboxes run on Freestyle-backed cloud VMs (AWS-hosted per the BYOC option); no residential/mobile IP feature is documented, so outbound traffic is ordinary datacenter cloud IP space.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/sessions.md",
+      "quote": "In the dashboard, describe the task on Home and click New session. From a terminal: ellipsis --model claude-opus-5-5 -e cloud_agent_environment ...",
+      "note": "not offered: Ellipsis's own docs, CLI, and OpenAPI expose only dashboard/CLI/API access to sessions (messages, records, diff, git); no SSH endpoint or credential is documented for reaching the sandbox directly.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "mem",
+      "source": "https://www.ellipsis.dev/docs/api/session-events.md",
+      "quote": "`snapshot` (saving the prepared environment for reuse), `restore` (bringing a saved environment back for a later turn)",
+      "note": "environments.md: 'A resumed session keeps its workspace, including uncommitted changes' and 'Saved results keep files and running services' — reused/resumed environments restore running services, not just disk, so this is closer to a memory-level snapshot than a plain filesystem snapshot.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/openapi.v1.json",
+      "quote": null,
+      "note": "not offered: no clone/fork endpoint exists in the OpenAPI spec (/v1/vms and /v1/vm-images are GET-only); environments are reused/rebuilt, not cloned into new independent machines.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/openapi.v1.json",
+      "quote": null,
+      "note": "not offered: depends on fork, which is not available.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/openapi.v1.json",
+      "quote": null,
+      "note": "not offered: depends on fork, which is not available; only single-machine snapshot/restore (not cloning into new running machines) is documented.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/lifecycle.md",
+      "quote": "conversation.warm | Whether an agent is ready to answer the next message right away; when false, the next message first prepares an environment, which takes longer",
+      "note": "A conversation's sandbox goes cold (paused) when idle and is automatically restored ('warm' becomes true again) on the next message; this is automatic, not a user-invoked pause/resume API call.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/lifecycle.md",
+      "quote": "when false, the next message first prepares an environment, which takes longer",
+      "note": "A cold (stopped) session automatically wakes and rebuilds its environment when a new message/request arrives.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.timeout | 60 seconds to 1 hour; default 1 hour",
+      "note": "Sessions/environments have a bounded timeout and go cold (non-warm) between turns/messages; there is no always-on running machine option documented.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/environments.md",
+      "quote": "A resumed session keeps its workspace, including uncommitted changes.",
+      "note": "Reusable environment snapshots are retained up to 28 days and files/uncommitted changes survive a session going cold and resuming.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.cpu | 2 to 32 vCPUs; default 2",
+      "note": "not offered: the environment schema exposes only cpu/memory/timeout; no separate/extra persistent volume attachment is documented.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.cpu | 2 to 32 vCPUs; default 2",
+      "note": "not offered: each session runs in its own isolated sandbox; no shared-volume-across-machines feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.cpu | 2 to 32 vCPUs; default 2",
+      "note": "not offered: compute size is set on the environment/session config; no API to change cpu/memory of a running sandbox without a rebuild is documented.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/sessions.md",
+      "quote": "A session is a conversation with Claude Code or Codex in its own cloud environment.",
+      "note": "not offered: Ellipsis's API drives third-party coding harnesses (Claude Code, Codex) rather than a first-party browser/computer-use/research agent of its own.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "mcp_servers | slack, linear, remote servers (name, url, headers), or local servers (name, command, args, env)",
+      "note": "Ellipsis lets a session connect to the *user's own* MCP servers as tools; it does not ship its own MCP server for driving Ellipsis sandboxes (no mcp-server package in github.com/ellipsis-dev, only cli/sdk).",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "python -m venv .venv / .venv/bin/pip install -r requirements.txt",
+      "note": "Documented Python project example plus a first-party Python SDK (pip install ellipsis-dev).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "npm ci ... Node.js project",
+      "note": "Documented Node.js project example plus a first-party TypeScript/npm SDK (@ellipsis-dev/sdk).",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments.md",
+      "quote": "An environment is the repositories, setup scripts, environment variables, and machine size a session starts with.",
+      "note": "not offered: outside the product's scope — there is no networking/ports documentation; sandboxes are reached only via dashboard/CLI/API, not by exposing a public IP.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments.md",
+      "quote": "An environment is the repositories, setup scripts, environment variables, and machine size a session starts with.",
+      "note": "not offered: outside the product's scope — no docs page describes exposing a URL to a port inside the sandbox.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments.md",
+      "quote": "An environment is the repositories, setup scripts, environment variables, and machine size a session starts with.",
+      "note": "not offered: depends on inbound access to the sandbox, which is not exposed.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/security.md",
+      "quote": "Ellipsis deletes data within 4 hours after its time to live (TTL) expires.",
+      "note": "not offered: the security page covers data retention, GitHub access, secrets, and API/webhooks, with no outbound network allow/deny-list or no-internet-mode control documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/security.md",
+      "quote": "Ellipsis deletes data within 4 hours after its time to live (TTL) expires.",
+      "note": "not offered: depends on egress_allowlist-level controls, which are not documented at all, let alone at HTTP method/path granularity.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "sudo apt-get update / sudo apt-get install -y jq",
+      "note": "derived: build_base hooks run with sudo/root inside a full VM-backed sandbox, so nftables/iptables would work; not explicitly documented by Ellipsis itself.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/security.md",
+      "quote": "Ellipsis deletes data within 4 hours after its time to live (TTL) expires.",
+      "note": "not offered: no fixed/static outbound IP is documented anywhere on the site or docs.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.cpu | 2 to 32 vCPUs; default 2 / compute.memory | 4096MB to 64GB; default 4096MB",
+      "note": "not offered: outside the product's scope — the compute schema only exposes cpu and memory for a coding-agent sandbox; no GPU option is documented.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/security",
+      "quote": "an isolated Linux machine created for that session with the repositories cloned in",
+      "note": "not offered: outside the product's scope — Ellipsis explicitly describes its sandbox as a Linux machine; no Windows machine option exists.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/security",
+      "quote": "an isolated Linux machine created for that session with the repositories cloned in",
+      "note": "not offered: outside the product's scope — sandboxes are Linux-only; no macOS machine option exists.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": true,
+      "source": "https://www.ellipsis.dev/security",
+      "quote": "Can everything stay in our own cloud? Yes. Ellipsis is self-hostable in your AWS account, so credentials and code never leave your VPC.",
+      "note": "Marketed as 'self-hostable' into the customer's own AWS account (the card's byoc mode).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://api.github.com/orgs/ellipsis-dev/repos",
+      "quote": "cli, sdk, homebrew-cli",
+      "note": "The github.com/ellipsis-dev org publishes only the CLI, SDK, and a homebrew tap under MIT; the core platform/agent-runner is closed source and only offered as a hosted or self-hosted (in customer AWS) managed service.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/enterprise",
+      "quote": "SOC 2 Type I Certified, SOC 2 Type II In progress ... Scoped credentials ... Zero source retention ... Full audit trail",
+      "note": "not offered: the enterprise/security pages enumerate compliance features in detail (SOC 2, scoped credentials, zero source retention, audit trail) but never mention HIPAA eligibility or a BAA.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/organization.md",
+      "quote": "Owners and admins change spending settings while signed in; API keys and session credentials can't change them.",
+      "note": "not offered: the organization/account-settings docs describe owners/admins and API keys but never mention SAML/OIDC SSO.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/about",
+      "quote": "215 Park Ave S, Floor 11, Suite 42, New York, NY 10003",
+      "note": "not offered: Ellipsis AI Inc. is a US (New York) company; no regions or EU-hosting option is documented anywhere in the docs or pricing pages.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 1,
+      "source": "https://www.ellipsis.dev/docs/environments/schema.md",
+      "quote": "compute.timeout | 60 seconds to 1 hour; default 1 hour",
+      "note": "Each turn is capped at a configurable timeout of at most 1 hour; interactive sessions can continue across many turns/follow-ups (with the sandbox going cold and auto-resuming between them), but no single continuous machine run exceeds this per-turn 1-hour ceiling.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.freestyle.sh/docs/llms-full.txt",
+      "quote": "Freestyle VMs are x86_64 Linux, so the VM needs the **`linux-amd64`** release — the `darwin-arm64` tarball you may already have installed locally is a Mach-O binary and will not execute there.",
+      "note": "Ellipsis sandboxes run on Freestyle VMs (confirmed in the card's own feature_evidence: 'Backed by Freestyle VM snapshots'); Freestyle's own docs state its VMs are x86_64 Linux only, with a further confirming line elsewhere in the same doc: `console.log(uname.stdout.trim()); // Linux … 6.1.0-15-freestyle … x86_64`. No ARM/aarch64 machine option is offered on Ellipsis's own docs, pricing, or OpenAPI spec.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "on-demand": "dedicated"
+      },
+      "source": "https://www.freestyle.sh/docs/llms-full.txt",
+      "quote": "vCPU, memory and storage are all billed on the amount allocated to the VM for the time it is allocated — a reserved core is yours whether or not the guest is busy.",
+      "note": "derived: Ellipsis's own OpenAPI spec identifies its sandbox backend as Freestyle VMs (VMImageResponse.snapshot_id: 'Freestyle snapshot backing this reusable VM image'), the same subprocessor the card's own isolation field is derived from. Ellipsis's pricing page bills CPU by vCPU-hour on a per-vCPU allocation basis ($0.142/vCPU-hour, cpu_basis: alloc in the card) consistent with Freestyle's own published billing model, which states cores are reserved/dedicated once allocated to a VM rather than shared/oversubscribed. Ellipsis itself does not use the words 'dedicated' or 'shared' anywhere in its docs/pricing, so this is inferred via the named infrastructure subprocessor, not a direct Ellipsis statement. Not resolved for the 'byoc' mode, since that mode runs on the customer's own AWS account/instance type, which Ellipsis's docs do not specify.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.ellipsis.dev/docs/api/account/get-account-usage.md",
+      "quote": "Read usage for a UTC calendar month. Rated subscription usage is separate from actual Ellipsis credit charges. [Response includes] total_cost_millicents",
+      "note": "granularity: account-only; cost: yes; GET /v1/account/usage endpoint available via REST API, Python SDK (account.usage()), and TypeScript SDK. Returns usage broken down by model, daily, developer (attribution), and funding source for a calendar month.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": null,
+  "locations_quote": null,
+  "locations_checked": "2026-10-01"
+}

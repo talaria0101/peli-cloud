@@ -1,0 +1,683 @@
+{
+  "id": "createos",
+  "name": "CreateOS Sandbox (NodeOps)",
+  "url": "https://createos.sh/products/sandbox",
+  "category": "agent-sandbox",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Sandbox shapes, per-second at list rates (paid from plan credits / top-ups)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 16,
+      "sizes": [
+        {
+          "name": "s-0.25vcpu-512mb",
+          "vcpu": 0.25,
+          "ram_gib": 0.5,
+          "disk_gib": null,
+          "hour": 0.014836,
+          "month_cap": null
+        },
+        {
+          "name": "s-0.5vcpu-1gb",
+          "vcpu": 0.5,
+          "ram_gib": 1,
+          "disk_gib": null,
+          "hour": 0.029672,
+          "month_cap": null
+        },
+        {
+          "name": "s-1vcpu-256mb",
+          "vcpu": 1,
+          "ram_gib": 0.25,
+          "disk_gib": null,
+          "hour": 0.039061,
+          "month_cap": null
+        },
+        {
+          "name": "s-1vcpu-1gb",
+          "vcpu": 1,
+          "ram_gib": 1,
+          "disk_gib": null,
+          "hour": 0.047754,
+          "month_cap": null
+        },
+        {
+          "name": "s-1vcpu-2gb",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": null,
+          "hour": 0.059344,
+          "month_cap": null
+        },
+        {
+          "name": "s-2vcpu-2gb",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": null,
+          "hour": 0.095508,
+          "month_cap": null
+        },
+        {
+          "name": "s-2vcpu-4gb",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": null,
+          "hour": 0.118688,
+          "month_cap": null
+        },
+        {
+          "name": "s-4vcpu-4gb",
+          "vcpu": 4,
+          "ram_gib": 4,
+          "disk_gib": null,
+          "hour": 0.191015,
+          "month_cap": null
+        },
+        {
+          "name": "s-4vcpu-8gb",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.237377,
+          "month_cap": null
+        },
+        {
+          "name": "s-8vcpu-8gb",
+          "vcpu": 8,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.382031,
+          "month_cap": null
+        },
+        {
+          "name": "s-8vcpu-16gb",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.474753,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Size hour = vcpu x $0.03616363 + GiB x $0.01159025 (docs: $0.0000100455/vCPU-s, $0.0000032195/GB-s), billed per second on the allocated shape while running. Storage $0.0001584/GB-h (~$0.1156/GB-month) is on top (storage block). PAUSED sandboxes stop vCPU billing but KEEP billing RAM at $0.01159025/GiB-h plus storage (a paused 4/8 = $0.0927/h = ~$67.7/month). Largest shape per plan: Free 1/1, Beginner 4/4, Pro 8/8, Enterprise 8/16. Shape ids for sub-1-vCPU/odd shapes follow the SDK naming pattern but only s-1vcpu-256mb, s-1vcpu-1gb, s-4vcpu-4gb are confirmed ids. Default disk is 10 GB per sandbox (pricing-page calculator and examples: 10 GB x 720 h x $0.0001584 = $1.14), up to 60 GB; disk bills for the full month whether the sandbox runs or is paused."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.115632,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.115632,
+    "paused_ram_billed": true
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "Open when the rule list is empty: the sandbox can reach any external host. Set an allowlist before running untrusted or model-generated code.",
+          "url": "https://createos.sh/docs/Sandbox/Limits"
+        },
+        {
+          "quote": "50 GiB per sandbox by default; grow it with POST /v1/sandboxes/{id}/bandwidth/recharge.",
+          "url": "https://createos.sh/docs/Sandbox/Limits"
+        },
+        {
+          "quote": "Nothing reaches a sandbox unless ingress_enabled: true, which exposes one HTTPS URL per sandbox.",
+          "url": "https://createos.sh/docs/Sandbox/Limits"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": 1,
+      "max_ram_gib": 1,
+      "sizes_allowed": [
+        "s-0.25vcpu-512mb",
+        "s-0.5vcpu-1gb",
+        "s-1vcpu-256mb",
+        "s-1vcpu-1gb"
+      ],
+      "note": "500 one-time credits (~$5 if 1 credit = $0.01). 1 concurrent, 10 sandboxes/day, 10 GiB max disk, no disks/templates. Top-ups allowed (docs table: 1.2x multiplier)."
+    },
+    {
+      "name": "Beginner",
+      "fee": 10,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 5,
+      "max_session_h": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 4,
+      "sizes_allowed": [
+        "s-0.25vcpu-512mb",
+        "s-0.5vcpu-1gb",
+        "s-1vcpu-256mb",
+        "s-1vcpu-1gb",
+        "s-1vcpu-2gb",
+        "s-2vcpu-2gb",
+        "s-2vcpu-4gb",
+        "s-4vcpu-4gb"
+      ],
+      "note": "Slider $10-$50/month = 1,000-5,000 credits/month (fee converted to credits at 100 credits/$). Top-ups get 1.2x credits. 5 concurrent, 50 sandboxes/day, 30 GiB max disk. Largest shape 4 vCPU / 4 GB, so a 4/8 workload needs Pro."
+    },
+    {
+      "name": "Pro",
+      "fee": 75,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 20,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 8,
+      "sizes_allowed": [
+        "s-0.25vcpu-512mb",
+        "s-0.5vcpu-1gb",
+        "s-1vcpu-256mb",
+        "s-1vcpu-1gb",
+        "s-1vcpu-2gb",
+        "s-2vcpu-2gb",
+        "s-2vcpu-4gb",
+        "s-4vcpu-4gb",
+        "s-4vcpu-8gb",
+        "s-8vcpu-8gb"
+      ],
+      "note": "Slider $75-$200/month = 7,500-20,000 credits/month. Top-ups get 1.5x credits. 20 concurrent, 200 sandboxes/day, 50 GiB max disk, largest shape 8 vCPU / 8 GB."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": true,
+      "included_usd": null,
+      "per_seat": 0,
+      "concurrency": 30,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 16,
+      "sizes_allowed": null,
+      "note": "Docs pricing table: '$200+' per month, 20,000+ credits, 5x top-up multiplier; pricing page: 'Custom' / Contact Sales. 30 concurrent, 300 sandboxes/day, 60 GiB max disk, largest shape 8 vCPU / 16 GB. Self-hosted option for enterprise only."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 5
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "regions": [
+      "us"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": true,
+    "lang_rust": true,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": true,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "isolation": "firecracker",
+    "image_oci": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "fast_boot": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": 74.65,
+    "burst_tti_ms": 124.89,
+    "dax_s": 50.3
+  },
+  "perf_source": "benchmarks.json providers.createos.computesdk: cold_start_tti median 74.65 ms (2026-08-07), burst_tti median 124.89 ms at 100 concurrency (2026-09-25), dax 50.3 s (2026-09-25, 8 vCPU / 15.64 GiB x86_64 = the s-8vcpu-16gb shape). The stale 'createos-sandbox' entry (single July 2026 run: cold start 999.51 ms, burst 1,304.53 ms) measures the same Sandbox product under an older name and is not used. No hpc CPU run.",
+  "knobs": [
+    {
+      "id": "credit_topup_multiplier",
+      "label": "Credit top-up bonus applied to usage beyond plan credits",
+      "kind": "select",
+      "min": null,
+      "max": null,
+      "step": null,
+      "default": 1,
+      "unit": null,
+      "options": [
+        {
+          "value": 1,
+          "label": "None: list rates (plan credits only)"
+        },
+        {
+          "value": 0.8333,
+          "label": "Free/Beginner top-ups at 1.2x credits (x0.833)"
+        },
+        {
+          "value": 0.6667,
+          "label": "Pro top-ups at 1.5x credits (x0.667)"
+        },
+        {
+          "value": 0.2,
+          "label": "Enterprise top-ups at 5x credits (x0.2, sales)"
+        }
+      ],
+      "effect": "rate_factor",
+      "modes": [
+        "on-demand"
+      ],
+      "why": "Usage is paid in credits; top-ups on Free/Beginner/Pro/Enterprise grant 1.2x/1.5x/1.5x/5x credits per dollar, so usage funded by top-ups costs list/1.2, list/1.5 or list/5. The plan's own monthly credits are at list (100 credits/$)."
+    }
+  ],
+  "caveats": [
+    "USD value of a credit is not stated on the Sandbox pages; 1 credit = $0.01 is from the NodeOps Skills credits page and matches plan math ($10 = 1,000 credits, $75 = 7,500).",
+    "Top-up multipliers (1.2x/1.5x/5x) are read as bonus credits per dollar. The 5x Enterprise multiplier implies an 80% effective discount on top-up-funded usage; unverified.",
+    "Paused sandboxes keep billing RAM ($0.01159025/GiB-h) plus storage (product page + Limits doc). The SDK docs contradict this ('Compute billing stopped ... only storage costs apply'); the official Limits/product pages are used. Engine paused_ram_billed=true.",
+    "Storage $0.0001584/GB-h (~$0.1156/GB-month): which GB are metered (allocated overlay disk vs used, memory snapshot) is not stated; default disk per shape (default_disk_mib) not published. snapshot_gib_month set to the storage rate for the disk part only.",
+    "Egress is unmetered ($0) but each sandbox has a 50 GiB default bandwidth quota; the price of rechargeBandwidth top-ups is not published.",
+    "Hard caps: concurrency 1/5/20/30 and creation caps 10/50/200/300 sandboxes per day (Free/Beginner/Pro/Enterprise). A 50-concurrent workload exceeds every published plan.",
+    "Per-plan CPU/RAM caps on the pricing page (48 / 1,000 / 2,000 cores) are Deploy-platform caps; Sandbox caps come from the Limits doc.",
+    "Billing granularity 1 s ('billed per second'); no minimum or creation fee published.",
+    "Verify 2026-09-28: createos.sh/pricing/sandbox now says \"No tiers, no plan gate, no minimums ... no annual lock-in\", while the Limits doc, the Pricing doc table and the product-page FAQ still publish plan tiers with concurrency caps 1/5/20/30. The card keeps the documented tier caps (conservative); if tiers are truly retired, only the rates apply and 50-concurrent workloads may be allowed.",
+    "Removed Beginner/Pro annual plans ($8/$60): the only source for \"20% off annual\" is createos.nodeops.network/pricing, which is the Deploy platform (Plus $49 / Pro $149 plans); the Sandbox pricing page says no annual lock-in and publishes no annual plan.",
+    "The rendered createos.nodeops.network/pricing (the CreateOS app's own subscription page, whose sidebar includes Sandbox) DOES show CPU $0.00000095/vCPU-s, Memory $0.00000036/GB-s, Storage $0.00000005/GB-s and plans Free $0 / Beginner $10 / Pro $75 / Enterprise Custom with a Monthly/Annual '20% off' toggle and an 'AI Sandbox' row. The rate cards are not labelled per product; Sandbox pages all use $0.03616363/vCPU-h. The static (non-JS) HTML only contains the Deploy SEO block (Plus $49 / Pro $149), which is probably what the 2026-09-28 check read.",
+    "Bandwidth: pricing page says egress is 'Unmetered, any volume $0.00', but each sandbox has a 50 GiB default quota; when exhausted 'Networking pauses ... until it's recharged', and 'Recharge consumes account credit' (price per GiB unpublished; max 100 GiB per recharge call). Egress-heavy sandboxes (>50 GiB each) cost an unknown extra and stop networking by default.",
+    "Disk sizes are a fixed menu 10/20/30/40/50/60 GiB (grow online, never shrink), capped by plan max disk 10/30/50/60 GiB.",
+    "Tier conflict re-checked 2026-09-29, unchanged: createos.sh/pricing/sandbox and createos.sh/pricing say 'No tiers, no plan gate, no minimums', while the Limits doc (last updated 09/28/2026) and product FAQ still publish concurrency 1/5/20/30 and 10/50/200/300 creations/day, 'a create that would exceed it fails rather than queueing', and the app pricing page still sells Free/Beginner $10/Pro $75/Enterprise. Keep the documented caps.",
+    "Product status conflict: the Limits doc says \"CreateOS Sandbox is in alpha ... not yet covered by an SLA\"; the product-page FAQ says it is \"in production and running real workloads today\"."
+  ],
+  "sources": [
+    "https://createos.sh/products/sandbox",
+    "https://createos.sh/docs/Account-Billing/Pricing/",
+    "https://createos.sh/docs/Sandbox/Limits",
+    "https://createos.sh/docs/Sandbox/Concepts",
+    "https://createos.nodeops.network/pricing",
+    "https://nodeops.network/createos",
+    "https://raw.githubusercontent.com/NodeOps-app/createos-sandbox-sdk/main/llms-full.txt",
+    "https://createos.sh/pricing/sandbox",
+    "https://createos.sh/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": 1,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Limits/product FAQ: Free 1, Beginner 5, Pro 20, Enterprise 30; daily create caps 10/50/200/300.",
+    "notes": "Conflicting official sandbox pricing now says no tiers or plan gates, whereas Limits and product FAQ still impose tiers. Default 1 follows explicit limits, not a reconciled backend test. 50/300/1,000 exceed every documented plan and need clarification. GET /v1/whoami exposes effective running count/cap.",
+    "sources": [
+      "https://createos.sh/docs/Sandbox/Limits",
+      "https://createos.sh/products/sandbox",
+      "https://createos.sh/pricing/sandbox"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://createos.sh/docs/Sandbox/Overview",
+      "quote": "Set a timeout from 1 minute to 24 hours and the sandbox pauses itself once both API calls and network traffic go quiet.",
+      "note": "Opt-in idle auto-pause (auto_pause_after_seconds 60-86,400; off by default per Limits doc). The idle pause is identical to a manual pause, which is a full Firecracker snapshot: disk + RAM + CPU/device state, so running processes are included (SDK Lifecycle guide: 'When the idle timeout fires, the control plane pauses the sandbox exactly as if you had called pause()'). Restore: 'Wake on request' - hitting a paused sandbox's HTTPS ingress URL resumes it automatically; otherwise resume via API/SDK/CLI. Also self-pause from inside via POST 127.0.0.1:1029. No max session length, so no time-limit trigger. Paused sandboxes still bill RAM + storage.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://createos.sh/docs/Sandbox/REST-API/Pause-Resume-Fork",
+      "quote": "Pausing snapshots the full VM state to object storage: Disk: filesystem contents Memory: full RAM image (processes, open files, network connections) CPU state: exact register values and execution context",
+      "note": "On-demand snapshot = pause (REST POST /v1/sandboxes/{id}/pause, SDK pause(), CLI `createos sandbox pause`); memory included. The live VM is torn down while paused (no snapshot-while-running). New machines boot from it via fork: 'Clone a paused sandbox into a new, independent sandbox identity' (own id/IP/placement; any number of forks; S3 disk attachments do not carry over). No named/persistent snapshot objects or snapshot-to-template: templates are Dockerfile builds only, and the AgentBox integration page says 'CreateOS has no matching snapshot feature yet' for checkpoints. Resume keeps the same sandbox id.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Integrations/Herdr",
+      "quote": "One pane maps to one sandbox. Your keystrokes go into the microVM; the agent's output comes back.",
+      "note": "No first-party API to start/prompt/stream/resume an agent harness inside the sandbox. Claude Code / Codex / OpenCode / Pi plugins run the agent LOCALLY and use the sandbox as a tool (via the createos CLI). Herdr and Orca integrations (first-party plugins in NodeOps-app/createos-claude-plugins) install and run Claude Code/Codex/OpenCode/Pi/Cursor INSIDE a sandbox, but only as an interactive PTY terminal attached to a Herdr pane / Orca workspace - no prompt/event/conversation API. The Claude Managed Agents guide shows running Anthropic's `ant beta:worker poll` inside a sandbox, but the session API is Anthropic's, not CreateOS's. CreateOS Studio has a runtime 'Sandbox SDK' (start a turn, stream the answer) but that is the separate Studio agent-builder product, not agents in a CreateOS Sandbox microVM. Generic managed-process/PTY APIs exist (exec does not count). Borderline: flip to true only if a PTY-attached Herdr/Orca plugin counts.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://createos.sh/docs/Sandbox/REST-API/Egress",
+      "quote": "A non-empty rule list means deny-by-default: only the listed destinations pass; everything else is dropped in-kernel on the host, outside the VM, so code inside the sandbox cannot rewrite or route around the policy.",
+      "note": "Per-sandbox allowlist set at create or live (PUT /v1/sandboxes/{id}/egress, SDK setEgress, CLI `sandbox firewall`); formats host, host:port (80/443 only), *.host, ip, ip:port, cidr, cidr:port. Enforced host-side via eBPF. Domain rules match TLS SNI (HTTPS) or Host header (HTTP), so weak for cleartext HTTP; hostname rules only cover TCP 80/443 (use IP/CIDR for other ports). Default is OPEN (empty list). No denylist token. Private networks between sandboxes are not governed by egress rules.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/REST-API/Egress",
+      "quote": "There is no denylist token. To block one destination you must list all destinations you do want.",
+      "note": "Rule grammar is host/IP/CIDR plus port only (full table on the Egress page); matching is on SNI/Host header with no method, path or header rules. The egress-governance page explicitly says enforcement is in-kernel eBPF, not a proxy ('Is this just a proxy I can configure? No.'), so there is no HTTP-level layer.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://createos.sh/docs/Sandbox/Limits",
+      "quote": "Closed. Nothing reaches a sandbox unless ingress_enabled: true, which exposes one HTTPS URL per sandbox.",
+      "note": "Control is coarse: a per-sandbox on/off toggle (create-time or live via PATCH / setIngress). When on, any port is reachable at <ulid>-<port>.<domain> with no auth, no per-port choice and no IP allowlist (Claude Code plugin page: 'the URL is the only thing protecting it, there is no authentication in front of it'). Private access paths are authenticated: API-key port tunnels (`createos sandbox tunnel`), SSH gateway with attached public keys, WireGuard VPN into private networks; scoped per-sandbox access tokens for delegating control. No public IPv4.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://createos.sh/docs/Sandbox/Security",
+      "quote": "Every sandbox is a Firecracker microVM with its own guest kernel, filesystem and network identity.",
+      "note": "Not documented explicitly. Firecracker microVM with its own kernel and root access; the devbox:1 image ships Docker 29 (which itself needs iptables/netfilter in the guest). Guest rules sit behind the host-side eBPF egress policy.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Security",
+      "quote": "Anything you put into a sandbox is readable by code running in it: envs, files you upload, and the keys of any attached disk, which the sandbox needs to mount the bucket.",
+      "note": "Secrets are only env vars (envs: write-only through the API, declared at create, 64 keys) or files; disk (S3) credentials are also visible inside the VM. No credential-injecting proxy: egress is eBPF filtering, and the egress-governance page says it is not a proxy. The recommended pattern is to keep credentials on the caller side (e.g. Claude Managed Agents 'sandbox as a tool' topology, or putting only a scoped Anthropic environment key inside). Non-HTTP: n/a.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Concepts",
+      "quote": "An S3-compatible bucket registered as a mountable volume. A disk holds its bucket and endpoint configuration; credentials are encrypted at rest and never returned by the API. Disks can be attached to a running sandbox and detached live, and the mount appears inside the guest within about a second.",
+      "note": "CreateOS 'Disks' are first-party mounts of CUSTOMER-OWNED S3-compatible buckets (AWS S3, R2, MinIO, Tigris), attached at create or live, detachable, optional sub_path - not provider-hosted block/network volumes (no CreateOS storage product billed for them). Root disk is the only provider storage (10 GiB default, raisable via disk_mib to plan max 10/30/50/60 GiB). Answered false for consistency with other bucket-mount-only providers (e.g. langsmith-sandbox); flip to true if customer-bucket mounts count as volumes. Free plan: 0 disks.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://createos.sh/docs/Sandbox/Security",
+      "quote": "Disks are the one thing sandboxes can share. A disk belongs to one account; only that account's sandboxes can attach it. Several of your sandboxes can mount the same disk at once and see the same bucket, with S3's last-write-wins semantics.",
+      "note": "Read-write (no read-only mount option documented); object storage semantics (last-write-wins), not a POSIX shared filesystem. Same disk can also be mounted at multiple paths in one sandbox. Disk mounts do not carry over to forks.",
+      "checked": "2026-09-29"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/NodeOps-app/createos-sandbox-sdk/main/llms-full.txt",
+      "quote": "A createos-sandbox sandbox is a VM — a real virtual machine running its own Linux kernel on KVM hardware virtualization, not a container sharing the host kernel.",
+      "note": "KVM hardware virtualization is used by the HOST to run the Firecracker microVM guest; no docs page (Limits, Security, Concepts, SDK) mentions /dev/kvm or nested virtualization being exposed inside the guest itself. Not documented as offered.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://createos.sh/products/sandbox",
+      "quote": "devbox:1 ... desktop:1: Graphical desktop with XFCE, Google Chrome, remote desktop and computer-use APIs.",
+      "note": "not offered: outside the product's scope. The desktop/browser image is a plain XFCE + Chrome remote desktop for general computer-use automation; no stealth/fingerprint-evasion or anti-bot-detection feature is documented anywhere on the product, docs, or SDK pages.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://createos.sh/products/sandbox",
+      "quote": "devbox:1 ... desktop:1: Graphical desktop with XFCE, Google Chrome, remote desktop and computer-use APIs.",
+      "note": "not offered: outside the product's scope. CreateOS Sandbox is a general VM/desktop/browser compute product; no built-in CAPTCHA-solving service is documented on any product, docs, or SDK page.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://createos.sh/docs/Sandbox/Limits",
+      "quote": "region at create time: eu or us, and it must match the control plane you are talking to.",
+      "note": "derived: sandboxes have no public IPv4 (public_ipv4=false) and egress is described only in terms of host/IP/CIDR allowlists enforced in-kernel on the provider's own infrastructure (Egress page); no residential, mobile, or dedicated/static IP product is advertised anywhere, so outbound traffic runs through the provider's own cloud/datacenter NAT.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://createos.sh/docs/Sandbox/Overview",
+      "quote": "Wake on request: Hit a paused sandbox's HTTPS URL and it resumes on its own; browsers get a waiting page that reloads until the app answers.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/REST-API/Bandwidth-And-Resize",
+      "quote": "POST /v1/sandboxes/{id}/resize Grow a sandbox's disk online. No sandbox restart is needed... Disk size can only increase, not decrease.",
+      "note": "The only documented \"resize\" endpoint changes disk size (and only upward, to a fixed menu of sizes). There is no documented way to change a running sandbox's vCPU or RAM allocation without recreating it; changing shape means creating a new sandbox with a different `shape`.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Integrations/Herdr",
+      "quote": "One pane maps to one sandbox. Your keystrokes go into the microVM; the agent's output comes back.",
+      "note": "not offered: outside the product's scope. CreateOS Sandbox itself ships no first-party API that drives its OWN browser/computer-use/research task agent; Computer-use/desktop APIs let YOUR code or harness drive the sandbox's desktop, and Herdr/Orca only attach an interactive PTY terminal to run a THIRD-PARTY coding harness (Claude Code, Codex, etc.) inside the VM. CreateOS's separate \"Studio\" Agent-Builder product (a distinct product line, not the Sandbox card modeled here) offers agent building/orchestration, but that is not part of the Sandbox product.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/REST-API/Egress",
+      "quote": "A non-empty rule list means deny-by-default: only the listed destinations pass; everything else is dropped in-kernel on the host, outside the VM.",
+      "note": "Egress is governed by host-side allow/deny rules, not by any documented fixed/dedicated outbound IP feature. No page (Limits, Egress, Networks, Security) advertises a static or dedicated egress IP for a sandbox; public_ipv4 is also false.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Limits",
+      "quote": "CreateOS Sandbox is in alpha: APIs may change and it is not yet covered by an SLA. Certifications are in progress; ask for the current letter before committing regulated workloads.",
+      "note": "Conflict: the company's general marketing/security page (createos.sh/security, createos.sh/products/sandbox footer) claims \"SOC 2 Type II certified\" and \"ISO 27001 certified\" company-wide. The Sandbox-product-specific Limits doc (lastModified 2026-09-28, same day as this check) explicitly says certifications for Sandbox are still in progress and it has no SLA yet. Deferring to the Sandbox-specific statement since this card models the Sandbox product; flip to true if the company-wide cert is confirmed to cover Sandbox.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://createos.sh/security",
+      "quote": "Can we use our own SSO access controls? Yes. CreateOS supports SAML/SSO and role-based access controls, scoped per team and per workflow.",
+      "note": "Stated on the company-wide security/trust page (covers account/dashboard access across CreateOS products, including Sandbox); no Sandbox-specific SSO page found, so confidence is medium rather than high.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://createos.sh/docs/Sandbox/Limits",
+      "quote": "Maximum session length None. A sandbox runs until you destroy it, pause it, or it auto-pauses. There is no lifetime cap to fit a job inside.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/NodeOps-app/createos-sandbox-sdk/main/llms.txt",
+      "quote": "Because `fork()` operates on a snapshot, the source must be `paused` (or `pausing`). Calling `fork()` on a `running` sandbox throws",
+      "note": "SDK docs and the fork() API reference both require the source sandbox to be paused before forking; forking a running sandbox raises CreateosSandboxValidationError. Confirmed no.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Limits/",
+      "quote": "Inbound (ingress) Closed. Nothing reaches a sandbox unless ingress_enabled: true, which exposes one HTTPS URL per sandbox.",
+      "note": "The only inbound path is a single HTTPS ingress URL (ulid-based hostname) toggled per sandbox; no public IPv4 address is allocated or mentioned anywhere in docs/product/pricing pages. Confirmed no.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://createos.sh/products/sandbox",
+      "quote": "What is preinstalled, and where does it run? The devbox:1 image is Ubuntu 24.04 with Python 3.12 and pandas, numpy, scipy, matplotlib, pyarrow, scikit-learn, openai, anthropic and langchain preinstalled, plus Node.js 24, Bun, Go 1.26, Rust and Docker",
+      "note": "Preinstalled image ships data/AI libraries and language runtimes, not coding-agent harnesses. The product page's 'CreateOS Skills' feature (npx skills add ... --skill createos, supporting Claude Code/Copilot/Gemini CLI/OpenCode/Codex/Amp/Kimi CLI) is a skill for a LOCAL coding agent to control CreateOS deploys via natural language - the reverse of agent_harnesses (harnesses running inside the sandbox). Confirmed no.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Limits/",
+      "quote": "No GPU shapes are offered.",
+      "note": "Explicit statement on the Limits doc; matches the products/sandbox size list (CPU/RAM-only shapes, no GPU size or gpu_types). Confirmed no.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://createos.sh/products/sandbox",
+      "quote": "CreateOS Sandbox gives every agent its own computer: a Firecracker micro-VM with its own kernel, private networking, pause to zero, and no egress fees.",
+      "note": "Product is a Firecracker microVM sandbox; the only first-party images are devbox:1 (Ubuntu 24.04) and an Alpine 3.20 base (Concepts doc). Firecracker only boots Linux guests; no Windows image/shape exists anywhere in docs. Confirmed no.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/Concepts/",
+      "quote": "alpine:3.20 Alpine 3.20 Minimal (musl + busybox); ~5x smaller.",
+      "note": "Only Linux base images (Ubuntu devbox:1, Alpine) are offered; Firecracker microVMs cannot run macOS and no macOS option is mentioned anywhere in docs/product/pricing pages. Confirmed no.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://createos.sh/products/sandbox",
+      "quote": "cold_start_tti median 74.65 ms ... 8 vCPU / 15.64 GiB x86_64",
+      "note": "Card's own perf benchmark (computesdk provider entry) records the largest shape as x86_64; no ARM/aarch64 shape, image, or architecture option appears in the product page, Limits doc, Concepts doc, or SDK docs. Confirmed no ARM offering.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://createos.sh/products/sandbox",
+      "quote": "Can I self-host the sandbox in my own cloud? Yes, for enterprise customers only. Our team onboards your own hardware, cloud account, or on-premise machines into the CreateOS data plane, so sandboxes and their compute stay in your environment, while we run the control plane and manage the platform.",
+      "note": "This is exactly the BYOC definition (managed service deployed into your own cloud account): CreateOS runs/manages the control plane while compute stays in the customer's own cloud account/hardware. Enterprise-gated ('onboarding is gated and done with us directly'), but offered. Correct false -> true; keep self_host also true (same FAQ answer covers on-prem/dedicated hardware too).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://api.github.com/orgs/NodeOps-app/repos",
+      "quote": "createos-sandbox-sdk: MIT License; createos-python-sdk: MIT License; createos-go-sdk: MIT License (client libraries only)",
+      "note": "NodeOps-app's public repos are client SDKs/CLIs/plugins (MIT/Apache-2.0), not the core sandbox execution platform (Firecracker orchestration, control plane, billing), which is closed-source and only accessible via the hosted API. Confirmed no OSI-licensed core product.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://createos.sh/security",
+      "quote": "We are ISO 27001 and SOC 2 Type II certified. We can share reports and controls documentation under NDA.",
+      "note": "The company's security/trust page answers 'What certifications do you hold?' listing only ISO 27001 and SOC 2 Type II; no HIPAA/BAA is mentioned anywhere on that page, the Sandbox product page, or the Sandbox docs. The Sandbox-specific Limits doc separately says 'CreateOS Sandbox is in alpha ... Certifications are in progress; ask for the current letter before committing regulated workloads,' reinforcing that HIPAA eligibility/BAA is not currently offered for the Sandbox product.",
+      "checked": "2026-09-30"
+    },
+    "fast_boot": {
+      "value": true,
+      "source": "https://www.computesdk.com/benchmarks",
+      "quote": "burst of 100: p95 141 ms, 100% started",
+      "note": "ComputeSDK sandbox benchmark 2026-09-25",
+      "checked": "2026-09-25"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://createos.sh/docs/Sandbox/REST-API/Metrics",
+      "quote": "GET /v1/metrics returns account-wide metrics aggregated over [from, to). Fields include spawned, destroyed, lifetime_seconds distribution, compute (vcpu_seconds, mem_mib_seconds, disk_mib_seconds), bandwidth_bytes (egress, ingress), and by_shape breakdown. No per-sandbox endpoint.",
+      "note": "granularity: account-only; cost: no; CreateOS provides account-level usage via REST API, but does not expose per-sandbox, per-tag, per-project, or group-level usage. Metrics are aggregated across the entire account.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": null,
+      "city": null,
+      "provider_region": "us",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://createos.sh/docs/Sandbox/Limits",
+  "locations_quote": "region at create time: eu or us, and it must match the control plane you are talking to.",
+  "locations_checked": "2026-10-01"
+}

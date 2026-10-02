@@ -1,0 +1,965 @@
+{
+  "id": "aws-ec2-windows",
+  "name": "AWS EC2 (Windows Server)",
+  "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+  "category": "windows",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "On-Demand c7i/m7i + Windows Server licence (us-east-1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "c7i.large",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.08925,
+          "month_cap": null
+        },
+        {
+          "name": "m7i.large",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.1008,
+          "month_cap": null
+        },
+        {
+          "name": "c7i.xlarge",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.1785,
+          "month_cap": null
+        },
+        {
+          "name": "m7i.xlarge",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.2016,
+          "month_cap": null
+        },
+        {
+          "name": "c7i.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.357,
+          "month_cap": null
+        },
+        {
+          "name": "m7i.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.4032,
+          "month_cap": null
+        },
+        {
+          "name": "c7i.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.714,
+          "month_cap": null
+        },
+        {
+          "name": "m7i.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.8064,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.046,
+      "gpu": null,
+      "note": "hour = Linux On-Demand price; Windows licence = +$0.046/vCPU-h, verified exact for every listed size (e.g. c7i.xlarge Linux $0.1785 -> Windows $0.3625). Per-second billing with 60 s minimum applies to Windows. EBS-only (disk billed separately).",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "key": "shared-burstable",
+      "label": "t3 burstable, Windows licence included (us-east-1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "t3.medium",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.06,
+          "month_cap": null
+        },
+        {
+          "name": "t3.large",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.1108,
+          "month_cap": null
+        },
+        {
+          "name": "t3.xlarge",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.24,
+          "month_cap": null
+        },
+        {
+          "name": "t3.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.48,
+          "month_cap": null
+        },
+        {
+          "name": "t3.micro",
+          "vcpu": 2,
+          "ram_gib": 1,
+          "hour": 0.0196,
+          "free_plan_eligible": true
+        },
+        {
+          "name": "t3.small",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "hour": 0.0392,
+          "free_plan_eligible": true
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0,
+      "gpu": null,
+      "note": "hour already INCLUDES the Windows licence (t3 surcharge is not a flat per-vCPU rate: +$0.0184 t3.medium, +$0.0276 t3.large, +$0.0736 t3.xlarge, +$0.1472 t3.2xlarge vs Linux). Burstable: baseline CPU share with CPU credits; 'unlimited' mode surplus-credit charges not encoded.",
+      "regions": [
+        "us"
+      ],
+      "surplus_cpu_credit_vcpu_h": 0.096
+    },
+    {
+      "key": "flex",
+      "label": "c7i-flex/m7i-flex Windows (us-east-1)",
+      "flags": [
+        "burstable"
+      ],
+      "os": [
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "c7i-flex.large",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "hour": 0.17219
+        },
+        {
+          "name": "m7i-flex.large",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "hour": 0.18316
+        },
+        {
+          "name": "c7i-flex.xlarge",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "hour": 0.34438
+        },
+        {
+          "name": "m7i-flex.xlarge",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "hour": 0.36632
+        },
+        {
+          "name": "c7i-flex.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "hour": 0.68875
+        },
+        {
+          "name": "m7i-flex.2xlarge",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "hour": 0.73264
+        },
+        {
+          "name": "c7i-flex.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "hour": 1.3775
+        },
+        {
+          "name": "m7i-flex.4xlarge",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "hour": 1.46528
+        }
+      ],
+      "min_billed_seconds": 60,
+      "granularity_s": 1
+    },
+    {
+      "key": "spot",
+      "flags": [
+        "spot"
+      ],
+      "pricing": "sizes",
+      "prices": null,
+      "discount_up_to_pct": 90
+    },
+    {
+      "key": "savings-plan",
+      "flags": [
+        "commit"
+      ],
+      "pricing": "sizes",
+      "prices": null,
+      "note": "Windows $0.046/vCPU-hour licence portion remains separately relevant; exact term rates not captured."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.08,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.05,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 100,
+    "egress_gib": 0.09,
+    "ipv4_month": 3.65,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "AWS account (no plan fee)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 100,
+    "conditions": "New customer only; $100 signup credit plus up to $100 earned; credits expire after 12 months. Free plan lasts six months or until credits are depleted and does not scale beyond credit thresholds. Eligible EC2 types include t3.micro, t3.small, c7i-flex.large and m7i-flex.large (plus arm Linux types)."
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": true,
+    "arm64": true,
+    "gpu": true,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "asia",
+      "eu"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": false,
+    "mcp_server": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Prices from the official AWS metered price JSON (ec2-ondemand-without-sec-sel, us-east-1, Linux and Windows files) fetched 2026-09-28.",
+    "Windows Server only; Windows 10/11 client cannot be licence-included on shared tenancy (BYOL on Dedicated Hosts only).",
+    "Stopped instances bill EBS only; Windows AMIs typically need >= 30 GB root volume. Public IPv4 $0.005/h while allocated.",
+    "Savings Plans / RIs / Spot not encoded; they discount the compute part, the licence portion is largely undiscounted.",
+    "$0.09/GB internet egress after 100 GB/month free is the long-standing AWS list rate; first tier not re-fetched from an official page this pass.",
+    "AWS free-tier credits for new accounts not encoded (terms vary).",
+    "No agent API: drive the desktop yourself (RDP/SSM Run Command).",
+    "T3 burstable baselines per vCPU: t3.medium 20%, t3.large 30%, t3.xlarge / t3.2xlarge 40%; sustained load above baseline spends CPU credits (Unlimited mode surplus charges)."
+  ],
+  "sources": [
+    "https://aws.amazon.com/ec2/pricing/on-demand/",
+    "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-sec-sel/US%20East%20(N.%20Virginia)/Windows/index.json",
+    "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/ec2-ondemand-without-sec-sel/US%20East%20(N.%20Virginia)/Linux/index.json",
+    "https://aws.amazon.com/vpc/pricing/",
+    "https://aws.amazon.com/ebs/pricing/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": 5,
+    "default_max_gpus": 0,
+    "raise": "automatic",
+    "raise_time_days": null,
+    "verification": "Personal details, email and phone; payment card may be required.",
+    "tiers": "EC2 grows On-Demand quotas with usage; requests via Service Quotas are also available.",
+    "notes": "Published regional Standard-family vCPU baseline; applied quotas may differ for new accounts. G/VT and P GPU-family vCPU quotas start at zero. Windows shares EC2 quotas. Not an instance-count limit; capacity and IP quotas also constrain a fleet.",
+    "sources": [
+      "https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html",
+      "https://aws.amazon.com/ec2/faqs/",
+      "https://aws.amazon.com/free/complete-signup/",
+      "https://aws.amazon.com/free/complete-signup/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 10,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html",
+      "quote": "Hibernation saves the contents from the instance memory (RAM) to your Amazon Elastic Block Store (Amazon EBS) root volume. Amazon EC2 persists the instance's EBS root volume and any attached EBS data volumes.",
+      "note": "Opt-in EC2 hibernation: must be enabled at launch (encrypted root EBS, Windows RAM <= 16 GiB, Windows Server 2012-2022 AMIs listed), then a stop with the hibernate option (or a Spot interruption with interruption behavior 'hibernate') saves RAM to the root EBS volume; on start 'The RAM contents are reloaded' and 'The processes that were previously running on the instance are resumed'. Memory included. A plain stop is disk-only (persistent EBS). Scheduled EBS snapshots via Data Lifecycle Manager / AWS Backup are backups, not this.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html",
+      "quote": "You can then use the new AMI to launch new instances with your customizations.",
+      "note": "EBS snapshots (point-in-time, per volume) and CreateImage (AMI) from a running or stopped instance via API/CLI/console; new instances boot from the AMI (template/fork of disk). Disk only, no memory; by default the instance is rebooted for consistency (NoReboot optional).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/systems-manager/latest/userguide/execute-remote-commands.html",
+      "quote": "Run Command ... lets you remotely and securely manage the configuration of your managed nodes.",
+      "note": "SSM Run Command / Session Manager is a generic remote-exec/RDP path, not a first-party API purpose-built to drive a coding-agent harness (prompt, stream events, follow-ups) inside the sandbox. Confirms card's existing evidence.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html",
+      "quote": "Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance.",
+      "note": "Security-group outbound rules and network ACLs: IP/CIDR/prefix-list + port (level ip), enforced at the hypervisor/VPC. Domain level via AWS Network Firewall (separately billed): 'You can create allow lists and deny lists with domain names that the stateful rules engine looks for in network traffic' (SNI / Host header), also Route 53 Resolver DNS Firewall. No-internet mode = private subnet without IGW/NAT.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-examples.html",
+      "quote": "pass http $HOME_NET any -> any any (msg:\"Allow WebSocket Upgrade\"; flow:established; http.connection; content:\"Upgrade\"; http.header; content:\"websocket\"; sid:1200001; rev:1;)",
+      "note": "AWS Network Firewall (separate paid service in the VPC path) accepts Suricata-compatible stateful rules with HTTP keywords (http.host, http.header, etc.) and, with a TLS inspection configuration, 'inspects the traffic according to your firewall policy's stateful rules' after decrypting HTTPS; aws_url_category evaluates full URLs with TLS inspection. Not a per-instance toggle; requires VPC routing through firewall endpoints.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html",
+      "quote": "Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance.",
+      "note": "Security groups (stateful, allow rules by CIDR/prefix list/other SG + port), NACLs, private subnets, optional public IPv4. No managed HTTPS preview URLs.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full Nitro VM with Administrator/root: Windows Defender Firewall (netsh/PowerShell) on Windows Server AMIs, iptables/nftables on Linux AMIs.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html",
+      "quote": "An instance profile is a container for an IAM role that you can use to pass role information to an EC2 instance when the instance starts.",
+      "note": "Credentials reach the instance via IAM instance-profile roles / Secrets Manager / SSM Parameter Store (fetched into the machine), not via a first-party HTTP proxy that injects credentials into outbound requests so secrets never enter the machine. Confirms card's existing evidence.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-attaching-volume.html",
+      "quote": "You can attach an available EBS volume to one or more of your instances that is in the same Availability Zone as the volume.",
+      "note": "EBS block volumes (gp3/io2/etc.), same AZ only.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes-multi.html",
+      "quote": "Amazon EBS Multi-Attach enables you to attach a single Provisioned IOPS SSD ( io1 or io2 ) volume to multiple instances that are in the same Availability Zone.",
+      "note": "Multi-Attach: up to 16 Nitro instances in one AZ, read-write, 'Windows instances support Multi-Attach enabled io2 volumes only', needs a cluster-aware FS (e.g. WSFC). For normal shared file storage on Windows: Amazon FSx for Windows File Server (SMB, read-write, many instances, cross-VPC/account/Region); EFS is the Linux (NFS) equivalent. All separately billed.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html",
+      "quote": "Amazon EC2 supports the following hypervisors: Xen and Nitro.",
+      "note": "AWS's own docs name the hypervisor 'Nitro' rather than 'KVM'/'QEMU' directly, but AWS's public announcement of Nitro/C5 and independent references (e.g. Wikipedia: 'a custom architecture around the KVM hypervisor, called Nitro') describe it as a lightweight, custom KVM-based hypervisor. Current-generation EC2 instances (incl. c7i/m7i used for Windows Server here) are Nitro-based full VMs with per-customer hardware isolation via the Nitro Card/Nitro Security Chip, not a container or microVM-per-request model.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/pricing/on-demand/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) offers ... virtual servers, otherwise known as instances, on-demand.",
+      "note": "not offered: EC2 instances boot from Amazon Machine Images (AMIs), not from a customer-supplied Docker/OCI image; running an OCI/Docker image as the machine's own boot image is outside EC2's model (containers can run *inside* an EC2 instance via Docker Engine, or via ECS/EKS on top of EC2, but that's a different product layer).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/pricing/on-demand/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) offers ... virtual servers, otherwise known as instances, on-demand.",
+      "note": "not offered: outside the product's scope. EC2 (incl. Windows) is a general-purpose VM; it ships no browser-fingerprinting/stealth feature for evading bot detection.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/pricing/on-demand/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) offers ... virtual servers, otherwise known as instances, on-demand.",
+      "note": "not offered: outside the product's scope. EC2 is a general VM product with no built-in CAPTCHA-solving service.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-ip-addressing.html",
+      "quote": "Public IPv4 addresses are allocated from Amazon's pool of public IPv4 addresses.",
+      "note": "EC2 outbound/public IPs come from AWS's own datacenter IP ranges (published as AWS IP ranges), not residential or mobile ISP ranges.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html",
+      "quote": "As your needs change, you might find that your Amazon EC2 instance is too big or too small for its workload.",
+      "note": "not offered: outside the product's scope. EC2 is a persistent VM model: a stopped instance stays stopped until explicitly started via API/console/CLI; there is no serverless-style 'incoming request wakes the machine' mechanism for a stopped EC2 instance.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html",
+      "quote": "If this is the case, you can resize your instance by changing its instance type.",
+      "note": "Changing the instance type (CPU/RAM) is done via 'Modify instance type', which for the vast majority of instances (including EBS-backed Windows Server instances used here) requires the instance to be stopped first, then restarted on the new type -- not a resize of a machine that keeps running.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/pricing/on-demand/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) offers ... virtual servers, otherwise known as instances, on-demand.",
+      "note": "No first-party API that drives AWS's own browser/computer-use/research agent inside the EC2 instance; you must drive the desktop yourself (RDP or SSM Run Command/Session Manager).",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/awslabs/mcp/main/README.md",
+      "quote": "AWS API MCP Server | Start here for general AWS interactions! Comprehensive AWS API support with command validation, security controls, and access to all AWS services. Perfect for managing infrastructure, exploring resources, and executing AWS operations through natural language.",
+      "note": "AWS (awslabs org) ships a first-party 'AWS API MCP Server' covering all AWS services, which can create/start/stop/manage EC2 instances via natural language; it is a general AWS-API MCP server rather than an EC2-only/sandbox-specific one.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-ami-version-history.html",
+      "quote": "Beginning March 2025, R Services and Machine Learning Services with R and Python runtimes are no longer enabled by default on SQL Server 2016, 2017, and 2019 AMIs.",
+      "note": "The base Windows Server AMIs used for a plain EC2 Windows instance do not ship Python preinstalled; even the SQL Server AMI variant that could optionally include a Python runtime (via ML Services) no longer enables it by default. Python must be installed by the customer (e.g. via EC2Launch/user data).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ec2-windows-ami-version-history.html",
+      "quote": "Windows Server 2022 Base",
+      "note": "AWS's published Windows Server AMIs (Base, SQL Server, Core, etc.) list OS/SQL components only; Node.js is not among the preinstalled components on the base Windows Server AMI -- it must be installed by the customer.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html",
+      "quote": "As your needs change, you might find that your Amazon EC2 instance is too big or too small for its workload.",
+      "note": "On-Demand EC2 (incl. Windows) instances are persistent VMs that run until the customer stops/terminates them; AWS imposes no maximum session/runtime duration (Spot instances can be reclaimed on price/capacity events, but that is not modeled here as the On-Demand/t3/flex modes).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html",
+      "quote": "To create an Amazon EBS-backed AMI from an instance, start by launching an instance using an existing Amazon EBS-backed AMI. ... After customizing the instance to meet your specific requirements, create and register a new AMI. You can then use the new AMI to launch new instances with your customizations.",
+      "note": "Creating an AMI from an instance and launching multiple new instances from it is a first-party 'clone a machine into new ones' workflow (disk-only, no running memory) -> fork should be true.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html",
+      "quote": "If you're confident that your instance is in a consistent state appropriate for AMI creation, you can tell Amazon EC2 not to power down and reboot the instance ... aws ec2 create-image --instance-id i-1234567890abcdef0 --name \"my-web-server\" --no-reboot",
+      "note": "The --no-reboot flag on create-image lets you snapshot/AMI a RUNNING instance without stopping or rebooting it, then launch new instances from that AMI -> fork_running should be true (disk-only clone).",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html",
+      "quote": "During the AMI-creation process, Amazon EC2 creates snapshots of your instance's root volume and any other EBS volumes attached to your instance.",
+      "note": "AMI-based clones (running or stopped) only capture EBS disk contents, never in-memory/running-process state, so new instances launched from an AMI boot fresh rather than resuming running processes. Hibernation (separate feature) restores memory on the SAME instance, not into new cloned instances.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.",
+      "note": "EC2 is a raw VM product; it ships no first-party API to drive a desktop by screenshots+clicks (Windows RDP or SSM Run Command are the only official access paths). Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/UsingAlarmActions.html",
+      "quote": "Using Amazon CloudWatch alarm actions, you can create alarms that automatically stop, terminate, reboot, or recover your instances. You can use the stop or terminate actions to help you save money when you no longer need an instance to be running. ... Rather than letting those instances sit idle (and accrue charges), you can stop or terminate them.",
+      "note": "reviewed: proposed correction rejected (First-party CloudWatch alarm actions can automatically stop an instance based on an idle metric (e.g. low CPU), which satisfies 'stops/sleeps automatically when idle'; it requires the customer to configure the alarm rather than being a single always-on toggle, so medium confidence.)",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/create-https-listener.html",
+      "quote": "To create an HTTPS listener, you must deploy at least one SSL server certificate on your load balancer. The load balancer uses a server certificate to terminate the front-end connection and then decrypt requests from clients before sending them to the targets.",
+      "note": "A raw EC2 instance itself gives only a public IPv4/raw TCP; there is no managed HTTPS URL to reach an instance's ports out of the box -- HTTPS termination requires separately provisioning and configuring an Application Load Balancer plus an ACM certificate (or your own web server + cert on the instance).",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.",
+      "note": "EC2 offers only OS/software AMIs (Windows Server, Linux, marketplace images); it does not preinstall or offer coding-agent harnesses (Claude Code, Codex, OpenCode, etc.) as templates. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.",
+      "note": "EC2 is AWS's own cloud compute service; there is no way to run the EC2 service itself on your own infrastructure (AWS Outposts runs AWS-owned hardware in your datacenter but is still an AWS-operated extension, not customer self-hosting). Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/",
+      "quote": "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.",
+      "note": "EC2 IS the cloud account/infrastructure itself; there's no separate provider deploying EC2 as a managed service into a different cloud account. Not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://aws.amazon.com/agreement/",
+      "quote": "AWS Customer Agreement",
+      "note": "EC2 is a proprietary AWS commercial service governed by the AWS Customer Agreement; no OSI-licensed core product. (No first-party page claims EC2 is open source; the Nitro hypervisor/host software is closed/proprietary.)",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_Operations.html",
+      "quote": "The Cost Explorer API enables you to programmatically query your cost and usage data. You can query for aggregated data such as total monthly costs or total daily usage. You can also query for granular data, such as the number of daily write operations for Amazon DynamoDB database tables in your pro",
+      "note": "granularity: per-tag; cost: yes; AWS Cost Explorer API (GetCostAndUsage, GetCostAndUsageWithResources) supports filtering/grouping by dimensions and tags. EC2 instances can be tagged and costs queried by tag via API or Cost and Usage Reports (CUR) exported to S3 with per-resource details. Hyperscaler: billing API breaks down costs by resource tag/label.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "N. California",
+      "provider_region": "us-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Cape Town",
+      "provider_region": "af-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "ap-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Hyderabad",
+      "provider_region": "ap-south-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "ap-northeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "ap-northeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "ap-northeast-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "NSW",
+      "city": "Sydney",
+      "provider_region": "ap-southeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "ap-southeast-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "VIC",
+      "city": "Melbourne",
+      "provider_region": "ap-southeast-4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "ap-southeast-5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "ap-southeast-6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "ap-southeast-7",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "ap-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "ap-east-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montreal",
+      "provider_region": "ca-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "AB",
+      "city": "Calgary",
+      "provider_region": "ca-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "eu-central-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "eu-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "eu-west-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "eu-north-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "eu-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Barcelona",
+      "provider_region": "eu-south-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "il-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Bahrain",
+      "provider_region": "me-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Dubai",
+      "provider_region": "me-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Querétaro",
+      "provider_region": "mx-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": "SP",
+      "city": "São Paulo",
+      "provider_region": "sa-east-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://aws.amazon.com/ec2/pricing/on-demand/",
+  "locations_quote": "AWS EC2 pricing page lists all regions where Windows Server instances are available",
+  "locations_checked": "2026-10-01"
+}

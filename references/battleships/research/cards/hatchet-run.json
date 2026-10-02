@@ -1,0 +1,804 @@
+{
+  "id": "hatchet-run",
+  "name": "Hatchet",
+  "url": "https://hatchet.run",
+  "category": "paas",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Pay-as-you-go (no card)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Orchestration only (BYO workers). 2,000 task runs/day and 2,000 events/day; 10 connected workers; 2,000 worker slots; 10,000-task queue backlog; 1 tenant; 3 users; 500 MB active storage; 500 MB logs; 1-day retention; 10 webhooks; 10 crons. Over limit: tasks dropped."
+    },
+    {
+      "name": "Pay-as-you-go (card on file)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 10,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "No plan fee; usage: $30/M runs after 1M, $5/M events after 1M, $0.03/GB-hr active storage over 10 GB/day, $0.0004/GB-hr logs over 10 GB; 50 users included then $10/user; 100 workers, 10,000 slots, 1M backlog, 1,000 crons, 100 webhooks, 1M scheduled runs, 7-day retention. Billed every 30/31 days."
+    },
+    {
+      "name": "Custom",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "100M+ runs/month, dedicated capacity, 90+ day retention, SSO/RBAC/audit logs/HIPAA BAA, self-hosted/hybrid/BYOC, dedicated Slack."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "us",
+      "eu",
+      "other",
+      "asia"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": true,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "harness_api": false,
+    "secret_proxy": false,
+    "isolation": "container",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "max_session_unlimited": true,
+    "ingress_rules": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Workers are processes you run ('Workers run on your own infrastructure'). Pay-as-you-go (card on file): no plan fee; 1M runs + 1M events free/month, then $30/M runs and $5/M events; active storage 10 GB/day included then $0.03/GB-hr; logs/traces 10 GB included then $0.0004/GB-hr; 50 users included then $10/user; 100 workers, 10,000 worker slots, 1M-task backlog, 10 tenants, 7-day retention. Failed runs count. Prices exclude execution hosts.",
+    "Inventory exclusion: BYO execution workers. Card contains no numeric compute modes and no selectable price plan.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Docs describe Hatchet Managed Compute (Dockerfile from GitHub; shared/performance CPU up to 8 CPU/16 GB; autoscaling with scale-to-zero; GPU closed beta A10, L40S, A100 40/80GB) but no rates are published anywhere; not modelled."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/hatchet-run",
+    "https://hatchet.run/",
+    "https://hatchet.run/pricing"
+  ],
+  "audit_2026_09_29": {
+    "applied": 13,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.hatchet.run/cookbooks/hatchet-claude-agent-sdk-trusted-env.md",
+      "quote": "Hatchet does not provide native code sandboxing.",
+      "note": "Claude Agent SDK / OpenAI Agents SDK cookbooks run the agent in your own infrastructure and expose Hatchet tasks as MCP tools; `hatchet skills install` / `hatchet mcp install` help coding agents operate Hatchet. Triggering a workflow that happens to run an agent is generic task execution, not a harness API.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/environment-variables.md",
+      "quote": "Are injected into your worker containers at runtime",
+      "note": "Managed Compute secrets are encrypted-at-rest env vars injected into the container. The Claude Agent SDK cookbook states Hatchet has no native sandboxing and points to external 'credential proxying'.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://docs.hatchet.run/v1/compute/git-ops",
+      "quote": "The repository should contain your application code and Dockerfile(s)... Path to Dockerfile(s)",
+      "note": "Hatchet Managed Compute builds and runs your Dockerfile as a container; no VM/microVM/hypervisor technology is documented. Core Hatchet itself is a task queue engine, not a sandbox with its own hardware-isolation model.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/compute/git-ops",
+      "quote": "The repository should contain your application code and Dockerfile(s). ... Path to Dockerfile(s) ... Default: ./Dockerfile",
+      "note": "Managed Compute deploys from your own Dockerfile via GitOps (build from GitHub repo).",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure",
+      "note": "not offered: outside the product's scope - Managed Compute runs your container as the workload itself; no documentation of a Docker/container runtime available for nested use inside that container.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure",
+      "note": "not offered: outside the product's scope - a container-based worker platform, no /dev/kvm or nested virtualization documented.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://hatchet.run/",
+      "quote": "Hatchet is a distributed task queue and workflow engine for modern applications.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://hatchet.run/",
+      "quote": "Hatchet is a distributed task queue and workflow engine for modern applications.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://hatchet.run/",
+      "quote": "Hatchet is a distributed task queue and workflow engine for modern applications.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://hatchet.run/",
+      "quote": "Hatchet is a distributed task queue and workflow engine for modern applications.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://hatchet.run/",
+      "quote": "Hatchet is a distributed task queue and workflow engine for modern applications.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.hatchet.run/reference/cli",
+      "quote": "the hatchet worker dev command lets you run a worker locally with automatic reloading ... the hatchet tui command lets you interact with your Hatchet deployment through a terminal user interface",
+      "note": "not offered: no SSH/exec-into-instance command documented in the CLI reference or compute docs; interaction is via CLI/TUI/dashboard/API, not a shell into the running container.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "You can also enable \"Scale to zero during periods of inactivity\" to allow the system to scale down to zero replicas when there's no work to be done",
+      "note": "not offered: no disk or memory snapshot/checkpoint feature documented; scaling to zero simply stops/starts container replicas from the built image, not a saved snapshot of running state.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "Scale to zero during periods of inactivity",
+      "note": "not offered: no automatic state snapshot/restore documented for Managed Compute instances.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure",
+      "note": "not offered: outside the product's scope; no API/CLI checkpoint command documented.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "The basic autoscaling configuration requires two parameters: Minimum Replicas ... Maximum Replicas",
+      "note": "not offered: new replicas are started from the same built image via autoscaling, not cloned from a specific running/paused machine.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "The basic autoscaling configuration requires two parameters: Minimum Replicas ... Maximum Replicas",
+      "note": "not offered: no clone-a-running-machine capability documented.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "The basic autoscaling configuration requires two parameters: Minimum Replicas ... Maximum Replicas",
+      "note": "not offered: no memory-preserving fork/clone documented.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "Scale to zero during periods of inactivity",
+      "note": "Documented mechanism is autoscale to zero replicas / scale up again, not an explicit pause/resume of one specific machine's state.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "Autoscaling automatically adjusts the number of worker replicas based on utilization metrics. When workload increases, Hatchet scales up your workers to handle the load.",
+      "note": "Replicas scaled to zero during inactivity are automatically scaled back up when new tasks (queue depth) arrive; this is queue-triggered rather than literal HTTP-request-triggered wake, but functions equivalently for a scaled-to-zero worker pool.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/environment-variables",
+      "quote": "Are injected into your worker containers at runtime",
+      "note": "not offered: no persistent disk/volume documented for Managed Compute; state is expected to live outside the container (e.g. your own database), consistent with its serverless/stateless container model.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure",
+      "note": "not offered: outside the product's scope; no attachable-volume documentation found.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure",
+      "note": "not offered: outside the product's scope; no shared-volume documentation found.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/compute/auto-scaling",
+      "quote": "You can also enable \"Scale to zero during periods of inactivity\" to allow the system to scale down to zero replicas when there's no work to be done, helping to reduce costs.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/git-ops",
+      "quote": "The deployed state always matches your Git repository's state ... Any commits to this branch will trigger new deployments",
+      "note": "not offered: CPU/RAM class is set per Compute config and changes are deployed via GitOps redeployment, not a live in-place resize API.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/using-coding-agents",
+      "quote": "Agent skills are reference documents that teach AI coding agents how to use the Hatchet CLI: triggering workflows, starting workers, debugging runs, and more.",
+      "note": "Hatchet ships CLI skills/MCP tooling that teach coding agents to operate Hatchet itself; it does not preinstall/offer coding-agent harnesses (Claude Code, Codex, OpenCode, etc.) as runnable templates inside a sandbox.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://hatchet.run/",
+      "quote": "Hatchet is a distributed task queue and workflow engine for modern applications.",
+      "note": "not offered: outside the product's scope - Hatchet has no first-party browser/computer-use/research task agent of its own.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/using-coding-agents",
+      "quote": "The Hatchet CLI includes a local MCP (Model Context Protocol) server that lets coding agents operate against a running Hatchet deployment: trigger workflow runs, inspect run status and events, list workers, replay runs, check engine status, and submit product feedback.",
+      "note": "This MCP server controls the Hatchet task-queue deployment (workflows/runs), not sandbox VMs per se, but is the provider's own MCP server for its product.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/docker",
+      "quote": "#### Python - Poetry ... FROM python:3.13-slim ... #### Python - pip",
+      "note": "First-party Python SDK with documented Dockerfile examples.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/docker",
+      "quote": "#### JavaScript - npm ... FROM node:18 AS builder ... #### JavaScript - pnpm ... #### JavaScript - yarn",
+      "note": "First-party TypeScript/JavaScript SDK with documented Node Dockerfile examples.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure",
+      "note": "not offered: outside the product's scope; no HTTP method/path-level egress control documented.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/git-ops",
+      "quote": "The repository should contain your application code and Dockerfile(s)",
+      "note": "Isolation is container-based (not a full VM/microVM with root access to the host kernel network stack), so the derived-firewall heuristic for VM/microVM+root does not apply.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/cpu",
+      "quote": "ams, Amsterdam, Netherlands ... Region Code, Location",
+      "note": "No fixed/static outbound IP is documented; regions match Fly.io-style shared machine infrastructure with no static-IP add-on mentioned.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/compute/gpu",
+      "quote": "Hatchet supports GPU-accelerated workloads using NVIDIA GPUs. ... GPU compute is currently in closed beta, reach out to us on Discord to request early access!",
+      "note": "GPU types: A10 (24GB), L40S (48GB), A100-PCIe (40GB), A100-SXM4 (80GB); currently closed beta requiring outreach for access.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/docker",
+      "quote": "FROM python:3.13-slim ... FROM node:18 AS builder ... FROM ubuntu:22.04",
+      "note": "not offered: outside the product's scope; all documented Dockerfile base images are Linux (Python slim, Node, Ubuntu); no Windows container/instance option documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure",
+      "note": "not offered: outside the product's scope; only Linux Docker containers are documented for Managed Compute.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.hatchet.run/v1/compute/cpu",
+      "quote": "ams, Amsterdam, Netherlands ... arn, Stockholm, Sweden ... cdg, Paris, France ... fra, Frankfurt, Germany ... lhr, London, United Kingdom ... mad, Madrid, Spain ... otp, Bucharest, Romania ... waw, Warsaw, Poland",
+      "note": "Multiple EU regions are available for deploying Managed Compute workloads, and Hatchet's security page also states GDPR compliance.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.hatchet.run/v1/compute",
+      "quote": "No cold starts or execution timeouts",
+      "note": "Managed Compute workers are long-running processes/replicas with no documented maximum session/runtime limit; they run until scaled down or redeployed.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/index",
+      "quote": "Hatchet is a developer platform that helps engineering teams build and deploy mission-critical AI agents, durable workflows, and background tasks... Workers run on your own infrastructure.",
+      "note": "not offered: outside the product's scope — Hatchet is a task queue/orchestration engine; workers (including Managed Compute containers) connect outbound to the Hatchet engine and are not documented as receiving a per-machine public IPv4.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/index",
+      "quote": "Hatchet Managed Compute provides the simplicity of serverless while delivering the performance and control of traditional infrastructure, making it ideal for long lived, or data intensive AI applications and background job processing.",
+      "note": "not offered: outside the product's scope — Managed Compute and self-hosted/BYO workers are task-queue worker processes that pull work from Hatchet's engine; no docs page describes an HTTPS URL to reach ports on a worker/instance.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/index",
+      "quote": "Hatchet provides a full platform for queuing, automatic retries, real-time monitoring, alerting, and logging.",
+      "note": "not offered: outside the product's scope — there is no documented notion of exposed ports on a worker/instance for Hatchet to apply ingress controls to (auth/allowlists) against.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/environment-variables.md",
+      "quote": "Environment variables are mounted into your worker containers at runtime.",
+      "note": "not offered: outside the product's scope — no docs page (compute, self-hosting/networking, or security) describes provider-side outbound allow/deny lists or no-internet modes for workers or Managed Compute containers.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.hatchet.run/v1/compute/cpu.md",
+      "quote": "Shared CPU ... Available Configurations: 1 CPU, 1 GB RAM / 1 CPU, 2 GB RAM / 2 CPU, 2 GB RAM / 2 CPU, 4 GB RAM / 4 CPU, 8 GB RAM / 8 CPU, 16 GB RAM",
+      "note": "not offered: outside the product's scope — Managed Compute's CPU/GPU instance docs describe sizes only by vCPU/RAM (and NVIDIA GPU models needing CUDA), with no ARM/aarch64 option mentioned anywhere in the compute docs.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://hatchet.run/pricing",
+      "quote": "Pricing is usage-based: $30/M runs after 1M, $5/M events after 1M, $0.03/GB-hr active storage, $0.0004/GB-hr logs. No API endpoint documented to retrieve billable usage programmatically; only dashboard visibility.",
+      "note": "granularity: account-only; cost: no; Hatchet is a task queue/workflow orchestration engine. While usage is tracked for billing (runs, events, storage), no REST API endpoint is documented to retrieve usage per sandbox/workflow/project. Usage visibility is limited to the web dashboard. The Python/TypeScript SDKs have Metrics and Runs clients for monitoring, but these do not expose billable usage data. As a PaaS orchestration platform rather than compute infrastructure provider, Hatchet does not offer usage metrics by instance/resource tag like hyperscalers do.",
+      "confidence": "high",
+      "checked": "2026-01-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "GA",
+      "city": "Atlanta",
+      "provider_region": "atl",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MA",
+      "city": "Boston",
+      "provider_region": "bos",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CO",
+      "city": "Denver",
+      "provider_region": "den",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "dfw",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NJ",
+      "city": "Secaucus",
+      "provider_region": "ewr",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "iad",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "lax",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "FL",
+      "city": "Miami",
+      "provider_region": "mia",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IL",
+      "city": "Chicago",
+      "provider_region": "ord",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "AZ",
+      "city": "Phoenix",
+      "provider_region": "phx",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "WA",
+      "city": "Seattle",
+      "provider_region": "sea",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Jose",
+      "provider_region": "sjc",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "ams",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "arn",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "cdg",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "fra",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "lhr",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "mad",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RO",
+      "state": null,
+      "city": "Bucharest",
+      "provider_region": "otp",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "waw",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CO",
+      "state": null,
+      "city": "Bogotá",
+      "provider_region": "bog",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "bom",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AR",
+      "state": null,
+      "city": "Ezeiza",
+      "provider_region": "eze",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Guadalajara",
+      "provider_region": "gdl",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Rio de Janeiro",
+      "provider_region": "gig",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Sao Paulo",
+      "provider_region": "gru",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "hkg",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "nrt",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Querétaro",
+      "provider_region": "qro",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Santiago",
+      "provider_region": "scl",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "sin",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "syd",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montreal",
+      "provider_region": "yul",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "yyz",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.hatchet.run/llms/v1/compute/cpu.md",
+  "locations_quote": "Region Code, Location ... ams, Amsterdam, Netherlands ... arn, Stockholm, Sweden ... atl, Atlanta, Georgia (US) ... iad, Ashburn, Virginia (US) ... lax, Los Angeles, California (US) ... yyz, Toronto, Canada",
+  "locations_checked": "2026-10-01"
+}

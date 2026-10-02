@@ -1,0 +1,569 @@
+{
+  "id": "pipeshift",
+  "name": "Pipeshift",
+  "url": "https://pipeshift.com",
+  "category": "gpu-cloud",
+  "isolation": "dedicated-vm",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [
+      "us",
+      "eu",
+      "asia"
+    ],
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "isolation": "dedicated-vm",
+    "max_session_unlimited": true,
+    "egress_ip_type": "datacenter",
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Public low-latency inference orchestration product and BYOC; no verified general-purpose sandbox tariff. Custom models may fit developer compute, but no published fixed 4/8 configuration.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Order Forms may carry a committed term (a minimum period that cannot be terminated for convenience); fees non-refundable once incurred; late fees 1.5%/month. Billing is metered usage invoiced monthly in arrears, but the metering unit (GPU-hours vs tokens) is not published.",
+    "The 'Sandbox' on the homepage is a model-API playground ('Sandbox APIs to test models and prototype your products'), not a code-execution sandbox/VM. Public API (api.pipeshift.com/openapi.json) exposes only chat completions, embeddings, rerank, audio transcription and health endpoints."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/pipeshift",
+    "https://pipeshift.com/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Platform offers single-tenant hosted or BYOC inference and custom SLA-based autoscaling. No universal self-serve new-account GPU/replica/vCPU allowance, verification criteria or review time published; model API sandbox is not a general VM fleet.",
+    "sources": [
+      "https://pipeshift.com/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 6,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": null,
+      "note": "Not applicable: managed model-inference service, no user-accessible machines/sandboxes. Public API = chat completions, embeddings, rerank, audio transcription, deployment health only.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": null,
+      "note": "No machine/snapshot resources in the public API.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": null,
+      "note": "Serves models for agents ('Inference for real-time agents') but runs no agent harness; no harness endpoints.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "No guest/shell access exists; users only call inference endpoints.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "Public API surface is limited to chat completions, embeddings, rerank, audio transcription and deployment health endpoints; no sandbox/VM or credential-injecting proxy resource exists.",
+      "note": "Pipeshift is a managed model-inference/BYOC platform, not a sandbox with user shells; there is no secret-injecting outbound proxy feature to offer. Feature is plainly outside what the product is.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": null,
+      "note": "No storage/volume resources in the public API.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": null,
+      "note": "No storage/volume resources in the public API.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope (no user machines to boot from an OCI image)",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope (model inference API, no graphical desktop)",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope (no shell/machine access, only HTTP inference endpoints)",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "no machine/snapshot resources exist in the public API",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope; deployments are managed inference endpoints, not pausable sandboxes",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope (no user filesystem)",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope; scaling is described as custom SLA-based autoscaling handled by Pipeshift, not a user-facing resize API",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope (serves models, does not preinstall coding-agent harnesses)",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "no first-party browser/computer-use/research task-agent API; Pipeshift only serves model inference for agents built by the customer",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "no provider-shipped MCP server found in docs/GitHub search",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope (no per-customer machine to assign an IPv4 to)",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope; only the fixed api.pipeshift.com inference endpoint is reachable, not arbitrary user-exposed ports",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat completions, embeddings, rerank, audio transcription and health endpoints",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope (GPU inference platform, no Windows machines)",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "not offered: outside the product's scope (GPU inference platform, no macOS machines)",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Inference Platform: Deploy AI models in Production",
+      "note": "GPU-only inference platform; no ARM machine offering found",
+      "checked": "2026-09-30"
+    },
+    "isolation": {
+      "value": "dedicated-vm",
+      "source": "https://pipeshift.com/dpa",
+      "quote": "hosted (Company-managed) generative AI inference and model deployment platform, comprising dedicated single-tenant deployments, a multi-tenant serverless inference API, and the execution of Customer-provided orchestration or application logic",
+      "note": "derived: the product is not a general compute sandbox with user shell access; the DPA describes 'dedicated single-tenant deployments' (isolated per-customer GPU instances) alongside a separate multi-tenant serverless inference API tier. Answer reflects the single-tenant/BYOC deployment tier this card models.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat_completion / audio_transcription / embeddings / rerank endpoints only (FastAPI OpenAPI spec)",
+      "note": "not offered: outside the product's scope. Pipeshift is a managed model-inference API service, not a code-execution sandbox; it provides no Python runtime for running user code (the OpenAI-compatible REST API can be called from any language, including Python, but that is unrelated to an in-sandbox Python runtime).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "chat_completion / audio_transcription / embeddings / rerank endpoints only (FastAPI OpenAPI spec)",
+      "note": "not offered: outside the product's scope. Same reasoning as lang_python — no Node.js code-execution runtime is provided; only a REST inference API callable from any language.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Scale inference in any region globally – in our cloud or yours Rapidly scale workloads globally with our single-tenant deployments on Pipeshift Cloud or self-hosted ones in your VPC.",
+      "note": "The 'self-hosted ones in your VPC' option is BYOC (Pipeshift's proprietary managed software deployed into the customer's own cloud account, per the byoc feature), not an independently self-hostable product on arbitrary infrastructure with no Pipeshift involvement. The pipeshift GitHub org has no public repositories, consistent with a closed-source platform.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/pipeshift",
+      "quote": "GitHub org 'pipeshift' (id 163000856) returns zero public repositories via the API",
+      "note": "No public core-product repository found under the pipeshift GitHub org; platform is a closed-source managed SaaS/BYOC offering.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://pipeshift.com/dpa",
+      "quote": "Amazon Web Services, Inc. (AWS) Cloud hosting, compute, and storage India, EU, and US ... Company operates a separate instance per region, and telemetry for a given deployment is held in the instance for that deployment's region. EU, India, and United States",
+      "note": "DPA sub-processor table lists EU as one of the primary hosting locations (alongside India and US) and states Pipeshift operates a separate regional instance per region, confirming customers can keep deployments/data in the EU.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://pipeshift.com/",
+      "quote": "Rapidly scale workloads globally with our single-tenant deployments on Pipeshift Cloud or self-hosted ones in your VPC.",
+      "note": "derived: Pipeshift deployments are persistent inference services that run continuously until the customer stops/removes them, not time-boxed sandbox sessions with a provider-enforced maximum runtime.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://pipeshift.com/dpa",
+      "quote": "protected health information as defined by, and subject to, the Health Insurance Portability and Accountability Act (“HIPAA”)",
+      "note": "DPA lists HIPAA-protected health information under prohibited 'Sensitive Data' categories customers must not submit; homepage only advertises SOC2 ('security compliance certifications like SOC2'), with no HIPAA/BAA claim anywhere on site.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://pipeshift.com/dpa",
+      "quote": "Denvr Dataworks Corp. ... GPU cloud compute; Neysa Networks Private Limited GPU cloud compute; E2E Networks Limited GPU cloud compute; Massed Compute, Inc. GPU cloud compute; NexGen Cloud Limited (trading as Hyperstack) GPU cloud compute; Nebius B.V. GPU cloud compute; Crusoe Energy Systems LLC GPU cloud compute",
+      "note": "derived: Pipeshift has no user-facing sandbox/shell whose egress a customer would inspect; it runs Customer-provided orchestration/application logic on GPU clusters procured from datacenter cloud providers (AWS, Nebius, Crusoe, Hyperstack, E2E, Massed Compute, etc. per the DPA sub-processor list) and a marketplace (Shadeform). All outbound traffic from Pipeshift's infrastructure would therefore be standard datacenter-class IPs, not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://pipeshift.com/",
+      "quote": "Enterprise grade security and compliance Our platform is secured with the best practices in the industry with end-to-end data encryption, regular penetration testing and security compliance certifications like SOC2. Team settings and access control (RBAC)",
+      "note": "The homepage's dedicated 'TRUST' section itemizes enterprise security/compliance features (SOC2, RBAC, pen testing) without any mention of SAML/OIDC SSO; no /security, /trust, or docs subdomain exists (all 404/unreachable) and no SSO/SAML claim was found anywhere on the site or DPA. The DPA describes only internal Google SSO for Pipeshift's own admin access to production systems, not a customer-facing SSO offering.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://api.pipeshift.com/openapi.json",
+      "quote": "Billing is metered usage invoiced monthly in arrears, but the metering unit (GPU-hours vs tokens) is not published.",
+      "note": "granularity: account-only; cost: no; Public API limited to inference endpoints (chat completions, embeddings, rerank, audio transcription, health). No billing, usage, or cost endpoints. Pipeshift is a managed inference platform with BYOC option, not a general-purpose sandbox with exposed usage APIs.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": null,
+      "city": null,
+      "provider_region": "us",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": null,
+      "provider_region": "eu",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": null,
+      "provider_region": "india",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://pipeshift.com/dpa",
+  "locations_quote": "Company operates a separate instance per region, and telemetry for a given deployment is held in the instance for that deployment's region. EU, India, and United States",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,549 @@
+{
+  "id": "declaw",
+  "name": "Declaw",
+  "url": "https://docs.declaw.ai/platform/billing",
+  "category": "agent-sandbox",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Wallet-metered Firecracker sandbox (allocated vCPU + RAM + overlay disk)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.0504,
+      "ram_gib_h": 0.0162,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 1,
+      "max_vcpu": 16,
+      "max_ram_gib": 16,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "14.0 micro$/vCPU-s ($0.0504/h) + 4.5 micro$/GB-s ($0.0162/h) on provisioned resources, plus overlay disk 0.0424 micro$/GB-s ($0.110/GB-month, only while running). Metered in 30 s ticks at second resolution; each tick caps at 90 s billable. Pause or kill stops metering immediately (paused time explicitly not billed). Same rate on every tier; tiers only change limits (Free max 4 vCPU / 4 GB / 10 GB disk / 1 h; Pro 16 / 16 GB / 50 GB / 72 h). Basis verified 2026-09-28: \"metered every 30 seconds based on the sandbox's provisioned resources (vCPUs, memory, disk)\" (https://docs.declaw.ai/platform/billing). Timeout counts from creation, not inactivity (on_timeout default \"kill\", or \"pause\"; set_timeout resets it) (https://docs.declaw.ai/features/sandboxes): auto_stop_idle = false."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.11,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "By default, sandboxes have unrestricted outbound internet access. Any public domain or IP is reachable.",
+          "url": "https://docs.declaw.ai/features/networking.md"
+        },
+        {
+          "quote": "Two things are always blocked, regardless of policy: cloud metadata endpoints, and private address ranges (RFC 1918, carrier-grade NAT, link-local).",
+          "url": "https://docs.declaw.ai/features/networking.md"
+        },
+        {
+          "quote": "Max egress connections / sandbox",
+          "url": "https://docs.declaw.ai/platform/plans"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 25,
+      "max_session_h": 1,
+      "max_vcpu": 4,
+      "max_ram_gib": 4,
+      "sizes_allowed": null,
+      "note": "Usage draws the one-time $100 sandbox credit, then paid deposits ($5-$100 each, no auto-refill). 2 creates/s, 10 custom templates, 8 GB max template disk, 50 egress connections/sandbox. 402 once credits + balance are exhausted."
+    },
+    {
+      "name": "Pro",
+      "fee": 100,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 500,
+      "max_session_h": 72,
+      "max_vcpu": 16,
+      "max_ram_gib": 16,
+      "sizes_allowed": null,
+      "note": "$100 minimum total deposit per calendar month into the wallet ('a spend commitment, not a flat fee'); deposits are spent on usage at the same rates and unused balance carries over (so effectively max(100, usage), with rollover). Deposits $10-$5,000 each. 10 creates/s, 16 GB max template disk, 50 custom templates, 200 egress connections/sandbox. Missed commitment -> grace period -> downgrade to Free."
+    },
+    {
+      "name": "Enterprise (incl. BYOC / on-prem)",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": true,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": 168,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Contact sales: custom limits, negotiated recharge commitment, 7-day max session (features/sandboxes doc). On-prem / customer-cloud install operated by Declaw. Rates unpublished."
+    }
+  ],
+  "extras": [
+    {
+      "item": "Guardrails ML scans (per scan, from wallet)",
+      "price": "PII $0.0006; prompt injection $0.0006; toxicity $0.0004; code security $0.0003; language detection $0.0002; invisible text $0.0001; regex scans free. One-time $200 guardrails credit."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 100
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": null,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": 72,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "regions": null,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": true,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": true,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "isolation": "firecracker",
+    "image_oci": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": "any-http",
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "fast_boot": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": 13.2,
+    "burst_tti_ms": 451.22,
+    "dax_s": 180.75
+  },
+  "perf_source": "ComputeSDK sandboxes benchmarks: cold_start_tti median 13.2 ms (run 2026-08-07), burst_tti median 451.22 ms at 100 concurrent (2026-09-25), DAX total 180.75 s (2026-09-25, host view 8 CPUs / 15.64 GiB x86_64; slowest finisher, typecheck 130.7 s). No hpc CPU run.",
+  "knobs": [],
+  "caveats": [
+    "Docs price memory/disk per 'GB'; treated as GiB (rates equal E2B's per-GiB rates).",
+    "Metering ticks every 30 s at second resolution; minimum billed time per sandbox not published (null).",
+    "Overlay disk $0.110/GB-month is part of the running meter (provisioned disk size, not used bytes); paused time is not billed at all per docs, so paused disk/memory snapshots appear free. Named snapshot and volume storage prices are unpublished (null), though 'snapshot storage' is listed as a tier-limited dimension.",
+    "Egress/ingress price not published (null); per-sandbox egress connection caps 50 (Free) / 200 (Pro).",
+    "Pro's $100 is a monthly minimum deposit, not a fee: it is spent on usage and rolls over, so the engine's fee_is_credit=true is slightly pessimistic for low-usage months (unused balance carries into the next month).",
+    "Free tier: $100 sandbox + $200 guardrails one-time credits, never refilled; Free caps 4 vCPU / 4 GB / 1 h, so a 4 vCPU / 8 GiB workload requires Pro.",
+    "Guardrails ML scans billed per invocation from the same wallet (not modelled by the engine).",
+    "Default on_timeout is kill (state destroyed); set on_timeout='pause' to keep state for free.",
+    "Startup program: $10,000 credits for the first 6 months (application, not guaranteed).",
+    "declaw.ai/pricing redirects to the docs billing page; there is no separate marketing price list. Regions not published.",
+    "2026-09-28 re-check (docs.declaw.ai platform/billing, platform/plans, features/snapshots): still no published rate for named-snapshot storage or egress; snapshot_gib_month and egress_gib stay null (unknown, not free). Plans page only lists max egress connections per sandbox (50 Free / 200 Pro).",
+    "Volumes: hard 64 GiB per-volume cap (not tier-gated); live-mountable read/write or read-only; shareable by multiple sandboxes."
+  ],
+  "sources": [
+    "https://docs.declaw.ai/platform/billing",
+    "https://docs.declaw.ai/platform/plans",
+    "https://docs.declaw.ai/platform/errors",
+    "https://docs.declaw.ai/features/sandboxes",
+    "https://docs.declaw.ai/features/snapshots",
+    "https://docs.declaw.ai/features/volumes",
+    "https://declaw.ai/pricing",
+    "https://declaw.ai/startups",
+    "https://www.computesdk.com/benchmarks/sandboxes/"
+  ],
+  "fleet": {
+    "default_max_instances": 25,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Prepaid wallet; Pro/Enterprise require positive balance. Free grant can run before paid deposit.",
+    "tiers": "Free 25; Pro 500 with $100 minimum deposits per calendar month; Enterprise custom via sales.",
+    "notes": "Pro is self-selectable; Enterprise is not. Monthly deposits are usage funds, not a separate $100 fee; missing the commitment eventually downgrades quota after an account-specific grace period. 50/300 fit Pro, 1,000 requires custom.",
+    "sources": [
+      "https://docs.declaw.ai/platform/plans",
+      "https://docs.declaw.ai/platform/billing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 4,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.declaw.ai/features/sandboxes.md",
+      "quote": "With `on_timeout=\"pause\"`, the sandbox is paused rather than destroyed when it times out: a pause snapshot is taken",
+      "note": "Opt-in at create time via lifecycle on_timeout='pause' (default is 'kill', which destroys state). Trigger = the sandbox timeout (counts from creation, not idleness). Memory + filesystem + process state included; resume is an explicit resume() call (auto_resume 'accepted but not yet enforced'). Timer-based 'periodic' snapshots existed but are deprecated ('timer-based snapshots are no longer taken').",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.declaw.ai/features/snapshots.md",
+      "quote": "A snapshot captures the complete state of a running sandbox — memory contents, filesystem, and process state",
+      "note": "create_snapshot() on a running sandbox (brief pause, then it keeps running); Sandbox.create(snapshot_id=...) boots new sandboxes from it, multiple branches allowed; also a fork endpoint. Memory included. Storage price unpublished.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.declaw.ai/llms.txt",
+      "quote": null,
+      "note": "Full docs/API index lists only sandbox, command, filesystem, PTY, stdio, volume, vault, policy endpoints; no Claude Code / Codex / OpenCode / Gemini CLI mentions anywhere in llms-full.txt. The OpenAI Agents SDK integration is a sandbox backend (agent loop runs in your process, tools execute in the VM), not an API to drive an in-sandbox harness.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.declaw.ai/features/networking.md",
+      "quote": "Control outbound network access from sandboxes using domain allowlists, IP CIDR rules, and the ALL_TRAFFIC constant.",
+      "note": "allow_out / deny_out per sandbox; deny_out=[ALL_TRAFFIC] = no internet. IP/CIDR as kernel DROP rules and domains via SNI/Host in a per-namespace L7 proxy, all host-side ('the guest VM has no iptables rules of its own'). Domain rules only TCP 80/443; metadata + RFC1918 always blocked. OPA network gate adds custom per-destination deny rules.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://docs.declaw.ai/security/custom-policy.md",
+      "quote": "The content gate (`declaw.platform.content`) sees the **decrypted LLM request body** — the model name and the ML scanner's findings",
+      "note": "HTTP-level rules exist but are body/content-based, not method/path/header matchers: OPA content gate (model allowlist, block on prompt-injection/PII/toxicity scan results) on TLS-intercepted hosts, regex request/response body transformation rules, PII redaction, Host-header masking. No documented rule keyed on HTTP method or URL path.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.declaw.ai/features/port-proxy.md",
+      "quote": "All port proxy requests require a valid `X-API-Key` header, the same key used for every other sandbox operation. Unauthenticated requests receive `HTTP 401`.",
+      "note": "HTTPS port-proxy URLs are API-key authenticated; network.allow_public_traffic=false returns 403 on all inbound proxy requests. No IP allowlist or raw TCP inbound documented.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Firecracker microVM with root (own guest kernel). Provider enforcement is host-side in the sandbox's network namespace; docs say the guest VM has no iptables rules of its own, so guest nftables/iptables would be user-configured and undoable by a root agent. Whether iptables/nft binaries ship in templates not stated.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://docs.declaw.ai/security/credential-vault.md",
+      "quote": "the real value lives server-side in OpenBao and never enters the VM, which sees only the declaw:vault-managed placeholder",
+      "note": "Credential vault with vault_refs: arbitrary host scopes (domain_regex) and injection types bearer/header/basic/query plus brokered sigv4/oidc/hmac; also NON-HTTP socket brokering for redis, postgres, mysql, smtp, mongodb. Provider presets (e.g. openai). Cert-pinned upstreams cannot be injected. Separate SecureEnvVar env secrets do enter the VM.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.declaw.ai/features/volumes.md",
+      "quote": "a volume persists, and you can attach it to any number of sandboxes at a mount path",
+      "note": "Copy-mode (tarball hydrated at boot, writes private) or file-granular live mounts (mount / mount-ro), 64 GiB per-volume cap; attached at create time. Storage price unpublished.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.declaw.ai/features/volumes.md",
+      "quote": "A shared workspace multiple sandboxes (or agents) read and write concurrently",
+      "note": "Read-write (mode='mount') or read-only (mode='mount-ro') live mounts shared across running sandboxes, with advisory leases (acquire/renew/release) to serialize writers; volume files also editable via API with no sandbox running.",
+      "checked": "2026-09-29"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.declaw.ai/cookbook/templates/devops-terraform-kubectl",
+      "quote": "The `devops` template ships Go 1.23, the `docker` CLI, `terraform` 1.9.8, `kubectl`, `helm`, the AWS CLI v2, and `ansible`.",
+      "note": "Sandbox is a Firecracker microVM with its own kernel and root access (isolation=firecracker, root=true), so running dockerd inside is architecturally supported the same way as on any Linux VM; the cookbook only exercises `docker --version` (client), not an actual `docker run`, so daemon operation is inferred rather than directly demonstrated.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.declaw.ai/architecture/overview",
+      "quote": "Declaw uses Firecracker ... to provide hardware-level isolation for each sandbox. Each sandbox is a separate VM with its own Linux kernel, memory, and I/O devices.",
+      "note": "No mention anywhere in the docs (llms-full.txt) of /dev/kvm passthrough or nested virtualization support inside the guest; Firecracker guests typically do not expose KVM to nested workloads. Derived absence, not an explicit denial.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://declaw.ai",
+      "quote": "Firecracker-based sandboxes with built-in guardrails for AI agents. PII redaction, prompt injection defense, code security, and network controls in one SDK.",
+      "note": "not offered: outside the product's scope. Declaw is a code-execution/devops sandbox (filesystem, commands, PTY, volumes) with no chromium/playwright/puppeteer/browser mention anywhere in the full docs corpus.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://declaw.ai",
+      "quote": "Firecracker-based sandboxes with built-in guardrails for AI agents. PII redaction, prompt injection defense, code security, and network controls in one SDK.",
+      "note": "not offered: outside the product's scope. There is no managed browser product to apply stealth/fingerprinting to; Declaw's product is a code-execution sandbox, not browser automation.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://declaw.ai",
+      "quote": "Firecracker-based sandboxes with built-in guardrails for AI agents. PII redaction, prompt injection defense, code security, and network controls in one SDK.",
+      "note": "not offered: outside the product's scope. No CAPTCHA-related feature anywhere in the docs; this is a devops/code sandbox, not a browser/scraping product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.declaw.ai/architecture/overview",
+      "quote": "The memory image and overlay diff are written to GCS (GCP) or S3 (AWS)",
+      "note": "Declaw Cloud runs on AWS/GCP bare-metal hosts with per-sandbox network namespaces/veth/TAP through a host-side security proxy; no residential/mobile IP product is mentioned anywhere, and no dedicated/static per-customer IP is offered (see static_egress_ip) - so egress is shared datacenter IP space.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.declaw.ai/cookbook/pty/interactive-terminal",
+      "quote": "It's the same idea as `ssh` into a VM, but the VM is a fresh declaw sandbox created on demand.",
+      "note": "Declaw explicitly offers a PTY-over-HTTP/SSE API (\"ssh-style hand-off\") as the alternative to SSH, not an actual SSH daemon/protocol into the sandbox; access is via envd's REST/PTY endpoints authenticated with an API key, not a real ssh client/server.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.declaw.ai/features/snapshots",
+      "quote": "When `create_snapshot()` is called, the sandbox briefly pauses to capture a consistent memory image and then resumes automatically. The sandbox continues running after the snapshot completes.",
+      "note": "Forking requires a snapshot (POST /sandboxes/{id}/fork with 404 if none exists), but taking that snapshot from a running sandbox only briefly and automatically pauses it (CRIU-style memory dump) before it resumes on its own; the origin \"keeps running\" per the fork docs, so cloning does not require the caller to stop the machine.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.declaw.ai/features/sandboxes",
+      "quote": "`auto_resume` is accepted but not yet enforced: a paused sandbox is resumed only [by an explicit resume() call]",
+      "note": "A paused/timed-out sandbox must be resumed via an explicit API call (`resume()`); there is no documented mechanism for an inbound request to automatically wake a stopped/paused sandbox, and auto_resume is explicitly not yet enforced.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.declaw.ai/features/networking",
+      "quote": "vCPUs | 1 | 1–8 | Memory | 256 MB | 128 MB–8 GB",
+      "note": "No API/CLI endpoint in the docs changes a running sandbox's vCPU/RAM allocation; resources are set at Sandbox.create() time. The only documented \"resize\" is PTY terminal resize (cols/rows via SIGWINCH), unrelated to compute resources.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://declaw.ai/arena",
+      "quote": "A real AI agent guards a secret, running in an isolated Declaw sandbox. You're the attacker — make it slip.",
+      "note": "not offered: outside the product's scope. \"Arena\" is a public marketing demo showcasing guardrails, not a first-party API to drive Declaw's own browser/computer-use/research agent; Declaw's API surface (sandbox, command, filesystem, PTY, volume, vault, policy) only runs the caller's own agent code, including as a backend for the OpenAI Agents SDK.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://docs.declaw.ai/features/networking",
+      "quote": "Control outbound network access from sandboxes using domain allowlists, IP CIDR rules, and the ALL_TRAFFIC constant.",
+      "note": "not offered: networking docs describe allow/deny egress rules (domains, IP/CIDR, no-internet mode) but no dedicated/fixed outbound IP per sandbox or per account; no \"static IP\" / \"fixed IP\" / \"NAT gateway\" language appears anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.declaw.ai/deployment/overview",
+      "quote": "For teams with data-residency, compliance, or network-isolation requirements, Declaw can be deployed inside your own cloud account or data center. The Declaw team handles the install, upgrades, and ongoing operations — you get a dedicated control plane and orchestrator nodes that never leave your perimeter.",
+      "note": "Achieved via the enterprise on-prem/BYOC deployment (customer picks the cloud account/region, including EU), not via a published EU region on the standard managed cloud (api.declaw.ai regions are unpublished/null).",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.declaw.ai/features/sandboxes",
+      "quote": "With `on_timeout=\"pause\"`, the sandbox is paused rather than destroyed when it times out: a pause snapshot is taken",
+      "note": "Pause snapshots capture memory + filesystem + process state, and Volumes (features/volumes) are explicitly persistent, attachable storage ('a volume persists, and you can attach it to any number of sandboxes'). So the filesystem does survive a stop in a first-party way; it is opt-in (default on_timeout='kill' destroys state, must set on_timeout='pause' or use a Volume to persist).",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.declaw.ai/architecture/firecracker",
+      "quote": "Each sandbox is a separate VM with its own Linux kernel, memory, and I/O devices.",
+      "note": "Full llms-full.txt docs dump (36k lines) has no VNC/RDP/desktop-streaming feature anywhere; sandboxes are headless Firecracker microVMs exposing commands/filesystem/PTY/port-proxy APIs only. No desktop GUI product surface.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.declaw.ai/architecture/firecracker",
+      "quote": "Each sandbox is a separate VM with its own Linux kernel, memory, and I/O devices.",
+      "note": "No screenshot/click computer-use API found anywhere in the docs; consistent with there being no desktop/GUI surface to drive (see desktop claim).",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.declaw.ai/features/sandboxes",
+      "quote": "Timeout counts from creation, not inactivity",
+      "note": "Sandboxes stop/pause based on a fixed timeout timer set at creation (default on_timeout='kill'), not on idleness/inactivity detection, so there is no auto-stop-on-idle behavior.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.declaw.ai/features/port-proxy",
+      "quote": "Port proxy lets external HTTP clients reach any port inside a running sandbox. Each sandbox gets a stable URL pattern based on its ID and port number",
+      "note": "Inbound access is only via an authenticated reverse-proxy HTTPS URL (api.declaw.ai/sandboxes/.../ports/N), not a dedicated/public IPv4 address assigned to the VM. Sandboxes also each get an isolated network namespace with a private veth/TAP device, not a routable public IP (architecture/overview: 'Each sandbox gets its own Linux network namespace with a dedicated veth pair and TAP device').",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.declaw.ai/cookbook/templates/ai-agent-frameworks",
+      "quote": "The `ai-agent` template ships `Python 3.10` + `Node.js 20` plus the major LLM",
+      "note": "The 'ai-agent' template preinstalls LLM/agent-framework SDKs (LangChain, CrewAI, LangGraph, OpenAI Agents SDK, etc.) for building agents, but no coding-agent CLI harness (Claude Code, Codex, OpenCode, Gemini CLI) is offered as a template or preinstalled binary anywhere in the docs; Claude Code only appears as an MCP-server *client config* for Declaw's own MCP tool, not something running inside sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.declaw.ai/architecture/firecracker",
+      "quote": "Declaw uses Firecracker — an open-source virtual machine monitor (VMM) developed by AWS — to provide hardware-level isolation for each sandbox.",
+      "note": "Firecracker microVMs do not support GPU passthrough, and no GPU instance type, GPU pricing, or CUDA/GPU mention exists anywhere in the docs, pricing, or plans pages (gpu_types is already empty in the card).",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.declaw.ai/architecture/firecracker",
+      "quote": "Each sandbox is a separate VM with its own Linux kernel, memory, and I/O devices.",
+      "note": "Sandboxes always boot a Linux kernel; the only 'Windows' mentions in the docs are the CLI *client* binaries a developer runs on their own Windows laptop (declaw-windows-amd64.exe) to talk to the API, not a Windows sandbox OS.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.declaw.ai/architecture/firecracker",
+      "quote": "Each sandbox is a separate VM with its own Linux kernel, memory, and I/O devices.",
+      "note": "Firecracker (AWS KVM-based microVM tech) only runs Linux guests; the only 'macOS' mentions are the CLI *client* binary for macOS (declaw-darwin-arm64/amd64) used from a developer's own Mac, not a macOS sandbox.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": null,
+      "was": false,
+      "note": "doubtful \"no\" could not be confirmed: A shell example inside a sandbox prints 'x86_64 GNU/Linux', and no ARM sandbox instance/pricing option is documented anywhere (only ARM64 *CLI client* binaries for the user's own Linux/macOS/Windows machine, e.g. declaw-linux-arm64, declaw-darwin-arm64). This is suggestive but not a docs statement that ARM sandboxes are unavailable, so kept as the prior 'false' with low confidence rather than a confirmed 'right'.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.declaw.ai/architecture/firecracker",
+      "quote": "Declaw uses [Firecracker](https://firecracker-microvm.github.io/) — an open-source virtual machine monitor (VMM) developed by AWS — to provide hardware-level isolation for each sandbox.",
+      "note": "Firecracker (the isolation layer) is open source, but Declaw's own platform is not: only client SDKs/CLI (declaw-ai/declaw-go, declaw-cli) are on GitHub, no license file or OSI license for the core sandbox orchestrator/API/security-proxy product itself is published; self_host/byoc is a paid Enterprise install operated by Declaw, not a released open-source core.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://docs.declaw.ai/deployment/overview",
+      "quote": "Discuss on-prem deployment, compliance (SOC 2, HIPAA), and custom SLAs.",
+      "note": "SOC 2 appears only as a topic to 'discuss' with sales when scoping an Enterprise on-prem deployment; there is no published SOC 2 report, trust/compliance page, or attestation-in-progress statement anywhere in the docs or marketing site (declaw.ai/security, /compliance, /trust all 404). Treated as not (yet) attested rather than confirmed.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://docs.declaw.ai/cookbook/security/hipaa",
+      "quote": "The PII scanner...catches several of the 45 CFR §164.514(b) Safe Harbor identifiers, but not all of them...For HIPAA Safe Harbor de-identification you must add the remaining identifiers yourself.",
+      "note": "The HIPAA cookbook only shows how a customer can *use* Declaw's generic PII redaction/regex rules to help de-identify PHI themselves — it explicitly says Declaw's built-in detectors don't cover all Safe Harbor identifiers and the customer must add the rest. No BAA, no 'HIPAA-eligible' claim, and HIPAA is otherwise only mentioned as a sales-discussion topic for on-prem Enterprise (deployment/overview), not an offered/attested compliance program.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://docs.declaw.ai/installation",
+      "quote": "`DECLAW_API_KEY` | API key sent as the `X-API-Key` header on every request. Get one from your dashboard at declaw.ai.",
+      "note": "The entire documented auth model is dashboard sign-in + per-key `X-API-Key` API keys; there is no mention anywhere in the docs (llms-full.txt, 36k lines) of SAML/OIDC, 'single sign-on', Okta, or Azure AD, including on the Enterprise/on-prem deployment page which lists only custom SLAs and SOC2/HIPAA discussion, not identity federation.",
+      "checked": "2026-09-30"
+    },
+    "fast_boot": {
+      "value": true,
+      "source": "https://www.computesdk.com/benchmarks",
+      "quote": "burst of 100: p95 516 ms, 100% started",
+      "note": "ComputeSDK sandbox benchmark 2026-09-25",
+      "checked": "2026-09-25"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.declaw.ai/platform/billing",
+      "quote": "Metered in 30 s ticks at second resolution; each tick caps at 90 s billable. Pause or kill stops metering immediately (paused time explicitly not billed).",
+      "note": "granularity: account-only; cost: yes; Declaw's wallet-based billing shows per-sandbox metering via provisioned resources (vCPU-seconds, GB-seconds), but no documented programmatic API endpoint to query usage of individual sandboxes or tagged groups. Access to usage metrics is via the dashboard UI, not a machine-readable API (REST/SDK/CLI). Billing is account-level prepaid wallet with optional spend limits.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.declaw.ai/deployment/overview",
+  "locations_quote": "Declaw is available as a managed cloud service and, for enterprise customers, as an on-prem deployment operated by the Declaw team.",
+  "locations_checked": "2026-10-01"
+}

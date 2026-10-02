@@ -1,0 +1,1516 @@
+{
+  "id": "aws-fargate",
+  "name": "AWS Fargate",
+  "url": "https://aws.amazon.com/fargate/pricing/",
+  "category": "hyperscaler",
+  "isolation": "firecracker",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Linux/x86 on-demand (us-east-1 = eu-west-1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.04048,
+      "ram_gib_h": 0.004445,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Price List API USE1-Fargate-vCPU-Hours:perCPU $0.04048, GB-Hours $0.004445 (eu-west-1 identical). Per-second, 1-minute minimum, billed from image pull start until the task stops. Allowed pairs: 0.25 vCPU 0.5-2 GB ... 4 vCPU 8-30 GB, 8 vCPU 16-60 GB, 16 vCPU 32-120 GB, 32 vCPU 60/120/244 GB (ram_per_vcpu approximated as 2-8)."
+    },
+    {
+      "key": "on-demand-asia",
+      "label": "Linux/x86 on-demand (ap-south-1 Mumbai, cheapest Asia)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.04256,
+      "ram_gib_h": 0.004655,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Price List API APS3 rates. ap-northeast-1/ap-southeast-1 are $0.05056/$0.00553."
+    },
+    {
+      "key": "on-demand-arm64",
+      "label": "Linux/ARM64 Graviton on-demand (us-east-1 = eu-west-1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.03238,
+      "ram_gib_h": 0.00356,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Price List API USE1-Fargate-ARM-vCPU-Hours $0.03238, ARM-GB-Hours $0.00356 (~20% below x86). ECS only (not EKS)."
+    },
+    {
+      "key": "on-demand-arm64-asia",
+      "label": "Linux/ARM64 on-demand (ap-south-1, cheapest region overall)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.02383,
+      "ram_gib_h": 0.00261,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "ap-south-1/ap-south-2 ARM rates are 26% below us-east-1 ARM."
+    },
+    {
+      "key": "spot",
+      "label": "Fargate Spot x86 (us-east-1)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.01288871,
+      "ram_gib_h": 0.00141527,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Point-in-time Spot price from the file aws.amazon.com/fargate/pricing loads (dftu77xade0tc.cloudfront.net/fargate-spot-prices.json), fetched 2026-09-28; ~68% off. 2-minute interruption notice; ECS capacity provider FARGATE_SPOT only (no EKS, no Windows)."
+    },
+    {
+      "key": "spot-eu",
+      "label": "Fargate Spot x86 (eu-west-1, cheapest EU)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.01224056,
+      "ram_gib_h": 0.0013441,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Point-in-time spot price, 2026-09-28."
+    },
+    {
+      "key": "spot-asia",
+      "label": "Fargate Spot x86 (ap-south-2 Hyderabad, cheapest Asia)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.012768,
+      "ram_gib_h": 0.0013965,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Point-in-time spot price, 2026-09-28."
+    },
+    {
+      "key": "spot-arm64",
+      "label": "Fargate Spot ARM64 (us-east-1)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.01030969,
+      "ram_gib_h": 0.00113349,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Point-in-time spot price, 2026-09-28."
+    },
+    {
+      "key": "spot-arm64-eu",
+      "label": "Fargate Spot ARM64 (eu-west-1)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.00979124,
+      "ram_gib_h": 0.00107649,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Point-in-time spot price, 2026-09-28."
+    },
+    {
+      "key": "spot-arm64-asia",
+      "label": "Fargate Spot ARM64 (ap-south-2)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.007149,
+      "ram_gib_h": 0.000783,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Point-in-time spot price, 2026-09-28. Cheapest Fargate rate found anywhere."
+    },
+    {
+      "key": "savings-plan-1y",
+      "label": "Compute Savings Plan 1y no-upfront, x86 (us-east-1)",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.032384,
+      "ram_gib_h": 0.003556,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "1-year $/hour spend commitment (Compute SP, shared with EC2/Lambda); you pay the commitment every hour whether used or not. 20% off.",
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "AWSComputeSavingsPlan price list (us-east-1, published 2026-09-25): USE1-Fargate-vCPU-Hours $0.032384, GB-Hours $0.003556. All-upfront 1y vCPU $0.0295504.",
+      "commit_term": "1-year"
+    },
+    {
+      "key": "savings-plan-3y",
+      "label": "Compute Savings Plan 3y no-upfront, x86 (us-east-1)",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.022264,
+      "ram_gib_h": 0.00244475,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "3-year $/hour commitment; 45% off (all-upfront 3y vCPU $0.0194304 = 52% off).",
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "AWSComputeSavingsPlan price list us-east-1.",
+      "commit_term": "3-year"
+    },
+    {
+      "key": "savings-plan-1y-arm64",
+      "label": "Compute Savings Plan 1y no-upfront, ARM64 (us-east-1)",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.0255,
+      "ram_gib_h": 0.0028,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "1-year $/hour commitment.",
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "AWSComputeSavingsPlan price list us-east-1.",
+      "commit_term": "1-year"
+    },
+    {
+      "key": "savings-plan-3y-arm64",
+      "label": "Compute Savings Plan 3y no-upfront, ARM64 (us-east-1)",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "arm64": true,
+        "isolation": "firecracker"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.01749,
+      "ram_gib_h": 0.00192,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        0.25,
+        0.5,
+        1,
+        2,
+        4,
+        8,
+        16,
+        32
+      ],
+      "min_vcpu": 0.25,
+      "max_vcpu": 32,
+      "max_ram_gib": 244,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "3-year $/hour commitment.",
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "AWSComputeSavingsPlan price list us-east-1. All-upfront 3y ARM vCPU $0.01587.",
+      "commit_term": "3-year"
+    },
+    {
+      "key": "windows",
+      "label": "Windows Server x86 on-demand (us-east-1)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {
+        "windows": true,
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.046552,
+      "ram_gib_h": 0.00511175,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        2,
+        8
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        1,
+        2,
+        4
+      ],
+      "min_vcpu": 1,
+      "max_vcpu": 4,
+      "max_ram_gib": 30,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.046,
+      "gpu": null,
+      "note": "Price List API: Fargate-Windows-vCPU-Hours $0.046552 + Windows-OS-Hours $0.046 per vCPU + Windows-GB-Hours $0.00511175. 5-minute minimum. No conflict: the rate table the pricing page renders (meteredUnitMaps/ecs) shows the same $0.046552/$0.00511175; the page's Example 4 ($0.0000254167/vCPU-s = $0.0915/h, $0.01/GB-h) is stale pre-February-2024 pricing (Windows price cut of up to 49%, min billing 15 -> 5 min)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 20,
+    "disk_gib_month": 0.08103,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": 0.05,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 100,
+    "egress_gib": 0.09,
+    "ipv4_month": 3.65,
+    "ipv4_available": true
+  },
+  "plans": [
+    {
+      "name": "Pay-as-you-go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "No platform fee. Account-level Fargate vCPU quotas apply (not captured). No max task duration."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 100
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": true,
+    "systemd": false,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "isolation": "firecracker",
+    "image_oci": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [
+    {
+      "id": "pull_overhead",
+      "label": "Billed image-pull + startup overhead",
+      "kind": "slider",
+      "min": 1,
+      "max": 1.5,
+      "step": 0.01,
+      "default": 1,
+      "unit": "x",
+      "options": null,
+      "effect": "hours_factor",
+      "modes": null,
+      "why": "Fargate bills from the moment the image pull starts; large images add tens of seconds per task, which matters for short tasks."
+    }
+  ],
+  "caveats": [
+    "All on-demand/SP rates from the AWS Price List API (AmazonECS, publication 2026-09-11; AWSComputeSavingsPlan 2026-09-25). Spot rates are a point-in-time snapshot from the JSON feed that aws.amazon.com/fargate/pricing renders; they float.",
+    "Region modes: us-east-1 and eu-west-1 share identical on-demand rates; cheapest Asia on-demand is ap-south-1; most expensive commercial region sa-east-1 is 72% above us-east-1.",
+    "Savings Plans are modelled as always-on commitments at us-east-1 rates; an under-used commitment still bills. EC2 Instance SPs do not cover Fargate; only Compute SPs do.",
+    "Ephemeral storage: 20 GiB free per task; extra configured storage $0.000111/GB-h (Price List API) = $0.081/GB-month while the task runs; max 200 GiB per ECS docs (not on pricing page). No pause/snapshot: snapshot_gib_month uses EBS snapshot $0.05/GB-month for tasks that attach EBS volumes created from snapshots.",
+    "Fargate Windows vCPU/memory rates in the Price List API ($0.046552 / $0.00511175) are roughly half what the pricing page example still shows ($0.0915 / $0.01); the API is used. Windows: x86 only, 1-4 vCPU, 5-minute minimum.",
+    "Public IPv4: $0.005/h per address, in-use or idle (AmazonVPC price list, all regions checked) = $3.65/month at 730 h. Billed per ENI/instance that has a public IP.",
+    "NAT gateway gotcha: tasks/functions in private subnets reach the internet through a NAT gateway at $0.045/h per gateway (~$32.85/month per AZ) plus $0.045/GB processed (us-east-1; eu-north-1 $0.046, ap-south-1 $0.056), charged ON TOP of the $0.09/GB egress. Not modelled; public IPv4 ($0.005/h) is the usual alternative.",
+    "Internet egress (AWS Price List API, AWSDataTransfer us-east-1, 2026-09): first 100 GB/month free aggregated across all services and regions, then $0.09/GB first 10 TB, $0.085 next 40 TB, $0.07 next 100 TB, $0.05 over 150 TB. eu-west-1 is also $0.09; ap-south-1 $0.1093; ap-northeast-1 $0.114; ap-southeast-1 $0.12 (first-10-TB tier). The engine uses the flat us-east-1 first tier.",
+    "No public HTTPS URL: an ALB (~$16+/month + LCU) or API Gateway is needed for inbound HTTPS; not modelled.",
+    "AWS Free Tier: new accounts (post-July-2025 program) get up to $200 in credits; there is no always-free Fargate quota. The $200 figure comes from earlier research, not re-verified this session.",
+    "Previous providers/aws-fargate.json listed Windows at $0.0915/vCPU-h and Spot as unknown; corrected here from the API/feed.",
+    "Billed boot time not encoded (boot_overhead_s null): AWS bills \"from the time you start to download your container image (Docker pull) until the task terminates\" with a 1-minute minimum (aws.amazon.com/fargate/pricing, 2026-09-28), but publishes no task-start duration and no measured cold start exists in research/benchmarks.json. Image pull + ENI attach typically adds tens of seconds per task, billed; short sessions are under-priced accordingly.",
+    "Launch-rate limits (per account per region, adjustable): burst 100 tasks/pods, sustained 20 tasks/pods per second (EKS-only accounts: burst 20); RunTask API 20 calls/s, up to 10 tasks per call; ECS service scheduler max 500 tasks per service per minute (125 in Regions introduced after 2025-05-20). Plus the 6-vCPU default On-Demand and 6-vCPU default Spot running quota for new accounts.",
+    "EKS on Fargate: Fargate adds 256 MB to every Pod's memory request and rounds up to the next valid vCPU/memory combination (1 vCPU + 8 GB request is billed as 2 vCPU / 9 GB); no ARM, no Windows, no Spot, max 16 vCPU per pod, plus the EKS cluster fee. The card's rates assume ECS.",
+    "Ephemeral storage above 20 GiB is region-priced: $0.000111/GB-h in us-east-1/us-east-2/us-west-2 but $0.000122 in eu-west-1 and $0.000127 in ap-south-1 (Price List API 2026-09-11); the card's storage.disk_gib_month uses the us-east-1 figure for all regions."
+  ],
+  "sources": [
+    "https://aws.amazon.com/fargate/pricing/",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/index.json",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/region_index.json",
+    "https://pricing.us-east-1.amazonaws.com/savingsPlan/v1.0/aws/AWSComputeSavingsPlan/current/region_index.json",
+    "https://dftu77xade0tc.cloudfront.net/fargate-spot-prices.json",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonVPC/current/region_index.json",
+    "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AWSDataTransfer/current/region_index.json"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": 6,
+    "default_max_gpus": null,
+    "raise": "automatic",
+    "raise_time_days": null,
+    "verification": "Personal details, email and phone; payment card may be required.",
+    "tiers": "Usage-based automatic increases; adjustable quotas also accept Service Quotas requests.",
+    "notes": "Published regional On-Demand and Spot quotas are each 6 vCPUs, but AWS explicitly warns new accounts can start lower, so no universal new-account value is asserted. Launch-rate and network limits apply separately.",
+    "sources": [
+      "https://docs.aws.amazon.com/general/latest/gr/ecs-service.html",
+      "https://aws.amazon.com/free/complete-signup/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 4,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_StopTask.html",
+      "quote": "Stops a running task. ... the equivalent of docker stop is issued to the containers running in the task. ... after which the SIGKILL value is sent and the containers are forcibly stopped.",
+      "note": "There is no automatic stop/sleep-and-restore lifecycle: StopTask simply terminates the task's containers (docker stop / SIGKILL); nothing is auto-saved or auto-restored on next start. Confirms the card's false.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html",
+      "quote": "You can either configure new, empty volumes for attachment, or you can use snapshots to load data from existing volumes.",
+      "note": "No task/container checkpoint (no memory, no root-filesystem snapshot). Only an attached EBS data volume can be snapshotted (EC2 EBS snapshot API) and used to seed volumes for new tasks.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-security-considerations.html",
+      "quote": "You can use ECS exec to run commands in or get a shell to a container running on Fargate. You can use ECS exec to help collect diagnostic information for debugging.",
+      "note": "Only a generic exec-into-container debugging channel exists (ECS Exec); no first-party API to prompt/stream/drive a coding agent harness.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html",
+      "quote": "You can specify the destination, port range, and protocol for each outbound rule.",
+      "note": "Per task: awsvpc ENI with up to 5 security groups (IP/CIDR/port egress rules). Domain level at VPC/subnet level via AWS Network Firewall ('You can create allow lists and deny lists with domain names that the stateful rules engine looks for in network traffic.', stateful-rule-groups-domain-names) or Route 53 Resolver DNS Firewall; both separately billed. Private subnet with no NAT = no internet.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-examples.html",
+      "quote": "pass http $HOME_NET any -> any any (msg:\"Allow WebSocket Upgrade\"; flow:established; http.connection; content:\"Upgrade\"; http.header; content:\"websocket\"; sid:1200001; rev:1;)",
+      "note": "Via AWS Network Firewall Suricata rules (HTTP header/host/URI keywords); VPC/subnet-level, not per task; HTTPS needs Network Firewall TLS inspection. Separate paid service.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html",
+      "quote": "You can specify the source, port range, and protocol for each inbound rule.",
+      "note": "Security groups on each task ENI; public IP optional ('When using a public subnet, you can optionally assign a public IP address to the task's ENI.'); private subnets + ALB/API Gateway for HTTPS.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-security-considerations.html",
+      "quote": "Additional Linux capabilities, such as CAP_SYS_ADMIN and CAP_NET_ADMIN, are restricted to prevent a privilege escalation.",
+      "note": "Fargate only allows adding SYS_PTRACE, so iptables/nftables inside the task cannot work.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html",
+      "quote": "They're referenced as environment variables that use the secrets container definition parameter.",
+      "note": "Secrets Manager / SSM Parameter Store values are injected into the container as env vars (or log driver options); no credential-injecting egress proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html",
+      "quote": "You can either configure new, empty volumes for attachment, or you can use snapshots to load data from existing volumes.",
+      "note": "One EBS volume per task (at launch) plus EFS mounts; ephemeral storage 20-200 GB.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/efs-volumes.html",
+      "quote": "That way, your tasks have access to the same persistent storage, no matter the instance on which they land.",
+      "note": "Amazon EFS (NFS) mounted read-write by many tasks concurrently (readOnly option available); EBS task volumes are single-task.",
+      "checked": "2026-09-29"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://aws.amazon.com/fargate/",
+      "quote": "AWS Fargate is a serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers.",
+      "note": "not offered: outside the product's scope — Fargate is a generic container-hosting engine (ECS/EKS), not a browser/scraping product; it has no stealth or fingerprinting features for bot detection.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://aws.amazon.com/fargate/",
+      "quote": "AWS Fargate is a serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers.",
+      "note": "not offered: outside the product's scope — a container orchestration compute engine, not a browser-automation or CAPTCHA-solving service.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/network-configuration.html",
+      "quote": "When using a public subnet, you can optionally assign a public IP address to the task's elastic network interface (ENI).",
+      "note": "All outbound IPs are AWS datacenter ranges. A task's ENI keeps the same public IPv4 (or the account can route via a fixed-IP NAT gateway / Elastic IP) for its lifetime, so the egress IP is a static AWS datacenter address, not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html",
+      "quote": "Updating an Amazon ECS task definition using the console ... Deregistering an Amazon ECS task definition revision",
+      "note": "vCPU/memory are fixed in the task definition at launch (from the allowed vcpu_options/ram_per_vcpu pairs). Changing CPU/RAM requires registering a new task-definition revision and starting a new task; a running task cannot be resized in place.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://aws.amazon.com/fargate/",
+      "quote": "AWS Fargate is a serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers.",
+      "note": "not offered: outside the product's scope — Fargate runs whatever container you give it; AWS provides no first-party browser/computer-use/research task-agent API on top of Fargate itself.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://github.com/awslabs/mcp/tree/main/src/ecs-mcp-server",
+      "quote": "Amazon ECS MCP Server | Container orchestration and ECS application deployment",
+      "note": "AWS Labs ships an official open-source 'Amazon ECS MCP Server' (awslabs/mcp) that containerizes and deploys applications to ECS, including onto Fargate launch type; also an EKS MCP Server for EKS-on-Fargate clusters.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/what-is-fargate.html",
+      "quote": "AWS Fargate is a serverless compute engine built for containers ... Fargate runs each task or pod in its own kernel providing the tasks and pods with their own isolated compute environment.",
+      "note": "not offered out of the box: Fargate only runs container images you supply/build from an OCI/Docker image (task definition's 'image' field) — there is no managed Python runtime or first-party SDK code-exec; you must bring a Python-containing image yourself, unlike a managed FaaS runtime.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/what-is-fargate.html",
+      "quote": "AWS Fargate is a serverless compute engine built for containers ... Fargate runs each task or pod in its own kernel providing the tasks and pods with their own isolated compute environment.",
+      "note": "not offered out of the box: same as lang_python — Fargate has no built-in managed Node.js runtime; any language runs only inside the container image you provide.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://aws.amazon.com/fargate/pricing/",
+      "quote": "You are billed for the amount of vCPU, memory, and storage resources consumed by your containerized applications ... from the time you start to download your container image ... until the Amazon ECS task or Amazon EKS pod terminates",
+      "note": "No maximum task/pod duration is documented; ECS/EKS tasks run until the workload exits, is stopped, or is interrupted (Spot only, 2-minute notice). Card's plans[0].note already states 'No max task duration.'",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskManagedEBSVolumeTerminationPolicy.html",
+      "quote": "Indicates whether the volume should be deleted on when the task stops. If a value of true is specified, Amazon ECS deletes the Amazon EBS volume on your behalf when the task goes into the STOPPED state. If no value is specified, the default value is true is used. When set to false, Amazon ECS leaves the volume in your account.",
+      "note": "Contradiction resolved in favor of true: the card already lists volume_attach/volume_shared true. Fargate tasks can attach a managed EBS volume whose terminationPolicy.deleteOnTermination can be set false so the volume (and its filesystem) survives task stop/restart; EFS mounts (volume_shared) are independently persistent by design. Default behaviour is still delete-on-stop (deleteOnTermination defaults to true) and the built-in 20GiB ephemeral task storage is always erased on stop (aws.amazon.com/fargate/faqs: 'Once the workload has stopped, any data stored in this 20 GiB volume is erased.') — so persistence is opt-in via EBS/EFS, not default.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "corrected_from": "none",
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html",
+      "quote": "You can either configure new, empty volumes for attachment, or you can use snapshots to load data from existing volumes.",
+      "note": "Task-managed EBS volumes support standard EBS disk snapshots (create a snapshot of the attached volume via the EC2 EBS API, then launch new tasks from it). This is disk/filesystem-only — no memory/process-state snapshot exists (no task checkpoint API) — so 'fs' rather than 'mem', and not 'none'.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html",
+      "quote": "A standalone task is suitable for processes such as batch jobs that perform work and then stop.",
+      "note": "ECS/Fargate task lifecycle only has provisioning/running/stopping/stopped states (see StopTask semantics above); there is no pause state that suspends billing/execution and later resumes the same task. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "When you run your tasks and services with Fargate, you package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application.",
+      "note": "Fargate/ECS launches new tasks from a task definition (+ optional EBS snapshot for data), but there is no API that clones an existing machine/task (running or stopped) into a new one preserving its live state; outside what this container-orchestration product offers. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "Each Fargate task has its own isolation boundary and does not share the underlying kernel, CPU resources, memory resources, or elastic network interface with another task.",
+      "note": "No capability to clone a running task's live state into a new task; not offered.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_StopTask.html",
+      "quote": "Stops a running task. ... the equivalent of docker stop is issued to the containers running in the task.",
+      "note": "No memory/process-state checkpoint mechanism is exposed to customers (StopTask just does docker stop/SIGKILL); no clone-with-memory feature exists. Not offered.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-security-considerations.html",
+      "quote": "No privileged containers or access - Features such as privileged containers or access are currently unavailable on Fargate. This will affect uses cases such as running Docker in Docker.",
+      "note": "AWS explicitly documents that Docker-in-Docker is unavailable on Fargate because privileged mode is disabled.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-security-considerations.html",
+      "quote": "Limited access to Linux capabilities - The environment in which containers run on Fargate is locked down. Additional Linux capabilities, such as CAP_SYS_ADMIN and CAP_NET_ADMIN, are restricted to prevent a privilege escalation.",
+      "note": "No /dev/kvm or CAP_SYS_ADMIN access; nested virtualization (VMs/emulators requiring KVM) inside a Fargate task is not possible.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/fargate-security-considerations.html",
+      "quote": "No access to the underlying host - Neither customers nor AWS operators can connect to a host running customer workloads. You can use ECS exec to run commands in or get a shell to a container running on Fargate.",
+      "note": "No SSH daemon/access to the task's host or container; only ECS Exec (an SSM-based exec-into-container channel), which is not SSH.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "AWS Fargate is a technology that you can use with Amazon ECS to run containers without having to manage servers or clusters of Amazon EC2 instances.",
+      "note": "not offered: outside the product's scope — Fargate runs headless application/server containers, no VNC/RDP desktop is offered.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "AWS Fargate is a technology that you can use with Amazon ECS to run containers without having to manage servers or clusters of Amazon EC2 instances.",
+      "note": "not offered: outside the product's scope — generic container runtime, no managed/bundled browser.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "AWS Fargate is a technology that you can use with Amazon ECS to run containers without having to manage servers or clusters of Amazon EC2 instances.",
+      "note": "not offered: outside the product's scope — no screenshot/click desktop-driving API exists for a headless container service.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html",
+      "quote": "A standalone task is suitable for processes such as batch jobs that perform work and then stop. For example, you can have a process call RunTask when work comes into a queue.",
+      "note": "Tasks must be explicitly (re)launched via RunTask/service scheduler/EventBridge; there is no built-in mechanism where a stopped task automatically wakes when a request arrives (that pattern requires you to build it yourself, e.g. with API Gateway + Lambda triggering RunTask). Not a first-party feature.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html",
+      "quote": "Amazon ECS provides a service scheduler for long-running tasks and applications. It also provides the ability to run standalone tasks or scheduled tasks for batch jobs or single run tasks.",
+      "note": "ECS/Fargate tasks run until explicitly stopped or until Application Auto Scaling is separately configured by the customer; there is no built-in idle-detection auto-stop for a task.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "When you run your tasks and services with Fargate, you package your application in containers, specify the CPU and memory requirements, define networking and IAM policies, and launch the application.",
+      "note": "not offered: outside the product's scope — you bring your own container image; AWS does not ship Claude Code/Codex/OpenCode templates for Fargate.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://aws.amazon.com/fargate/faqs/",
+      "quote": "Use Amazon EC2 for GPU workloads, which are not supported on AWS Fargate today.",
+      "note": "AWS explicitly states GPU workloads require EC2 (with GPU instance types), not Fargate.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "Fargate offers platform versions for Amazon Linux 2 (platform version 1.3.0), Bottlerocket operating system (platform version 1.4.0), and Microsoft Windows 2019 Server Full and Core editions.",
+      "note": "not offered: outside the product's scope — Fargate only runs Linux or Windows containers; no macOS platform exists.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "AWS Fargate is a technology that you can use with Amazon ECS to run containers without having to manage servers or clusters of Amazon EC2 instances.",
+      "note": "Fargate is a fully managed AWS service that only runs inside AWS's own infrastructure; there is no distributable software to run on your own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "AWS Fargate is a technology that you can use with Amazon ECS to run containers without having to manage servers or clusters of Amazon EC2 instances.",
+      "note": "Fargate always runs within AWS's own account/infrastructure (billed and hosted by AWS); it is not deployed into a customer's own cloud account of another provider, nor is there a BYOC deployment mode within AWS itself.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html",
+      "quote": "AWS Fargate is a technology that you can use with Amazon ECS to run containers without having to manage servers or clusters of Amazon EC2 instances.",
+      "note": "Fargate is a proprietary managed AWS service (not published under an OSI license); the underlying Firecracker microVM technology is open source but the Fargate service/product itself is not.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetCostAndUsage.html",
+      "quote": "Retrieves cost and usage metrics for your account. You can specify which cost and usage-related metric that you want the request to return. For example, you can specify BlendedCosts or UsageQuantity. You can also filter and group your data by various dimensions, such as SERVICE or AZ, in a specific ",
+      "note": "granularity: per-tag; cost: yes; AWS Cost Explorer GetCostAndUsage API allows filtering by Tags (with Key, Values, MatchOptions); returns BlendedCosts and UsageQuantity metrics. Fargate tasks support custom tags (propagated from ECS task definition or added via ECS API). Costs can be queried by tag using GetCostAndUsage, enabling per-task or per-tag billing breakdowns. Also supports Cost and Usage Reports (CUR) exported to S3 with tag-based cost allocation.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "N. California",
+      "provider_region": "us-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Central",
+      "provider_region": "ca-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "AB",
+      "city": "Calgary",
+      "provider_region": "ca-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "eu-north-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "eu-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "eu-west-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "eu-central-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "eu-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Spain",
+      "provider_region": "eu-south-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "ap-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Hyderabad",
+      "provider_region": "ap-south-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "ap-southeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "ap-southeast-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "ap-southeast-4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "ap-southeast-5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "ap-southeast-6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "ap-southeast-7",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "ap-northeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "ap-northeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "ap-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "ap-east-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "sa-east-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/",
+  "locations_quote": "AWS Fargate is included in all Region launches as a core service. The table captures regional availability of AWS Fargate when using Amazon ECS.",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,571 @@
+{
+  "id": "revyl",
+  "name": "Revyl",
+  "url": "https://www.revyl.com",
+  "category": "macos",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": 0,
+      "concurrency": 1,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Starter",
+      "fee": 250,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 250,
+      "per_seat": 0,
+      "concurrency": 3,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Team Pro",
+      "fee": 750,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 750,
+      "per_seat": 0,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 24,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "own_agent_api": true,
+    "harness_api": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "isolation": "container",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "snapshot_on_demand": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "ingress_rules": false,
+    "usage_api": null
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Free 1 concurrent device per platform; Starter $250/mo includes $250 credits/3 devices, Team Pro $750 with $750/10; annual $200/$600. Overage enabled: iOS $0.15/min, Android $0.12/min. LLM uses same allowance. Enterprise dedicated iOS runners; no 4/8 sizing guaranteed.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Overage is billed only 'when enabled' (likely a toggle; default state not stated): without it, usage stops at the plan allowance. LLM (agent) usage draws down the same compute-credit allowance. Remote cloud builds also consume metered compute credits at unpublished rates.",
+    "Team Pro adds a priority device queue; Free/Starter share the standard queue (queueing, not billing). Dedicated iOS runners/instances are Enterprise/sales only."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/revyl",
+    "https://revyl.com/",
+    "https://revyl.com/pricing/",
+    "https://revyl.com/docs",
+    "https://revyl.com/llms.txt"
+  ],
+  "fleet": {
+    "default_max_instances": 1,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Free 1 concurrent device per platform, Starter 3, Team Pro 10, Enterprise unlimited.",
+    "notes": "Pricing variants conflict: ?plan=free describes 1 device per platform and Starter 3, while canonical page now calls entry tier Solo. Using conservative canonical one-device baseline; confirm actual subscription before large fleet.",
+    "sources": [
+      "https://revyl.com/pricing/",
+      "https://revyl.com/pricing/?plan=free"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 9,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.revyl.com/integrations/mcp-setup",
+      "quote": "Sessions auto-terminate after 5 minutes of idle time. Call `start_device_session` to provision a new device.",
+      "note": "Device sessions (iOS simulators / Android emulators) end on idle timeout or stop and the next session is a newly provisioned device; no state save/restore for users. Revyl uses snapshot-restore internally for isolation ('Simulators (iOS) and emulators (Android) give us isolation and snapshot-restore'), which is not a user feature.",
+      "checked": "2026-09-29"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://docs.revyl.com/cli/explore",
+      "quote": "Launch app exploration, follow each explorer, and produce an Atlas map from a terminal or CI job.",
+      "note": "Borderline: harness = Revyl's own device-operating AI agent, not a coding agent inside a sandbox. CLI/API/MCP start it with natural-language input (`revyl explore run --instructions ...`, `revyl device instruction \"Open Settings and tap Wi-Fi\"`, `revyl device validation ...`), show progress, status/cancel; Proof of Changes runs the Revyl agent per PR (`harness.kind: revyl` or `cursor`). Revyl can also launch Cursor Cloud Agent conversations and track them under Cloud Agents, but 'The agent runs in Cursor's cloud'. No Claude Code/Codex harness hosted by Revyl.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.revyl.com/cli/explore",
+      "quote": "Launch app exploration, follow each explorer, and produce an Atlas map from a terminal or CI job.",
+      "note": "Borderline: harness = Revyl's own device-operating AI agent, not a coding agent inside a sandbox. CLI/API/MCP start it with natural-language input (`revyl explore run --instructions ...`, `revyl device instruction \"Open Settings and tap Wi-Fi\"`, `revyl device validation ...`), show progress, status/cancel; Proof of Changes runs the Revyl agent per PR (`harness.kind: revyl` or `cursor`). Revyl can also launch Cursor Cloud Agent conversations and track them under Cloud Agents, but 'The agent runs in Cursor's cloud'. No Claude Code/Codex harness hosted by Revyl.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.revyl.com/builds/artifact-requirements",
+      "quote": "the platform only permits that against debuggable apps on non-rooted (Play-image) emulators",
+      "note": "Users get iOS simulators and non-rooted Android emulators on shared hosts, no root/shell on the host. Exception: Enterprise 'Revyl computer' dedicated Macs (revyl-computer ssh) give 'passwordless `sudo`' on an org-shared machine whose disk persists, where pf would presumably work (not documented).",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.revyl.com/library/launch-vars",
+      "quote": "Secret payloads can only be replaced, not viewed.",
+      "note": "Secrets are encrypted write-only launch variables / global variables / build secret references, delivered into the app launch environment, test steps or build env. No injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://docs.revyl.com/builds/artifact-requirements",
+      "quote": "Cloud test infra runs on shared hosts. Simulators (iOS) and emulators (Android) give us isolation and snapshot-restore.",
+      "note": "Revyl runs iOS Simulator / Android Emulator processes on shared hosts (no per-customer hypervisor VM is described); process/app-sandbox isolation is the closest fit to the given taxonomy. A separate Enterprise 'Revyl Computer' product gives shell access to dedicated, org-shared Mac hardware, which is a different isolation model not covered by this single field.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.revyl.com/builds/artifact-requirements",
+      "quote": "Revyl runs tests on cloud simulators (iOS) and emulators (Android), not physical devices.",
+      "note": "not offered: outside the product's scope. Machines are started from uploaded mobile app builds (.apk/.app), not customer-supplied Docker/OCI images.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.revyl.com/infrastructure/index",
+      "quote": "Revyl provides cloud iOS simulators and Android emulators that you can provision, control, and observe from your own tools.",
+      "note": "not offered: outside the product's scope. Device sessions are mobile OS simulators/emulators; no documented ability to run arbitrary containers inside them.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.revyl.com/infrastructure/index",
+      "quote": "Revyl provides cloud iOS simulators and Android emulators that you can provision, control, and observe from your own tools.",
+      "note": "not offered: outside the product's scope. No user-facing /dev/kvm or nested-VM capability is documented for device sessions.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "not offered: outside the product's scope. The streamed surface is a mobile device screen (iOS/Android), not a general graphical desktop; the Enterprise 'Revyl Computer' Mac is shell-only (no GUI/VNC/RDP).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "not offered: outside the product's scope. Product is mobile app device testing; no managed browser is provided (device_navigate can open a URL/deep link on the mobile OS's own browser app, but Revyl does not manage/provide a browser).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.revyl.com/guides/allowlist-ip-addresses",
+      "quote": "Revyl drives your app from cloud devices, so traffic to your backend comes from Revyl's infrastructure rather than a typical user's network. ... that traffic can get blocked.",
+      "note": "not offered: outside the product's scope, and the opposite of stealth -- Revyl asks customers to allowlist its known static IPs so its own testing traffic is NOT flagged as a bot.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.revyl.com/guides/allowlist-ip-addresses",
+      "quote": "Allowlist Revyl's IP addresses in your rate limiter, WAF, or CAPTCHA provider to prevent this.",
+      "note": "not offered: outside the product's scope. Revyl's documented approach to CAPTCHA is asking the customer to allowlist Revyl's IPs, not solving CAPTCHAs itself.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.revyl.com/guides/allowlist-ip-addresses",
+      "quote": "Traffic from Revyl's backend comes from the following static IP addresses today: iOS devices: 50.112.63.125 Android devices: 136.117.185.7",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": true,
+      "source": "https://docs.revyl.com/cli/command-reference",
+      "quote": "revyl-computer ssh ... Revyl brokers the connection, so no SSH client, AWS Session Manager plugin, SSH key, or cloud credentials are required.",
+      "note": "Brokered shell access (not raw SSH protocol) to Enterprise 'Revyl Computer' dedicated Mac hardware, with passwordless sudo. Regular iOS/Android device sessions have no shell/SSH access.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.revyl.com/integrations/mcp-setup",
+      "quote": "Sessions auto-terminate after 5 minutes of idle time. Call `start_device_session` to provision a new device.",
+      "note": "No user-facing snapshot/checkpoint API for device sessions; the next session is a freshly provisioned device, not a restored one. Revyl uses simulator/emulator snapshot-restore internally for its own isolation, not as a customer feature.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.revyl.com/integrations/mcp-setup",
+      "quote": "Sessions auto-terminate after 5 minutes of idle time. Call `start_device_session` to provision a new device.",
+      "note": "No documented API/CLI command to take an on-demand snapshot/checkpoint of a device session.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.revyl.com/appendix/mcp-tool-ref",
+      "quote": "start_device_session | stop_device_session",
+      "note": "Device session lifecycle is start/stop only; no pause/resume tool or command documented.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.revyl.com/integrations/mcp-setup",
+      "quote": "Sessions auto-terminate after 5 minutes of idle time. Call `start_device_session` to provision a new device.",
+      "note": "An idled/stopped session must be explicitly re-provisioned by calling start_device_session again; nothing wakes it automatically on an inbound request.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.revyl.com/cli/command-reference",
+      "quote": "The machine is shared by your whole organization and its disk persists between sessions, so anything you install or change stays there for your teammates and for later runs.",
+      "note": "True for the Enterprise 'Revyl Computer' dedicated Mac (org-shared, persistent disk). Regular iOS/Android device sessions are ephemeral/freshly provisioned with no documented persistent disk.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "not offered: outside the product's scope. No attachable extra-volume feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": true,
+      "source": "https://docs.revyl.com/integrations/mcp-setup",
+      "quote": "Sessions auto-terminate after 5 minutes of idle time.",
+      "note": "Also true for Revyl Computer shells: \"A shell with no activity closes after 60 minutes, and every shell closes after 24 hours.\"",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "not offered: outside the product's scope. Mobile simulator/emulator device sessions have no documented CPU/RAM resize while running.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.revyl.com/cli/mcp-setup",
+      "quote": "Connect Revyl over MCP so your coding agent can run the current app source, control cloud devices, and verify changes.",
+      "note": "Revyl integrates with external coding agents (Cursor, Claude Code, Codex) that call into Revyl via MCP/CLI plugins; it does not preinstall or host a coding-agent harness inside its own sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://docs.revyl.com/cli/mcp-setup",
+      "quote": "Connect Revyl to Cursor, Claude Code, or Codex ... The Revyl MCP server exposes tools across the following categories.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.revyl.com/library/scripts",
+      "quote": "Python, JavaScript, TypeScript, and Bash are all supported.",
+      "note": "Also has a first-party Python SDK (`pip install revyl[sdk]`) per the CLI quickstart.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.revyl.com/library/scripts",
+      "quote": "Python, JavaScript, TypeScript, and Bash are all supported.",
+      "note": "Node.js is also present in remote-build toolchain images (e.g. Node.js 22.23.0).",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.revyl.com/infrastructure/index",
+      "quote": "The host running your CLI or agent does not need a local simulator ... Use remote builds to compile your app in the cloud too.",
+      "note": "not offered: outside the product's scope. Devices are reached only through Revyl's authenticated API/CLI/MCP and viewer link, not a public IPv4 address.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.revyl.com/infrastructure/index",
+      "quote": "Your code decides what happens on it. ... Existing Android emulator / iOS simulator session",
+      "note": "not offered: outside the product's scope. No user-controlled HTTPS ingress to ports on the device; the embeddable live device is Revyl's own viewer iframe, not general port exposure.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.revyl.com/infrastructure/index",
+      "quote": "Your code decides what happens on it. ... Existing Android emulator / iOS simulator session",
+      "note": "not offered: outside the product's scope. No exposed ports to control access to.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.revyl.com/guides/allowlist-ip-addresses",
+      "quote": "Allowlist Revyl's IP addresses in your rate limiter, WAF, or CAPTCHA provider to prevent this.",
+      "note": "No provider-side control found for restricting a device session's own outbound traffic; the documented allowlisting is the customer's own backend allowlisting Revyl's fixed outbound IPs, not the reverse.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.revyl.com/guides/allowlist-ip-addresses",
+      "quote": "Allowlist Revyl's IP addresses in your rate limiter, WAF, or CAPTCHA provider to prevent this.",
+      "note": "No method/path-level egress rule feature found.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.revyl.com/guides/allowlist-ip-addresses",
+      "quote": "Traffic from Revyl's backend comes from the following static IP addresses today: iOS devices: 50.112.63.125 Android devices: 136.117.185.7",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "not offered: outside the product's scope. No GPU compute machines are offered; this is a mobile simulator/emulator testing platform.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.revyl.com/builds/artifact-requirements",
+      "quote": "Revyl runs tests on cloud simulators (iOS) and emulators (Android), not physical devices.",
+      "note": "not offered: outside the product's scope. No Windows machines/devices are offered (Windows is only supported as a client OS for installing the CLI/revyl-computer binary).",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://docs.revyl.com/remote-builds/toolchains",
+      "quote": "Ubuntu | 24.04 (arm64, with Rosetta translation for x86_64 binaries)",
+      "note": "Android remote-build runners are arm64; iOS build/simulator infra runs on Apple Silicon (arm64) Macs.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "not offered: outside the product's scope. Revyl is a hosted SaaS; no self-hosting option is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.revyl.com/get-started/introduction",
+      "quote": "Revyl gives you cloud iOS simulators and Android emulators, an optional AI agent that tests your app using natural language, and tooling to run it all in CI.",
+      "note": "No bring-your-own-cloud deployment option found.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://api.github.com/repos/RevylAI/revyl-cli",
+      "quote": "\"license\": null",
+      "note": "Core platform is closed-source SaaS. The public revyl-cli repo carries no OSI license, so even the CLI is not formally open source.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://trust.revyl.com",
+      "quote": "HIPAA Compliant",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 24,
+      "source": "https://docs.revyl.com/cli/command-reference",
+      "quote": "Sessions also close on their own after an hour of inactivity, and after 24 hours in any case.",
+      "note": "This is the clearest documented hard session cap, for Enterprise 'Revyl Computer' Mac shells. Regular iOS/Android device sessions default to a 5-minute idle timeout (configurable) with no documented absolute hard cap found; the live-device embed caps active time at 10 minutes.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.revyl.com/builds/artifact-requirements",
+      "quote": "Cloud test infra runs on shared hosts. Simulators (iOS) and emulators (Android) give us isolation and snapshot-restore.",
+      "note": "Revyl uses simulator/emulator snapshot-restore internally to isolate and reset devices between sessions, but there is no user-facing API/CLI/MCP command to clone a device session into new independent sessions. Every documented device lifecycle tool (`start_device_session`, `revyl device start`, etc.) provisions a fresh device, never a copy of an existing one. not offered: outside the product's scope as exposed to users.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.revyl.com/builds/artifact-requirements",
+      "quote": "Cloud test infra runs on shared hosts. Simulators (iOS) and emulators (Android) give us isolation and snapshot-restore.",
+      "note": "No user-facing fork capability exists at all (see `fork`), so cloning a running device without stopping it is not offered either. not offered: outside the product's scope as exposed to users.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.revyl.com/builds/artifact-requirements",
+      "quote": "Simulators (iOS) and emulators (Android) give us isolation and snapshot-restore.",
+      "note": "Snapshot-restore is an internal isolation/reset mechanism between test runs, not a user-invokable fork that preserves running processes into a new session. No documented API/CLI exposes memory-preserving clones. not offered: outside the product's scope as exposed to users.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": null,
+      "source": "https://docs.revyl.com/cli/command-reference.md",
+      "quote": "Revyl provides CLI commands for device control, test management, build uploads, and MCP tools for device infrastructure. Pricing shows '$0.15/min for iOS simulators and $0.12/min for Android emulators' overage when enabled, drawing from plan allowance. No documented REST API, CLI command, or MCP too",
+      "note": "Revyl's documented interfaces are: CLI (revyl build, revyl test, revyl device commands), MCP tools (for device control and test/workflow management), and REST API (inferred but not explicitly documented in available docs). Device sessions support start/stop lifecycle and session info retrieval via get_session_info MCP tool, which returns session details and viewer URL, but no usage/cost breakdown. Pricing tiers include monthly compute credits (Free: generous free usage, Starter: $250/mo, Team Pro: $750/mo, Enterprise: custom), with overage billed per minute. Usage is managed per account/plan, not per individual device or tag. No billing export, cost explorer, usage dashboard API, or usage-reporting CLI command found in public documentation.",
+      "confidence": "low",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": null,
+  "locations_quote": null,
+  "locations_checked": "2026-10-01"
+}

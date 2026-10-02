@@ -1,0 +1,676 @@
+{
+  "id": "aws-ec2-mac",
+  "name": "AWS EC2 Mac (Dedicated Host)",
+  "url": "https://aws.amazon.com/ec2/instance-types/mac/",
+  "category": "macos",
+  "isolation": "dedicated-host",
+  "modes": [
+    {
+      "key": "dedicated-host",
+      "label": "On-Demand Dedicated Host, whole Mac (us-east-1)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "mac2.metal (Apple M1, 8 vCPU / 16 GiB)",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.65,
+          "month_cap": 474.5
+        },
+        {
+          "name": "mac2-m2.metal (Apple M2, 8 vCPU / 24 GiB)",
+          "vcpu": 8,
+          "ram_gib": 24,
+          "disk_gib": null,
+          "hour": 0.878,
+          "month_cap": 640.94
+        },
+        {
+          "name": "mac-m4.metal (Apple M4, 10 vCPU / 24 GiB)",
+          "vcpu": 10,
+          "ram_gib": 24,
+          "disk_gib": 2000,
+          "hour": 1.23,
+          "month_cap": 897.9,
+          "storage_note": "2 TB instance store is ephemeral; persistent EBS remains separately billed."
+        },
+        {
+          "name": "mac1.metal (Intel Core i7, 12 vCPU / 32 GiB)",
+          "vcpu": 12,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 1.083,
+          "month_cap": 790.59
+        },
+        {
+          "name": "mac2-m2pro.metal (Apple M2 Pro, 12 vCPU / 32 GiB)",
+          "vcpu": 12,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 1.56,
+          "month_cap": 1138.8
+        },
+        {
+          "name": "mac-m4pro.metal (Apple M4 Pro, 14 vCPU / 48 GiB)",
+          "vcpu": 14,
+          "ram_gib": 48,
+          "disk_gib": 2000,
+          "hour": 1.97,
+          "month_cap": 1438.1
+        },
+        {
+          "name": "mac-m4max.metal (Apple M4 Max, 16 vCPU / 128 GiB)",
+          "vcpu": 16,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 6.25,
+          "month_cap": 4562.5
+        },
+        {
+          "name": "mac2-m1ultra.metal (Apple M1 Ultra, 20 vCPU / 128 GiB)",
+          "vcpu": 20,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 5,
+          "month_cap": 3650
+        },
+        {
+          "name": "mac-m3ultra.metal (Apple M3 Ultra, 28 vCPU / 256 GiB)",
+          "vcpu": 28,
+          "ram_gib": 256,
+          "disk_gib": null,
+          "hour": 12.5,
+          "month_cap": 9125
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 86400,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Official AWS metered price JSON (dedicatedhost-ondemand.json, fetched 2026-09-28), us-east-1 On-Demand Dedicated Host $/h. Billing per second with a 24-hour minimum allocation per host (Apple macOS SLA). Host is billed while allocated even if the instance is stopped. One Mac per host. M4 family / M3 Ultra available only in some regions (M4 Max & M3 Ultra: us-east-1, us-west-2 only). vCPU = AWS-listed vCPU (Apple cores).",
+      "regions": [
+        "us"
+      ],
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "two-vms-per-host",
+      "label": "Host split into 2 macOS VMs (Apple SLA cap), per-VM price",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "1/2 of mac2.metal (Apple M1, 8 vCPU / 16 GiB)",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.325,
+          "month_cap": 237.25
+        },
+        {
+          "name": "1/2 of mac2-m2.metal (Apple M2, 8 vCPU / 24 GiB)",
+          "vcpu": 4,
+          "ram_gib": 12,
+          "disk_gib": null,
+          "hour": 0.439,
+          "month_cap": 320.47
+        },
+        {
+          "name": "1/2 of mac-m4.metal (Apple M4, 10 vCPU / 24 GiB)",
+          "vcpu": 5,
+          "ram_gib": 12,
+          "disk_gib": null,
+          "hour": 0.615,
+          "month_cap": 448.95
+        },
+        {
+          "name": "1/2 of mac1.metal (Intel Core i7, 12 vCPU / 32 GiB)",
+          "vcpu": 6,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.5415,
+          "month_cap": 395.29
+        },
+        {
+          "name": "1/2 of mac2-m2pro.metal (Apple M2 Pro, 12 vCPU / 32 GiB)",
+          "vcpu": 6,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.78,
+          "month_cap": 569.4
+        },
+        {
+          "name": "1/2 of mac-m4pro.metal (Apple M4 Pro, 14 vCPU / 48 GiB)",
+          "vcpu": 7,
+          "ram_gib": 24,
+          "disk_gib": null,
+          "hour": 0.985,
+          "month_cap": 719.05
+        },
+        {
+          "name": "1/2 of mac-m4max.metal (Apple M4 Max, 16 vCPU / 128 GiB)",
+          "vcpu": 8,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 3.125,
+          "month_cap": 2281.25
+        },
+        {
+          "name": "1/2 of mac2-m1ultra.metal (Apple M1 Ultra, 20 vCPU / 128 GiB)",
+          "vcpu": 10,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 2.5,
+          "month_cap": 1825
+        },
+        {
+          "name": "1/2 of mac-m3ultra.metal (Apple M3 Ultra, 28 vCPU / 256 GiB)",
+          "vcpu": 14,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 6.25,
+          "month_cap": 4562.5
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 86400,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "DIY: run up to 2 extra macOS VMs (Tart/Anka/Lume, you install) on one host; per-VM price = host price / 2, vCPU/RAM halved (approximation; hypervisor overhead ignored). Only valid if you can pack VMs in pairs; the 24 h host minimum still applies per host. Apple SLA also limits leased Macs to 'Permitted Developer Services'.",
+      "regions": [
+        "us"
+      ],
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.08,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.05,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 100,
+    "egress_gib": 0.09,
+    "ipv4_month": 3.65,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "AWS account (no plan fee)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Dedicated Host quotas per family/region apply."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 100,
+    "conditions": "New AWS customer; $100 immediate and up to $100 earned; credits expire 12 months after account creation. The six-month Free plan has limited services, so EC2 Mac Dedicated Hosts may require Paid-plan conversion and quota approval."
+  },
+  "features": {
+    "linux": false,
+    "windows": false,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": true,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": false,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "bare-metal",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "24-hour minimum allocation per Dedicated Host (AWS: 'per second with a 24-hour minimum allocation period'); releasing and re-allocating daily costs 24 h each time, so keeping hosts all month is usually cheaper.",
+    "After release a host goes through scrubbing before reuse (reported 1-3 h, unverified).",
+    "Savings Plans ('up to 44 percent off On-Demand pricing with a 3-year commitment') not encoded: per-type Savings Plan rates not fetched.",
+    "EBS gp3 $0.08/GB-month, snapshots $0.05/GB-month, IPv4 $0.005/h (VPC pricing page) and 100 GB/month free egress (EC2 pricing page) are us-east-1 list values; the $0.09/GB first-tier egress rate was not re-fetched from an official page (long-standing list value).",
+    "mac1.metal vCPU: AWS docs list 12 vCPU (6 cores, HT); the instance-types page lists 6. Encoded as 12.",
+    "Regional prices differ (e.g. eu-central-1 mac-m4 $1.476/h, eu-west-1 $1.353/h); card uses us-east-1.",
+    "No agent/computer-use API: bring your own VNC/accessibility driver. Leasing Macs for non-developer uses is a grey zone under Apple's macOS SLA.",
+    "Two-VMs-per-host mode is a DIY packing estimate, not an AWS product.",
+    "month_cap = 730 x hourly per host (a host allocated all month is billed at most 730 h); lets the engine cap bursty sessions at C hosts kept allocated instead of 24 h per session.",
+    "AWS Free Tier: up to $100 more in credits can be earned by completing console activities, on top of the $100 signup credit (not encoded; eligibility for Mac Dedicated Hosts not verified)."
+  ],
+  "sources": [
+    "https://aws.amazon.com/ec2/instance-types/mac/",
+    "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/dedicatedhost-ondemand.json",
+    "https://aws.amazon.com/ec2/pricing/on-demand/",
+    "https://aws.amazon.com/vpc/pricing/",
+    "https://aws.amazon.com/ebs/pricing/",
+    "https://www.apple.com/legal/sla/docs/macOS27.pdf"
+  ],
+  "fleet": {
+    "default_max_instances": 0,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Personal details, email and phone; payment card may be required.",
+    "tiers": null,
+    "notes": "Each Mac Dedicated Host family has a regional default quota of zero. Request the relevant host-family quota through Service Quotas before provisioning; EC2 Standard vCPU quota does not grant Mac hosts.",
+    "sources": [
+      "https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-instance-quotas.html",
+      "https://aws.amazon.com/free/complete-signup/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/hibernating-prerequisites.html",
+      "quote": "You must use an instance family that supports hibernation. However, bare metal instances are not supported.",
+      "note": "Mac instances are bare metal on Dedicated Hosts, so no hibernation (memory) and no automatic snapshot on stop. EBS root/data volumes simply persist across stop/start (persistent_disk). Stop/terminate triggers a host scrubbing workflow that erases the internal SSD (x86 up to 50 min / 3 h, Apple silicon up to 4.5 h). Scheduled EBS snapshots possible via Data Lifecycle Manager/AWS Backup (backups, not this feature).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html",
+      "quote": "After customizing the instance to meet your specific requirements, create and register a new AMI. You can then use the new AMI to launch new instances with your customizations.",
+      "note": "Disk only (EBS snapshots / AMIs), no memory. New Mac instances can boot from the custom macOS AMI (on another allocated Mac Dedicated Host, subject to AMI/instance-type compatibility).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "Plain bare-metal macOS; no agent harness or harness API in EC2. SSM Run Command / SSH are generic exec.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html",
+      "quote": "You can create allow lists and deny lists with domain names that the stateful rules engine looks for in network traffic.",
+      "note": "IP/CIDR/port: security-group outbound rules ('outbound rules control the outgoing traffic from your instance') and NACLs, free. Domain: AWS Network Firewall (SNI/Host) and Route 53 Resolver DNS Firewall, separately billed VPC services. All enforced outside the instance.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/network-firewall/latest/developerguide/suricata-examples.html",
+      "quote": "This rule blocks outbound HTTP connections that have an IP address in the HTTP HOST header.",
+      "note": "AWS Network Firewall Suricata rules can match HTTP keywords (http.host, http.header, etc.; page also shows URL-category filtering 'with TLS inspection'). HTTPS needs Network Firewall TLS inspection; paid separate service.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html",
+      "quote": "Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance.",
+      "note": "Security groups, NACLs, private subnets (no public IP), ALB/NLB etc.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Bare-metal Mac with sudo/root; macOS has no nftables/iptables but its built-in pf (pfctl) packet filter runs in the host's own kernel. Not documented by AWS.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html",
+      "quote": "Have the application retrieve a set of temporary credentials and use them.",
+      "note": "AWS credentials come via IAM instance role (temporary keys in instance metadata, visible inside the machine); other secrets via Secrets Manager/SSM Parameter Store fetched into the instance. No credential-injecting egress proxy for EC2.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-mac-instances.html",
+      "quote": "EBS hotplug is supported.",
+      "note": "Extra EBS volumes can be attached (hotplug) to Mac instances; AWS recommends EBS over the unmanaged internal SSD.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/efs/latest/ug/installing-amazon-efs-utils.html",
+      "quote": "You can manually install the Amazon EFS client on Amazon EC2 (EC2) Linux instances and on EC2 Mac instances running macOS Big Sur, macOS Monterey, and macOS Ventura.",
+      "note": "Amazon EFS (NFSv4, read-write, many concurrent clients) can be mounted on Mac instances; the page lists Big Sur/Monterey/Ventura (its efs-utils link also names Sonoma); newer macOS versions not listed. EBS Multi-Attach is documented only for Linux and Windows instances (io1/io2), not macOS.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "bare-metal",
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-mac-instances.html",
+      "quote": "Mac instances are available only as bare metal instances on Dedicated Hosts, with a minimum allocation period of 24 hours before you can release the Dedicated Host.",
+      "note": "Whole physical Mac hardware dedicated to one customer for the allocation period; no hypervisor between AWS and the guest OS.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/instance-types/mac/",
+      "quote": "Amazon EC2 Mac instances allow you to run on-demand macOS workloads in the cloud, extending the flexibility, scalability, and cost benefits of AWS to all Apple developers.",
+      "note": "not offered: EC2 Mac instances boot from Amazon Machine Images (macOS AMIs), not Docker/OCI container images; this is a bare-metal macOS VM product, not a container runtime.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/instance-types/mac/",
+      "quote": "Amazon EC2 Mac instances allow you to run on-demand macOS workloads in the cloud, extending the flexibility, scalability, and cost benefits of AWS to all Apple developers.",
+      "note": "not offered: outside the product's scope — EC2 Mac is bare-metal macOS compute for build/test/CI, not a browser/stealth automation service.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/instance-types/mac/",
+      "quote": "Amazon EC2 Mac instances allow you to run on-demand macOS workloads in the cloud, extending the flexibility, scalability, and cost benefits of AWS to all Apple developers.",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving feature documented for EC2 Mac (a general-purpose macOS compute host).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-instance-addressing.html",
+      "quote": "Amazon EC2 and Amazon VPC use the EC2-VPC platform for the provisioning of instances. Your instance receives a public IP address from Amazon's public IPv4 address pool.",
+      "note": "Standard AWS/EC2-owned public or Elastic IPv4 addresses; same address pools used by all EC2 instance types, not residential or mobile ranges.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-mac-instances.html",
+      "quote": "Mac instances are available only as bare metal instances on Dedicated Hosts, with a minimum allocation period of 24 hours before you can release the Dedicated Host. You can launch one Mac instance per Dedicated Host.",
+      "note": "Each Dedicated Host is built for one fixed Mac hardware/instance type (e.g. mac2.metal, mac-m4.metal); changing vCPU/RAM means stopping the instance and allocating a different Dedicated Host/instance type, not resizing the running machine.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://aws.amazon.com/ec2/instance-types/mac/",
+      "quote": "Amazon EC2 Mac instances allow you to run on-demand macOS workloads in the cloud, extending the flexibility, scalability, and cost benefits of AWS to all Apple developers.",
+      "note": "not offered: outside the product's scope — EC2 Mac is bare-metal compute for iOS/macOS build & test; AWS provides no first-party browser/computer-use/research task-agent API for it.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/macos-ami-release-notes.html",
+      "quote": "Xcode Command Line Tools",
+      "note": "AWS macOS AMIs ship with Xcode Command Line Tools, which include a python3 runtime, and macOS itself has historically bundled Python 2.7/3; usable out of the box without provider-specific setup.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/macos-ami-release-notes.html",
+      "quote": "Xcode Command Line Tools",
+      "note": "AWS macOS AMI release notes list Xcode Command Line Tools and Apple/system tooling, not a Node.js runtime; Node must be installed by the customer (e.g. via Homebrew) after launch.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-mac-instances.html",
+      "quote": "Mac instances are available only as bare metal instances on Dedicated Hosts, with a minimum allocation period of 24 hours before you can release the Dedicated Host.",
+      "note": "The 24 hours is a minimum allocation/billing period, not a maximum runtime; a Dedicated Host and its Mac instance can run indefinitely until the customer stops/releases it.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "dedicated-host": "dedicated",
+        "two-vms-per-host": "dedicated"
+      },
+      "source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-mac-instances.html",
+      "quote": "Mac instances are available only as bare metal instances on Dedicated Hosts, with a minimum allocation period of 24 hours before you can release the Dedicated Host. You can launch one Mac instance per Dedicated Host.",
+      "note": "A Dedicated Host allocates an entire physical Mac (all its vCPUs/cores) to a single customer for the whole allocation period, with no hypervisor sharing cores across tenants. The 'two-vms-per-host' mode is a DIY split of that same dedicated hardware (customer runs their own local VMs like Tart/Anka on it), so the underlying cores remain dedicated to the customer, just subdivided by them; AWS does not oversubscribe or share the host's cores with other AWS customers.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html",
+      "quote": "After you or AWS applies tags to your AWS resources (such as Amazon EC2 instances or Amazon S3 buckets) and you activate the tags in the Billing and Cost Management console, AWS generates a cost allocation report as a comma-separated value (CSV file) with your usage and costs grouped by your active ",
+      "note": "granularity: per-tag; cost: yes; Tag each EC2 Mac Dedicated Host with a unique identifier (e.g., sandbox-id=xyz); activate cost allocation tags in Billing console; then query costs per tag via AWS Cost Explorer API (GetCostAndUsage with Tags filter) or Cost Allocation Report CSV. Returns actual dollar costs, not just metrics.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": null,
+      "city": "Montreal",
+      "provider_region": "ca-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "eu-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "eu-north-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "ap-northeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "ap-northeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "ap-southeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "ap-south-1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://b0.p.awsstatic.com/pricing/2.0/meteredUnitMaps/ec2/USD/current/dedicatedhost-ondemand.json",
+  "locations_quote": "Dedicated Host Pricing. Mac1.metal, Mac2.metal, Mac2-m2.metal, and other Mac instance types available on Dedicated Hosts in specified regions",
+  "locations_checked": "2026-10-01"
+}

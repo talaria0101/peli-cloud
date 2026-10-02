@@ -1,0 +1,1416 @@
+{
+  "id": "gcp-compute-gpu",
+  "name": "Google Compute Engine GPU VMs",
+  "url": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+  "category": "gpu-cloud",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand-a2-highgpu-1g-0",
+      "label": "a2-highgpu-1g, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 12,
+      "max_ram_gib": 85,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-40GB": 3.673385
+      },
+      "note": "A3 price table memory typo 1871 versus spec 1872; spec value used. Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized"
+    },
+    {
+      "key": "on-demand-a2-ultragpu-1g-1",
+      "label": "a2-ultragpu-1g, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 12,
+      "max_ram_gib": 170,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 5.06879789
+      },
+      "note": "A3 price table memory typo 1871 versus spec 1872; spec value used. Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized"
+    },
+    {
+      "key": "on-demand-a3-highgpu-8g-2",
+      "label": "a3-highgpu-8g, on-demand (×8 node)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 208,
+      "max_ram_gib": 1872,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 11.06125
+      },
+      "note": "A3 price table memory typo 1871 versus spec 1872; spec value used. Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized Node price $88.490000119/h (pricing page 2026-09-28) carried as $11.0613 per GPU x gpu_min_count 8 (vCPU/RAM/SSD bundled).",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "on-demand-a3-megagpu-8g-3",
+      "label": "a3-megagpu-8g, on-demand (×8 node)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 208,
+      "max_ram_gib": 1872,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 11.675089
+      },
+      "note": "A3 price table memory typo 1871 versus spec 1872; spec value used. Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized Node price $93.400712807/h (pricing page 2026-09-28) carried as $11.6751 per GPU x gpu_min_count 8 (vCPU/RAM/SSD bundled).",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "on-demand-a3-ultragpu-8g-4",
+      "label": "a3-ultragpu-8g, on-demand (×8 node)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 224,
+      "max_ram_gib": 2952,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H200": 10.600864
+      },
+      "note": "A3 price table memory typo 1871 versus spec 1872; spec value used. Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized Node price $84.806908493/h (pricing page 2026-09-28) carried as $10.6009 per GPU x gpu_min_count 8 (vCPU/RAM/SSD bundled).",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "on-demand-g2-standard-4-5",
+      "label": "g2-standard-4, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 16,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L4": 0.706832276
+      },
+      "note": "A3 price table memory typo 1871 versus spec 1872; spec value used. Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized"
+    },
+    {
+      "key": "spot-a2-highgpu-1g-6",
+      "label": "a2-highgpu-1g, spot (×1)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-40GB": 2.20401
+      },
+      "note": " Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized"
+    },
+    {
+      "key": "spot-a2-ultragpu-1g-7",
+      "label": "a2-ultragpu-1g, spot (×1)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 3.041237534
+      },
+      "note": " Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized"
+    },
+    {
+      "key": "spot-a3-highgpu-1g",
+      "label": "a3-highgpu-1g, spot (x1 H100)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 26,
+      "max_ram_gib": 234,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 6.620287
+      },
+      "note": "a3-highgpu-1g = 1 H100, 26 vCPU, 234 GB, 750 GiB Local SSD, exactly 1/8 of a3-highgpu-8g (compute/docs/accelerator-optimized-machines); 1g/2g/4g can only be created as Spot or Flex-start VMs. The pricing page lists only the 8g row, so the price is DERIVED: 8g Spot $52.962296548/h / 8 = $6.6203/h (A3 VMs are billed per attached GPU, vCPU, memory and bundled SSD). Spot prices are dynamic.",
+      "gpu_min_count": null
+    },
+    {
+      "key": "flex-start-a3-highgpu-1g",
+      "label": "a3-highgpu-1g, DWS Flex-start (x1 H100)",
+      "flags": [
+        "stock"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 26,
+      "max_ram_gib": 234,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 4.79
+      },
+      "note": "DWS Flex-start price for a3-highgpu-8g $38.32/h (pricing page 2026-09-28; \"DWS Prices are variable, but are updated infrequently\"); 1g price DERIVED as 1/8 = $4.79/h (1g is exactly 1/8 of the 8g shape). Flex-start VMs are not preemptible once running but obtain capacity from a queue and are limited to 7 days of run time.",
+      "gpu_min_count": null,
+      "stock_note": "DWS Flex-start: capacity is granted when available (request may wait); VMs run for at most 7 days"
+    },
+    {
+      "key": "spot-a3-highgpu-8g-8",
+      "label": "a3-highgpu-8g, spot (×8 node)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 6.620287
+      },
+      "note": " Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized Node price $52.962296548/h (pricing page 2026-09-28) carried as $6.6203 per GPU x gpu_min_count 8 (vCPU/RAM/SSD bundled).",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "spot-a4-highgpu-8g-9",
+      "label": "a4-highgpu-8g, spot (×8 node)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "B200": 4.9542
+      },
+      "note": " Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized Node price $39.6336/h (pricing page 2026-09-28) carried as $4.9542 per GPU x gpu_min_count 8 (vCPU/RAM/SSD bundled).",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "spot-g2-standard-4-10",
+      "label": "g2-standard-4, spot (×1)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L4": 0.424056
+      },
+      "note": " Source: https://cloud.google.com/products/compute/pricing/accelerator-optimized"
+    },
+    {
+      "key": "compute-resource-cud-1-year",
+      "label": "Compute Resource CUD, 1-year, Iowa price table",
+      "flags": [
+        "commit"
+      ],
+      "commit_term": "1-year",
+      "regions": [
+        "us"
+      ],
+      "pricing": "sizes",
+      "published_hourly_by_shape_usd": {
+        "A100-40GB": 2.31420704,
+        "A100-80GB": 4.199690411,
+        "L4": 0.445304335,
+        "H100-A3-high-8GPU-node": 61.383674231,
+        "H100-A3-mega-8GPU-node": 64.206558727,
+        "H200-A3-ultra-8GPU-node": 58.471933151,
+        "B200-A4-high-8GPU-node": 88.9272
+      }
+    },
+    {
+      "key": "compute-resource-cud-3-year",
+      "label": "Compute Resource CUD, 3-year, Iowa price table",
+      "flags": [
+        "commit"
+      ],
+      "commit_term": "3-year",
+      "regions": [
+        "us"
+      ],
+      "pricing": "sizes",
+      "published_hourly_by_shape_usd": {
+        "A100-40GB": 1.285708338,
+        "A100-80GB": 3.499997559,
+        "L4": 0.318074524,
+        "H100-A3-high-8GPU-node": 38.864383195,
+        "H100-A3-mega-8GPU-node": 40.650103355,
+        "H200-A3-ultra-8GPU-node": 37.208420822,
+        "B200-A4-high-8GPU-node": 56.7072
+      }
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Self-serve pay-as-you-go account, no platform fee; GPU quota may need a request."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "A100-40GB",
+      "A100-80GB",
+      "B200",
+      "H100",
+      "H200",
+      "L4"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "VM rate includes predefined CPU/RAM/GPU and bundled SSD if applicable. 60-second minimum then second billing. The selected default region was verified in HTML aria-selected/data-value: Iowa (us-central1). Rates are regional, not global. A3 1/2/4 GPU require Spot/Flex-start, not ordinary on-demand.",
+    "Any null count, CPU/RAM, billing increment or minimum is unverified, not unlimited/free.",
+    "This is GPU-product research, not a claim that every feature of the entire vendor documentation was audited. Unverified features are null.",
+    "GPU multi-count bundles, variant/region selection and fractional slices require a SKU-aware estimator; unsupported rows remain unpriced in strict cards.",
+    "Modes with gpu=null are intentionally excluded, not free GPU modes. Never substitute 0 for a null rate. Flags alt indicate DIY/ML infrastructure, not the same thing as managed untrusted-code sandboxes.",
+    "Unknown fee, storage or bandwidth means full monthly total may be unavailable. Rates exclude taxes.",
+    "a3-highgpu-1g Spot ($6.62/h) and DWS Flex-start ($4.79/h) are derived as 1/8 of the published a3-highgpu-8g rows (the 1g shape is exactly 1/8 of the 8g: 26 vCPU / 234 GB / 750 GiB / 1 H100). Flex-start VMs run at most 7 days and capacity may queue."
+  ],
+  "sources": [
+    "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+    "https://docs.cloud.google.com/compute/docs/gpus",
+    "https://cloud.google.com/products/compute/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Paid billing account needed to request quota changes; established billing history can enable automatic GPU approval.",
+    "tiers": null,
+    "notes": "Per-region CPU and per-GPU-type quotas plus possible global CPU/GPU caps for new projects. No single universal fresh paid-account numeric value verified. Free Trial cannot raise quota. Quota is not a capacity reservation.",
+    "sources": [
+      "https://docs.cloud.google.com/compute/resource-usage",
+      "https://docs.cloud.google.com/compute/docs/gpus/create-vm-with-gpus"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 16,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/instances/suspend-resume-instance",
+      "quote": "Instances that have GPUs or TPUs attached.",
+      "note": "Quote is from the list of instances you can't suspend: GPU VMs cannot even use the manual suspend (memory-preserving) feature. Stop keeps the boot/data disks only (persistent_disk); no stop-triggered checkpoint. Snapshot schedules (scheduled-snapshots) are scheduled backups, not this feature.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/machine-images",
+      "quote": "You can use a machine image in many system maintenance, backup and recovery, and instance cloning scenarios.",
+      "note": "Disk-only: machine images capture config + all disks but 'Data in memory' and Local SSD data are not collected. Standard disk snapshots also on demand ('You can create snapshots from disks even while they are attached to running instances.'). New VMs can boot from machine images / snapshots / custom images.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/reference/rest/v1",
+      "quote": "Compute Engine REST API: resources are instances, disks, images, networks, firewalls, machineTypes, snapshots, etc. (no coding-agent / harness resource exists in the API surface).",
+      "note": "Compute Engine is a plain IaaS VM product (create/manage instances, disks, networks) with a general Compute API; there is no first-party API that drives a coding agent/harness inside the VM (prompt/stream/follow-up). Checked the full REST v1 reference and the GPU pricing/docs pages for any agent-harness feature: none found. This is analogous to Windows-for-a-Linux-sandbox: the product plainly doesn't offer this feature, so 'no' is confirmed, medium confidence since absence-of-mention is not a vendor statement.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://cloud.google.com/firewall/docs/firewalls",
+      "quote": "Use FQDN objects in firewall policy to filter incoming or outgoing traffic from or to specific domains.",
+      "note": "VPC firewall rules: 'Each firewall rule applies to incoming (ingress) or outgoing (egress) connections' by IP range/protocol/port/tag/service account. FQDN objects need Cloud NGFW firewall policies (Standard tier data-processing charges).",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://cloud.google.com/secure-web-proxy/docs/cel-matcher-language-reference",
+      "quote": "apply to application attributes such as request headers, request method, and request path",
+      "note": "Via Secure Web Proxy (separately billed, 'default deny-all setting that blocks all outbound traffic until you explicitly allow it'); HTTPS path/method/header matching needs TLS inspection. In explicit-proxy mode, direct egress must also be blocked by firewall rules for it to be non-bypassable.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://cloud.google.com/firewall/docs/firewalls",
+      "quote": "Each firewall rule applies to incoming (ingress) or outgoing (egress) connections, not both.",
+      "note": "VPC firewall rules / firewall policies with source ranges, tags, service accounts; external IP optional.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VM with root.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://cloud.google.com/secret-manager/docs/overview",
+      "quote": "Secret Manager is a secrets and credential management service that lets you store and manage sensitive data such as API keys",
+      "note": "Secrets are fetched by the workload (service account / metadata server); no credential-injecting egress proxy for Compute Engine.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/disks/add-persistent-disk",
+      "quote": "You can use Persistent Disk as a boot disk for a compute instance, or as a data disk that you attach to an instance.",
+      "note": "Persistent Disk and Hyperdisk data disks (Local SSD is ephemeral, bundled on some GPU shapes).",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/disks/sharing-disks-between-vms",
+      "quote": "You can attach a disk in read-only mode or multi-writer mode to an instance.",
+      "note": "Read-only multi-attach, or multi-writer (Hyperdisk, needs cluster-aware FS); Filestore NFS read-write shared ('multiple reader, multiple writer access'); Cloud Storage FUSE bucket mounts also first-party.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://cloud.google.com/compute/docs/instances/nested-virtualization/overview",
+      "quote": "Compute Engine VMs run on a physical host that has Google's security-hardened, KVM-based hypervisor.",
+      "note": "Full dedicated VM isolation (customer VM = whole guest kernel) on Google's KVM-derived hypervisor.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/containers/deploying-containers",
+      "quote": "You can configure a Compute Engine instance or an instance template to deploy and launch a Docker container. Compute Engine supplies an up-to-date Container-Optimized OS (COS) image with Docker installed and launches your container when your instance starts.",
+      "note": "Boots a VM directly from a supplied Docker/OCI image (Artifact Registry, Docker Hub, or other registry).",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/containers/deploying-containers",
+      "quote": "Compute Engine supplies an up-to-date Container-Optimized OS (COS) image with Docker installed and launches your container when your instance starts.",
+      "note": "Full root VM; Docker/containers run inside normally on any Linux image.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/instances/nested-virtualization/overview",
+      "quote": "Compute Engine adds Intel Virtualization Technology (VT-x) or AMD Virtualization (AMD-V) instructions to VMs, so when you create a VM, the hypervisor that is already on that VM can run additional VMs. ... You can't use the following VMs: E2 VMs, Memory-optimized VMs, VMs powered by ARM processors, VMs powered by AMD processors except N4D",
+      "note": "GPU/accelerator-optimized VMs (A2/A3/A4/G2) are Intel-based and not in the excluded list (E2, memory-optimized, ARM, most AMD), so nested virtualization is supported when explicitly enabled; not GPU-specific documentation, medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — Compute Engine GPU VMs are IaaS compute instances, not a managed streamed desktop product.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — no managed/provided browser; a user could install one but it is not a product feature.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — plain GPU compute VM, no screenshot/click driving API.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — GPU IaaS compute, not a browser/bot-automation product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — GPU IaaS compute, not a CAPTCHA-solving product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cloud.google.com/compute/docs/ip-addresses",
+      "quote": "External IP addresses ... are allocated from Google's pool of IP addresses",
+      "note": "Standard Google Cloud datacenter IP ranges; no residential/mobile egress option.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://cloud.google.com/compute/docs/instances/suspend-resume-instance",
+      "quote": "Instances that have GPUs or TPUs attached.",
+      "note": "GPU VMs are excluded from the memory-preserving 'suspend' feature; only disk-based snapshots/machine images (fs) are available for this product, per card's feature_evidence.snapshot_auto/snapshot_on_demand.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/machine-images",
+      "quote": "You can use a machine image in many system maintenance, backup and recovery, and instance cloning scenarios.",
+      "note": "New VMs can be created from a disk snapshot or machine image of an existing (stopped) instance, effectively cloning it; memory/running-process state is not included.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/instances/suspend-resume-instance",
+      "quote": "Instances that have GPUs or TPUs attached.",
+      "note": "GPU VMs can't even suspend-to-memory; live disk snapshots omit memory state and the source VM keeps running unaffected, but cloning a running machine with its live state intact is not supported for GPU VMs.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/machine-images",
+      "quote": "Data in memory ... are not collected as part of the machine image.",
+      "note": "Clones are disk-only; running processes are not restored.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/instances/stop-start-instance",
+      "quote": "When you stop an instance, ... You stop paying for the instance's compute resources",
+      "note": "Stop/start is supported and pauses compute billing (disk/IP still billed); GPU VMs can't use memory-preserving suspend (per feature_evidence.snapshot_auto), so this is stop/start rather than a true pause with in-memory state.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — Compute Engine VMs do not auto-wake on inbound request; the instance must be explicitly started.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — no native idle-based auto-stop for Compute Engine VMs; users must build their own automation.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/machine-resource",
+      "quote": "To change the machine type of your VM, the VM must be in the TERMINATED state.",
+      "note": "Changing vCPU/RAM (machine type) requires stopping the instance first; not a live resize of a running machine.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — plain GPU compute VM; no preinstalled coding-agent templates.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — no first-party browser/computer-use/research agent API for Compute Engine.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — Compute Engine has no first-party MCP server shipped specifically to control these VMs as sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/images/os-details",
+      "quote": "Debian, Ubuntu, and other standard Compute Engine Linux images",
+      "note": "derived: standard Linux boot images (Debian/Ubuntu etc.) ship with Python3 preinstalled or in default repos; not a managed language runtime feature specific to this product.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/images/os-details",
+      "quote": "Debian, Ubuntu, and other standard Compute Engine Linux images",
+      "note": "derived: base OS images do not ship Node.js preinstalled by default; must be installed by the user.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/ip-addresses",
+      "quote": "When you create a VM instance, you can assign it an external IP address",
+      "note": "Ephemeral or static external IPv4 addresses can be assigned per VM.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/ip-addresses",
+      "quote": "When you create a VM instance, you can assign it an external IP address",
+      "note": "derived: with a public IP and a firewall rule allowing 443, any port including HTTPS is reachable; no managed HTTPS-URL/TLS-termination product feature, user must run their own web server/certs.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/ip-addresses/reserve-static-external-ip-address",
+      "quote": "You can reserve a static external IP address and assign it to your project.",
+      "note": "Reserved static external IPs can be attached to a VM for a fixed outbound (and inbound) address.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": true,
+      "source": "https://cloud.google.com/compute/docs/images/os-details",
+      "quote": "Windows Server ... images are available for Compute Engine",
+      "note": "Windows Server images are available on Compute Engine, including on GPU-capable machine types (subject to GPU driver support).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — Google Compute Engine does not offer macOS VMs.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://cloud.google.com/compute/docs/instances/nested-virtualization/overview",
+      "quote": "You can't use the following VMs: ... VMs powered by ARM processors",
+      "note": "not offered: outside the product's scope for this card — all GPU/accelerator-optimized machine series (A2/A3/A4/G2) are x86-only; GCP's ARM (Tau T2A) family has no GPU support.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — Compute Engine is a hyperscaler-run public cloud service, not self-hostable software.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — Compute Engine IS the cloud provider; there is no bring-your-own-cloud deployment model.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "Accelerator-optimized machine family pricing",
+      "note": "not offered: outside the product's scope — Compute Engine is a proprietary managed service, not an open-source project.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://cloud.google.com/security/compliance/soc-2",
+      "quote": "SOC 2 Compliance on Google Cloud",
+      "note": "Google Cloud (including Compute Engine) is SOC 2 Type II attested.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://cloud.google.com/security/compliance/hipaa",
+      "quote": "HIPAA Compliance on Google Cloud",
+      "note": "Compute Engine is a HIPAA-eligible service and Google will sign a BAA.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://cloud.google.com/architecture/identity/federating-gcp-with-active-directory-introduction",
+      "quote": "Cloud Identity and Google Workspace support federation with external identity providers using SAML 2.0 or OpenID Connect (OIDC)",
+      "note": "Google Cloud organizations support SAML/OIDC SSO via Cloud Identity for console/API access.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://cloud.google.com/about/locations",
+      "quote": "Google Cloud regions ... Europe",
+      "note": "Multiple EU regions (e.g. europe-west4 Netherlands, europe-west3 Frankfurt) are available; GPU shape availability varies by region but EU regions exist for Compute Engine.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
+      "quote": "on-demand ... requires_always_on: false",
+      "note": "On-demand VMs run indefinitely until the user stops them, no forced max session; Spot VMs can be preempted at any time and DWS Flex-start VMs are capped at 7 days per the card's own notes, but the unconstrained on-demand mode this card centers on has no session cap.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cloud.google.com/billing/docs/reference/rest",
+      "quote": "Cloud Billing API: provides programmatic access to billing data for your Google Cloud resources. Break down charges by label, resource, and project.",
+      "note": "granularity: per-tag; cost: yes; GCP Cloud Billing API (REST) returns billable usage and cost per VM via billing account queries filtered by resource labels/project. Cloud Monitoring API provides resource metrics (CPU/memory) separately. Billing Export to BigQuery enables fine-grained per-resource cost analysis by label.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Council Bluffs",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "SC",
+      "city": "Moncks Corner",
+      "provider_region": "us-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "us-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "The Dalles",
+      "provider_region": "us-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "UT",
+      "city": "Salt Lake City",
+      "provider_region": "us-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NV",
+      "city": "Las Vegas",
+      "provider_region": "us-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "St. Ghislain",
+      "provider_region": "europe-west1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Eemshaven",
+      "provider_region": "europe-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "europe-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Berlin",
+      "provider_region": "europe-west10",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "europe-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Hamina",
+      "provider_region": "europe-north1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "europe-west6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "europe-west8",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "europe-west9",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "europe-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Changhua County",
+      "provider_region": "asia-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "asia-east2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "asia-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "asia-northeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "asia-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Delhi",
+      "provider_region": "asia-south2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Jurong West",
+      "provider_region": "asia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "asia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "australia-southeast1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "australia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SA",
+      "state": null,
+      "city": "Dammam",
+      "provider_region": "me-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "me-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "Osasco",
+      "provider_region": "southamerica-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montréal",
+      "provider_region": "northamerica-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "northamerica-northeast2",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://cloud.google.com/compute/docs/gpus/gpu-regions-zones",
+  "locations_quote": "Accelerator-optimized machine family pricing. The availability of specific GPU models varies by region and zone. Each zone offers a variety of GPU versions... A3 Mega, A3 High, and A2 Standard machine types... are available with limited capacity... contact your account team.",
+  "locations_checked": "2026-10-01"
+}

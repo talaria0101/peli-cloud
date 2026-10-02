@@ -1,0 +1,221 @@
+{
+  "id": "jamsocket",
+  "name": "Jamsocket",
+  "url": "https://jamsocket.com",
+  "category": "agent-sandbox",
+  "isolation": "gvisor",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt",
+        "legacy"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": null,
+    "macos": null,
+    "arm64": null,
+    "gpu": null,
+    "snapshot": null,
+    "pause_resume": null,
+    "fork": null,
+    "persistent_disk": null,
+    "volumes": null,
+    "auto_stop_idle": null,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": null,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": null,
+    "desktop": null,
+    "computer_use": null,
+    "code_interpreter": null,
+    "agent_harnesses": null,
+    "ssh": null,
+    "public_ipv4": null,
+    "inbound_https": null,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": null,
+    "static_egress_ip": null,
+    "private_network": null,
+    "self_host": true,
+    "byoc": null,
+    "open_source": true,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": null,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": null,
+    "wake_on_request": null,
+    "live_resize": null,
+    "fork_running": null,
+    "memory_snapshot_fork": null,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": null,
+    "snapshot_auto": true,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "ingress_rules": true,
+    "secret_proxy": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Discontinued: acquired by Modal (2025-07-10); hosted platform terminated 2026-03-04 (signups closed since 2026-01-08). Successor = Modal Sandboxes (card 'modal'); Plane and Y-Sweet remain as MIT open-source self-host projects with little planned development.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Nested virtualization set to no: every sandbox runs under gVisor, which gives the workload its own user-space kernel and no /dev/kvm device (no KVM-based emulators or VMs inside). Docker inside is a separate question."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/jamsocket",
+    "https://modal.com/blog/jamsocket-is-joining-modal"
+  ],
+  "status": "discontinued",
+  "audit_2026_09_29": {
+    "applied": 3,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "http://web.archive.org/web/20260216132651/https://forevervm.com/",
+      "quote": "When a sandbox is idle, its memory is snapshotted before it is “detached” from the worker.",
+      "note": "HISTORICAL, ForeverVM product only (discontinued; forevervm.com now redirects to modal.com). Trigger: idle; memory (Python REPL state) included; resumed transparently on next instruction. The Jamsocket session-backend platform itself had no snapshots: backends were terminated after max_idle_seconds/lifetime_limit_seconds and persisting state was the app's job (blob storage/DB).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "http://web.archive.org/web/20250714142019/https://docs.jamsocket.com/platform/advanced/persistence",
+      "quote": "Session backends are useful for maintaining document state while a user session is active, but they require a way to store that data when a session has ended.",
+      "note": "Neither the full Jamsocket HTTP API v2 (connect/status/logs/metrics/terminate/services/images) nor the ForeverVM API (create/list machines, exec) had a snapshot/checkpoint/fork endpoint. Historical: service terminated 2026-03-04.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "http://web.archive.org/web/20250616090009/https://docs.jamsocket.com/platform/reference/rest-api/v2",
+      "quote": "Currently Jamsocket will only allow HTTP requests and Sockets connections to be proxied to the backend.",
+      "note": "WebSocket session-backend platform (spawn your own Docker image); ForeverVM exposed a Python REPL exec API plus an MCP server, not a harness-driving API.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "http://web.archive.org/web/20250803043101/https://docs.jamsocket.com/platform/advanced/connection-url",
+      "quote": "This Connection URL comes with a secret token. Treat the connection token like a bearer token, because any client that knows it can access the backend.",
+      "note": "Tokenized per-backend URLs (requests without the token rejected); only port 8080 proxied, HTTP/WebSocket only; optional secret_token and unforgeable x-verified-* user headers. Historical.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "http://web.archive.org/web/20250714142019/https://docs.jamsocket.com/platform/advanced/persistence",
+      "quote": "Spawn a session backend with env vars that include what bucket to access and credentials to access it with.",
+      "note": "Secrets passed as env vars in the spawn request (executable.env); no injecting proxy documented.",
+      "checked": "2026-09-29"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://web.archive.org/web/20250616090009/https://docs.jamsocket.com/platform/reference/rest-api/v2",
+      "quote": "Stream a backend's metrics: GET /v2/backend/{backend_id}/metrics/stream. Streams metrics for the given backend using a standard Server-Sent Events format. Returns live cpu_used, mem_available, mem_limit, mem_used, sys_cpu values.",
+      "note": "granularity: none; cost: no; API provides live monitoring metrics (CPU%, memory bytes) but no billable usage aggregation endpoint. No per-sandbox usage history, no cost reporting, no tag-based usage grouping. Service discontinued 2026-03-04.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://web.archive.org/web/20241229122017/https://jamsocket.com/",
+  "locations_quote": "Deployment options: Fully Managed (We run everything for you), BYOC (Run in your own AWS account), Open Source. Multi-region support available for Enterprise plan only.",
+  "locations_checked": "2026-10-01"
+}

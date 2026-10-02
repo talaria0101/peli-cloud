@@ -1,0 +1,581 @@
+{
+  "id": "apoxy",
+  "name": "Apoxy",
+  "url": "https://apoxy.dev",
+  "category": "paas",
+  "isolation": "gvisor",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "Default-deny egress firewall",
+          "url": "https://apoxy.dev/pricing"
+        },
+        {
+          "quote": "1 TB ... $0.05 / GB",
+          "url": "https://apoxy.dev/pricing"
+        },
+        {
+          "quote": "Dedicated egress IP + $20 / mo",
+          "url": "https://apoxy.dev/pricing"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Platform Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Platform Standard",
+      "fee": 80,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Premium annual",
+      "fee": 2000,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "CLRK Free",
+      "fee": 0,
+      "flags": [
+        "beta"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "note": "Hosted CLRK not live: button 'Coming soon'. 1 Connected Worker, default-deny egress, 7-day logs; no dedicated egress IP."
+    },
+    {
+      "name": "CLRK Standard",
+      "fee": 80,
+      "flags": [
+        "beta"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "note": "Coming soon. Unlimited Connected Workers; 1 TB bandwidth then $0.05/GB; 10 GB logs then $0.25/GB; dedicated egress IP +$20/mo. No per-vCPU/RAM rate published."
+    },
+    {
+      "name": "CLRK Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "note": "Hosted agents in your VPC; talk to a founder."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": true,
+    "egress_http_rules": true,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": true,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": false,
+    "secret_proxy": "any-http",
+    "isolation": "gvisor",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "snapshot_on_demand": false,
+    "volume_shared": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "volume_attach": false,
+    "guest_firewall": false,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Edge JS/TS/Wasm workers bundled with routing: Free 100GB traffic, Standard $80/mo including 1TB then $0.05/GB; TCP/UDP +$20/gateway. CLRK is gVisor-isolated agent runtime: free 1 connected worker; paid Standard $80 and Enterprise displayed coming-soon. BYOC Premium annual from $2k/mo, per-vCPU price unpublished. Do not treat edge traffic tariff as free 4/8 VM.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Logs/traces: Free 1 GB (7-day), Standard 10 GB (30-day) then $0.25/GB; TCP/UDP gateways +$20/gateway/month on Standard; Free cannot exceed the included bucket (hard cap default, no overage).",
+    "Apoxy bandwidth is gateway/proxy traffic (max of client ingress/egress, origin traffic free), not sandbox VM egress: Free includes 100 GB/month (hard cap, no overage); Standard ($80/mo) includes 1 TB then $0.05/GB, volume tiered.",
+    "Nested virtualization set to no: every sandbox runs under gVisor, which gives the workload its own user-space kernel and no /dev/kvm device (no KVM-based emulators or VMs inside). Docker inside is a separate question."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/apoxy",
+    "https://apoxy.dev/",
+    "https://apoxy.dev/pricing",
+    "https://apoxy.dev/docs/getting-started"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Free and paid Platform/CLRK offerings; Enterprise/BYOC terms negotiated.",
+    "notes": "Pricing separates network Platform from agent runtime. Reviewed public pricing does not establish aggregate new-account sandbox/vCPU/GPU quotas or a quota-review timeline. Platform bandwidth and annual-contract scale claims are not sandbox concurrency.",
+    "sources": [
+      "https://apoxy.dev/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 17,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/persist-state-across-runs.md",
+      "quote": "CLRK sandboxes have no durable cross-worker persistent storage by default. Each invocation starts from a fresh rootfs; `/tmp` and any image-baked filesystem state reset on every run.",
+      "note": "Ephemeral per-invocation gVisor sandboxes; state must live outside (or in the small TaskAgent.spec.state mount).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/claude-code-over-http.md",
+      "quote": "A `TaskAgent` named `jq-bot` that accepts a JSON body, runs the `@anthropic-ai/claude-code` CLI inside a fresh sandbox per request, and returns the model's structured output.",
+      "note": "CLRK is a generic agent runtime: a TaskAgent is YOUR container image invoked per HTTP request (JSON body -> CloudEvents on stdin, stdout -> response), plus cron schedules and DaemonAgents. Claude Code is only an example you package yourself; no first-party API to prompt a harness, send follow-ups, or list/resume conversations ('The TaskAgent response model is request/response'; conversation state is a user pattern with external Postgres). Borderline: the invocation/streaming contract is first-party but harness-agnostic.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/guides/lock-down-agent-egress.md",
+      "quote": "CLRK's `EgressGateway` defaults to `deny-all` - egress is closed unless you open it. ... `EgressL4Route` declares allowed L4 destinations: `destinationCIDRs`, `destinationHostnames`, `ports`, `protocol` (TCP or UDP).",
+      "note": "Enforced at the worker dialer/Envoy egress gateway outside the gVisor sandbox. Hostname matching via DNS snooping/SNI (docs warn DoH/DoT or lying SNI weaken hostname rules; pair with CIDRs). Optional per-agent scoping via sourceAgents label selector; EgressDenyPolicy for default-allow gateways.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/aiproviderroutes.md",
+      "quote": "| `endpoints` | string[] | Endpoints restricts to API paths. |",
+      "note": "L7 rules on the TLS-terminating (MITM) egress gateway: AIProviderRoute matches provider + endpoint paths + models (provider 'custom' = 'endpoint-only matching'), with token budgets, RateLimitPolicy, header rewrites (credential injection) and EgressDenyPolicy returning an HTTP deny response (default 403). No generic HTTP method/header match rules documented; mainly aimed at LLM/MCP traffic.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/authenticate-users-before-agents.md",
+      "quote": "CLRK does not authenticate the requests that reach its ingress. There is no built-in OIDC validator, no JWT verifier, no API-key middleware.",
+      "note": "Sandboxes are not directly addressable; only TaskAgents get a per-agent Envoy ingress (DaemonAgents have none), a cluster-internal Service in the operator's own Kubernetes. Access control is left to your own auth proxy / K8s networking. (Apoxy's separate edge Gateway product has its own routing, not assessed here.)",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/credentialinjectionpolicies.md",
+      "quote": "ParentRefs attaches this policy to AIProviderRoute, MCPRoute, or EgressGateway listeners. ... EgressGateway: catch-all for any traffic on the gateway that no narrower policy claimed.",
+      "note": "Egress proxy terminates TLS (per-gateway CA trusted in the sandbox) and injects a K8s Secret as Header, QueryParam or ProviderAuth (AWS SigV4 / GCP service account); agent sees placeholder 'clrk-injected-by-proxy' ('The agent process never holds them'). Agent-set headers are overwritten. HTTP(S) only; raw TCP routes (e.g. Postgres) are allowlisted but no credential injection for non-HTTP protocols documented. MCPRoute injection 'no-op until MCPRoute consumption ships'.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "gvisor",
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/workerpools.md",
+      "quote": "the gVisor/runsc-load-bearing fields (privileged + seccomp Unconfined + the AppArmor annotation, the run/state/varlog scratch volumes, the dispatch port, and the downward-API env) are owned by the controller's pod builder",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/agentsandboxrevisions.md",
+      "quote": "`image` | string | Image is the OCI image reference for the agent. **(required)**",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/workerpools.md",
+      "quote": "the gVisor/runsc-load-bearing fields (privileged + seccomp Unconfined ...) are owned by the controller's pod builder and are not expressible here, so a user edit cannot break the sandbox runtime.",
+      "note": "not offered: a CLRK sandbox runs a single agent process from an OCI image inside a gVisor/runsc sandbox with no privileged access, no docker socket, and no /dev/kvm; no documented way to run Docker inside the sandbox.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/getting-started.md",
+      "quote": "CLRK is a Kubernetes-native runtime for LLM agents. It runs each agent in an isolated sandbox with fully intercepted networking",
+      "note": "not offered: outside the product's scope (a headless per-invocation agent runtime, not a GUI desktop product).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/getting-started.md",
+      "quote": "CLRK is a Kubernetes-native runtime for LLM agents. It runs each agent in an isolated sandbox with fully intercepted networking, so credentials, telemetry, and policy all live in the platform - not in the agent process.",
+      "note": "not offered: outside the product's scope; no managed/real browser is provided, only an egress-governed sandbox for whatever OCI image you bring.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/getting-started.md",
+      "quote": "CLRK is a Kubernetes-native runtime for LLM agents.",
+      "note": "not offered: outside the product's scope; no screenshot/click desktop-driving API.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://apoxy.dev/pricing",
+      "quote": "Agents CLRK The agent runtime. gVisor isolation, credential injection, and every request through Envoy.",
+      "note": "not offered: outside the product's scope; CLRK governs/observes agent egress (LLM/MCP calls), it does not provide browser fingerprint/stealth evasion against bot detection.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://apoxy.dev/pricing",
+      "quote": "Agents CLRK The agent runtime. gVisor isolation, credential injection, and every request through Envoy.",
+      "note": "not offered: outside the product's scope; no CAPTCHA-solving capability documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://apoxy.dev/pricing",
+      "quote": "EG-01 Static egress IPs Dedicated egress IPs from any machine ... Dedicated egress IP + $20 / mo",
+      "note": "Dedicated/static outbound IPs are an add-on from Apoxy's cloud egress gateways (datacenter IPs), not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/cli.md",
+      "quote": "clrk agents get | clrk agents invocations | clrk agents list | clrk agents logs | clrk agents run-task | clrk agents traces",
+      "note": "not offered: no exec/ssh/shell command in the CLI or API; sandboxes are short-lived, driven by a CloudEvents envelope on stdin/HTTP, not interactively accessed.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://apoxy.dev/docs/clrk/guides/persist-state-across-runs.md",
+      "quote": "CLRK sandboxes have no durable cross-worker persistent storage by default. Each invocation starts from a fresh rootfs; `/tmp` and any image-baked filesystem state reset on every run.",
+      "note": "No disk or memory snapshot/restore concept; sandboxes are ephemeral per-invocation, and AgentSandboxRevisions are just immutable template records, not running-state snapshots.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/persist-state-across-runs.md",
+      "quote": "CLRK sandboxes have no durable cross-worker persistent storage by default. Each invocation starts from a fresh rootfs",
+      "note": "not offered: no snapshot/checkpoint API documented.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/agentsandboxrevisions.md",
+      "quote": "Revisions are immutable; the agent points at `latestReadyRevisionName` once the new image is pulled and the sandbox is schedulable.",
+      "note": "not offered: AgentSandboxRevision is an immutable template snapshot for rollout/rollback, not a clone of a running machine; no fork/clone API.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/agentsandboxrevisions.md",
+      "quote": "Revisions are immutable; the agent points at `latestReadyRevisionName` once the new image is pulled and the sandbox is schedulable.",
+      "note": "not offered: no clone-while-running capability documented.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/persist-state-across-runs.md",
+      "quote": "CLRK sandboxes have no durable cross-worker persistent storage by default. Each invocation starts from a fresh rootfs",
+      "note": "not offered: no memory-snapshot cloning capability documented.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/taskagents.md",
+      "quote": "`timeout` ... Timeout caps how long a single execution can run.",
+      "note": "not offered: an execution runs to completion, exit, or timeout; no pause/resume API for a sandbox.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/taskagents.md",
+      "quote": "connect POST requests to invoke of TaskAgent",
+      "note": "A TaskAgent has no standing sandbox; an inbound HTTP request (or cron fire) spawns a fresh sandbox on demand, i.e. request-triggered wake/start.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/persist-state-across-runs.md",
+      "quote": "CLRK sandboxes have no durable cross-worker persistent storage by default. Each invocation starts from a fresh rootfs; `/tmp` and any image-baked filesystem state reset on every run.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/persist-state-across-runs.md",
+      "quote": "(`TaskAgent.spec.state` offers a worker-local mount shared across executions of the same agent on a worker - fine for lighter cases; its backend today is `sqlite`.) This guide covers durable, cross-worker/cross-cluster state",
+      "note": "The state mount is shared only across sequential executions on the same worker, not concurrently mounted by several running machines, and explicitly not durable cross-worker.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/taskagents.md",
+      "quote": "`warmPoolIdleTTL` ... bounds how long a pre-warmed sandbox can sit in the pool before it is evicted and replaced.",
+      "note": "not offered: outside the product's scope in the classic sense - sandboxes are per-invocation and exit after task completion/timeout; only pre-warmed (not-yet-used) sandboxes get idle-evicted, there is no persistent 'running machine' that idles and auto-stops.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/taskagents.md",
+      "quote": "`cpu` | ... CPU limit for a single execution, enforced via cgroup v2 cpu.max ... `memory` | ... Memory limit for a single execution",
+      "note": "not offered: CPU/memory limits are fixed per execution spec at sandbox creation; no API to resize a running sandbox.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/claude-code-over-http.md",
+      "quote": "A `TaskAgent` named `jq-bot` that accepts a JSON body, runs the `@anthropic-ai/claude-code` CLI inside a fresh sandbox per request",
+      "note": "not offered as a preinstalled/first-party template: Claude Code is shown only as an example CLI you package yourself into your own OCI image; CLRK does not preinstall or ship coding-agent templates.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/getting-started.md",
+      "quote": "CLRK is a Kubernetes-native runtime for LLM agents. It runs each agent in an isolated sandbox with fully intercepted networking",
+      "note": "not offered: outside the product's scope; CLRK runs and governs YOUR agent code, it has no first-party browser/computer-use/research agent of its own.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/guides/package-a-custom-agent.md",
+      "quote": "Turn a Python, Node, or shell script into a CLRK agent ... `agent.py`: ... `FROM python:3.12-slim`",
+      "note": "Provided via your own OCI image; the first-party packaging guide's worked example is Python.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/guides/package-a-custom-agent.md",
+      "quote": "Turn a Python, Node, or shell script into a CLRK agent: choose the right kind, honor the I/O contract, build an image, write the manifest, invoke.",
+      "note": "Node is explicitly named as a supported agent language, packaged via your own OCI image (Claude Code example agent is Node-based `@anthropic-ai/claude-code`).",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/getting-started/core-concepts.md",
+      "quote": "TaskAgent ... Each fire gets its own sandbox. ... the request model composes uniformly with HTTP ingress",
+      "note": "not offered: sandboxes are reached only through the platform's HTTP ingress/EgressGateway plumbing; no public IPv4 assigned per sandbox is documented.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://apoxy.dev/pricing",
+      "quote": "Agents CLRK The agent runtime. gVisor isolation, credential injection, and every request through Envoy.",
+      "note": "not offered: outside the product's scope; no GPU machine type is documented or priced.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/package-a-custom-agent.md",
+      "quote": "docker buildx build --platform=linux/amd64,linux/arm64 -t <your-registry>/word-count:0.1 --push .",
+      "note": "not offered: outside the product's scope; agent images are built for linux/amd64 or linux/arm64, no Windows sandbox.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/package-a-custom-agent.md",
+      "quote": "docker buildx build --platform=linux/amd64,linux/arm64 -t <your-registry>/word-count:0.1 --push .",
+      "note": "not offered: outside the product's scope; Linux gVisor sandboxes only, no macOS machines.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/guides/package-a-custom-agent.md",
+      "quote": "docker buildx build --platform=linux/amd64,linux/arm64 -t <your-registry>/word-count:0.1 --push . ... Worker pools pull whatever architecture they run on. Cover both if you're not certain.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://apoxy.dev/pricing",
+      "quote": "Can I run Apoxy in my own VPC? + Yes, on Premium. We ship a Helm chart and a Terraform module that deploy our control plane and data plane into an EKS / GKE / AKS cluster you operate.",
+      "note": "BYOC/self-hosted deployment (Premium, or self-host CLRK AGPLv3) lets you run the whole control/data plane in your own cluster/region, including EU; GDPR DPAs are also offered on Standard/Premium.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://apoxy.dev/docs/clrk/getting-started/core-concepts.md",
+      "quote": "A `DaemonAgent` is a long-lived process that the supervisor keeps alive per `restartPolicy` (`Always`, `OnFailure`, `Never`). ... `spec.maxRestarts` caps restart attempts; `spec.maxLifetimeSeconds` forces a periodic recycle for processes that accumulate state.",
+      "note": "DaemonAgents run indefinitely by default (maxLifetimeSeconds is an optional recycle, not a mandatory cap); TaskAgents instead use a per-execution `timeout` (default 100s, user-settable) capping a single request/run, not a session ceiling.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://apoxy.dev/clrk",
+      "quote": "Run any agent — CrewAI, LangGraph, ADK, OpenAI Agents — in a gVisor sandbox with every byte of egress routed through Envoy. ... Isolation gVisor userspace Each execution gets its own network namespace. Compromised agent code can't reach the host or the cluster.",
+      "note": "CLRK sandboxes run under gVisor (a userspace-kernel sandbox, not KVM/hardware virtualization), which does not expose /dev/kvm to the guest, so nested VMs/emulators cannot run inside. The official product page confirms gVisor isolation for every agent execution; no first-party option to run KVM-based nested virtualization is documented anywhere on apoxy.dev.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/guides/persist-state-across-runs.md",
+      "quote": "CLRK sandboxes have no durable cross-worker persistent storage by default. Each invocation starts from a fresh rootfs; `/tmp` and any image-baked filesystem state reset on every run.",
+      "note": "not offered: no per-sandbox attach-volume API is documented. WorkerPool.template.extraVolumes/extraVolumeMounts (workerpools.md) are BYOC-operator-level k8s pod volumes for the worker node, not a customer-facing volume attachable to an individual agent execution/sandbox; the only per-execution persistence is the worker-local sqlite TaskAgent.spec.state mount, not an attachable volume.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://apoxy.dev/docs/clrk/reference/clrk/workerpools.md",
+      "quote": "the gVisor/runsc-load-bearing fields (privileged + seccomp Unconfined + the AppArmor annotation, the run/state/varlog scratch volumes, the dispatch port, and the downward-API env) are owned by the controller's pod builder and are not expressible here, so a user edit cannot break the sandbox runtime.",
+      "note": "derived: sandboxes are gVisor/runsc (userspace-kernel), not a full VM/microVM, and run without privileged access; there is no ssh/exec/root access documented (root is unestablished, ssh=false) so there is no way to configure guest-side iptables/nftables inside the sandbox. Network policy (egress allow/deny) is enforced entirely outside the sandbox at the Envoy EgressGateway.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://apoxy.dev/docs/clrk/guides/query-fleet-metrics",
+      "quote": "CLRK serves fleet stats - token usage, request rates, latency percentiles, error counts - from a read-only metrics API on the aggregated apiserver. Every value is a query-time aggregation over the same otel_traces / otel_logs your EgressGateway already writes. The API has two halves: A catalog - the",
+      "note": "granularity: per-agent; cost: no; The metrics API (metrics.clrk.apoxy.dev) provides usage quantities (tokens, requests, bytes, invocations, errors, latencies) queryable per TaskAgent or DaemonAgent, but does not return cost/money values. Granularity is per-agent or per-gateway. Available metrics include gen_ai.tokens, gen_ai.duration, mcp.calls, egress.requests, egress.bytes, agent.invocations, agent.errors, budget.denied. Usage is a Kubernetes resource.Quantity serialized as a string for precision.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://apoxy.dev/pricing",
+  "locations_quote": "PoP coverage 35+ regions",
+  "locations_checked": "2026-10-01"
+}

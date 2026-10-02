@@ -1,0 +1,250 @@
+{
+  "id": "tensorpool",
+  "name": "TensorPool",
+  "url": "https://tensorpool.dev",
+  "category": "gpu-cloud",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt",
+        "legacy"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": null,
+    "macos": null,
+    "arm64": null,
+    "gpu": true,
+    "snapshot": null,
+    "pause_resume": null,
+    "fork": null,
+    "persistent_disk": null,
+    "volumes": null,
+    "auto_stop_idle": null,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": null,
+    "nested_virt": null,
+    "root": null,
+    "systemd": null,
+    "browser": null,
+    "desktop": null,
+    "computer_use": null,
+    "code_interpreter": null,
+    "agent_harnesses": null,
+    "ssh": null,
+    "public_ipv4": null,
+    "inbound_https": null,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": null,
+    "static_egress_ip": null,
+    "private_network": null,
+    "self_host": null,
+    "byoc": null,
+    "open_source": null,
+    "soc2": null,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [
+      "H100 SXM",
+      "H200 SXM",
+      "B200 SXM",
+      "B300 SXM",
+      "L40S"
+    ],
+    "regions": null,
+    "lang_python": null,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": null,
+    "wake_on_request": null,
+    "live_resize": null,
+    "fork_running": null,
+    "memory_snapshot_fork": null,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": null,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "guest_firewall": true,
+    "volume_attach": true,
+    "volume_shared": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Discontinued or closed to new customers, confirmed on the live site 2026-09-29. The pricing page (rendered 2026-09-29) still shows the same numbers as the card: B200 SXM $4.99/h, H200 SXM $2.99, B300 SXM $5.49, H100 SXM $1.99, L40S $1.49, CPU $0.015/h. Shared storage $100/TB-mo; Object storage $50/TB-mo + $0.005/1,000 requests, 'No egress or ingress charges'. Standard plan: on-",
+    "On-demand GPU hours: H100 SXM $1.99, H200 $2.99, B200 $4.99, B300 $5.49, L40S $1.49; CPU $0.015/h unit ambiguous on website. Shared storage $100/TB-mo, object $50/TB-mo+$0.005/1000 requests; no ingress/egress fee for object storage. Reservations/enterprise quoted. Conditional $20 GitHub-star credit not universal.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "2026-09-29: API backend engine.tensorpool.dev returns 503 'TensorPool is no longer accepting API requests.' The docs.tensorpool.dev subdomain no longer resolves (no DNS record). The YC directory lists status 'Acquired' (acquirer not named). The last blog post is 2026-03-31, the last CLI commit 2026-04-13 and the last PyPI release 0.0.9 on 2026-03-29. The pricing page is still live but no longer actionable."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/tensorpool",
+    "https://tensorpool.dev/pricing"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": 128,
+    "raise": "sales",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Standard advertises on-demand access up to 128 GPUs; Enterprise advertises thousands through contact.",
+    "notes": "128 is published Standard-plan GPU ceiling, not reserved inventory or proof of bypassing billing/anti-abuse checks. CPU/instance quotas, verification and review time not published.",
+    "sources": [
+      "https://tensorpool.dev/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "status": "discontinued",
+  "audit_2026_09_29": {
+    "applied": 2,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "http://web.archive.org/web/2026/https://docs.tensorpool.dev/cli/cluster-commands.md",
+      "quote": "This action is irreversible. Make sure to back up any important data before destroying a cluster.",
+      "note": "Clusters have only create/edit/destroy (no stop/sleep); nothing is saved automatically. Persistence is via attached storage volumes or object storage.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "http://web.archive.org/web/20260520105946/https://docs.tensorpool.dev/llms.txt",
+      "quote": null,
+      "note": "Full API/CLI index (cluster, job, storage, object-storage, ssh, user endpoints) has no snapshot/image/checkpoint operation. Absence inferred from complete API index, not an explicit statement.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "http://web.archive.org/web/2026/https://docs.tensorpool.dev/features/agent.md",
+      "quote": "The TensorPool Agent is an autonomous monitoring and recovery system for long-running distributed training jobs on Kubernetes, Slurm, or TensorPool Jobs.",
+      "note": "TensorPool Agent (beta) is a provider-side SRE agent that watches training jobs and tries recovery; configured in the dashboard, not a prompt/stream/follow-up API for a coding-agent harness inside the machine.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Dedicated GPU nodes/VMs with SSH and sudo (docs use 'sudo apt install'); iptables/nftables should work. Not stated in docs.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "http://web.archive.org/web/2026/https://docs.tensorpool.dev/features/storage.md",
+      "quote": "Storage volumes are high-performance shared volumes designed for distributed training on multi-node clusters.",
+      "note": "tp storage create <size_gb>; tp cluster attach <cluster_id> <storage_id>; mounted at /mnt/<storage_id> on each instance; attach/detach restarts all cluster nodes. Only attachable to multi-node GPU clusters and CPU instances. $100/TB-month (live pricing page: 'Shared Storage $100 / TB / month'). Object storage (S3) can be FUSE-mounted by the user via rclone.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "http://web.archive.org/web/2026/https://docs.tensorpool.dev/features/storage.md",
+      "quote": "Shared data: Attach the same storage volume to multiple clusters to share data",
+      "note": "POSIX shared filesystem mounted read-write on every node of a multi-node cluster and attachable to several clusters at once. Org-scoped S3 object storage is also shared.",
+      "checked": "2026-09-29"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.ycombinator.com/companies/tensorpool",
+      "quote": "TensorPool is no longer accepting API requests; service discontinued as of 2026-09-29. No usage/billing API endpoint was documented in the available CLI or REST API index (cluster, job, storage, object-storage, ssh, user endpoints); billing was dashboard or invoice only.",
+      "note": "granularity: none; cost: no; Service is discontinued and API returns 503. No evidence of per-sandbox or per-tag usage endpoint in documented CLI or API reference. Billing dashboard existed but was account-level only.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://tensorpool.dev/pricing",
+  "locations_quote": "TensorPool is no longer accepting API requests. The provider was acquired and closed to new customers as of 2026-09-29. No regions were documented in the provider's public docs or pricing pages.",
+  "locations_checked": "2026-10-01"
+}

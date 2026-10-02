@@ -1,0 +1,1287 @@
+{
+  "id": "kamatera",
+  "name": "Kamatera",
+  "url": "https://www.kamatera.com/pricing/",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "hourly-A",
+      "label": "Availability shared hourly",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 104,
+      "max_ram_gib": 512,
+      "sizes": [
+        {
+          "name": "A-1c-2g-50GB",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 50,
+          "hour": 0.0136986301369863,
+          "month_cap": null
+        },
+        {
+          "name": "A-2c-4g-50GB",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.0273972602739726,
+          "month_cap": null
+        },
+        {
+          "name": "A-4c-8g-50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.0547945205479452,
+          "month_cap": null
+        },
+        {
+          "name": "A-8c-16g-50GB",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 50,
+          "hour": 0.12602739726027398,
+          "month_cap": null
+        },
+        {
+          "name": "A-16c-32g-50GB",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 50,
+          "hour": 0.2684931506849315,
+          "month_cap": null
+        },
+        {
+          "name": "A-32c-64g-50GB",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 50,
+          "hour": 0.7068493150684931,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": 60,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "NY2 Linux calculator component sum CPU+RAM+50GB disk, divided by730. TypeB 4/8/50 rendered $88/month equivalent, $0.121/hour rounded. Hourly traffic differs from monthly bundle.",
+      "cpu_class": "shared"
+    },
+    {
+      "key": "monthly-A",
+      "label": "Availability shared monthly",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "A-1c-2g-50GB",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 50,
+          "hour": 10,
+          "month_cap": 10
+        },
+        {
+          "name": "A-2c-4g-50GB",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 20,
+          "month_cap": 20
+        },
+        {
+          "name": "A-4c-8g-50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 40,
+          "month_cap": 40
+        },
+        {
+          "name": "A-8c-16g-50GB",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 50,
+          "hour": 92,
+          "month_cap": 92
+        },
+        {
+          "name": "A-16c-32g-50GB",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 50,
+          "hour": 196,
+          "month_cap": 196
+        },
+        {
+          "name": "A-32c-64g-50GB",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 50,
+          "hour": 516,
+          "month_cap": 516
+        },
+        {
+          "name": "Basic",
+          "vcpu": 1,
+          "ram_gib": 1,
+          "disk_gib": 20,
+          "hour": 4,
+          "month_cap": 4
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "1 month",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": 60,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Estimator-only encoding: sizes.hour and month_cap both equal full monthly rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff. For valid workloads with sessions >= peak concurrency it charges one monthly rental per concurrent machine, including off-hours. Setup/term cash outlays are caveated separately.",
+      "cpu_class": "shared"
+    },
+    {
+      "key": "hourly-B",
+      "label": "General purpose reserved thread hourly",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "B-1c-2g-50GB",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 50,
+          "hour": 0.026027397260273973,
+          "month_cap": null
+        },
+        {
+          "name": "B-2c-4g-50GB",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.0589041095890411,
+          "month_cap": null
+        },
+        {
+          "name": "B-4c-8g-50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.12054794520547946,
+          "month_cap": null
+        },
+        {
+          "name": "B-8c-16g-50GB",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 50,
+          "hour": 0.2547945205479452,
+          "month_cap": null
+        },
+        {
+          "name": "B-16c-32g-50GB",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 50,
+          "hour": 0.5506849315068493,
+          "month_cap": null
+        },
+        {
+          "name": "B-32c-64g-50GB",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 50,
+          "hour": 1,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": 60,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "NY2 Linux calculator component sum CPU+RAM+50GB disk, divided by730. TypeB 4/8/50 rendered $88/month equivalent, $0.121/hour rounded. Hourly traffic differs from monthly bundle.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "monthly-B",
+      "label": "General purpose reserved thread monthly",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "B-1c-2g-50GB",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 50,
+          "hour": 19,
+          "month_cap": 19
+        },
+        {
+          "name": "B-2c-4g-50GB",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 43,
+          "month_cap": 43
+        },
+        {
+          "name": "B-4c-8g-50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 88,
+          "month_cap": 88
+        },
+        {
+          "name": "B-8c-16g-50GB",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 50,
+          "hour": 186,
+          "month_cap": 186
+        },
+        {
+          "name": "B-16c-32g-50GB",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 50,
+          "hour": 402,
+          "month_cap": 402
+        },
+        {
+          "name": "B-32c-64g-50GB",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 50,
+          "hour": 730,
+          "month_cap": 730
+        },
+        {
+          "name": "Standard",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "disk_gib": 20,
+          "hour": 25,
+          "month_cap": 25
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "1 month",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": 60,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Estimator-only encoding: sizes.hour and month_cap both equal full monthly rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff. For valid workloads with sessions >= peak concurrency it charges one monthly rental per concurrent machine, including off-hours. Setup/term cash outlays are caveated separately.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "hourly-D",
+      "label": "Dedicated hourly",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "D-1c-2g-50GB",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 50,
+          "hour": 0.03972602739726028,
+          "month_cap": null
+        },
+        {
+          "name": "D-2c-4g-50GB",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.09315068493150686,
+          "month_cap": null
+        },
+        {
+          "name": "D-4c-8g-50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.18904109589041096,
+          "month_cap": null
+        },
+        {
+          "name": "D-8c-16g-50GB",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 50,
+          "hour": 0.4191780821917808,
+          "month_cap": null
+        },
+        {
+          "name": "D-16c-32g-50GB",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 50,
+          "hour": 0.8246575342465754,
+          "month_cap": null
+        },
+        {
+          "name": "D-32c-64g-50GB",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 50,
+          "hour": 1.5520547945205478,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": 60,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "NY2 Linux calculator component sum CPU+RAM+50GB disk, divided by730. TypeB 4/8/50 rendered $88/month equivalent, $0.121/hour rounded. Hourly traffic differs from monthly bundle.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "monthly-D",
+      "label": "Dedicated monthly",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "D-1c-2g-50GB",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 50,
+          "hour": 29,
+          "month_cap": 29
+        },
+        {
+          "name": "D-2c-4g-50GB",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 68,
+          "month_cap": 68
+        },
+        {
+          "name": "D-4c-8g-50GB",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 138,
+          "month_cap": 138
+        },
+        {
+          "name": "D-8c-16g-50GB",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 50,
+          "hour": 306,
+          "month_cap": 306
+        },
+        {
+          "name": "D-16c-32g-50GB",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 50,
+          "hour": 602,
+          "month_cap": 602
+        },
+        {
+          "name": "D-32c-64g-50GB",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 50,
+          "hour": 1133,
+          "month_cap": 1133
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "1 month",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": 60,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Estimator-only encoding: sizes.hour and month_cap both equal full monthly rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff. For valid workloads with sessions >= peak concurrency it charges one monthly rental per concurrent machine, including off-hours. Setup/term cash outlays are caveated separately.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "burstable-T",
+      "label": "Type T burstable",
+      "flags": [
+        "alt",
+        "burstable"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Hourly-only CPU bursting; quote and CPU usage economics not captured.",
+      "cpu_class": "shared",
+      "baseline_pct": 10
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.05,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 0,
+    "egress_gib": 0.01,
+    "ipv4_month": 0,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Usage account",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Account quotas and stock availability must be checked before deploying 50 concurrent machines; no quota approval implied."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 100
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": true,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "volume_shared": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "DIY infrastructure rather than an agent-managed sandbox: guest installation, HTTPS/domain setup, abuse controls and operations are customer responsibilities. Linux guest administrative capabilities are not preinstalled agent features. 30% guest CPU utilization does not reduce allocated-compute charges. Unknowns remain null; a partial subtotal is not a complete invoice.",
+    "Component-derived A4/8/50GB $40/month equivalent ($0.0547945/h), B4/8/50GB $88/month equivalent ($0.1205479/h). A interactive capture did not match selected shape and was discarded; B capture validated formula.",
+    "Hourly post-trial traffic costs $0.01/GB both directions. Monthly plans include5TB in most locations, 1TB in HongKong/Sydney/Tokyo/Singapore. A single card network block cannot encode both; monthly estimate is conservative.",
+    "50Mbps unmetered option has an inbound/outbound ratio restriction, not unrestricted symmetric free bandwidth.",
+    "Powered-off hourly calculator formula retains $5/month/IP plus $0.05/GB/month storage; for oneIP/50GB $7.50/730h. This is not full VM billing. Primary IP while running included in selected total; no additional recurring IPv4 line added by card.",
+    "Setup/minimum billing increment beyond advertised hourly basis not independently contractual-verified. Snapshot standalone price unknown.",
+    "Windows Server licence is $10 or $19 per server per month (edition-dependent). It is not encoded as windows_vcpu_h because it is per server, not per vCPU."
+  ],
+  "sources": [
+    "https://www.kamatera.com/pricing/",
+    "https://www.kamatera.com/faq/answer/what-are-the-traffic-data-transfer-rates-for-hourly-billed-servers/",
+    "https://www.kamatera.com/faq/answer/what-are-the-limits-on-internet-data-on-monthly-server-plans/",
+    "https://www.kamatera.com/faq/answer/will-i-be-charged-for-my-hourly-server-even-when-its-powered-off/",
+    "https://www.kamatera.com/faq/answer/what-backup-services-are-available-for-my-cloud-server/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "Valid credit card for trial, or deposit as described in trial billing FAQ.",
+    "tiers": null,
+    "notes": "Trial credit covers one server up to $100 and 1 TB traffic; overages may be billed, so this is not established as a hard one-server account cap. Paid fleet quotas and increase process unknown.",
+    "sources": [
+      "https://www.kamatera.com/faq/answer/why-was-i-charged-during-my-30-day-free-trial-period/",
+      "https://www.kamatera.com/faq/answer/what-are-the-terms-of-the-free-trial/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 9,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 3
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.kamatera.com/faq/answer/what-backup-services-are-available-for-my-cloud-server/",
+      "quote": "We provide the option to back up any of your servers once per day for up to 14 days, for an additional monthly cost which is based on your server’s specifications.",
+      "note": "Plain VPS: disk persists across power-off (billed for storage/IP while off); the only automatic state capture is the paid daily backup add-on (14-day retention), which is scheduled, not on stop/idle.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://github.com/cloudwm/cloudcli/blob/master/docs/cloudcli_server_snapshot.md",
+      "quote": "--create string   Name of a new snapshot to create",
+      "note": "Official cloudcli (cloudwm) 'server snapshot' supports create/delete/revert. Disk only: KB calls snapshots 'point-in-time copies of your server’s disk' (no memory); console Snapshots tab also offers revert/commit. To boot new servers, use 'Clone Server' or 'Clone to hard disk library' (private image usable to create new servers or attach as a disk) — KB: 'backups are stored as server images. These images can be used to restore your server or to create new ones.'",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "With full root access and a Docker-ready environment, you can install any [Python](https://www.kamatera.com/applications/python/) or [Node.js](https://www.kamatera.com/services/node-js/) runtime, configure agentic frameworks, and set up the necessary environment variables to connect your agents to external APIs and large language models.",
+      "note": "AI-agent page is generic VPS hosting (DIY install); no agent-driving API.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://www.kamatera.com/knowledgebase/how-to-set-up-a-firewall-on-kamatera/",
+      "quote": "**Output Policy**: Defines the default action for outgoing traffic.",
+      "note": "Per-server console firewall (Firewall tab in server settings): default input/output policy Accept/Reject/Drop, rules by direction, protocol (TCP/UDP/ICMP), source/destination IP/network, port, IP sets. Free basic firewall; optional appliance firewalls on VLANs (OPNsense $15/mo, Sophos XG $157.80/mo managed, FortiGate by quote).",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://www.kamatera.com/knowledgebase/how-to-set-up-a-firewall-on-kamatera/",
+      "quote": "**Direction**Select In for Inbound or Out for Outbound Traffic.",
+      "note": "Same console firewall (input policy + inbound rules by source IP/IP set/port). Private VLAN networks available; servers can be created without a WAN NIC (Terraform: network block, 'wan' or private network).",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://www.kamatera.com/knowledgebase/how-to-whitelist-ip-addresses-using-an-internal-firewall-on-linux/",
+      "quote": "IPTables is a robust tool included in most Linux distributions, directly integrated into the Linux kernel.",
+      "note": "Full KVM/VMware-class VM with root; Kamatera KB documents UFW/iptables inside the server.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "set up the necessary environment variables to connect your agents to external APIs and large language models",
+      "note": "No credential-injecting proxy; secrets are whatever you put on the server (env vars/files).",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://www.kamatera.com/faq/answer/do-you-offer-file-storage-solutions/",
+      "quote": "It acts like a virtual disk that you can attach to any cloud server.",
+      "note": "Cloud Block Storage ($5 per 100 GB-month, billed per minute on the server's cycle); also extra server disks via cloudcli 'server disk --add' / Terraform disk_sizes_gb.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://www.kamatera.com/solutions/virtual-machine-hosting/",
+      "quote": "Hypervisor: KVM with full virtualization support",
+      "note": "Full VM cloud server product; hypervisor explicitly documented as KVM.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.kamatera.com/knowledgebase/how-to-upload-custom-images/",
+      "quote": "You can upload and use your own custom disk images to customize your Kamatera cloud servers... Custom images can be uploaded through the Kamatera cloud management console using a direct HTTP/HTTPS/FTP link or by uploading a server image.",
+      "note": "not offered: outside the product's scope. Custom images are full VM disk images (raw server images) used as boot templates, not Docker/OCI container images.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.kamatera.com/faq/answer/do-you-offer-nested-virtualization/",
+      "quote": "We currently do not support nested virtualization on our cloud servers. Our infrastructure is optimized to provide the best performance and stability for a single-level virtualization environment.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "Kamatera is a global cloud infrastructure provider... Cloud Servers, Cloud Desktop, Virtual Private Cloud, Cloud Firewall, Load Balancers, Block Storage",
+      "note": "not offered: outside the product's scope. Kamatera is a general-purpose VPS/IaaS provider, not a browser-automation/stealth product; no stealth or fingerprint-evasion feature exists.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "Kamatera is a global cloud infrastructure provider... Cloud Servers, Cloud Desktop, Virtual Private Cloud, Cloud Firewall, Load Balancers, Block Storage",
+      "note": "not offered: outside the product's scope. Plain VPS/VM hosting; no CAPTCHA-solving capability.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://www.kamatera.com/faq/answer/does-kamatera-offer-residential-ip-addresses/",
+      "quote": "Kamatera is a global cloud infrastructure provider. By default, all our servers are assigned Dedicated Datacenter IPs. We do not directly provide residential ISP-based IP addresses.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://www.kamatera.com/faq/answer/clone-a-server/",
+      "quote": "NOTE: Before you begin, you MUST NOT clone a server that is in a domain... Click \"Action\" > \"Clone Server\"... Choose whether to turn the server/s on.",
+      "note": "Clone-server workflow does not require the source server to be powered off first; the only documented caveat is about domain membership. No mention of memory state (processes) being carried over, consistent with memory_snapshot_fork=false.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "Kamatera is a global cloud infrastructure provider... Cloud Servers",
+      "note": "not offered: outside the product's scope. Kamatera cloud servers are always-on VPS/VMs you start/stop yourself; there is no serverless wake-on-request model.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.kamatera.com/faq/answer/do-you-offer-file-storage-solutions/",
+      "quote": "Cloud Block Storage: This is the primary method for adding “hard drive” space to your servers. It acts like a virtual disk that you can attach to any cloud server.",
+      "note": "Block Storage is documented as attaching to a cloud server (singular, one at a time), not as a volume simultaneously mounted by multiple running machines. Multi-host sharing is only offered at the app layer (MinIO/NextCloud), not as a shared block volume.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "Kamatera is a global cloud infrastructure provider... Cloud Servers",
+      "note": "not offered: outside the product's scope. Plain always-on VPS billed hourly/monthly; no automatic idle-stop feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "With full root access and a Docker-ready environment, you can install any Python or Node.js runtime, configure agentic frameworks, and set up the necessary environment variables to connect your agents to external APIs and large language models.",
+      "note": "not offered: outside the product's scope. DIY hosting guidance only; no first-party API that drives a Kamatera-owned browser/computer-use/research agent.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "Kamatera is a global cloud infrastructure provider... Cloud API Master your cloud through powerful automation",
+      "note": "not offered: outside the product's scope. Kamatera ships a REST Cloud API and cloudcli/Terraform provider, but no MCP server for controlling sandboxes was found in its docs or GitHub org (github.com/cloudwm).",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "With full root access and a Docker-ready environment, you can install any Python or Node.js runtime, configure agentic frameworks, and set up the necessary environment variables to connect your agents to external APIs and large language models.",
+      "note": "Full root Linux/Windows VM; Python installable/available like any VPS (also offered as a one-click app via kamatera.com/applications/python/).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "With full root access and a Docker-ready environment, you can install any Python or Node.js runtime, configure agentic frameworks...",
+      "note": "Full root Linux/Windows VM; Node.js installable/available like any VPS (also offered as a one-click app via kamatera.com/services/node-js/).",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.kamatera.com/knowledgebase/how-to-set-up-a-firewall-on-kamatera/",
+      "quote": "**Output Policy**: Defines the default action for outgoing traffic.",
+      "note": "Console/guest firewall rules operate at IP/port/protocol (direction, source/destination IP or IP set, port, protocol) - no HTTP method/path level egress rules are documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://www.kamatera.com/faq/answer/does-kamatera-offer-residential-ip-addresses/",
+      "quote": "By default, all our servers are assigned Dedicated Datacenter IPs.",
+      "note": "Each server gets a dedicated (fixed) datacenter IP used for both inbound and outbound traffic; it does not change unless the customer changes it.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "Kamatera is a global cloud infrastructure provider... Cloud Servers, Cloud Desktop, Virtual Private Cloud, Cloud Firewall, Load Balancers, Block Storage, Reseller Hosting, Virtual Dedicated Servers, Cloud API",
+      "note": "No GPU server product, pricing page, or GPU-related URL exists anywhere on kamatera.com (checked full site-map crawl); product line as modeled (general-purpose VM) does not offer GPU instances.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.kamatera.com/blog/soc-2-on-your-terms-a-guide-for-kamatera-users/",
+      "quote": "Kamatera provides a secure, high-performance foundation. But the full responsibility for cloud compliance is shared between the provider and the user... This guide walks through what SOC 2 actually requires at the infrastructure level, and how to meet those requirements on Kamatera.",
+      "note": "Kamatera's own content frames SOC 2 as something the customer must achieve on top of the infrastructure; no SOC 2 attestation/report for Kamatera itself is claimed or linked anywhere on the site.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "Kamatera is a global cloud infrastructure provider... Cloud Servers, Cloud Desktop, Virtual Private Cloud, Cloud Firewall, Load Balancers, Block Storage",
+      "note": "No HIPAA/BAA page, mention, or badge found anywhere on kamatera.com in the crawled site-map or compliance blog/KB pages.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.kamatera.com/kb/security-and-compliance/",
+      "quote": "How to Enable Two-Factor Authentication (2FA) on Kamatera Two-factor authentication (2FA) adds an extra layer of security to your cloud infrastructure by requiring a one-time verification code...",
+      "note": "The account-security knowledgebase only documents 2FA for console login; no SAML/OIDC SSO offering is documented.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.kamatera.com/solutions/virtual-machine-hosting/",
+      "quote": "Build your VM server on enterprise-grade infrastructure... CPU: Up to 104 dedicated vCPUs (Intel Xeon)",
+      "note": "Always-on VPS/VM billed hourly or monthly; it runs until the customer powers it off or terminates it, with no vendor-imposed maximum session length.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://github.com/cloudwm/cloudcli/blob/master/docs/cloudcli_server.md",
+      "quote": "cloudcli server resume - Resume server/s ... cloudcli server suspend - Suspend server/s",
+      "note": "Kamatera's own cloudcli (auth via the same --api-clientid/--api-secret as the Kamatera console/Terraform provider) exposes distinct 'suspend' and 'resume' server actions, separate from poweroff/poweron/reboot. This is a first-party pause/resume capability the card missed; not fully documented what happens to billing/RAM state beyond the existing power-off storage/IP charge already in the card, hence medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://github.com/cloudwm/cloudcli/blob/master/docs/cloudcli_server_snapshot.md",
+      "quote": "--create string   Name of a new snapshot to create",
+      "note": "Confirms existing card evidence: Kamatera snapshots/clones are disk-only point-in-time copies used to restore or create new servers; there is no memory-inclusive fork (processes are not kept running).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "With full root access and a Docker-ready environment, you can install any Python or Node.js runtime, configure agentic frameworks, and set up the necessary environment variables to connect your agents to external APIs and large language models.",
+      "note": "Kamatera is a plain VM/VPS platform (plus a separate paid 'Cloud Desktop' VDI product); it does not ship a managed/hosted browser feature. Everything, including any browser, is something the customer installs themselves.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "With full root access and a Docker-ready environment, you can install any Python or Node.js runtime, configure agentic frameworks, and set up the necessary environment variables to connect your agents to external APIs and large language models.",
+      "note": "No screenshot/click-driven computer-use API is offered; the AI-agents page describes DIY installation of frameworks on a generic VM, not a provider-hosted GUI-automation API.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.kamatera.com/solutions/use-cases/ai-agents/",
+      "quote": "Does a VPS for AI agents support Linux-based frameworks like OpenClaw, LangChain, AutoGen, CrewAI, or AutoGPT? Yes. With full root access and a Docker-ready environment, you can install any Python or Node.js runtime, configure agentic frameworks...",
+      "note": "Explicitly DIY: no coding-agent harness (Claude Code, Codex, OpenCode, etc.) is preinstalled or offered as a template/image; the customer installs any framework themselves.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.kamatera.com/knowledgebase/connecting-a-custom-domain-to-your-kamatera-server/",
+      "quote": "An active Kamatera server with a public IP address ... Domain name → DNS → Server IP → Web server → Website ... The DNS configuration steps in this guide follow standard practice and apply regardless of which domain registrar you use.",
+      "note": "Kamatera gives a raw public IPv4 and lets you point any domain at it, but there is no provider-managed HTTPS URL/reverse proxy — DNS, web server, and TLS certs are entirely the customer's own setup, same convention used for peer VPS hyperscalers (DigitalOcean, Linode, Vultr, Contabo) already in this dataset.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.kamatera.com/faq/answer/what-operating-systems-are-available-on-kamatera/",
+      "quote": "AlmaLinux Alpine Linux Arch Linux CentOS Debian Server FreeBSD Gentoo Linux Rocky Linux Ubuntu Server Windows Server Debian Desktop Fedora Linux Mint Ubuntu Desktop Windows Desktop",
+      "note": "Full official OS list is Linux distros + Windows Server/Desktop only; no macOS image is offered.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.kamatera.com/pricing/",
+      "quote": "A-1c-2g-50GB / B-1c-2g-50GB / D-1c-2g-50GB ... (vCPU-based sizing, no architecture toggle)",
+      "note": "Pricing/spec pages and OS list show no ARM/Ampere/Graviton option; all server types are generic vCPU sizes with no architecture selector, i.e. x86-64 only.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.kamatera.com/company/about/",
+      "quote": "We are a global cloud services platform provider, providing enterprise-grade cloud infrastructure products to organizations of all types and sizes. ... With a global data center network and thousands of servers deployed worldwide...",
+      "note": "Kamatera runs its own proprietary data centers and sells hosted VM capacity; there is no distributable software package a customer could run on their own infrastructure.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.kamatera.com/company/about/",
+      "quote": "We are a global cloud services platform provider ... With a global data center network and thousands of servers deployed worldwide, Kamatera proudly serves a diverse clientele...",
+      "note": "Kamatera only deploys into its own data centers/cloud; there's no managed-into-your-cloud-account (AWS/GCP/Azure) deployment option offered.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.kamatera.com/company/about/",
+      "quote": "Learn about the world’s most flexible cloud provider. We are a global cloud services platform provider... Our parent company, The OMC Group has been providing cloud solutions since 1995.",
+      "note": "Kamatera is a proprietary commercial cloud platform (owned by The OMC Group); only client tooling (cloudcli, Terraform provider) is open source on GitHub, not the core sandbox/VM platform itself, so open_source=false for the product is correct.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/Kamatera/terraform-provider-kamatera/master/kamatera/resource_server.go",
+      "quote": "if d.HasChange(\"image_id\") && !d.Get(\"allow_recreate\").(bool) { return diag.Errorf(\"changing server image requires recreation...\") } ... if d.HasChanges(\"cpu_type\", \"cpu_cores\") { newCPU = fmt.Sprintf(\"%v%v\", newCPUCores, newCPUType) } ... if newCpu != \"\" { postServerConfigure(... CPU: newCpu) } if newRam != 0 { postServerConfigure(... RAM: newRam) }",
+      "note": "Kamatera's own Terraform provider (and cloudcli's `server configure --cpu --ram`) changes cpu_cores/cpu_type/ram_mb on an existing server via a dedicated 'configure' API call, with no allow_recreate gate — unlike image/network/ssh_pubkey/startup_script/datacenter changes, which explicitly error out unless allow_recreate=true. This shows CPU/RAM resize is a first-party in-place operation that keeps the same server (disk/IP/ID), not a destroy+recreate; the exact reboot/downtime behavior during the resize itself is not documented, hence medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "hourly-A": "shared",
+        "monthly-A": "shared",
+        "hourly-B": "dedicated",
+        "monthly-B": "dedicated",
+        "hourly-D": "dedicated",
+        "monthly-D": "dedicated",
+        "burstable-T": "burstable:10"
+      },
+      "source": "https://www.kamatera.com/faq/answer/which-cpu-types-are-offered-by-kamatera/",
+      "quote": "Type A - Availability: Server CPUs are assigned to a non-dedicated physical CPU thread with no resources guaranteed. ... Type B - General Purpose: Server CPUs are assigned to a dedicated physical CPU Thread with reserved resources guaranteed. ... Type D – Dedicated: Server CPUs are assigned to a dedicated physical CPU Core (2 threads) with reserved resources guaranteed. ... Type T – Burstable: Server CPUs are assigned to a dedicated physical CPU thread with reserved resources guaranteed. Exceeding an average CPU usage of 10% will be extra charged for CPU usage consumption.",
+      "note": "Card modes hourly-A/monthly-A use CPU Type A (shared, no guarantee); hourly-B/monthly-B and hourly-D/monthly-D use Types B and D respectively (both described as 'reserved resources guaranteed', B at thread level, D at full-core level) -> dedicated; burstable-T uses Type T, which reserves a thread but explicitly bills extra above a 10% average-CPU baseline, i.e. burstable with a published 10% baseline.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://github.com/cloudwm/cloudcli/blob/master/docs/cloudcli_server_reports.md",
+      "quote": "cloudcli server reports - Get server monthly usage reports",
+      "note": "granularity: per-sandbox; cost: yes; Kamatera's official cloudcli tool provides 'server reports' command that retrieves monthly usage reports per server (filterable by server ID or name). The FAQ confirms hourly servers are billed post-usage: 'Invoices are generated each month for the previous month's usage.' This indicates the backend tracks per-server billable usage.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Santa Clara",
+      "provider_region": "us-sc",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NY",
+      "city": "New York",
+      "provider_region": "us-ny2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IL",
+      "city": "Chicago",
+      "provider_region": "us-ch",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "GA",
+      "city": "Atlanta",
+      "provider_region": "us-at",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-la",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "WA",
+      "city": "Seattle",
+      "provider_region": "us-se",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "us-tx",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "FL",
+      "city": "Miami",
+      "provider_region": "us-mi",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "ca-tr",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-lo",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-fr",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "eu-ml",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "eu-md",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "eu-st",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "eu",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "RO",
+      "state": null,
+      "city": "Bucharest",
+      "provider_region": "eu-bu",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CN",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "as",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "il-ta",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "as-sg",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "NSW",
+      "city": "Sydney",
+      "provider_region": "au-sy",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "as-ty",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://www.kamatera.com/company/data-centers/",
+  "locations_quote": "We automatically detect your location and highlight the 3 closest data centers for optimal performance",
+  "locations_checked": "2026-10-01"
+}

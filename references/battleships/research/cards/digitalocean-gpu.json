@@ -1,0 +1,1427 @@
+{
+  "id": "digitalocean-gpu",
+  "name": "DigitalOcean GPU Droplets",
+  "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+  "category": "gpu-cloud",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand-mi325x-0",
+      "label": "MI325X, on-demand (×1)",
+      "flags": [
+        "stock"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 20,
+      "max_ram_gib": 164,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI325X": 3.8
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets"
+    },
+    {
+      "key": "on-demand-mi325x-1",
+      "label": "MI325X, on-demand (×8 node)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 160,
+      "max_ram_gib": 1310,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI325X": 3.8
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json.",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "on-demand-mi300x-2",
+      "label": "MI300X, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 20,
+      "max_ram_gib": 240,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI300X": 2.59
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets"
+    },
+    {
+      "key": "on-demand-mi300x-3",
+      "label": "MI300X, on-demand (×8 node)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 160,
+      "max_ram_gib": 1920,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI300X": 2.59
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json.",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "on-demand-h200-4",
+      "label": "H200, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 24,
+      "max_ram_gib": 240,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H200": 4.47
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets"
+    },
+    {
+      "key": "on-demand-h200-5",
+      "label": "H200, on-demand (×8 node)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 192,
+      "max_ram_gib": 1920,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H200": 4.47
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json.",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "on-demand-h100-6",
+      "label": "H100, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "other"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 20,
+      "max_ram_gib": 240,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 4.41
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets"
+    },
+    {
+      "key": "on-demand-h100-7",
+      "label": "H100, on-demand (×8 node)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "other"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 160,
+      "max_ram_gib": 1920,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 4.41
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json.",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "on-demand-rtx-4000-ada-8",
+      "label": "RTX-4000-ADA, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 32,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-4000-Ada": 0.76
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets"
+    },
+    {
+      "key": "on-demand-rtx-6000-ada-9",
+      "label": "RTX-6000-ADA, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 64,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-6000-Ada": 1.57
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets"
+    },
+    {
+      "key": "on-demand-l40s-10",
+      "label": "L40S, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "other"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 64,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L40S": 1.57
+      },
+      "note": "8-GPU host aggregate CPU/RAM not inferred by multiplying the 1-GPU marketing tile. Source: https://www.digitalocean.com/pricing/gpu-droplets"
+    },
+    {
+      "key": "reserved-b300-11",
+      "label": "B300, reserved",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "12-month contractual commitment",
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "B300": 7.94
+      },
+      "note": " Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    },
+    {
+      "key": "reserved-h200-12",
+      "label": "H200, reserved",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "12-month contractual commitment",
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H200": 3.4
+      },
+      "note": " Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json.",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "reserved-h100-13",
+      "label": "H100, reserved",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "12-month contractual commitment",
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 3.26
+      },
+      "note": " Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json.",
+      "gpu_min_count": 8
+    },
+    {
+      "key": "reserved-mi350x-14",
+      "label": "MI350X, reserved",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "12-month contractual commitment",
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI350X": 4.76
+      },
+      "note": " Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    },
+    {
+      "key": "reserved-mi325x-15",
+      "label": "MI325X, reserved",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "12-month contractual commitment",
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI325X": 2.88
+      },
+      "note": " Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    },
+    {
+      "key": "reserved-mi300x-16",
+      "label": "MI300X, reserved",
+      "flags": [
+        "sales",
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "12-month contractual commitment",
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI300X": 1.91
+      },
+      "note": " Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    },
+    {
+      "key": "spot-b300-17",
+      "label": "B300, spot",
+      "flags": [
+        "spot",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 28,
+      "max_ram_gib": 448,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "B300": 8
+      },
+      "note": "Price locked at creation for Droplet life; aims 2h notice but can evict with less or none. Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    },
+    {
+      "key": "spot-mi355x-18",
+      "label": "MI355X, spot",
+      "flags": [
+        "spot",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI355X": 2.97
+      },
+      "note": "Price locked at creation for Droplet life; aims 2h notice but can evict with less or none. Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    },
+    {
+      "key": "spot-mi350x-19",
+      "label": "MI350X, spot",
+      "flags": [
+        "spot",
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 300,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "MI350X": 2.46
+      },
+      "note": "Price locked at creation for Droplet life; aims 2h notice but can evict with less or none. Source: https://www.digitalocean.com/pricing/gpu-droplets ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 500,
+    "disk_gib_month": 0.1,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.06,
+    "paused_ram_billed": true
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0.01,
+    "ipv4_month": 0,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "On-demand",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Verify quotas and billing agreement."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 5
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "B300",
+      "H100",
+      "H200",
+      "L40S",
+      "MI300X",
+      "MI325X",
+      "MI350X",
+      "MI355X",
+      "RTX-4000-ADA",
+      "RTX-6000-ADA"
+    ],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Per-second with 5 minute minimum; powered-off Droplets STILL bill until destroyed; GPU Droplets have no CPU Droplet monthly cap. August 1 2026 price revision. Bundled CPU/RAM and local disks; transfer allowance included.",
+    "Any null count, CPU/RAM, billing increment or minimum is unverified, not unlimited/free.",
+    "This is GPU-product research, not a claim that every feature of the entire vendor documentation was audited. Unverified features are null.",
+    "GPU multi-count bundles, variant/region selection and fractional slices require a SKU-aware estimator; unsupported rows remain unpriced in strict cards.",
+    "Modes with gpu=null are intentionally excluded, not free GPU modes. Never substitute 0 for a null rate. Flags alt indicate DIY/ML infrastructure, not the same thing as managed untrusted-code sandboxes.",
+    "Unknown fee, storage or bandwidth means full monthly total may be unavailable. Rates exclude taxes.",
+    "Billing minimum conflict: docs (2026-08-25) say 60 s or $0.01 minimum; pricing-page FAQ says 5-minute minimum. Monthly: GPU Droplets have NO 672-h cap ('If you use your GPU Droplet for more than the standard 672-hour monthly limit, you will still be charged for the time you use'); embedded catalog monthly = hourly x 744. Newer customers may be charged mid-cycle when creating GPU Droplets.",
+    "Spot (public preview, Beta Service): no SLA, no support commitment, no service credits; 2-hour reclaim notice is best-effort ('may be reclaimed with less than two (2) hours' notice or ... with no notice'); boot and scratch disk data lost on reclaim; spot rate set independently of on-demand, locked at creation for the Droplet's life. Access 'limited to eligible accounts'."
+  ],
+  "sources": [
+    "https://www.digitalocean.com/pricing/gpu-droplets",
+    "https://docs.digitalocean.com/products/droplets/details/pricing/"
+  ],
+  "fleet": {
+    "default_max_instances": 0,
+    "default_max_vcpu": null,
+    "default_max_gpus": 0,
+    "raise": "self-serve",
+    "raise_time_days": 0,
+    "verification": "Payment method and tier prepayment/payment history.",
+    "tiers": "GPU Droplet counts at tiers 1–5: 0/1/2/4/16. Prepayments $0/$50/$250/$1,000/$4,000; larger/custom quotas require request.",
+    "notes": "GPU Droplet count is not physical GPU count for multi-GPU shapes. Tier 1 has no GPU Droplets. Immediate time describes prepaid tier changes only. AMD GPUs are gated: 'To use AMD GPUs, contact support to request access.' Multi-node GPU Droplets: 'To create multi-node GPU Droplets, you need to contact support to enable that functionality for your team.' Max 10 Droplets created at the same time (Control Panel/API). Tier 1 (new account, no prepay) = 0 GPU Droplets; one-time prepay of $50 unlocks Tier 2 = 1 GPU Droplet immediately; $4,000 prepay = Tier 5 = 16 GPU Droplets (count is Droplets, so 16 x 8-GPU = 128 GPUs). Also 'Request an increase' form (ticket) and automatic increases with payment history.",
+    "sources": [
+      "https://docs.digitalocean.com/platform/resource-limits/",
+      "https://docs.digitalocean.com/platform/teams/how-to/view-resource-limits/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 55,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 28
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/snapshots/",
+      "quote": "Snapshots are on-demand disk images of DigitalOcean Droplets and volumes saved to your account.",
+      "note": "No state capture on power-off/idle; powering off just keeps the boot disk (and keeps billing). Optional scheduled Backups (daily/weekly) exist and for GPU Droplets 'include the boot disk but not the scratch disk' (https://docs.digitalocean.com/products/droplets/how-to/gpu/create/) - scheduled, not stop-triggered.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/snapshots/how-to/snapshot-droplets/",
+      "quote": "Snapshots of GPU Droplets include the boot disk but not the scratch disk.",
+      "note": "Disk only, no memory; live snapshot or powered-off snapshot via control panel/API/doctl. New GPU Droplets can boot from a snapshot: 'You can then use the snapshot as the base image to create additional GPU Droplets.' (https://docs.digitalocean.com/products/droplets/getting-started/recommended-gpu-setup/). Not incremental; each is a full disk image; attached volumes are not captured.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/features/",
+      "quote": "We offer CPU and GPU configurations for various Linux-based Droplets. Droplets integrate with other DigitalOcean offerings, like autoscale pools",
+      "note": "GPU Droplets are plain KVM VMs managed via the standard Droplet API/doctl (create, power, snapshot, resize-limits, firewalls, volumes). Reviewed the Droplet API/CLI/MCP reference index and found no endpoint for driving/streaming an in-VM coding-agent harness; the only agent-shaped product DO advertises (Gradient) is a separate hosted agent platform, not an API to run inside a Droplet's own harness.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/networking/firewalls/how-to/configure-rules/",
+      "quote": "Outbound firewall rules define what outgoing traffic to allow or deny, on which ports, and to which destinations. If no outbound rules are configured, no outbound traffic is permitted.",
+      "note": "Cloud Firewalls (free, network-level, stateful, enforced before traffic reaches/leaves the Droplet). Destinations are IPs/CIDRs, Droplets, tags, load balancers, VPCs, K8s clusters + protocol/ports; no hostname/FQDN rules. Default-deny when attached. Applies to Droplets incl. GPU Droplets (no GPU exclusion listed in firewall limits).",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/networking/firewalls/details/features/",
+      "quote": "Firewall rules can allow or deny traffic by protocol, port range, and source or destination.",
+      "note": "L3/L4 only; no HTTP method/path/header rules.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/networking/firewalls/how-to/configure-rules/",
+      "quote": "Inbound firewall rules define what traffic to allow or deny to the server, on which ports, and from which sources. If no inbound rules are configured, no incoming traffic is permitted.",
+      "note": "Cloud Firewall inbound rules by IP/CIDR/tag/Droplet/LB + port; VPC private networking; Droplets otherwise get a public IPv4 with all ports reachable. No managed preview URLs.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/networking/firewalls/details/features/",
+      "quote": "Firewalls can be host-based, which are configured on a per-server basis using services like iptables or UFW.",
+      "note": "GPU Droplets are full KVM VMs with root; iptables/UFW on the Droplet works (docs describe running UFW alongside Cloud Firewalls).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/getting-started/recommended-gpu-setup/",
+      "quote": "GPU Droplets also work with other Droplet images (stock Linux images, backups, snapshots, and so on) but you need to manually install drivers and other software to use your Droplet's GPUs.",
+      "note": "GPU Droplets are bare Linux VMs; credentials are whatever you place on the box yourself (user_data, files, env vars). No DigitalOcean product injects/proxies third-party API credentials into the guest; Cloud Firewalls (docs.digitalocean.com/products/networking/firewalls) are L3/L4 IP/port rules only, not a credential-injecting HTTP proxy.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/droplets/how-to/gpu/create/",
+      "quote": "You can move a volume between compatible Droplets and GPU Droplets by detaching it from one Droplet and attaching it to another.",
+      "note": "Volumes Block Storage (Ceph, 1 GiB-16 TiB, up to 15 per Droplet). A volume attaches to only one Droplet at a time.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/nfs/details/features/",
+      "quote": "Concurrent access to shared datasets, model artifacts, and checkpoints across multiple GPU Droplets.",
+      "note": "Network File Storage (managed NFSv4.1), read-write ('All access points provide read and write access; there is no read-only option'), up to 32 clients per share, same-region VPC; available in NYC2, AMS3, ATL1, RIC1, MKC1, MEM1 (overlaps H100/H200/MI300X GPU regions, not TOR1). Block volumes themselves are single-attach.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.digitalocean.com/products/droplets/concepts/choosing-a-plan/",
+      "quote": "DigitalOcean Droplets are Linux-based virtual machines (VMs) that run on top of virtualized hardware... A hypervisor, also known as a virtual machine monitor, makes sure that the multiple Droplets running on a physical host each receive their virtual resources, like vCPU.",
+      "note": "DO Droplets (incl. GPU Droplets) are full VMs on a shared hypervisor; DigitalOcean's hypervisor is widely documented (including by DO's own engineering blog/community content) as KVM-based (QEMU/KVM), though this specific page does not use the word 'KVM' verbatim.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/custom-images/details/features/",
+      "quote": "Images must be in one of the following file formats: Raw (.img) with an MBR or GPT partition table, qcow2, VHDX, VDI, VMDK.",
+      "note": "Custom images are full VM disk images (raw/qcow2/vhdx/vdi/vmdk), not Docker/OCI container images; you cannot boot a Droplet directly from an OCI image. Docker itself can be installed and run inside the Droplet.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. GPU Droplets are headless Linux VMs for compute workloads; no managed VNC/RDP desktop is provided (you could self-install one, but it is not a shipped feature).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. No managed/preinstalled browser is shipped with GPU Droplets.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. No screenshot+click computer-use API for GPU Droplets.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. This is a GPU compute/VM product, not a browser-automation/anti-detection product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. No CAPTCHA-solving feature for a GPU cloud/VM product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.digitalocean.com/products/droplets/details/pricing/",
+      "quote": "Public IPv4 addresses for Droplets with v5 configurations are billed separately from the v5 configuration and appear as their own line item on your invoice.",
+      "note": "Each GPU Droplet gets a dedicated datacenter public IPv4 that stays assigned for the Droplet's life; outbound traffic egresses via that same fixed datacenter IP (not residential/mobile, not shared/rotating).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/droplets/getting-started/recommended-gpu-setup/",
+      "quote": "You can then use the snapshot as the base image to create additional GPU Droplets.",
+      "note": "Cloning is snapshot-based (take a disk snapshot, then create new Droplet(s) from it), not an instant live-clone API, but it does let you clone a machine into new ones.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/snapshots/how-to/snapshot-droplets/",
+      "quote": "You can take a live snapshot without powering off your Droplet from the Droplet's Backups & Snapshots tab, in the Take snapshot section.",
+      "note": "A live (disk) snapshot can be taken from a running Droplet and used to create new Droplets without stopping the source.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/snapshots/how-to/snapshot-droplets/index.html.md",
+      "quote": "Snapshots of GPU Droplets include the boot disk but not the scratch disk.",
+      "note": "Snapshots/clones capture disk state only, not memory/running-process state; a Droplet created from a snapshot boots fresh, it does not resume running processes.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/pricing/",
+      "quote": "You are still billed for GPU Droplets that are powered off. The GPU and other compute resources stay reserved on the hypervisor even when the Droplet is not running. Powering off a GPU Droplet does not stop billing.",
+      "note": "You can power a GPU Droplet off/on and its disk persists, but billing is not paused or reduced while powered off, so it does not meet the pause_resume bar as defined.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/pricing/",
+      "quote": "Billing begins when you create the GPU Droplet and ends when you destroy it.",
+      "note": "not offered: outside the product's scope. GPU Droplets are always-on VMs (or explicitly stopped by the user); there is no documented feature that auto-wakes a stopped Droplet when a network request arrives.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/limits/",
+      "quote": "You are still billed for GPU Droplets that are powered off... Powering off a GPU Droplet does not stop billing.",
+      "note": "No documented auto-stop/auto-sleep-on-idle feature for GPU Droplets; the user must manually power off or destroy the Droplet.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/how-to/gpu/create/",
+      "quote": "We provide AI/ML-ready images for GPU Droplets that have drivers and software from AMD and NVIDIA preinstalled, as well as preconfigured 1-Click Models powered by Hugging Face.",
+      "note": "GPU Droplet marketplace/1-Click offerings are ML driver stacks and model deployments (Hugging Face models), not preinstalled coding-agent harnesses (Claude Code, Codex, OpenCode, etc.).",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. DigitalOcean's Gradient/Managed Agents platform is a separate hosted product from GPU Droplets, which are plain IaaS VMs; no first-party API here drives a provider-owned task agent inside the Droplet.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/reference/mcp/",
+      "quote": "Use MCP servers to manage DigitalOcean services from any MCP-compatible client.",
+      "note": "DigitalOcean ships official hosted/local MCP servers, including a Droplets MCP tool set ('Create, modify, and control virtual machines, snapshots, and power actions') at https://docs.digitalocean.com/reference/mcp/droplet-mcp-tools/.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/droplets/getting-started/recommended-gpu-setup/",
+      "quote": "We provide AI/ML-ready images for GPU Droplets that have drivers and software from AMD and NVIDIA preinstalled... python3-setuptools, python3-wheel.",
+      "note": "The recommended/default AI/ML-ready GPU Droplet image ships Python preinstalled. A plain base Linux image would need manual install.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/getting-started/recommended-gpu-setup/",
+      "quote": "We provide AI/ML-ready images for GPU Droplets that have drivers and software from AMD and NVIDIA preinstalled.",
+      "note": "The AI/ML-ready image's documented package list (CUDA/driver/Python tooling) does not include Node.js; Node is not shipped by default and must be installed manually.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/limits/",
+      "quote": "GPU Droplets have a network throughput limit of 25 Gbps over VPC and 10 Gbps over public connections.",
+      "note": "GPU Droplets get a public IPv4 with raw TCP reachability; there is no managed HTTPS URL/reverse-proxy layer for Droplets (unlike App Platform) — the customer must run and terminate their own TLS/HTTPS.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/products/droplets/details/pricing/",
+      "quote": "Public IPv4 addresses for Droplets with v5 configurations are billed separately from the v5 configuration and appear as their own line item on your invoice.",
+      "note": "A Droplet's public IPv4 is fixed for the life of the Droplet and is also the address outbound traffic egresses from, i.e. a static datacenter egress IP.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/concepts/choosing-a-plan/",
+      "quote": "You can see which processors each plan uses in Choosing the Right Droplet Plan.",
+      "note": "No ARM-based Droplet plan is documented; all listed CPU/GPU Droplet plans are x86-based. GPU Droplets specifically run on x86 hosts with NVIDIA/AMD GPUs.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. GPU Droplets are a DigitalOcean-run cloud service; there is no self-hosted deployment of the DO platform itself.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "not offered: outside the product's scope. GPU Droplets run only in DigitalOcean's own datacenters/regions, not deployed into a customer's own cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "GPU Droplets give you the processing power to train and fine-tune AI/ML models, run large batch processing jobs, and manage other computatationally intensive tasks.",
+      "note": "The core GPU Droplet/Droplet cloud platform is proprietary; DigitalOcean open-sources tools like doctl, but not the core hosted product.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://www.digitalocean.com/trust",
+      "quote": "DigitalOcean is proud to maintain SOC 2, SOC 3, Global PRP certifications as well as eligibility to process HIPAA and DORA workloads.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.digitalocean.com/trust",
+      "quote": "DigitalOcean is proud to maintain SOC 2, SOC 3, Global PRP certifications as well as eligibility to process HIPAA and DORA workloads.",
+      "note": "DO states HIPAA-workload eligibility at the company/platform level; page does not spell out BAA process details for GPU Droplets specifically.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/platform/teams/how-to/configure-sso/",
+      "quote": "Enable single sign-on (SSO) to let team members sign in to DigitalOcean with a single set of credentials from an OIDC-compatible identity provider (IdP), like Okta.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://www.digitalocean.com/pricing/gpu-droplets",
+      "quote": "H100, on-demand (×1) ... regions: us, eu, other",
+      "note": "H100 GPU Droplets are available in EU regions (e.g. Amsterdam), letting customers keep GPU Droplet workloads in the EU; some other GPU types are US/other-only.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.digitalocean.com/products/droplets/details/pricing/",
+      "quote": "Unlike bundled plans, v5 Droplets do not have a monthly usage cap... If you use your GPU Droplet for more than the standard 672-hour monthly limit, you will still be charged for the time you use.",
+      "note": "On-demand/reserved GPU Droplets run until the customer stops or destroys them; there is no maximum session duration imposed by the provider (Spot GPU Droplets can be reclaimed with best-effort notice, but that is capacity reclamation, not a session-length cap).",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/features/",
+      "quote": "We offer CPU and GPU configurations for various Linux-based Droplets.",
+      "note": "Also: 'DigitalOcean Droplets are Linux-based virtual machines (VMs) that run on top of virtualized hardware.' (https://docs.digitalocean.com/products/droplets/details/gpu-availability/). All GPU Droplet images (AI/ML-ready, inference-optimized, and 'other Droplet images') are Ubuntu/Linux; no Windows image option is listed for GPU Droplets.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/gpu-availability/",
+      "quote": "DigitalOcean Droplets are Linux-based virtual machines (VMs) that run on top of virtualized hardware.",
+      "note": "GPU Droplets are commodity x86 KVM VMs with NVIDIA/AMD GPUs passed through; DigitalOcean does not offer Apple hardware / macOS Droplets at all, GPU or otherwise.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.digitalocean.com/products/droplets/details/limits/",
+      "quote": "You cannot resize GPU Droplets.",
+      "note": "Explicit GPU Droplet Limits section rules out changing CPU/RAM/GPU of a running (or even stopped) GPU Droplet; you must create a new Droplet (optionally from a snapshot of the old one) to change size.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://docs.digitalocean.com/reference/api/reference/billing/",
+      "quote": "To retrieve the invoice items for an invoice, send a GET request to /v2/customers/my/invoices/$INVOICE_UUID. Response includes invoice_items array with: resource_id (ID of the resource), amount (Billed amount of this invoice item. Billed in USD), project_name (Name of the DigitalOcean Project this r",
+      "note": "granularity: per-sandbox, per-project; cost: yes; DigitalOcean Billing API provides two endpoints for usage: (1) Invoices endpoint returns itemized billing per resource with resource_id, resource_uuid, amount in USD, and project_name allowing per-VM/Droplet billing lookup; (2) Billing Insights endpoint (/v2/billing/{account_urn}/insights/{start_date}/{end_date}) provides day-over-day changes in resource usage by SKU, region, and description. Both include cost data and allow filtering by resource or project. Droplets (including GPU Droplets) support tagging and project assignment for billing organization.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "NY",
+      "city": "New York",
+      "provider_region": "nyc2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "GA",
+      "city": "Atlanta",
+      "provider_region": "atl1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Richmond",
+      "provider_region": "ric1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MO",
+      "city": "Kansas City",
+      "provider_region": "mkc1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TN",
+      "city": "Memphis",
+      "provider_region": "mem1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "ams3",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.digitalocean.com/products/nfs/details/features/",
+  "locations_quote": "Concurrent access to shared datasets, model artifacts, and checkpoints across multiple GPU Droplets... available in NYC2, AMS3, ATL1, RIC1, MKC1, MEM1 (overlaps H100/H200/MI300X GPU regions)",
+  "locations_checked": "2026-10-01"
+}

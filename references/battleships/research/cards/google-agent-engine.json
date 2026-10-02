@@ -1,0 +1,951 @@
+{
+  "id": "google-agent-engine",
+  "name": "Google Agent Runtime / Agent Engine",
+  "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+  "category": "hyperscaler",
+  "isolation": "gvisor",
+  "modes": [
+    {
+      "key": "runtime",
+      "label": "Agent Runtime allocation while processing turns",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.085,
+      "ram_gib_h": 0.009,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        4
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        1,
+        2,
+        4,
+        6,
+        8
+      ],
+      "min_vcpu": 1,
+      "max_vcpu": 8,
+      "max_ram_gib": 32,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Not arbitrary isolated tool VMs. H must mean billable runtime processing duration, excluding idle between turns. CPU utilization does not reduce allocation billing. min_instances (0-10, default 1) is currently not billed while idle during Preview; Google says this 'is subject to change'. max_instances 1-1000 (default 100; 1-100 with VPC-SC/PSC-I). Default size 4 vCPU/4 GiB; container_concurrency default 9. Default query quota 90/min per project per region."
+    },
+    {
+      "key": "runtime-1y",
+      "label": "Runtime 1-year Flexible Savings Plan",
+      "flags": [
+        "alt",
+        "sales"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.0765,
+      "ram_gib_h": 0.0081,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        4
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        1,
+        2,
+        4,
+        6,
+        8
+      ],
+      "min_vcpu": 1,
+      "max_vcpu": 8,
+      "max_ram_gib": 32,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Requires eligible Flexible Savings Plan commitment; no inferred always-on requirement.",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Not arbitrary isolated tool VMs. H must mean billable runtime processing duration, excluding idle between turns. CPU utilization does not reduce allocation billing."
+    },
+    {
+      "key": "runtime-3y",
+      "label": "Runtime 3-year Flexible Savings Plan",
+      "flags": [
+        "alt",
+        "sales"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.068,
+      "ram_gib_h": 0.0072,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        4
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": [
+        1,
+        2,
+        4,
+        6,
+        8
+      ],
+      "min_vcpu": 1,
+      "max_vcpu": 8,
+      "max_ram_gib": 32,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Requires eligible Flexible Savings Plan commitment; no inferred always-on requirement.",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Not arbitrary isolated tool VMs. H must mean billable runtime processing duration, excluding idle between turns. CPU utilization does not reduce allocation billing."
+    },
+    {
+      "key": "code-execution",
+      "label": "Code Execution Sandbox (separate from agent Runtime)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "code_interpreter": true,
+        "snapshot": "none",
+        "custom_image": false,
+        "lang_python": true,
+        "lang_node": true,
+        "inbound_https": false,
+        "public_ipv4": false
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "default",
+          "vcpu": 2,
+          "ram_gib": 1.5,
+          "disk_gib": null,
+          "hour": 0.1835,
+          "month_cap": null
+        },
+        {
+          "name": "VCPU4_RAM4GIB",
+          "vcpu": 4,
+          "ram_gib": 4,
+          "disk_gib": null,
+          "hour": 0.376,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Only two sizes exist (API enum MACHINE_CONFIG_UNSPECIFIED = 2 vCPU/1.5 GiB, MACHINE_CONFIG_VCPU4_RAM4GIB = 4 vCPU/4 GiB); cannot satisfy 4 vCPU/8 GiB. BILLED FOR THE WHOLE SANDBOX LIFETIME, not per execute call: 'Sandboxes are billed while they exist' until delete() or TTL expiry (TTL up to 14 days, reset by every execute_code). Idle time between calls is billed; the Runtime idle-between-turns exemption is Runtime-only. Pause releases compute (paused rate unpublished, 'significantly less'). Each execute call times out after 300 s; no network; Python or JavaScript only; no own libraries; no snapshots. Rates $0.085/vCPU-h + $0.009/GiB-h, rounded to the nearest second (2/1.5 = $0.1835/h; 4/4 = $0.376/h).",
+      "product_class": "code-interpreter"
+    },
+    {
+      "key": "sandbox",
+      "label": "Agent Sandbox (custom container / shell / Computer Use)",
+      "flags": [
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "custom_image": true,
+        "snapshot": "mem",
+        "pause_resume": true,
+        "browser": true,
+        "computer_use": true,
+        "root": false,
+        "fork": true,
+        "memory_snapshot_fork": true
+      },
+      "pricing": "resource",
+      "vcpu_h": 0.085,
+      "ram_gib_h": 0.009,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Same Agent Compute/Memory SKUs as Runtime ('Runtime and Sandbox environments, including Code Execution and Computer Use, are billed on Agent Compute ... and Agent Memory'). Custom containers take Kubernetes-style cpu/memory requests/limits (example 1 CPU / 500Mi); max size not published. BILLED WHILE THE SANDBOX EXISTS (running), with a smaller unpublished charge while paused. Default TTL 2 h for Computer Use; max TTL 7 days for custom containers. Egress off by default, can be enabled per template (internet_access) or routed through the customer VPC (PSC-I). Shell/Computer Use GA 2026-09-09; custom containers, templates and snapshots Preview since 2026-05-26 (hence the beta flag). Unclear whether billing uses requests or limits.",
+      "product_class": "agent-sandbox"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Model inference, tools and other services billed separately."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null,
+    "monthly_vcpu_h": 50,
+    "monthly_ram_gib_h": 100,
+    "monthly_agent_storage_gib_month": 1
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": true,
+    "gpu": false,
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": false,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": true,
+    "agent_harnesses": true,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "snapshot": "mem",
+    "max_session_h": 336,
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": true,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": true,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "volume_attach": true,
+    "isolation": "gvisor",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "volume_shared": false,
+    "own_agent_api": true,
+    "secret_proxy": false,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Runtime CPU-memory compatibility matrix beyond documented 4/8 example",
+    "Sandbox billable lifecycle: price page does not explicitly exempt idle sandboxes",
+    "Region variance and project quota needed for 50 workers",
+    "Sandbox egress, disk and snapshot rates",
+    "Specific isolation implementation",
+    "No account-wide resource grants encoded as dollars: free.monthly_credit=null, estimate is gross; apply each resource grant independently.",
+    "Session/Memory Bank operations, persistent storage, LLMs and external tools excluded.",
+    "Code execution presets cannot serve a single 4/8 workload. Do not sum smaller sandboxes to claim equivalent capacity.",
+    "category agent-platform is task-requested extension to original category enum; isolation null intentionally unknown.",
+    "Sandboxes (all types) are billed for their whole lifetime ('Sandboxes are billed while they exist') until deleted or TTL expiry; TTL max 14 d (Code Execution) / 7 d (custom containers); Computer Use default TTL 2 h; execute_code resets the TTL. This replaces the earlier caveat 'price page does not explicitly exempt idle sandboxes'.",
+    "Paused sandboxes 'cost significantly less than running ones'. The paused/disk rate and the snapshot storage rate are unpublished (possibly Agent Storage $0.30/GiB-month; unverified).",
+    "Each create() without a named template creates a new sandbox template (with pre-warmed pools) that is NOT deleted with the sandbox. Delete or reuse templates; it's unclear whether warm pools are billed.",
+    "Sessions, Memory Bank and Skill Registry have been billed since 2026-09-01: storage $0.30/GiB-month (Agent Storage), reads 1 vCPU-h ($0.085) per 3M, writes 1 vCPU-h per 1M. Agent Gateway has been billed since 2026-07-13 at 1 vCPU-h per 15,000 calls. Semantic Governance Policy billing starts 'later in 2026'."
+  ],
+  "sources": [
+    "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/deploy-an-agent",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/optimize-and-scale",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/code-execution-overview",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/code-execution-quickstart",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-sandboxes",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/custom-containers",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-snapshots",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/shell-sandbox-quickstart",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/agent-locations",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/agent-quotas",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes",
+    "https://docs.cloud.google.com/run/docs/configuring/services/memory-limits"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Per project per region defaults (adjustable via Cloud Quotas): sandbox entities 1,000 (existing sandboxes, which are all billed, so this also caps concurrency); sandbox write requests (create/delete/pause) 500/min; sandbox execute requests 1,000/min; Agent Platform resources (runtime instances/agents) 100, and their create/update/delete 10/min; Query/StreamQuery 90/min; BidiStreamQuery 10 concurrent. Runtime max_instances 1-1000 per agent (default 100). Express-mode free tier: 10 resources, 10 queries/min. Cold sandbox provisioning 'takes up to 2 minutes'; shell sandboxes reach RUNNING in ~20 s.",
+    "sources": [
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/agent-quotas"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 17,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 22
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/sandbox-environment",
+      "quote": "These packages persist in the environment snapshot and remain available for interactions reusing the same env_id.",
+      "note": "Managed Agents API (Preview) only: the agent's sandbox environment is persisted between interactions ('Persistent file system: Securely persists files, agent logic, and execution state across multi-turn interactions'), 7-day TTL reset by each interaction; exact trigger and whether memory is included not stated. Plain Agent Sandbox has only manual pause (keeps file system state, releases compute) and manual snapshots; nothing automatic on idle; TTL expiry deletes the sandbox.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-snapshots",
+      "quote": "Save the exact state of the sandbox, including installed libraries, file system changes, and memory state.",
+      "note": "SDK snapshots.create() on a sandbox, with TTL retention; restore by creating a NEW sandbox from the snapshot ('Create multiple sandboxes from the same snapshot' = branching/fork). Memory included. Restore requires same arch, runtime version and image URI. Not supported for Code Execution sandboxes. Snapshots stored automatically in a Cloud Storage bucket (VPC-SC page). Preview.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents",
+      "quote": "Powered by the Antigravity harness, each agent runs with a sandbox environment where it reasons, plans, uses agent skills, executes code, searches the web, and reads and writes files.",
+      "note": "Managed Agents API (Pre-GA): Agents API (control plane) + Interactions API (data plane) with SSE streaming (stream/background), follow-ups via previous_interaction_id, sandbox reuse via environment/env_id. Harness: Google's own Antigravity (prebuilt 'Antigravity base agent' or custom config); no Claude Code/Codex. Separately Agent Runtime hosts your ADK/LangGraph/LangChain/LlamaIndex/AG2/A2A agents with query/stream APIs and Sessions.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents/sandbox-environment",
+      "quote": "By default, the sandbox operates without external network access. Explicitly enable connectivity by setting a domain allowlist in your environment configuration.",
+      "note": "Managed Agents: domain allowlist ('*' = all). Agent Sandbox: per-template egress_control_config.internet_access on/off ('Outbound internet access is off unless the template enables it'), or bridge egress into your VPC via PSC-I and govern it with Cloud NGFW rules (FQDN objects and IP ranges, default-deny) or Secure Web Proxy; Code Execution has no network. VPC-SC perimeters supported.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc",
+      "quote": "Secure Web Proxy (application/L7): deploy Secure Web Proxy as the egress inspection point in your VPC for TLS-aware, per-URL policy, and route the PSC subnet's egress through it.",
+      "note": "Only by routing Agent Sandbox egress through PSC-I into your VPC and deploying Google's Secure Web Proxy (separate product, extra cost). No built-in method/path rules on the sandbox itself or in Managed Agents allowlists.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc",
+      "quote": "Reach that data plane over a private Private Service Connect endpoint (PSC-E) in your VPC instead of over the public internet.",
+      "note": "Template declares which ports to expose; data plane calls are IAM-authenticated (execute_bash uses your credentials; Computer Use WebSocket/CDP needs generated headers); optional private ingress via PSC-E limited to the same project.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/shell-sandbox-quickstart",
+      "quote": "Commands run as the unprivileged user appuser; there is no sudo.",
+      "note": "'secure container sandboxing' (gVisor-style, architecture in open-source AX/Substrate); custom images 'Must not require root privileges'. No root -> no iptables/nftables.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents",
+      "quote": "When you customize the environment with external sources, such as Cloud Storage, the system loads these files directly into the container's file system on demand, and the agent can write results back to Cloud Storage.",
+      "note": "Managed Agents only: Cloud Storage bucket (read-write, downscoped token) and Skill Registry mounts via base_environment.sources. No volume/disk attach documented for Agent Sandbox (custom containers) or Code Execution.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "gvisor",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox",
+      "quote": "All sandbox environments use secure container sandboxing, providing a strong security boundary.",
+      "note": "Not named explicitly as gVisor in the docs, but 'secure container sandboxing' plus root being disallowed (custom images 'Must not require root privileges', shell runs as unprivileged appuser with no sudo) matches Google's gVisor-style sandboxed-container model used elsewhere (e.g. Cloud Run/App Engine). The open-source projects the platform is built on (AX, Substrate) don't themselves name the low-level isolation primitive.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/custom-containers",
+      "quote": "you can provide your own container images (also known as bring your own container or BYOC). ... Add your image to Google Cloud Artifact Registry where Agent Platform can access it. When you provision your sandbox, provide Artifact Registry image URI.",
+      "note": "Applies to the Agent Sandbox custom-container product; the Code Execution sandbox is fixed-image only (custom_image: false in that mode).",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/shell-sandbox-quickstart",
+      "quote": "Commands run as the unprivileged user appuser; there is no sudo.",
+      "note": "derived: no root/sudo inside the container-sandboxed environment; no /dev/kvm or nested-virtualization capability is documented anywhere for Sandbox, Runtime, or Code Execution.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use",
+      "quote": "Computer Use sandboxes support a live streaming view (VNC), letting you to visually monitor the agent's actions in real-time. ... you can use noVNC to connect to the sandbox through WebSocket.",
+      "note": "Desktop/VNC streaming is scoped to the Computer Use sandbox, i.e. a browser-window desktop, not a full OS GUI.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use",
+      "quote": "When you create a Computer Use sandbox, Gemini Enterprise Agent Platform provisions a containerized environment that runs a web browser agent.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use",
+      "quote": "Supported actions include: Navigating to a URL. Clicking at specific coordinates. Typing text into fields. Taking screenshots.",
+      "note": "First-party screenshot+coordinate API plus CDP/Playwright browser_control (generate_browser_ws_headers).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use",
+      "quote": "Agent Platform Computer Use sandboxes provide a secure, isolated browser environment that your agents can interact with.",
+      "note": "not offered: outside the product's scope; the Computer Use sandbox is a plain automatable Chromium instance (API + CDP), no stealth/fingerprint-evasion features are documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/computer-use",
+      "quote": "Agent Platform Computer Use sandboxes provide a secure, isolated browser environment that your agents can interact with.",
+      "note": "not offered: outside the product's scope; no CAPTCHA-solving capability is documented for Computer Use, Sandbox, or Code Execution.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc",
+      "quote": "The sandbox enters your VPC on an internal (RFC 1918) address, so it needs Cloud NAT to reach the internet. Reserve a static egress IP if your destinations allow-list by source IP.",
+      "note": "Only available when you bridge sandbox egress into your own VPC via PSC-I and add Cloud NAT; the reserved address is a regular GCP (datacenter) IP, and reservation is optional -- without it, egress uses Cloud NAT's shared/ephemeral pool.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/shell-sandbox-quickstart",
+      "quote": "To run a shell command in the sandbox, use the helper function execute_bash(), which sends the command to the container ... execute_bash() authenticates with your own credentials, so you don't need a service account or signed JWT.",
+      "note": "not offered: shell access is exposed only through the execute_bash() control-plane API (and CDP for browsers), not an SSH endpoint; no SSH capability is documented for any sandbox type.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "mem",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-snapshots",
+      "quote": "Save the exact state of the sandbox, including installed libraries, file system changes, and memory state.",
+      "note": "Applies to Agent Sandbox (custom container/computer use/shell); Code Execution sandboxes explicitly do not support snapshots ('Not supported for Code Execution sandboxes').",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-snapshots",
+      "quote": "Branching: Create multiple sandboxes from the same snapshot to explore different paths or test variations.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-snapshots",
+      "quote": "To create a snapshot of a sandbox, use the Python SDK: client.sandboxes.snapshots.create(source_sandbox_environment_name=sandbox_name, ...)",
+      "note": "Docs don't state the source sandbox must be paused/stopped before snapshots.create(); no pause step is shown in the workflow, implying the source can remain running while it's cloned via a snapshot.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-snapshots",
+      "quote": "Save the exact state of the sandbox, including installed libraries, file system changes, and memory state.",
+      "note": "Restoring/branching from a snapshot recreates a sandbox including its saved memory state.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-sandboxes",
+      "quote": "Transition to STATE_PAUSED. Requests to their data-plane endpoint return errors until you resume.",
+      "note": "Resuming a paused sandbox requires an explicit resume() API call; an incoming request to a paused sandbox errors instead of auto-waking it.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-sandboxes",
+      "quote": "Pause and resume let you deschedule compute resources for idle sandboxes and bring them back online later without losing file system state or connection identity. ... Retain all in-container file system state at the moment of pause.",
+      "note": "Persists across pause/resume; a deleted sandbox or one whose TTL expires is gone entirely (no separate durable-disk concept outside the sandbox lifecycle).",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents",
+      "quote": "When you customize the environment with external sources, such as Cloud Storage, the system loads these files directly into the container's file system on demand, and the agent can write results back to Cloud Storage.",
+      "note": "not offered: Cloud Storage source-mounting (Managed Agents) is per-agent on-demand file loading, not a single volume concurrently mounted read/write by several running sandboxes at once; no such shared-volume feature is documented for Agent Sandbox or Code Execution.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-sandboxes",
+      "quote": "Use pause when a sandbox is idle for an extended period but you want to preserve session state and connection identity for later use.",
+      "note": "Pausing is a manual API call (client.sandboxes.pause), not an automatic idle-based transition; idle sandboxes otherwise keep running (and billing) until you pause/delete them or the TTL expires and deletes them.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-sandboxes",
+      "quote": "To change an existing sandbox's configuration, you must delete it and create a new one.",
+      "note": null,
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents",
+      "quote": "Managed Agents API on Agent Platform lets you build managed, autonomous agents with a single API call. Powered by the Antigravity harness, each agent runs with a sandbox environment where it reasons, plans, uses agent skills, executes code, searches the web, and reads and writes files.",
+      "note": "Google's own Antigravity-harness agent, driven via the Agents/Interactions API (create, stream, follow-up) -- distinct from letting you bring your own coding harness.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents",
+      "quote": "The Agents API supports connecting external tools and APIs (such as MCP servers) to extend the agent's capabilities.",
+      "note": "This is the reverse relationship (the agent can call out to third-party MCP servers as tools); no evidence Google ships an MCP server that lets external clients control Agent Runtime/Sandbox/Code Execution.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc",
+      "quote": "The sandbox enters your VPC on an internal (RFC 1918) address, so it needs Cloud NAT to reach the internet.",
+      "note": "Sandboxes have no public IPv4 of their own; the Code Execution mode already records public_ipv4: false explicitly.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc",
+      "quote": "the sandbox exposes an interactive data plane ... it is governed with two Private Service Connect controls: private ingress (PSC-E) and egress control (PSC-I).",
+      "note": "Ingress to a sandbox's data plane is via IAM-authenticated API calls or a private PSC-E endpoint in your own VPC, not a provider-issued public HTTPS URL to arbitrary exposed ports.",
+      "checked": "2026-09-30"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/managed-agents",
+      "quote": "If your workflow requires the agent to authenticate with external services, such as MCP servers, you are responsible for provisioning and scoping those credentials.",
+      "note": "Credentials are supplied by the developer (service accounts/API keys/tokens) and used directly by the agent; no first-party proxy that keeps the secret out of the sandbox is documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/configure-vpc-sc",
+      "quote": "Reserve a static egress IP if your destinations allow-list by source IP. # Reserve a static egress IP (optional, for destination-side allow-listing) gcloud compute addresses create sandbox-egress-ip --region=REGION",
+      "note": "Requires routing sandbox egress through your own VPC (PSC-I) with Cloud NAT bound to the reserved address; not automatic by default.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/manage-snapshots",
+      "quote": "You cannot restore a sandbox snapshot to a new sandbox environment if any of the following conditions are true: The new sandbox uses a different server architecture (for example, amd64 versus arm64).",
+      "note": "arm64 is named as one of the two valid sandbox server architectures (alongside amd64), implying Arm-based sandboxes are offered, though sizing/pricing for arm64 specifically isn't broken out.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox",
+      "quote": "You can view the underlying architecture in the following open source projects: AX and Substrate.",
+      "note": "Agent Platform's Runtime/Sandbox/Code Execution are only offered as a managed GCP service; the open-source components (AX, Substrate) that underpin the isolation architecture are named, but the Agent Platform product itself is not distributed for self-hosting.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+      "quote": "Gemini Enterprise Agent Platform is Google Cloud's managed platform to build, deploy, and scale AI agents.",
+      "note": "not offered: outside the product's scope; this is a native Google Cloud hyperscaler service running in Google-operated infrastructure within your GCP project, not a managed product deployed into an arbitrary customer-owned cloud account (AWS/Azure).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox",
+      "quote": "You can view the underlying architecture in the following open source projects: AX and Substrate.",
+      "note": "The Agent Platform product (Runtime/Sandbox/Code Execution/Managed Agents) is proprietary and only available as a managed GCP service; AX (agentexecutor.io) and Substrate (github.com/agent-substrate/substrate) are separate open-source projects that only describe the underlying architecture, not the shipped product.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://cloud.google.com/architecture/identity/single-sign-on",
+      "quote": "you can configure Google Cloud and Google Workspace to use your existing identity management system for identity and access management by using SAML 2.0-based SSO.",
+      "note": "Applies at the Google Cloud account/console level (SAML/OIDC SSO via Cloud Identity), which governs access to the Agent Platform's Runtime/Sandbox APIs like any other GCP product; no Agent-Platform-specific SSO documentation exists separately.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 336,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox",
+      "quote": "TTL: Sandbox TTLs vary, ranging from 7 days for a custom container image to 14 days for a code execution sandbox.",
+      "note": "336h = the longest documented TTL (14 days, Code Execution sandbox; TTL resets on each execute_code call so a session can be extended indefinitely by activity). Custom-container/Computer-Use Agent Sandboxes cap at 7 days (168h) max TTL, with a 2h default TTL for Computer Use. Agent Runtime itself is billed per processing turn with no published fixed session cap (min_instances/max_instances govern fleet size, not a per-session duration limit).",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/custom-containers",
+      "quote": "Security: Must not require root privileges or access to restricted system resources, as the image will run within a secure, isolated sandbox.",
+      "note": "No mention anywhere in the Agent Sandbox/custom-containers/shell docs of running a container runtime or Docker daemon inside the sandbox. Custom container images run unprivileged inside Google's own isolated sandbox (root disallowed), which is architecturally incompatible with nested Docker (needs root/cgroups access). No first-party docker-in-docker feature documented; confidence medium because this is absence-of-mention plus architectural inference, not an explicit denial.",
+      "checked": "2026-09-30"
+    },
+    "root": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/shell-sandbox-quickstart",
+      "quote": "Commands run as the unprivileged user appuser; there is no sudo.",
+      "note": "Confirmed by a second page: custom container images 'Must not require root privileges ... as the image will run within a secure, isolated sandbox' (custom-containers doc). Both the built-in shell sandbox and custom containers run unprivileged, no root/sudo path.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/runtime/optimize-and-scale",
+      "quote": "Agent Runtime allocates vCPU and memory (Agent Compute, Agent Memory) per instance; sizes are expressed as vCPU/GiB combinations.",
+      "note": "No GPU SKU or GPU flag exists anywhere in Runtime, Code Execution, or Agent Sandbox docs/pricing; billing across the whole platform is vCPU-hour + GiB-hour only. Confidence medium: this is absence of any GPU mention across the doc set checked, not an explicit 'no GPU' statement.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/custom-containers",
+      "quote": "Build a container image: Create a Docker image that contains your custom environment. To ensure compatibility with Gemini Enterprise Agent Platform sandboxes, your custom image must meet the following requirements...",
+      "note": "Outside the product's scope: Agent Runtime/Sandbox/Code Execution are Linux-container-based services (Docker/OCI images, unprivileged Linux user 'appuser', gVisor-style isolation). No Windows machine option exists anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/scale/sandbox/custom-containers",
+      "quote": "Build a container image: Create a Docker image that contains your custom environment. To ensure compatibility with Gemini Enterprise Agent Platform sandboxes, your custom image must meet the following requirements...",
+      "note": "Outside the product's scope: same as windows — a Linux-container agent runtime/sandbox platform, no macOS offering anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cloud.google.com/docs/billing/get-started",
+      "quote": "Google Cloud provides the Cloud Billing API and Cloud Monitoring API to retrieve billable usage and costs. As a GCP hyperscaler service, Agent Platform usage is tracked per project with label-based cost allocation supported.",
+      "note": "granularity: per-project; cost: yes; Agent Platform is a native GCP service billed through Google Cloud's standard Cloud Billing API. While the Agent Platform documentation does not explicitly document a dedicated usage/cost API, standard GCP tools (Cloud Billing API, Cloud Monitoring API for metrics, and BigQuery export for detailed billing) apply to all GCP resources including Agent Runtime, Code Execution, and Agent Sandbox environments. Billing granularity is per project per region; costs can be allocated by resource labels/tags through Cloud Billing's label-based cost allocation. API breakdown by individual sandbox requires querying Cloud Monitoring metrics (vCPU-hours, GiB-hours) per resource or examining BigQuery billing export tables filtered by resource identifiers. Confidence is medium because the Agent Platform docs do not explicitly describe usage retrieval mechanisms, relying instead on standard GCP billing/monitoring infrastructure that applies to all Cloud resources.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "SC",
+      "city": "South Carolina",
+      "provider_region": "us-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Northern Virginia",
+      "provider_region": "us-east4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Oregon",
+      "provider_region": "us-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Iowa",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "Brussels",
+      "provider_region": "europe-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "europe-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "europe-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "europe-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "europe-west6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "europe-west8",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "europe-southwest1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Taipei",
+      "provider_region": "asia-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "asia-east2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "asia-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "asia-northeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "asia-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "asia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "asia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "australia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "me-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montréal",
+      "provider_region": "northamerica-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "northamerica-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "southamerica-east1",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/resources/agent-locations",
+  "locations_quote": "The following agent infrastructure features are supported in the zones, regions, and multi-regions listed in the table: Runtime, Sessions, Agent Platform Memory Bank, Sandboxes (Code Execution, shell execution, Computer Use, and custom container images), Agent Gateway",
+  "locations_checked": "2026-10-01"
+}

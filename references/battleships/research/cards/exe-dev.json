@@ -1,0 +1,999 @@
+{
+  "id": "exe-dev",
+  "name": "exe.dev",
+  "url": "https://exe.dev/pricing",
+  "category": "dev-env",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "pool",
+      "label": "Work pool (current; reserved pool billed hourly 24/7, shared by all VMs)",
+      "pricing": "pool",
+      "pool_tiers": [
+        {
+          "name": "Work 4 vCPU",
+          "month": 150,
+          "vcpu": 4,
+          "ram_gib": 8,
+          "max_vms": 100
+        },
+        {
+          "name": "Work 8 vCPU",
+          "month": 303.3,
+          "vcpu": 8,
+          "ram_gib": 16,
+          "max_vms": 200
+        },
+        {
+          "name": "Work 12 vCPU",
+          "month": 456.6,
+          "vcpu": 12,
+          "ram_gib": 24,
+          "max_vms": 300
+        },
+        {
+          "name": "Work 16 vCPU",
+          "month": 609.9,
+          "vcpu": 16,
+          "ram_gib": 32,
+          "max_vms": 400
+        },
+        {
+          "name": "Work 20 vCPU",
+          "month": 763.2,
+          "vcpu": 20,
+          "ram_gib": 40,
+          "max_vms": 500
+        },
+        {
+          "name": "Work 24 vCPU",
+          "month": 916.5,
+          "vcpu": 24,
+          "ram_gib": 48,
+          "max_vms": 600
+        },
+        {
+          "name": "Work 28 vCPU",
+          "month": 1069.8,
+          "vcpu": 28,
+          "ram_gib": 56,
+          "max_vms": 700
+        },
+        {
+          "name": "Work 32 vCPU",
+          "month": 1223.1,
+          "vcpu": 32,
+          "ram_gib": 64,
+          "max_vms": 800
+        },
+        {
+          "name": "Work 40 vCPU",
+          "month": 1529.7,
+          "vcpu": 40,
+          "ram_gib": 80,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 48 vCPU",
+          "month": 1836.3,
+          "vcpu": 48,
+          "ram_gib": 96,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 56 vCPU",
+          "month": 2142.9,
+          "vcpu": 56,
+          "ram_gib": 112,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 64 vCPU",
+          "month": 2449.5,
+          "vcpu": 64,
+          "ram_gib": 128,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 80 vCPU",
+          "month": 3062.7,
+          "vcpu": 80,
+          "ram_gib": 160,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 96 vCPU",
+          "month": 3675.9,
+          "vcpu": 96,
+          "ram_gib": 192,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 112 vCPU",
+          "month": 4289.1,
+          "vcpu": 112,
+          "ram_gib": 224,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 128 vCPU",
+          "month": 4902.3,
+          "vcpu": 128,
+          "ram_gib": 256,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 144 vCPU",
+          "month": 5515.5,
+          "vcpu": 144,
+          "ram_gib": 288,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 160 vCPU",
+          "month": 6128.7,
+          "vcpu": 160,
+          "ram_gib": 320,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 176 vCPU",
+          "month": 6741.9,
+          "vcpu": 176,
+          "ram_gib": 352,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 192 vCPU",
+          "month": 7355.1,
+          "vcpu": 192,
+          "ram_gib": 384,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 200 vCPU",
+          "month": 7661.7,
+          "vcpu": 200,
+          "ram_gib": 400,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 224 vCPU",
+          "month": 8581.5,
+          "vcpu": 224,
+          "ram_gib": 448,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 256 vCPU",
+          "month": 9807.9,
+          "vcpu": 256,
+          "ram_gib": 512,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 320 vCPU",
+          "month": 12260.7,
+          "vcpu": 320,
+          "ram_gib": 640,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 384 vCPU",
+          "month": 14713.5,
+          "vcpu": 384,
+          "ram_gib": 768,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 448 vCPU",
+          "month": 17166.3,
+          "vcpu": 448,
+          "ram_gib": 896,
+          "max_vms": 1000
+        },
+        {
+          "name": "Work 512 vCPU",
+          "month": 19619.1,
+          "vcpu": 512,
+          "ram_gib": 1024,
+          "max_vms": 1000
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Work: $150/month paid in advance covers 4 vCPU / 8 GB of capacity across all pools AND standalone VMs; capacity beyond is metered hourly at $0.105 per 2 vCPU ($0.0525/vCPU-h) only while it exists (month = 150 + (vcpu-4) * 0.0525 * 730). Any even vCPU count 4..512 allowed (subset listed). Pools are billed empty or full. Pools up to 32 vCPU take effect immediately; 34-512 vCPU need support approval (pending pools are not billed). Unlimited pools. Shrinking is immediate; hourly metering after resize is documented.",
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Utilisation-independent; stopped/idle VMs free pool capacity. VMs per pool = min(1000, 25 x vCPU), now documented (4 vCPU=100, 32=800); no team-wide VM limit. CLI --max-vms default 100 but adjustable. Pools above 32 vCPU need support approval. Included disk 100 GB per 2 vCPU and bandwidth 50 GB per vCPU, per pool (docs/billing/work.md; no 800 GB cap stated).",
+      "flags": [],
+      "plans": [
+        "Work",
+        "Enterprise"
+      ],
+      "features": {
+        "isolation": "cloud-hypervisor"
+      }
+    },
+    {
+      "key": "pool-personal",
+      "label": "Personal pool (current; 2/4/8/16 vCPU at $15/$35/$75/$155)",
+      "pricing": "pool",
+      "pool_tiers": [
+        {
+          "name": "Personal 2 vCPU",
+          "month": 15,
+          "vcpu": 2,
+          "ram_gib": 4,
+          "max_vms": 50
+        },
+        {
+          "name": "Personal 4 vCPU",
+          "month": 35,
+          "vcpu": 4,
+          "ram_gib": 8,
+          "max_vms": 50
+        },
+        {
+          "name": "Personal 8 vCPU",
+          "month": 75,
+          "vcpu": 8,
+          "ram_gib": 16,
+          "max_vms": 50
+        },
+        {
+          "name": "Personal 16 vCPU",
+          "month": 155,
+          "vcpu": 16,
+          "ram_gib": 32,
+          "max_vms": 50
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Flat monthly, paid upfront, prorated on change. Selector 2/4/8/16 vCPU = $15/$35/$75/$155 (embedded pricing-scale JSON 'personal:monthly:20260914' on exe.dev/pricing, verified 2026-09-28). Max 16 vCPU/32 GB, 1 pool.",
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Personal pool placed in user's region only.",
+      "flags": [],
+      "plans": [
+        "Personal"
+      ],
+      "features": {
+        "isolation": "cloud-hypervisor"
+      }
+    },
+    {
+      "key": "vm-tier",
+      "label": "Standalone / sandbox VMs (current; per VM, own reserved capacity)",
+      "pricing": "resource",
+      "vcpu_h": 0.0525,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        4
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": 2,
+      "max_vcpu": 32,
+      "max_ram_gib": 64,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "$0.105 per 2 vCPU per hour, RAM bundled (default 2 vCPU/8 GB; max 16/32 Personal, 32/64 Work). ram_per_vcpu max 4 inferred from default size. Billed by the hour for as long as the VM exists: a STOPPED standalone VM keeps its reserved capacity and is still billed in full; only deleting it stops billing (stop-and-keep workflows are understated by the engine). Personal: any account can create them, billed on top of the subscription. Work: enabled by a team admin setting; standalone vCPU counts toward the 4 included vCPU and each VM carries its own disk/bandwidth allowance. Legacy Individual/Team plans cannot create standalone VMs.",
+      "flags": [],
+      "features": {
+        "isolation": "cloud-hypervisor"
+      }
+    },
+    {
+      "key": "on-demand",
+      "label": "Usage / Cloud Pool (sales-only, per second, peak-hourly CPU + active memory)",
+      "pricing": "resource",
+      "vcpu_h": 0.05,
+      "ram_gib_h": 0.016,
+      "cpu_basis": "peak",
+      "ram_basis": "peak",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Not self-serve: contact support@exe.dev. Minimum commitment/plan fee unknown.",
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "CPU billed per core on PEAK usage within each hour (so 'active' understates bursty loads); memory billed on active memory; idle VMs: no CPU, memory at disk rate ($0.08/GiB-month). Basis verified 2026-09-28: \"CPU and active memory bill by peak hourly usage; idle VMs drop to disk-only.\" (https://exe.dev/sandbox). What makes a VM \"idle\" is not defined; modelled as auto_stop_idle. Sales flag kept: exe.dev/sandbox says 'Contact us about usage pricing'; as of 2026-09-29 docs/billing/cloud-pool.md is gone and the billing docs list only Personal/Work/Enterprise (+legacy), so this Cloud Pool may be retired or folded into Enterprise.",
+      "flags": [
+        "sales"
+      ],
+      "features": {
+        "auto_stop_idle": true,
+        "isolation": "cloud-hypervisor"
+      }
+    },
+    {
+      "key": "pool-legacy",
+      "label": "Legacy Individual pool tiers ($20-$160; pre-Sep-2026, still in billing docs)",
+      "pricing": "pool",
+      "pool_tiers": [
+        {
+          "name": "Small",
+          "month": 20,
+          "vcpu": 2,
+          "ram_gib": 8,
+          "max_vms": 50
+        },
+        {
+          "name": "Medium",
+          "month": 40,
+          "vcpu": 4,
+          "ram_gib": 16,
+          "max_vms": 50
+        },
+        {
+          "name": "Large",
+          "month": 80,
+          "vcpu": 8,
+          "ram_gib": 32,
+          "max_vms": 50
+        },
+        {
+          "name": "XLarge",
+          "month": 160,
+          "vcpu": 16,
+          "ram_gib": 64,
+          "max_vms": 50
+        },
+        {
+          "name": "Enterprise reserved pool (from $35.84/h)",
+          "month": 26163.2,
+          "vcpu": 512,
+          "ram_gib": 2048,
+          "max_vms": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Superseded on public pricing page by Personal/Work (live 2026-09-28); availability to new customers doubtful, grandfathering unverified. Team variant $25/$50/$100/$200 per user gives each user their own pool (burst into teammates' idle capacity) - not representable as a single tier. Enterprise 'from' price; max_vms 'thousands' (null).",
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Includes $20/mo Shelley LLM credit (not usable for compute).",
+      "flags": [
+        "legacy"
+      ],
+      "features": {
+        "isolation": "cloud-hypervisor"
+      }
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 100,
+    "disk_gib_month": 0.08,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.08,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 200,
+    "egress_gib": 0.05,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Personal",
+      "fee": 15,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 50,
+      "max_session_h": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 32,
+      "sizes_allowed": null,
+      "note": "$15/mo = 2 vCPU/4 GB pool and also the minimum monthly spend (fee_is_credit models 'min spend'). 1 pool, 50 VMs. Included disk scales with capacity: 2 vCPU 100 GB / 4 vCPU 200 GB / 8 vCPU 400 GB / 16 vCPU 800 GB (docs/billing/personal.md); bandwidth 200 GB at every size. Standalone VMs billed hourly on top of the subscription (max 16 vCPU/32 GB). No monthly Shelley credit.",
+      "flags": []
+    },
+    {
+      "name": "Work",
+      "fee": 150,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "$150/month paid in advance, covering 4 vCPU / 8 GB of capacity (pools + standalone VMs combined); extra capacity $0.105 per 2 vCPU-h, billed hourly only while it exists. Not per seat; unlimited users, SSO. Pools up to 512 vCPU/1024 GB (above 32 vCPU needs support approval); unlimited pools in any region; up to 25 VMs per vCPU, max 1000 per pool; concurrency null because pools are not capped. Disk 100 GB per 2 vCPU and bandwidth 50 GB per vCPU per pool (allowances do not move between pools); docs state no 800 GB cap.",
+      "flags": []
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom pricing: dedicated hardware, BYOC/AWS-GCP VPC, nested virtualization, Slack support, SLA. Legacy page: from $35.84/h for 512 vCPU/2048 GB.",
+      "flags": [
+        "sales"
+      ]
+    },
+    {
+      "name": "Legacy Individual (Small..XLarge)",
+      "fee": 0,
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 50,
+      "max_session_h": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "No longer sold (existing subscribers only; one-year migration window from 2026-09-28). Included disk scales 100/200/400/800 GB by size. No standalone VMs.",
+      "flags": [
+        "legacy"
+      ]
+    },
+    {
+      "name": "Legacy Team (per user)",
+      "fee": 0,
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 25,
+      "concurrency": 50,
+      "max_session_h": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes_allowed": null,
+      "note": "No longer sold (existing teams only; new teams choose Work). $25/$50/$100/$200 per user for Small/Medium/Large/XLarge per-user pools; every member counts the same, prorated mid-cycle; 50 VMs, 100 GB disk, 250 GB transfer per user; burst into teammates' idle capacity; SSO; no standalone VMs. per_seat shown for Small.",
+      "flags": [
+        "legacy"
+      ]
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": true,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": true,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": true,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": true,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": null,
+    "mcp_server": true,
+    "isolation": "cloud-hypervisor",
+    "image_oci": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": "any-http",
+    "volume_attach": false,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [],
+  "caveats": [
+    "Three conflicting price surfaces. Live /pricing and /docs/pricing (2026-09-28) show the NEW model: Personal $15 (2 vCPU/4 GB), Work $0.21/h per 4 vCPU/8 GB (min $150), standalone VMs $0.105/2 vCPU-h. docs/billing/overview.md and the /sandbox page still show LEGACY $20/$40/$80/$160 pools (documented as current as late as 2026-09-09). The /sandbox usage rates ($0.05/core-h, $0.016/GiB-h) are sales-only 'Cloud Pool'.",
+    "Work pool prices confirmed linear from the embedded pricing JSON (4/8/16/32/64/128/256/512 vCPU = $0.21/$0.42/$0.84/$1.68/$3.36/$6.72/$13.44/$26.88 per h); intermediate even sizes (CLI allows any even 4..512) interpolated at the same $0.0525/vCPU-h.",
+    "Personal pool sizes 2/4/8/16 vCPU = $15/$35/$75/$155 per month (embedded pricing JSON on exe.dev/pricing, verified 2026-09-28). Note 4 vCPU/8 GB is $35, not 2x$15.",
+    "Pools bill regardless of utilisation; engine should size by peak concurrent vCPU/RAM. Resizing pools off-hours can reduce cost (not modelled; hourly proration assumed but undocumented).",
+    "Standalone VM billing granularity, minimum, and whether stopped standalone VMs bill are undocumented; RAM is bundled (default 4 GiB/vCPU, max 2 GiB/vCPU at top size).",
+    "Usage pricing bills CPU on PEAK usage within each hour, so 'active' basis understates cost for bursty loads; memory billed on 'active' memory (definition unclear). Minimum commitment unknown.",
+    "included_disk_gib (100) is POOLED per account/user (Work: 100 GB per 2 vCPU of pool), not per sandbox. Disk measured as time-averaged ext4 filesystem usage, not provisioned size. Default VM disk 25 GB, grow-only.",
+    "No snapshots: retained state = stopped VM disk (or cp clone), billed as disk at $0.08/GB-month beyond allowance.",
+    "Egress allowance: 200 GB (Personal, any size; legacy Individual), 250 GB per user (legacy Team), Work 50 GB per vCPU of pool (200 GB at 4 vCPU, capped at 800 GB) - the '200 GB' bullet is the 4-vCPU value, not a conflict. Overage $0.05/GiB billed at cycle end; inbound never billed.",
+    "Standalone VMs and pools require support/team approval.",
+    "No free compute tier; 30-day trial via invite; invite rewards (credits/memory/disk) amounts unpublished. Legacy plans include $20/mo Shelley LLM credit (not compute).",
+    "No dedicated IPv4 (shared per-owner IPv4 pool; HTTPS proxy + SSH only). Account bound to one region (Personal); Work pools in any region; no regional price differences found.",
+    "AWS/Azure Marketplace billing exists (legacy sizes); marketplace prices not retrieved.",
+    "No benchmark data for exe-dev in research/benchmarks.json.",
+    "Usage-based (sales-only) mode: CPU and active memory bill on the PEAK of each hour, so set the peak CPU/RAM inputs, not the averages. \"Active memory\" is not defined (page cache inclusion unknown); the idle trigger that drops a VM to disk-only billing is not documented.",
+    "Usage-priced Cloud Pool ($0.05/core-h peak, $0.016/GiB-h active memory, exe.dev/sandbox) is not self-serve: the billing docs say to email support@exe.dev, so the mode keeps the sales flag.",
+    "Pricing changed 2026-09-28 (blog 'Pools: Our Newest Primitive'): Personal/Work replaced Individual/Team; existing customers have one year to migrate. Personal/Work/Enterprise include no monthly Shelley credit.",
+    "A pool pending support approval is not billed; pool billing stops when the pool is deleted; pools reserve CPU+memory only, not disk.",
+    "Switching Personal -> Work cancels Personal immediately with no automatic credit for the rest of the cycle (refund on request).",
+    "Approval (docs 2026-09-29): Personal standalone VMs need no approval; Work standalone VMs need a team-admin setting (off by default); pools up to 32 vCPU are immediate, 34-512 vCPU need exe.dev support approval. Supersedes the older 'Standalone VMs and pools require support/team approval' caveat."
+  ],
+  "sources": [
+    "https://exe.dev/pricing",
+    "https://exe.dev/docs/pricing",
+    "https://exe.dev/sandbox",
+    "https://exe.dev/docs/billing/overview.md",
+    "https://exe.dev/docs/billing/usage.md",
+    "https://exe.dev/docs/billing/subscriptions.md",
+    "https://exe.dev/docs/billing/cloud-pool.md",
+    "https://exe.dev/docs/cli-pool.md",
+    "https://exe.dev/docs/regions.md",
+    "https://exe.dev/llms-full.txt",
+    "https://flaviocopes.com/exe-dev/",
+    "https://boxd.sh/blog/boxd-vs-exe-dev/"
+  ],
+  "fleet": {
+    "default_max_instances": 50,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Personal pool up to 50 VMs (shared 2–16 vCPU pool); Work table 1,000 VMs/pool with larger resource pools. Standalone sandboxes separately 50 Personal / 100 Work; Enterprise custom.",
+    "notes": "Entry 50 is a VM-count allowance, not 50 full-size dedicated machines: a selected CPU/RAM pool is shared. New paid Personal pool starts 2 vCPU/4 GB. Work top-card count 100 and comparison pool count 1,000 describe inconsistent/different modes; use mode-specific confirmation before 300/1,000. No assumed instant custom allocation.",
+    "sources": [
+      "https://exe.dev/pricing",
+      "https://exe.dev/docs/billing/cloud-pool.md"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 5,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 9
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://exe.dev/docs/standalone-vms.md",
+      "quote": "A stopped standalone VM is not billed for its vCPU and memory. It keeps its disk, and it still counts toward your VM limits.",
+      "note": "State = persistent disk only; no snapshot/checkpoint/suspend mechanism anywhere in llms-full.txt (0 hits for 'snapshot'/'checkpoint'). VMs are not auto-stopped on idle. Docs say disks are 'persisted and backed up' (backups, not this feature).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://exe.dev/docs/cli-cp.md",
+      "quote": "cp <source-vm> [new-name] [--pool=<name>] [--memory=<size>] [--cpu=<count>] [--disk=<size>]",
+      "note": "No snapshot/restore command in the full CLI reference. Closest thing: `cp` = copy-on-write clone of a VM ('clone disk and config', /sandbox page) into a NEW VM, disk only, no memory. A stopped cp copy can serve as a manual disk checkpoint / template for further cp, but there is no restore-in-place or named snapshot.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://exe.dev/docs/cli-shelley.md",
+      "quote": "Send a prompt to Shelley on a VM ... shelley prompt [--model=<model>] [--reasoning=<level>] <vm> <prompt>",
+      "note": "Shelley only (exe.dev's own web coding agent). Also `new --prompt` ('initial prompt to send to Shelley after VM creation'). Driveable over SSH and the HTTPS /exec API (which runs the same command set). No documented API to stream Shelley events, list/resume conversations, or drive Claude Code/Codex/Pi (preinstalled, but only via shell exec). exe.dev also serves an MCP server at https://exe.dev/mcp (tool list not documented).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "On the networking side, we don't give your VM its own public IP. Instead, we terminate HTTPS/TLS requests, and proxy them securely to your VM's web servers.",
+      "note": "No firewall/allowlist/egress-rule/no-internet option appears on `new`, `share`, `team`, or `pool` in the full CLI/docs reference (only two unrelated hits for 'allowlist', about API-key scoping and a third-party Slack bot's own allowlist). VMs get unrestricted outbound internet by default; secrets are protected via the integrations proxy rather than by blocking egress.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "Not documented. The http-proxy integration only fixes a target host, injects headers and can strip a path prefix (`--strip-prefix`); it does not filter methods/paths, and direct internet egress is unrestricted anyway.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://exe.dev/docs/proxy.md",
+      "quote": "By default, only users with access to the VM can access the HTTP proxy. Users accessing https://vmname.exe.xyz/ for the first time will be redirected to log into `exe.dev`.",
+      "note": "Private-by-default auth-gated HTTPS proxy; `share set-public/set-private`; per-person Web or Root shares, team sharing controls; ports 3000-9999 forwarded only to authorized users; 'You may only mark a single port public'. No public IP; only HTTPS proxy + brokered SSH reach the VM. VM-scoped bearer tokens for programmatic access. No IP allowlists.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VM (Cloud Hypervisor) with root and systemd; user cannot pick the kernel but the stock kernel presumably includes netfilter (Docker runs inside, which needs iptables/nftables).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://exe.dev/docs/integrations.md",
+      "quote": "Whatever the type, the secret is stored server-side and injected at the network edge when your VM calls the integration hostname. The VM — and any agent running on it — can *use* the integration but can never read the secret.",
+      "note": "Integrations: HTTP proxy (any target host; --header/--bearer/basic auth injected at <name>.int.exe.xyz), S3 SigV4 signing, GitHub App (git over HTTPS), LLM providers, Slack/Discord bots, VM-to-VM, token-mint, OCI registry pull tokens, 100+ catalog services, AWS/GCP workload identity federation. Attach per VM, per tag or auto:all. The VM calls a special hostname (explicit proxy endpoint, not transparent interception). HTTP(S) only; no DB/SSH protocol injection documented (git via GitHub integration over HTTPS).",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "cp <source-vm> [new-name] [--pool=<name>] [--memory=<size>] [--cpu=<count>] [--disk=<size>]",
+      "note": "No attach/detach-volume command exists in the full CLI reference (`new`, `resize`, `cp`, `pool`, `team`, `billing`, `share`, `integrations` — no `volume` subcommand). Disk is fixed to the VM it was created/resized on.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "exe.dev [...] gives you virtual machines [...] create a virtual private network to connect their VMs. Tailscale",
+      "note": "No shared-filesystem/shared-volume feature is documented anywhere; cross-VM data sharing is only via Tailscale private networking, SSH/scp/rsync, the VM-to-VM integration, or the S3 integration — none of which is a shared mounted volume.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "It should be some kind of stock linux ... Just a computer.",
+      "note": "not offered: outside the product's scope — exe.dev is an SSH/terminal-accessed Linux VM product (root, systemd, Docker); no VNC/RDP/streamed graphical desktop is documented anywhere in the docs or CLI reference.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://exe.dev/sandbox",
+      "quote": "create a VM a computer, in about a second",
+      "note": "not offered: outside the product's scope — exe.dev sells general-purpose Linux VMs for coding agents, not a browser-automation/scraping product; no stealth or anti-fingerprinting feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://exe.dev/sandbox",
+      "quote": "create a VM a computer, in about a second",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving feature is documented anywhere in the docs/CLI/API reference; exe.dev is a generic dev VM, not a scraping/automation service.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "No dedicated IPv4 (shared per-owner IPv4 pool; HTTPS proxy + SSH only).",
+      "note": "network.ipv4_available is false and no static/residential/mobile IP feature is documented; VMs egress through the provider's shared cloud-hosted datacenter IP space with no dedicated/static assignment.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://exe.dev/docs/standalone-vms.md",
+      "quote": "A stopped standalone VM is not billed for its vCPU and memory. It keeps its disk, and it still counts toward your VM limits.",
+      "note": "Stopping a VM halts vCPU/memory billing (disk still billed) and it can be started again later; this is the product's pause/resume mechanism, with billing reduced while stopped.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "The VM must be running or stopped.",
+      "note": "No documentation of a stopped/sleeping VM automatically waking on an incoming SSH/HTTPS request; starting a stopped VM requires an explicit start action (CLI/API), not a passive wake-on-request trigger.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "Send a prompt to Shelley on a VM ... shelley prompt [--model=<model>] [--reasoning=<level>] <vm> <prompt>",
+      "note": "not offered: outside the product's scope — Shelley is exe.dev's own CODING agent/harness (already modeled as harness_api/agent_harnesses), not a browser/computer-use/research task agent; exe.dev has no desktop or browser-control product for such an agent to drive.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "exe.dev serves a Model Context Protocol server at https://exe.dev/mcp. Point your favorite MCP client at it",
+      "note": "First-party MCP server for controlling exe.dev VMs from Claude Code and other MCP clients.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://raw.githubusercontent.com/boldsoftware/exeuntu/main/Dockerfile",
+      "quote": "make python3-pip python-is-python3 ... docker.io docker-buildx docker-compose-v2 ...",
+      "note": "The default exeuntu image's package list installs Go, Python3/pip, and many tools but no Node.js/npm; docs note installing the Codex npm package 'works too if you prefer the Node-packaged build and already have a modern Node on the VM,' implying Node is not preinstalled out of the box (though it can be apt-installed manually).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "No dedicated IPv4 (shared per-owner IPv4 pool; HTTPS proxy + SSH only).",
+      "note": "No static/dedicated outbound IP feature is documented; VMs share a per-owner IPv4 pool with no fixed per-VM address, consistent with network.ipv4_available=false in the card.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://exe.dev/docs/standalone-vms.md",
+      "quote": "A standalone VM ... does not share capacity with your other VMs. It is billed by the hour while it runs.",
+      "note": "VMs (pool or standalone) run until explicitly stopped or deleted by the user/API; no maximum session/lifetime duration is documented anywhere in the extensive CLI/API/billing docs.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "cp <source-vm> [new-name] [--pool=<name>] [--memory=<size>] [--cpu=<count>] [--disk=<size>] ... Copy an existing VM",
+      "note": "No contradiction: exe.dev has no snapshot/checkpoint/restore mechanism. `cp` is a disk+config copy-on-write clone into a NEW VM (not a snapshot of the source that can be restored in place), and `--memory` there just sets the new VM's RAM allocation, not a captured memory image. 'snapshot' and 'checkpoint' do not appear anywhere in llms-full.txt. Card's existing feature_evidence.snapshot_auto/snapshot_on_demand (false/false) already document this; 'none' plus fork=true (disk clone) is consistent, not contradictory.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "cp <source-vm> [new-name] [--pool=<name>] [--memory=<size>] [--cpu=<count>] [--disk=<size>]",
+      "note": "The only fork/clone primitive (`cp`) copies disk and config into a new VM; `--memory` sets the new VM's RAM size, it does not carry over live RAM contents. No memory-state snapshot/restore appears anywhere in llms-full.txt.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://exe.dev/pricing",
+      "quote": "Nested virtualization (KVM) | Not included | Not included | Included",
+      "note": "The live pricing comparison table lists 'Nested virtualization (KVM)' as a named feature: Not included on Personal and Work, but Included on Enterprise. This matches the card's own Enterprise plan note ('dedicated hardware, BYOC/AWS-GCP VPC, nested virtualization, Slack support, SLA'). So nested_virt is offered (Enterprise/custom tier), not a flat no — correct to true.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "On the networking side, we don't give your VM its own public IP. Instead, we terminate HTTPS/TLS requests, and proxy them securely to your VM's web servers. For SSH, we handle `ssh vmname.exe.xyz`.",
+      "note": "No mention of VNC, remote desktop, screen-share, browser-automation/computer-use API, or GUI streaming anywhere in llms-full.txt or the pricing/sandbox pages. Access is SSH + HTTPS proxy to a headless Linux VM; product is a coding-agent dev-env VM, not a computer-use/GUI-agent product.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "A stopped standalone VM is not billed for its vCPU and memory. It keeps its disk, and it still counts toward your VM limits.",
+      "note": "No occurrence of 'idle' anywhere in llms-full.txt for the self-serve Personal/Work/standalone-VM products; stopping is always a manual/CLI action, never an automatic idle-timeout. (The sales-only, non-self-serve 'Cloud Pool' usage mode is separately modeled with auto_stop_idle:true inside its own mode entry, which is correct and distinct from this top-level flag.)",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "cp <source-vm> [new-name] [--pool=<name>] [--memory=<size>] [--cpu=<count>] [--disk=<size>]",
+      "note": "The word 'volume' does not occur anywhere in llms-full.txt or the CLI reference. Storage is only each VM's own grow-only local disk (`new --disk`, `resize`); no separate attachable/mountable volume object exists.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "On the networking side, we don't give your VM its own public IP. Instead, we terminate HTTPS/TLS requests, and proxy them securely to your VM's web servers. For SSH, we handle `ssh vmname.exe.xyz`.",
+      "note": "Explicit statement that VMs never get their own public IP; reachability is only via the shared HTTPS proxy and brokered SSH hostname.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://exe.dev/pricing",
+      "quote": "Personal $15/month ... Work $0.21/hour ... Enterprise Custom resource limits Dedicated hardware and resources ...",
+      "note": "No 'GPU'/'nvidia'/'cuda' term appears anywhere in llms-full.txt, the pricing comparison table, or the sandbox usage page; all plan resources are described purely in vCPU/RAM/disk/bandwidth. Product is CPU-only cloud-hypervisor KVM VMs for coding agents.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "With most providers, your VM starts with a \"base image\" and is given a block device. Exe.dev instead starts with a container image (by default, \"exeuntu\"), and hooks it up with a block device with the image on it.",
+      "note": "No 'Windows' term appears anywhere in the docs; VMs boot a Linux container-derived image ('exeuntu') under Cloud Hypervisor. Windows guests are plainly outside what this Linux dev-env sandbox product offers.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "Exe.dev instead starts with a container image (by default, \"exeuntu\"), and hooks it up with a block device with the image on it.",
+      "note": "No 'macOS'/'Mac OS'/'Darwin' guest term appears anywhere in the docs; this is a Linux-VM-only sandbox provider (KVM/Cloud Hypervisor), and macOS guests are outside the product by construction (no bare-metal Mac hardware offering).",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "case \"$(uname -m)\" in x86_64) A=x86_64-unknown-linux-musl ;; aarch64|arm64) A=aarch64-unknown-linux-musl ;;",
+      "note": "The only aarch64/arm64 references in the docs are about which CLI-tool binary to download on the OPERATOR'S own machine (client side), not about the guest VM architecture; there is no mention anywhere of an arm64 guest VM option, and Cloud Hypervisor VM sizing/pricing is undifferentiated by CPU architecture, implying x86_64-only guests.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "These providers host the virtual machines and compute that our customers",
+      "note": "exe.dev is a hosted SaaS platform run by exe.dev on its own/partner infrastructure; there is no offering to run the exe.dev control plane on a customer's own infrastructure. The Enterprise 'Bring your own cloud' (BYOC, AWS/GCP VPC) option still means exe.dev's control plane placing VMs inside the customer's cloud account, not the customer self-hosting the exe.dev product itself.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "The [Dockerfile for exeuntu](https://github.com/boldsoftware/exeuntu/blob/main/Dockerfile) is open source, so you can use that as a base if you'd like.",
+      "note": "Only the default VM base-image Dockerfile ('exeuntu') is published as open source; the exe.dev platform itself (control plane, CLI backend, billing, proxy) is closed-source SaaS with no public repository referenced anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://exe.dev/llms-full.txt",
+      "quote": "cp <source-vm> [new-name] [--pool=<name>] [--memory=<size>] [--cpu=<count>] [--disk=<size>] ... Copy an existing VM",
+      "note": "derived: the `cp` command (the only fork/clone primitive) copies a VM's disk and config into a new VM; nothing in the CLI reference, options, or examples requires the source VM to be stopped first, and the docs never mention a 'must be stopped' precondition anywhere for cp (searched). Memory state is not carried over (already modeled as memory_snapshot_fork=false), but the clone itself is not documented as requiring the source to be paused/stopped.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://exe.dev/security",
+      "quote": "E-mail security@exe.dev to disclose security vulnerabilities. exe.dev does not have a bounty program. Security Bulletins",
+      "note": "exe.dev's own /security page is only a vulnerability-disclosure/bulletin feed; no mention of SOC 2 (or any compliance attestation) appears there, on the pricing/Enterprise page, or anywhere in llms-full.txt (0 hits for 'SOC' or 'compliance' as a certification). No trust-center/compliance page exists (site returns 404 for /trust, /compliance, /soc2).",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://exe.dev/security",
+      "quote": "E-mail security@exe.dev to disclose security vulnerabilities. exe.dev does not have a bounty program. Security Bulletins",
+      "note": "No mention of HIPAA, BAA, or 'business associate' anywhere in llms-full.txt, the security page, or the Enterprise plan docs (which list dedicated hardware/BYOC/SSO/SLA but no compliance certifications). No compliance/trust page exists on the site.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://exe.dev/docs/cli-billing.md",
+      "quote": "billing usage: Show VM resource usage against your plan quotas. Options: --group=vm, --range=cycle|24h|7d|30d, --json. Output in JSON format.",
+      "note": "granularity: per-vm; cost: no; REST API: POST https://exe.dev/exec with --json flag enables machine-readable output for all CLI commands including `billing usage`. CLI shows quantities (vCPU-hours, disk GiB-months, bandwidth GiB) against plan quotas, not monetary costs. Team admins can use `team usage` for per-pool breakdowns.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "PDX",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "LAX",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NY",
+      "city": "New York",
+      "provider_region": "NYC",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "DAL",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "FRA",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "TYO",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "SYD",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "SGP",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "LON",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://exe.dev/docs/regions.md",
+  "locations_quote": "PDX: Oregon, USA; LAX: Los Angeles, USA; NYC: New York, USA; DAL: Dallas, USA; FRA: Frankfurt, Germany; TYO: Tokyo, Japan; SYD: Sydney, Australia; SGP: Singapore; LON: London, UK",
+  "locations_checked": "2026-10-01"
+}

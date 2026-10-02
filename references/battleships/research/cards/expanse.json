@@ -1,0 +1,503 @@
+{
+  "id": "expanse",
+  "name": "Expanse",
+  "url": "https://expanse.sh",
+  "category": "gpu-cloud",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": null,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Current product discovers idle GPU capacity in customer fleets; savings statistics are not an instance tariff. No standalone managed GPU rental established. Retain marginal software/operator lead.",
+    "Inventory exclusion: customer GPU utilization software. Card contains no numeric compute modes and no selectable price plan.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "2026-09-29: Expanse is software that predicts HPC/AI job resources (memory, runtime, failure risk) and diagnoses failures. It runs alongside SLURM/Kubernetes/Nomad on the customer's own cluster and sells no compute. /pricing has no pricing page (it serves the homepage), and the only CTA is 'Book a discovery call'. Keep it out of compute rankings."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/expanse",
+    "https://expanse.sh/"
+  ],
+  "audit_2026_09_29": {
+    "applied": 3,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature. Whatever the customer's own nodes allow is outside Expanse.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "Not applicable: Expanse is self-hosted job-prediction software (Analyse/Diagnose) installed on the customer's own SLURM/Kubernetes/Nomad cluster; it provides no machines/sandboxes, so it has no such feature.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "One command to install An Ansible playbook sets up the cluster side; a Helm chart deploys the models to your GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty. We predict exactly what every job needs before it runs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "One command to install An Ansible playbook sets up the cluster side; a Helm chart deploys the models to your GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have. Expanse delivers compute certainty.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope — no hosted runtime/sandbox is provided to run customer code in",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Cloud, on-prem or hybrid. On-prem clusters, your own cloud accounts (AWS and others), or both.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://expanse.sh/",
+      "quote": "Expanse gets you more out of the GPUs you already have.",
+      "note": "not offered: Expanse does not sell/rent GPU machines; it is software that predicts/optimizes usage of the customer's own existing GPUs, so there is no Expanse-provided GPU compute product.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "One command to install An Ansible playbook sets up the cluster side; a Helm chart deploys the models to your GPUs.",
+      "note": "not offered: outside the product's scope (installs on Linux-based SLURM/Kubernetes/Nomad clusters; no Windows machine product)",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "One command to install An Ansible playbook sets up the cluster side; a Helm chart deploys the models to your GPUs.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "One command to install An Ansible playbook sets up the cluster side; a Helm chart deploys the models to your GPUs.",
+      "note": "not offered: outside the product's scope — no arch-selectable machine product is offered",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "One command to install An Ansible playbook sets up the cluster side; a Helm chart deploys the models to your GPUs.",
+      "note": "No evidence of an OSI-licensed core product; Expanse is deployed via a proprietary Ansible playbook/Helm chart, no public source repo found.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://expanse.sh/product",
+      "quote": "Cloud, on-prem or hybrid. On-prem clusters, your own cloud accounts (AWS and others), or both. Your code and telemetry never leave your infrastructure.",
+      "note": "Since Expanse deploys entirely inside the customer's own cluster/cloud account and data never leaves that infrastructure, a customer running in the EU keeps data in the EU by construction.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "not offered: outside the product's scope — there is no Expanse-hosted session/machine for it to time-limit; jobs run under the customer's own scheduler (SLURM/Kubernetes/Nomad) with no Expanse-imposed cap.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://expanse.sh/company",
+      "quote": "SOC 2 Type II, powered by Vanta",
+      "note": "Badge and linked live Vanta Trust Center (https://trust.expanse.sh) shown in the site footer under 'Security & compliance'.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://expanse.sh/product",
+      "quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+      "note": "granularity: none; cost: no; Expanse is self-hosted software (not a sandbox provider). It runs on the customer's own SLURM/Kubernetes/Nomad cluster and provides no hosted machines to bill. Usage tracking is the responsibility of the customer's underlying cluster scheduler, not Expanse.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://expanse.sh/product",
+  "locations_quote": "Expanse deploys inside your cluster: the models on your GPUs, the console and management layer on your servers. There is no hosted third-party environment.",
+  "locations_checked": "2026-10-01"
+}

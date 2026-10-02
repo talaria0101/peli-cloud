@@ -1,0 +1,774 @@
+{
+  "id": "flow-swiss-mac",
+  "name": "Flow Swiss Mac Bare Metal",
+  "url": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+  "category": "macos",
+  "isolation": "dedicated-host",
+  "modes": [
+    {
+      "key": "dedicated",
+      "label": "Whole Mac, hourly with 24 h minimum (CHF converted to USD)",
+      "flags": [],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "macmini.m1.8-16-512 (M1)",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 512,
+          "hour": 0.326295,
+          "month_cap": null,
+          "hour_chf": 0.27,
+          "month_chf": 199
+        },
+        {
+          "name": "macmini.2018.6-16-256 (Intel i7)",
+          "vcpu": 6,
+          "ram_gib": 16,
+          "disk_gib": 256,
+          "hour": 0.326295,
+          "month_cap": null,
+          "hour_chf": 0.27,
+          "month_chf": 199
+        },
+        {
+          "name": "macmini.m2.8-24-512 (M2)",
+          "vcpu": 8,
+          "ram_gib": 24,
+          "disk_gib": 512,
+          "hour": 0.41089,
+          "month_cap": null,
+          "hour_chf": 0.34,
+          "month_chf": 249
+        },
+        {
+          "name": "macmini.2018.6-32-512 (Intel i7)",
+          "vcpu": 6,
+          "ram_gib": 32,
+          "disk_gib": 512,
+          "hour": 0.664675,
+          "month_cap": null,
+          "hour_chf": 0.55,
+          "month_chf": 399
+        },
+        {
+          "name": "macmini.2018.6-64-1024 (Intel i7)",
+          "vcpu": 6,
+          "ram_gib": 64,
+          "disk_gib": 1024,
+          "hour": 0.82178,
+          "month_cap": null,
+          "hour_chf": 0.68,
+          "month_chf": 499
+        },
+        {
+          "name": "macmini.m2-pro.12-32-4096 (M2 Pro)",
+          "vcpu": 12,
+          "ram_gib": 32,
+          "disk_gib": 4096,
+          "hour": 0.74927,
+          "month_cap": null,
+          "hour_chf": 0.62,
+          "month_chf": 449
+        },
+        {
+          "name": "macmini.m4-pro.12-48-2048 (M4 Pro)",
+          "vcpu": 12,
+          "ram_gib": 48,
+          "disk_gib": 2048,
+          "hour": 0.906375,
+          "month_cap": null,
+          "hour_chf": 0.75,
+          "month_chf": 549
+        },
+        {
+          "name": "macmini.m4-pro.14-48-2048 (M4 Pro)",
+          "vcpu": 14,
+          "ram_gib": 48,
+          "disk_gib": 2048,
+          "hour": 0.99097,
+          "month_cap": null,
+          "hour_chf": 0.82,
+          "month_chf": 599
+        },
+        {
+          "name": "macmini.m5-pro.18-64-2048 (M5 Pro)",
+          "vcpu": 18,
+          "ram_gib": 64,
+          "disk_gib": 2048,
+          "hour": 1.23267,
+          "month_cap": null,
+          "hour_chf": 1.02,
+          "month_chf": 749
+        },
+        {
+          "name": "studio.m4-max.16-128-2048 (M4 Max)",
+          "vcpu": 16,
+          "ram_gib": 128,
+          "disk_gib": 2048,
+          "hour": 1.61939,
+          "month_cap": null,
+          "hour_chf": 1.34,
+          "month_chf": 979
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 86400,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "CHF prices (excl. VAT) converted at 1 CHF = 1.2085 USD (26 Sep 2026). 'Billing is per hour with a 24-hour minimum allocation period'; billing continues while the Mac is switched off, until the device is deleted. Flow's monthly figures are estimates 'based on 730 hours of usage' (billing FAQ: '30 day month'), not caps. Billing FAQ says Mac usage is gathered/deducted every 24 h. Cores = CPU cores (physical Mac, not vCPU). Zurich (ZRH1) only.",
+      "regions": [
+        "eu"
+      ]
+    },
+    {
+      "key": "two-vms-per-host",
+      "label": "Mac split into 2 macOS VMs (Apple SLA cap), per-VM price",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "1/2 of macmini.m1.8-16-512 (M1)",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 256,
+          "hour": 0.163148,
+          "month_cap": 120.24575
+        },
+        {
+          "name": "1/2 of macmini.m2.8-24-512 (M2)",
+          "vcpu": 4,
+          "ram_gib": 12,
+          "disk_gib": 256,
+          "hour": 0.205445,
+          "month_cap": 150.45825
+        },
+        {
+          "name": "1/2 of macmini.m2-pro.12-32-4096 (M2 Pro)",
+          "vcpu": 6,
+          "ram_gib": 16,
+          "disk_gib": 2048,
+          "hour": 0.374635,
+          "month_cap": 271.30825
+        },
+        {
+          "name": "1/2 of macmini.m4-pro.12-48-2048 (M4 Pro)",
+          "vcpu": 6,
+          "ram_gib": 24,
+          "disk_gib": 1024,
+          "hour": 0.453187,
+          "month_cap": 331.73325
+        },
+        {
+          "name": "1/2 of macmini.m4-pro.14-48-2048 (M4 Pro)",
+          "vcpu": 7,
+          "ram_gib": 24,
+          "disk_gib": 1024,
+          "hour": 0.495485,
+          "month_cap": 361.94575
+        },
+        {
+          "name": "1/2 of macmini.m5-pro.18-64-2048 (M5 Pro)",
+          "vcpu": 9,
+          "ram_gib": 32,
+          "disk_gib": 1024,
+          "hour": 0.616335,
+          "month_cap": 452.58325
+        },
+        {
+          "name": "1/2 of studio.m4-max.16-128-2048 (M4 Max)",
+          "vcpu": 8,
+          "ram_gib": 64,
+          "disk_gib": 1024,
+          "hour": 0.809695,
+          "month_cap": 591.56075
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 86400,
+      "granularity_s": 3600,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "DIY: up to 2 macOS VMs per Mac (Tart/Lume, you install); host price / 2.",
+      "regions": [
+        "eu"
+      ]
+    },
+    {
+      "key": "ci-engine",
+      "label": "CI Engine (managed ephemeral macOS CI runners on M4 Pro), monthly per concurrent job",
+      "flags": [
+        "alt",
+        "commit"
+      ],
+      "commit_term": "730 h minimum before concurrency can be reduced",
+      "os": [
+        "macos"
+      ],
+      "pricing": "sizes",
+      "requires_always_on": true,
+      "sizes": [
+        {
+          "name": "Essential gen1-3c.8g",
+          "vcpu": 3,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": null,
+          "month_first_chf": 149,
+          "month_additional_chf": 130,
+          "month_first": 180.07,
+          "month_additional": 157.1
+        },
+        {
+          "name": "Professional gen1-6c.16g",
+          "vcpu": 6,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": null,
+          "month_first_chf": 899,
+          "month_additional_chf": 350,
+          "month_first": 1086.44,
+          "month_additional": 422.97
+        }
+      ],
+      "always_on_month_per_instance": 157.1,
+      "note": "Subscription = 1 concurrent job incl.; Essential total = 149 + 130 x (n-1) CHF/month (i.e. 19 CHF base + 130 per slot). Unlimited jobs. Integrations: GitHub Actions, Buildkite. Runner VMs (not the bare-metal Mac). Only relevant as a CI-minutes alternative."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 256,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 20000,
+    "egress_gib": null,
+    "ipv4_month": 0,
+    "ipv4_available": true,
+    "note": "One Elastic IPv4 per Mac included; additional Elastic IPs CHF 0.01/h (CHF 7.30/mo = $8.82), billed while they exist. 20 TB/month outbound per organisation included (overage price unpublished); marketing page says 'Unlimited data traffic and an 1 Gbit/s network uplink', docs say 20 TB.",
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay-as-you-go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Prepaid, CHF only; minimum top-up CHF 10; balance non-refundable/non-transferable; lapses after 12 months of non-use. Cashback bonus credit on each recharge: 1% (>=CHF 500), 2% (>=1k), 3% (>=5k), 5% (>=10k), 7.5% (>=20k), 10% (>=50k). Balance < 0 -> all services suspended, irrevocably deleted after 7 days (auto-recharge optional). Sign-up blocks free email domains (gmail, yahoo) and requires SMS verification."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 24.17,
+    "one_time_credit_chf": 20
+  },
+  "features": {
+    "linux": false,
+    "windows": false,
+    "macos": true,
+    "arm64": true,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": false,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu"
+    ],
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "bare-metal",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Sweep assumed 1.25 USD/CHF; current rate is ~1.21 USD/CHF (Flow's own doc says '1 CHF is usually equal to 1 USD', which is out of date). Prices exclude Swiss VAT.",
+    "Egress: 20 TB/month per organisation included; overage price not published. Each Mac gets a free elastic public IPv4.",
+    "Hourly granularity assumed (prices quoted per hour).",
+    "No sandbox/agent SDK, but a REST API (api.flow.swiss/v3, same functionality as the control panel) covers Mac Bare Metal devices; Flow CLI does not yet support Mac. Zurich (ZRH1) only.",
+    "Granularity after the 24 h minimum is ambiguous: pricing page says 'Billing is per hour', billing FAQ says Mac billing is 'on a daily basis respectively 24 hours'. Card keeps 3600 s; if Flow actually bills whole days, sessions of 25-47 h would cost 48 h.",
+    "Flow's own pages disagree on which Macs exist: the API product list shows only Intel + M1, the marketing page lists 'Intel, M1, M1-Max, M2-Pro', the price list has Intel, M1, M2, M2 Pro, M4 Pro x2, M5 Pro, M4 Max Studio. Price list used; availability/stock not published."
+  ],
+  "sources": [
+    "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+    "https://flow.swiss/mac-bare-metal",
+    "https://wise.com/us/currency-converter/usd-to-chf-rate/history",
+    "https://www.apple.com/legal/sla/docs/macOS27.pdf"
+  ],
+  "audit_2026_09_29": {
+    "applied": 5,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 26
+  },
+  "extras": [
+    {
+      "item": "Business Support",
+      "price": "from CHF 500/month (~$604), consumption-based, via sales"
+    },
+    {
+      "item": "First Support",
+      "price": "from CHF 5,000/month (~$6,043), consumption-based; phone + TAM"
+    }
+  ],
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/billing-faq",
+      "quote": "A device in a stopped state continues to reserve the dedicated Mac device and therefore incur charges until you destroy/delete it.",
+      "note": "Dedicated physical Mac; stopping just powers it off and the local SSD persists (persistent_disk, not snapshot). No snapshot feature exists for Mac Bare Metal at all.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+      "quote": null,
+      "note": "Volume snapshots exist only for Flow Compute (VM) volumes. Mac pricing lists Elastic IPs as the only optional resource, and the Mac API surface in the official goclient/CLI/Terraform provider (devices, actions, workflows, VNC, networks, routers, elastic IPs, security groups) has no snapshot/image endpoints. On delete the Mac is wiped via MDM Erase.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://doc.flow.swiss/developer-center/api",
+      "quote": "All of the functionality that you are familiar with in the Flow control panel is also available through the API",
+      "note": "API is infrastructure lifecycle only (create/delete device, power actions, VNC, networking). No agent harness API or preinstalled agents.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://github.com/flowswiss/terraform-provider-flow/blob/HEAD/docs/resources/mac_bare_metal_security_group_rule.md",
+      "quote": "`direction` (String) direction of the security group rule (ingress or egress)",
+      "note": "Mac Bare Metal has its own security groups (network-layer firewall, protocol/port/CIDR rules, IPv4 only) with egress rules; generic docs: 'Traffic that does not satisfy any rule is dropped' and default group 'allows all traffic'. Enforced in the network, outside the Mac. No hostname/domain rules. Egress behaviour on Mac inferred from the shared security-group model, not tested.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/compute/networking/security-groups",
+      "quote": "Security Groups are network-based firewalls and stop traffic at the network layer before it reaches the server.",
+      "note": "Only L3/L4 (protocol, port, CIDR) rules; no HTTP-level filtering product.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices",
+      "quote": "For security reasons, only two TCP ports are open from the outside. These are ports 5900 (VNC) and 22 (SSH). The port settings can be restricted or extended in the Control Panel via Mac Bare Metal > Networking > Security Groups > Default.",
+      "note": "Security groups with source-CIDR restrictions; the Elastic IP can be unchecked at creation so the device is 'reachable only internally' (private network, routers, VPN). No HTTPS preview URLs.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Dedicated bare-metal Mac, default user 'has root privileges'; macOS pf firewall (not nftables/iptables) is usable by root.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "Specify a password for the default user who has root privileges. The default user is named \"Flow\".",
+      "note": "No secrets-management/credential-injection feature is documented anywhere for Mac Bare Metal; users must place credentials on the Mac themselves via SSH/VNC/root access.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+      "quote": null,
+      "note": "Block Volumes ('you can add multiple additional Volumes') are a Flow Compute (VM) feature; Mac storage is the fixed internal SSD per flavor (256 GB-4 TB). No volume endpoints in the Mac API/SDK.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/compute/volumes",
+      "quote": "Volumes cannot be assigned to more than one instance at a time.",
+      "note": "No shared filesystem for Macs. Flow Object Storage (S3-compatible) exists but has no first-party mount; user could self-mount.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "bare-metal",
+      "source": "https://doc.flow.swiss/products/mac-bare-metal",
+      "quote": "dedicated, bare-metal Apple Mac devices. It is a fully automated bare-metal Mac cloud platform with API support.",
+      "note": "Product is a whole dedicated physical Mac per customer (not a shared-kernel container or hypervisor VM).",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices",
+      "quote": "dedicated Apple Mac devices that are delivered with the latest stable macOS version.",
+      "note": "not offered: outside the product's scope — a physical Mac is provisioned with vanilla stock macOS; there is no OCI/Docker-image boot mechanism (confirmed by the Terraform resource schema, which has no image field, only location_id/network_id/product_id).",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices",
+      "quote": "dedicated Apple Mac devices... root/admin access via SSH.",
+      "note": "derived: full root/admin access to a real Mac (SSH access documented); Docker Desktop can be installed and run as on any admin-access Mac. Not explicitly documented by Flow as a feature.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal",
+      "quote": "dedicated, bare-metal Apple Mac devices. It is a fully automated bare-metal Mac cloud platform with API support.",
+      "note": "not offered: outside the product's scope — bare-metal Mac hardware rental, not a browser/scraping product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal",
+      "quote": "dedicated, bare-metal Apple Mac devices. It is a fully automated bare-metal Mac cloud platform with API support.",
+      "note": "not offered: outside the product's scope — bare-metal Mac hardware rental, not a browser automation product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+      "quote": "One Elastic IPv4 per Mac included; additional Elastic IPs CHF 0.01/h",
+      "note": "Fixed Elastic IPv4 from Flow's Swiss datacenter address space, allocated per Mac; not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+      "quote": null,
+      "note": "not offered: physical Mac hardware sold as fixed flavors (macmini.m1.8-16-512, etc.); the Terraform device resource only accepts product_id/location_id/network_id at creation, with no resize action — changing size means provisioning a different physical device.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://doc.flow.swiss/developer-center/api",
+      "quote": "All of the functionality that you are familiar with in the Flow control panel is also available through the API",
+      "note": "not offered: outside the product's scope — the API is infrastructure lifecycle only (create/delete device, power actions, VNC, networking); no browser/computer-use/research task-agent API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://doc.flow.swiss/developer-center/api",
+      "quote": "All of the functionality that you are familiar with in the Flow control panel is also available through the API",
+      "note": "not offered: only a REST API (api.flow.swiss/v3) and CLI/Terraform provider are documented; no first-party MCP server for controlling Mac Bare Metal devices was found (the docs site's own AI-chat MCP integration is unrelated to the product).",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices",
+      "quote": "dedicated Apple Mac devices that are delivered with the latest stable macOS version.",
+      "note": "not offered out of the box: devices are delivered as a vanilla stock macOS install with no documented pre-installed dev-language runtimes; user installs via Homebrew/Xcode themselves.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices",
+      "quote": "dedicated Apple Mac devices that are delivered with the latest stable macOS version.",
+      "note": "not offered out of the box: vanilla stock macOS install, no documented pre-installed Node.js; user installs it themselves.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://flow.swiss/compliance",
+      "quote": "ISO/IEC 27001 ... GDPR compliant ... FINMA-RS 18/3 compliant ... PCI DSS compliant",
+      "note": "Flow's dedicated compliance page lists ISO 27001, GDPR, FINMA-RS 18/3 and PCI DSS attestations for its datacenters; SOC 2 is not listed anywhere on this page.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://flow.swiss/compliance",
+      "quote": "ISO/IEC 27001 ... GDPR compliant ... FINMA-RS 18/3 compliant ... PCI DSS compliant",
+      "note": "not offered: outside the product's scope — Swiss-only hosting company; no HIPAA/BAA mention on the compliance page or anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+      "quote": "Zurich (ZRH1) only.",
+      "note": "Mac Bare Metal is only available in Flow's Zurich, Switzerland datacenter; Switzerland is not an EU member state, so there is no EU-region option (only Swiss residency, GDPR-adequate but not 'EU').",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://doc.flow.swiss/platform/pricing/billing-faq",
+      "quote": "A device in a stopped state continues to reserve the dedicated Mac device and therefore incur charges until you destroy/delete it.",
+      "note": "Dedicated physical Mac runs indefinitely until the customer stops/deletes it; there is no maximum session duration imposed by the provider.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/resources/deprovisioning.md",
+      "quote": "As soon as a customer deletes a Mac device from his account, it is automatically moved into the so-called \"Decomission\" pool and then completely deleted via the MDM server using an Erase command.",
+      "note": "No snapshot/image endpoint exists for Mac Bare Metal; devices are only started, stopped, or fully erased on delete. The Mac API/CLI/Terraform provider exposes devices, power actions, VNC, networking, elastic IPs and security groups only.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "Billing of Mac devices also takes place when the device is turned off. A device in a stopped state continues to reserve the dedicated Mac device, and therefore charges incur until you delete it.",
+      "note": "Only power on/off exists (dedicated bare-metal Mac keeps its disk while off, which is persistent_disk), not a first-party pause/resume/snapshot-of-RAM feature; the device is billed identically whether on or off.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "Choose the configuration (flavor) for your device that determines its Apple Mac platform (Intel or Apple Silicon), Processor cores, Memory, Storage, and price.",
+      "note": "A device is a specific dedicated physical Mac assigned from a pool at creation; there is no clone/fork-an-existing-device operation in the docs or API (create only provisions a fresh macOS install from the pool).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "Deploying a device takes a few seconds.",
+      "note": "No API/CLI operation to fork a live running device; each device maps 1:1 to a dedicated physical Mac, so there is nothing to fork from a running state.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/resources/deprovisioning.md",
+      "quote": "With this action (only possible via MDM) everything is completely deleted.",
+      "note": "No memory/state snapshotting capability at all for the bare-metal Mac product; power actions are on/off/erase only.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "For security reasons, only two TCP ports are open from the outside. These are ports 5900 (VNC) and 22 (SSH).",
+      "note": "Access is generic VNC/SSH into a real dedicated Mac (a human/human-style remote-desktop session), not a computer-use/agent action API (no screenshot+click/keyboard action endpoint is offered).",
+      "checked": "2026-09-30"
+    },
+    "custom_image": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "Mac Bare Metal devices are genuine, dedicated Apple Mac devices that are delivered with the latest stable macOS version.",
+      "note": "Every device is provisioned with a fresh stock macOS install (see deprovisioning: erase then 'a fresh macOS installation is automatically initiated'); there is no option to boot from a custom/user-supplied image. (Custom images exist only for the separate CI Engine product's ephemeral runner VMs.)",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/billing-faq.md",
+      "quote": "Do you charge for stopped Mac Bare Metal devices? Yes. A device in a stopped state continues to reserve the dedicated Mac device and therefore incur charges until you destroy/delete it.",
+      "note": "No traffic-triggered wake feature; a stopped device stays stopped (and still billed) until a user/API power-on action, and there is no HTTPS-preview/proxy layer to trigger a wake in the first place.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/billing-faq.md",
+      "quote": "Instances in a stopped state continue to reserve dedicated system resources (CPU, RAM, Storage, IP) and therefore incur charges until you destroy the instance.",
+      "note": "No idle-timeout auto-stop is documented for Mac Bare Metal (or Compute); devices/instances only stop via an explicit user/API action and keep billing regardless.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal.md",
+      "quote": "Optional resources: Elastic IPs",
+      "note": "The only optional add-on listed for Mac Bare Metal is Elastic IPs; block Volumes are a separate Flow Compute (VM) feature ('Volumes cannot be assigned to more than one instance at a time' - doc.flow.swiss/products/compute/volumes) with no Mac Bare Metal attach support in the API/CLI/Terraform provider.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "For security reasons, only two TCP ports are open from the outside. These are ports 5900 (VNC) and 22 (SSH).",
+      "note": "No managed HTTPS ingress/preview-URL feature; the only default inbound paths are VNC and SSH (security groups can be edited to allow other raw TCP ports/CIDRs, but there is no built-in HTTPS terminator, TLS, or hostname routing).",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://doc.flow.swiss/developer-center/api/product-entities.md",
+      "quote": "### Mac Bare Metal\n| 11 | macmini.2018.6-16-256  |\n| 12 | macmini.2018.6-32-512  |\n| 13 | macmini.2018.6-64-1024 |\n| 14 | macmini.m1.8-16-512    |",
+      "note": "The API/product catalog only covers device flavors and infrastructure lifecycle (create/delete/power/VNC/networking); no preinstalled coding-agent harnesses or agent runtime are offered anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal.md",
+      "quote": "Mac mini and Mac Studio devices are available on-demand with instant activation.",
+      "note": "All sizes are Mac mini / Mac Studio flavors (Intel i7, Apple M1/M2/M2 Pro/M4 Pro/M5 Pro, M4 Max integrated GPU only); no discrete/add-in GPU option is listed or offered.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal/devices.md",
+      "quote": "Mac Bare Metal devices are genuine, dedicated Apple Mac devices that are delivered with the latest stable macOS version.",
+      "note": "Product is Apple-hardware-only running macOS (per Apple's SLA physical-hardware requirement); no Windows OS option exists for this product line.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://doc.flow.swiss/products/mac-bare-metal.md",
+      "quote": "Flow Mac Bare Metal is an enterprise-class Mac cloud platform. With the easy-to-use control panel, it is possible to deploy, manage, and scale dedicated, bare-metal Apple Mac devices.",
+      "note": "This is a managed cloud service running exclusively on Flow's own Swiss data centers (ZRH1); there is no self-hosted/on-prem deployment of the Flow platform software.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/regions.md",
+      "quote": "Flow Cloud Platform is based in two state of the art data centers in Switzerland: ZRH1 (Zurich), the most modern DC on Swiss soil; and ALP1 (Luzern), located at the edge of the Swiss Alps.",
+      "note": "Mac Bare Metal devices are only available in Flow's own ZRH1 datacenter (per the card's caveats); no bring-your-own-cloud/account option is documented anywhere in Flow's docs.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://doc.flow.swiss/developer-center/overview.md",
+      "quote": "Flow provides several command-line interfaces (CLIs) and application programming interfaces (APIs) for managing your resources.",
+      "note": "Flow ships closed-source CLIs/SDKs/Terraform provider against its proprietary hosted API; the Mac Bare Metal control-plane and service itself are closed-source commercial cloud software, not an open-source project.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": true,
+      "source": "https://www.apple.com/legal/sla/docs/macOS27.pdf",
+      "quote": "to install, use and run up to two (2) additional copies or instances of the Apple Software ... within virtual operating system environments on each Apple-branded computer you own or control that is already running the Apple Software",
+      "note": "Flow's Mac Bare Metal gives full root/admin access to a dedicated real Apple Mac (Intel or Apple Silicon), and Flow itself models a 'two-vms-per-host' pricing mode built on exactly this Apple SLA allowance, running macOS VMs on top of one Mac via community tools like Tart/Lume (Apple's Virtualization framework). Since the customer controls bare metal, nested virtualization of macOS (and Linux VMs via Apple's Virtualization.framework/UTM) is available; there is no Flow-specific block.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://doc.flow.swiss/platform/account/sign-up.md",
+      "quote": "Sign up for a free trial account and receive a preloaded balance to test out the functionality. ... we also perform an SMS verification. For this a working mobile number is required.",
+      "note": "not offered: Flow's signup/account flow is a simple prepaid consumer/SMB registration (email + SMS verification, blocks disposable/free email domains); no SAML/OIDC single sign-on is documented anywhere on the account, security, or compliance pages.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://doc.flow.swiss/developer-center/api.md",
+      "quote": "All of the functionality that you are familiar with in the Flow control panel is also available through the API... The endpoints are intuitive and powerful, allowing you to easily make calls to retrieve information or to execute actions. [However] API is infrastructure lifecycle only (create/delete ",
+      "note": "granularity: account-only; cost: yes; Flow's REST API (api.flow.swiss/v3) provides infrastructure lifecycle management but not billing/usage endpoints. Usage is tracked and deducted daily from account balance, but no programmatic API exists to query per-machine usage. Billing is visible only on the dashboard (account-only granularity).",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "ZRH1",
+      "self_serve": true,
+      "choosable": false
+    }
+  ],
+  "locations_source": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+  "locations_quote": "Zurich (ZRH1) only.",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,536 @@
+{
+  "id": "nebius-contree",
+  "name": "Nebius ConTree (Token Factory Sandboxes)",
+  "url": "https://tokenfactory.nebius.com/sandboxes/about",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Sandboxes beta (free, per-command microVM executions)",
+      "flags": [
+        "beta"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Rates null on purpose: free during beta, no paid rate published, per-execution vCPU/RAM undocumented. Free while in beta ('runs don't consume your credits'); approval required. Each command runs in its own microVM (0.4-2 s startup with cached image) and its filesystem result is snapshotted as an image; compute exists only while a command executes. vCPU/RAM per execution is not selectable or documented, so a 4 vCPU/8 GiB shape is not guaranteed. Post-beta pricing unpublished ('pay per execution, not idle')."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 12,
+    "disk_gib_month": 0,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": 0,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false
+  },
+  "plans": [
+    {
+      "name": "Sandboxes Beta",
+      "fee": 0,
+      "flags": [
+        "beta"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 50,
+      "max_session_h": 1,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Nebius Token Factory account + beta approval. 50 simultaneously running operations (raisable on request). max_session_h 1 = per-operation timeout from the API spec example (instance_max_timeout 3600 s), unverified; multi-hour agent sessions are chains of executions resuming from snapshotted images. No personal/sensitive data during beta."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": 1,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": true,
+    "systemd": false,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": false,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": null,
+    "soc2": true,
+    "hipaa": false,
+    "sso": false,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": false,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": false,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": null,
+    "mcp_server": true,
+    "isolation": "vm",
+    "image_oci": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "ingress_rules": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Product is in BETA and FREE ('runs don't consume your credits'); rates of 0 reflect the beta, not a sustainable price. Post-beta pricing is unpublished; the homepage promises 'pay per execution, not idle' and the API returns a per-operation cost field.",
+    "Execution model differs from long-lived sandboxes: each command is its own microVM; the filesystem (not memory/processes) is committed as an immutable image after every non-disposable run, and later commands branch from any image. No services, no inbound network, no SSH.",
+    "No vCPU/RAM sizing in the API; the 4 vCPU/8 GiB workload shape cannot be requested. Writable layer default 12 GiB (included_disk_gib).",
+    "Beta limits: 50 simultaneously running operations; untagged unreferenced images may be deleted after 180 days; access by application; no personal/sensitive data.",
+    "max_session_h 1 is the per-operation timeout from the API spec example (3600 s); real limit unverified.",
+    "The API spec's default base URL is now https://api.tokenfactory.nebius.com/sandboxes. Token Factory's own front-end config maps that host to eu-north1 (Finland), so EU is still the inference, and the docs still don't state a region. No region choice for Sandboxes.",
+    "Outbound internet: API networking.enabled defaults true but the blog says it 'may depend on deployment configuration'; only on/off control (no allowlist).",
+    "Nebius holds SOC 2 Type II / ISO 27001 at company level, but beta terms exclude sensitive data, so compliance flags are left null.",
+    "Launched as ConTree early access 2026-02-19 (contree.dev blog); became Nebius Token Factory 'Sandboxes' beta 2026-05-19. SDK/CLI/MCP are Apache-2.0; service is closed.",
+    "Free during beta; no paid rate published, so not priced.",
+    "Re-checked 2026-09-28: tokenfactory.nebius.com/sandboxes/about and docs.tokenfactory.nebius.com/sandboxes/overview publish no rate (beta; pricing questions go to contree@nebius.com). Kept unpriced: free beta, not a missing number.",
+    "The writable layer is configurable per execution (resources_limits.max_layer_bytes, default 12 GiB). CPU and RAM are still not selectable.",
+    "A running operation's VM can host extra subprocesses (POST /operations/{id}/subprocesses) with stdin kept open, so one VM can serve several processes until the operation's timeout. The model is still batch-style: no inbound network, and only the filesystem persists."
+  ],
+  "sources": [
+    "https://tokenfactory.nebius.com/sandboxes/about",
+    "https://contree.dev/",
+    "https://contree.dev/blog/contree-eap-announcement/",
+    "https://contree.dev/blog/contree-joins-token-factory/",
+    "https://contree.dev/blog/contree-branching-sandboxes/",
+    "https://docs.tokenfactory.nebius.com/sandboxes/overview.md",
+    "https://docs.tokenfactory.nebius.com/api-reference/sandboxes/instances/spawn-a-new-container-instance.md",
+    "https://eu-north.nebius.computer/static/api.yaml"
+  ],
+  "fleet": {
+    "default_max_instances": 50,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Beta docs limit simultaneously running operations to 50; encoded as operation-backed sandbox ceiling, not retained image count. Contact provider to lift beta restrictions; no guaranteed approval time or KYC checklist. API schema example instance_max_concurrency=10 is an example, not used to override published 50.",
+    "sources": [
+      "https://docs.tokenfactory.nebius.com/sandboxes/overview.md"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 2,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 1
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://contree.dev/",
+      "quote": "ConTree saves an immutable filesystem snapshot after every execution, so agents can fork from any checkpoint, explore multiple paths in parallel, and revert instantly.",
+      "note": "Trigger: end of every non-disposable execution (each command is its own microVM; the result is committed as a new immutable image, result_image_uuid). Filesystem only: 'Process memory, running services, and network state are not preserved.' Opt out per run with disposable=true.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/overview.md",
+      "quote": "Fork execution state at any checkpoint. Explore multiple solution paths in parallel, then score results and expand the best branches.",
+      "note": "Checkpoints are the per-execution images (you choose when by running a command non-disposably; tags name them). Any image can boot any number of new microVM executions (fork/branch, rollback). Filesystem only, no memory; you cannot checkpoint a VM mid-execution.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/swe-agents.md",
+      "quote": "Integrate your own agent via contree-sdk.",
+      "note": "SDK/CLI/MCP let an external agent run commands and branch images; no first-party API to run or drive a coding agent (Claude Code, Codex, etc.) inside the sandbox. 'contree agent' only prints a manual for agents using the CLI.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "Enable network access for the instance. When `false`, the VM starts without a guest network interface.",
+      "note": "No-internet mode only (networking.enabled, default true). No domain or IP allowlist in the API; level null because it is all-or-nothing.",
+      "checked": "2026-09-29"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "Enable network access for the instance. When `false`, the VM starts without a guest network interface.",
+      "note": "The only network knob in the OpenAPI spec is the enabled boolean; no HTTP-level rules.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "Executions have no inbound network access.",
+      "note": "No inbound networking at all (no ports, URLs, SSH), so there is nothing to configure; batch execution model.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://contree.dev/",
+      "quote": "Full root inside the VM, zero access outside it.",
+      "note": "Derived: microVM per execution with 'Dedicated kernel, hardware boundary' and full root. Rules only live for one execution (network state is not preserved) and whether the guest kernel ships netfilter modules is undocumented.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "Pass secrets via env, not files",
+      "note": "Secrets are plain env vars passed per run / per CLI session (stored in local SQLite by the CLI); no credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "Maximum writable layer size in bytes.",
+      "note": "Storage per execution = image rootfs + writable layer (default 12 GiB, resources_limits.max_layer_bytes) + uploaded files; the OpenAPI spec has no volume object.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "Each non-disposable execution produces a new image.",
+      "note": "No shared/network volumes. Many executions can start from the same immutable image in parallel, but that is copy-on-write branching, not a shared read-write mount.",
+      "checked": "2026-09-29"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/mcp/concepts/core.md",
+      "quote": "Spins up an isolated microVM (~2-5 seconds); Mounts the specified image as the filesystem; Executes your command as root",
+      "note": "Execution model is one command per microVM (Firecracker-style), not a persistent host with a container/daemon layer. No docs mention a Docker daemon, cgroups, or overlayfs runnable inside the guest; 'container' in ConTree's own naming refers to how the platform manages instances, not nested containers. Not documented either way, so treated as not offered.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "InstanceResourcesLimits: properties: max_layer_bytes: ... InstanceNetworking: properties: enabled:",
+      "note": "The OpenAPI spec exposes only a writable-layer-size limit and a network on/off flag for an instance; no /dev/kvm, device-passthrough, or nested-VM capability is documented anywhere in the API, SDK, CLI, or MCP docs.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://tokenfactory.nebius.com/sandboxes/about",
+      "quote": "Secure code execution with Git-like branching capabilities... built for AI agents that need to explore multiple execution paths",
+      "note": "not offered: outside the product's scope. Sandboxes is a batch code-execution/branching microVM product with no browser or desktop component (browser: false), so stealth/anti-fingerprinting features are not applicable.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://tokenfactory.nebius.com/sandboxes/about",
+      "quote": "Secure code execution with Git-like branching capabilities... built for AI agents that need to explore multiple execution paths",
+      "note": "not offered: outside the product's scope. No browser/desktop is provided by this product, so CAPTCHA solving is not applicable.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "InstanceNetworking: enabled: ... Enable network access for the instance. When `false`, the VM starts without a guest network interface.",
+      "note": "Only an all-or-nothing outbound toggle is documented; outbound traffic runs over Nebius's own cloud network with no residential/mobile proxy option mentioned anywhere, so it is ordinary cloud datacenter egress.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "Process memory, running services, and network state are not preserved.",
+      "note": "Forking/branching is always from a completed, immutable filesystem checkpoint image produced after an execution finishes; there is no API to clone a still-running microVM without stopping/finishing it first.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/mcp/concepts/core.md",
+      "quote": "Spins up an isolated microVM (~2-5 seconds)",
+      "note": "not offered: outside the product's scope. There is no persistent/sleeping machine concept to wake — every command starts a brand-new microVM from a checkpoint image and the VM exists only for the duration of the command.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "InstanceResourcesLimits: properties: max_layer_bytes: type: integer ... description: Maximum writable layer size in bytes.",
+      "note": "The only resource knob in the spec is disk (writable layer size); CPU/RAM are not selectable at all per the docs, so there is nothing to live-resize.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/swe-agents.md",
+      "quote": "Integrate your own agent via contree-sdk.",
+      "note": "not offered: outside the product's scope. ConTree/Sandboxes is infrastructure for running *your* agent's code; it ships no first-party browser/computer-use/research agent of its own to drive via API.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/sdk/python_sdk/images.md",
+      "quote": "image = await contree.images.use(\"ubuntu:latest\") ... Importing public image using oci: result = await sdk.images.oci(\"docker://ghcr.io/linuxserver/code-server:latest\")",
+      "note": "Any OCI image can be used as a sandbox base (docs elsewhere use a 'python:3.12-slim' example), so Python is available out of the box by picking a Python base image; no runtime restriction is imposed by the platform.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/overview.md",
+      "quote": "Import images from any OCI-compliant registry (Docker Hub, GHCR, and others). Use your existing container images as sandbox bases.",
+      "note": "Node.js is available the same way as any other runtime: pick/import a node:* OCI image as the sandbox base; no platform restriction prevents it.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "InstanceNetworking: properties: enabled: type: boolean ... default: true",
+      "note": "The API's only outbound network control is a boolean on/off; no fixed/static outbound IP allocation is documented, and each execution is a fresh, short-lived microVM.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/overview.md",
+      "quote": "Please contact us if you need those limitations lifted for the beta period. ... no personal/sensitive data",
+      "note": "not offered: outside the product's scope for now. The beta explicitly excludes sensitive/personal data and no BAA or HIPAA-eligibility is mentioned anywhere in the Sandboxes/ConTree docs.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/cli/tutorial/installation.md",
+      "quote": "contree auth",
+      "note": "Access is via Nebius IAM bearer tokens issued through Token Factory; no SAML/OIDC SSO option is documented for the Sandboxes product itself.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "servers: - url: '{baseUrl}/v1' ... default: https://api.tokenfactory.nebius.com/sandboxes",
+      "note": "The default API host resolves to Nebius's eu-north1 (Finland) deployment (eu-north.nebius.computer), so data/execution for this beta currently runs in the EU; no explicit region-selection feature is documented, and no other region is offered.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "MicroVM per execution (not containers) ... No inbound network access ... Nothing persists unless you save it. / What exactly gets snapshotted after each execution? The entire filesystem. ... Process memory, running services, and network state are not preserved.",
+      "note": "No contradiction once the mechanism is understood: there is no long-lived VM to pause/resume — each command's microVM exists only for the run's duration and is destroyed afterward. What 'saves state automatically' is a filesystem-diff image (already correctly reflected as persistent_disk:true / snapshot_auto:true), not a paused live machine with memory/process state kept warm. pause_resume=false stands.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "The entire filesystem. Modified files, installed packages, created directories — all captured into a new immutable image. Process memory, running services, and network state are not preserved.",
+      "note": "Fork/branch (fork:true) is filesystem-only; explicitly excludes process memory. No memory-snapshot fork capability.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "How It Works: MicroVM per execution (not containers). Dedicated kernel, hardware boundary. No inbound network access.",
+      "note": "Batch execution model with zero inbound networking; no SSH access is offered (the '/etc/ssh/sshd_config' string in the API spec is just an example file path for a file-read endpoint, not an SSH feature).",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "ConTree is optimized for batch execution, not hosting services. Executions have no inbound network access.",
+      "note": "Product is a headless, no-services code-execution sandbox; a graphical desktop is outside what it offers.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "ConTree is optimized for batch execution, not hosting services.",
+      "note": "No managed/real-browser feature is documented anywhere in the product pages, API reference, or docs index; consistent with a batch code-execution sandbox with no inbound network/services.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/swe-agents.md",
+      "quote": "Integrate your own agent via contree-sdk.",
+      "note": "No screenshot/click computer-use API is offered; the product only exposes command execution + filesystem inspection endpoints.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "Maximum writable layer size in bytes.",
+      "note": "The OpenAPI spec's only per-execution storage knob is the writable layer size (resources_limits.max_layer_bytes, default 12 GiB); there is no volume object to create/attach in the API.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "How It Works: ... No inbound network access.",
+      "note": "Explicit product statement: executions cannot receive inbound traffic of any kind, so there is no HTTPS ingress.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "Executions have no inbound network access.",
+      "note": "No inbound networking at all, so no public IPv4 is assigned/reachable.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.tokenfactory.nebius.com/sandboxes/swe-agents.md",
+      "quote": "Integrate your own agent via contree-sdk.",
+      "note": "No preinstalled coding-agent harnesses (Claude Code, Codex, OpenCode, etc.) or templates for them; SWE-bench 'environments' are benchmark task images, not agent harnesses, and the product only offers SDK/CLI/MCP integration points for bringing your own agent.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "machine: type: string example: \"x86_64\"",
+      "note": "No GPU machine type, GPU resource limit, or GPU flag appears anywhere in the API schema, docs overview, or SWE-agents page; the product is a CPU-only code-execution microVM sandbox.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "kernel: description: \"uname release + version, space-separated.\" example: \"6.10.0-generic #1 SMP PREEMPT\"",
+      "note": "Linux-kernel microVMs only (Linux OCI images); Windows is outside what this Linux sandbox API offers.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "kernel: example: \"6.10.0-generic #1 SMP PREEMPT\"",
+      "note": "Linux-kernel microVMs only; macOS is outside what this Linux sandbox API offers.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "machine: type: string example: \"x86_64\"",
+      "note": "The only architecture referenced anywhere in the API spec/docs is x86_64; no ARM machine type or option is documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "The MCP server and Python SDK are open source under the Apache 2.0 license, available on PyPI. The managed service runs on Nebius infrastructure.",
+      "note": "Only the client-side SDK/MCP server is open source; the sandbox execution service itself is a Nebius-run managed backend with no self-hosting option documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "The managed service runs on Nebius infrastructure.",
+      "note": "No bring-your-own-cloud deployment option is offered; access is only via the Nebius-hosted Token Factory Sandboxes endpoint.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://contree.dev/",
+      "quote": "The MCP server and Python SDK are open source under the Apache 2.0 license, available on PyPI. The managed service runs on Nebius infrastructure.",
+      "note": "Only the client SDK/MCP wrapper is Apache-2.0; the core sandbox execution service (the product being rated) is closed/managed, so open_source=false for the product.",
+      "checked": "2026-09-30"
+    },
+    "private_network": {
+      "value": false,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "Enable network access for the instance. When `false`, the VM starts without a guest network interface.",
+      "note": "The only networking control in the API is a single on/off outbound toggle; there is no VPC/private-network/peering feature, and inbound access is disallowed entirely.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://nebius.com/trust-center",
+      "quote": "SOC 2 Type II With HIPAA. Evaluates the design and operational effectiveness of the controls.",
+      "note": "Attested at the Nebius company/platform level (parent cloud infrastructure), not published specifically for the Sandboxes/ConTree beta product page. The beta's own docs explicitly exclude personal/sensitive data and don't reference this attestation, but the underlying infrastructure operator holds a current SOC 2 Type II report.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://eu-north.nebius.computer/static/api.yaml",
+      "quote": "Operation cost (type: number, format: float, description: Operation cost) returned in InstanceResult.resources; queryable via GET /operations with status, kind, since, until filters",
+      "note": "granularity: per-sandbox; cost: yes; Cost data is available per-operation via the /operations/{operationId} endpoint and InstanceResult.resources.cost field. Operations can be listed and filtered by time range (since/until). However, the Sandboxes API lacks tag/project/label-based grouping or aggregation endpoints; you must manually query individual operations and sum costs. No persistent 'sandbox' entity; each microVM execution is ephemeral. Beta status, free during beta, paid rates unpublished.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.tokenfactory.nebius.com/sandboxes/overview.md",
+  "locations_quote": "No region choice for Sandboxes. The API spec's default base URL is https://api.tokenfactory.nebius.com/sandboxes, which maps to eu-north1 (Finland), but the docs do not explicitly state a region.",
+  "locations_checked": "2026-10-01"
+}

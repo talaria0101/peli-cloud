@@ -1,0 +1,662 @@
+{
+  "id": "insforge-instacloud",
+  "name": "InsForge (InstaCloud)",
+  "url": "https://www.instacloud.com/pricing",
+  "category": "paas",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "InsForge (insforge.dev) backend product: InsForge Compute fixed backend sizes Nano 2 vCPU/0.5 GB $0.0067/h ($5/mo) ... 16XL 64 vCPU/128 GB $3.4304/h ($2,560/mo), billed hourly, one per project (API server + Postgres), Pro includes $10/mo credit per org. Custom Compute (own containers on Fly.io machines) is 'billed by usage' with no published rate; Free includes 120 h/month on the default spec. Not priceable as a sandbox; keep flags alt."
+    },
+    {
+      "key": "instacloud-compute",
+      "label": "InstaCloud compute (microVM service, usage-billed)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "plans": [
+        "InstaCloud Free",
+        "InstaCloud Pro",
+        "InstaCloud Team"
+      ],
+      "pricing": "resource",
+      "vcpu_h": 0.027792,
+      "ram_gib_h": 0.013896,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 8,
+      "requires_always_on": false,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "$0.00000772/vCPU-s ($0.027792/vCPU-h) + $0.00000386/GB-s ($0.013896/GB-h), 'You only pay for active CPU and memory' (active = usage basis; exact measurement method unpublished). New services are always-on by default and bill continuously; scale-to-zero is opt-in. Volume $0.0002082/GB-h, object storage $0.00002082/GB-h, egress $0.05/GB. Per-service caps: Free 4 vCPU/4 GB/1 GB volume, Pro and Team 8 vCPU/8 GB (volume 10/50 GB). Same per-second rates as Railway ($20/vCPU-month, $10/GB-month)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": 0.152,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0.05,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Pro monthly",
+      "fee": 25,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Pro annual equivalent",
+      "fee": 20,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "InstaCloud Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 10,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 4,
+      "sizes_allowed": null,
+      "included_applies_to_modes": [
+        "instacloud-compute"
+      ],
+      "note": "$10 usage credit/month, refreshes monthly; 'Projects pause when credit runs out, and resume next cycle' (hard cap, no overage); up to 4 vCPU/4 GB/1 GB volume per service; 5 services of each type per environment; 5 cron jobs."
+    },
+    {
+      "name": "InstaCloud Pro",
+      "fee": 20,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "included_applies_to_modes": [
+        "instacloud-compute"
+      ],
+      "note": "'$20 / month minimum usage' with '$20 of usage credit per month'; overage on ('projects keep running'); up to 8 vCPU/8 GB/10 GB volume per service; 25 services of each type per environment; vertical scaling and replicas; 100 cron jobs."
+    },
+    {
+      "name": "InstaCloud Team",
+      "fee": 499,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "note": "'Usage billed on top of the monthly platform fee'; up to 8 vCPU/8 GB/50 GB volume per service; 100 services of each type per environment; higher limits on request; SOC 2, SSO; HIPAA paid add-on; 1,000 cron jobs."
+    },
+    {
+      "name": "InstaCloud Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom usage credit and resource limits, HIPAA BAAs, SLA."
+    }
+  ],
+  "free": {
+    "monthly_credit": 10,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "mem",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": false,
+    "self_host": true,
+    "byoc": false,
+    "open_source": true,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "us",
+      "eu",
+      "asia"
+    ],
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": true,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": true,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": true,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "ingress_rules": false,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": false,
+    "isolation": "firecracker",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Pro $25 monthly/$20 annual with $10 InsForge Compute credits; backend compute is specifically API+Postgres, NOT Custom Compute. Public table 4vCPU/16GB $0.2144/h describes backend project server. Do not price arbitrary containers at it. Custom Compute has separate usage billing, current rate unresolved; free 120h default custom compute. Backend bandwidth 250GB then $0.09/GB.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "insforge.dev pricing contradiction: pricing page says the $10 InsForge Compute credit 'Does not apply' to Custom Compute, but docs.insforge.dev/pricing FAQ says Custom Compute on Pro comes with '$10 of InsForge Compute credits to offset it'. InsForge Custom Compute has no published per-hour rate (runs on Fly.io machines). InsForge Free projects pause after 1 week of inactivity.",
+    "InstaCloud compute: new services are always-on by default ('New compute services are always-on and never scale to zero') and bill continuously; scale-to-zero is opt-in; volume-backed services cold-stop instead of suspend; since 2026-09-26 outbound traffic also keeps a scale-to-zero service awake (so an agent calling a model keeps billing). Root disk is rebuilt on every wake; only the volume persists."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/insforge-instacloud",
+    "https://insforge.dev/",
+    "https://insforge.dev/pricing",
+    "https://insforge.dev/llms.txt"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Free backend tier advertised without a credit card.",
+    "tiers": "InstaCloud: Free 5 / Pro 25 / Team 100 services of each type per environment; per-service max 4 vCPU/4 GB (Free), 8 vCPU/8 GB (Pro/Team); 'Higher limits on request' on Team; replicas ('insta compute scale') on paid plans only. InsForge backend: Free 2 dedicated backend projects; Custom Compute 120 h/month free.",
+    "notes": "Do not equate 2 backend projects with arbitrary Custom Compute machine concurrency: current pricing separates the two and gives 120 free Custom Compute hours without an aggregate running-machine cap. New-account fleet quota and review time remain unknown.",
+    "sources": [
+      "https://insforge.dev/pricing",
+      "https://insforge.dev/blog/insforge-pricing-update"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 30,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 6
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.instacloud.com/reference/api/project/secrets/apply-batch",
+      "quote": "A suspended service is skipped instead of deployed: a deploy would invalidate the RAM snapshot suspension exists to preserve, so it is left untouched and reported with reason `suspended`.",
+      "note": "Trigger: idle timeout on services opted into scale-to-zero (compute/overview: \"Opt one into scale-to-zero and an idle machine suspends until the next request wakes it in seconds.\"); memory included (RAM snapshot, Fly-style suspend). Default is always-on (no suspend). Not for volume-backed services: \"Volume-backed services stop (cold wake) instead of suspending\" and the root disk is rebuilt on every wake. Hosted platform only; self-hosted OSS stops containers instead.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.instacloud.com/projects/branches",
+      "quote": "| Compute `/data` volume | Same size, empty (self-hosted InstaCloud OSS forks the volume files instead) |",
+      "note": "No snapshot/checkpoint endpoint in the full OpenAPI reference. Closest: on-demand `insta compute suspend` (RAM preserved, resumes in place; = pause/resume, cannot fork) and branches, which clone Postgres (copy-on-write) and buckets but recreate compute from the image with an EMPTY volume on the hosted platform. Postgres has its own branching; no machine snapshots.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "Under the hood the agent runs the [insta CLI](/reference/cli/overview), which you can also drive by hand.",
+      "note": "InstaCloud is infrastructure driven BY a coding agent running elsewhere (CLI, MCP server, skills); no API to launch/drive Claude Code/Codex inside a compute service. Only a generic one-shot exec endpoint (\"Run a one-shot command inside a compute service's machine\").",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.instacloud.com/limitations/overview",
+      "quote": "Services reach each other over their public HTTPS URLs. Compute listens on one HTTP port and a raw TCP port cannot be exposed at all",
+      "note": "Each compute service gets one public HTTPS URL on one chosen HTTP port; no private network, no auth-gated/tokenized URLs or IP allowlists documented. The public/private access toggle (set-service-access, MCP insta_set_service_access) is documented for storage buckets and managed databases, not compute. Custom domains available.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://www.instacloud.com/changelog",
+      "quote": "Compute services now run as full Linux VMs with cgroups and root, so your agent can install Docker inside its own compute and use it the way it would on a laptop",
+      "note": "Sep 11, 2026 changelog; the example installs iptables and runs dockerd inside the microVM, which requires working netfilter. Not an explicit 'nftables supported' statement.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.instacloud.com/deploy/overview",
+      "quote": "Secrets and credential bindings (`insta secrets bind`) are injected as environment variables at deploy time.",
+      "note": "User secrets and bound service credentials land in the container env; no outbound credential-injecting proxy. (InsForge's separate BaaS has a model gateway for app frontends, not a sandbox secret proxy.)",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "Need disk that survives restarts? Attach a persistent `/data` volume:",
+      "note": "One volume per compute service, default 1 GiB on any plan, larger paid and plan-capped (Free 1 GB, Pro 10, Team 50 per card); mount path selectable since 2026-09-24; $0.0002082/GB-h. Volume forces cold stop instead of suspend.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.instacloud.com/changelog",
+      "quote": "Compute services without a persistent volume can now run multiple replicas in the same region.",
+      "note": "A volume belongs to a single-machine service (no replicas with a volume); no shared/network filesystem. S3-compatible storage buckets exist but are accessed via API, not mounted.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "firecracker",
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "Each service runs in its own microVM — hardware-level isolation rather than a shared-kernel container, which is what makes it safe to run agent-built code next to everything else.",
+      "note": "Docs say 'microVM' with hardware-level isolation and describe a home-grown 'microvm plane' (distinct from 'legacy Fly'), but never name the underlying hypervisor; firecracker is the de-facto standard for this class of microVM and the closest fit to the field taxonomy.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://docs.instacloud.com/deploy/overview",
+      "quote": "From a prebuilt image. Skip the build entirely — exactly one of a directory or `--image` per deploy: insta deploy --image ghcr.io/acme/api:v3",
+      "note": "Deploys any OCI image from any registry, or builds one remotely from a Dockerfile.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "Each service runs in its own microVM — hardware-level isolation rather than a shared-kernel container",
+      "note": "No mention of /dev/kvm or nested virtualization anywhere in the docs, CLI reference, or changelog; the Docker-inside-compute changelog entry runs a userspace dockerd (via cgroups/root), not a nested-VM emulator. Derived, not explicitly stated.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "InstaCloud provides the three basic primitives, rebuilt on those terms: database (real Postgres), storage (S3-compatible buckets), and compute (containers, run in microVMs on the hosted platform).",
+      "note": "not offered: outside the product's scope (generic container/backend PaaS, no graphical desktop).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "InstaCloud provides the three basic primitives, rebuilt on those terms: database (real Postgres), storage (S3-compatible buckets), and compute (containers, run in microVMs on the hosted platform).",
+      "note": "not offered: outside the product's scope. No managed/real browser product; the only 'browser' mentions in docs are the human's own browser used to sign into the console.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "InstaCloud provides the three basic primitives, rebuilt on those terms: database (real Postgres), storage (S3-compatible buckets), and compute (containers, run in microVMs on the hosted platform).",
+      "note": "not offered: outside the product's scope — no screenshot/click desktop-driving API; the product is backend compute/storage/database infrastructure driven by CLI, MCP, and REST.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "InstaCloud provides the three basic primitives, rebuilt on those terms: database (real Postgres), storage (S3-compatible buckets), and compute (containers, run in microVMs on the hosted platform).",
+      "note": "not offered: outside the product's scope (no browser/stealth product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "InstaCloud provides the three basic primitives, rebuilt on those terms: database (real Postgres), storage (S3-compatible buckets), and compute (containers, run in microVMs on the hosted platform).",
+      "note": "not offered: outside the product's scope (no browser/CAPTCHA product).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "Each service runs in its own microVM — hardware-level isolation rather than a shared-kernel container",
+      "note": "Standard cloud microVM egress; no residential/mobile IP product mentioned anywhere, and no static/dedicated outbound IP is documented (see static_egress_ip).",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "mem",
+      "source": "https://docs.instacloud.com/projects/branches",
+      "quote": "A suspended service is skipped instead of deployed: a deploy would invalidate the RAM snapshot suspension exists to preserve, so it is left untouched and reported with reason `suspended`.",
+      "note": "Suspend/resume preserves a RAM snapshot of a compute service (memory + disk), auto-triggered by scale-to-zero idle. There is no separate on-demand disk-only snapshot API (see feature_evidence.snapshot_on_demand in the card: false); branching clones Postgres/bucket data but rebuilds compute from the image with an empty volume, not a memory snapshot.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.instacloud.com/agents/branch-per-task",
+      "quote": "Give every agent task its own branch: a copy-on-write database with the parent's data, a forked bucket, and a running copy of the app at its own URL.",
+      "note": "'insta branch create' forks the current branch (or --from another) into a new branch with its own compute/db/bucket.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.instacloud.com/agents/branch-per-task",
+      "quote": "A live URL from the start. Branch compute comes up running the parent's image, so the agent can see the app working before its first deploy.",
+      "note": "Branching does not require stopping the source: the parent keeps serving traffic on its own branch/URL while the new branch is created from its image.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.instacloud.com/projects/branches",
+      "quote": "| Compute `/data` volume | Same size, empty (self-hosted InstaCloud OSS forks the volume files instead) |",
+      "note": "A branch's compute service is recreated from the parent's deployed image (cold start), not cloned with its running process/memory state; only Postgres and the bucket are copy-on-write.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.instacloud.com/reference/api/project/services/apply-batch",
+      "quote": "every machine-facing change lands as one reconfigure per machine (one restart, not one per field)",
+      "note": "Raising/lowering a compute service's CPU/RAM ceiling (`insta compute limits` / set-service-limits) is a machine-facing change and triggers a restart, so it is not a live resize without interruption.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.instacloud.com/agents/overview",
+      "quote": "Under the hood the agent runs the [insta CLI](/reference/cli/overview), which you can also drive by hand.",
+      "note": "InstaCloud installs a CLI/MCP-server/skill so an existing coding agent (Claude Code, Cursor, Codex, OpenCode, etc.) on the developer's own machine can drive InstaCloud — it does not preinstall or offer coding-agent harnesses as templates running inside its compute sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "InstaCloud is the cloud infrastructure built from the ground up to serve agents.",
+      "note": "not offered: outside the product's scope. InstaCloud is infrastructure driven by an agent (yours), not a first-party browser/computer-use/research task agent of its own.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "An image, its environment, and a listen port: * Image — built remotely from your Dockerfile on `insta deploy .`, or supplied prebuilt with `--image`.",
+      "note": "Compute runs whatever container/image you bring (a Dockerfile or prebuilt OCI image); no Python runtime is provided out of the box unless your own image includes it, and there is no first-party Python code-exec SDK.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "An image, its environment, and a listen port: * Image — built remotely from your Dockerfile on `insta deploy .`, or supplied prebuilt with `--image`.",
+      "note": "Same as lang_python: Node.js has to be in the customer's own image/Dockerfile; the `insta` CLI itself requires Node.js on the developer's machine (not inside the sandbox), and there is no first-party Node code-exec SDK for the compute service.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.instacloud.com/limitations/overview",
+      "quote": "Services reach each other over their public HTTPS URLs. Compute listens on one HTTP port and a raw TCP port cannot be exposed at all",
+      "note": "Compute services are reached via a shared public HTTPS URL/router, not a per-machine public IPv4. (A dedicated public IP at <app>.fly.dev is documented only for opting a managed database like Redis/MySQL/MongoDB into direct internet access, not for compute.)",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.instacloud.com/limitations/overview",
+      "quote": "No private network — Services reach each other over their public HTTPS URLs.",
+      "note": "No outbound allow/deny-list, no-internet mode, or security-group egress control is documented anywhere in the docs, API reference, or OpenAPI spec; the only 'allow/deny' concepts found are agent-governance rules over API operations, not network egress.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.instacloud.com/limitations/overview",
+      "quote": "No private network — Services reach each other over their public HTTPS URLs.",
+      "note": "No method/path-level egress control is documented; same evidence as egress_allowlist.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "Run any container in a microVM, always on or scaling to zero.",
+      "note": "No fixed/static outbound IP is documented for compute services anywhere in the docs, changelog, or OpenAPI spec.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.instacloud.com/introduction",
+      "quote": "InstaCloud provides the three basic primitives, rebuilt on those terms: database (real Postgres), storage (S3-compatible buckets), and compute (containers, run in microVMs on the hosted platform).",
+      "note": "not offered: outside the product's scope. No GPU instance type, size, or pricing is mentioned anywhere in the docs, pricing page, or OpenAPI spec.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "A compute service runs your container — web app, API, worker — in an isolated microVM with its own URL.",
+      "note": "not offered: outside the product's scope. Compute runs Linux containers (Docker images); no Windows machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "A compute service runs your container — web app, API, worker — in an isolated microVM with its own URL.",
+      "note": "not offered: outside the product's scope. Linux-container microVMs only; no macOS machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.instacloud.com/self-hosting/overview",
+      "quote": "Run the InstaCloud runtime on your own machine: one daemon over Docker, the same CLI, the same URL shape.",
+      "note": "InstaCloud offers self-hosting (open-source, self_host: true) that you install and operate yourself on your own box, not a provider-managed deployment into your own cloud account (BYOC).",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://api.instacloud.com/regions",
+      "quote": "{\"regions\":[{\"slug\":\"us-east\",\"label\":\"US East (Virginia)\"},{\"slug\":\"eu-central\",\"label\":\"Europe (Frankfurt)\"},{\"slug\":\"ap-southeast\",\"label\":\"Asia Pacific (Singapore)\"}]}",
+      "note": "The live regions API lists 'Europe (Frankfurt)' as a selectable deployment region for postgres/compute services.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "New compute services are always-on and never scale to zero, on every branch.",
+      "note": "A compute service is not time-boxed; it runs (always-on or scale-to-zero-and-wake) until you explicitly stop it. No maximum session/runtime duration is documented.",
+      "checked": "2026-09-30"
+    },
+    "private_network": {
+      "value": false,
+      "source": "https://docs.instacloud.com/limitations/overview",
+      "quote": "No private network ... Services reach each other over their public HTTPS URLs. Compute listens on one HTTP port and a raw TCP port cannot be exposed at all, so a container speaking a wire protocol of its own runs fine and nothing reaches it, inside the project or outside. Use the managed Postgres, Redis, MySQL and MongoDB types for that.",
+      "note": "Official docs devote a dedicated 'No private network' limitations section confirming there is no inter-service private networking; only public HTTPS URLs, and raw TCP cannot be exposed at all. This settles the card's existing 'no' with a direct first-party source.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.instacloud.com/compute/overview",
+      "quote": "From a directory, a Dockerfile, an image, or GitHub to a running service. ... A deploy puts a container on a compute service and prints its URL.",
+      "note": "The hosted InstaCloud platform's compute/deploy docs never mention an architecture choice or ARM machine option for compute services (remote builds and image deploys are described with no arch flag). The only documented arm64/aarch64 support in the whole docs corpus is for the self-hosted InstaCloud OSS daemon and its bundled templates (`ghcr.io/insforge/instacloud` published for linux/amd64 and linux/arm64; install requires x86_64 or aarch64), which is a separate self-managed product from the hosted compute service this card models. No hosted-platform ARM compute size/region is documented, so treated as not offered on the hosted product.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://api.instacloud.com/openapi.json",
+      "quote": "GET /projects/{projectId}/usage returns ProjectUsage with dimensions (ram, cpu, volume, storage, egress) and totalCostUsd per project; /orgs/{orgId}/usage returns per-project breakdown with cost. DimensionUsage includes quantity, unit, and costUsd.",
+      "note": "granularity: per-sandbox; cost: yes",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://api.instacloud.com/regions",
+  "locations_quote": "{\"regions\":[{\"slug\":\"us-east\",\"label\":\"US East (Virginia)\"},{\"slug\":\"eu-central\",\"label\":\"Europe (Frankfurt)\"},{\"slug\":\"ap-southeast\",\"label\":\"Asia Pacific (Singapore)\"}]}",
+  "locations_checked": "2026-10-01"
+}

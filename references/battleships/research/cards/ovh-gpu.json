@@ -1,0 +1,1060 @@
+{
+  "id": "ovh-gpu",
+  "name": "OVHcloud GPU instances",
+  "url": "https://www.ovhcloud.com/en/public-cloud/prices/",
+  "category": "gpu-cloud",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand-l40s-90-0",
+      "label": "l40s-90, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 15,
+      "max_ram_gib": 90,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L40S": 1.8
+      },
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/"
+    },
+    {
+      "key": "on-demand-a10-45-1",
+      "label": "a10-45, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 30,
+      "max_ram_gib": 42,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A10": 1
+      },
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/"
+    },
+    {
+      "key": "on-demand-a100-180-2",
+      "label": "a100-180, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 15,
+      "max_ram_gib": 180,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 3.07
+      },
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/"
+    },
+    {
+      "key": "on-demand-h100-380-3",
+      "label": "h100-380, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 30,
+      "max_ram_gib": 380,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 2.99
+      },
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/"
+    },
+    {
+      "key": "on-demand-h200-1920-4",
+      "label": "h200-1920, on-demand (×8 node)",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 224,
+      "max_ram_gib": 1920,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/ ESTIMATOR EXCLUDED: Bundled node count/CPU/RAM constraints are not enforceable in current engine schema. Exact researched rate remains in gpu.json."
+    },
+    {
+      "key": "on-demand-l4-90-5",
+      "label": "l4-90, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 22,
+      "max_ram_gib": 90,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L4": 1
+      },
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/"
+    },
+    {
+      "key": "on-demand-rtx5000-28-6",
+      "label": "rtx5000-28, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 28,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "Quadro-RTX-5000": 0.6
+      },
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/"
+    },
+    {
+      "key": "on-demand-t1-45-7",
+      "label": "t1-45, on-demand (×1)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu",
+        "other"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 45,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "V100": 0.77
+      },
+      "note": " Source: https://www.ovhcloud.com/en/public-cloud/prices/"
+    },
+    {
+      "key": "monthly-gpu-instance",
+      "pricing": "sizes",
+      "requires_always_on": true,
+      "commitment": "monthly",
+      "examples": [
+        {
+          "name": "l40s-90",
+          "month": 1296
+        },
+        {
+          "name": "a10-45",
+          "month": 730
+        },
+        {
+          "name": "a100-180",
+          "month": 1229
+        },
+        {
+          "name": "h100-380",
+          "month": 2070
+        },
+        {
+          "name": "h200-1920",
+          "month": 36178.8
+        },
+        {
+          "name": "l4-90",
+          "month": 720
+        },
+        {
+          "name": "rtx5000-28",
+          "month": 438
+        },
+        {
+          "name": "t1-45",
+          "month": 560
+        }
+      ]
+    },
+    {
+      "key": "windows-gpu",
+      "pricing": "sizes",
+      "os": [
+        "windows"
+      ],
+      "sizes": [
+        {
+          "name": "l4-90",
+          "hour": 1.9
+        },
+        {
+          "name": "rtx5000-28",
+          "hour": 0.756
+        },
+        {
+          "name": "t1-45",
+          "hour": 1.153568
+        }
+      ]
+    },
+    {
+      "key": "multi-gpu-bundles",
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "l40s-180",
+          "gpu_count": 2,
+          "hour": 3.6
+        },
+        {
+          "name": "l40s-360",
+          "gpu_count": 4,
+          "hour": 7.2
+        },
+        {
+          "name": "a10-90",
+          "gpu_count": 2,
+          "hour": 2
+        },
+        {
+          "name": "a10-180",
+          "gpu_count": 4,
+          "hour": 4
+        },
+        {
+          "name": "a100-360",
+          "gpu_count": 2,
+          "hour": 6.15
+        },
+        {
+          "name": "a100-720",
+          "gpu_count": 4,
+          "hour": 12.29
+        },
+        {
+          "name": "h100-760",
+          "gpu_count": 2,
+          "hour": 5.98
+        },
+        {
+          "name": "h100-1520",
+          "gpu_count": 4,
+          "hour": 11.97
+        },
+        {
+          "name": "l4-180",
+          "gpu_count": 2,
+          "hour": 2
+        },
+        {
+          "name": "l4-360",
+          "gpu_count": 4,
+          "hour": 4
+        },
+        {
+          "name": "rtx5000-56",
+          "gpu_count": 2,
+          "hour": 1.2
+        },
+        {
+          "name": "rtx5000-84",
+          "gpu_count": 3,
+          "hour": 1.8
+        }
+      ]
+    },
+    {
+      "key": "v100s",
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "t2-45",
+          "gpu": "V100S-32GB",
+          "gpu_count": 1,
+          "hour": 0.88
+        },
+        {
+          "name": "t2-90",
+          "gpu_count": 2,
+          "hour": 1.76
+        },
+        {
+          "name": "t2-180",
+          "gpu_count": 4,
+          "hour": 3.53
+        }
+      ]
+    },
+    {
+      "key": "ai-training",
+      "flags": [
+        "alt"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "gpu": "L4",
+          "hour": 0.91
+        },
+        {
+          "gpu": "L40S",
+          "hour": 1.69
+        },
+        {
+          "gpu": "A10",
+          "hour": 1
+        },
+        {
+          "gpu": "A100-80GB",
+          "hour": 3.35
+        },
+        {
+          "gpu": "H100",
+          "hour": 3.39
+        },
+        {
+          "gpu": "H200-4GPU-node",
+          "hour": 27.28
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 200,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": true
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": 2.3287,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Self-serve pay-as-you-go account, no platform fee; GPU quota may need a request."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": 200,
+    "conditions": "First Public Cloud project; activate at creation; valid one month; valid payment method required; one voucher per person; standard direct OVHcloud Public Cloud charges only."
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "A10",
+      "A100-80GB",
+      "H100",
+      "H200",
+      "L4",
+      "L40S",
+      "RTX5000",
+      "V100"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": null,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu",
+      "other"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "International USD page, ex VAT. Bundled CPU/RAM/storage. Region selection affects rate/availability. IPv4 starts billing separately October 1, 2026; not yet applicable on research date. Page mislabels multiple GPU memory technologies: do not copy HBM2 claims for L4/H100.",
+    "Any null count, CPU/RAM, billing increment or minimum is unverified, not unlimited/free.",
+    "This is GPU-product research, not a claim that every feature of the entire vendor documentation was audited. Unverified features are null.",
+    "GPU multi-count bundles, variant/region selection and fractional slices require a SKU-aware estimator; unsupported rows remain unpriced in strict cards.",
+    "Modes with gpu=null are intentionally excluded, not free GPU modes. Never substitute 0 for a null rate. Flags alt indicate DIY/ML infrastructure, not the same thing as managed untrusted-code sandboxes.",
+    "Unknown fee, storage or bandwidth means full monthly total may be unavailable. Rates exclude taxes.",
+    "t1-45 (Tesla V100) and rtx5000-28 (Quadro RTX 5000) are older-generation GPUs but still listed and orderable on the live price page (2026-09-28: t1-45 $0.77/h in BHS5/GRA5/GRA7/GRA9; rtx5000-28 $0.60/h in GRA9 only), so they are not flagged legacy. Their GPU names are outside the engine GPU ladder, so they are never used as an H100 substitute."
+  ],
+  "sources": [
+    "https://www.ovhcloud.com/en/public-cloud/prices/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Valid payment method; account age and paid invoices affect eligibility.",
+    "tiers": null,
+    "notes": "Project quotas can be requested in Control Panel subject to eligibility; support handles CPU/RAM/storage and special needs. Numeric fresh-account quotas vary and were not established; GPU approval and stock must be checked separately.",
+    "sources": [
+      "https://help.ovhcloud.com/csm/en-sg-public-cloud-compute-increase-quota?id=kb_article_view&sysparm_article=KB0050844",
+      "https://help.ovhcloud.com/csm/en-gb-startup-program-services-payment?id=kb_article_view&sysparm_article=KB0073068"
+    ],
+    "researched": "2026-09-28"
+  },
+  "price_expires": "2026-09-30",
+  "audit_2026_09_29": {
+    "applied": 26,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 17
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-shelve-pause-instance?id=kb_article_view&sysparm_article=KB0051262",
+      "quote": "The data on your local disk will be stored in a snapshot automatically created once the instance is shelved. Data stored in the memory and elsewhere will not be retained.",
+      "note": "Trigger: shelving the instance (called 'Suspend' in the OVHcloud Control Panel, 'shelve' in OpenStack); disk only, memory NOT included; snapshot is restored on unshelve and then deleted; only the snapshot is billed while shelved. No idle/timeout trigger. Warning in same guide: shelving T1/T2-180 GPU (and IOPS) flavors loses data on NVMe passthrough drives. Other stop modes: OpenStack 'suspend' stores VM state incl. memory on disk but keeps full billing; 'pause' keeps state in RAM. Scheduled automatic instance backups also exist (not counted here).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-back-up-instance?id=kb_article_view&sysparm_article=KB0051162",
+      "quote": "Backups can be used to restore your instance to a previous state or to create a new, identical instance.",
+      "note": "Instance backups (Glance image snapshots) via Control Panel, OVHcloud API (POST /cloud/project/{serviceName}/region/{regionName}/instance/{instanceId}/snapshot) or OpenStack; optional distant copy in another region; disk only (no memory); new instances can boot from them (template/clone). Volume snapshots/backups for Block Storage too.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/gpu/",
+      "quote": "Explore GPU cloud servers that are specially adapted for machine learning, deep learning, high performance computing and artificial intelligence.",
+      "note": "OVHcloud GPU is plain OpenStack IaaS (Nova/Neutron/Cinder) GPU VMs marketed for ML/DL/HPC workloads, not an agent-sandbox platform; no first-party agent-harness/run API is documented anywhere in the Public Cloud docs, API reference, or GPU product pages.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-horizon-configure-security-group?id=kb_article_view&sysparm_article=KB0051204",
+      "quote": "You can allow or block certain incoming or outgoing connections using security groups.",
+      "note": "OpenStack Neutron security groups (egress rules by protocol/port/CIDR or remote group), applied per port on public and private networks, enforced outside the guest. Default group allows all in/out; a new group allows only outgoing until you edit rules. No hostname/domain rules.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-firewall-security?id=kb_article_view&sysparm_article=KB0051166",
+      "quote": "all the network ports (public and private) will allow every connection when you start an instance",
+      "note": "That is the default-group behaviour; custom security groups with ingress rules (protocol/port/CIDR) can be applied to public and private ports; instances can also be private-network-only (vRack) or use floating IPs.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VM with root; iptables/nftables/ufw in the guest work as on any Linux VM.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/gpu/",
+      "quote": "Explore GPU cloud servers that are specially adapted for machine learning, deep learning, high performance computing and artificial intelligence.",
+      "note": "Product is a general-purpose GPU VM (root access, bring-your-own OS/software); no documented credential-injecting secret proxy for these instances. Users supply secrets themselves via cloud-init/user data, in-guest env vars, or OVHcloud's separate KMS/secret-management services, which is a different feature (secrets storage, not a request-time injection proxy).",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-storage-additional-disk?id=kb_article_view&sysparm_article=KB0050612",
+      "quote": "It is possible to create additional disks for your Public Cloud instances.",
+      "note": "Block Storage (Cinder) volumes attached to instances; resizable, snapshot/backup-able; can also boot from volume.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://help.ovhcloud.com/csm/en-gb-public-cloud-storage-file-storage-service-getting-started?id=kb_article_view&sysparm_article=KB0072894",
+      "quote": "This service offers managed NFS shares on private networks, supporting ReadWriteMany (RWX) access across multiple instances or Kubernetes pods.",
+      "note": "File Storage Service (OpenStack Manila, NFSv4) read-write, over private network with access rules (accessLevel rw/ro). Also Enterprise File Storage (NetApp), HA-NAS, and 'Classic Multi-Attach Block Storage' in 3AZ regions (needs a cluster FS such as OCFS2).",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/deploy-a-gpu-instance.md",
+      "quote": "The technology used (pci_passthrough) allows the instance's operating system to control the GPU in exactly the same way a physical machine would.",
+      "note": "OVHcloud Public Cloud GPU instances are OpenStack Nova instances (full VMs on KVM) with GPU PCI passthrough, not containers or microVMs.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "Custom Images: You can import your own images in QCOW2 or RAW format, providing full control over your environment",
+      "note": "Instances boot from OpenStack/Glance VM disk images (QCOW2/RAW) that you import yourself, not from a Docker/OCI container image; not offered: outside the product's scope (it's a VM, not a container runtime).",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "Pre-configured Applications: Images that come with software such as cPanel, Plesk, Docker, or NVIDIA GPU Cloud (NGC).",
+      "note": "Full VM with root access; Docker is offered as a ready-made app image and can also be installed manually on any Linux image.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. OVHcloud GPU instances are IaaS VMs (SSH/RDP access); no managed VNC/streamed-desktop or browser product is offered.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. No managed/preinstalled browser product; users could install one themselves on the VM.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. Plain IaaS GPU VM; no screenshot/click computer-use API.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. Generic GPU cloud VM; no stealth/fingerprinting product feature.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. Generic GPU cloud VM; no CAPTCHA-solving product feature.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/network-services/concepts.md",
+      "quote": "Instances in Public Mode are exposed to the public Internet directly via IPv4/IPv6.",
+      "note": "Standard datacenter-assigned public/floating IPv4 addresses; not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/creating-ssh-keys.md",
+      "quote": "Find out how to create key pairs for OpenSSH on your local device and use them to establish secure connections to your instance",
+      "note": "SSH key management is a core part of instance creation/access.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/create-restore-a-virtual-server-with-a-backup.md",
+      "quote": "Creating a new instance with the backup as a template in order to duplicate the original instance, for example if you are configuring a load balancing infrastructure.",
+      "note": "New instances can be created (cloned) from an instance backup/snapshot.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-back-up-instance?id=kb_article_view&sysparm_article=KB0051162",
+      "quote": "Backups can be used to restore your instance to a previous state or to create a new, identical instance.",
+      "note": "OpenStack/Glance instance snapshotting (createImage) does not require stopping the instance first, though a brief pause internally may occur; not explicitly documented as requiring shutdown.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-shelve-pause-instance?id=kb_article_view&sysparm_article=KB0051262",
+      "quote": "The data on your local disk will be stored in a snapshot automatically created once the instance is shelved. Data stored in the memory and elsewhere will not be retained.",
+      "note": "Backups/snapshots and clones are disk-only; running processes/memory state are not preserved when cloning.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-shelve-pause-instance?id=kb_article_view&sysparm_article=KB0051262",
+      "quote": "The data on your local disk will be stored in a snapshot automatically created once the instance is shelved.",
+      "note": "Shelving/pausing/stopping are all manual actions (Control Panel/API/OpenStack); no documented feature that auto-wakes a stopped instance on an inbound network request.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-shelve-pause-instance?id=kb_article_view&sysparm_article=KB0051262",
+      "quote": "Learn how to shelve, pause or suspend a Public Cloud instance to temporarily free resources while keeping your IP address, and understand the billing impact of each option",
+      "note": "Shelve/pause/suspend are all customer-initiated actions; no documented idle-detection auto-stop feature for GPU/Compute instances.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/resize-instance-manager.md",
+      "quote": "this manipulation causes the instance to be shut down for the time of the operation.",
+      "note": "Resizing (changing flavor/CPU/RAM) requires shutting down the instance.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. Plain OpenStack GPU VMs; no preinstalled/offered coding-agent harness templates.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. No first-party browser/computer-use/research agent API for this product.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/llms.txt",
+      "quote": "Getting started with the MCP server for domain names",
+      "note": "OVHcloud ships an MCP server only for Domain Names (per docs index); no MCP server for Public Cloud Compute/GPU instances.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "Linux Distributions: Ubuntu, Debian, CentOS, AlmaLinux, Rocky Linux, and others. These images are ready to use for web servers, development environments, and general-purpose workloads.",
+      "note": "Plain OS images; no guaranteed/managed Python runtime out of the box (user installs/manages it themselves, though many Linux base images ship python3).",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "Linux Distributions: Ubuntu, Debian, CentOS, AlmaLinux, Rocky Linux, and others. These images are ready to use for web servers, development environments, and general-purpose workloads.",
+      "note": "Plain OS images; Node.js is not preinstalled and must be installed by the user.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/network-services/concepts.md",
+      "quote": "Instances in Public Mode are exposed to the public Internet directly via IPv4/IPv6.",
+      "note": "Public IPv4 assigned by default in Public Mode; IPv4 will start being billed separately from Oct 1, 2026 per pricing page caveat.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/network-services/concepts.md",
+      "quote": "Instances in Public Mode are exposed to the public Internet directly via IPv4/IPv6.",
+      "note": "Any port including 443 can be reached directly on the instance's public IP; HTTPS termination/cert setup is the customer's responsibility (or via the optional Load Balancer with Let's Encrypt).",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-horizon-configure-security-group?id=kb_article_view&sysparm_article=KB0051204",
+      "quote": "You can allow or block certain incoming or outgoing connections using security groups.",
+      "note": "Security groups filter by protocol/port/CIDR (network layer), not HTTP method/path level rules.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/network-services/concepts.md",
+      "quote": "Assign a Floating IP (Reusable) (persistent and reusable).",
+      "note": "A Floating IP is persistent/reusable and can be kept fixed as the instance's public (and thus effectively outbound-identifiable) address across rebuilds.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. OVHcloud Public Cloud GPU instances are Linux/Windows OpenStack VMs; no macOS option.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "All listed GPU flavors (A10, A100, H100, H200, L4, L40S, RTX5000, V100) run on x86_64 hosts; no ARM GPU instance flavor is offered.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. This is OVHcloud's own managed public cloud offering; not distributed as self-hostable software.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. OVHcloud runs the infrastructure in its own datacentres; not deployed into a customer's own cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "GPU instances are technically similar to the instances from the older range, but they also have a graphics card",
+      "note": "not offered: outside the product's scope. Built on OpenStack (open source) under the hood, but OVHcloud's managed GPU cloud service itself is not an open-source product.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://www.ovhcloud.com/en-gb/compliance/",
+      "quote": "SOC 1, 2, 3 — AICPA certification SSAE 16/ISAE 3402 Type 2 for control over financial reporting",
+      "note": "Company-wide compliance page lists SOC 1/2/3; not confirmed to be scoped specifically per-product to Public Cloud GPU instances.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.ovhcloud.com/en-gb/compliance/",
+      "quote": "HIPAA & HITECH — Compliance with the United States Health Insurance Portability and Accountability Act in our US datacentres.",
+      "note": "Stated as applicable in OVHcloud's US datacentres; the GPU instance flavors researched here are hosted in EU/Canada regions (GRA/SBG/BHS), so applicability to this specific product/region is not confirmed.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/account-and-service-management/account-information/ovhcloud-account-connect-saml-okta.md",
+      "quote": "Learn how to associate your Okta service with your OVHcloud account via SAML 2.0",
+      "note": "SAML 2.0 SSO (AD FS, Entra ID, Google Workspace, Okta) is available at the OVHcloud account level, which governs access to Public Cloud projects.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://www.ovhcloud.com/en/public-cloud/prices/",
+      "quote": "Region selection affects rate/availability.",
+      "note": "GPU instances are available in EU regions (e.g. GRA, SBG in France) among the selectable regions.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://help.ovhcloud.com/csm/en-public-cloud-compute-shelve-pause-instance?id=kb_article_view&sysparm_article=KB0051262",
+      "quote": "Learn how to shelve, pause or suspend a Public Cloud instance to temporarily free resources while keeping your IP address, and understand the billing impact of each option",
+      "note": "These are persistent IaaS VMs billed hourly/monthly that run until the customer stops/deletes them; no maximum session duration is imposed.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://api.ovh.com/v1/cloud.json",
+      "quote": "GET /cloud/project/{serviceName}/usage/current returns cloud.usage.UsageCurrent with totalPrice (order.Price), hourlyUsage, monthlyUsage, and resourcesUsage fields",
+      "note": "granularity: per-project; cost: yes; OVH Public Cloud API provides /cloud/project/{serviceName}/usage/current (and /usage/forecast, /usage/history) endpoints that return billable usage per project with cost. Projects act as resource tags/isolation boundaries. Response includes totalPrice field with cost data. Also supports billing data export in FOCUS format via /finops/bucketExport API.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Gravelines",
+      "provider_region": "GRA7",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Gravelines",
+      "provider_region": "GRA9",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Gravelines",
+      "provider_region": "GRA11",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Beauharnois",
+      "provider_region": "BHS5",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/deploy-a-gpu-instance.md",
+  "locations_quote": "At the moment, most of our old GPU instances (Tesla V100 and V100s) are only available in the GRA7, GRA9, GRA11, and BHS5 regions. The newer models (A100, H100, L4 and L40s) are only available in the GRA11 region for now.",
+  "locations_checked": "2026-10-01"
+}

@@ -1,0 +1,714 @@
+{
+  "id": "scrapeless",
+  "name": "Scrapeless Agent Browser",
+  "url": "https://www.scrapeless.com/en/pricing",
+  "category": "browser",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "basic-browser-from-rate",
+      "label": "Basic browser from-rate",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Basic",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.09,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Advertised from-rate. Docs describe hybrid billing of proxy traffic + hourly rate, from $1.8/GB + $0.09/hour; built-in proxy is residential-only and billed per GB unless you bring your own proxy (subscribers only). Billing granularity / minimum billed time per session not published. Server-side cloud browser: os set to linux (runs on the provider fleet; guest OS not user-selectable, fingerprints can emulate other OSes)."
+    },
+    {
+      "key": "growth-browser-from-rate",
+      "label": "Growth browser from-rate",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Growth",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.081,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Advertised from-rate. Proxy usage additional; minimum/prepaid credit semantics must be confirmed. Server-side cloud browser: os set to linux (runs on the provider fleet; guest OS not user-selectable, fingerprints can emulate other OSes)."
+    },
+    {
+      "key": "scale-browser-from-rate",
+      "label": "Scale browser from-rate",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Scale",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.076,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Advertised from-rate. Proxy usage additional; minimum/prepaid credit semantics must be confirmed. Server-side cloud browser: os set to linux (runs on the provider fleet; guest OS not user-selectable, fingerprints can emulate other OSes)."
+    },
+    {
+      "key": "business-browser-from-rate",
+      "label": "Business browser from-rate",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Business",
+          "vcpu": null,
+          "ram_gib": null,
+          "disk_gib": null,
+          "hour": 0.072,
+          "month_cap": null
+        }
+      ],
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Advertised from-rate. Proxy usage additional; minimum/prepaid credit semantics must be confirmed. Server-side cloud browser: os set to linux (runs on the provider fleet; guest OS not user-selectable, fingerprints can emulate other OSes)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "residential_proxy_gib": 1.8,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Basic",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 50,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Basic"
+      ],
+      "note": "Monthly prepaid usage per FAQ; unused monthly commitment does not roll over. Residential $1.8/GB; DC $0.8/GB; IPv 6 $0.4/GB; ISP $2.5/IP."
+    },
+    {
+      "name": "Growth",
+      "fee": 49,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Growth"
+      ],
+      "note": "Monthly prepaid usage per FAQ; unused monthly commitment does not roll over. Residential $1.62/GB; DC $0.72/GB; IPv 6 $0.36/GB; ISP $2.25/IP."
+    },
+    {
+      "name": "Scale",
+      "fee": 199,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 200,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Scale"
+      ],
+      "note": "Monthly prepaid usage per FAQ; unused monthly commitment does not roll over. Residential $1.53/GB; DC $0.68/GB; IPv 6 $0.34/GB; ISP $2.12/IP."
+    },
+    {
+      "name": "Business",
+      "fee": 399,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 400,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Business"
+      ],
+      "note": "Monthly prepaid usage per FAQ; unused monthly commitment does not roll over. Residential $1.44/GB; DC $0.64/GB; IPv 6 $0.32/GB; ISP $2.0/IP."
+    },
+    {
+      "name": "Custom",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Negotiated rates/concurrency; KYC for higher threads/custom plans."
+    },
+    {
+      "name": "Growth annual displayed",
+      "fee": 44,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Growth"
+      ],
+      "note": "Monthly prepaid usage per FAQ; unused monthly commitment does not roll over. Residential $1.62/GB; DC $0.72/GB; IPv 6 $0.36/GB; ISP $2.25/IP. Annual selector displayed $44/month. Exact annual invoice total is not published here; display may round. Annual credit timing/amount must be confirmed."
+    },
+    {
+      "name": "Scale annual displayed",
+      "fee": 179,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 200,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Scale"
+      ],
+      "note": "Monthly prepaid usage per FAQ; unused monthly commitment does not roll over. Residential $1.53/GB; DC $0.68/GB; IPv 6 $0.34/GB; ISP $2.12/IP. Annual selector displayed $179/month. Exact annual invoice total is not published here; display may round. Annual credit timing/amount must be confirmed."
+    },
+    {
+      "name": "Business annual displayed",
+      "fee": 359,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 400,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": [
+        "Business"
+      ],
+      "note": "Monthly prepaid usage per FAQ; unused monthly commitment does not roll over. Residential $1.44/GB; DC $0.64/GB; IPv 6 $0.32/GB; ISP $2.0/IP. Annual selector displayed $359/month. Exact annual invoice total is not published here; display may round. Annual credit timing/amount must be confirmed."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0.09,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": 0.25,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "browser_control": true,
+    "desktop_control": null,
+    "anti_bot": true,
+    "captcha_solving": true,
+    "egress_ip_type": "residential",
+    "ip_note": "Built-in browser proxy is residential only (195 countries); standalone residential proxies from $1.80/GB (Basic) to $1.44/GB; custom/BYO proxy (not billed) is subscribers-only.",
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "image_oci": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "own_agent_api": true,
+    "ingress_rules": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Storage, snapshot GiB-month and public IPv4 prices are not published in the reviewed sources; null is not free.",
+    "No guaranteed vCPU allocation published; browser-hour is not a verified 4-vCPU/8-GiB VM equivalent. The sizes card keeps unknown hardware null; do not coerce it to zero or auto-rank against resource-guaranteed VMs.",
+    "Browser RAM is not published unless a specific mode overrides it.",
+    "Pricing header says $49 then consumption but FAQ explicitly says monthly amount is pre-deposited into balance; card models usage minimum, not noncredit fee, and flags ambiguity.",
+    "The Scale rate .076 is displayed rounded while 15% off .09 is .0765. Preserve published .076 and do not silently replace.",
+    "Browser proxy routing may use separate service-specific tariff; listed proxy prices are standalone product prices and not proof every browser mode uses exactly that rate.",
+    "Baked-in CAPTCHA/stealth/fingerprints and profile extensions documented; per-solve rate and replay retention/storage cost not verified.",
+    "CAPTCHA solving is included at no extra charge in every plan.",
+    "Free tier (no card): 1 concurrent session and 1 browser-hour per month. Basic PAYG table says 50 concurrency; which applies to an unfunded account is not stated."
+  ],
+  "sources": [
+    "https://www.scrapeless.com/en/pricing",
+    "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+    "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/session-replay/",
+    "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/profiles/",
+    "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/optimizing-cost/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "Basic package no KYC; unlocking thread limits/custom Enterprise requires brief compliance/KYC, potentially video call and company/personal-information verification. Stripe-supported methods and crypto accepted.",
+    "tiers": "Published paid Browser tiers: Basic 50, Growth 100, Scale 200, Business 400; higher Custom.",
+    "notes": "No explicit fresh unfunded/trial concurrency established, so default null rather than paid Basic 50. 300 fits Business plan count; 1,000 needs custom thread capacity. Approval delay not documented.",
+    "sources": [
+      "https://www.scrapeless.com/en/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 4,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 6
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/profiles/",
+      "quote": "If you need to store new cookies, authentication tokens, or cached data, you must set profilePersist: true when creating the session. The data will be saved when the session is closed.",
+      "note": "The only state mechanism is browser Profiles (cookies, storage, cache, login state) saved on session close when profilePersist=true and reloaded when a later session passes profileId. That is persisted browser user data (persistent_disk-like), not a machine/memory snapshot; open tabs and running page state are not restored. No machine snapshot exists in docs, SDK (sdk-node BrowserService: sessionTTL, proxy*, fingerprint, extensionIds, profileId, profilePersist only) or CLI.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://github.com/scrapeless-ai/sdk-node/blob/main/src/types/browser.ts",
+      "quote": "profileId?: string;\n  profilePersist?: boolean;",
+      "note": "No snapshot/checkpoint/fork API for browser sessions in docs or the official Node SDK; session options stop at profile id/persist. The agent-browser CLI 'snapshot -i' command is a DOM/accessibility snapshot of the page, not a machine snapshot. Profiles can be created/listed/deleted via API but are only written on session close.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://github.com/scrapeless-ai/scrapeless-agent-browser/blob/main/README.md",
+      "quote": "This works with Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Goose, OpenCode, and Windsurf.",
+      "note": "Product is a remote CDP browser. The scrapeless-agent-browser CLI/skill lets an agent running elsewhere (your laptop) drive the cloud browser; nothing runs an agent harness inside the browser sandbox. MCP server exists (scrapeless-mcp-server) but is browser/scrape tools, not a harness driver.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": null,
+      "quote": null,
+      "note": "Managed Chromium reached only over CDP (plus custom CDP domains Captcha.*, Agent.*); no shell, root or OS access is documented, so nftables/iptables cannot be run.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/authentication-identity/",
+      "quote": "Securely retrieve authentication data and inject it into browser sessions.",
+      "note": "Scrapeless has a credential system (Team Credentials API POST /browser/credentials keyed by origin+namespace, plus a 1Password integration via PUT /browser/one-password/token and POST /browser/one-password/secret) meant for agents to autofill logins. Credentials are injected into the browser session (forms), not added by an outbound HTTP proxy; the secret-retrieval endpoints return plaintext to the API caller. Docs claim 'Injected credentials remain inaccessible after use' but do not describe a placeholder/proxy mechanism. Not a secret proxy per the definition.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites. It lets developers run, manage, and monitor headless browsers without the need for dedicated server resources.",
+      "note": "not offered: outside the product's scope — it is a managed remote-Chromium/CDP endpoint, not a machine you boot from a custom OCI/Docker image.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — only a CDP WebSocket endpoint to a managed Chromium instance is exposed; there is no shell/root access to run Docker inside.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — no OS-level/shell access is exposed, so /dev/kvm is not reachable.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/live-session/",
+      "quote": "In the scrapeless session management interface, you can easily view live sessions... you can copy the Live URL from the list of running sessions and paste it into a browser to access it directly.",
+      "note": "not offered: outside the product's scope. 'Live Session' is a read/interact view of the remote browser tab (like a screen-share of the browser), not a full graphical OS desktop via VNC/RDP.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Seamlessly integrated with tools like Puppeteer and Playwright, users can automate data extraction with a single line of code.",
+      "note": "not offered: outside the product's scope — access is via a CDP WebSocket endpoint (Puppeteer/Playwright), not SSH.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/profiles/",
+      "quote": "If you need to store new cookies, authentication tokens, or cached data, you must set profilePersist: true when creating the session. The data will be saved when the session is closed.",
+      "note": "Only browser Profiles (cookies/storage/cache/login state) persist, saved on session close and reloaded by profileId; no machine or memory snapshot/checkpoint API exists in docs or the official Node SDK.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://github.com/scrapeless-ai/sdk-node/blob/main/src/types/browser.ts",
+      "quote": "profileId?: string;\n  profilePersist?: boolean;",
+      "note": "No API to clone a session/machine into new ones is documented; session creation options are limited to TTL, proxy, fingerprint, extensions, and profile fields.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://github.com/scrapeless-ai/sdk-node/blob/main/src/types/browser.ts",
+      "quote": "profileId?: string;\n  profilePersist?: boolean;",
+      "note": "No fork capability of any kind is documented, so cloning a running session is not offered.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/profiles/",
+      "quote": "The data will be saved when the session is closed.",
+      "note": "No fork/clone or memory-snapshot mechanism exists; only cookie/storage-level Profiles persist, and running processes/tabs are not restored.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://github.com/scrapeless-ai/sdk-node/blob/main/src/types/browser.ts",
+      "quote": "sessionTTL?: number;",
+      "note": "Sessions are governed by a TTL and are created/closed via API; no pause/resume-with-reduced-billing primitive is documented.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution... run, manage, and monitor headless browsers without the need for dedicated server resources.",
+      "note": "not offered: outside the product's scope — sessions are explicitly created via API call (cold start ~<2s) rather than a persistent machine that sleeps and auto-wakes on inbound traffic.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/profiles/",
+      "quote": "If you need to store new cookies, authentication tokens, or cached data, you must set profilePersist: true when creating the session. The data will be saved when the session is closed.",
+      "note": "Browser Profile data (cookies, storage, cache, login state) survives across sessions when profilePersist=true and a profileId is reused — the closest analog to persistent disk for this product, though it's profile-scoped, not a general filesystem.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — no general-purpose attachable storage volumes are documented, only Profiles (cookie/cache state).",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — no shared-volume concept exists; multiple sessions can reuse the same Profile sequentially, not mount shared storage concurrently.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — no CPU/RAM sizing knobs are exposed for a running session at all (hardware is not user-selectable), so it can't be resized live.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://github.com/scrapeless-ai/scrapeless-agent-browser/blob/main/README.md",
+      "quote": "This works with Claude Code, Codex, Cursor, Gemini CLI, GitHub Copilot, Goose, OpenCode, and Windsurf.",
+      "note": "This CLI/skill lets a coding agent running on the user's own machine drive the remote cloud browser via MCP; no coding-agent harness is preinstalled or runs inside the Scrapeless sandbox itself, since the sandbox is just a Chromium instance.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://www.scrapeless.com/en/pricing",
+      "quote": "Yes. Agent Browser exposes a standard CDP WebSocket endpoint. Swap your local browser launch for puppeteer.connect... Spin up thousands of isolated browser sessions in parallel with sub-2s cold starts.",
+      "note": "Scrapeless offers first-party APIs for its own automation/task features layered on the browser (Captcha Solving API, AI Scraper task-lifecycle scrapers for ChatGPT/Perplexity/Gemini/etc., credential-injection API) — these drive the provider's own agents/tasks, not a general coding-agent harness.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/live-session/",
+      "quote": "Node.js Python const API_CONFIG = ... import requests",
+      "note": "Official Python SDK/code samples are documented alongside Node.js for driving the browser API.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://github.com/scrapeless-ai/sdk-node/blob/main/src/types/browser.ts",
+      "quote": "import { Viewport, CDPSession } from 'puppeteer-core';",
+      "note": "Official Node.js/TypeScript SDK (sdk-node) is published and documented for the Browser API.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — there is no user-facing machine with its own public IPv4; the browser is reached via a CDP WebSocket endpoint over Scrapeless's API, and outbound traffic optionally goes through Scrapeless's own proxy IPs.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Seamlessly integrated with tools like Puppeteer and Playwright, users can automate data extraction with a single line of code.",
+      "note": "not offered: outside the product's scope — no arbitrary ports/services on a user machine are exposed via HTTPS; only the provider's own CDP/API/live-view endpoints are reachable.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — there are no user-exposed inbound ports/services to gate with IP allowlists or security groups; access control is limited to API-key auth on the provider's own endpoints.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "With a global network covering 195 countries and over 70 million residential IPs, Agent Browser offers 99.9% uptime and high success rates. It bypasses common obstacles like IP blocking and CAPTCHAs.",
+      "note": "No documented feature to restrict/allowlist which destinations the browser session may reach; the product is built for unrestricted outbound scraping traffic, optionally routed through Scrapeless's own proxy network.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/optimizing-cost/",
+      "quote": "Resource interception: Reduce traffic consumption by intercepting unnecessary resource requests. Request URL interception: Further reduce traffic by intercepting specific requests based on URL characteristics.",
+      "note": "Documented interception is a client-side technique the user implements in their own Puppeteer/Playwright script (page.setRequestInterception), not a provider-side HTTP method/path egress-rule feature.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.scrapeless.com/en/pricing",
+      "quote": "Residential $1.8/GB; DC $0.8/GB; IPv6 $0.4/GB; ISP $2.5/IP.",
+      "note": "The provider offers Static ISP Proxies as an add-on with a persistent IP for the duration of a rented lease, but this is a separate proxy product purchased per-IP, not a static outbound IP automatically assigned to the browser session itself.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "Agent Browser is a high-performance solution for large-scale data extraction from dynamic websites.",
+      "note": "not offered: outside the product's scope — no GPU instance types are advertised for this headless/managed browser product.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.scrapeless.com/en/pricing",
+      "quote": "Spin up thousands of isolated browser sessions in parallel. Each one a clean, independent...",
+      "note": "not offered: outside the product's scope — the fleet runs Linux-hosted Chromium (fingerprints can emulate other OSes, but the guest OS is not user-selectable Windows).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.scrapeless.com/en/pricing",
+      "quote": "Spin up thousands of isolated browser sessions in parallel. Each one a clean, independent...",
+      "note": "not offered: outside the product's scope — no macOS machines/hosts are offered; this is a Linux-hosted managed browser service.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "It lets developers run, manage, and monitor headless browsers without the need for dedicated server resources.",
+      "note": "Scrapeless is a fully managed SaaS API/proxy product; no self-hosted deployment package for the Agent Browser service is offered (only client SDKs/CLI are open on GitHub).",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/introduction/",
+      "quote": "It lets developers run, manage, and monitor headless browsers without the need for dedicated server resources.",
+      "note": "No bring-your-own-cloud deployment option is documented; the service runs exclusively on Scrapeless's own fleet.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/scrapeless-ai",
+      "quote": "scrapeless-ai (SDKs: sdk-node, sdk-python; scrapeless-agent-browser CLI; scrapeless-mcp-server)",
+      "note": "Only client SDKs, CLI, and MCP server are open source; the core Agent Browser backend/service itself is closed-source SaaS.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.scrapeless.com/en/pricing",
+      "quote": "Yes. Scrapeless operates under SOC 2 Type II with GDPR, CCPA, and HIPAA-aligned data handling. Profile data is encrypted at rest with workspace isolation, and DPA agreements are available.",
+      "note": "Stated as 'HIPAA-aligned data handling'; an explicit BAA-availability statement was not found, so this reflects alignment claims rather than a confirmed signed-BAA program.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.scrapeless.com/en/pricing",
+      "quote": "Hourly Rate($/hour) From $0.090 per hour ... Max Concurrency",
+      "note": "not offered: outside the product's scope. Agent Browser is a managed cloud-browser service reached only via CDP/WSS; sessions are configured by proxy country, fingerprint, and profile, with no CPU-architecture (x86/ARM) selection exposed anywhere in the pricing, docs, or SDK.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/live-session/",
+      "quote": "proxyCountry: 'US'",
+      "note": "not offered: outside the product's scope as documented. The only geographic control exposed is proxyCountry/proxyState/proxyCity, which sets the outbound proxy IP's geolocation, not where the browser session or account data is stored/processed. No EU data-residency option, region picker for compute, or GDPR data-location commitment was found in docs, pricing, or the privacy policy (which only pledges to follow each region's laws, not to keep data in the EU).",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 0.25,
+      "source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/quickstart/",
+      "quote": "sessionTTL number Controls the session duration and automatically closes the browser instance after timeout. Measured in seconds (s), defaults to 180 seconds (3 minutes), customizable between 60 seconds (1 minute) and 900 seconds (recommended maximum 15 minutes, but longer times can be set).",
+      "note": "Docs state a recommended/typical max of 900s (15 min = 0.25h) for sessionTTL, but explicitly say longer values can also be set, so there is no hard documented ceiling. Reporting the stated recommended maximum rather than null; true upper bound is not published.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://apidocs.scrapeless.com/v1/api-11949851",
+      "quote": "Retrieve basic information about the currently authenticated user, including their account balance and subscription plan details. Response includes 'credits' (account balance) and plan 'usage'.",
+      "note": "granularity: account-only; cost: yes; The /api/v1/me endpoint returns account-level credits and subscription plan usage via REST API, but does not provide per-sandbox or per-session usage tracking. Billing is tracked only at account level with monthly prepaid credits consumed by hourly browser rates plus proxy consumption.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.scrapeless.com/en/docs/browser-crawl/agent-browser/quickstart/",
+  "locations_quote": "proxyCountry string Specifies the target country/region for proxy routing, directing requests through IP addresses from the selected location. Accepts ISO country codes (e.g., US for United States, GB for United Kingdom, ANY for random selection). Supports 195+ countries and territories.",
+  "locations_checked": "2026-10-01"
+}

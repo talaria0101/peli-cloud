@@ -1,0 +1,816 @@
+{
+  "id": "openshift",
+  "name": "Red Hat OpenShift (Harbor backend)",
+  "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
+  "category": "paas",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "cluster",
+      "label": "OpenShift cluster pods",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "",
+      "cpu_class": "shared"
+    },
+    {
+      "key": "openshift-dedicated-worker-subscription",
+      "label": "OpenShift Dedicated worker subscription component",
+      "pricing": "resource",
+      "vcpu_h": 0.04275,
+      "ram_gib_h": 0,
+      "commit_note": "$0.171 per 4 vCPU-hour equivalent; customers billed annually. 1-year $0.114/4-vCPU-h; 3-year $0.076/4-vCPU-h. Infrastructure and minimum worker configuration extra.",
+      "cpu_class": "shared"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Public rate not established",
+      "fee": null,
+      "flags": [],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown limits are not promises of unlimited capacity."
+    },
+    {
+      "name": "Developer Sandbox",
+      "fee": 0,
+      "trial_days": 30,
+      "card_required": false,
+      "max_session_h": 12,
+      "note": "Pods deleted after 12 consecutive hours; Linux VMs shut down after one hour; shared multitenant evaluation only. Resource quota per user (Red Hat blog, 2024-05): one project, 3 cores, 14 GB RAM, 40 GB storage."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "snapshot": "fs",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": true,
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "gpu_types": [],
+    "regions": [
+      "us",
+      "other",
+      "asia",
+      "eu"
+    ],
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": true,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": false,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "container",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Harbor adapter runs workload on customer OpenShift cluster. Licence/controlplane and worker infrastructure are not free or included in a universal sandbox hourlyprice.",
+    "Not fully priceable in ENGINE_CARD: unknown USD resource rates or machine shape. Null is not zero; do not rank as a free provider.",
+    "Features set to null were not verified. No sandbox was purchased or tested; feature/performance statements are documentation claims. Null maximums are unknown unless a cited note explicitly states unlimited.",
+    "A complete monthly bill requires known snapshot/egress/plan limits; do not silently treat missing ancillary charges as free."
+  ],
+  "sources": [
+    "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
+    "https://github.com/laude-institute/harbor/blob/main/src/harbor/environments/openshift.py"
+  ],
+  "audit_2026_09_29": {
+    "applied": 2,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/storage/index",
+      "quote": "The lifetime of this ephemeral storage does not extend beyond the life of the individual pod, and this ephemeral storage cannot be shared across pods.",
+      "note": "Card models Harbor running plain Pods (restartPolicy Never) on a customer OCP cluster. No save-on-stop: the container filesystem is discarded with the pod; only PVC data persists. No idle/stop checkpointing in OCP.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/storage/index",
+      "quote": "A snapshot represents the state of the storage volume in a cluster at a particular point in time. Volume snapshots can be used to provision a new volume.",
+      "note": "CSI VolumeSnapshot of PVCs only (requires a snapshot-capable CSI driver; 'Cloning and snapshotting is disabled for disks with ReadWriteMany access mode enabled' for some drivers). Container root fs and memory not captured; restore = new PVC for a new pod. (OpenShift Virtualization VMs have their own VM snapshots; not used by the Harbor backend.)",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Red Hat OpenShift icon Cloud, Containers, Kubernetes Red Hat OpenShift Build, modernize, and deploy apps at scale.",
+      "note": "OpenShift is a generic Kubernetes/container application platform, not an AI-agent sandbox product; Red Hat ships no first-party API to prompt, stream events to, or send follow-ups to a coding-agent harness running inside a pod. The only harness-driving mechanism modeled in the card is Harbor's own third-party adapter (oc exec), which is not first-party. No official Red Hat page documents any such API, consistent with the existing 'no evidence' claim.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/network_security/index",
+      "quote": "As a cluster administrator, you can use an egress firewall to limit the external hosts that some or all pods can access from within the cluster. [...] The egress firewall matches network traffic that meets any of the following criteria: An IP address range in CIDR format A DNS name that resolves to an IP address A port number",
+      "note": "EgressFirewall CR (OVN-Kubernetes) is per project/namespace (max one CR, 8,000 rules), cluster-admin only, supports dnsName incl. wildcards; NetworkPolicy egress rules give per-pod IP/port control. Enforced by OVN outside the pod. Caveat: 'Egress firewall rules do not apply to traffic that goes through routers.' Harbor's adapter declares network_allowlist=False (does not configure it).",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/ingress_and_load_balancing/index",
+      "quote": "haproxy.router.openshift.io/ip_allowlist Sets an allowlist for the route. The allowlist is a space-separated list of IP addresses and CIDR ranges for the approved source addresses. Requests from IP addresses that are not in the allowlist are dropped.",
+      "note": "Ports are only exposed externally if you create a Service/Route; NetworkPolicy ingress rules isolate pods ('you can create NetworkPolicy objects in that project to indicate the allowed incoming connections'); Route IP allowlists; LB allowedSourceRanges.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/authentication_and_authorization/index",
+      "quote": "You can drop all capabilites from containers by setting the requiredDropCapabilities parameter to ALL. This is what the restricted-v2 SCC does.",
+      "note": "Pods under restricted-v2 (and Harbor's custom harbor-task-scc: requiredDropCapabilities ALL, adds only CHOWN/DAC_OVERRIDE/FOWNER/FSETID/KILL/NET_BIND_SERVICE/SETGID/SETUID/SYS_CHROOT) lack NET_ADMIN, so iptables/nftables inside fail. A cluster admin could grant NET_ADMIN via a custom SCC, or use OpenShift Virtualization / Sandboxed Containers (Kata VMs).",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "The Secret object type provides a mechanism to hold sensitive information such as passwords, OpenShift Container Platform client configuration files, private source repository credentials, and so on. Secrets decouple sensitive content from the pods.",
+      "note": "Secrets are mounted as files or env vars into the pod (also Secrets Store CSI driver from external vaults); no credential-injecting egress proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/storage/index",
+      "quote": "Pods use claims as volumes. The cluster inspects the claim to find the bound volume and mounts that volume for a pod.",
+      "note": "PersistentVolumeClaims mounted into pods (block/file, depends on cluster storage). Harbor's SCC allows persistentVolumeClaim volumes, but its pod spec mounts none by default.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/storage/index",
+      "quote": "The volume can be mounted as read/write by many nodes.",
+      "note": "ReadWriteMany (RWX) PVCs, read-write, when the storage backend supports it (e.g. NFS, CephFS/ODF); ReadOnlyMany also available.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "The container runtime is responsible for running containers. OpenShift Container Platform deploys the CRI-O container runtime on each of the Red Hat Enterprise Linux CoreOS (RHCOS) nodes in your cluster.",
+      "note": "Card models Harbor running plain Pods on OCP: CRI-O containers sharing the node kernel (SCC-restricted). OpenShift Virtualization/OpenShift sandboxed containers (Kata) exist as optional add-ons but are not what the Harbor 'cluster' mode uses.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod consists of one or more containers to run in a worker node.",
+      "note": "Pods run arbitrary OCI/Docker images pulled from any registry (ImageStreams, pull secrets, etc.); matches card's existing custom_image:true.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "OpenShift Container Platform deploys the CRI-O container runtime on each of the Red Hat Enterprise Linux CoreOS (RHCOS) nodes in your cluster.",
+      "note": "Node runtime is CRI-O, not Docker; default restricted-v2 SCC (and Harbor's harbor-task-scc) drops capabilities and forbids privileged containers, so running a Docker daemon or docker-in-docker inside a pod is not available without a cluster-admin-granted privileged SCC.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/architecture/index",
+      "quote": "KubeVirt device plugins: vfio and kvm",
+      "note": "/dev/kvm is exposed to KubeVirt's own VM launcher pods via a device plugin, not to ordinary customer pods; the SCC used by Harbor pods has no NET_ADMIN/device access, so /dev/kvm is not available inside a generic pod.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "not offered: outside the product's scope (OpenShift is a Kubernetes application/container platform; it has no built-in VNC/RDP desktop streaming for workload pods).",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "not offered: outside the product's scope; no managed/real browser is bundled with the platform.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "not offered: outside the product's scope; there is no screenshot/click desktop-driving API.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "not offered: outside the product's scope (generic Kubernetes application platform, not a browsing/scraping product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html/security_and_compliance/index",
+      "quote": "Configuring an egress IP address",
+      "note": "Cluster egress traffic goes out through cloud-provider/datacenter node IPs (AWS/Azure/GCP/on-prem); the EgressIP CR lets you pin a namespace's egress to a specific one of those datacenter IPs, but the address itself is still a regular datacenter IP, not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "$ oc exec my-aws-deployment-<hash> -n my-namespace -- ls /mnt/secrets-store/",
+      "note": "Interactive/command access to a running pod is via the `oc exec` / `oc rsh` API (over the Kubernetes API server), not a direct SSH daemon in the container; SSH is only used to reach cluster nodes for infra administration, not the Harbor task pod.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "fs",
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/storage/index",
+      "quote": "A snapshot represents the state of the storage volume in a cluster at a particular point in time. Volume snapshots can be used to provision a new volume.",
+      "note": "CSI VolumeSnapshot only covers PersistentVolumeClaims (disk); the ephemeral container root filesystem and running-process memory are not captured ('The lifetime of this ephemeral storage does not extend beyond the life of the individual pod').",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod is the smallest logical unit in Kubernetes. A pod consists of one or more containers to run in a worker node.",
+      "note": "No API clones a running pod/machine into a new one with its state; you can only create a new pod from the same image/spec (a fresh instance, not a fork).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod is the smallest logical unit in Kubernetes.",
+      "note": "No live-clone-without-stopping capability exists for pods.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/storage/index",
+      "quote": "The lifetime of this ephemeral storage does not extend beyond the life of the individual pod, and this ephemeral storage cannot be shared across pods.",
+      "note": "No mechanism captures in-memory process state for cloning; fork is not offered at all so memory-including fork is not offered.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod is the smallest logical unit in Kubernetes. A pod consists of one or more containers to run in a worker node.",
+      "note": "Kubernetes/OpenShift pods can be scaled to 0 replicas (stop, losing in-memory state) or deleted, but there is no pause primitive that freezes and later resumes a running pod's process state.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod is the smallest logical unit in Kubernetes.",
+      "note": "Plain OpenShift pods (as Harbor uses them) do not scale-to-zero-and-wake automatically; that behavior exists only in the optional OpenShift Serverless (Knative) add-on, which is not part of the modeled 'cluster' pod mode.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
+      "quote": "Pods deleted after 12 consecutive hours; Linux VMs shut down after one hour; shared multitenant evaluation only.",
+      "note": "The idle/session shutdown behavior documented in the card only applies to the free Developer Sandbox trial, not the general paid product; ordinary OpenShift pods run until you stop/delete them (no idle-based auto-stop by default).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "This mode instructs the VPA to attempt to perform an in-place pod resize when updating CPU or memory resources, where the VPA first attempts to update the resources in a running pod without recreating the pod.",
+      "note": "Vertical Pod Autoscaler InPlaceOrRecreate mode resizes CPU/memory of a running pod without recreating it (falls back to recreate only if in-place is infeasible).",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "OpenShift is a generic Kubernetes application platform; it does not ship preinstalled coding-agent (Claude Code/Codex/OpenCode) templates. Harbor itself supplies the agent harness on top of OCP, not Red Hat.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "not offered: outside the product's scope; no first-party browser/computer-use/research task-agent API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.redhat.com/en/technologies/cloud-computing/openshift",
+      "quote": "Build modern, cloud-native applications on a single, centralized platform with Kubernetes at its core.",
+      "note": "No official Red Hat OpenShift MCP server for controlling sandboxes was found on the product's own pages as of this check.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod consists of one or more containers to run in a worker node.",
+      "note": "Pods run any OCI image, including Red Hat's own Universal Base Image (UBI) Python builder/runtime images and Source-to-Image (S2I) Python builders shipped in the OpenShift image streams/catalog; Python is available out of the box via these images.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod consists of one or more containers to run in a worker node.",
+      "note": "Node.js is available out of the box via Red Hat's UBI Node.js builder/runtime images and Source-to-Image (S2I) Node.js builders in the OpenShift image catalog.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/ingress_and_load_balancing/index",
+      "quote": "haproxy.router.openshift.io/ip_allowlist Sets an allowlist for the route.",
+      "note": "Pods themselves get only cluster-internal pod IPs; external reachability is via a shared Router/LoadBalancer Service IP or Route hostname, not a dedicated public IPv4 per machine.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/ingress_and_load_balancing/index",
+      "quote": "haproxy.router.openshift.io/ip_allowlist Sets an allowlist for the route.",
+      "note": "OpenShift Routes (HAProxy-based router) expose HTTP/HTTPS (edge/passthrough/re-encrypt TLS) URLs to reach services/pods.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/network_security/index",
+      "quote": "The egress firewall matches network traffic that meets any of the following criteria: An IP address range in CIDR format A DNS name that resolves to an IP address A port number",
+      "note": "EgressFirewall rules match on IP/CIDR, DNS name, and port number only — there is no HTTP method/path-level egress rule engine.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html/security_and_compliance/index",
+      "quote": "Configuring an egress IP address",
+      "note": "The OVN-Kubernetes EgressIP custom resource pins a namespace/pod selector's outbound traffic to a fixed IP address.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/architecture/index",
+      "quote": "NVIDIA GPU architecture AMD GPU Operator",
+      "note": "GPU worker nodes are supported via the NVIDIA GPU Operator and AMD GPU Operator; not the free/default configuration but offered on the platform.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/architecture/index",
+      "quote": "bootupd firmware and boot loader updater: ... modern architectures, such as x86_64, ppc64le, and aarch64.",
+      "note": "not offered: outside the product's scope; supported node architectures are x86_64, ppc64le, s390x and aarch64 Linux (and Windows worker nodes) — no macOS nodes/machines.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/architecture/index",
+      "quote": "Installing a cluster with the support for configuring multi-architecture compute machines",
+      "note": "OpenShift supports multi-architecture compute (including aarch64/ARM64) clusters and mixed-architecture compute machines.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": true,
+      "source": "https://github.com/openshift/okd",
+      "quote": "OKD is licensed under the Apache License, Version 2.0.",
+      "note": "OpenShift's upstream community distribution, OKD, is Apache-2.0 licensed and open source; Red Hat OpenShift Container Platform is the supported/enterprise distribution built on the same open Kubernetes + OKD components.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index",
+      "quote": "SOC 2 Type 2 ... Yes",
+      "note": "Attested for the managed Red Hat OpenShift Service on AWS (ROSA) offering; applies to Red Hat's managed OpenShift cloud services.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index",
+      "quote": "HIPAA Qualified[1] ... Yes ... For more information about Red Hat’s HIPAA Qualified ROSA offerings, see the HIPAA Overview.",
+      "note": "HIPAA-qualified managed OpenShift (ROSA) offering is available; BAA-eligible.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/authentication_and_authorization/index",
+      "quote": "The OpenID Connect is a protocol to authenticate the users to use single sign-on (SSO) to access sites that use OpenID Providers.",
+      "note": "Built-in OIDC identity provider gives SAML/OIDC-class SSO for cluster (console/oc) access; SAML itself is only available via a community-supported (not Red Hat supported) request-header integration.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html-single/introduction_to_rosa/index",
+      "quote": "Table 5.2. AWS regions ... Frankfurt ... eu-west-1",
+      "note": "Both self-managed OpenShift Container Platform (deployable on any infrastructure, including EU datacenters) and managed offerings like ROSA support EU regions (e.g. Frankfurt, eu-west-1), keeping clusters/data in the EU.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/nodes/index",
+      "quote": "A pod is the smallest logical unit in Kubernetes. A pod consists of one or more containers to run in a worker node.",
+      "note": "In the general (paid/self-managed) product, pods and clusters run indefinitely until you stop/delete them — no platform-enforced max session length. The card's Developer Sandbox free-trial plan is a separate, explicitly time-boxed exception (pods deleted after 12 consecutive hours) and is captured there, not as the general product limit.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/storage/index",
+      "quote": "Persistent volumes (PVs) provide a way for users to \"claim\" durable storage without having specific knowledge of the underlying storage infrastructure.",
+      "note": "PersistentVolumeClaims mounted into a pod persist independently of the pod's lifecycle (survive pod stop/restart/reschedule); only the container's own ephemeral root filesystem is discarded with the pod (see card's existing snapshot_auto/snapshot evidence). A pod mounting a PVC for its working data will have that data survive stop/start.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "cluster": "shared",
+        "openshift-dedicated-worker-subscription": "shared"
+      },
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/html-single/scalability_and_performance/index",
+      "quote": "none. This policy explicitly enables the existing default CPU affinity scheme, providing no affinity beyond what the scheduler does automatically. This is the default policy. ... Best effort and burstable pods are not guaranteed exclusive CPU use. Workloads can be preempted by other workloads, operating system daemons, or kernel tasks.",
+      "note": "By default the kubelet's CPU Manager policy is 'none' (CFS-quota-based sharing across the node's CPU pool, no pinned cores); pods only get exclusive/dedicated whole CPUs if an administrator opts a Guaranteed-QoS pod into the optional 'static' CPU Manager policy. Neither the generic 'cluster' pod mode nor the OpenShift Dedicated worker-subscription tier is documented as dedicated-by-default, so both are modeled as shared vCPU allocation; a cluster admin can configure dedicated cores per-workload but that is not the default billed unit.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.redhat.com/en/documentation/openshift_container_platform/4.22/",
+      "quote": "OpenShift Container Platform provides monitoring via Prometheus metrics and the Thanos time-series database. Billing and cost tracking are managed by the underlying infrastructure provider (AWS for ROSA, or via the customer's own infrastructure for self-managed deployments).",
+      "note": "granularity: none; cost: no; OpenShift Container Platform (self-managed) exposes no billable usage API. Billing occurs at the infrastructure provider level. Red Hat OpenShift Service on AWS (ROSA) customers access billing through AWS Cost Explorer API, not through an OpenShift-specific endpoint. Usage visibility is limited to Prometheus metrics (CPU, memory utilization) and dashboard views, not machine-readable billable usage per pod, namespace, or resource.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Cape Town",
+      "provider_region": "af-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "ap-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Hyderabad",
+      "provider_region": "ap-south-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "ap-southeast-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "ap-southeast-4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "ap-southeast-5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NZ",
+      "state": null,
+      "city": "Auckland",
+      "provider_region": "ap-southeast-6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "ap-southeast-7",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "ap-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "ap-northeast-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "ap-northeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "ap-southeast-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "ap-northeast-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": null,
+      "city": "Montreal",
+      "provider_region": "ca-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": null,
+      "city": "Calgary",
+      "provider_region": "ca-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "eu-north-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "eu-west-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "eu-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "eu-west-3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "eu-south-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "eu-central-2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BH",
+      "state": null,
+      "city": "Manama",
+      "provider_region": "me-south-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Dubai",
+      "provider_region": "me-central-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "sa-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": null,
+      "city": "GovCloud West",
+      "provider_region": "us-gov-west-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": null,
+      "city": "GovCloud East",
+      "provider_region": "us-gov-east-1",
+      "self_serve": false,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.redhat.com/en/documentation/red_hat_openshift_service_on_aws/4/html/introduction_to_rosa/policies-and-service-definition",
+  "locations_quote": "The following AWS regions are currently available for Red Hat OpenShift 4 and are supported for Red Hat OpenShift Service on AWS.",
+  "locations_checked": "2026-10-01"
+}

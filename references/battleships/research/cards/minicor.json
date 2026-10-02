@@ -1,0 +1,454 @@
+{
+  "id": "minicor",
+  "name": "Minicor",
+  "url": "https://minicor.com",
+  "category": "windows",
+  "isolation": "dedicated-vm",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Native product; see regime notes",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "windows"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Incomplete or non-resource economics: rates remain null, never interpreted as free."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Current applicable tariff unverified",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Usage-based: pay per successful task (job) execution; development/teaching is included. No public price: no pricing page (minicor.com/pricing 404), sales via 'Book a demo'. Not a per-VM-hour tariff: Minicor-provisioned cloud Windows desktops or customer-owned machines/VPC/on-prem."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": false,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": null,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": null,
+    "private_network": null,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": null,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "own_agent_api": true,
+    "harness_api": false,
+    "secret_proxy": false,
+    "isolation": "dedicated-vm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "volume_shared": false,
+    "ingress_rules": true,
+    "volume_attach": false,
+    "guest_firewall": true,
+    "max_session_unlimited": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Public enterprise desktop-automation product; YC explicitly says scalable Windows desktop automation/VM. Quote-led offering, no verified Windows CPU/RAM/license-inclusive tariff. Product website sign-in/demo does not prove self-serve availability.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/minicor",
+    "https://minicor.com/",
+    "https://minicor.com/llms.txt"
+  ],
+  "audit_2026_09_29": {
+    "applied": 6,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 4
+  },
+  "feature_evidence": {
+    "own_agent_api": {
+      "value": true,
+      "source": "https://docs.minicor.com/agents/tools",
+      "quote": "`publish_job`, `get_build_status`, `answer_build_question`, `cancel_build`: go live, follow the builder, answer its questions.",
+      "note": "Only Minicor's own builder agent (teach_job starts it from a description plus a sample; follow status, answer its questions, cancel) via the Minicor MCP (hosted https://mcp.minicor.com/mcp) and the co-pilot. The builder runs in Minicor's platform and drives the Windows desktop; live jobs are deterministic code triggered by one HTTP call. No Claude Code/Codex harness hosting. The MCP also lets you 'create and manage on-demand, scheduled, or monitoring agents'.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.minicor.com/agents/tools",
+      "quote": "`publish_job`, `get_build_status`, `answer_build_question`, `cancel_build`: go live, follow the builder, answer its questions.",
+      "note": "Only Minicor's own builder agent (teach_job starts it from a description plus a sample; follow status, answer its questions, cancel) via the Minicor MCP (hosted https://mcp.minicor.com/mcp) and the co-pilot. The builder runs in Minicor's platform and drives the Windows desktop; live jobs are deterministic code triggered by one HTTP call. No Claude Code/Codex harness hosting. The MCP also lets you 'create and manage on-demand, scheduled, or monitoring agents'.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/configurations",
+      "quote": "Key-value settings resolved into a job at run time. Credentials live here, not in the automation.",
+      "note": "Credential vault ('Configurations') plus 2FA/OTP secrets referenced by ID; values are resolved into the run and typed into the target desktop app on the VM, so they do reach the machine. No outbound-request credential-injection proxy.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "dedicated-vm",
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Minicor provisions a Windows VM with the Desktop Service installed, the fastest way to start. Or install the Desktop Service on a machine you control: your cloud project, your VPC, or on premises.",
+      "note": "Product provisions dedicated Windows VMs (or runs on customer-controlled machines/VPC/on-prem); no specific hypervisor (Hyper-V/KVM/etc.) is named, so exact virtualization layer is unconfirmed.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents",
+      "note": "not offered: outside the product's scope. Machines are Windows desktops/VMs running the Minicor Desktop Service, not container images started from an OCI/Docker image.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents",
+      "note": "not offered: outside the product's scope. Minicor automates legacy desktop/EHR/ERP software with the account's own login, not evading bot detection on public websites.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/two-factor.md",
+      "quote": "Virtual phones, emails, and authenticator secrets, so a login challenge never needs a person on call.",
+      "note": "not offered: outside the product's scope. Minicor solves 2FA/OTP login challenges for the target app, but no CAPTCHA-solving service is documented.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "For extended work on the machine, connect over RDP as usual.",
+      "note": "Windows machines are accessed via RDP, not SSH; SSH is not documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Minicor provisions a Windows VM with the Desktop Service installed, the fastest way to start.",
+      "note": "No snapshot/checkpoint feature (disk or memory) for desktops is documented anywhere in the docs.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Minicor provisions a Windows VM with the Desktop Service installed, the fastest way to start.",
+      "note": "not offered: no automatic state-save/restore documented; product is not modeled around ephemeral suspend/resume machines.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Minicor provisions a Windows VM with the Desktop Service installed, the fastest way to start.",
+      "note": "No API/CLI snapshot capability documented.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Scaling ... Horizontal Scaling: orchestration across thousands of desktops",
+      "note": "Scaling is done by provisioning more Windows desktops, not by cloning/forking an existing machine's state; no fork/clone feature documented.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Horizontal Scaling: orchestration across thousands of desktops",
+      "note": "not offered: outside the product's scope; no live-clone-a-running-machine feature documented.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Horizontal Scaling: orchestration across thousands of desktops",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "Minicor provisions a Windows VM with the Desktop Service installed ... the desktop appears in your workspace with a live preview, ready for jobs.",
+      "note": "Cloud desktops are provisioned as persistent VMs the target application is installed on (not ephemeral per-run containers), so files/installed software survive between runs.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "A desktop is a Windows machine that runs the application you are automating.",
+      "note": "not offered: outside the product's scope; each desktop is a distinct Windows machine, no shared-volume feature documented.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "A desktop is a Windows machine that runs the application you are automating.",
+      "note": "not offered: outside the product's scope; no CPU/RAM live-resize capability documented for desktops.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.minicor.com/agents/mcp.md",
+      "quote": "Minicor exposes a Model Context Protocol server. Point Cursor, Claude Code, or any MCP-capable agent at it and the agent can teach jobs, run samples, inspect failures, drive desktops, and take jobs live.",
+      "note": "Coding agents like Claude Code/Cursor connect TO Minicor's MCP from the user's own machine to control the platform; they are not preinstalled/hosted as templates inside the Windows desktop itself.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents",
+      "note": "not offered: outside the product's scope. Minicor is a desktop-automation/RPA platform driving GUI apps via clicks/keystrokes/screen reads, not a general Python/Node code-execution runtime.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents",
+      "note": "not offered: outside the product's scope, same reasoning as lang_python.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://docs.minicor.com/running/calling-your-job.md",
+      "quote": "One HTTP call to the trigger URL. JSON in, structured JSON out, sync or async.",
+      "note": "Jobs are triggered via HTTPS trigger URLs served by Minicor's jobs engine (an API endpoint reaching the automation), not a raw exposed desktop port, but it is an inbound HTTPS surface.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.minicor.com/api/authentication.md",
+      "quote": "All requests to a trigger URL authenticate with an API key in the `x-api-key` header.",
+      "note": "Access to trigger URLs is gated by an API key (an auth-based ingress control), which is provider-side control of who can reach a job endpoint.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.minicor.com/operations/network-boundary.md",
+      "quote": "We provide a complete allowlist of every endpoint the deployment talks to, in both directions, so your network team can pin the boundary down and audit it.",
+      "note": "Documented for the BYOC/on-your-cloud deployment mode.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents",
+      "note": "not offered: outside the product's scope. Product is Windows desktop-automation VMs for driving legacy GUI apps; no GPU machine offering is documented.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktop-service.md",
+      "quote": "Windows 10 or later. Open an elevated PowerShell window and paste:",
+      "note": "The Desktop Service, and thus the whole platform, requires a Windows machine; no macOS support.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktop-service.md",
+      "quote": "Windows 10 or later. Open an elevated PowerShell window and paste:",
+      "note": "not offered: outside the product's scope. Legacy Windows desktop software targeted (EHR/ERP/DMS/WMS) runs on x86 Windows; no ARM64 offering documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents",
+      "note": "No OSI-licensed core product; Minicor is a closed commercial SaaS/BYOC platform. No public GitHub org with the core engine found.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://docs.minicor.com/agents/mcp.md",
+      "quote": "you enter your email, password, and region (US or Canada), and the connection acts as your account",
+      "note": "The only account regions mentioned anywhere are US and Canada; no EU region is documented for the standard hosted platform (BYOC deployments could theoretically be placed in a customer's EU cloud project, but that is not an EU-residency guarantee from Minicor itself).",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents.",
+      "note": "not offered: outside the product's scope. Minicor's unit of compute is a Windows desktop VM driven by screen/keyboard automation (docs.minicor.com/running/desktops); no docs mention a container runtime exposed to customers.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops",
+      "quote": "A desktop is a Windows machine that runs the application you are automating. Every job executes against a desktop, and everything the automation does happens there.",
+      "note": "not offered: outside the product's scope. The Windows machine exists to host the target legacy application for automation, not to run customer-provisioned VMs/emulators inside it; no /dev/kvm or nested hypervisor feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://docs.minicor.com/agents/job-build-loop",
+      "quote": "Stops are cooperative. There is no pause. Stopping a run lets the current operation finish; plan around that for long automations.",
+      "note": "Docs explicitly say a run cannot be paused (only stopped). No separate VM-level pause/resume-for-billing feature is documented; billing is per successful job execution, not per VM-hour, and desktops are described as persistently connected machines.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops",
+      "quote": "Once the service is running, the desktop appears in your workspace with a live preview, ready for jobs.",
+      "note": "No autoscaling/sleep-and-wake behavior is documented; a desktop must already be connected (its Desktop Service running) to accept a job, with no mention of the platform waking a stopped machine when a trigger call arrives.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://minicor.com/llms.txt",
+      "quote": "A platform for building and running desktop automations at scale with computer use agents.",
+      "note": "not offered: outside the product's scope. Minicor exposes jobs (HTTP trigger URLs) and Windows desktops for UI automation, not block-storage/volume management; no attachable-volume feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.minicor.com/running/desktops",
+      "quote": "One desktop is enough to build and go live. When volume grows, add more desktops and Minicor distributes work across them.",
+      "note": "Desktops are described as persistently connected machines that queue/serialize jobs; no idle-timeout auto-stop/sleep behavior is documented for either Minicor-provisioned or self-hosted desktops.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.minicor.com/operations/network-boundary",
+      "quote": "We provide a complete allowlist of every endpoint the deployment talks to, in both directions, so your network team can pin the boundary down and audit it.",
+      "note": "The documented allowlist covers Minicor's own coordination traffic in a BYOC deployment (network team pins it via their own edge/WAF), not a first-party provider feature letting customers set HTTP method/path-level egress rules on the desktop VM itself.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://docs.minicor.com/running/desktop-service",
+      "quote": "Windows 10 or later. Open an elevated PowerShell window and paste: ... irm https://minicor.com/installs/desktop-service/ps1",
+      "note": "derived: installing the Desktop Service requires an elevated (administrator) PowerShell session on the Windows machine, implying admin-level control of the guest OS, including its built-in firewall (Windows Defender Firewall). Not documented as a customer-facing feature in its own right.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.minicor.com/running/desktops.md",
+      "quote": "One desktop is enough to build and go live. When volume grows, add more desktops and Minicor distributes work across them.",
+      "note": "derived: desktops are persistent Windows VMs that stay connected indefinitely (no auto_stop_idle, no documented idle/session timeout); job runs on them are cooperative-stop only ('Stops are cooperative. There is no pause.', docs.minicor.com/agents/job-build-loop), with no platform-imposed maximum run/session duration documented.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.minicor.com/operations/monitoring-and-reporting.md",
+      "quote": "Minicor produces periodic usage and error reports per job: total runs, retries, failures with their categories, and trends over time. The reports are written to be handed downstream.",
+      "note": "granularity: none; cost: no; Minicor has a comprehensive API for job execution and management (calling jobs, listing executions, accessing execution history), but no dedicated usage/billing API is documented. The platform bills per successful task execution but provides no REST API, SDK method, or CLI command to programmatically retrieve billable usage, costs, or credits per sandbox/VM or per job. Usage tracking is available only through dashboard reports and periodic reports for handoff to customers.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://docs.minicor.com/agents/mcp.md",
+  "locations_quote": "you enter your email, password, and region (US or Canada), and the connection acts as your account",
+  "locations_checked": "2026-10-01"
+}

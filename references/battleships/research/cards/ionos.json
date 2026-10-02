@@ -1,0 +1,749 @@
+{
+  "id": "ionos",
+  "name": "IONOS Cloud",
+  "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "cubes",
+      "label": "Basic Cloud Cubes",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu",
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes": [
+        {
+          "name": "XS",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 60,
+          "hour": 0.0079646,
+          "month_cap": null
+        },
+        {
+          "name": "S",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 120,
+          "hour": 0.0147914,
+          "month_cap": null
+        },
+        {
+          "name": "M",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 240,
+          "hour": 0.0273072,
+          "month_cap": null
+        },
+        {
+          "name": "L",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 480,
+          "hour": 0.0500632,
+          "month_cap": null
+        },
+        {
+          "name": "Basic Cube XL",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 960,
+          "hour": 0.0944374,
+          "month_cap": null
+        },
+        {
+          "name": "Memory Cube S",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 120,
+          "hour": 0.0193426,
+          "month_cap": null
+        },
+        {
+          "name": "Memory Cube M",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 240,
+          "hour": 0.0364096,
+          "month_cap": null
+        },
+        {
+          "name": "Memory Cube L",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 480,
+          "hour": 0.0694058,
+          "month_cap": null
+        },
+        {
+          "name": "Memory Cube XL",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 960,
+          "hour": 0.1297092,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.00785082,
+      "gpu": null,
+      "note": "Native EUR public list/reference quote; rates converted using fx.json. Net of applicable taxes/duties. Suspended Cubes continue to incur usage charges; delete them (snapshot/delete/recreate) to stop billing (docs.ionos.com cubes overview)."
+    },
+    {
+      "key": "vcpu-server",
+      "label": "Compute Engine vCPU",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "eu",
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.0136536,
+      "ram_gib_h": 0.0022756,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 60,
+      "max_ram_gib": 230,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 60,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.01695322,
+      "gpu": null,
+      "note": " Native EUR public list/reference quote; rates converted using fx.json. Net of applicable taxes/duties."
+    },
+    {
+      "key": "cloud-gpu-h200",
+      "label": "Cloud GPU VM H200 PCIe",
+      "pricing": "sizes",
+      "gpu_only": true,
+      "regions": [
+        "eu"
+      ],
+      "sizes": [
+        {
+          "name": "H200-S",
+          "vcpu": 15,
+          "ram_gib": 267,
+          "disk_gib": 1024,
+          "hour": 3.4134,
+          "month_cap": null
+        },
+        {
+          "name": "H200-M",
+          "vcpu": 30,
+          "ram_gib": 534,
+          "disk_gib": 1536,
+          "hour": 6.8268,
+          "month_cap": null
+        },
+        {
+          "name": "H200-L",
+          "vcpu": 60,
+          "ram_gib": 1068,
+          "disk_gib": 2048,
+          "hour": 13.6536,
+          "month_cap": null
+        },
+        {
+          "name": "H200-XL",
+          "vcpu": 127,
+          "ram_gib": 2136,
+          "disk_gib": 4096,
+          "hour": 27.3072,
+          "month_cap": null
+        }
+      ],
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "granularity_s": 60,
+      "requires_always_on": true
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": 0.046144111111,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": 0.046144111111,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": 2048,
+    "egress_gib": 0.034134,
+    "ipv4_month": 5.689,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Unknown quotas are not confirmed unlimited. "
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "H200"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": null,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu",
+      "us"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Snapshot EUR .04/GB/30 days normalized to 730 hours; disk storage differs by mode.",
+    "Dedicated-core savings prices not directly comparable to vCPU engine workload.",
+    "Stopped Cubes may retain reserved resources; stop/delete billing needs explicit confirmation.",
+    "Unknowns remain null, not free. Cubes and vCPU servers are ordinary self-serve VMs (no longer flagged alt, fix 2026-09-28).",
+    "Worked example assumes resources are released between active windows unless a retained-instance scenario is explicitly discussed.",
+    "VAT basis: Net of applicable taxes/duties.",
+    "Residency: Cloud Cubes available EU and Newark US per price page; choose specific datacenter. Account contracting entity controls currency.",
+    "Egress is tiered per contract across all IONOS services: first 2 TiB free, then EUR 0.03/GiB to 10 TiB, 0.025 to 50 TiB, 0.02 to 150 TiB, 0.015 beyond. The card uses the first paid tier only, so very high egress is slightly overstated."
+  ],
+  "sources": [
+    "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+    "https://cloud.ionos.com/prices",
+    "https://docs.ionos.com/cloud/compute-services/cubes/dcd-how-tos/suspend-cube.md",
+    "https://docs.ionos.com/cloud/compute-services/cubes/overview.md",
+    "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.cs.html"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": 1,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Compute documentation directs account resource-limit increases to IONOS Cloud Support; fresh-account aggregate quota and SLA not specified. Per-VM maximum sizes are not account quotas.",
+    "sources": [
+      "https://docs.ionos.com/cloud/compute-services/cubes/overview",
+      "https://docs.ionos.com/cloud/compute-services/compute-engine/vcpu-server"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 19,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/dcd-how-tos/suspend-cube.md",
+      "quote": "The Cube releases the associated CPU, RAM, and IP addresses.",
+      "note": "Suspend (Cubes) / stop (vCPU servers) only keep the block storage (persistent_disk); RAM is released and the doc even suggests shutting the OS down first 'to prevent data loss'. No stop-triggered snapshot documented. Scheduled backups exist via the separate IONOS Backup Service.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/images-snapshots/snapshots.md",
+      "quote": "This feature is useful, for example, if you want to quickly roll out multiple Virtual Machines (VMs) with the same or similar configuration or when you need a recovery point.",
+      "note": "Per-block-storage-volume snapshots (DCD/Cloud API), of running or stopped servers ('Creating a snapshot while the server is running takes longer'); disk only - RAM not included (docs recommend sync/shutdown). Full, non-incremental; new volumes/VMs can be created from them in the same datacenter location. Only from Essential performance class volumes.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/overview.md",
+      "quote": "A Cube is a Virtual Machine (VM) with an attached NVMe Volume. You can use each newly created Cube as a new VM, either standalone or in combination with IONOS Cloud products.",
+      "note": "IONOS Cubes/vCPU/Dedicated-Core servers are plain self-serve IaaS VMs provisioned via DCD or the IONOS Cloud API/SDKs (create/start/stop/snapshot); there is no documented agent-harness API (no sandbox/agent orchestration layer, no tool-call or code-execution endpoint). Feature is plainly outside what this IaaS product is, so 'no' is confirmed with medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/security/network-security-groups.md",
+      "quote": "An NSG contains bidirectional security firewall rules that allow ingress (incoming) and egress (outgoing) network traffic for Network Interface Cards (NICs) or Virtual Machine (VM) resources configured as NSG members. For each rule, you can specify the source IP address, destination IP address, port, protocol, etc.",
+      "note": "Network Security Groups and per-NIC firewalls (Ingress/Egress/Bidirectional) with IP/CIDR, port, protocol rules. Default NSG allows all egress ('Allow all IPv4 Egress traffic'); removing that rule / activating an egress NIC firewall gives default-deny. No domain-level filtering documented.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/security/network-security-groups/nsg-faqs.md",
+      "quote": "As a result of these rules, all outbound traffic is allowed, while inbound traffic is blocked by default, except for the explicitly allowed IP ranges from within the VDC.",
+      "note": "NSG / NIC firewall inbound rules by source IP/CIDR, port, protocol. Suspended Cubes cannot be NSG members.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VMs with root/own kernel; iptables/nftables work in-guest.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/overview.md",
+      "quote": "A Cube is a Virtual Machine (VM) with an attached NVMe Volume.",
+      "note": "IONOS provisions plain KVM VMs; there is no documented credential-injecting proxy for outbound calls. Secrets are supplied by the user directly into the VM (e.g. cloud-init/user data, environment variables, or manual configuration), not brokered by IONOS. Feature is plainly outside what this IaaS product is, so 'no' is confirmed with medium confidence.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/block-storage/how-tos/set-up-block-storage.md",
+      "quote": "Drag the Storage element from the Palette onto a Server or a Cube in the Workspace to connect them together.",
+      "note": "Extra Block Storage volumes (Essential/Balanced/Performance) attach to servers and Cubes; resizable up while running.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/network-file-storage/overview.md",
+      "quote": "Multiple VMs from within the VDC can access the data simultaneously.",
+      "note": "Network File Storage (managed NFSv4.2 over private LAN), read-write; per-share client groups by IP network/host with squash modes.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/overview",
+      "quote": "Cubes are virtual private service instances with shared resources.",
+      "note": "IONOS Compute Engine (Cubes, vCPU Servers, Dedicated Core Servers) are KVM-based virtual machines with full root/own kernel; a separate 'Confidential VM' product adds AMD SEV memory encryption on top of the same VM model.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/images-snapshots/private-images/how-tos/upload-image-via-ftp",
+      "quote": "Upload a custom server image through FTP using an FTPS client like FileZilla on port 21, then use it as a RAW-format template for new servers.",
+      "note": "Custom images are whole-disk RAW/UEFI VM images uploaded via FTP, not OCI/Docker container images used to start a machine.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/tools-docker-machine-driver/docker/docker-swarm.md",
+      "quote": "Docker Swarm",
+      "note": "Full KVM VMs with root access; IONOS documents Docker Machine Driver / Docker Swarm tooling for provisioning Docker on IONOS servers, and Docker/containers run normally inside a root-access Linux VM.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "not offered: outside the product's scope (plain IaaS VMs; a Remote Console for text/graphical BIOS-level access exists for troubleshooting, not a managed desktop-as-a-service)",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "not offered: outside the product's scope (plain IaaS VM/cloud provider, no browser/stealth product)",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "IPv4 available",
+      "note": "Standard hyperscaler datacenter public IPv4/IPv6 addresses assigned per VM/NIC; no residential or mobile egress product.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/images-snapshots/snapshots.md",
+      "quote": "This feature is useful, for example, if you want to quickly roll out multiple Virtual Machines (VMs) with the same or similar configuration or when you need a recovery point.",
+      "note": "New VMs can be created from a disk snapshot of an existing server, i.e. clone a machine into new ones (disk-state only, not memory).",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/images-snapshots/snapshots.md",
+      "quote": "Creating a snapshot while the server is running takes longer",
+      "note": "Snapshots can be taken from a running server (the original keeps running) and then used as a template to create new VMs, so the source machine is not stopped to fork it.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/images-snapshots/snapshots.md",
+      "quote": "Creating a snapshot while the server is running takes longer",
+      "note": "Snapshots capture disk state only; docs recommend syncing/shutting down cleanly first, and running processes/memory are not restored in clones.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/dcd-how-tos/suspend-cube.md",
+      "quote": "The Cube releases the associated CPU, RAM, and IP addresses. The connected storage devices will be billed.",
+      "note": "Suspending a Cube (or stopping a vCPU/Dedicated Core server) stops CPU/RAM billing while only the attached block storage continues to be billed; Resume restarts it.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/dcd-how-tos/suspend-cube.md",
+      "quote": "When you suspend a Cube, you turn off the server, but the Cube remains saved, and you can resume it later.",
+      "note": "Resume/start is a manual DCD/API action; no auto-wake-on-incoming-request mechanism documented (plain IaaS VM, not a serverless/on-demand product).",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "not offered: outside the product's scope; VMs run until explicitly suspended/stopped/deleted by the user (VM Auto Scaling exists for load, not idle-shutdown of a single machine).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/api-reference/cloud-api-v6/servers/modify-a-server-by-id.md",
+      "quote": "when the CPU family is changed, 'allowReboot' had to be set to 'true'; this is no longer required, the reboot will be performed automatically",
+      "note": "Modifying server CPU/core/RAM properties triggers an automatic reboot; not a live resize of a running machine.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/ai/mcp-server/connect-to-an-ai-client.md",
+      "quote": "Claude Code",
+      "note": "IONOS documents connecting external coding agents (Claude Code, Cursor, etc.) to its MCP server to manage cloud resources; it does not preinstall or offer coding-agent harnesses as sandbox templates.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/ai/ai-model-hub.md",
+      "quote": "The IONOS CLOUD AI Model Hub is a fully managed platform that lets you build powerful, AI-driven applications.",
+      "note": "AI Model Hub offers LLM/RAG/tool-calling APIs, not a first-party browser/computer-use/research task agent.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/ai/mcp-server/overview.md",
+      "quote": "The ionos_cloud_mcp_server is a local binary that implements the Model Context Protocol (MCP). It connects your AI assistant or autonomous AI agent to your IONOS CLOUD account, letting you inspect your resources through natural language prompts or programmatic agentic loops.",
+      "note": "First-party MCP server to control/inspect IONOS Cloud resources (servers, storage, etc.) from AI clients.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/compute-services/compute-engine/vcpu-server",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "General-purpose Linux VMs with root access; any runtime including Python can be installed/run. IONOS also ships an official Python SDK for the Cloud API.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/compute-services/compute-engine/vcpu-server",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "General-purpose Linux VMs with root access; any runtime including Node.js can be installed/run. IONOS also ships an official Node.js SDK for the Cloud API.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "IPv4 available",
+      "note": "Each VM gets a public IPv4/IPv6 address with Network Security Group ingress rules; any HTTPS server bound to that port is reachable directly (no managed URL layer needed since it's a full VM).",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/security/network-security-groups.md",
+      "quote": "An NSG contains bidirectional security firewall rules that allow ingress (incoming) and egress (outgoing) network traffic for Network Interface Cards (NICs) or Virtual Machine (VM) resources configured as NSG members. For each rule, you can specify the source IP address, destination IP address, port, protocol, etc.",
+      "note": "Network Security Groups filter egress by IP/CIDR, port, and protocol (L3/L4) only; no HTTP method/path-level egress rules documented.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "IPv4 available",
+      "note": "Each VM is assigned a dedicated public IPv4 address that persists for the VM's life (reserved IPs even survive Cube suspend), giving a fixed outbound IP; derived from standard IaaS networking.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/compute-engine/vcpu-server",
+      "quote": "vCPU servers provide cost-effective performance and scalability at an affordable price, ideal for databases, development and test environments, essential software services, etc.",
+      "note": "not offered: outside the product's scope (x86 KVM Linux/Windows VMs only; no macOS/Apple silicon offering documented)",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/compute-engine/how-tos/set-up-dedicated-core.md",
+      "quote": "Provision a Dedicated Core server in Data Center Designer by choosing an Availability Zone, CPU Architecture, and Cores while keeping full root access.",
+      "note": "CPU architecture choices in IONOS docs/pricing are Intel/AMD x86-64 (Cubes, vCPU, Dedicated Core, GPU); no ARM/aarch64 instance family found.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/overview",
+      "quote": "Cubes are virtual private service instances with shared resources.",
+      "note": "not offered: outside the product's scope (IONOS Cloud is a hosted public-cloud service run in IONOS datacenters, not software you deploy on your own infrastructure)",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/overview",
+      "quote": "Cubes are virtual private service instances with shared resources.",
+      "note": "not offered: outside the product's scope; no bring-your-own-cloud-account deployment model documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/overview",
+      "quote": "Cubes are virtual private service instances with shared resources.",
+      "note": "The Compute Engine/Cubes platform is a closed proprietary hyperscaler service; only client SDKs/CLI/Terraform providers and the MCP server binary are open-sourced on GitHub, not the core cloud platform.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/set-up-ionos-cloud/management/identity-access-management/iam-federation.md",
+      "quote": "Federated IDPs such as Security Assertion Markup Language (SAML) 2.0 or OpenID Connect (OIDC) are supported to establish a trust authentication connection. With IAM Federation, users also get to Single Sign-On (SSO) across multiple systems without logging in whenever accessing these resources.",
+      "note": "IAM Federation supports SAML 2.0 and OIDC identity providers for SSO into the Data Center Designer / IONOS Cloud services.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+      "quote": "Cloud Cubes available EU and Newark US per price page; choose specific datacenter.",
+      "note": "IONOS Cloud is a German/EU-headquartered provider with multiple EU datacenter locations (Germany, France, Spain) that customers can pin their VMs/data to.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.ionos.com/cloud/compute-services/cubes/dcd-how-tos/suspend-cube.md",
+      "quote": "When you suspend a Cube, you turn off the server, but the Cube remains saved, and you can resume it later.",
+      "note": "Plain IaaS VMs (Cubes, vCPU/Dedicated Core servers, GPU VMs) run indefinitely until the customer stops/suspends/deletes them; no maximum session duration is imposed by the provider.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/backup-and-storage/images-snapshots/public-images/deactivate-vbs-hvci-microsoft-windows-server-2025",
+      "quote": "Windows Server 2025 running on KVM-based hypervisors can experience significant performance degradation. The Windows features Virtualization-Based Security (VBS) and Hypervisor-Enforced Code Integrity (HVCI) rely on nested virtualization. When activated, this leads to measurable performance issues, particularly for CPU-intensive workloads. ... VBS and HVCI capability is active by default in Windows Server 2025.",
+      "note": "reviewed: proposed correction rejected (IONOS's own KVM-hypervisor docs describe nested virtualization being triggered and active on their VMs by default (via Windows VBS/HVCI, WSL2, etc.) and give steps to disable it for performance; this proves the hypervisor exposes/supports nested virtualization to guests, contradicting the card's 'no' with no evidence. Correcting to true.)",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": true,
+      "source": "https://docs.ionos.com/cloud/support/general-information/service-catalog.md",
+      "quote": "Germany / Frankfurt am Main (DE/FRA/1) | Equinix GmbH | ISO/IEC 27001, ISO 9001, ISO 14001, ISO 22301, ISO 50001, SOC 1 Type II, SOC 2 Type II, PCI DSS",
+      "note": "IONOS's own Service Catalog lists SOC 2 (Type II or SOC2) among the certifications held for several IONOS Public Cloud data center locations it uses (Frankfurt/Equinix: SOC 1/2 Type II; Paris/Digital Realty: SOC2; Las Vegas/Switch Inc.: SOC1/SOC2). These are facility-operator attestations for the colocation sites IONOS Cloud runs in, not an independently published platform-wide SOC 2 report for the IONOS Cloud service itself; no separate IONOS Cloud SOC 2 report/trust-center page was found.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://docs.ionos.com/cloud/support/general-information/service-catalog.md",
+      "quote": "USA / Newark (US/EWR) | QTS Realty Trust, Inc. | ISO27001, SOC1, SOC2, PCI-DSS, HIPAA, FISMA",
+      "note": "HIPAA appears only as a certification of the underlying colocation facility operator (QTS) at one US location (Newark), not as a BAA or HIPAA-eligibility offering documented by IONOS Cloud itself for its compute/VM services. No IONOS Cloud page documents a Business Associate Agreement, HIPAA-eligible service designation, or compliance program for customer workloads; regulated-industry docs (e.g. Confidential VM use cases) reference HIPAA only as a regulatory framework customers must handle themselves. Treating as not offered by IONOS Cloud.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://openapi.gitbook.com/o/-MKo2eBjDjmABTFNKPGq/spec/billing-v3.yaml",
+      "quote": "/{contract}/utilization endpoint supports parameters: resource (UUID), dc (datacenter), type (resource type). Returns UtilizationMeter with resourceId, serverId, name, quantity for each resource.",
+      "note": "granularity: per-sandbox; cost: no; Utilization and Evn APIs support per-resource usage queries by resource UUID (VM/sandbox ID), returning quantities (CPU-hours, RAM-hours, etc.) but not cost. Invoice API returns cost but only at account level.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "de/fra/1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "de/fra/2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "fr/par",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NV",
+      "city": "Las Vegas",
+      "provider_region": "us/las",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NJ",
+      "city": "Newark",
+      "provider_region": "us/ewr",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "KS",
+      "city": "Lenexa",
+      "provider_region": "us/mci",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.ionos.com/cloud/support/general-information/service-catalog.md",
+  "locations_quote": "Frankfurt (DE/FRA/1), Frankfurt (DE/FRA/2), Paris (FR/PAR), Las Vegas (US/LAS), Newark (US/EWR), Lenexa (US/MCI) are supported locations for IONOS Cloud Compute Engine resources.",
+  "locations_checked": "2026-10-01"
+}

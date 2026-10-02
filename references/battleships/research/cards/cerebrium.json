@@ -1,0 +1,1657 @@
+{
+  "id": "cerebrium",
+  "name": "Cerebrium",
+  "url": "https://cerebrium.ai/pricing",
+  "category": "gpu-cloud",
+  "isolation": "container",
+  "modes": [
+    {
+      "key": "interruptible",
+      "label": "Interruptible",
+      "flags": [
+        "spot",
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 48,
+      "max_ram_gib": 96,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    },
+    {
+      "key": "protected",
+      "label": "Protected compute",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 48,
+      "max_ram_gib": 96,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 2,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": ""
+    },
+    {
+      "key": "serverless-b200-0",
+      "label": "B200, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "B200": 6.012
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-h200-1",
+      "label": "H200, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H200": 4.1976
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-h100-2",
+      "label": "H100, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 3.3984
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-rtx-pro-6000-3",
+      "label": "RTX-PRO-6000, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-PRO-6000": 2.4984
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]. Per-container vCPU/RAM max for RTX-PRO-6000 not listed in docs/hardware/cpu-and-memory.",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ],
+      "max_vcpu": 24,
+      "max_ram_gib": 218
+    },
+    {
+      "key": "serverless-a100-80gb-4",
+      "label": "A100-80GB, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 2.0988
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 12,
+      "max_ram_gib": 140,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-a100-40gb-5",
+      "label": "A100-40GB, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-40GB": 1.998
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 12,
+      "max_ram_gib": 140,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-l40s-6",
+      "label": "L40S, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L40S": 1.9512
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]. Per-container vCPU/RAM max for L40S not listed in docs/hardware/cpu-and-memory.",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 16,
+      "max_ram_gib": 128
+    },
+    {
+      "key": "serverless-a10-7",
+      "label": "A10, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A10": 1.1016
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]. Per-container vCPU/RAM max for A10 not listed in docs/hardware/cpu-and-memory.",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 48,
+      "max_ram_gib": 192
+    },
+    {
+      "key": "serverless-l4-8",
+      "label": "L4, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L4": 0.7992
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 48,
+      "max_ram_gib": 192
+    },
+    {
+      "key": "serverless-t4-9",
+      "label": "T4, serverless",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.02358,
+      "ram_gib_h": 0.007992,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "T4": 0.5904
+      },
+      "note": "Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 48,
+      "max_ram_gib": 192
+    },
+    {
+      "key": "guaranteed-capacity",
+      "label": "Guaranteed burst capacity (min spend)",
+      "flags": [
+        "sales"
+      ],
+      "pricing": "resource",
+      "commit_note": "Minimum monthly spend commitment, e.g. up to 50 H100s guaranteed for $10,000/month minimum; pay per use above"
+    },
+    {
+      "key": "serverless-b200-0-protected",
+      "label": "B200, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "B200": 12.024
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-h200-1-protected",
+      "label": "H200, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H200": 8.3952
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-h100-2-protected",
+      "label": "H100, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "H100": 6.7968
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 24,
+      "max_ram_gib": 256,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-rtx-pro-6000-3-protected",
+      "label": "RTX-PRO-6000, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "RTX-PRO-6000": 4.9968
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]. Per-container vCPU/RAM max for RTX-PRO-6000 not listed in docs/hardware/cpu-and-memory.",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ],
+      "max_vcpu": 24,
+      "max_ram_gib": 218
+    },
+    {
+      "key": "serverless-a100-80gb-4-protected",
+      "label": "A100-80GB, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-80GB": 4.1976
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 12,
+      "max_ram_gib": 140,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-a100-40gb-5-protected",
+      "label": "A100-40GB, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A100-40GB": 3.996
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 12,
+      "max_ram_gib": 140,
+      "plans": [
+        "Standard",
+        "Enterprise"
+      ]
+    },
+    {
+      "key": "serverless-l40s-6-protected",
+      "label": "L40S, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L40S": 3.9024
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]. Per-container vCPU/RAM max for L40S not listed in docs/hardware/cpu-and-memory.",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 16,
+      "max_ram_gib": 128
+    },
+    {
+      "key": "serverless-a10-7-protected",
+      "label": "A10, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "A10": 2.2032
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]. Per-container vCPU/RAM max for A10 not listed in docs/hardware/cpu-and-memory.",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 48,
+      "max_ram_gib": 192
+    },
+    {
+      "key": "serverless-l4-8-protected",
+      "label": "L4, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "L4": 1.5984
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 48,
+      "max_ram_gib": 192
+    },
+    {
+      "key": "serverless-t4-9-protected",
+      "label": "T4, serverless (non-interruptible, 2x)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": true,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0.04716,
+      "ram_gib_h": 0.015984,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {
+        "T4": 1.1808
+      },
+      "note": "Non-interruptible capacity: Cerebrium docs say it costs 2x the default (interruptible) rate; all rates here are 2x the interruptible mode. Source: https://www.cerebrium.ai/pricing [grafted from v4-gpu card 2026-09-28]",
+      "product_class": "gpu-instance",
+      "plan_limits_exempt": true,
+      "max_vcpu": 48,
+      "max_ram_gib": 192
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": 0.05,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null
+  },
+  "plans": [
+    {
+      "name": "Hobby",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 500,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "3 seats, up to 3 deployed apps, 5 concurrent GPUs, only T4/A10/L4/L40S/INF2/CPU. Log retention 7 days (table) vs 1 day (plan card). No audit log."
+    },
+    {
+      "name": "Standard",
+      "fee": 100,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": 1000,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Seats: 10 (comparison table); plan card says 'Unlimited seats'. No per-seat fee. Unlimited deployed apps. Required for A100/H100/H200/B200/RTX PRO 6000. Audit log 7 days. Log retention 30 days."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Volume discounts; discounts for longer-term commitments (sales-quoted); unlimited GPU concurrency; TRN1 (Trainium) only on Enterprise."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "snapshot": "mem",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": true,
+    "sso": false,
+    "gpu_types": [
+      "B200",
+      "H200",
+      "H100",
+      "RTX PRO 6000",
+      "A100-80GB",
+      "A100-40GB",
+      "L40S",
+      "A10",
+      "L4",
+      "T4",
+      "RTX-PRO-6000"
+    ],
+    "regions": [
+      "us",
+      "eu",
+      "asia",
+      "other"
+    ],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": true,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "ingress_rules": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "container",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "guest_firewall": false,
+    "max_session_unlimited": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "CPU $0.00000655/vCPU-s, RAM $0.00000222/GB-s. Hardware docs say actual CPU/memory usage; pricing FAQ also says resources allocated while processing. Record utilization ambiguity rather than promise savings.",
+    "Default interruptible tier can be preempted or consolidated. Protected tier costs 2× all compute including GPU, CPU and RAM; storage unaffected.",
+    "Storage first 100 GB free then $0.05/GB-month. Standard $100 is plus compute (no stated credits). Pricing comparison conflicts on Standard seats and Hobby log retention.",
+    "GPU listed per-second rates converted without rounding to marketing hourly approximations.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "GPU modes grafted from the v4-gpu research card (per-GPU rates; exact rows in research/gpu.json).",
+    "GPU concurrency per plan (pricing page 2026-09-28): Hobby 5 GPUs, Standard ($100/mo) 30 GPUs, Enterprise unlimited; plan.concurrency holds the CPU container limits (500 / 1,000). GPU cap not enforced by the engine.",
+    "Per-container max (docs/hardware/cpu-and-memory): H100/H200/B200 24 vCPU / 256 GB; A100 12 vCPU / 140 GB; L4/T4 48 vCPU / 192 GB; L40S/A10/RTX PRO 6000 not listed.",
+    "AWS Inferentia2 (INF2, Hobby+) and Trainium (TRN1, Enterprise) are offered but have no public price; TRN1 containers up to 128 vCPU / 512 GB. Max 8 GPUs per container for every GPU type.",
+    "Builds are billed at the app's compute rate when requirements/code change (cached steps cheaper). min_replicas>0 bills 24/7.",
+    "Memory+GPU checkpointing (snapshots for cold start) is early beta; no separate storage price published.",
+    "Platform cold-start time is not billed; user initialization code outside the request function (e.g. loading a model into GPU memory) is billed.",
+    "Persistent storage: one volume per region per project (mounted /persistent-storage), resizable 50 GB-1 TB self-serve; global apps also get a fixed 1 TB /global-persistent-storage volume. Pricing page: first 100 GB free then $0.05/GB-mo; whether billing is on provisioned size or used bytes is not stated."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/cerebrium",
+    "https://cerebrium.ai/pricing",
+    "https://cerebrium.ai/docs/hardware/cpu-and-memory",
+    "https://cerebrium.ai/docs/llms-full.txt",
+    "https://cerebrium.ai/",
+    "https://cerebrium.ai/docs/getting-started/introduction",
+    "https://cerebrium.ai/llms.txt",
+    "https://www.cerebrium.ai/pricing",
+    "https://cerebrium.ai/docs/hardware/cpu-and-memory.md",
+    "https://docs.cerebrium.ai/llms.txt"
+  ],
+  "fleet": {
+    "default_max_instances": 500,
+    "default_max_vcpu": null,
+    "default_max_gpus": 5,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Hobby: 500 CPU containers, 5 concurrent GPUs, 3 deployed apps. Standard: 1,000 CPU containers, 30 GPU concurrency. Enterprise custom/unlimited advertised.",
+    "notes": "Instance field is CPU-container concurrency, not 500 GPU machines. Public plan ceilings do not reserve stock; new-account payment/KYC checks and approval time not specified.",
+    "sources": [
+      "https://cerebrium.ai/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 21,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 17
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/performance/checkpointing.md",
+      "quote": "Ephemeral filesystem: Any files written to disk before the checkpoint are not copied to the restored container. Only memory is checkpointed.",
+      "note": "Serverless containers are stateless: scale-down after `cooldown` sends SIGTERM then SIGKILL (scaling-apps) with no state saved. The only checkpoint is the explicit, app-triggered one below; nothing is saved automatically on stop/idle.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/performance/checkpointing.md",
+      "quote": "Memory checkpointing takes a snapshot of a container's CPU memory and GPU memory, and uses it to speed up the startup of future containers.",
+      "note": "Early beta, opt-in via `[cerebrium.experimental] checkpointing = true`. Triggered by the app itself with a POST to the in-container sidecar http://169.254.169.253:8234/checkpoint (no external API/CLI). CPU+GPU memory included, filesystem NOT included; one checkpoint per build version ('skips checkpoint creation if: A checkpoint already exists for the current build version'); all later containers of that deployment restore from it (a cold-start template, not a user-managed fork/restore of a specific container).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cerebrium.ai/llms.txt",
+      "quote": "Cerebrium is serverless GPU infrastructure for real-time AI — voice agents, video models, LLMs, and custom ML apps. Sub-second cold starts, pay-per-second billing, no Kubernetes.",
+      "note": "Cerebrium is a serverless GPU inference platform for deploying your own Python/container workloads (voice, video, LLM, ML), not a coding-agent sandbox product. No coding-harness (Claude Code/Codex/OpenCode) API exists anywhere in docs, llms.txt, or the site; the only agent-adjacent content is a blog post on sandboxing agent-generated code, not a first-party harness-driving API. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/toml-reference/toml-reference.md",
+      "quote": "`disable_auth` defaults to `true`, so omitting it leaves app endpoints callable without a token. Set `disable_auth = false` to require the JWT token",
+      "note": "Endpoints are public by default; per-app toggle to require a JWT bearer token. Functions prefixed with '_' are not exposed ('unless marked private by prefixing the function name with an underscore', inference-api). Custom runtime exposes one configured `port`. Inter-cluster routing keeps app-to-app traffic in-region, still authenticated unless auth disabled. No IP allowlists documented.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/other-topics/using-secrets.md",
+      "quote": "Each secret is exposed to the app as an environment variable.",
+      "note": "Project- or app-level secrets, AES-256 at rest, loaded as env vars at container start (restart needed after change). No credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/storage/managing-files.md",
+      "quote": "Cerebrium offers file management through a persistent volume that's available to all apps in a project. This storage mounts at `/persistent-storage`",
+      "note": "Not arbitrary attachable volumes: one default volume per region per project (id `default-<region>`), resizable 50 GB-1 TB via dashboard/API (no shrink); global apps also get a fixed 1 TB /global-persistent-storage. Pricing: first 100 GB free then $0.05/GB-month (card).",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/storage/managing-files.md",
+      "quote": "It is a single volume shared across every region the app runs in: files written there are visible from all regions, and reads are cached per region.",
+      "note": "Read-write. The regional /persistent-storage is mounted by all apps/containers of the project at once; the global volume is shared across regions. Consistency/locking semantics not documented.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "container",
+      "source": "https://cerebrium.ai/docs/container-images/custom-dockerfiles",
+      "quote": "Cerebrium supports deploying existing containerized apps — from standard Python apps to compiled Rust binaries — using a custom Dockerfile.",
+      "note": "Serverless container platform; deployments are Docker containers scheduled on shared GPU/CPU nodes, not per-customer VMs. Matches card's existing isolation value.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/container-images/custom-dockerfiles",
+      "quote": "Cerebrium supports deploying existing containerized apps ... using a custom Dockerfile. This allows portable, locally reproducible deployment environments.",
+      "note": "Custom Dockerfile / custom base image (docker_base_image_url) and private registry (Docker Hub, ECR) support.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/container-images/custom-dockerfiles",
+      "quote": "Cerebrium uses a single cerebrium.toml file. The system handles container lifecycle, networking, and scaling automatically.",
+      "note": "not offered: outside the product's scope — apps run as a single managed container (built from your Dockerfile); no documented ability to run Docker-in-Docker or start further containers inside the running app.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/container-images/custom-dockerfiles",
+      "quote": "Cerebrium supports deploying existing containerized apps — from standard Python apps to compiled Rust binaries.",
+      "note": "not offered: outside the product's scope — a shared-kernel serverless container platform for Python/custom-runtime inference apps; no /dev/kvm or nested-VM capability is documented.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — a serverless inference/API platform, not a desktop/GUI product.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — no managed/real browser product; docs only cover an example blog post on sandboxing agent code, not a browser feature.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — no screenshot/click desktop-driving API; platform exposes REST/WebSocket endpoints for user-authored inference functions only.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — an ML inference/compute platform, not a browser-automation/scraping product.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving feature documented; not a browser/scraping product.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "Containers run on Cerebrium's own cloud/GPU node fleet; outbound traffic is standard cloud-datacenter IPs. No residential/mobile proxy or static egress IP product documented.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/container-images/custom-dockerfiles",
+      "quote": "Cerebrium uses a single cerebrium.toml file. The system handles container lifecycle, networking, and scaling automatically based on this configuration.",
+      "note": "not offered: outside the product's scope — a fully managed serverless container platform; no SSH access into running containers is documented anywhere in the docs/CLI reference.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "mem",
+      "source": "https://cerebrium.ai/docs/performance/checkpointing",
+      "quote": "Memory checkpointing takes a snapshot of a container's CPU memory and GPU memory, and uses it to speed up the startup of future containers.",
+      "note": "Early-beta, opt-in, app-triggered checkpoint of CPU+GPU memory (not filesystem) used to seed future cold starts of the same build — not a general user-directed snapshot/restore of a specific running container.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/performance/checkpointing",
+      "quote": "Only memory is checkpointed ... uses it to speed up the startup of future containers.",
+      "note": "not offered: no documented ability to clone a running machine into a new independent machine on demand; the checkpoint feature seeds future cold starts of the same deployment, not user-directed forking.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/performance/checkpointing",
+      "quote": "Memory checkpointing takes a snapshot of a container's CPU memory and GPU memory, and uses it to speed up the startup of future containers.",
+      "note": "not offered: no API/CLI to fork a currently running container without stopping it.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/performance/checkpointing",
+      "quote": "Memory checkpointing takes a snapshot of a container's CPU memory and GPU memory, and uses it to speed up the startup of future containers.",
+      "note": "not offered as a fork primitive: the memory checkpoint speeds up cold starts of new containers of the same build; it is not exposed as 'clone this running machine, memory and all, into a new independent one'.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — serverless containers scale to zero and cold-start again; there is no user-facing pause/resume of a specific running instance, only autoscaling (min_replicas/cooldown).",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/llms-full.txt",
+      "quote": "A request enters through the region closest to where it is made, then routes to a region with a warm instance before a cold start is triggered elsewhere.",
+      "note": "Core serverless model: scaled-to-zero apps cold-start automatically on an incoming request.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/storage/managing-files",
+      "quote": "Cerebrium offers file management through a persistent volume that's available to all apps in a project. This storage mounts at `/persistent-storage`",
+      "note": "Persistent volume(s) per project/region survive container restarts/redeploys; container root filesystem itself is ephemeral per the checkpointing docs.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/hardware/cpu-and-memory",
+      "quote": "CPU resources are specified as vCPU units (float) in the `cerebrium.toml` file",
+      "note": "not offered: vCPU/RAM/GPU are set in the app's cerebrium.toml config and applied via redeploy/rebuild; no documented API to resize CPU/RAM of an already-running container in place.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — no preinstalled/templated coding-agent harnesses (Claude Code, Codex, OpenCode); templates in docs are for ML inference/voice-agent apps.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — Cerebrium runs customer-authored inference/agent code; it does not ship its own first-party browser/computer-use/research agent product.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: no MCP server for controlling Cerebrium sandboxes found in docs/llms-full.txt or GitHub org.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/llms-full.txt",
+      "quote": "The Python runtime version forms the foundation of every Cerebrium app. Supported versions: 3.10 to 3.13.",
+      "note": "Python is the primary first-party runtime with its own dependency management in cerebrium.toml.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/container-images/custom-dockerfiles",
+      "quote": "Cerebrium supports deploying existing containerized apps — from standard Python apps to compiled Rust binaries — using a custom Dockerfile.",
+      "note": "No first-party Node.js runtime/SDK; Node (or any other language) apps are only reachable indirectly via a custom Dockerfile/custom runtime, same as Rust — not offered out of the box.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/toml-reference/toml-reference",
+      "quote": "`disable_auth` defaults to `true`, so omitting it leaves app endpoints callable without a token.",
+      "note": "Apps are reached via Cerebrium-issued HTTPS endpoints/custom domains (inbound_https=true in card), not a dedicated public IPv4 per machine; no per-container IPv4 documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "No provider-side outbound allow/deny list or no-internet mode documented anywhere in docs/llms-full.txt or toml-reference.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: no HTTP method/path-level egress rules documented; egress_allowlist itself is not offered.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/container-images/custom-dockerfiles",
+      "quote": "Cerebrium supports deploying existing containerized apps — from standard Python apps to compiled Rust binaries.",
+      "note": "Deployments run as containers on a shared-kernel serverless platform, not full VMs/microVMs with root; no iptables/nftables-in-guest capability documented, and root/sudo access is not exposed.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "No fixed/static outbound IP product documented.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — Linux-only container runtime (Windows is only an OS for the local CLI tool, not a machine you deploy to).",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — Linux-only container runtime (macOS is only supported for installing the local CLI via Homebrew, not as a machine OS).",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://cerebrium.ai/docs/container-images/private-docker-registry",
+      "quote": "Your Docker images MUST support `linux/amd64` architecture. This is required",
+      "note": "Platform requires linux/amd64 images; no ARM64 machine option offered.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: outside the product's scope — Cerebrium is a hosted managed cloud platform; no self-hosted/on-prem deployment of the Cerebrium engine is documented for customers.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cerebrium.ai/pricing",
+      "quote": "Deploy AI infrastructure that scales automatically ... serverless GPU compute for inference and training.",
+      "note": "not offered: no documented option to deploy the managed Cerebrium service into a customer's own cloud account.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://github.com/CerebriumAI/cerebrium",
+      "quote": "CerebriumAI/cerebrium — releases include the Cerebrium CLI binaries (cerebrium_linux_amd64.deb, cerebrium_cli_windows_amd64.zip).",
+      "note": "The public CerebriumAI GitHub org ships the CLI and example apps, but the core serverless engine/platform itself is closed-source and proprietary.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://cerebrium.ai/docs/llms-full.txt",
+      "quote": "Use `protected` for production services with strict availability requirements or long-running requests where interruption would be costly.",
+      "note": "No documented maximum wall-clock duration for a running container/request; interruptible instances can be preempted/consolidated but protected instances are designed to run indefinitely (min_replicas keeps instances warm 24/7). No fixed hour cap found.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.cerebrium.ai/pricing",
+      "quote": "Detailed Plan Comparison Hobby Standard Enterprise ... Seats 3 10 Custom ... SOC2 compliance ... HIPPA, GDPR, ISO 27001 ... Dedicated Slack support White glove onboarding ML engineering services",
+      "note": "The pricing page's detailed Hobby/Standard/Enterprise comparison table lists seats, log retention, SOC2/HIPAA/GDPR/ISO27001, domains, concurrency and support tiers but has no SSO/SAML/OIDC line item anywhere, even for Enterprise; the security & data privacy docs page (SOC2, HIPAA, GDPR, ISO, MFA, Vanta) and the trust center also do not mention SSO. No first-party page advertises SAML/OIDC single sign-on for the Cerebrium dashboard.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cerebrium.ai/docs/api-reference/apps/get-an-apps-request-and-cost-breakdown-over-time",
+      "quote": "How much traffic an app served and what it cost to run, over a chosen period. Requests are counted per time bucket and split by response status (2xx/4xx/5xx, normal and error WebSocket closes, and anything else); cost is split across GPU, CPU and memory.",
+      "note": "granularity: per-app; cost: yes; GET /v2/projects/{project_id}/apps/{app_id}/dashboard-metrics endpoint returns billable usage (cost breakdown by GPU/CPU/memory) over time per app. Also GET /v2/projects/{project_id}/apps/{app_id}/cost for cost summary per app, and GET /v2/projects/{project_id}/cost for project-level cost.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MO",
+      "city": "Kansas City",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "eu-north-1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Helsinki",
+      "provider_region": "eu-north1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west-2",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west-2",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "ap-south-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "ap-northeast-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "sa-east-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montreal",
+      "provider_region": "ca-central-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Dubai",
+      "provider_region": "me-central-1",
+      "self_serve": false,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://cerebrium.ai/docs/deployments/multi-region-deployment",
+  "locations_quote": "us-east-1 (N. Virginia), us-central1 (Kansas City), eu-north-1 (Stockholm), eu-north1 (Finland) are generally available. Contact support to enable access to us-west-2 (Oregon), eu-west-2 (United Kingdom), eu-central-1 (Frankfurt), ap-south-1 (Mumbai), ap-northeast-1 (Tokyo), sa-east-1 (São Paulo), c",
+  "locations_checked": "2026-10-01"
+}

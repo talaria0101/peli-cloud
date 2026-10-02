@@ -1,0 +1,1041 @@
+{
+  "id": "ona",
+  "name": "Ona (formerly Gitpod)",
+  "url": "https://ona.com/pricing",
+  "category": "dev-env",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Ona Cloud (Core), Standard 4 vCPU / 16 GB = 1 OCU/h",
+      "flags": [],
+      "plans": [
+        "Core $20 (80 OCU)",
+        "Core $50 (200 OCU)",
+        "Core $100 (400 OCU)",
+        "Core $200 (800 OCU)",
+        "Core $500 (2,200 OCU)"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": false,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 16,
+      "sizes": [
+        {
+          "name": "Standard (4 vCPU / 16 GB, 1 OCU/h)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.25,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "OCUs are prepaid via the Core subscription (monthly OCUs expire, no rollover) and top-ups ($10 / 40 OCU, valid 1 year). $0.25/OCU on every tier except $500/month (2,200 OCU = $0.2273/OCU), modelled as that plan's included_usd.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "OCUs are consumed while the environment is running, by class size (1 OCU/h for 4 vCPU/16 GB). Only this class and the 16/64 GPU VM have a published OCU rate. Core allows up to 32 vCPU / 128 GB / 200 GB disk, but the OCU rates for the larger (and smaller) classes are not published, so they are left out. Billing granularity and minimum are not published. Auto-stop defaults to 30 min without IDE, SSH or agent activity. Background processes and port traffic do NOT count as activity. Verified 2026-09-28: 'Running a regular VM (4vCPUs / 16GB RAM) for one hour: 1 OCU' (ona.com/pricing FAQ); OCUs consumed 'while environments are running, based on size' (ona.com/docs/ona/billing/usage) = allocation, CPU use irrelevant; 'new environments use a 30-minute auto-stop timeout' (docs .../policies/environment-timeout).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "on-demand-gpu",
+      "label": "Ona Cloud (Core) GPU VM, 16 vCPU / 64 GB = 7 OCU/h",
+      "flags": [],
+      "plans": [
+        "Core $20 (80 OCU)",
+        "Core $50 (200 OCU)",
+        "Core $100 (400 OCU)",
+        "Core $200 (800 OCU)",
+        "Core $500 (2,200 OCU)"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu"
+      ],
+      "gpu_only": true,
+      "features": {
+        "isolation": "vm"
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes": [
+        {
+          "name": "GPU / Data Science VM (16 vCPU / 64 GB / 300 GB, 7 OCU/h)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 300,
+          "hour": 1.75,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Same OCU prepay mechanics as the Standard class.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "7 OCU/h × $0.25 = $1.75/h, GPU included in the size price. Ona does not name the GPU model for Ona Cloud. The matching AWS-runner class (g5.4xlarge, 16/64/300 GB) is 1× NVIDIA A10G 24 GB, so A10G is likely but unconfirmed. There is one GPU per VM, and there is no multi-GPU option on Core.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "enterprise-self-hosted-aws",
+      "label": "Enterprise runner in own AWS VPC (customer pays EC2 on-demand)",
+      "flags": [
+        "sales",
+        "alt"
+      ],
+      "plans": [
+        "Enterprise (AWS Marketplace 12-month contract)"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": false,
+      "features": {
+        "custom_domain": true,
+        "private_network": true,
+        "sso": true,
+        "isolation": "vm",
+        "audit_logs": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "sizes": [
+        {
+          "name": "Small (m6i.large)",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 45,
+          "hour": 0.096,
+          "month_cap": null
+        },
+        {
+          "name": "Regular (m6i.xlarge)",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 80,
+          "hour": 0.192,
+          "month_cap": null
+        },
+        {
+          "name": "Large (m6i.2xlarge)",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 100,
+          "hour": 0.384,
+          "month_cap": null
+        },
+        {
+          "name": "Extra Large (m6i.8xlarge)",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 200,
+          "hour": 1.536,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Requires an Ona Enterprise contract. AWS Marketplace lists 12 months at $60,000 TCV per unit (unit undefined), non-refundable, with private offers available. See the Enterprise plan.",
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Hourly prices are AWS us-east-1 on-demand Linux EC2 list prices (taken from the instances.vantage.sh mirror, third-party). Ona does not publish them. The customer's AWS account bills them, along with EBS disk (45-200 GB per class, billed while the environment exists, including when stopped) and base-snapshot builds and storage. Runner baseline infrastructure is under $8/month (Ona docs). EC2 per-second billing with a 60 s minimum is AWS's standard Linux policy. Custom classes accept any x64 EBS-backed instance type (no Graviton). GCP runners also exist, at GCE prices (not encoded).",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "enterprise-self-hosted-aws-gpu",
+      "label": "Enterprise runner in own AWS VPC, GPU Large (g5.4xlarge, 1× A10G)",
+      "flags": [
+        "sales",
+        "alt"
+      ],
+      "plans": [
+        "Enterprise (AWS Marketplace 12-month contract)"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "gpu_only": true,
+      "features": {
+        "isolation": "vm",
+        "sso": true,
+        "private_network": true,
+        "custom_domain": true,
+        "audit_logs": true
+      },
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 16,
+      "max_ram_gib": 64,
+      "sizes": [
+        {
+          "name": "GPU Large (g5.4xlarge, 1× A10G 24 GB)",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 300,
+          "hour": 1.624,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Requires an Ona Enterprise contract (see plans).",
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "AWS us-east-1 on-demand Linux list price from the instances.vantage.sh mirror (third-party), billed to the customer's AWS account. A GPU Large Spot class also exists at the variable AWS spot price (not encoded). On spot reclamation the environment is re-provisioned and its EBS volume reattached.",
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Core $20 (80 OCU)",
+      "fee": 20,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "sizes_allowed": null,
+      "note": "80 OCU/month at $0.25/OCU. Monthly OCUs expire with no rollover. Up to 100 members at no per-seat cost, unlimited parallel environments, 50 automations (10 parallel actions). Overage is prepaid top-ups at $0.25/OCU (valid 1 year) or auto top-up when the balance drops below 20 OCU. The tier can't be changed after subscribing (cancel and resubscribe instead). OCUs are also spent on Ona agent LLM tokens, but not on a connected Codex or ChatGPT plan."
+    },
+    {
+      "name": "Core $50 (200 OCU)",
+      "fee": 50,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "sizes_allowed": null,
+      "note": "200 OCU/month ($0.25/OCU). Otherwise the same as Core $20."
+    },
+    {
+      "name": "Core $100 (400 OCU)",
+      "fee": 100,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "sizes_allowed": null,
+      "note": "400 OCU/month ($0.25/OCU). Otherwise the same as Core $20."
+    },
+    {
+      "name": "Core $200 (800 OCU)",
+      "fee": 200,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "sizes_allowed": null,
+      "note": "800 OCU/month ($0.25/OCU). Otherwise the same as Core $20."
+    },
+    {
+      "name": "Core $500 (2,200 OCU)",
+      "fee": 500,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 50,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 128,
+      "sizes_allowed": null,
+      "note": "2,200 OCU/month for $500, marketed as '10% more monthly OCUs' ($0.2273/OCU). Valued at the $0.25 mode rate that is $550 of usage, so the card uses fee $500 as credit plus $50 included. Top-ups beyond that cost $0.25/OCU."
+    },
+    {
+      "name": "Enterprise (AWS Marketplace 12-month contract)",
+      "fee": 5000,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "AWS Marketplace listing (vendor-authored): 12-month contract, $60,000 Total Contract Value = $5,000/month equivalent, for one unit whose definition is unstated. Non-cancellable and non-refundable. Compute is NOT included: environments run on the customer's AWS or GCP bill. Includes 'custom credits' for agents, but what they cover is unpublished. Custom pricing is also available via private offer or sales. Adds SSO/OIDC, audit logs, warm pools, API/SDK access, 25 parallel automation actions and custom archive/delete policies."
+    },
+    {
+      "name": "Free (legacy)",
+      "fee": 0,
+      "flags": [
+        "legacy"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": 0,
+      "concurrency": 3,
+      "max_session_h": null,
+      "max_vcpu": 4,
+      "max_ram_gib": 16,
+      "sizes_allowed": null,
+      "note": "Described in Ona's 2025 migration story: up to 3 parallel environments, up to 4 vCPU/16 GB. A third-party source (Substack, 2025-09-26) reports $10 of free credit. The current pricing page doesn't list it, and the billing docs say new self-serve orgs start on Core. Treat as discontinued."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "A10G"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": false,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": true,
+    "audit_logs": false,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": false,
+    "isolation": "vm",
+    "image_oci": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "volume_shared": false,
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [
+    {
+      "id": "idle_tail",
+      "label": "Extra running time from auto-stop idle tail",
+      "kind": "select",
+      "min": null,
+      "max": null,
+      "step": null,
+      "default": 1,
+      "unit": null,
+      "options": [
+        {
+          "value": 1,
+          "label": "Stopped explicitly (no idle tail)"
+        },
+        {
+          "value": 1.073,
+          "label": "Default 30-min auto-stop (≈35 min in practice) after 8 h session (×1.073)"
+        },
+        {
+          "value": 1.125,
+          "label": "1 h auto-stop after 8 h session (×1.125)"
+        },
+        {
+          "value": 1.375,
+          "label": "3 h auto-stop after 8 h session (×1.375)"
+        },
+        {
+          "value": 2,
+          "label": "8 h auto-stop after 8 h session (×2)"
+        }
+      ],
+      "effect": "hours_factor",
+      "modes": [
+        "on-demand",
+        "on-demand-gpu"
+      ],
+      "why": "OCUs are billed while the environment runs, and auto-stop only fires after the timeout (30 min default; 1 h, 3 h, 8 h or Never are also selectable). Background processes, port traffic and CPU load don't count as activity, but open SSH sessions, IDE interaction and agent sessions do."
+    },
+    {
+      "id": "agent_ocu_overhead",
+      "label": "Ona agent LLM usage drawn from the same OCU pool",
+      "kind": "select",
+      "min": null,
+      "max": null,
+      "step": null,
+      "default": 1,
+      "unit": null,
+      "options": [
+        {
+          "value": 1,
+          "label": "None (own agent: Claude Code / connected Codex plan)"
+        },
+        {
+          "value": 1.5,
+          "label": "Light Ona-agent use (+50% OCUs)"
+        },
+        {
+          "value": 2,
+          "label": "Heavy Ona-agent use (+100% OCUs)"
+        },
+        {
+          "value": 4,
+          "label": "Agent-dominated (+300% OCUs)"
+        }
+      ],
+      "effect": "rate_factor",
+      "modes": [
+        "on-demand",
+        "on-demand-gpu"
+      ],
+      "why": "OCUs pay for both environment runtime and Ona-agent tokens. Official examples run 1-8 OCU per task, against 1 OCU per Standard env-hour. The multipliers are user scenarios, not published figures."
+    }
+  ],
+  "caveats": [
+    "OCU rates are published for only two classes: Standard 4 vCPU/16 GB = 1 OCU/h and GPU 16 vCPU/64 GB = 7 OCU/h. Core supports up to 32 vCPU/128 GB/200 GB, but the OCU rates for other classes are unpublished. A 2025 Ona story quoted 2 vCPU/8 GB at $0.11/h and 4/16 at $0.23/h under earlier pricing (superseded).",
+    "OCU price: $0.25 on the $20-$200 tiers and for top-ups (from $10 / 40 OCU); $0.2273 on the $500/2,200-OCU tier. Monthly OCUs expire; top-ups last 1 year but expire if the subscription ends.",
+    "OCUs also pay for Ona agent LLM tokens, from about 1 OCU (explain a small codebase) to 8 OCU (add a feature). A connected Codex/ChatGPT plan is not charged OCUs, and Claude Code usage is billed by Anthropic.",
+    "Billing granularity and per-start minimum for Ona Cloud are unpublished (null).",
+    "Stopped/archived storage: the pricing FAQ says inactive environments 'generate storage costs based on VM disk size', but the usage docs only list OCU consumption while running. No storage OCU rate is published (null). Core archives stopped environments after 3 days and deletes them 4 days later (7 days in total), so long-lived stopped state is impossible on Core.",
+    "Per-class disk size on Ona Cloud is unpublished (included_disk_gib null). The Core maximum is 200 GB, and 300 GB for the GPU VM.",
+    "Egress pricing is unpublished (null). There is no public IPv4 per environment; ports are exposed via TLS URLs.",
+    "Programmatic API/SDK access is Enterprise-only per the pricing comparison, which limits Core as an API sandbox backend.",
+    "The Enterprise fee ($60,000/12 months) comes from vendor listings on AWS Marketplace, not ona.com. It is for one 'unit' whose definition is unpublished, and private offers vary. Enterprise-mode hourly prices are AWS EC2 list prices (via the third-party instances.vantage.sh mirror) paid to AWS, not to Ona. EBS, snapshot and GCP costs are not encoded.",
+    "Failed payment: 7-day grace, then the account is locked and remaining Core credits are forfeited.",
+    "No perf benchmark data for Ona in this research set.",
+    "Ona is now part of OpenAI (site banner). Watch for pricing changes.",
+    "Mode-plan coupling (verifier 2026-09-28): Ona Cloud modes are sold only on Core plans, self-hosted AWS modes only on Enterprise (mode.plans). Without this, with sales+alt opted in, the engine could price customer-paid EC2 under a $20 Core plan and skip the Enterprise contract fee.",
+    "Per-tier OCU amounts ($50/200, $100/400, $200/800, $500/2,200) are rendered client-side on ona.com/pricing and were not re-verifiable from static HTML on 2026-09-28; the page confirms '80 - 2,200 OCUs (monthly recurring)', 'from $10 / 40 OCUs' and Core 'from $20/month'.",
+    "Auto-stop (fix 2026-09-28): new environments auto-stop after 30 min without activity by default; only SSH sessions, IDE use, running agents and CLI keep-alives count, background processes (builds, servers, cron) do NOT. Org policy can set the max to 30 min/1 h/3 h/8 h/none; auto-stop can be disabled (\"Never\"/0s). An always-on devloop box needs auto-stop disabled or it stops.",
+    "Boot time of an Ona Cloud environment is not published (boot_overhead_s left null); category stays dev-env (a cloud dev environment, not a sandbox API; Core has no API/SDK access).",
+    "Prebuild snapshots on Ona Cloud are free for now ('this may change'); prebuild environment runtime is billed as normal OCU usage; prebuilds are deleted after 5 days. On Enterprise the customer pays EBS snapshot storage for actual data stored; Ona's warm-pool doc estimates gp3 EBS at roughly $0.08/GB-month and confirms EC2 class costs (~$70 / $140 / $280 per running month for Small/Regular/Large), matching the card's $0.096/$0.192/$0.384 per hour.",
+    "OpenAI acquisition closed on 2026-08-10 (Ona is now part of OpenAI, Codex team). No pricing change announced as of 2026-09-29.",
+    "Ona also meters Enterprise environment runtime in its own credits (usage type USAGE_TYPE_ENVIRONMENT alongside USAGE_TYPE_AGENTIC), and base-snapshot builds are metered as normal environment usage (warm pools consume no credits). The credit rate per environment-hour is unpublished, so the enterprise modes (EC2 price only) may understate the Ona-side cost.",
+    "Per-user environment caps exist as an org policy: 'Maximum concurrent' running environments per user and 'Maximum total' (running or stopped), defaults 10 concurrent / 50 total, configurable 1-100. The policy page does not say whether the defaults are enforced on Core (the policies overview says most policies require Enterprise). Core is marketed as 'Unlimited parallel environments' org-wide, but a single-user/service-account agent workload may hit 10 concurrent."
+  ],
+  "sources": [
+    "https://ona.com/pricing",
+    "https://ona.com/docs/ona/billing/usage",
+    "https://ona.com/docs/ona/billing/overview",
+    "https://ona.com/docs/ona/organizations/policies/environment-timeout",
+    "https://ona.com/docs/ona/environments/archive-auto-delete",
+    "https://ona.com/docs/ona/runners/ona-cloud",
+    "https://ona.com/docs/ona/runners/aws/environment-classes",
+    "https://ona.com/docs/ona/runners/aws/aws-runner-costs",
+    "https://ona.com/stories/migrating-from-classic-to-ona",
+    "https://aws.amazon.com/marketplace/pp/prodview-752jqvg74yo7k",
+    "https://aws.amazon.com/marketplace/pp/prodview-vn4wpn7u4afrq",
+    "https://instances.vantage.sh/aws/ec2/m6i.xlarge",
+    "https://thefridaydeploy.substack.com/p/coding-on-the-subway-with-ona-formerly"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "Core subscription signup includes payment details; additional identity checks not specified.",
+    "tiers": "Current Core advertises unlimited parallel environments; Enterprise custom/BYOC. Legacy free 3-concurrency offer not used as current default.",
+    "notes": "Unlimited is a plan description, not numeric reserved fleet capacity. Parallel agent action limits (10 Core/25 Enterprise) are separate from environment count. BYOC also subject to customer AWS/GCP resource quotas; no documented general fleet approval turnaround.",
+    "sources": [
+      "https://ona.com/pricing",
+      "https://ona.com/docs/ona/billing/overview",
+      "https://ona.com/docs/ona/runners/aws/environment-classes"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 3,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 9
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/environments/persistent-storage",
+      "quote": "Ona environments use persistent storage attached to the underlying VM. Everything on disk persists across environment stops and starts.",
+      "note": "Stop keeps the disk (persistent_disk), no memory/process checkpoint is documented. Core archives stopped envs after 3 days and deletes 4 days later. Enterprise 'dual disk' runners may detach the data disk on long stops and 'restore from a provider backup, such as an image or snapshot' (https://ona.com/docs/ona/runners/dual-disk): an internal disk-persistence mechanism, not a state snapshot.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/projects/prebuilds",
+      "quote": "A prebuild starts on schedule or manual trigger ... Ona snapshots the Dev Container filesystem. New environments start from this snapshot",
+      "note": "Not a contradiction: features.snapshot='fs' describes the filesystem-only mechanism used by prebuilds/persistent storage, not a user-triggerable on-demand snapshot API. The Environments API only exposes create/start/stop/archive/update/delete; no snapshot/checkpoint call exists for a user's running or stopped environment. Prebuilds are the closest analog (build-time filesystem snapshot of a fresh temp env from Dev Container config), not an on-demand snapshot of an arbitrary running environment.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://ona.com/docs/ona/integrations/sdk",
+      "quote": "Use the Ona SDK to create and manage environments, run commands, access files, and start Codex agents from Python, TypeScript, or Go.",
+      "note": "Enterprise plan only (SDK page: 'Available on the Enterprise plan'). Agents API: StartAgent, SendToAgentExecution ('Sends user input to an active agent run'), List/Get/Stop/Delete AgentExecution, conversation tokens; WatchEvents streams. Harness = Codex (open-source Codex harness, GPT-6 Sol/Luna); legacy Ona Agent deprecated. Claude Code is not a managed harness (can be installed and used via SSH/CLI). Also Slack, GitHub PR @ona-agent mentions and Automations as triggers.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://ona.com/docs/ona/integrations/ports",
+      "quote": "By default, the CLI opens the port for the environment creator only.",
+      "note": "Ports are opened explicitly; per-port admission levels creator_only / organization / everyone, org policy can cap the maximum admission level; port access tokens via API. HTTPS URLs only, no raw TCP/public IP. Enterprise runners additionally sit behind the customer's NLB/network config.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://ona.com/docs/ona/integrations/ports",
+      "quote": "Use kernel-level NAT to redirect incoming traffic to the loopback address. This is already available in the environment and lets you keep the same port number.",
+      "note": "Docs show 'sudo iptables -t nat -A PREROUTING ...' working inside the environment; environments are full VMs with root (Ubuntu VM, own kernel).",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/configuration/secrets/overview",
+      "quote": "Secrets securely store and inject sensitive data into your environments - API keys, access tokens, credentials, and certificates that shouldn't be in source code.",
+      "note": "Secrets (org/project/user/service-account) are injected as environment variables or files (and registry creds, BuildKit secret mounts). Alternative: OIDC tokens exchanged for short-lived cloud credentials ('eliminates static secrets'), still inside the env. Model access for Codex is Ona-managed or a runner-level LLM integration (API key stored in runner config); whether any key reaches the env is not documented, so not counted as ai-only.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/environments/persistent-storage",
+      "quote": "Storage size is configured through environment classes.",
+      "note": "No user-attachable extra volumes documented. Enterprise 'dual disk' splits system and data disk, but both are runner-managed per-environment disks, not attachable volumes.",
+      "checked": "2026-09-29"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/runners/aws/environment-classes",
+      "quote": "Small (m6i.large), Regular (m6i.xlarge), Large (m6i.2xlarge), Extra Large (m6i.8xlarge)",
+      "note": "derived: environments run as standard AWS EC2 instance types (m6i / g5 families) or the equivalent Ona Cloud VM sizes; these are not bare-metal/metal instance types and nested virtualization (/dev/kvm passthrough) is not documented anywhere in Ona's docs.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://ona.com/pricing",
+      "quote": "Ona is the platform for background agents — autonomous AI software engineers that plan, code, test, and open PRs in isolated cloud environments.",
+      "note": "not offered: outside the product's scope (a cloud dev environment / coding-agent runner, not a browser-automation/scraping product).",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://ona.com/pricing",
+      "quote": "Ona is the platform for background agents — autonomous AI software engineers that plan, code, test, and open PRs in isolated cloud environments.",
+      "note": "not offered: outside the product's scope (a cloud dev environment / coding-agent runner, not a browser-automation/CAPTCHA-solving product).",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://ona.com/docs/ona/runners/aws/networking",
+      "quote": "The AWS runner runs as a Fargate service in your VPC... Each Fargate task gets its own elastic network interface (ENI) in your subnets",
+      "note": "derived: Ona Cloud and Enterprise runners execute on standard AWS/GCP cloud VM infrastructure, so outbound traffic originates from ordinary datacenter IP ranges (AWS/GCP), not residential or mobile. No dedicated/static outbound IP product is documented.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/organizations/policies/environment-timeout",
+      "quote": "Set the maximum auto-stop timeout to 30 minutes, 1 hour, 3 hours, 8 hours, or No max timeout.",
+      "note": "not offered: stopped/archived environments must be explicitly started again via the UI, CLI (`ona environment start`), or API; no documentation describes a stopped environment automatically waking when an inbound HTTP/port request arrives.",
+      "checked": "2026-09-30"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/environments/persistent-storage",
+      "quote": "Ona environments use persistent storage attached to the underlying VM. Everything on disk persists across environment stops and starts.",
+      "note": "Storage is a disk attached to a single environment's VM (sized via environment classes); there is no documented way to mount one volume across multiple simultaneously-running environments.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://ona.com/docs/api-reference/generated/environment/update-environment",
+      "quote": "Note: Machine class changes require stopping the environment and creating a new one.",
+      "note": "Explicitly documented: changing vCPU/RAM (environment class) requires stopping and recreating the environment, not a live resize of a running machine.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/agents/overview",
+      "quote": "Ona Agent is deprecated. Use Codex Agent for all new environments and automations. Ona Agent and Ona-managed Anthropic model access are no longer available on Ona Cloud.",
+      "note": "Ona's own proprietary task agent (\"Ona Agent\") is deprecated/retired; the current agent is OpenAI's Codex coding harness (already captured by harness_api). Ona has no separate own browser/computer-use/research agent API.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/mcp",
+      "quote": "There are two ways to add MCP servers to Ona: Custom organization integrations... Repo-local configuration... MCP servers run as separate processes in your environment and communicate over stdio or HTTP.",
+      "note": "Ona is an MCP client (agents inside Ona environments consume external MCP servers you configure). It does not ship its own MCP server for controlling Ona sandboxes/environments.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/organizations/policies/default-image",
+      "quote": "Enter a container image reference (e.g., `mcr.microsoft.com/devcontainers/base:2.0.4-noble`). If empty, uses system default.",
+      "note": "Environments run whatever Dev Container image the repo (or org default) specifies; the documented default/example base image is a generic Ubuntu devcontainer base without a Python runtime preinstalled. Users pick a language-specific template/devcontainer (e.g. Go, Python) themselves - not guaranteed out of the box.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/organizations/policies/default-image",
+      "quote": "Enter a container image reference (e.g., `mcr.microsoft.com/devcontainers/base:2.0.4-noble`). If empty, uses system default.",
+      "note": "Same as lang_python: the generic example/default base image does not include Node.js; runtime availability depends on the project's own Dev Container configuration, not guaranteed out of the box.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://ona.com/docs/llms.txt",
+      "quote": "Port sharing policy: Control whether members can share ports from environments and how widely those ports can be accessed.",
+      "note": "Ona's organization policies cover inbound port sharing/admission, auto-stop, and similar controls, but no policy for outbound/egress allow-deny lists or no-internet mode is documented for Ona Cloud. (Enterprise AWS/GCP runner egress is governed by the customer's own VPC security groups, not an Ona-side feature.)",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://ona.com/docs/llms.txt",
+      "quote": "Port sharing policy: Control whether members can share ports from environments and how widely those ports can be accessed.",
+      "note": "No documented provider-side egress rule feature at the HTTP method/path level for Ona Cloud; existing policies only govern inbound port sharing, not outbound HTTP filtering.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/runners/aws/networking",
+      "quote": "Route traffic from private subnets to AWS service public endpoints via a NAT gateway in a public subnet... Assign a public IP directly to the Fargate task and route traffic through an internet gateway.",
+      "note": "No fixed/static outbound IP is documented for Ona Cloud environments; on the Enterprise self-hosted runner, outbound IP depends on the customer's own AWS NAT/IGW configuration, not a static IP Ona guarantees.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://ona.com/docs/ona/organizations/policies/environment-timeout",
+      "quote": "Set the maximum auto-stop timeout to 30 minutes, 1 hour, 3 hours, 8 hours, or No max timeout.",
+      "note": "Only an idle-inactivity auto-stop timeout is enforced (configurable, can be disabled/'Never'); there is no documented hard cap on how long a continuously-active environment/session may run.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://ona.com/docs/api-reference/generated/project/create-project-from-environment",
+      "quote": "Creates a new project using an existing environment as a template. Use this method to: Clone environment configurations; Create projects from templates; Share environment setups",
+      "note": "The only 'clone'-like API call creates a new PROJECT (a reusable devcontainer/config template) from an environment's configuration, not a new independent machine with the source's disk/process state. No API creates a second running or stopped environment that is a data/state copy of an existing one.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://ona.com/docs/api-reference/generated/project/create-project-from-environment",
+      "quote": "Creates a new project using an existing environment as a template.",
+      "note": "Follows directly from fork=false: since there is no machine-cloning primitive at all, there is no cloning of a RUNNING machine either. No mention anywhere in the API/docs of cloning a live environment without stopping it.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/environments/persistent-storage",
+      "quote": "Ona environments use persistent storage attached to the underlying VM. Everything on disk persists across environment stops and starts.",
+      "note": "Persistence is disk-only (no documented memory/process checkpoint anywhere), and there is no fork primitive at all (see fork=false), so a memory-inclusive fork is not offered.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/integrations/sdk",
+      "quote": "provides browser-based and desktop IDE options with full feature parity",
+      "note": "'Desktop' in Ona's marketing/docs means a native desktop IDE client (VS Code Desktop, JetBrains) connecting remotely over SSH, not a graphical desktop (VNC/RDP/pixel-streamed GUI) running inside the sandbox. No VNC/RDP/remote-desktop feature is documented for the environment itself; it is a dev-container VM meant for terminal/IDE/SSH access.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/integrations/sdk",
+      "quote": "Use the Ona SDK to create and manage environments, run commands, access files, and start Codex agents from Python, TypeScript, or Go.",
+      "note": "The SDK/Agents API exposes environment/command/file/agent-execution operations, not a screenshot+click GUI-driving API. There is no remote desktop in the product for a computer-use API to drive (see desktop=false).",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/environments/persistent-storage",
+      "quote": "Storage size is configured through environment classes.",
+      "note": "Disk size is fixed per environment class; no documented user-attachable extra/detachable volume. Enterprise 'dual disk' runners split system vs data disk, but both are runner-managed per-environment disks, not user-mountable volumes.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/integrations/ports",
+      "quote": "By default, the CLI opens the port for the environment creator only.",
+      "note": "Ports are exposed only via provider-managed HTTPS URLs (e.g. *.gitpod.io) with admission control, never a routable public IPv4 address on the environment. Matches network.ipv4_available=false already on the card.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/runners/aws/environment-classes",
+      "quote": "X64 architecture (Intel or AMD)",
+      "note": "Environment classes doc only discusses Linux VM instance types; no Windows environment OS is offered anywhere in the runner/environment docs. (The 'operatingSystem':['Web Browser','Linux','macOS','Windows'] schema.org tag on ona.com/pricing describes client platforms that can access Ona's web app, not the sandbox OS.)",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/runners/aws/environment-classes",
+      "quote": "X64 architecture (Intel or AMD)",
+      "note": "Same as windows: environments run on Linux VMs (AWS EC2 / Ona Cloud); no macOS environment/runner is documented. The pricing-page schema.org 'operatingSystem' list refers to client OSes for using the web app.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/runners/aws/environment-classes",
+      "quote": "ARM-based instance types (e.g., Graviton) are not currently supported.",
+      "note": "Explicit statement that ARM/Graviton instances are unsupported; only x64 (Intel/AMD) classes exist.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://ona.com/pricing",
+      "quote": "Compute Deployment: Ona Cloud (multi-tenant) | Self-hosted, Ona-managed VPC",
+      "note": "Enterprise's 'self-hosted' option is Ona-managed compute deployed into the customer's own VPC (BYOC), not the customer running the Ona platform itself on their own infrastructure. Matches byoc=true / self_host=false already on the card.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://ona.com/pricing",
+      "quote": "Compute Deployment: Ona Cloud (multi-tenant) | Self-hosted, Ona-managed VPC",
+      "note": "Ona (formerly Gitpod's SaaS successor) is offered only as a hosted/managed product (Core or Enterprise BYOC); the current Ona platform is not distributed as an OSI-licensed open-source project (the legacy 'Gitpod Classic' self-hosted OSS product was sunset 2025-10-15, and the pricing/plan pages show no OSS/self-host distribution today).",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://trust.ona.com",
+      "quote": "SOC 2 ... GDPR",
+      "note": "Ona's public trust center lists SOC 2 and GDPR compliance artifacts but no HIPAA/BAA program; no HIPAA mention found on the trust center, pricing, or docs pages.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://ona.com/pricing",
+      "quote": "SSO and OIDC identity and access controls",
+      "note": "The pricing comparison table lists 'SSO and OIDC identity and access controls' as an available Enterprise-plan feature (also referenced in the card's own Enterprise plan note: 'Adds SSO/OIDC, audit logs...' and mode features.sso=true for enterprise-self-hosted-aws). Top-level features.sso should be true (Enterprise-only), not false.",
+      "checked": "2026-09-30"
+    },
+    "private_network": {
+      "value": false,
+      "source": "https://ona.com/pricing",
+      "quote": "Complete network control (incl. load balancers)",
+      "note": "reviewed: proposed correction rejected (Enterprise plan offers complete network control per the pricing comparison table, and the card's own enterprise-self-hosted-aws mode already sets features.private_network=true. Top-level features.private_network should be true (Enterprise-only), not false.)",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "on-demand": "dedicated",
+        "on-demand-gpu": "dedicated",
+        "enterprise-self-hosted-aws": "dedicated",
+        "enterprise-self-hosted-aws-gpu": "dedicated"
+      },
+      "source": "https://ona.com/docs/ona/understanding/how-ona-works",
+      "quote": "Every task gets its own environment: an isolated VM with dedicated compute, storage, and networking, provisioned from a Dev Container configuration.",
+      "note": "Ona Cloud modes (on-demand, on-demand-gpu) are explicitly described as dedicated-compute VMs per environment. Enterprise self-hosted modes run on AWS EC2 general-purpose (m6i) and accelerated (g5) instance families, which are non-burstable, Nitro-based instance types (unlike AWS's burstable T-series) delivering practically all host vCPU/memory to the instance per AWS's own m6i product page; no oversubscription/burst behavior is documented for these families, so classified as dedicated rather than shared or burstable:NN (no published baseline % exists for a non-burstable AWS family).",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://ona.com/docs/ona/billing/usage",
+      "quote": "Enterprise organizations can query this data programmatically with the Ona Intelligence usage API... Cost & Budgets page gives you a clear picture of your credit consumption over the last 7 or 30 days. Below that, a daily consumption chart breaks down your spending over time",
+      "note": "granularity: account-only; cost: yes; Ona has an API (Ona Intelligence usage API, Enterprise-only) for organization reporting, but documentation shows usage tracking at account/organization level only via Cost & Budgets dashboard. No per-sandbox, per-tag, or per-project cost breakdown is documented for either Core or Enterprise. Environment management API exists but doesn't expose billable usage metrics per environment.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east-2",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Jose",
+      "provider_region": "us-west-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "Portland",
+      "provider_region": "us-west-2",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": null,
+      "city": "Montreal",
+      "provider_region": "ca-central-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "eu-west-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "eu-west-2",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "eu-west-3",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "eu-central-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "il-central-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "ap-south-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "ap-southeast-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "NSW",
+      "city": "Sydney",
+      "provider_region": "ap-southeast-2",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "ap-northeast-1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "sa-east-1",
+      "self_serve": false,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://ona.com/docs/ona/runners/aws/aws-regions.md",
+  "locations_quote": "Supported regions: North America (us-east-1, us-east-2, us-west-1, us-west-2, ca-central-1), Europe (eu-west-1, eu-west-2, eu-west-3, eu-central-1, il-central-1), Asia Pacific (ap-south-1, ap-southeast-1, ap-southeast-2, ap-northeast-1), South America (sa-east-1)",
+  "locations_checked": "2026-10-01"
+}

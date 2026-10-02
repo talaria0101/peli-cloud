@@ -1,0 +1,1153 @@
+{
+  "id": "google-cloud-build",
+  "name": "Google Cloud Build",
+  "url": "https://cloud.google.com/build/pricing",
+  "category": "paas",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "default-e2-standard-2",
+      "label": "Default pool e2-standard-2",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "e2-standard-2",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.36,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "features": {},
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). https://cloud.google.com/build/pricing: default pool e2-standard-2 2 vCPU/8 GB $0.006/min; partial minutes billed per second; 2,500 free build-minutes/month per billing account (promotional, e2-standard-2 default pool only). Disk 100 GB default (not verified today).",
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ]
+    },
+    {
+      "key": "default-pool",
+      "label": "Default pool (e2-medium / e2-highcpu)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "e2-medium",
+          "vcpu": 1,
+          "ram_gib": 4,
+          "disk_gib": 100,
+          "hour": 0.18,
+          "month_cap": null
+        },
+        {
+          "name": "e2-highcpu-8",
+          "vcpu": 8,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.936,
+          "month_cap": null
+        },
+        {
+          "name": "e2-highcpu-32",
+          "vcpu": 32,
+          "ram_gib": 32,
+          "disk_gib": 100,
+          "hour": 3.744,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "features": {},
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). https://cloud.google.com/build/pricing: e2-medium 1/4 $0.003/min, e2-highcpu-8 8/8 $0.0156/min, e2-highcpu-32 32/32 $0.0624/min (us regions).",
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ]
+    },
+    {
+      "key": "private-pool-e2",
+      "label": "Private pool E2 standard",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "e2-standard-2",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": null,
+          "hour": 0.36,
+          "month_cap": null
+        },
+        {
+          "name": "e2-standard-4",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": null,
+          "hour": 0.72,
+          "month_cap": null
+        },
+        {
+          "name": "e2-standard-8",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": null,
+          "hour": 1.44,
+          "month_cap": null
+        },
+        {
+          "name": "e2-standard-16",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": null,
+          "hour": 2.88,
+          "month_cap": null
+        },
+        {
+          "name": "e2-standard-32",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": null,
+          "hour": 5.76,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "features": {
+        "private_network": true
+      },
+      "note": "CI runner. Added 2026-09-28 (missing-providers audit). https://cloud.google.com/build/pricing: private pools E2 standard $0.006/min (2 vCPU) .. $0.096/min (32 vCPU); worker SSD $0.000232877/GiB-hour extra (not encoded). VPC peering.",
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ]
+    },
+    {
+      "key": "private-pool-c3-highcpu",
+      "label": "Private pool C3 high-CPU (Iowa/reference regions)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "c3-highcpu-4",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "hour": 0.83664
+        },
+        {
+          "name": "c3-highcpu-8",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "hour": 1.67328
+        },
+        {
+          "name": "c3-highcpu-22",
+          "vcpu": 22,
+          "ram_gib": 44,
+          "hour": 4.60152
+        },
+        {
+          "name": "c3-highcpu-44",
+          "vcpu": 44,
+          "ram_gib": 88,
+          "hour": 9.20304
+        },
+        {
+          "name": "c3-highcpu-88",
+          "vcpu": 88,
+          "ram_gib": 176,
+          "hour": 18.40608
+        },
+        {
+          "name": "c3-highcpu-176",
+          "vcpu": 176,
+          "ram_gib": 352,
+          "hour": 36.81216
+        }
+      ],
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "note": "Per-minute list values converted ×60; regional availability/prices differ."
+    },
+    {
+      "key": "private-pool-n2d-highcpu",
+      "label": "Private pool N2D high-CPU (Iowa/reference regions)",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us",
+        "eu",
+        "asia",
+        "other"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "n2d-highcpu-2",
+          "vcpu": 2,
+          "ram_gib": 2,
+          "hour": 0.29496
+        },
+        {
+          "name": "n2d-highcpu-4",
+          "vcpu": 4,
+          "ram_gib": 4,
+          "hour": 0.58992
+        },
+        {
+          "name": "n2d-highcpu-8",
+          "vcpu": 8,
+          "ram_gib": 8,
+          "hour": 1.17984
+        },
+        {
+          "name": "n2d-highcpu-16",
+          "vcpu": 16,
+          "ram_gib": 16,
+          "hour": 2.35968
+        },
+        {
+          "name": "n2d-highcpu-32",
+          "vcpu": 32,
+          "ram_gib": 32,
+          "hour": 4.71936
+        },
+        {
+          "name": "n2d-highcpu-48",
+          "vcpu": 48,
+          "ram_gib": 48,
+          "hour": 7.07904
+        },
+        {
+          "name": "n2d-highcpu-64",
+          "vcpu": 64,
+          "ram_gib": 64,
+          "hour": 9.43872
+        },
+        {
+          "name": "n2d-highcpu-80",
+          "vcpu": 80,
+          "ram_gib": 80,
+          "hour": 11.7984
+        },
+        {
+          "name": "n2d-highcpu-96",
+          "vcpu": 96,
+          "ram_gib": 96,
+          "hour": 14.15808
+        },
+        {
+          "name": "n2d-highcpu-128",
+          "vcpu": 128,
+          "ram_gib": 128,
+          "hour": 18.87744
+        },
+        {
+          "name": "n2d-highcpu-224",
+          "vcpu": 224,
+          "ram_gib": 224,
+          "hour": 33.03552
+        }
+      ],
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "note": "Per-minute list values converted ×60; regional availability/prices differ."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 100,
+    "disk_gib_month": 0.17,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay as you go",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 15,
+      "per_seat": 0,
+      "waives_start_fee": false,
+      "included_applies_to_modes": [
+        "default-e2-standard-2"
+      ],
+      "concurrency": null,
+      "max_session_h": 24,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "2,500 free build-minutes/month per billing account on e2-standard-2 default pool (promotional, \"subject to change\") = $15. Max build timeout 24 h (Cloud Build docs, not re-read today)."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "price_expires": null,
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": false,
+    "auto_stop_idle": true,
+    "max_session_h": 24,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": false,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "qemu-kvm",
+    "image_oci": true,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "guest_firewall": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [],
+  "caveats": [
+    "Private-pool SSD ($0.000232877/GiB-hour) and default-pool SSD not encoded.",
+    "Prices shown for us regions; other regions may differ.",
+    "N2D/C3 private-pool machine types also priced on the page, not encoded."
+  ],
+  "sources": [
+    "https://cloud.google.com/build/pricing"
+  ],
+  "audit_2026_09_29": {
+    "applied": 4,
+    "source": "checked against the provider's live pricing and docs pages"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "Upon completion of the\nbuild, volumes and their contents are discarded.",
+      "note": "Job-scoped ephemeral build workers; nothing is saved when a build ends (only pushed images/artifacts and optional caches you upload yourself).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "No snapshot/checkpoint API anywhere in the Cloud Build API reference or docs for build workers; consistent with snapshot='none'.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "For each build step, Cloud Build executes a Docker container as an instance of docker run.",
+      "note": "No first-party API to drive a coding-agent harness (prompt/stream events/follow-ups) inside a build; you could run a CLI tool as a generic build step, but that is not a harness API.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://cloud.google.com/build/docs/private-pools/use-in-private-network",
+      "quote": "Remove public IPs on private pools by setting egressOption field in the private pool config file to NO_PUBLIC_EGRESS.\nThis will remove all access from the private pool to the public internet.",
+      "note": "Private pools only (default pool always has internet). Options: NO_PUBLIC_EGRESS (no-internet mode, gcloud --no-public-egress), VPC Service Controls perimeter, and 'Customize firewall rules on your VPC network to restrict egress' on the peered VPC (IP/CIDR/port). Per pool, not per build; enforced outside the worker.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/private-pools/private-pools-overview",
+      "quote": "its own worker and is isolated from other workloads.",
+      "note": "Build workers expose no inbound ports/URLs at all, so there is nothing to control (not a 'public with no controls' case). The VPC-SC 'ingress policy' in the docs governs who may call the Cloud Build API, not traffic to workers.",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/securing-builds/use-secrets",
+      "quote": "env: a local name (environment variable) that build steps can use to\nreference the secret.",
+      "note": "Secret Manager secrets (availableSecrets / secretEnv) and KMS-encrypted secrets are injected as environment variables into build steps; no credential-injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "Each volume is created\nas an empty volume prior to starting the build process. Upon completion of the\nbuild, volumes and their contents are discarded.",
+      "note": "Only per-build Docker volumes shared between steps and a configurable diskSizeGb; no persistent/attachable volumes.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "is a Docker container volume that is mounted into build steps to persist files\nacross build steps.",
+      "note": "Build volumes are shared only between sequential steps of the same build on one worker; no cross-worker shared filesystem (use GCS/Filestore over the network yourself).",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://cloud.google.com/security/infrastructure/design",
+      "quote": "we are the largest submitter of CVEs and security bug fixes for the Linux KVM hypervisor.",
+      "note": "Each Cloud Build runs on its own dedicated Compute Engine worker VM ('Each build runs on its own worker and is isolated from other workloads', private-pools-overview) sized by GCE machine type (e2/n2d/c3); Google's infrastructure docs confirm KVM is the underlying hypervisor for its compute fleet. Exact hypervisor is not named per-product, so classified as full VM (qemu-kvm) rather than microVM.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": true,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "Use the name field of a build step to specify a cloud builder, which is a container image running common tools. You use a builder in a build step to execute your tasks.",
+      "note": "Every build step runs an arbitrary container image (name: field) pulled from any registry, including custom/private Docker or OCI images you publish yourself; oci artifacts are also natively supported for output.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/building/build-vm-images-with-packer",
+      "quote": "Build VM images using Packer",
+      "note": "Cloud Build's own workflow for producing VM images (e.g. with Packer) delegates to the Compute Engine API to create real GCE instances rather than emulating a VM locally inside the build step; no docs mention /dev/kvm or nested virtualization being exposed to build containers.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "Cloud Build lets you build software quickly across all languages... on VMs (or on Kubernetes, or serverless).",
+      "note": "not offered: outside the product's scope (CI build service that runs container-based build steps, not a browser/computer-use product).",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "Cloud Build lets you build software quickly across all languages... on VMs (or on Kubernetes, or serverless).",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "Cloud Build lets you build software quickly across all languages... on VMs (or on Kubernetes, or serverless).",
+      "note": "not offered: outside the product's scope.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://cloud.google.com/build/docs/private-pools/access-external-resources-using-static-external-ip",
+      "quote": "you must set up a virtual machine (VM) in your project to act as a self-managed NAT gateway to proxy requests to the public internet.",
+      "note": "Default pool builds egress from Google's shared datacenter IP ranges; a fixed/static IP on private pools requires the customer to build and operate their own self-managed NAT gateway VM, so out-of-the-box egress is shared datacenter IPs, not provider-managed static IPs.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/access-github-from-build",
+      "quote": "Access GitHub from a build via SSH keys",
+      "note": "Cloud Build's SSH-related docs are about builds using SSH keys to reach source repos (e.g. GitHub), not interactive SSH access into the build worker itself; it's a batch CI job runner with no documented shell/SSH login to the worker VM.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "Cloud Build lets you build software quickly across all languages... on VMs (or on Kubernetes, or serverless).",
+      "note": "not offered: outside the product's scope (CI/CD build automation, not a browser/computer-use task agent).",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/private-pools/use-in-private-network",
+      "quote": "Customize firewall rules on your VPC network to restrict egress ... Remove public IPs on private pools by setting egressOption field in the private pool config file to NO_PUBLIC_EGRESS.",
+      "note": "Egress control on private pools is all-or-nothing (NO_PUBLIC_EGRESS) or VPC firewall/VPC-SC rules at IP/CIDR/port level; nothing at HTTP method/path granularity.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://cloud.google.com/build/docs/private-pools/private-pools-overview",
+      "quote": "Each build runs on its own worker and is isolated from other workloads.",
+      "note": "derived: full VM worker with root access inside the build container/VM, so iptables/nftables configuration inside the guest is expected to work.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://cloud.google.com/build/docs/private-pools/access-external-resources-using-static-external-ip",
+      "quote": "This page explains how you can set up your private pools to access external resources through a static external IP.",
+      "note": "Achievable on private pools by routing egress through a self-managed NAT gateway VM you create in your VPC; not an automatic per-machine static IP assigned by the provider out of the box.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": 24,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "The maximum value for timeout is 24 hours.",
+      "note": "Overall build timeout field is capped at 24 hours; individual build steps can have shorter timeouts.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "Each volume is created as an empty volume prior to starting the build process. Upon completion of the build, volumes and their contents are discarded.",
+      "note": "Build workers are ephemeral per-build; the workspace and any declared volumes are wiped when the build finishes. No first-party mechanism keeps a worker's filesystem across builds.",
+      "checked": "2026-09-30"
+    },
+    "snapshot": {
+      "value": "none",
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "Upon completion of the build, volumes and their contents are discarded.",
+      "note": "No disk or memory snapshot/checkpoint concept exists for build workers; state is either discarded or you push it yourself (image/artifact/GCS).",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "not offered: outside the product's scope. Cloud Build runs a single job-to-completion build on an ephemeral worker; there is no pause/resume lifecycle for a build (only cancel).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "not offered: outside the product's scope. A build worker is a one-shot execution environment for a single build, not a machine you clone.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "not offered: outside the product's scope (no fork capability at all, running or otherwise).",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "not offered: outside the product's scope (no fork or memory-snapshot capability exists).",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build uses Docker to execute builds. For each build step, Cloud Build executes a Docker container as an instance of docker run.",
+      "note": "not offered: outside the product's scope. Build steps are headless Docker container runs; there is no graphical desktop/VNC/RDP surface.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build uses Docker to execute builds. For each build step, Cloud Build executes a Docker container as an instance of docker run.",
+      "note": "not offered: outside the product's scope. No desktop exists, so there is no screenshot/click API to drive one.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "not offered: outside the product's scope. Builds are triggered (API call/trigger/repo push) and spin up a fresh worker; there is no persistent/sleeping machine that 'wakes' since none stays around between builds.",
+      "checked": "2026-09-30"
+    },
+    "volumes": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "A Volume is a Docker container volume that is mounted into build steps to persist files across build steps... Upon completion of the build, volumes and their contents are discarded.",
+      "note": "Only ephemeral, per-build Docker volumes shared between sequential steps of the same build; nothing persistent or attachable across builds/workers.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/private-pools/private-pools-overview",
+      "quote": "its own worker and is isolated from other workloads.",
+      "note": "Build workers expose no inbound ports or URLs; they run steps and exit. Nothing to reach via HTTPS.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "Build workers are not addressable machines with a public IPv4 assigned to the customer; they only make outbound calls (pull source/images, push artifacts). Consistent with card's network.ipv4_available: false.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build uses Docker to execute builds. For each build step, Cloud Build executes a Docker container as an instance of docker run.",
+      "note": "No preinstalled/offered coding-agent (Claude Code, Codex, OpenCode) templates in Cloud Build's build-step catalog; it only provides generic community/Google container build steps.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "No provider-shipped MCP server to control Cloud Build workers found in the docs.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "default pool e2-standard-2 2 vCPU/8 GB ... private pools E2 standard ... N2D/C3 private-pool machine types",
+      "note": "Pricing page lists only E2/N2D/C3 CPU machine families for build workers; no GPU worker option is offered.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build uses Docker to execute builds. For each build step, Cloud Build executes a Docker container as an instance of docker run. Currently, Cloud Build is running Docker engine version 20.10.24.",
+      "note": "Build workers run Linux Docker containers only; no Windows build-worker option is offered.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build uses Docker to execute builds. For each build step, Cloud Build executes a Docker container as an instance of docker run.",
+      "note": "not offered: outside the product's scope. Cloud Build only runs Linux Docker-container build steps; no macOS workers exist on Google Cloud.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://cloud.google.com/build/pricing",
+      "quote": "default pool e2-standard-2 ... private pools E2 standard ... N2D/C3 private-pool machine types",
+      "note": "All listed default/private-pool worker machine types (E2, N2D, C3) are x86-64 GCE families; no Arm (Tau T2A) worker option is listed on the pricing page or in the private pools docs.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "not offered: outside the product's scope. Cloud Build is a fully managed Google-run service; there is no self-hosted/on-prem distribution of the build execution service itself.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/private-pools/private-pools-overview",
+      "quote": "its own worker and is isolated from other workloads.",
+      "note": "Private pools let build workers peer into your own VPC network, but the workers themselves still run in Google-managed infrastructure/projects, not deployed as a managed service into an arbitrary customer cloud account (not AWS/Azure BYOC).",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/overview",
+      "quote": "Cloud Build is a service that executes your builds on Google Cloud.",
+      "note": "Cloud Build is a proprietary managed Google Cloud service; no OSI-licensed core product is published for it.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://cloud.google.com/build/docs/build-config-file-schema",
+      "quote": "options: machineType: enum(MachineType) ... diskSizeGb: string (int64 format)",
+      "note": "machineType/diskSizeGb are set per-build in the config file before the worker starts; there is no API to change CPU/RAM of an already-running build worker.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://cloud.google.com/billing/docs/how-to/export-data-bq",
+      "quote": "Billing export to BigQuery provides detailed information on resource labels and tags, allowing you to filter Cloud Build costs by user_labels or default labels set on individual builds",
+      "note": "granularity: per-tag; cost: yes; Cloud Build billing is accessible via Google Cloud's standard Billing Export API (BigQuery) and Cost Explorer API (with resource filtering by labels/tags). Individual builds can be tagged with custom labels (user_labels) in the build config, and billing data can be filtered by these labels and the Cloud Build service. Costs are returned in currency, not just usage quantities. The Billing API/export breaks down costs per build via resource labels and supports querying by build properties.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Council Bluffs",
+      "provider_region": "us-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "SC",
+      "city": "Moncks Corner",
+      "provider_region": "us-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "us-east4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OH",
+      "city": "Columbus",
+      "provider_region": "us-east5",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "us-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "OR",
+      "city": "The Dalles",
+      "provider_region": "us-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "Los Angeles",
+      "provider_region": "us-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "UT",
+      "city": "Salt Lake City",
+      "provider_region": "us-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "NV",
+      "city": "Las Vegas",
+      "provider_region": "us-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Montreal",
+      "provider_region": "northamerica-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "northamerica-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Mexico City",
+      "provider_region": "northamerica-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": null,
+      "city": "São Paulo",
+      "provider_region": "southamerica-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Santiago",
+      "provider_region": "southamerica-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FI",
+      "state": null,
+      "city": "Hamina",
+      "provider_region": "europe-north1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NO",
+      "state": null,
+      "city": "Oslo",
+      "provider_region": "europe-north2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "europe-southwest1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "St. Ghislain",
+      "provider_region": "europe-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "europe-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "europe-west3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Eemshaven",
+      "provider_region": "europe-west4",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "europe-west6",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "europe-west8",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "europe-west9",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Berlin",
+      "provider_region": "europe-west10",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Turin",
+      "provider_region": "europe-west12",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "europe-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "QA",
+      "state": null,
+      "city": "Doha",
+      "provider_region": "me-central1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SA",
+      "state": null,
+      "city": "Dammam",
+      "provider_region": "me-central2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "me-west1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Changhua County",
+      "provider_region": "asia-east1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "asia-east2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "asia-northeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "asia-northeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "asia-northeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "asia-south1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Delhi",
+      "provider_region": "asia-south2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "asia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "asia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TH",
+      "state": null,
+      "city": "Bangkok",
+      "provider_region": "asia-southeast3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Sydney",
+      "provider_region": "australia-southeast1",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": null,
+      "city": "Melbourne",
+      "provider_region": "australia-southeast2",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.cloud.google.com/build/docs/locations",
+  "locations_quote": "Cloud Build allows you to run regional builds by specifying the region when starting a build or when creating a build trigger. All listed regions support both default and private pools.",
+  "locations_checked": "2026-10-01"
+}

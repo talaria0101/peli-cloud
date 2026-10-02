@@ -1,0 +1,711 @@
+{
+  "id": "railway",
+  "name": "Railway",
+  "url": "https://railway.com/pricing",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "sandbox-vm",
+      "label": "Sandboxes (VM rates)",
+      "pricing": "resource",
+      "vcpu_h": 0.069444,
+      "ram_gib_h": 0.069444,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 32,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "$0.00001929 per vCPU-s and per GB-s. CPU billed on measured use. RAM billed on memory in use INCLUDING OS + filesystem/page cache, and it keeps billing while the sandbox waits, until destroy or idle timeout (default 30 min Hobby/Pro, 0 = never). Treat ram_util as close to 1 for I/O-heavy agents. Plan caps: Free/Trial 2 vCPU/2 GB, Hobby 8/8, Pro 32/32. Fractional vCPU allowed. Verified 2026-09-28: 'Charges follow measured CPU use, memory in use (including the operating system and filesystem cache)' / 'Memory remains billable while a VM waits for work' (docs.railway.com/pricing/plans#vm-pricing); idle timeout 'Hobby/Pro 30 minutes, 1-120', 'Trial/Free 5 minutes, 1-5', then 'Railway destroys it' (docs.railway.com/sandboxes).",
+      "flags": [],
+      "features": {
+        "isolation": "vm",
+        "image_oci": null
+      }
+    },
+    {
+      "key": "container-service",
+      "label": "Services (container rates, always-on or serverless service)",
+      "pricing": "resource",
+      "vcpu_h": 0.027792,
+      "ram_gib_h": 0.013896,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 24,
+      "max_ram_gib": 24,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "$0.00000772/vCPU-s and $0.00000386/GB-s on measured usage (idle service pays only resident RAM). Non-privileged containers: no VM isolation, no Docker-in-Docker, no sandbox API (checkpoint/fork/idle-destroy). Per-replica cap Hobby 8/8, Pro 24/24, Enterprise 48/48. Optional Serverless sleep after 5-10 min without outbound traffic stops compute. Verified 2026-09-28: 'You are only charged for the resources you actually use' (docs.railway.com/pricing/plans); whether container RAM counts page cache is not stated.",
+      "flags": [],
+      "product_class": "paas",
+      "features": {
+        "ssh": true,
+        "isolation": "container",
+        "image_oci": true
+      }
+    },
+    {
+      "key": "cloud-agent",
+      "label": "Cloud Agents (VM rates, fixed size, beta)",
+      "pricing": "resource",
+      "vcpu_h": 0.069444,
+      "ram_gib_h": 0.069444,
+      "cpu_basis": "active",
+      "ram_basis": "active",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": 1,
+      "vcpu_options": [
+        2,
+        4
+      ],
+      "min_vcpu": 2,
+      "max_vcpu": 4,
+      "max_ram_gib": 4,
+      "features": {
+        "auto_stop_idle": false,
+        "wake_on_request": false,
+        "isolation": "vm",
+        "image_oci": null,
+        "persistent_disk": true,
+        "inbound_https": true
+      },
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": 0,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Size fixed by plan: Hobby 2 vCPU/2 GB, Pro/Enterprise 4/4 (Trial/Free 2/1). Persistent disk. No idle timeout: bills while awake even with no client connected. Sleep stops compute and keeps disk (disk price not stated). Max 25 creations per user per day. Priority Boarding (beta). Verified 2026-09-28: VM rates cover 'sandboxes and cloud agents'; 'Charges follow measured CPU use, memory in use (including the operating system and filesystem cache)' (docs.railway.com/pricing/plans#vm-pricing); 'A running agent bills for compute while it is awake, including when no client is connected' (docs.railway.com/cloud-agents.md), so no auto-stop on idle.",
+      "flags": [
+        "beta"
+      ]
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 0,
+    "egress_gib": 0.05,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "fee_is_credit": false,
+      "included_usd": 1,
+      "per_seat": 0,
+      "concurrency": 10,
+      "max_session_h": null,
+      "max_vcpu": 2,
+      "max_ram_gib": 2,
+      "sizes_allowed": null,
+      "note": "$1/mo usage credit, no rollover. Sandboxes max 2 vCPU/2 GB, 10 per environment, idle timeout max 5 min (can't be disabled). Services max 1 vCPU/0.5 GB. After the Trial ($5 one-time, 30 days).",
+      "flags": []
+    },
+    {
+      "name": "Hobby",
+      "fee": 5,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 50,
+      "max_session_h": null,
+      "max_vcpu": 8,
+      "max_ram_gib": 8,
+      "sizes_allowed": null,
+      "note": "$5 minimum usage fully credited. Single-developer workspace. Sandboxes default 4/4, max 8/8, 50 per environment. Volumes 5 GB. Fee auto-waived for some active builders. Hobby allows 3 project members (pricing table), 50 projects, 50 services/project.",
+      "flags": []
+    },
+    {
+      "name": "Pro",
+      "fee": 20,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 32,
+      "sizes_allowed": null,
+      "note": "$20 minimum usage fully credited. Unlimited seats. Sandboxes default 8/8, max 32/32, 100 per environment (concurrency is per environment). Static outbound IPs for services.",
+      "flags": []
+    },
+    {
+      "name": "Pro + $1k commit",
+      "fee": 1000,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 32,
+      "sizes_allowed": null,
+      "note": "Committed spend: monthly minimum, shortfall invoiced, no rate discount. Unlocks 90-day logs and HIPAA BAA (BAA needs a 1-year term, paid monthly).",
+      "flags": []
+    },
+    {
+      "name": "Pro + $2k commit",
+      "fee": 2000,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": 100,
+      "max_session_h": null,
+      "max_vcpu": 32,
+      "max_ram_gib": 32,
+      "sizes_allowed": null,
+      "note": "Adds SSO, RBAC, 18-month audit logs. No rate discount.",
+      "flags": []
+    },
+    {
+      "name": "Pro + $5k commit",
+      "fee": 5000,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Adds Slack Connect, critical tickets, Enterprise resource limits (sandbox cap starts at 100 per environment and can be raised on request). No rate discount.",
+      "flags": []
+    },
+    {
+      "name": "Pro + $10k commit",
+      "fee": 10000,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Adds dedicated instances. No rate discount.",
+      "flags": []
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "fee_is_credit": null,
+      "included_usd": 0,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom pricing. SSO, RBAC, HIPAA, dedicated VMs, BYOC listed. Up to 2,400 vCPU / 2.4 TB per service.",
+      "flags": [
+        "sales"
+      ]
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 5
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": true,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": true,
+    "ssh": true,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": false,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": true,
+    "open_source": false,
+    "regions": [
+      "us",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": true,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "isolation": "vm",
+    "image_oci": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": true,
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "Railway was enabled in ComputeSDK on 2026-09-15 but has no successful run yet; no HPC result.",
+  "knobs": [
+    {
+      "id": "idle_timeout_tail",
+      "label": "Idle-timeout tail before the sandbox is destroyed (× session hours)",
+      "kind": "slider",
+      "min": 1,
+      "max": 3,
+      "step": 0.05,
+      "default": 1,
+      "unit": "×",
+      "options": null,
+      "effect": "hours_factor",
+      "modes": [
+        "sandbox-vm"
+      ],
+      "why": "Railway sandbox RAM (incl. page cache) keeps billing while the sandbox waits, until destroy or idle timeout (default 30 min on Hobby/Pro, 1-120 min, 0 = never); the timeout destroys, it does not pause. E.g. a 1 h session left to the 30-min default = 1.5x. Default 1 = destroyed when work ends; CPU during the tail is near-idle, so applying the factor to CPU slightly overstates. 3x ceiling is a judgment call.",
+      "source": "https://docs.railway.com/sandboxes"
+    },
+    {
+      "id": "agent_awake_tail",
+      "label": "Cloud Agent left awake after work ends (× session hours)",
+      "kind": "slider",
+      "min": 1,
+      "max": 5,
+      "step": 0.05,
+      "default": 1,
+      "unit": "×",
+      "options": null,
+      "effect": "hours_factor",
+      "modes": [
+        "cloud-agent"
+      ],
+      "why": "Cloud Agents have no idle timeout: an agent bills (measured CPU + memory in use) while awake even with no client attached, until you explicitly sleep it. Default 1 = slept when work ends; the 5x ceiling is a judgment call.",
+      "source": "https://docs.railway.com/cloud-agents.md"
+    }
+  ],
+  "caveats": [
+    "Sandbox RAM is billed on memory in use including page cache and keeps billing while idle-waiting. The engine's ram_util should be close to 1 for realistic agent workloads, even though the basis is 'active'.",
+    "The pricing page claims sandboxes are never billed for time spent waiting; the docs say memory remains billable while waiting. Card follows the docs.",
+    "Idle timeout destroys (does not pause) sandboxes: up to 30 min of RAM billed per forgotten sandbox by default, unbounded if the timeout is 0. Not modelled as min_billed_seconds.",
+    "Sandbox checkpoint storage price is not published (snapshot_gib_month null). Checkpoint count is capped at the plan sandbox limit (10/50/100 per environment).",
+    "Sandbox disk size is not documented. Services get 100 GB ephemeral storage (Hobby+), not billed. Volumes are $0.15/GB-month on used bytes but are services-only and cannot attach to sandboxes.",
+    "Concurrency limits are per environment. Container-service mode concurrency is not bounded by the sandbox caps.",
+    "Container-service mode is not a sandbox: non-privileged containers without VM isolation or the sandbox API, at 2.5x/5x lower rates. It is no longer opt-in 'alt' (an always-on Railway service is a legitimate dev box/app host); it is marked product_class 'paas' so sandbox-style presets show it as a different kind of product. SSH works: 'railway ssh' opens a shell in a service container over real SSH (ssh.railway.com, scp/sftp and local port forwarding supported, no VS Code Remote-SSH) (docs.railway.com/cli/ssh, verified 2026-09-28).",
+    "Committed spend tiers give no rate discount; they are fee-as-credit minimums that unlock features. Their concurrency/size limits beyond Pro are unknown (null). Feature grouping per docs.railway.com/pricing/committed-spend; railway.com/pricing groups them differently (log history at $2k not $1k; cloud regions at $5k) - verified 2026-09-28.",
+    "Free plan $1/month credit is modelled as the Free plan's included_usd, not as free.monthly_credit. The Trial gives $5 one-time (30-day expiry).",
+    "BYOC appears on the pricing page's Enterprise list but is not described in the docs.",
+    "Static outbound IPs (Pro services) have no published price. There is no dedicated inbound public IPv4.",
+    "Storage buckets are $0.015/GB-month with free ops and free bucket egress (not modelled). Free plan is capped at 10 GB-month (counts against the $1 credit), Trial at 50 GB-month.",
+    "Legacy GCP pricing (egress $0.10/GB, disk $0.25/GB) is historical. The Metal migration also raised measured CPU.",
+    "No performance benchmarks: the computesdk cold-start runs never succeeded for Railway.",
+    "A free no-account VM (ssh railway.new: 2 vCPU/2 GB, 60 min) exists but is not a billing regime for production workloads.",
+    "Category set to agent-sandbox because Railway sells a Sandboxes product (VM rates); Services (containers) remain an opt-in adjacent regime.",
+    "Re-checked 2026-09-28: docs.railway.com/sandboxes, /pricing/plans and /cloud-agents.md still state no sandbox/cloud-agent disk size, disk price or checkpoint storage price (only container Volumes $0.15/GB-month). included_disk_gib and snapshot_gib_month stay null.",
+    "Fresh sandboxes default to US West (us-west2) regardless of the account's preferred region; another region (us-east4, europe-west4, asia-southeast1) must be requested via the SDK/API 'region' option (the CLI has no region flag). Forks/checkpoints/templates stay in the region they were captured in.",
+    "Usage hard limit (Compute) takes all workloads offline, minimum $10 (CLI: 0 or $10-$500,000). Agent Usage (Railway Agent LLM) has a separate, non-removable hard limit defaulting to $5 Hobby / $20 Pro; Railway Agent tokens draw from the same included plan credit as compute."
+  ],
+  "sources": [
+    "https://railway.com/pricing",
+    "https://docs.railway.com/pricing/plans",
+    "https://docs.railway.com/sandboxes",
+    "https://docs.railway.com/cloud-agents.md",
+    "https://docs.railway.com/pricing/committed-spend",
+    "https://docs.railway.com/pricing/free-trial.md",
+    "https://docs.railway.com/pricing/cost-control.md",
+    "https://docs.railway.com/deployments/serverless.md",
+    "https://docs.railway.com/volumes/reference.md",
+    "https://docs.railway.com/storage-buckets/billing.md",
+    "https://docs.railway.com/networking/static-outbound-ips.md",
+    "https://docs.railway.com/platform/railway-metal.md",
+    "https://railway.com/changelog/2026-09-18-railway-sandboxes",
+    "https://railway.com/changelog/2026-09-25-free-vms-without-an-account",
+    "https://docs.railway.com/cli/ssh"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": "No card for trial; GitHub account verification determines full versus restricted trial (account age/activity etc.); paid plans take credit card.",
+    "tiers": "Per environment: Trial/Free 10, Hobby 50, Pro 100. Enterprise starts at 100 per environment and can request more.",
+    "notes": "These are explicitly per-environment limits, NOT account/workspace totals: default_max_instances null avoids wrongly capping a whole account at 10. 10/50 fit one Trial/Hobby environment; 300/1,000 in one environment need raised Enterprise quota or multi-environment design (subject to other limits). Only creating/running count.",
+    "sources": [
+      "https://docs.railway.com/sandboxes",
+      "https://docs.railway.com/pricing/free-trial.md",
+      "https://railway.com/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 5,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Once the sandbox has no activity keeping it alive and its idle timeout expires, Railway destroys it.",
+      "note": "Sandboxes: idle timeout destroys, no automatic save. Cloud Agents (beta) sleep keeps the persistent disk but stops processes ('Sleeping stops its processes and compute billing while retaining files'); that is persistent disk, not a snapshot. Services volumes have scheduled backups (not this).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "A checkpoint is a named snapshot of a sandbox's disk, stored server-side in the environment. Capture one from a running sandbox after expensive setup, then boot new sandboxes from it by name, from any process with access to the environment.",
+      "note": "Disk only, no memory: 'a sandbox created from a checkpoint boots fresh from a copy of the disk: files are preserved, running processes are not'. New sandboxes can boot from it; fork() of a running sandbox also copies disk only. Count capped at plan sandbox limit (10/50/100 per environment); storage price unpublished.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.railway.com/cli/code.md",
+      "quote": "Launch a coding tool on a [cloud agent](/cloud-agents) with your available credentials. Claude Code, Codex, Grok CLI, and Railway Agent open inside Railway CA. OpenCode prepares a cloud server and offers to connect your local terminal client.",
+      "note": "Cloud Agents only (Priority Boarding beta): CLI `railway code --claude|--codex|--grok|--railway|--opencode`, prompt passthrough (`railway code --codex -- exec \"explain this codebase\"`), `railway ca` lists/reattaches durable terminal sessions, `railway ca desktop` wires Claude/Codex Desktop over SSH and OpenCode Desktop to an authenticated HTTPS OpenCode server. Terminal/SSH-based, no structured event-stream API. The Sandboxes product itself has only generic exec (with detach/reattach sessions) plus preinstalled Claude Code, Codex, OpenCode, Pi.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Every sandbox has outbound internet access through a NAT gateway. Whether it can reach the rest of your environment over the [private network](/networking/private-networking) depends on its network isolation mode, set when you create or fork it.",
+      "note": "Both modes (ISOLATED default, PRIVATE) keep outbound internet; isolation modes only control private-network reachability. No allowlist/deny/no-internet option documented. Only outbound control documented is SMTP blocked below Pro.",
+      "checked": "2026-09-29"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Every sandbox has outbound internet access through a NAT gateway.",
+      "note": "No HTTP-level egress policy documented.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Pass `domains` with `networkIsolation: \"PRIVATE\"` when creating a sandbox to publish its HTTP servers on Railway-provided HTTPS domains",
+      "note": "Ports are private unless you publish chosen ports (max 10) at creation; otherwise reach via SSH port forwarding (`railway sandbox forward`). ISOLATED mode blocks private-network inbound from other services. Published domains have no auth/IP allowlist. Services have a WAF (docs.railway.com/networking/waf.md, listed in llms.txt, not read).",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Sandboxes are 'fully isolated virtual machine[s]' with root (examples run in /root). Services are non-privileged containers (no NET_ADMIN).",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "`env` bakes environment variables into the sandbox, available to every command over both `exec` and SSH for the sandbox's lifetime. Use it for values a command needs at runtime, including secrets.",
+      "note": "Secrets enter the VM as env vars (can reference Railway shared/sealed variables). Agent guide: 'For now, you pass each agent its configuration or API key' (sign in and checkpoint, or env). Cloud Agents copy local provider credentials into the VM over SSH. No injecting proxy.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.railway.com/volumes.md",
+      "quote": "Volumes allow you to store persistent data for services on Railway.",
+      "note": "Services only (one volume per service, $0.15/GB-month, live resize, up to 1 TB Pro / 5 TB Enterprise). Sandbox docs do not mention volumes; card says they cannot attach to sandboxes. Cloud Agents have a persistent disk, not attachable volumes.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.railway.com/volumes/reference.md",
+      "quote": "Replicas cannot be used with volumes",
+      "note": "Also 'Each service can only have a single volume' and multiple deployments are prevented from mounting the same service volume. Storage buckets are S3-compatible object storage, not mounted.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "A template is a reusable base: an ordered list of build steps that Railway builds once, content-addresses, and caches... `.withPackages(...names)` | Install system packages via `apt-get`",
+      "note": "Sandboxes/Cloud Agents boot from Railway's own Ubuntu base image, customized only via an apt-get-based template builder (packages/env/run steps) — not from a user-supplied Docker/OCI image. Railway Services (container-service mode) do support deploying from an arbitrary Docker/OCI image (Docker Hub, GHCR, Quay), per docs.railway.com/quick-start.md ('Railway supports deploying pre-built Docker images from the following registries'), but that is a separate, non-sandbox product mode already recorded as true on that mode.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://railway.com/pricing",
+      "quote": "Railway is the all-in-one intelligent cloud provider for deploying web apps, servers, databases, and more.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://railway.com/pricing",
+      "quote": "Railway is the all-in-one intelligent cloud provider for deploying web apps, servers, databases, and more.",
+      "note": "not offered: outside the product's scope",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Every sandbox has outbound internet access through a NAT gateway.",
+      "note": "Default outbound IPs are Railway's own datacenter/NAT IPs (dynamic, not per-machine dedicated). Services on the Pro plan can additionally enable 'Static Outbound IPs' (docs.railway.com/networking/static-outbound-ips.md: 'permanent outbound IPv4 addresses... may be shared with other customers'), i.e. static-datacenter, but that is an opt-in add-on for the services mode, not the sandbox default.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.railway.com/cloud-agents.md",
+      "quote": "A running agent bills for compute while it is awake, including when no client is connected. Sleeping stops compute billing and keeps the disk.",
+      "note": "Cloud Agents must be woken explicitly ('Railway creates or wakes an agent' via the CLI launch command), not automatically by an inbound request. Sandboxes have no sleep/wake state at all: an idle sandbox is destroyed by its idle timeout, not put to sleep and later auto-woken by traffic ('Once the sandbox has no activity keeping it alive and its idle timeout expires, Railway destroys it', docs.railway.com/sandboxes.md).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Each sandbox gets a VM size at creation... You can ask for a different size, up to your plan's maximum, with the `resources` field on the `sandboxCreate` API mutation",
+      "note": "Sandbox vCPU/RAM ceiling is set only at creation (or on a new fork/checkpoint boot); no documented API to change a running sandbox's or Cloud Agent's CPU/RAM ceiling in place. (Volumes, a services-only feature, do support live resize, but that is disk size, not CPU/RAM of a running machine.)",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://docs.railway.com/ai/railway-agent.md",
+      "quote": "Chat with the Railway Agent to manage services, diagnose failures, and ship fixes directly from the Railway dashboard.",
+      "note": "not offered: outside the product's scope. Railway Agent (and its CLI, `railway agent`, docs.railway.com/cli/agent.md: 'Interact with the Railway Agent to manage your project using natural language') is a first-party assistant for managing Railway infrastructure itself, not a browser/computer-use/research task agent as defined by this field; it is also offered as one interchangeable coding tool inside Cloud Agents/Sandboxes alongside Claude Code, Codex, etc., not a distinct product-driving API.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "A command started with `exec` runs on the sandbox independently of the client that started it... the sandbox... run commands in it, and destroy it when you're done.",
+      "note": "No documented maximum lifetime for a running (non-idle) sandbox or Cloud Agent — both run until explicitly destroyed/deleted or, for sandboxes, until the idle timeout (5-120 min of no activity, separate from active session length) fires. Cloud Agents have no idle timeout at all and bill while awake indefinitely until manually slept.",
+      "checked": "2026-09-30"
+    },
+    "persistent_disk": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.railway.com/cloud-agents.md",
+      "quote": "The disk lasts for the life of the agent. Closing a connection keeps the VM running. Sleeping stops its processes and compute billing while retaining files; deleting the agent removes its disk.",
+      "note": "Contradiction confirmed and corrected: Cloud Agents (VM mode) keep the filesystem across sleep/wake (pause/resume). Default behaviour: files persist until the agent is explicitly deleted; sleep only stops compute billing, not the disk. Sandboxes proper are different: idle timeout DESTROYS the sandbox (no pause) so no persistent disk in that mode, but checkpoints (disk-only snapshots) let you re-create from saved state on demand. Card's mode-level cloud-agent.features.persistent_disk was already true; only the top-level features.persistent_disk was wrongly false.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.railway.com/cloud-agents/manage.md",
+      "quote": "Disconnecting leaves the cloud agent running. There is no idle timeout. Stop compute explicitly when you no longer need the machine awake. ... 's' / 'w' / 'd' | Sleep, wake, or delete an agent",
+      "note": "Cloud Agents support explicit sleep (stop compute, keep disk) and wake (resume) via CLI/TUI ('railway ca sleep <agent-name>', 'railway ca' 's'/'w' keys). That is a first-party pause/resume mechanism. Sandboxes proper have no pause, only destroy-on-idle-timeout or explicit destroy, so pause/resume is specific to the cloud-agent product but real.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "a sandbox created from a checkpoint boots fresh from a copy of the disk: files are preserved, running processes are not",
+      "note": "Checkpoints/forks copy disk state only; no memory/process-state snapshot-and-resume is offered for sandboxes or cloud agents. Confirms existing 'false'.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.railway.com/cloud-agents.md",
+      "quote": "Launch a coding agent directly on the Railway machine and work with it through your terminal. ... Coding tools execute and edit files on that machine.",
+      "note": "Railway's compute products (Sandboxes, Cloud Agents, Services) are headless Linux VMs/containers accessed via CLI/SSH/API/dashboard. No streamed GUI desktop (VNC/RDP-style) is offered anywhere in the docs. Product is plainly terminal/API-first, so 'no desktop' fits what the product is.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Sandboxes are isolated Linux VMs you create on demand, run commands in, and destroy. Use them for coding agents, dependency installs, test runs, builds, and isolated code execution.",
+      "note": "No GUI-automation/computer-use API (mouse/keyboard/screen control) is documented; the sandbox surface is exec/files/checkpoint/fork only, plus preinstalled CLI coding agents. Consistent with there being no desktop to drive.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.railway.com/platform/railway-metal.md",
+      "quote": "Unlocks More Features: With Railway's own hardware and networking stack, we can power more advanced features that were not possible before, such as Static Inbound IPs, Anycast Edge Network, High-Availability Volumes, etc.",
+      "note": "Static/dedicated inbound IPv4 is listed only as a feature Railway Metal 'unlocks' going forward, not something currently available. All current inbound access is via Railway-generated domains (HTTPS edge domains, or TCP Proxy 'domain:port', e.g. docs.railway.com/networking/tcp-proxy: 'Railway will generate a proxy domain and port') rather than a dedicated public IPv4 assigned to a service or sandbox. Confirms 'false'.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.railway.com/guides/ai-agent-workers.md",
+      "quote": "Run AI agent workflows on Railway with an API service, async workers via Redis queue, and Postgres for state persistence. Covers CPU-based agent patterns without GPU.",
+      "note": "No GPU instance type, GPU pricing line, or GPU flag appears anywhere in docs.railway.com/pricing/plans, railway.com/pricing, or the sandboxes/cloud-agents docs; the only docs mention of GPU is this guide explicitly scoping itself to 'without GPU'. Confirms 'false'.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Sandboxes are isolated Linux VMs you create on demand",
+      "note": "Sandboxes, Cloud Agents ('Ubuntu development image'), and Services all run on Linux only; no Windows OS option exists on any Railway compute product. Confirms 'false'.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Sandboxes are isolated Linux VMs you create on demand",
+      "note": "Same as windows: all compute products are Linux VMs/containers; no macOS runtime is offered. Confirms 'false'.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://blog.railway.com/p/railway-metal-gen-2",
+      "quote": "Our Gen 1 hosts were dual-socket Intel Xeons with terabytes of DDR4... we moved to the latest generation AMD Zen 5c EYPC CPUs with 96 cores (192 threads) with DDR5",
+      "note": "Railway's own infrastructure blog post names the exact host CPUs for both Metal generations: Gen 1 is Intel Xeon (x86-64), Gen 2 is AMD EPYC Zen 5c (x86-64). No ARM/aarch64 hardware, region, or instance option exists anywhere in the pricing, sandboxes, cloud-agents, or Metal docs, and there is no CPU-architecture selector exposed to users. Corrects the prior 'unconfirmed/null' guess to a sourced 'false'.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://docs.railway.com/platform/railway-metal.md",
+      "quote": "It is built on hardware that we own and operate in datacenters around the world.",
+      "note": "Railway is a managed platform running on Railway-owned/operated Metal infrastructure (or its predecessor GCP infra); there is no distributable Railway server/control-plane a customer can install on their own hardware. BYOC (features.byoc: true) lets Enterprise customers point Railway's control plane at their own cloud account, which is a different thing from self-hosting the platform itself. Plainly outside what this hosted product is.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "The SDK is the primary interface for working with sandboxes programmatically. It's open source on GitHub (github.com/railwayapp/railway-ts-sdk).",
+      "note": "Only the client-side TypeScript SDK is explicitly called out as open source; the Railway platform itself (dashboard, API, scheduler, Metal infra) is closed-source SaaS with no published source repo for the platform. Confirms platform-level 'false' (client SDK open-sourceness is a separate, narrower fact).",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.railway.com/sandboxes.md",
+      "quote": "Because Railway containers are non-privileged, GitHub Workflows that build-and-then-mount containers on the same host (i.e. Docker-in-Docker) will fail.",
+      "note": "No page mentions /dev/kvm, nested virtualization, or a privileged/KVM device passthrough for any product mode. The container-service mode is explicitly non-privileged (no NET_ADMIN, Docker-in-Docker/privileged mounts fail per docs.railway.com/guides/github-actions.md). The VM-based Sandboxes/Cloud Agents docs describe exec, files, checkpoint, fork, and templates in detail but never mention KVM device exposure or nested VM/emulator support inside the sandbox, so despite root access inside the guest there is no documented path to run a VM-in-a-VM. Treated as 'not offered' rather than null since the silence is consistent across all detailed docs.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.railway.com/cli/usage",
+      "quote": "Use railway usage to inspect a workspace summary, rank projects by cost, or show a service-level breakdown for one project: railway usage projects --project api --period previous",
+      "note": "granularity: per-service; cost: yes; Railway has a usage API via CLI (railway usage) and GraphQL, but the smallest billing granularity is per-service (not per individual sandbox/VM). A service is the deployable unit that may contain multiple replicas or instances. The API can report cost by project and by service within a project, with JSON output for machine-readable access. However, there is no documented API to get usage of a single sandbox/VM by its ID or by sandbox-specific labels/metadata. Sandboxes are ephemeral resources created within a project and their usage is aggregated at the service level. The billing model tracks per-minute resource usage (vCPU-seconds, GB-seconds) but the API surface only exposes aggregated costs at the service/project level, not at the individual sandbox level.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "California",
+      "provider_region": "us-west2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Virginia",
+      "provider_region": "us-east4-eqdc4a",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "europe-west4-drams3a",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "asia-southeast1-eqsg3a",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.railway.com/deployments/regions",
+  "locations_quote": "Region options: US West Metal (California, USA) us-west2, US East Metal (Virginia, USA) us-east4-eqdc4a, EU West Metal (Amsterdam, Netherlands) europe-west4-drams3a, Southeast Asia Metal (Singapore) asia-southeast1-eqsg3a",
+  "locations_checked": "2026-10-01"
+}

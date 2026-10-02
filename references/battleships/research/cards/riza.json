@@ -1,0 +1,373 @@
+{
+  "id": "riza",
+  "name": "Riza Code Interpreter",
+  "url": "https://riza.io/pricing",
+  "category": "agent-sandbox",
+  "isolation": "isolate",
+  "modes": [
+    {
+      "key": "per-request",
+      "label": "Hosted per-request WASM execution (SHUT DOWN 2025-10-01)",
+      "flags": [
+        "legacy"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "resource",
+      "vcpu_h": 0,
+      "ram_gib_h": 0,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": 0.125,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Not compute-metered: priced by plan request quota (Hobby 100k req/month free, Pro $250 for 1M req/month). Marginal compute cost encoded as 0; the plan fee is the whole bill. Each request is a fresh WASM module: 128 MiB RAM cap, 30 s (Hobby) / up to 15 min (Pro) execution, no shell/OS, Python/JS/TS/Ruby/PHP only. A 4 vCPU / 8 GiB workload does NOT fit (max_ram_gib 0.125). Overage price beyond the quota never published. Hosted API shut down 2025-10-01 (new signups closed 2025-07-28)."
+    },
+    {
+      "key": "self-hosted",
+      "label": "Self-hosted container with license key (Enterprise)",
+      "flags": [
+        "sales",
+        "alt",
+        "legacy"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {
+        "self_host": true
+      },
+      "pricing": "resource",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": null,
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "License price never published (contact sales / trial license via hello@riza.io). After the hosted shutdown, 'our self-hosted container will continue to operate indefinitely with any existing offline license key'; whether new licenses are still sold is unknown.",
+      "min_billed_seconds": 0,
+      "granularity_s": null,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Stateless Docker image (linux amd64/arm64, no privileged mode) on your own infrastructure; you pay your own compute plus an unpublished license."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": 100,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": false,
+    "internet": {
+      "default": "configurable",
+      "evidence": [
+        {
+          "quote": "By default all HTTP requests are blocked.",
+          "url": "https://docs.riza.io/reference/http"
+        },
+        {
+          "quote": "HTTP support is only available in our JavaScript and Python runtimes.",
+          "url": "https://docs.riza.io/reference/http"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Hobby",
+      "fee": 0,
+      "flags": [
+        "legacy"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": 0.00833,
+      "max_vcpu": null,
+      "max_ram_gib": 0.125,
+      "sizes_allowed": null,
+      "note": "Free forever (while hosted existed): up to 100,000 requests/month, 30 s per request, 100 GB data transfer/month, 3 custom runtimes. Hosted service shut down 2025-10-01."
+    },
+    {
+      "name": "Pro",
+      "fee": 250,
+      "flags": [
+        "legacy"
+      ],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": 0.25,
+      "max_vcpu": null,
+      "max_ram_gib": 0.125,
+      "sizes_allowed": null,
+      "note": "$250/month flat fee for a quota (1,000,000 requests/month, up to 15 min per request, 500 GB transfer, 50 custom runtimes, Slack support); not usage credit. ≈$0.00025/request if the quota is fully used. Overage unpublished. Hosted service shut down 2025-10-01."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales",
+        "legacy"
+      ],
+      "fee_is_credit": null,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom request quota, custom execution time, self-hosting / on-prem. Price unpublished."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 0
+  },
+  "features": {
+    "linux": false,
+    "windows": false,
+    "macos": false,
+    "arm64": null,
+    "gpu": false,
+    "gpu_types": [],
+    "snapshot": "none",
+    "pause_resume": false,
+    "fork": false,
+    "persistent_disk": false,
+    "volumes": false,
+    "auto_stop_idle": null,
+    "max_session_h": 0.25,
+    "custom_image": false,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": false,
+    "systemd": false,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": false,
+    "raw_tcp_inbound": false,
+    "egress_allowlist": true,
+    "static_egress_ip": null,
+    "private_network": false,
+    "self_host": true,
+    "byoc": true,
+    "open_source": false,
+    "regions": null,
+    "soc2": true,
+    "hipaa": null,
+    "sso": null,
+    "lang_python": true,
+    "lang_node": null,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": true,
+    "egress_http_rules": false,
+    "wake_on_request": null,
+    "live_resize": null,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": null,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": false,
+    "egress_allowlist_level": "domain",
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "secret_proxy": "any-http",
+    "volume_attach": false,
+    "volume_shared": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "perf_source": "No benchmark row: provider is not in ComputeSDK results or the HPC run (as of 2026-09-28). See research/perf-map.json.",
+  "knobs": [],
+  "caveats": [
+    "HOSTED SERVICE IS GONE: Riza announced (riza.io/blog/shutting-down-hosted-code-interpreter) that new signups stopped 2025-07-28, microVM custom runtimes were deprecated 2025-08-01, and api.riza.io + dashboard.riza.io shut down 2025-10-01. riza.io/pricing and the homepage are stale (© 2025) and still show plans. Every mode/plan flagged legacy.",
+    "Per-request pricing, not compute: the card encodes compute at $0 and puts the whole cost in plan fees; request counts are not an engine input.",
+    "Not a VM/OS sandbox: 128 MiB per invocation, no shell, WASM interpreters only; a 4 vCPU / 8 GiB workload does not fit. linux=false (no OS exposed); os ['linux'] on modes only so the engine can evaluate it.",
+    "Overage price beyond 100k (Hobby) / 1M (Pro) requests and beyond 100/500 GB transfer never published; egress_free_gib is the Hobby figure (Pro 500 GB).",
+    "Pro max_session_h 0.25 = 'up to 15 minutes' per request; Hobby 30 s.",
+    "Self-hosted continues indefinitely with an existing offline license key; license price unpublished and whether new licenses are issued is unknown.",
+    "SOC 2 Type 1 received Dec 2024; Type 2 'expected June 2025' (not confirmed).",
+    "Not in any benchmark (perf null)."
+  ],
+  "sources": [
+    "https://riza.io/pricing",
+    "https://riza.io/blog/shutting-down-hosted-code-interpreter",
+    "https://riza.io/changelog",
+    "https://docs.riza.io/interpreters/limits",
+    "https://docs.riza.io/self-hosting/quickstart",
+    "https://docs.riza.io/introduction"
+  ],
+  "fleet": {
+    "default_max_instances": 0,
+    "default_max_vcpu": 0,
+    "default_max_gpus": 0,
+    "raise": "none",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": null,
+    "notes": "Hosted Code Interpreter API closed new signups July 28, 2025 and shut down October 1, 2025. Stale pricing page does not make a new hosted fleet possible. Existing licensed self-hosted software uses customer compute and is a different procurement path.",
+    "sources": [
+      "https://riza.io/blog/shutting-down-hosted-code-interpreter"
+    ],
+    "researched": "2026-09-28"
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.riza.io/interpreters/security",
+      "quote": "WebAssembly modules are not shared across executions.",
+      "note": "Stateless per-request execution: each API call instantiates a fresh WASM module and discards it; there is no machine that stops/sleeps, so nothing to snapshot.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.riza.io/llms.txt",
+      "quote": null,
+      "note": "Full API reference lists only execute code/function, runtimes (package sets), secrets, tools and executions (history); no snapshot/checkpoint/fork endpoint. Nothing persists between requests (\"Output files are not yet supported\", docs.riza.io/interpreters/limits).",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://docs.riza.io/getting-started/how-it-works",
+      "quote": "We execute the code from your request within the WebAssembly module.",
+      "note": "Only runs short scripts/functions (Python/JS/TS/Ruby/PHP) and saved 'Tools'; no shell or OS, so no agent harness can run inside. The remote MCP server (mcp.riza.io/code-interpreter) is the opposite direction (an external agent calls Riza).",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.riza.io/reference/http",
+      "quote": "By default all HTTP requests are\nblocked. Configure allowed hosts and (optionally) associated credentials\nwith the `http` request parameter.",
+      "note": "Default-deny, per request (execute code / execute tool). Host patterns: '*' (all hosts) and '*.example.com' (subdomains only). HTTP only ('Network access is limited to HTTP', riza.io/pricing); only Python and JavaScript runtimes have HTTP at all. Enforced by the Riza host runtime outside the WASM guest. No IP/CIDR/port rules.",
+      "checked": "2026-09-29",
+      "level": "domain"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.riza.io/api-reference/command/execute-code",
+      "quote": "HTTPAllow:\n      description: List of allowed HTTP hosts and associated authentication.\n      properties:\n        auth:\n          $ref: '#/components/schemas/HTTPAuth'\n        host:\n          description: The hostname to allow.",
+      "note": "The allow rule schema has only 'host' and 'auth'; no method, path or header matching. Header injection is for credentials only, not for filtering.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://riza.io/pricing",
+      "quote": "Code only has access to data you provide, which includes command-line arguments, environment variables, files and stdin.",
+      "note": "Not applicable: request/response execution with no listening ports, preview URLs or inbound networking at all. Nothing to expose, so no ingress controls.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://docs.riza.io/interpreters/security",
+      "quote": "Code is executed inside a secure [WebAssembly](https://webassembly.org/) sandbox.",
+      "note": "WASM interpreter, no OS, kernel, shell or root; nftables/iptables cannot run. microVM custom runtimes (the only non-WASM engine) were disabled 2025-08-01.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": "any-http",
+      "source": "https://riza.io/blog/adding-support-for-input-files-and-http-credentials",
+      "quote": "The Riza Code Interpreter API also now allows you to configure credentials that we attach to outbound HTTP requests outside of the code execution environment, so you can authenticate HTTP API requests from untrusted code without sharing this sensitive data directly.",
+      "note": "Per allowed host in http.allow[].auth: basic, bearer, custom header, or query parameter (docs.riza.io/reference/http: 'Rather than exposing HTTP authentication credentials to your code, you can pass credentials to Riza directly and we'll add them to outbound HTTP requests. This ensures credentials can't be stolen by malicious code.'). Stored secrets via the Secrets API can be referenced by secret_id in Tool executions (Tool auth schema has basic/bearer/query). Rules are host-level only. HTTP(S) only; no database/SSH/git coverage (the runtime has no other network access). Hosted API is gone; the self-hosted container exposes the same http parameter as a 'drop-in replacement', but whether self-hosted injection works is not stated explicitly.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://riza.io/pricing",
+      "quote": "Read/write access to the `/mnt/req` directory, read-only access to the rest of the filesystem.",
+      "note": "Only per-request input files (the 'files' parameter, written under /mnt/req/) exist; no persistent storage or volume API.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.riza.io/reference/files",
+      "quote": "Your script has limited access to the filesystem.",
+      "note": "No volumes or shared filesystem; every execution is isolated and stateless.",
+      "checked": "2026-09-29"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.riza.io/llms.txt",
+      "quote": "API reference lists only execute code/function, runtimes, secrets, tools and executions (history); no usage/billing/quota endpoint. Execution object has id, language, duration, exit_code, started_at, details—no cost field. Hosted API shut down 2025-10-01.",
+      "note": "granularity: none; cost: no; Billing is per-request quota (Hobby 100k req/month free, Pro $250 for 1M req/month flat fee), not compute-metered. No API to query remaining quota or billable cost. Users check dashboard only. No granular usage breakdown by sandbox, tag, or project.",
+      "confidence": "high",
+      "checked": "2026-01-14"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://riza.io/pricing",
+  "locations_quote": "The Code Interpreter API was an experiment launched in April of 2024 to support software developers looking for a safe place to run LLM-generated code.",
+  "locations_checked": "2026-10-01"
+}

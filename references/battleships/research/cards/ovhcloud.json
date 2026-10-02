@@ -1,0 +1,1207 @@
+{
+  "id": "ovhcloud",
+  "name": "OVHcloud Public Cloud",
+  "url": "https://us.ovhcloud.com/public-cloud/prices/",
+  "category": "hyperscaler",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "b3-hourly",
+      "label": "B3 general purpose hourly",
+      "flags": [],
+      "os": [
+        "linux",
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "b3-8",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.069105,
+          "month_cap": null
+        },
+        {
+          "name": "b3-16",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 100,
+          "hour": 0.13801,
+          "month_cap": null
+        },
+        {
+          "name": "b3-32",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 200,
+          "hour": 0.27592,
+          "month_cap": null
+        },
+        {
+          "name": "b3-64",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 400,
+          "hour": 0.55174,
+          "month_cap": null
+        },
+        {
+          "name": "b3-128",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 1.03584,
+          "month_cap": null
+        },
+        {
+          "name": "b3-256",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": 400,
+          "hour": 2.00084,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.039,
+      "gpu": {},
+      "note": "US list; no monthly cap. Storage and public IPv4 currently bundled, scheduled to unbundle 2026-10-01."
+    },
+    {
+      "key": "c3-hourly",
+      "label": "C3 compute optimized hourly",
+      "flags": [],
+      "os": [
+        "linux",
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "c3-4",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.062605,
+          "month_cap": null
+        },
+        {
+          "name": "c3-8",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.12501,
+          "month_cap": null
+        },
+        {
+          "name": "c3-16",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "hour": 0.24982,
+          "month_cap": null
+        },
+        {
+          "name": "c3-32",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 400,
+          "hour": 0.49954,
+          "month_cap": null
+        },
+        {
+          "name": "c3-64",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 400,
+          "hour": 0.93044,
+          "month_cap": null
+        },
+        {
+          "name": "c3-128",
+          "vcpu": 64,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 1.79284,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.039,
+      "gpu": {},
+      "note": "US list; allocated dedicated resources. No automatic monthly cap."
+    },
+    {
+      "key": "gen2-monthly",
+      "label": "Gen2 monthly subscription",
+      "flags": [],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "b2-15",
+          "vcpu": 4,
+          "ram_gib": 15,
+          "disk_gib": 100,
+          "hour": 59.54,
+          "month_cap": 59.54
+        },
+        {
+          "name": "c2-15",
+          "vcpu": 4,
+          "ram_gib": 15,
+          "disk_gib": 100,
+          "hour": 87.89,
+          "month_cap": 87.89
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": "Full calendar-month billing, not an hourly cap.",
+      "min_billed_seconds": 3600,
+      "granularity_s": 3600,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": {},
+      "note": "Estimator-only encoding: sizes.hour and month_cap both equal full monthly rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff. For valid workloads with sessions >= peak concurrency it charges one monthly rental per concurrent machine, including off-hours. Setup/term cash outlays are caveated separately."
+    },
+    {
+      "key": "savings-12",
+      "label": "Gen3 12-month Savings Plan",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "b3-8",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.06003,
+          "month_cap": null
+        },
+        {
+          "name": "b3-16",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 100,
+          "hour": 0.11989,
+          "month_cap": null
+        },
+        {
+          "name": "b3-32",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 200,
+          "hour": 0.239695,
+          "month_cap": null
+        },
+        {
+          "name": "b3-64",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 400,
+          "hour": 0.479305,
+          "month_cap": null
+        },
+        {
+          "name": "b3-128",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 0.89079,
+          "month_cap": null
+        },
+        {
+          "name": "b3-256",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": 400,
+          "hour": 1.71104,
+          "month_cap": null
+        },
+        {
+          "name": "c3-4",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.054505,
+          "month_cap": null
+        },
+        {
+          "name": "c3-8",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.10884,
+          "month_cap": null
+        },
+        {
+          "name": "c3-16",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "hour": 0.21751,
+          "month_cap": null
+        },
+        {
+          "name": "c3-32",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 400,
+          "hour": 0.434935,
+          "month_cap": null
+        },
+        {
+          "name": "c3-64",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 400,
+          "hour": 0.8012,
+          "month_cap": null
+        },
+        {
+          "name": "c3-128",
+          "vcpu": 64,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 1.53424,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "12 months compute commitment; 15% off compute only.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.039,
+      "gpu": {},
+      "note": "Effective new plan terms 2026-09-01. Storage/IPv4 not discounted after October. Must cover full commitment hours, not just active use.",
+      "commit_term": "12-month"
+    },
+    {
+      "key": "savings-36",
+      "label": "Gen3 36-month Savings Plan",
+      "flags": [
+        "commit"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "b3-8",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.050955,
+          "month_cap": null
+        },
+        {
+          "name": "b3-16",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 100,
+          "hour": 0.10177,
+          "month_cap": null
+        },
+        {
+          "name": "b3-32",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 200,
+          "hour": 0.20347,
+          "month_cap": null
+        },
+        {
+          "name": "b3-64",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 400,
+          "hour": 0.40687,
+          "month_cap": null
+        },
+        {
+          "name": "b3-128",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 0.74574,
+          "month_cap": null
+        },
+        {
+          "name": "b3-256",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": 400,
+          "hour": 1.42124,
+          "month_cap": null
+        },
+        {
+          "name": "c3-4",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.046405,
+          "month_cap": null
+        },
+        {
+          "name": "c3-8",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 100,
+          "hour": 0.09267,
+          "month_cap": null
+        },
+        {
+          "name": "c3-16",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 200,
+          "hour": 0.1852,
+          "month_cap": null
+        },
+        {
+          "name": "c3-32",
+          "vcpu": 16,
+          "ram_gib": 32,
+          "disk_gib": 400,
+          "hour": 0.37033,
+          "month_cap": null
+        },
+        {
+          "name": "c3-64",
+          "vcpu": 32,
+          "ram_gib": 64,
+          "disk_gib": 400,
+          "hour": 0.67196,
+          "month_cap": null
+        },
+        {
+          "name": "c3-128",
+          "vcpu": 64,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 1.27564,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": true,
+      "always_on_month_per_instance": null,
+      "commit_note": "36 months compute commitment; 30% off compute only.",
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.039,
+      "gpu": {},
+      "note": "Effective new plan terms 2026-09-01. Storage/IPv4 not discounted after October. Must cover full commitment hours, not just active use.",
+      "commit_term": "36-month"
+    },
+    {
+      "key": "d2-hourly",
+      "label": "D2 Discovery (shared) hourly",
+      "flags": [
+        "burstable"
+      ],
+      "baseline_pct": null,
+      "os": [
+        "linux",
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "d2-2",
+          "vcpu": 1,
+          "ram_gib": 2,
+          "disk_gib": 25,
+          "hour": 0.0129,
+          "month_cap": null
+        },
+        {
+          "name": "d2-4",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 50,
+          "hour": 0.0256,
+          "month_cap": null
+        },
+        {
+          "name": "d2-8",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 50,
+          "hour": 0.0461,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "windows_vcpu_h": 0.039,
+      "multiplier": 1,
+      "requires_always_on": false,
+      "note": "Shared vCPU; storage stays included after Oct 1, only IPv4 becomes extra. Global catalog is slightly cheaper (d2-8 $0.0439/h). US monthly option d2-8 $25.53/month."
+    },
+    {
+      "key": "r3-hourly",
+      "label": "R3 memory optimized hourly",
+      "flags": [],
+      "os": [
+        "linux",
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "r3-16",
+          "vcpu": 2,
+          "ram_gib": 16,
+          "disk_gib": 50,
+          "hour": 0.0783,
+          "month_cap": null
+        },
+        {
+          "name": "r3-32",
+          "vcpu": 4,
+          "ram_gib": 32,
+          "disk_gib": 100,
+          "hour": 0.1563,
+          "month_cap": null
+        },
+        {
+          "name": "r3-64",
+          "vcpu": 8,
+          "ram_gib": 64,
+          "disk_gib": 200,
+          "hour": 0.3125,
+          "month_cap": null
+        },
+        {
+          "name": "r3-128",
+          "vcpu": 16,
+          "ram_gib": 128,
+          "disk_gib": 400,
+          "hour": 0.626,
+          "month_cap": null
+        },
+        {
+          "name": "r3-256",
+          "vcpu": 32,
+          "ram_gib": 256,
+          "disk_gib": 400,
+          "hour": 1.25,
+          "month_cap": null
+        },
+        {
+          "name": "r3-512",
+          "vcpu": 64,
+          "ram_gib": 512,
+          "disk_gib": 400,
+          "hour": 2.5,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "windows_vcpu_h": 0.039,
+      "multiplier": 1,
+      "requires_always_on": false,
+      "note": "Pre-Oct-1 bundled price; local storage ($0.0001721/GB-h) + IPv4 extra from 2026-10-01. Savings Plan eligible."
+    },
+    {
+      "key": "gpu-hourly",
+      "label": "Cloud GPU hourly (US)",
+      "flags": [],
+      "os": [
+        "linux",
+        "windows"
+      ],
+      "regions": [
+        "us"
+      ],
+      "gpu_only": true,
+      "features": {},
+      "pricing": "sizes",
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "sizes": [
+        {
+          "name": "l4-90",
+          "vcpu": 22,
+          "ram_gib": 90,
+          "disk_gib": 400,
+          "hour": 1,
+          "month_cap": null,
+          "gpu": "1x L4"
+        },
+        {
+          "name": "l40s-90",
+          "vcpu": 15,
+          "ram_gib": 90,
+          "disk_gib": 400,
+          "hour": 1.8,
+          "month_cap": null,
+          "gpu": "1x L40S"
+        },
+        {
+          "name": "t2-45",
+          "vcpu": 15,
+          "ram_gib": 45,
+          "disk_gib": 400,
+          "hour": 0.88,
+          "month_cap": null,
+          "gpu": "1x V100S"
+        }
+      ],
+      "min_billed_seconds": 60,
+      "granularity_s": 1,
+      "multiplier": 1,
+      "requires_always_on": false,
+      "gpu": {},
+      "note": "Size hour is all-in (GPU included); do not add a gpu surcharge. IPv4 extra from Oct 1. Global regions add H100 (h100-380 $2.99/h), A100 (a100-180 $3.07/h), A10 ($1.00/h), RTX5000 ($0.60/h). GPU quota needs a raise (prepaid credit)."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.0123,
+    "paused_ram_billed": true,
+    "local_disk_gib_month_from_2026_10_01": 0.125633
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": 0,
+    "ipv4_month": 2.3287,
+    "ipv4_available": true,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Usage account",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Account quotas and stock availability must be checked before deploying 50 concurrent machines; no quota approval implied."
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 200
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": false,
+    "gpu": true,
+    "gpu_types": [
+      "L4",
+      "L40S",
+      "V100S"
+    ],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": true,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": true,
+    "browser": false,
+    "desktop": false,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "eu",
+      "other"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": false,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": true,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_auto": true,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "ip",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "DIY infrastructure rather than an agent-managed sandbox: guest installation, HTTPS/domain setup, abuse controls and operations are customer responsibilities. Linux guest administrative capabilities are not preinstalled agent features. 30% guest CPU utilization does not reduce allocated-compute charges. Unknowns remain null; a partial subtotal is not a complete invoice.",
+    "As of 2026-09-28. On October 1 local storage EUR 0.0001458/GB-hour plus public IPv4 EUR 0.0027/hour become extra for B3/C3/R3. Future prices not silently substituted for current bundles.",
+    "US pricing page also says optional IPv4 by default; intro/unbundling wording conflicts. Verify checkout; network.ipv4_month=0 reflects pre-October bundled documentation only.",
+    "Traffic unlimited on selected US/EU instances at fixed port speed; APAC and Local Zones differ. Do not apply zero egress globally.",
+    "Stopped/paused compute still bills. Shelving hourly instances releases compute but retains a billed disk snapshot; monthly subscriptions are not suspended.",
+    "50x C3-8 active compute $948.64; retaining all month $3934.70 before future disk/IP charges.",
+    "Instance Backup (snapshot) US list: 'Storage replicated x3 $0.000017 /GB/hour, $0.0123 /month', charged on space used, 1 GB granularity (us.ovhcloud.com/public-cloud/prices, 2026-09-28).",
+    "Savings Plans are self-serve (\"set up a Savings Plan directly in the OVHcloud Control Panel\"), -15% for 12 months / -30% for 36 months on B3/C3/R3; flagged commit, not sales. Boot time not published, so boot_overhead_s is unset."
+  ],
+  "sources": [
+    "https://us.ovhcloud.com/public-cloud/prices/",
+    "https://blog.ovhcloud.com/en/posts/public-cloud-pricing-update-october-2026/",
+    "https://support.us.ovhcloud.com/hc/en-us/articles/22179651508115-Public-Cloud-billing",
+    "https://docs.ovhcloud.com/en/guides/public-cloud/cross-functional/faq-pci",
+    "https://www.ovhcloud.com/en/public-cloud/prices/",
+    "https://us.ovhcloud.com/public-cloud/savings-plan/"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve-prepay",
+    "raise_time_days": null,
+    "verification": "Valid payment method; account age and paid invoices affect eligibility.",
+    "tiers": "Quota tiers (instances / vCPU / RAM GB): 20 VMs 20/40/430; 50 VMs 50/64/507; 100 VMs 100/128/1015; 200 VMs 200/512/4063. 50 concurrent 4-vCPU machines (200 vCPU) need the 200-VM tier. Credit price per tier not published.",
+    "notes": "Project quotas can be requested in Control Panel subject to eligibility; support handles CPU/RAM/storage and special needs. Numeric fresh-account quotas vary and were not established; GPU approval and stock must be checked separately.",
+    "sources": [
+      "https://help.ovhcloud.com/csm/en-sg-public-cloud-compute-increase-quota?id=kb_article_view&sysparm_article=KB0050844",
+      "https://help.ovhcloud.com/csm/en-gb-startup-program-services-payment?id=kb_article_view&sysparm_article=KB0073068"
+    ],
+    "researched": "2026-09-28",
+    "api_rate_limit": "Nova (compute API): 20 requests/second per project; Keystone: 60 requests/minute per user (HTTP 429 beyond)"
+  },
+  "audit_2026_09_29": {
+    "applied": 22,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 9
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/suspend-or-pause-an-instance.md",
+      "quote": "The data on your local disk will be stored in a snapshot automatically created once the instance is shelved. Data stored in the memory and elsewhere will not be retained.",
+      "note": "Trigger: the user's Suspend (OpenStack shelve) action; the provider snapshots the local disk automatically, releases compute (only the snapshot is billed) and restores it on unshelve. Disk only, no memory. OpenStack 'Turn off (suspend)' does keep memory ('Stores the VM state on disk, the resources remain reserved', billed at the same rate). Nothing is triggered by idle/time limits. Borderline: functionally a persistent disk kept via a snapshot. Scheduled automatic instance backups also exist (note only).",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/save-an-instance.md",
+      "quote": "You can create a single backup of an instance or configure a schedule in order to automate your instance backups. Backups can be used to restore your instance to a previous state or to create a new, identical instance.",
+      "note": "Instance backup (snapshot) via Control Panel, OVHcloud API (POST /cloud/project/{serviceName}/region/{regionName}/instance/{instanceId}/snapshot) or OpenStack; disk only, no memory; new instances can boot from it ('Creating a new instance with the backup as a template'). Optional distant (cross-region) copy. Volume snapshots/backups also exist for Block Storage.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/",
+      "quote": "Modernize Your Infrastructure with OVHcloud Public Cloud",
+      "note": "Plain OpenStack-based IaaS VMs; no API to drive a coding-agent harness. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/setup-security-group.md",
+      "quote": "You can allow or block certain incoming or outgoing connections using security groups. You can apply these rules to traffic from specific IP addresses or to instances in particular security groups.",
+      "note": "OpenStack Neutron security groups (egress rules by CIDR/port/protocol/remote group), enforced on the port outside the VM. The 'default' group allows everything in both directions; on private networks port security must be enabled on pre-existing networks. No domain-level filtering.",
+      "checked": "2026-09-29",
+      "level": "ip"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/cross-functional/security-group-private-network.md",
+      "quote": "This example security group has only egress rules which means no ingress communication will be allowed.",
+      "note": "Security group ingress rules by source CIDR/port/protocol; but the default security group allows all inbound ('all the network ports (public and private) will allow every connection when you start an instance'). Private-network-only instances possible.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Full KVM VMs with root/own kernel; iptables/nftables work in-guest.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/getting-started.md",
+      "quote": "Step 1: Create an SSH key set ... Step 2: Import SSH keys",
+      "note": "Access/config is via SSH keys and in-guest configuration (cloud-init/env/OKMS fetched from inside); there is no first-party credential-injecting HTTP proxy. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/create-and-configure-an-additional-disk-on-an-instance.md",
+      "quote": "It is possible to create additional disks for your Public Cloud instances.",
+      "note": "Block Storage volumes (classic/high-speed, optional LUKS), detachable and movable between instances.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/storage-and-backup/file-storage/file-storage-service/getting-started.md",
+      "quote": "This service offers managed NFS shares on private networks, supporting ReadWriteMany (RWX) access across multiple instances or Kubernetes pods.",
+      "note": "Managed File Storage (OpenStack Manila, NFS) with per-client access level Read-only or Read and write. Also Classic Multi-Attach Block Storage in 3AZ regions (needs cluster FS like OCFS2).",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://us.ovhcloud.com/public-cloud/instances/",
+      "quote": "OpenStack",
+      "note": "OVHcloud Public Cloud Instances are OpenStack Nova compute; Nova's default/only hypervisor driver used by OVHcloud for these general-purpose VM flavors is KVM/QEMU (full VM per customer). Not explicitly named 'KVM' on a customer-facing page found, hence medium confidence; derived from OpenStack architecture.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "Linux Distributions: Ubuntu, Debian, CentOS, AlmaLinux, Rocky Linux, and others. These images are ready to use for web servers, development environments, and general-purpose workloads.",
+      "note": "not offered: outside the product's scope. Public Cloud Instances boot from Glance VM images (qcow2/raw distro images, custom uploaded VM images), not from Docker/OCI container images. OCI images are used by a different OVHcloud product (AI Deploy / Managed Containers), not this VM compute product.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/instances/",
+      "quote": "OpenStack",
+      "note": "not offered: outside the product's scope. This is a general-purpose IaaS VM (OpenStack Nova compute), not a browser/scraping product; no stealth/fingerprinting feature exists.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/instances/",
+      "quote": "OpenStack",
+      "note": "not offered: outside the product's scope. Plain IaaS VM product, not a browser-automation/agent product; no CAPTCHA-solving feature exists.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://us.ovhcloud.com/public-cloud/prices/",
+      "quote": "Public IPv4 ... $0.0027/hour",
+      "note": "Standard public cloud datacenter IPv4 assigned per instance; no residential/mobile IP option.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/save-an-instance.md",
+      "quote": "You can create a single backup of an instance or configure a schedule in order to automate your instance backups. Backups can be used to restore your instance to a previous state or to create a new, identical instance.",
+      "note": "Instance Backup (OpenStack Nova createImage) can be taken from an instance without the docs requiring it to be stopped first, and the resulting backup can be used to create a new, identical instance; disk-only, no memory state. Medium confidence since the doc doesn't explicitly state the source instance keeps running throughout.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "You can change instance types or sizes while keeping the benefits of your plan.",
+      "note": "not offered: outside the product's scope. Plain always-on IaaS VM billed by the hour while running; no serverless wake-on-request mechanism exists for Public Cloud Instances.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/prices/",
+      "quote": "Stopped/paused compute still bills.",
+      "note": "not offered: outside the product's scope. No idle-detection auto-stop feature for Public Cloud Instances; instances run until explicitly stopped/shelved by the customer (and 'shelving' even then still bills the disk snapshot).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/resize-instance-manager.md",
+      "quote": "In addition, this manipulation causes the instance to be shut down for the time of the operation.",
+      "note": "Resizing an instance's CPU/RAM (changing model/flavor) requires shutting the instance down for the duration of the operation; not a live resize.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/instances/",
+      "quote": "OpenStack",
+      "note": "not offered: outside the product's scope. Plain OpenStack IaaS VM product; OVHcloud has no first-party browser/computer-use/research task agent whose API drives this product.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/web-cloud/domains/mcp-domain-getting-started.md",
+      "quote": "Connect an AI agent to the OVHcloud MCP server to manage your domain names, DNS records and redirections in plain language",
+      "note": "OVHcloud ships an MCP server, but only for the Domain Names product; there is no MCP server for Public Cloud Instances/compute.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "Linux Distributions: Ubuntu, Debian, CentOS, AlmaLinux, Rocky Linux, and others. These images are ready to use for web servers, development environments, and general-purpose workloads.",
+      "note": "Standard Linux distro images (Ubuntu/Debian/CentOS/AlmaLinux/Rocky) offered as boot images ship python3 by default out of the box; Windows images do not.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+      "quote": "Linux Distributions: Ubuntu, Debian, CentOS, AlmaLinux, Rocky Linux, and others. These images are ready to use for web servers, development environments, and general-purpose workloads.",
+      "note": "not offered: outside the product's scope. Node.js is not preinstalled by default on the stock distro images; the customer must install it themselves (plain IaaS VM, no managed runtime).",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/setup-security-group.md",
+      "quote": "You can allow or block certain incoming or outgoing connections using security groups. You can apply these rules to traffic from specific IP addresses or to instances in particular security groups.",
+      "note": "Egress control is via OpenStack Neutron security groups at IP/CIDR/port/protocol level only; no HTTP method/path-level egress rules exist for this product (an HTTP-aware WAF product exists but is for inbound/ingress protection, not outbound HTTP-method/path egress control).",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/network-services/getting-started-gateway.md",
+      "quote": "An OVHcloud Gateway provides secure outbound connectivity (SNAT) for instances on a private network subnet.",
+      "note": "A Public Cloud Gateway gives private-network instances a fixed SNAT public IP for outbound traffic. Plain public-IPv4 instances just use their own (also static per-instance until deleted) public IP as their egress source, so a fixed outbound IP is achievable either way.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": true,
+      "source": "https://www.ovhcloud.com/en/compliance/",
+      "quote": "HIPAA & HITECH - Compliance with the United States Health Insurance Portability and Accountability Act in our US datacentres.",
+      "note": "OVHcloud states HIPAA & HITECH compliance in its US datacentres on its compliance page.",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": true,
+      "source": "https://docs.ovhcloud.com/en/guides/account-and-service-management/account-information/ovhcloud-account-connect-saml-okta.md",
+      "quote": "You can use Single Sign-On (SSO) to connect to your OVHcloud account. To enable these connections, your account and your Okta accounts have to be configured using SAML (Security Assertion Markup Language) authentications.",
+      "note": "SAML 2.0 SSO for the OVHcloud account/Control Panel, supporting AD FS, Entra ID, Google Workspace and Okta as identity providers.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://us.ovhcloud.com/public-cloud/prices/",
+      "quote": "Stopped/paused compute still bills.",
+      "note": "Plain always-on IaaS VM billed by the hour; runs indefinitely until the customer stops/deletes it. No maximum session/runtime limit documented.",
+      "checked": "2026-09-30"
+    },
+    "pause_resume": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/suspend-or-pause-an-instance.md",
+      "quote": "Suspend (shelve): Retains the resources and data in your disk by creating a snapshot, all other resources are released. The main IP is also maintained. Billing: You are only billed for the snapshot. [...] Reactivate (unshelve) an instance: This option reactivates your instance so that you can continue using it. Once this is done, regular billing resumes.",
+      "note": "Contradiction confirmed: OVHcloud has a first-party shelve/unshelve (pause/resume) action that releases compute, keeps the disk via an automatic snapshot, and reduces billing to just the snapshot rate while shelved; billing resumes on unshelve. (There are also 'Turn off (suspend)' and 'Pause' options that keep VM/RAM state but are billed at the full rate, so they don't independently satisfy the 'billing paused or reduced' half of the definition.) Card's pause_resume:false is wrong; correct value is true.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/save-an-instance.md",
+      "quote": "You can create a single backup of an instance or configure a schedule in order to automate your instance backups. Backups can be used to restore your instance to a previous state or to create a new, identical instance.",
+      "note": "OVHcloud's instance backup/snapshot and shelve mechanisms are disk-only ('Data stored in the memory and elsewhere will not be retained' during shelve); a new instance created from a backup boots fresh from disk, it does not resume with memory/processes still running. No memory-preserving live clone exists. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "desktop": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/getting-started.md",
+      "quote": "Public Cloud instances are easy to deploy and manage. [...] Step 5: Connect to the instance ... First login on an instance with a GNU/Linux OS installed",
+      "note": "OVHcloud Public Cloud is plain OpenStack IaaS VMs reached via SSH/RDP that the customer provisions and administers; there is no first-party managed graphical desktop (VNC/RDP streaming) product bundled with instances. Outside the product's scope as shipped; confirms false.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/",
+      "quote": "Modernize Your Infrastructure with OVHcloud Public Cloud",
+      "note": "OVHcloud sells general-purpose compute/storage/network infrastructure (VMs, Kubernetes, storage); it does not ship or manage a browser product for customer instances. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/",
+      "quote": "Modernize Your Infrastructure with OVHcloud Public Cloud",
+      "note": "No screenshot/click driving API is offered anywhere in the Public Cloud product; it is a DIY OpenStack IaaS platform with no agent/computer-use layer. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/getting-started.md",
+      "quote": "Public Cloud instances are easy to deploy and manage. [...] Step 3: Prepare the network configuration [...] Step 5: Connect to the instance",
+      "note": "Instances get a raw public IPv4 (and optional Load Balancer) but there is no first-party managed HTTPS-URL-to-port ingress; TLS termination/reverse proxy setup is left to the customer inside the VM (or via a separately configured Load Balancer + own certs). Confirms false as a built-in feature.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/getting-started.md",
+      "quote": "First login on an instance with a GNU/Linux OS installed",
+      "note": "Only standard OS images are offered as templates; no coding-agent harnesses (Claude Code, Codex, OpenCode, etc.) are preinstalled or offered. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/prices/",
+      "quote": "windows_vcpu_h 0.039 ... os: [linux, windows]",
+      "note": "Public Cloud instance OS choices are Linux distributions and Windows Server; no macOS instances are listed anywhere on the pricing/catalog pages. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/prices/",
+      "quote": "sizes: b3-8, b3-16, ... c3-4, c3-8, ... r3-16, ... (all x86 flavors; no 'arm' instance family listed)",
+      "note": "The US Public Cloud pricing page lists only x86 instance families (B3/C3/D2/R3/GPU); no ARM64 flavor appears anywhere on the page (checked via full-text search for 'arm'). Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/",
+      "quote": "Modernize Your Infrastructure with OVHcloud Public Cloud",
+      "note": "OVHcloud Public Cloud is a hosted service run on OVHcloud's own datacenters; it is not software you install and run on your own infrastructure. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/",
+      "quote": "Modernize Your Infrastructure with OVHcloud Public Cloud",
+      "note": "OVHcloud runs the Public Cloud service in its own regions/datacenters; there is no offering to deploy it managed inside a customer's own cloud account. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://us.ovhcloud.com/public-cloud/",
+      "quote": "Modernize Your Infrastructure with OVHcloud Public Cloud",
+      "note": "OVHcloud Public Cloud is a proprietary managed service built on top of open-source OpenStack, but OVHcloud's own product/control-plane is not released under an OSI license. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.ovhcloud.com/en/guides/account-and-service-management/finops/export-billing-data-to-bucket.md",
+      "quote": "OVHcloud can push your billing data, converted to the FOCUS open standard, to an S3-compatible object storage bucket that you own. Once configured, the export runs automatically every day — or every hour if you prefer",
+      "note": "granularity: account-only; cost: yes; OVHcloud offers billing data export (FOCUS format) via API and invoice retrieval endpoints (/me/bill, /me/bill/{billId}/details), but no live API endpoint to retrieve billable usage (running time, vCPU-seconds, cost) per individual VM/sandbox or per resource tag. Billing data is aggregated at account/project level only. Resources can be tagged for organization, but billing queries cannot filter by tag via API. The bucket export is asynchronous (daily or hourly files), not a real-time usage API. Instance billing is metered per-second internally but only exposed as post-month invoices or FOCUS export files.",
+      "confidence": "medium",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Gravelines",
+      "provider_region": "gra",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Roubaix",
+      "provider_region": "rbx",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Strasbourg",
+      "provider_region": "sbg",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Beauharnois",
+      "provider_region": "bhs",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "de",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://docs.ovhcloud.com/en/guides/public-cloud/compute/key-concepts.md",
+  "locations_quote": "OVHcloud Compute instances are deployed across multiple datacenters worldwide, ensuring high availability and proximity to your users. Examples of regions include: GRA – Gravelines, France; BHS – Beauharnois, Canada; DE – Frankfurt, Germany",
+  "locations_checked": "2026-10-01"
+}

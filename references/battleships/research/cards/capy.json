@@ -1,0 +1,581 @@
+{
+  "id": "capy",
+  "name": "Capy",
+  "url": "https://capy.ai",
+  "category": "agent-sandbox",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "native",
+      "label": "Per-thread VM, billed hourly by size while awake",
+      "flags": [
+        "alt"
+      ],
+      "os": [
+        "linux"
+      ],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": 16,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Small",
+          "vcpu": 1,
+          "ram_gib": 4,
+          "disk_gib": 64,
+          "hour": 0.1,
+          "month_cap": null
+        },
+        {
+          "name": "Medium",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 64,
+          "hour": 0.2,
+          "month_cap": null
+        },
+        {
+          "name": "Large",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 64,
+          "hour": 0.4,
+          "month_cap": null
+        },
+        {
+          "name": "Ultra",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 64,
+          "hour": 0.8,
+          "month_cap": null
+        },
+        {
+          "name": "Hyper",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 128,
+          "hour": 1.6,
+          "month_cap": null
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": 120,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Coding-agent VM (one per thread, Ubuntu 24.04, backed by Daytona per subprocessor list). Billed per hour by size only while awake (+2 min wind-down); sleeps ~2 min after the agent stops; asleep = free, disk kept (cold after 2 days, deleted after 30 days). Size is set per project. Cannot be kept awake arbitrarily (only +5 min prepaid extensions, up to 30 min ahead). Model tokens billed separately from the same credit balance. Size table (docs.capy.ai/models-and-pricing, verified 2026-09-29): Small 1/4/64 $0.10, Medium 2/8/64 $0.20, Large 4/16/64 $0.40 (default), Ultra 8/32/64 $0.80, Hyper 16/64/128 $1.60 per hour; Big Guy 16/128/256 $3.20 is Enterprise-only (not priced here). boot_overhead_s 120 = the 2-minute billed wind-down per awake period. Billing granularity not stated."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 64,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": false,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": null
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Lite monthly",
+      "fee": 20,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 20,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Pro monthly",
+      "fee": 100,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 105,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Max base monthly",
+      "fee": 200,
+      "flags": [],
+      "fee_is_credit": true,
+      "included_usd": 220,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    },
+    {
+      "name": "Pay-as-you-go balance (no plan)",
+      "fee": 0,
+      "fee_is_credit": true,
+      "included_usd": 0,
+      "note": "An organization can run entirely on purchased balance; min top-up $5 at 1:1."
+    }
+  ],
+  "free": {
+    "monthly_credit": null,
+    "one_time_credit": null
+  },
+  "features": {
+    "linux": true,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "disk",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": true,
+    "max_session_h": null,
+    "custom_image": false,
+    "docker_inside": true,
+    "nested_virt": false,
+    "root": true,
+    "systemd": null,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": null,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": true,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": true,
+    "static_egress_ip": false,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": true,
+    "hipaa": false,
+    "sso": true,
+    "gpu_types": [],
+    "regions": null,
+    "lang_python": true,
+    "lang_node": true,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": false,
+    "snapshot_auto": false,
+    "snapshot_on_demand": false,
+    "harness_api": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "isolation": "qemu-kvm",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "datacenter",
+    "own_agent_api": true,
+    "max_session_unlimited": true,
+    "ingress_rules": false,
+    "open_internet": true,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "caveats": [
+    "Lite $20/mo includes $20 credits, Pro $100 includes $105, Max $200–1000 in $100 steps includes 110%; annual 20% discount, trial $1/7d/card. Credits pay agent/model work and resource exchange unverified; unlimited members not unlimited compute.",
+    "Null values mean unknown, not free/unlimited. No model-token cost, tax or unverified ancillary charge included.",
+    "Native browser/device/task/credit prices with unknown CPU/RAM are deliberately non-priceable. Check regime before interpreting any partial resource estimate.",
+    "Programs: approved OSS orgs get $50 free usage per UTC day; YC companies and eligible Solo Founders members get $1,000 credits (program-gated).",
+    "Volumes (org/project files outside git): 100 MiB per file, 2 GiB per version, 10 GiB per organization; no price published."
+  ],
+  "sources": [
+    "https://www.ycombinator.com/companies/capy",
+    "https://capy.ai/",
+    "https://capy.ai/pricing",
+    "https://capy.ai/llms.txt"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": null,
+    "raise_time_days": null,
+    "verification": "$1 seven-day Lite intro requires a verified card, limited to one intro per card and organization.",
+    "tiers": "Lite/Pro/Max advertise unlimited concurrent threads; Enterprise custom terms.",
+    "notes": "Thread concurrency is not a documented sandbox-instance entitlement or guaranteed VM capacity. Account aggregate CPU/GPU quotas, fleet approval and review times remain unknown.",
+    "sources": [
+      "https://capy.ai/pricing"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 29,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 5
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "The filesystem survives sleep. Memory, processes, and network connections do not. Resume is a cold boot from disk: your checkout and installed packages are intact, but every process is gone.",
+      "note": "Machines auto-sleep ~2 min after the thread stops working and cold-boot from the persisted disk on wake (persistent_disk, not a state snapshot). Asleep 2 days -> colder storage; 30 days -> deleted.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": false,
+      "source": "https://docs.capy.ai/environment",
+      "quote": "A snapshot is your project's post-setup filesystem (repositories cloned, dependencies installed, `initialize` already run) baked into a bootable image. ... Trigger a build immediately from the same page, or ask Capy to build one now.",
+      "note": "Only project setup-image snapshots: built by re-running the setup recipe on a dedicated build machine (hourly or on demand), disk only, used to boot new machines in ~1-2 s. No documented way to snapshot/checkpoint a specific running machine's state or fork it.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": true,
+      "source": "https://docs.capy.ai/api-reference/overview",
+      "quote": "The Capy API gives programmatic access to the same platform the app uses: create threads, send messages, watch the agent work, and read what it produced. ... A **thread** is a durable agent conversation on Capy's servers, with a VM attached for execution.",
+      "note": "Harness = Capy's own agent (Captain + task subagents) only, with many models (Claude/GPT/Gemini/Grok/Kimi/GLM/Qwen). REST: create thread with prompt, send/interrupt messages, read transcript, list threads, observe task tree (read-only). Caveat: the agent loop runs on Capy's servers, not inside the VM ('The agent loop runs on Capy's servers; the machine is where execution happens'); no streaming endpoint documented (polling transcript). No Claude Code/Codex harness driving.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": null,
+      "quote": null,
+      "note": "Each thread gets its own isolated Ubuntu 24.04 VM with passwordless sudo, and Docker Engine (which itself programs iptables) runs inside; hypervisor not stated.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://docs.capy.ai/secrets",
+      "quote": "Capy encrypts them at rest, injects them into the machine's process environment at boot ... the machine is the agent's execution environment, so code the agent runs can read anything on the machine, including your variables.",
+      "note": "User secrets are env vars on the machine. BUT a narrow first-party credential-injecting proxy exists for GitHub/git only: 'Every git operation routes through Capy's proxy, which injects credentials server-side; the machine holds only a bearer scoped to itself' (docs.capy.ai/secrets, /admin/security). Model-provider keys are never on the machine because the agent loop runs server-side. Not configurable for arbitrary hosts.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://docs.capy.ai/volumes",
+      "quote": "Volumes store instructions, skills, and shared files outside git for reuse across threads. ... Limits are 100 MiB per file, 2 GiB per saved volume version, and 10 GiB per organization.",
+      "note": "Capy 'Volumes' are a versioned file store (AGENTS.md, skills, saved files) the agent saves to, not attachable block/network volumes. Disk tier is fixed by machine size (64/128/256 GB).",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Each task can run on its own machine, and machines don't share a filesystem. Capy copies files and directories between machines with its `transfer_files` tool, the only cross-machine path.",
+      "note": "Org/project Volumes are shared across threads as saved files (auto-saved versions), not a live concurrently mounted FS.",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "qemu-kvm",
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Every thread runs on a machine: an isolated cloud VM where the agent clones your repositories, runs commands, and edits code. ... Every machine is an isolated Ubuntu 24.04 VM where the agent has full control",
+      "note": "Docs confirm a full VM per thread (backed by Daytona infra per subprocessors page) but never name the underlying hypervisor; 'qemu-kvm (full VM)' used as the generic full-VM label since no microVM/container tech is claimed.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://docs.capy.ai/environment",
+      "quote": "The environment is your project's machine recipe: which setup scripts prepare a fresh machine ... A snapshot is your project's post-setup filesystem ... baked into a bootable image.",
+      "note": "Machines always boot from a fresh Ubuntu 24.04 image or a Capy-built snapshot produced by running your setup scripts; there is no documented way to supply your own Docker/OCI image.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Tasks can build images, run service dependencies, and test containerized apps directly inside the VM ... Docker's daemon is socket-activated, so it starts on first use rather than at boot.",
+      "note": "Docker/containers run inside the machine, but nested virtualization (/dev/kvm for VMs/emulators inside the VM) is never mentioned.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "The thread pane shows the machine as the agent uses it: terminal output for commands, the growing diff, a file browser, and a live desktop view of the machine's display, useful when the agent is driving a browser or you asked it to open your app. You never need SSH to see what's happening.",
+      "note": "not offered: outside the product's scope — the live desktop view is for watching Capy's own coding agent drive its browser; there is no user-facing API to drive the desktop by screenshots/clicks.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://capy.ai/",
+      "quote": "Capy is the best AI software engineer. Delegate tasks to parallel coding agents that plan, build, and ship — from task to merged PR.",
+      "note": "not offered: outside the product's scope — Capy is a background coding-agent platform, not a browser-automation/scraping product; no anti-bot/stealth feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://capy.ai/",
+      "quote": "Capy is the best AI software engineer. Delegate tasks to parallel coding agents that plan, build, and ship — from task to merged PR.",
+      "note": "not offered: outside the product's scope — no CAPTCHA-solving feature is documented for this coding-agent platform.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "datacenter",
+      "source": "https://capy.ai/blog/tailscale-integration",
+      "quote": "Teams using Capy often ask us if we have static outbound IPs they can allow-list ... Since every Capy thread runs in its own isolated sandbox machine with dynamic addresses, it's hard for us to provide a static list of IP addresses.",
+      "note": "Machines run on AWS infrastructure (per subprocessors page) with dynamic, non-static outbound addresses — ordinary cloud datacenter egress, not residential/mobile.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "You never need SSH to see what's happening.",
+      "note": "All interaction (terminal sessions, file browser, live desktop) happens through the Capy app; no documented SSH access to machines.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://docs.capy.ai/environment",
+      "quote": "A snapshot is your project's post-setup filesystem (repositories cloned, dependencies installed, initialize already run) baked into a bootable image. A fresh machine that restores from one skips the clone and setup work entirely.",
+      "note": "not offered: snapshots exist only to speed up booting a fresh machine from a cached setup image; there is no documented feature to clone/fork an existing machine into new independent copies.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "The filesystem survives sleep. Memory, processes, and network connections do not. Resume is a cold boot from disk: your checkout and installed packages are intact, but every process is gone.",
+      "note": "not offered: no clone-a-running-machine capability is documented; even the machine's own resume path is a cold boot, not a live clone.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "The filesystem survives sleep. Memory, processes, and network connections do not. Resume is a cold boot from disk.",
+      "note": "not offered: snapshots/resume are disk-only; memory and running processes are never preserved or forked.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "The URL works only while the machine is awake. Traffic to an exposed URL does not keep the machine awake; use the +5 minutes button or keep the thread working while you click around.",
+      "note": "Docs explicitly say inbound traffic to an exposed port does not even keep an awake machine awake, and give no mechanism for an incoming request to wake a sleeping machine; the only wake path documented is the app's +5 minutes extension / starting new agent work.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Large is the default and handles most work. Go bigger for heavy builds and large test suites; a size change applies to new machines, not ones already running.",
+      "note": "Explicitly stated: resizing only affects newly created machines, not a running one.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://docs.capy.ai/models-and-pricing",
+      "quote": "Capy uses a dual-agent architecture: Captain (the planner) ... and Build (the executor) implements them in isolated cloud VMs. ... Teams can run concurrent AI coding agents across supported Claude/GPT/Gemini/Grok/Kimi/GLM/Qwen models.",
+      "note": "Capy offers only its own proprietary Captain/Build agent (choice of underlying LLM), not preinstalled third-party coding-agent harnesses like Claude Code, Codex CLI, or OpenCode.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": true,
+      "source": "https://docs.capy.ai/api-reference/overview",
+      "quote": "The Capy API gives programmatic access to the same platform the app uses: create threads, send messages, watch the agent work, and read what it produced. ... A thread is a durable agent conversation on Capy's servers, with a VM attached for execution.",
+      "note": "First-party REST API drives Capy's own coding task-agent (Captain/Build): create threads with a prompt, send/interrupt messages, list/read the task tree and transcript. It only drives Capy's own agent, not an arbitrary third-party harness.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://docs.capy.ai/integrations/mcp",
+      "quote": "Model Context Protocol (MCP) servers give Capy access to tools provided by external services and local processes. Once a server is connected, the capy agent (threads and their tasks) can discover and use its tools while working.",
+      "note": "Capy is an MCP *client* that consumes external MCP servers as tools for its agent; it does not ship its own MCP server for controlling Capy sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Ask Capy to expose a port and it serves that TCP port at a public URL: the way to open a dev server the agent started.",
+      "note": "Port access is via a Capy-managed public HTTPS URL/proxy, not a raw public IPv4 address assigned to the machine.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://docs.capy.ai/integrations/tailscale",
+      "quote": "A destination can be a hosts alias, a Tailscale IP or CIDR, or another tag ... accept traffic to its port",
+      "note": "The only documented egress control (Tailscale ACLs) is host/port-level for the private tailnet, not HTTP method/path-level rules for general egress.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://capy.ai/blog/tailscale-integration",
+      "quote": "Teams using Capy often ask us if we have static outbound IPs they can allow-list ... Since every Capy thread runs in its own isolated sandbox machine with dynamic addresses, it's hard for us to provide a static list of IP addresses.",
+      "note": "Explicitly stated: no static outbound IP is available.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://docs.capy.ai/models-and-pricing",
+      "quote": "Sizes run from Small (1 vCPU, 4 GB) through Big Guy (16 vCPU, 128 GB); the hourly rate for each lives in models & pricing.",
+      "note": "not offered: outside the product's scope — machine sizes are CPU/RAM-only coding-agent VMs; no GPU size or GPU add-on is documented.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Every machine is an isolated Ubuntu 24.04 VM where the agent has full control.",
+      "note": "not offered: outside the product's scope — machines are Ubuntu Linux only.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Every machine is an isolated Ubuntu 24.04 VM where the agent has full control.",
+      "note": "not offered: outside the product's scope — machines are Ubuntu Linux only.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Every machine is an isolated Ubuntu 24.04 VM where the agent has full control.",
+      "note": "No ARM option is documented anywhere in machine sizing or docs; standard cloud-VM coding-agent infra of this kind is x86-only unless otherwise stated.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://capy.ai/enterprise",
+      "quote": "Unlimited parallel agents, SSO, custom environments, and dedicated support. Everything your team needs to ship at scale.",
+      "note": "not offered: outside the product's scope — Capy is offered only as a hosted SaaS platform (backed by AWS/Daytona per the subprocessors page); no self-hosting option is documented, even on Enterprise.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://capy.ai/enterprise",
+      "quote": "CUSTOM ENVIRONMENTS: Configure vCPU, RAM, and installed packages per workspace. Run agents in environments that match your production setup.",
+      "note": "'Custom environments' means configuring machine size/packages within Capy's own hosted infrastructure, not deploying Capy into the customer's own cloud account (BYOC); no BYOC option is documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://capy.ai/open-source",
+      "quote": "Open Source Program",
+      "note": "Capy runs an 'Open Source Program' that gives free usage credits to qualifying OSS projects; the Capy product itself is closed-source SaaS with no OSI-license release documented.",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://capy.ai/security",
+      "quote": "SOC 2 Type II: Independently audited controls for security, availability, and confidentiality.",
+      "note": "Security and enterprise pages list SOC 2 Type II, encryption, SSO, and BYOK as compliance/enterprise features but never mention HIPAA eligibility or a BAA.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://capy.ai/subprocessors",
+      "quote": "Amazon Web Services | Cloud infrastructure, storage, encryption, networking, and related services | Customer Content, files, logs, artifacts, operational metadata | United States and other AWS regions as configured",
+      "note": "Processing locations are described generically as 'United States and other regions as configured' with no customer-selectable EU-region residency option documented anywhere on the security, enterprise, or subprocessors pages.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://docs.capy.ai/machines",
+      "quote": "While the agent works, the machine stays awake automatically. ... There is no stop button; an idle machine sleeps on its own within minutes.",
+      "note": "No documented hard cap on continuous active-session length; a machine only sleeps after ~2 minutes of the agent being idle, and can be repeatedly kept alive by ongoing agent work or +5 minute extensions, so there is no stated maximum session duration while work continues.",
+      "checked": "2026-09-30"
+    },
+    "custom_image": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Every machine is an isolated Ubuntu 24.04 VM where the agent has full control: it edits files, runs commands, installs packages, and commits code, all without touching your computer.",
+      "note": "Machines are fixed at Ubuntu 24.04; there is no user-supplied base image / Dockerfile-for-the-VM option. Customization is only via per-project setup scripts (initialize/refresh/startup entries, docs.capy.ai/environment) baked into an optional snapshot for fast boot, not a bring-your-own-image mechanism.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://docs.capy.ai/machines",
+      "quote": "Ask Capy to expose a port and it serves that TCP port at a public URL: the way to open a dev server the agent started. ... The URL works only while the machine is awake.",
+      "note": "Exposing a port only creates a plain public URL at Capy's proxy; the docs describe no IP allowlist, auth gate, or security-group-style control over who can reach that URL (only which ports are reserved: 8000/8080/8100/22222). No ingress access-control feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://docs.capy.ai/integrations/tailscale",
+      "quote": "Capy machines have exactly the access your ACL grants their tag, and nothing else by default. ... \"acls\": [ { \"action\": \"accept\", \"src\": [\"tag:capy\"], \"dst\": [\"internal-db:5432\"] } ]",
+      "note": "Opt-in Tailscale integration: once a project is enabled, machines join the org's tailnet and can reach only the hosts/ports the org's Tailscale ACLs explicitly grant to the machine's tag (a security-group-style allow list). This governs private tailnet destinations only, not a general internet allow/deny/no-internet mode — ordinary public-internet egress from Docker/the VM remains unrestricted per the machines page ('Containers can pull images and reach the public internet').",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://docs.capy.ai/api-reference/overview",
+      "quote": "Read your organization's windowed spend and token totals",
+      "note": "granularity: account-only; cost: yes; The /api/v1/usage endpoint reports organization-level spend and token usage; granularity is account-only, not per-sandbox or per-project.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://capy.ai/subprocessors",
+  "locations_quote": "Amazon Web Services | Cloud infrastructure, storage, encryption, networking, and related services | Customer Content, files, logs, artifacts, operational metadata | United States and other AWS regions as configured",
+  "locations_checked": "2026-10-01"
+}

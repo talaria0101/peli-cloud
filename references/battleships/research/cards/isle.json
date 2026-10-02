@@ -1,0 +1,538 @@
+{
+  "id": "isle",
+  "name": "Isle",
+  "url": "https://www.tryisle.com/",
+  "category": "agent-sandbox",
+  "isolation": null,
+  "modes": [
+    {
+      "key": "native-meter",
+      "label": "Native product meter; not a general-purpose 4-vCPU/8-GiB VM",
+      "flags": [
+        "alt"
+      ],
+      "os": [],
+      "regions": null,
+      "gpu_only": false,
+      "features": {},
+      "pricing": "sizes",
+      "sizes": [],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": null,
+      "granularity_s": null,
+      "start_fee": null,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": null,
+      "gpu": null,
+      "note": "Not auto-rankable for generic VM workloads. Native price and usage limits are preserved in provider rate_cards/extras and regimes. Empty sizes intentionally prevents inventing CPU/RAM capacity or treating missing rates as zero."
+    }
+  ],
+  "storage": {
+    "included_disk_gib": null,
+    "disk_gib_month": null,
+    "disk_billed_when_stopped": null,
+    "snapshot_gib_month": null,
+    "paused_ram_billed": false
+  },
+  "network": {
+    "egress_free_gib": null,
+    "egress_gib": null,
+    "ipv4_month": null,
+    "ipv4_available": null,
+    "internet": {
+      "default": "none",
+      "evidence": [
+        {
+          "quote": "imports, files and installed CLI commands run inside the restricted worker with the shared workspace and no external network access",
+          "url": "https://www.tryisle.com/llms-full.txt"
+        }
+      ]
+    }
+  },
+  "plans": [
+    {
+      "name": "Free",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 1,
+      "max_session_h": 0.5,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "5 environment-hours/month; KiCad and FreeCAD."
+    },
+    {
+      "name": "Developer",
+      "fee": 29,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": 5,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "100 environment-hours/month; no per-session runtime cap; priority support."
+    },
+    {
+      "name": "Enterprise",
+      "fee": null,
+      "flags": [
+        "sales"
+      ],
+      "fee_is_credit": false,
+      "included_usd": null,
+      "per_seat": null,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": "Custom price ('tailored to your workload'); unlimited environment-hours; unlimited concurrency; custom application environments; dedicated support; SLA and uptime guarantees. Contract terms not published."
+    }
+  ],
+  "free": {
+    "one_time_credit": null,
+    "monthly_credit": null
+  },
+  "features": {
+    "linux": null,
+    "windows": false,
+    "macos": false,
+    "arm64": false,
+    "gpu": false,
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": null,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": false,
+    "docker_inside": false,
+    "nested_virt": false,
+    "root": null,
+    "systemd": null,
+    "browser": false,
+    "desktop": true,
+    "computer_use": true,
+    "code_interpreter": true,
+    "agent_harnesses": false,
+    "ssh": false,
+    "public_ipv4": false,
+    "inbound_https": false,
+    "custom_domain": null,
+    "raw_tcp_inbound": null,
+    "egress_allowlist": false,
+    "static_egress_ip": false,
+    "private_network": null,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "soc2": false,
+    "hipaa": false,
+    "sso": false,
+    "gpu_types": [],
+    "regions": [],
+    "lang_python": true,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": false,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": null,
+    "scheduled_wakeups": null,
+    "audit_logs": null,
+    "eu_data_residency": false,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": null,
+    "mcp_server": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "secret_proxy": false,
+    "volume_attach": false,
+    "volume_shared": false,
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "snapshot_auto": false,
+    "own_agent_api": false,
+    "ingress_rules": false,
+    "guest_firewall": false,
+    "max_session_unlimited": true,
+    "open_internet": false,
+    "usage_api": false
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "No CPU/RAM allocation or overage environment-hour price published.",
+    "Developer limit 5 concurrent and 100 included hours does not meet 50 concurrent / 8,800 hours.",
+    "Artifact checkpoint is not evidence of a full memory VM snapshot; state/export support scoped to application workflow.",
+    "Environment containment is not a documented hypervisor isolation type; leave isolation null/unknown.",
+    "Enterprise unlimited claims are contractual, not an entitlement on $29 plan.",
+    "Native billing cannot be reduced to a 4-vCPU/8-GiB price. No matching engine sizes, by design.",
+    "Included environment-hours and concurrency are enforced as account limits: the API returns HTTP 403 when the account usage/concurrency limit is reached. No overage or pay-as-you-go rate is published, so usage stops at 5 h (Free) / 100 h (Developer) per month.",
+    "Sandboxes have no external network access from the execution worker; terminal/browser/package-manager windows are blocked. File transfer is capped at 4 MiB per file; checkpoint workspace/bundle at 256 MiB; recordings at 512 MiB / 6 h."
+  ],
+  "sources": [
+    "https://www.tryisle.com/",
+    "https://www.tryisle.com/llms-full.txt",
+    "https://www.tryisle.com/docs"
+  ],
+  "fleet": {
+    "default_max_instances": 1,
+    "default_max_vcpu": null,
+    "default_max_gpus": null,
+    "raise": "self-serve",
+    "raise_time_days": null,
+    "verification": null,
+    "tiers": "Free 1 environment; Developer 5; Enterprise advertised unlimited via contract.",
+    "notes": "Managed desktop environments, not unlimited generic VM capacity. All target fleet sizes 10/50/300/1,000 exceed Developer and need Enterprise contact.",
+    "sources": [
+      "https://www.tryisle.com/"
+    ],
+    "researched": "2026-09-28"
+  },
+  "audit_2026_09_29": {
+    "applied": 7,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 2
+  },
+  "feature_evidence": {
+    "snapshot_on_demand": {
+      "value": true,
+      "corrected_from": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "POST /sandboxes/{id}/checkpoints, JSON {\"action\":\"checkpoint\"} or {}: local checkpoint metadata plus persisted and persistence_reason.",
+      "note": "sandbox.checkpoint() / POST .../checkpoints lets the caller trigger a checkpoint of the current application state via API at any time, which is exactly an on-demand snapshot (scoped to the saved project workspace, not a full VM memory snapshot, but still on-demand). This resolves the card's own flagged contradiction: snapshot type is 'fs' and pause_resume is true, yet snapshot_on_demand was false. Correct value is true.",
+      "checked": "2026-09-30"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "Keep model-provider credentials in your client process, outside desktop scripts and files.",
+      "note": "The agent runs client-side; Isle exposes screenshot/mouse/keyboard/file primitives plus a persistent Python execution API ('model-neutral'). Codex and GPT Astra are supported only as client-side examples/shell bridge (examples/codex/desktop.py, examples/astra/run.py), not as a harness running inside the environment driven via API. 'An Isle MCP connector is not included.'",
+      "checked": "2026-09-29"
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "Keep model-provider credentials in the client process.",
+      "note": "No secrets feature of any kind (no env vars, no secret store, no proxy); the environment has no external network for agent code, and model keys stay with the client-side agent.",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "Transfers operate on regular files beneath /home/user/work/",
+      "note": "Full REST reference has no volume/storage-attach endpoints; storage is the environment's own /home/user/work workspace, moved via 4 MiB-per-file upload/download.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": null,
+      "note": "No volumes, so no shared volumes.",
+      "checked": "2026-09-29"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "### KiCad (`kicad`) ... ### FreeCAD (`freecad`) ... `isle.sandboxes.create(environment, *, name=None, retain=True, timeout=360.0, idempotency_key=None) -> Sandbox`",
+      "note": "Only two fixed, provider-built application environments (kicad, freecad) can be created; there is no API or docs mention of starting a sandbox from a customer-supplied Docker/OCI image. 'Custom application environments' is listed only as an Enterprise contract item, not a self-serve OCI-image feature.",
+      "checked": "2026-09-30"
+    },
+    "docker_inside": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "imports, files and installed CLI commands run inside the restricted worker with the shared workspace and no external network access.",
+      "note": "not offered: outside the product's scope — a locked-down desktop-application execution worker with no external network access and no documented container runtime inside it.",
+      "checked": "2026-09-30"
+    },
+    "nested_virt": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "not offered: outside the product's scope — a managed CAD/EDA desktop-application sandbox, not a general VM; no /dev/kvm or nested virtualization is documented anywhere.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "not offered: outside the product's scope — Isle runs desktop CAD/EDA applications (KiCad, FreeCAD), not a browser product; no anti-bot/stealth feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "not offered: outside the product's scope — no browser or web-facing surface exists to solve CAPTCHAs against; the environment has no external network access.",
+      "checked": "2026-09-30"
+    },
+    "ssh": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "Use sandbox.capabilities(), sandbox.execution.submit()/get()/wait()/cancel(), and sandbox.screen.observe().",
+      "note": "not offered: outside the product's scope — the entire published surface is screenshot/mouse/keyboard/file/execution APIs; no SSH endpoint or credential is documented anywhere in the SDK or REST reference.",
+      "checked": "2026-09-30"
+    },
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "Save in the desktop application before checkpointing. ... In-memory edits are not captured.",
+      "note": "Checkpointing is manual/on-demand (sandbox.checkpoint()) or invoked around stop, but state is an application artifact bundle, not an automatic full-machine snapshot; unsaved in-memory edits are explicitly not captured.",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "`isle.sandboxes.create(environment, *, name=None, retain=True, timeout=360.0, idempotency_key=None) -> Sandbox` Create a new sandbox.",
+      "note": "No clone/fork endpoint anywhere in the SDK or REST reference; sandboxes are only created fresh from a fixed environment type, stopped, and resumed.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "`isle.sandboxes.create(environment, *, name=None, retain=True, timeout=360.0, idempotency_key=None) -> Sandbox` Create a new sandbox.",
+      "note": "No fork capability at all (see fork), so cloning a running machine is not possible.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "In-memory edits are not captured.",
+      "note": "No fork feature exists, and even the checkpoint/restore mechanism excludes in-memory process state, so no memory-preserving fork/clone is possible.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "sandbox.resume() ... sandbox.stop() ... sandbox.wait_until_stopped()",
+      "note": "Resuming a stopped sandbox requires an explicit SDK/API call (sandbox.resume()); no documented mechanism auto-wakes a stopped sandbox when an inbound request arrives (the product has no inbound network surface at all).",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "not offered: outside the product's scope — Isle does not expose or price CPU/RAM sizing at all (native environment-hour meter, no vCPU/RAM knobs), so there is nothing to live-resize.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "Codex and GPT Astra are supported only as client-side examples/shell bridge (examples/codex/desktop.py, examples/astra/run.py), not as a harness running inside the environment driven via API.",
+      "note": "No coding-agent harness (Claude Code, Codex, OpenCode, etc.) is preinstalled or offered as a template inside the sandbox; example integrations run client-side outside the environment.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "The bridge requires host-side ISLE_API_KEY, invokes no model API, and returns absolute local paths to PNG observations, text, and result evidence.",
+      "note": "Isle exposes primitives (screenshot/mouse/keyboard/file/execution) for the caller's own agent to drive; it does not ship a first-party task/research/browser agent of its own that customers call via API.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "Install the SDK from PyPI. Requires Python 3.9 or later. The package is `isle-sdk`; the Python import is `isle`.",
+      "note": "Only a Python SDK is published; the persistent execution API and default namespace are Python-only (pyautogui, log(), display()). No Node.js SDK or Node runtime inside the sandbox is documented.",
+      "checked": "2026-09-30"
+    },
+    "public_ipv4": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "imports, files and installed CLI commands run inside the restricted worker with the shared workspace and no external network access.",
+      "note": "not offered: outside the product's scope — the sandbox is reached only via the Isle REST API (screenshots/streaming), and its worker has no external network access; no public IPv4 concept exists.",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "`stream_url` (str | None): URL to watch the sandbox's screen live.",
+      "note": "The only URL surface is a provider-hosted screen-stream viewer URL, not a way to expose arbitrary ports/HTTPS on the machine. No inbound HTTPS-to-port feature is documented.",
+      "checked": "2026-09-30"
+    },
+    "ingress_rules": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "not offered: outside the product's scope — there are no exposed ports/services on the machine to control access to; the product is a desktop-application sandbox reached only via the Isle API.",
+      "checked": "2026-09-30"
+    },
+    "egress_allowlist": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "imports, files and installed CLI commands run inside the restricted worker with the shared workspace and no external network access.",
+      "note": "There is no outbound network access at all from the execution worker (a blanket block, not a configurable allow/deny list), so no separate provider-side egress-allowlist feature is offered.",
+      "checked": "2026-09-30"
+    },
+    "egress_http_rules": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "imports, files and installed CLI commands run inside the restricted worker with the shared workspace and no external network access.",
+      "note": "not offered: outside the product's scope — with no outbound network access at all, HTTP method/path-level egress rules do not exist.",
+      "checked": "2026-09-30"
+    },
+    "guest_firewall": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "Sandboxes have no external network access from the execution worker; terminal/browser/package-manager windows are blocked.",
+      "note": "root/shell access is not offered (ssh/root are null/false and terminal windows are explicitly blocked), so there is no way to configure nftables/iptables inside the guest.",
+      "checked": "2026-09-30"
+    },
+    "static_egress_ip": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "imports, files and installed CLI commands run inside the restricted worker with the shared workspace and no external network access.",
+      "note": "not offered: outside the product's scope — no outbound network access exists from the sandboxed worker, so there is no outbound IP of any kind to make static.",
+      "checked": "2026-09-30"
+    },
+    "gpu": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "not offered: outside the product's scope — a managed CAD/EDA desktop sandbox with a fixed native environment-hour meter and no GPU pricing/type ever mentioned on pricing or docs pages.",
+      "checked": "2026-09-30"
+    },
+    "windows": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "KiCad expects /home/user/work/project.kicad_pro ... FreeCAD expects /home/user/work/project.FCStd",
+      "note": "not offered: outside the product's scope — filesystem paths and worker behavior described throughout the docs are Linux-style (/home/user/work); no Windows machine option is offered.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "not offered: outside the product's scope — only two fixed Linux-hosted application environments (KiCad, FreeCAD) are offered; no macOS machine option is documented.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed application environments for computer-use agents. Launch KiCad and FreeCAD with built-in guardrails, artifact checkpoints, and automatic recovery.",
+      "note": "Isle is offered only as a managed, hosted service with monthly/enterprise plans and a REST API at www.tryisle.com; no self-hosting package or on-prem deployment option is documented.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Custom price ('tailored to your workload'); unlimited environment-hours; unlimited concurrency; custom application environments; dedicated support; SLA and uptime guarantees. Contract terms not published.",
+      "note": "Even the Enterprise tier is described as a custom contract on Isle's own infrastructure ('custom application environments'), not deployment into the customer's own cloud account; no BYOC option is documented.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "arc-cua",
+      "note": "The only public GitHub link from the site (github.com/shhivv/arc-cua) is a linked project/example repo, not the core Isle sandbox product; no OSI license is claimed for the core service.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "5 environment-hours/month 30 minute environment runtime 1 concurrent environment ... 100 environment-hours/month No per-session runtime cap 5 concurrent environments",
+      "note": "Only a hard per-session runtime cap (Free plan, 30 min) and an explicit sandbox.stop()/resume() API are documented; no idle-detection auto-stop behavior is described for any plan.",
+      "checked": "2026-09-30"
+    },
+    "arm64": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "Managed desktop environments for computer-use agents, with guardrails, application monitoring, and artifact checkpoints built in.",
+      "note": "not offered: outside the product's scope. Isle offers only two fixed application environments (KiCad, FreeCAD) with no customer-selectable machine/CPU architecture anywhere in the docs, SDK, or pricing pages.",
+      "checked": "2026-09-30"
+    },
+    "soc2": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "ENTERPRISE Custom tailored to your workload Unlimited environment-hours Unlimited concurrency Custom application environments Dedicated support SLA and uptime guarantees",
+      "note": "No SOC 2 attestation is mentioned anywhere on the site, docs, or the Enterprise tier's feature list (which does list 'SLA and uptime guarantees' but nothing about compliance certifications). No trust/security/compliance page exists (tryisle.com/security, /trust, /compliance all 404).",
+      "checked": "2026-09-30"
+    },
+    "hipaa": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "ENTERPRISE Custom tailored to your workload Unlimited environment-hours Unlimited concurrency Custom application environments Dedicated support SLA and uptime guarantees",
+      "note": "No HIPAA/BAA mention anywhere on the site, docs, or Enterprise tier feature list; no security/compliance page exists (404s at /security, /trust, /compliance).",
+      "checked": "2026-09-30"
+    },
+    "sso": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs",
+      "quote": "Set your API key: export ISLE_API_KEY=isle_...",
+      "note": "Authentication throughout the docs and REST reference is a single bearer API key created at tryisle.com/api-keys; no SAML/OIDC or team SSO login is documented anywhere, including on the Enterprise tier's feature list.",
+      "checked": "2026-09-30"
+    },
+    "eu_data_residency": {
+      "value": false,
+      "source": "https://www.tryisle.com/",
+      "quote": "ENTERPRISE Custom tailored to your workload Unlimited environment-hours Unlimited concurrency Custom application environments Dedicated support SLA and uptime guarantees",
+      "note": "No regions or region selection are mentioned anywhere on the site, docs, or REST reference (card's own features.regions is empty); there is no documented way to choose or pin a region, EU or otherwise.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://www.tryisle.com/",
+      "quote": "100 environment-hours/month No per-session runtime cap 5 concurrent environments KiCad and FreeCAD Priority support",
+      "note": "Free plan is capped at 30 minutes/session, but the paid Developer plan (and by extension Enterprise) explicitly has 'No per-session runtime cap', so a session can run until stopped or the monthly environment-hour allowance is exhausted.",
+      "checked": "2026-09-30"
+    },
+    "browser": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "Isle provides managed sandbox environments running real desktop applications (KiCad and FreeCAD) that AI agents can control via screenshots, mouse, keyboard, and file transfer.",
+      "note": "Environment types are only 'kicad' and 'freecad' (isle.sandboxes.create(environment) accepts only those two); there is no browser environment or managed browser product. 'use your own backend for browser integrations' confirms no first-party browser is offered.",
+      "checked": "2026-09-30"
+    },
+    "custom_image": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "`environment` (str): Environment type (`\"kicad\"` or `\"freecad\"`).",
+      "note": "Sandbox creation only accepts the two fixed native application environments (KiCad, FreeCAD); there is no way to supply a custom Docker/OCI or other custom image.",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": false,
+      "source": "https://www.tryisle.com/llms-full.txt",
+      "quote": "An Isle MCP connector is not included.",
+      "note": "Explicit statement that Isle does not ship an MCP server/connector for controlling its sandboxes.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": false,
+      "source": "https://www.tryisle.com/docs/rest",
+      "quote": "All endpoints use owner authentication and a running environment. Sandbox fields: id, name, environment, status, stream_url, retain, recording_url, recording_truncated, recording_truncation_reason, session_limit_minutes, session_ttl_seconds, recovery_attempts, created_at, started_at, stopped_at, las",
+      "note": "granularity: account-only; cost: no; Isle's REST API provides full sandbox lifecycle and monitoring endpoints (screenshots, input, files, checkpoints, events, recordings, provider-deletion tracking), but no endpoint to query billable usage for a specific sandbox. Billing is account-level only, enforced as environment-hours limits per month (Free: 5 hours, Developer: 100 hours, Enterprise: custom/unlimited). The dashboard and invoice may show account usage, but the documented public API has no usage/cost query method.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [],
+  "locations_source": "https://www.tryisle.com/llms-full.txt",
+  "locations_quote": "Managed sandbox environments running real desktop applications (KiCad and FreeCAD) that AI agents can control via screenshots, mouse, keyboard, and file transfer.",
+  "locations_checked": "2026-10-01"
+}

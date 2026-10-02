@@ -1,0 +1,1242 @@
+{
+  "id": "azure-windows",
+  "name": "Azure Virtual Machines (Windows Server)",
+  "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+  "category": "windows",
+  "isolation": "vm",
+  "modes": [
+    {
+      "key": "on-demand",
+      "label": "Pay-as-you-go D/F-series + Windows licence (East US)",
+      "flags": [],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Standard_F2s_v2",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.085,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D2as_v5",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.086,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D2s_v5",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.096,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_F4s_v2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.17,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D4as_v5",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.172,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D4s_v5",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.192,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_F8s_v2",
+          "vcpu": 8,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.34,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D8s_v5",
+          "vcpu": 8,
+          "ram_gib": 32,
+          "disk_gib": 0,
+          "hour": 0.384,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D16s_v5",
+          "vcpu": 16,
+          "ram_gib": 64,
+          "disk_gib": 0,
+          "hour": 0.768,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D32s_v5",
+          "vcpu": 32,
+          "ram_gib": 128,
+          "disk_gib": 0,
+          "hour": 1.536,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D48s_v5",
+          "vcpu": 48,
+          "ram_gib": 192,
+          "disk_gib": 0,
+          "hour": 2.304,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D64s_v5",
+          "vcpu": 64,
+          "ram_gib": 256,
+          "disk_gib": 0,
+          "hour": 3.072,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D96s_v5",
+          "vcpu": 96,
+          "ram_gib": 384,
+          "disk_gib": 0,
+          "hour": 4.608,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_D4als_v7",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.161,
+          "month_cap": null,
+          "note": "Add $0.046/vCPU-h Windows licence from this mode: exact Windows East US PAYG total $0.345/h."
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.046,
+      "gpu": null,
+      "note": "Retail Prices API (eastus, Consumption) 2026-09-28. D-series: hour = Linux price and Windows = +$0.046/vCPU-h exactly (D4s_v5 0.192 -> 0.376). F-series v2: Windows prices 0.177/0.354/0.708 (Linux 0.0846/0.169/0.338), so hour here = Windows price - 0.046*vCPU to keep the Windows total exact. Azure bills full minutes only (6 min 45 s -> 6 min). 'Stopped' (not deallocated) still bills cores.",
+      "cpu_class": "dedicated"
+    },
+    {
+      "key": "shared-burstable",
+      "label": "B-series burstable + Windows licence (East US)",
+      "flags": [
+        "burstable"
+      ],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "vcpu_h": null,
+      "ram_gib_h": null,
+      "cpu_basis": "alloc",
+      "ram_basis": "alloc",
+      "active_floor": 0,
+      "ram_per_vcpu": [
+        null,
+        null
+      ],
+      "ram_fixed_per_vcpu": null,
+      "vcpu_options": null,
+      "min_vcpu": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes": [
+        {
+          "name": "Standard_B2s",
+          "vcpu": 2,
+          "ram_gib": 4,
+          "disk_gib": 0,
+          "hour": 0.0416,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_B2ms",
+          "vcpu": 2,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.0832,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_B4ms",
+          "vcpu": 4,
+          "ram_gib": 16,
+          "disk_gib": 0,
+          "hour": 0.166,
+          "month_cap": null
+        },
+        {
+          "name": "Standard_B4als_v2",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.136,
+          "month_cap": null,
+          "note": "Adjusted base so the existing +$0.004/vCPU-h field yields the exact Windows total $0.152/h; actual Linux meter is $0.133/h."
+        }
+      ],
+      "pool_tiers": null,
+      "requires_always_on": false,
+      "always_on_month_per_instance": null,
+      "commit_note": null,
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "start_fee": 0,
+      "boot_overhead_s": null,
+      "multiplier": 1,
+      "windows_vcpu_h": 0.004,
+      "gpu": null,
+      "note": "B-series Windows surcharge is only +$0.004/vCPU-h (B2s 0.0416 -> 0.0496, B2ms 0.0832 -> 0.0912, B4ms 0.166 -> 0.182). Burstable CPU credits: sustained high CPU is throttled to baseline.",
+      "cpu_class": "shared",
+      "baseline_pct": 20
+    },
+    {
+      "key": "spot",
+      "label": "Azure Spot VM (representative East US)",
+      "flags": [
+        "spot"
+      ],
+      "os": [
+        "windows"
+      ],
+      "pricing": "sizes",
+      "sizes": [
+        {
+          "name": "Standard_D4als_v7",
+          "vcpu": 4,
+          "ram_gib": 8,
+          "disk_gib": 0,
+          "hour": 0.06693,
+          "month_cap": null
+        }
+      ],
+      "min_billed_seconds": 0,
+      "granularity_s": 1,
+      "note": "Variable price observed in official API; no SLA; can be evicted with 30 seconds notice.",
+      "cpu_class": "dedicated"
+    }
+  ],
+  "storage": {
+    "included_disk_gib": 0,
+    "disk_gib_month": 0.075,
+    "disk_billed_when_stopped": true,
+    "snapshot_gib_month": 0.05,
+    "paused_ram_billed": false,
+    "billing_note": "Managed disks are billed by provisioned tier, rounded up to the next offered disk size, and prorated hourly; Standard SSD also charges transactions up to a per-tier hourly cap. The linear $0.075/GiB-month card field is only exact at tier boundaries."
+  },
+  "network": {
+    "egress_free_gib": 100,
+    "egress_gib": 0.087,
+    "ipv4_month": 3.65,
+    "ipv4_available": true,
+    "ipv4_billing_note": "Standard static IPv4 is charged regardless of the attached VM state; each partial IP hour is a full billed hour. Static IP billing starts in the second hour after creation and ends only when the IP resource is deleted.",
+    "internet": {
+      "default": "full"
+    }
+  },
+  "plans": [
+    {
+      "name": "Pay-as-you-go subscription (no plan fee)",
+      "fee": 0,
+      "flags": [],
+      "fee_is_credit": false,
+      "included_usd": 0,
+      "per_seat": 0,
+      "concurrency": null,
+      "max_session_h": null,
+      "max_vcpu": null,
+      "max_ram_gib": null,
+      "sizes_allowed": null,
+      "note": ""
+    }
+  ],
+  "free": {
+    "monthly_credit": 0,
+    "one_time_credit": 200,
+    "credit_expiry_days": 30,
+    "conditions": "Free-account signup requires phone number, Microsoft or GitHub account, and non-prepaid credit/debit card; upgrade to pay-as-you-go within 30 days or after credit is used to continue. Credit cannot buy Spot VMs and cannot combine with Azure Hybrid Benefit."
+  },
+  "features": {
+    "linux": true,
+    "windows": true,
+    "macos": false,
+    "arm64": true,
+    "gpu": true,
+    "gpu_types": [],
+    "snapshot": "fs",
+    "pause_resume": true,
+    "fork": false,
+    "persistent_disk": true,
+    "volumes": true,
+    "auto_stop_idle": false,
+    "max_session_h": null,
+    "custom_image": true,
+    "docker_inside": true,
+    "nested_virt": true,
+    "root": true,
+    "systemd": false,
+    "browser": true,
+    "desktop": true,
+    "computer_use": false,
+    "code_interpreter": false,
+    "agent_harnesses": false,
+    "ssh": true,
+    "public_ipv4": true,
+    "inbound_https": false,
+    "custom_domain": true,
+    "raw_tcp_inbound": true,
+    "egress_allowlist": true,
+    "static_egress_ip": true,
+    "private_network": true,
+    "self_host": false,
+    "byoc": false,
+    "open_source": false,
+    "regions": [
+      "us",
+      "other",
+      "eu",
+      "asia"
+    ],
+    "soc2": true,
+    "hipaa": true,
+    "sso": true,
+    "lang_python": false,
+    "lang_node": false,
+    "lang_go": null,
+    "lang_rust": null,
+    "lang_java": null,
+    "gpu_desktop": null,
+    "credential_injection": null,
+    "egress_http_rules": true,
+    "wake_on_request": false,
+    "live_resize": false,
+    "fork_running": false,
+    "memory_snapshot_fork": false,
+    "webhooks": true,
+    "scheduled_wakeups": null,
+    "audit_logs": true,
+    "eu_data_residency": true,
+    "zero_data_retention": null,
+    "scoped_api_keys": null,
+    "spend_limits": true,
+    "mcp_server": true,
+    "snapshot_auto": false,
+    "snapshot_on_demand": true,
+    "harness_api": false,
+    "egress_allowlist_level": "both",
+    "ingress_rules": true,
+    "guest_firewall": true,
+    "secret_proxy": false,
+    "volume_attach": true,
+    "volume_shared": true,
+    "isolation": "hyper-v",
+    "image_oci": false,
+    "anti_bot": false,
+    "captcha_solving": false,
+    "egress_ip_type": "static-datacenter",
+    "own_agent_api": false,
+    "max_session_unlimited": true,
+    "open_internet": true,
+    "usage_api": true
+  },
+  "perf": {
+    "cpu_runs_s": null,
+    "cold_start_ms": null,
+    "burst_tti_ms": null,
+    "dax_s": null
+  },
+  "knobs": [],
+  "caveats": [
+    "Disk: Standard SSD E10 (128 GiB) = $9.60/month -> $0.075/GiB-month; Windows OS disks default to 127 GiB and are billed per provisioned tier even when deallocated. Premium SSD P10 = $19.71/month.",
+    "Snapshots/images: $0.05/GB-month on Standard LRS/ZRS based on used data; $0.12/GB-month when stored on Premium SSD. Incremental snapshots bill changed blocks.",
+    "Egress: first 100 GB/month free, then $0.087/GB (Microsoft network routing, first 10 TB); $0.08/GB with Internet routing preference.",
+    "IPv4: Standard static public IP $0.005/h = $3.65/month.",
+    "Azure Hybrid Benefit (BYO licence) removes the Windows surcharge; reservations / savings plan / Spot not encoded.",
+    "Free account: $200 credit for 30 days (encoded as one_time_credit) and 750 h/month of B2ts/B2pts/B2ats v2 for 12 months (not encoded).",
+    "The modeled rates are Windows Server, but Azure also permits Windows 11 VMs: eligible Windows 11 Enterprise E3/E5 or Azure Virtual Desktop Access users can bring licenses for production; Student/Free Trial and eligible Visual Studio offers can deploy Windows 11 for dev/test.",
+    "Hibernation is real memory-preserving pause/resume, but only selected D/E v5 families up to 64 GiB and selected GPU families up to 112 GiB support it; F-series and B-series sizes modeled in the card do not. Hibernated VMs stop compute billing but retain OS/data disk and networking charges; OS disk must be large enough for RAM.",
+    "Reserved VM Instances (1y/3y) and savings plans discount compute only; the Windows licence stays pay-as-you-go ($0.184/h on D4s_v5). Example D4s_v5 East US: Linux RI $1,038/1y or $1,993/3y; Linux savings plan $0.1316736/h (1y), $0.0883584/h (3y). Not encoded.",
+    "Egress after the first 100 GB/month: $0.087/GB from North America/Europe (encoded), $0.12/GB from Asia/Australia/Middle East-Africa, $0.181/GB from South America (first 10 TB).",
+    "The general Azure Free page currently says B1s, B2pts v2, and B2ats v2, while the Windows VM pricing page says B2ts v2, B2pts v2, and B2ats v2. The Intel SKU is inconsistent across Microsoft pages and should not be normalized without account-level confirmation."
+  ],
+  "sources": [
+    "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+    "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Virtual Machines' and armRegionName eq 'eastus'",
+    "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Bandwidth' and armRegionName eq 'eastus'",
+    "https://prices.azure.com/api/retail/prices?$filter=serviceName eq 'Storage' and armRegionName eq 'eastus'"
+  ],
+  "fleet": {
+    "default_max_instances": null,
+    "default_max_vcpu": 20,
+    "default_max_gpus": null,
+    "raise": "ticket",
+    "raise_time_days": null,
+    "verification": "Azure signup uses phone and non-prepaid card for identity verification.",
+    "tiers": null,
+    "notes": "Regional total vCPU and VM-family vCPU quotas both apply, plus VM-count quotas. Applied values depend on subscription/region; no universal fresh-account numeric quota verified. Portal quota request may require review. GPU capacity is not guaranteed by approval.",
+    "sources": [
+      "https://learn.microsoft.com/en-us/azure/virtual-machines/quotas",
+      "https://azure.microsoft.com/free/",
+      "https://azure.microsoft.com/free/"
+    ],
+    "researched": "2026-09-28",
+    "vm_resource_limit_per_region": 25000,
+    "quota_mechanics": "Both Total Regional vCPU and VM-family vCPU quotas apply; allocated and deallocated VMs count. Spot has a separate pool. Quota increases use a support request, and approved quota does not guarantee capacity."
+  },
+  "audit_2026_09_29": {
+    "applied": 16,
+    "source": "checked against the provider's live pricing and docs pages",
+    "reviewed": 5
+  },
+  "feature_evidence": {
+    "snapshot_auto": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing",
+      "quote": "The virtual machine has released the lease on the underlying hardware. If the machine is powered off it is shown as Stopped (Deallocated). If it has entered hibernation it is shown as Hibernated (Deallocated)",
+      "note": "Stop/deallocate keeps the managed OS/data disks (persistent disk), and memory is only preserved if you explicitly hibernate (an API/portal action, not automatic on idle/stop). No idle auto-stop-with-snapshot. Azure Backup (scheduled daily/hourly policies, snapshot then vault copy) and scheduled restore-point collections are scheduled backups, not this.",
+      "checked": "2026-09-29"
+    },
+    "snapshot_on_demand": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk",
+      "quote": "To recover by using a snapshot, create a managed disk from the snapshot. Then use the managed disk as the OS disk for a new VM or attach it as a data disk to an existing VM.",
+      "note": "Managed-disk snapshots (full or incremental, portal/CLI/PowerShell/REST) of OS or data disks, running or stopped; disk only, no memory. New VMs can boot from them (also via VM restore points, which capture VM config plus all disks, and Azure Compute Gallery images). Memory state only via hibernation ('Azure stores the memory contents of the VM in the OS disk, then deallocates the VM'), which resumes the same VM and cannot be forked.",
+      "checked": "2026-09-29"
+    },
+    "harness_api": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/run-command",
+      "quote": "The Run Command feature uses the virtual machine (VM) agent to run PowerShell scripts within an Azure Windows VM.",
+      "note": "Only generic script execution (Run Command, Custom Script Extension); no first-party API to drive an agent harness inside the VM.",
+      "checked": "2026-09-29"
+    },
+    "egress_allowlist": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview",
+      "quote": "A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.",
+      "note": "NSG outbound rules = IP/CIDR/port/protocol/service-tag level (default AllowInternetOutBound can be overridden with deny rules), free. Domain level needs Azure Firewall (separate paid service, traffic routed via UDR): 'Application FQDN filtering rules: You can limit outbound HTTP/S traffic or Azure SQL traffic to a specified list of fully qualified domain names (FQDN) including wild cards.' Both enforced outside the guest.",
+      "checked": "2026-09-29",
+      "level": "both"
+    },
+    "egress_http_rules": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/firewall/premium-features",
+      "quote": "URL filtering extends Azure Firewall’s FQDN filtering capability to consider the entire URL, such as www.contoso.com/a/c instead of just www.contoso.com.",
+      "note": "Azure Firewall Premium only (URL path filtering, HTTPS requires TLS inspection; also URL-based web categories and IDPS). No documented method- or header-based allow rules for egress. Standard SKU: 'URL filtering: Not supported (FQDN filtering only)'.",
+      "checked": "2026-09-29"
+    },
+    "ingress_rules": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview",
+      "quote": "You can specify Any, an individual IP address, a CIDR block (for example, 10.0.0.0/24), a service tag, or an application security group.",
+      "note": "NSG inbound rules on NIC/subnet (default DenyAllInbound from Internet), public IP optional, plus Azure Firewall DNAT, Bastion, JIT VM access.",
+      "checked": "2026-09-29"
+    },
+    "guest_firewall": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/guest-os-firewall-blocking-inbound-traffic",
+      "quote": "The guest system firewall profiles are set up to block all inbound connections, including the RDP traffic.",
+      "note": "Full Hyper-V VM with Administrator; Windows Defender Firewall inside the guest is configurable and takes effect (Microsoft troubleshooting docs cover it blocking RDP). Windows equivalent of nftables/iptables.",
+      "checked": "2026-09-29",
+      "derived": true
+    },
+    "secret_proxy": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/key-vault-windows",
+      "quote": "When it detects a change, the extension retrieves and installs the corresponding certificates.",
+      "note": "Secrets reach the VM: Key Vault (read by the VM via managed identity tokens from IMDS) and the Key Vault VM extension install certificates into the guest. No first-party proxy that injects credentials into outbound requests (Azure API Management/App Gateway are separate and not VM egress proxies).",
+      "checked": "2026-09-29"
+    },
+    "volume_attach": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/attach-managed-disk-portal",
+      "quote": "This article shows you how to attach a new managed data disk to a Windows virtual machine (VM) by using the Azure portal.",
+      "note": "Managed data disks (Standard HDD/SSD, Premium SSD, Premium SSD v2, Ultra), hot-attachable; count limited by VM size.",
+      "checked": "2026-09-29"
+    },
+    "volume_shared": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-shared",
+      "quote": "Azure shared disks is a feature for Azure managed disks that allows you to attach a managed disk to multiple virtual machines (VMs) simultaneously.",
+      "note": "Shared managed disks (maxShares>1; Ultra, Premium SSD v2, Premium SSD, Standard SSD) are block-level read-write for all nodes but need a cluster manager (e.g. Windows Server Failover Cluster / SCSI PR) to coordinate writes. Simpler multi-VM read-write shared filesystem: Azure Files SMB shares mounted on Windows ('This article shows you how to mount an SMB Azure file share on Windows and Windows Server.').",
+      "checked": "2026-09-29"
+    },
+    "isolation": {
+      "value": "hyper-v",
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/overview",
+      "quote": "Azure virtual machines... run on the Hyper-V hypervisor",
+      "note": "Azure IaaS VMs (including the Windows Server D/F-series sizes modeled) run on Microsoft's Hyper-V hypervisor; each customer VM is a full Hyper-V guest partition, not a container or microVM.",
+      "checked": "2026-09-30"
+    },
+    "image_oci": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource",
+      "quote": "Create a legacy managed image of the VM with az image create. Creating a legacy managed image directly from the VM ensures that the image includes all of the disks associated with the VM, including the OS disk and any data disks.",
+      "note": "not offered: outside the product's scope. Azure VM custom images are captured/created as managed-disk (VHD) images from an existing VM or uploaded VHD/generalized image via Azure Compute Gallery; there is no mechanism to boot a VM directly from a Docker/OCI container image.",
+      "checked": "2026-09-30"
+    },
+    "anti_bot": {
+      "value": false,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+      "quote": "Provision Windows and Linux virtual machines in seconds and get root or administrator access to fully support your evolving workload needs.",
+      "note": "not offered: outside the product's scope. Azure Windows VMs are general-purpose IaaS compute; there is no built-in browser stealth/anti-fingerprinting feature.",
+      "checked": "2026-09-30"
+    },
+    "captcha_solving": {
+      "value": false,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+      "quote": "Provision Windows and Linux virtual machines in seconds and get root or administrator access to fully support your evolving workload needs.",
+      "note": "not offered: outside the product's scope. A generic IaaS VM has no built-in CAPTCHA-solving capability.",
+      "checked": "2026-09-30"
+    },
+    "egress_ip_type": {
+      "value": "static-datacenter",
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses",
+      "quote": "Static - The resource is assigned an IP address at the time it's created... Azure assigns the IP address from a pool of available IP addresses in the Azure location the resource is created in.",
+      "note": "Standard public IPs are allocated from Azure's own datacenter IP pools (no residential/mobile IPs); a Standard SKU public IP can be set to Static allocation, matching the card's static_egress_ip:true.",
+      "checked": "2026-09-30"
+    },
+    "wake_on_request": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/states-billing",
+      "quote": "The virtual machine has released the lease on the underlying hardware. If the machine is powered off it is shown as Stopped (Deallocated).",
+      "note": "not offered: outside the product's scope. A stopped/deallocated Azure VM must be explicitly started via API/portal/CLI/schedule; there is no serverless-style mechanism that wakes the VM automatically when a network request arrives at it.",
+      "checked": "2026-09-30"
+    },
+    "live_resize": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/resize-vm",
+      "quote": "Even when deallocation isn’t required, changing the size of a running VM will cause it to restart. For this reason, resizing a VM should be considered a disruptive operation, especially for stateful workloads.",
+      "note": "Resizing always restarts the VM (or requires deallocation first); CPU/RAM cannot be changed on a running VM without a restart.",
+      "checked": "2026-09-30"
+    },
+    "own_agent_api": {
+      "value": false,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+      "quote": "Provision Windows and Linux virtual machines in seconds and get root or administrator access to fully support your evolving workload needs.",
+      "note": "not offered: outside the product's scope. Azure VMs are generic compute; there is no first-party browser/computer-use/research task agent shipped with the product (Run Command / Custom Script Extension only run arbitrary scripts, not a provider-owned agent).",
+      "checked": "2026-09-30"
+    },
+    "mcp_server": {
+      "value": true,
+      "source": "https://raw.githubusercontent.com/microsoft/mcp/main/servers/Azure.Mcp.Server/README.md",
+      "quote": "All Azure MCP tools in a single server. The Azure MCP Server implements the [MCP specification](https://modelcontextprotocol.io) to create a seamless connection between AI agents and Azure services.",
+      "note": "Microsoft ships an official Azure MCP Server (open source, github.com/microsoft/mcp) exposing Azure resource operations, including Azure Compute/VM management, to MCP clients.",
+      "checked": "2026-09-30"
+    },
+    "lang_python": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal",
+      "quote": "This quickstart shows you how to use the Azure portal to deploy a virtual machine (VM) in Azure that runs Windows Server 2022 Datacenter. To see your VM in action, you then RDP to the VM and install the IIS web server.",
+      "note": "not offered: outside the product's scope. The base Windows Server marketplace image is a bare OS image; even a basic web server (IIS) must be installed manually after deployment, and Python is not part of the default image and must be installed by the customer.",
+      "checked": "2026-09-30"
+    },
+    "lang_node": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal",
+      "quote": "This quickstart shows you how to use the Azure portal to deploy a virtual machine (VM) in Azure that runs Windows Server 2022 Datacenter. To see your VM in action, you then RDP to the VM and install the IIS web server.",
+      "note": "not offered: outside the product's scope. Same base Windows Server image; Node.js is not preinstalled and must be installed by the customer after deployment.",
+      "checked": "2026-09-30"
+    },
+    "max_session_h": {
+      "value": "none",
+      "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+      "quote": "Provision Windows and Linux virtual machines in seconds and get root or administrator access to fully support your evolving workload needs.",
+      "note": "An IaaS VM (non-Spot) runs indefinitely until the customer stops/deallocates or deletes it; there is no maximum-session/forced-stop time limit for the on-demand pay-as-you-go product modeled by this card (Spot VMs can be evicted but that is a separate mode, not the base max_session_h).",
+      "checked": "2026-09-30"
+    },
+    "fork": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk",
+      "quote": "To recover by using a snapshot, create a managed disk from the snapshot. Then use the managed disk as the OS disk for a new VM or attach it as a data disk to an existing VM.",
+      "note": "Azure's only way to duplicate a VM is create a disk snapshot/image, then provision a brand-new VM from it (a separate, multi-step create operation) - there is no one-call 'fork this machine' API. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "fork_running": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk",
+      "quote": "To recover by using a snapshot, create a managed disk from the snapshot. Then use the managed disk as the OS disk for a new VM or attach it as a data disk to an existing VM.",
+      "note": "Cloning always goes through a disk snapshot -> new managed disk -> new VM create; there is no documented mechanism to clone a VM while it keeps running. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "memory_snapshot_fork": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk",
+      "quote": "To recover by using a snapshot, create a managed disk from the snapshot. Then use the managed disk as the OS disk for a new VM or attach it as a data disk to an existing VM.",
+      "note": "Managed-disk snapshots capture disk contents only. Azure's only memory-preserving mechanism is hibernation, which resumes the SAME VM (not a new forked copy); there is no first-party way to spin up a new, independent VM with the old VM's memory/process state. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "computer_use": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/overview",
+      "quote": "An Azure virtual machine gives you the flexibility of virtualization without having to buy and maintain the physical hardware that runs it. However, you still need to maintain the virtual machine by performing tasks, such as configuring, patching, and installing the software that runs on it.",
+      "note": "Azure VMs are plain IaaS: Microsoft supplies the OS/hardware virtualization only, and the customer installs and manages any software. There is no first-party API that drives the desktop via screenshots+clicks (an agent 'computer use' loop) - that would be third-party software the customer installs. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "auto_stop_idle": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/auto-shutdown-vm",
+      "quote": "In the \"Auto-shutdown\" configuration screen, toggle the switch to \"On.\" Set the time you want the virtual machine to shut down.",
+      "note": "Azure's built-in 'auto-shutdown' is a fixed daily clock time, not idle/activity detection. There is no first-party feature that stops a VM automatically because it has been idle. Confirms false (the existing feature is schedule-based, not idle-based).",
+      "checked": "2026-09-30"
+    },
+    "inbound_https": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview",
+      "quote": "A network security group contains security rules that allow or deny inbound network traffic to, or outbound network traffic from, several types of Azure resources.",
+      "note": "A Windows VM only gets a raw public IPv4 and NSG port rules (already captured by public_ipv4/raw_tcp_inbound=true); Azure does not hand you a managed HTTPS URL/TLS termination for the VM the way PaaS services (App Service, Front Door, Application Gateway) do - you must deploy and operate that yourself. Confirms false for a first-party managed HTTPS endpoint.",
+      "checked": "2026-09-30"
+    },
+    "agent_harnesses": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/windows/run-command",
+      "quote": "The Run Command feature uses the virtual machine (VM) agent to run PowerShell scripts within an Azure Windows VM.",
+      "note": "The only first-party in-guest automation is generic script execution (Run Command / Custom Script Extension); Microsoft ships no preinstalled coding-agent harness (Claude Code, Codex, OpenCode, etc.) or agent template images for Windows VMs. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "macos": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros",
+      "quote": "There are several different sources of Linux Virtual Machine (VM) images for Azure. ... images provided in partnership between Microsoft and several mainstream Linux publishers such as Red Hat, Canonical, and SUSE.",
+      "note": "Azure's supported guest operating systems for Virtual Machines are Windows Server/Windows client and the endorsed Linux distributions; Azure runs on Microsoft Hyper-V on non-Apple hardware, so macOS guests (which require Apple hardware/licensing) are plainly outside what this Windows/Linux VM product offers. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "self_host": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/overview",
+      "quote": "An Azure virtual machine gives you the flexibility of virtualization without having to buy and maintain the physical hardware that runs it.",
+      "note": "Azure VMs run only inside Microsoft's own Azure datacenters/regions; there is no distributable software package a customer can install and run on their own infrastructure. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "byoc": {
+      "value": false,
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/overview",
+      "quote": "An Azure virtual machine gives you the flexibility of virtualization without having to buy and maintain the physical hardware that runs it.",
+      "note": "Azure IS the cloud account/infrastructure itself (Microsoft-owned regions); there is no offering to deploy the Azure VM service into a customer's own AWS/GCP/other cloud account. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "open_source": {
+      "value": false,
+      "source": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+      "quote": "Pricing - Windows Virtual Machines | Microsoft Azure",
+      "note": "Azure Virtual Machines is a proprietary, metered commercial cloud service (billed per-hour as shown on this pricing page); Microsoft does not publish the VM service (hypervisor/control plane) under an OSI open-source license. Confirms false.",
+      "checked": "2026-09-30"
+    },
+    "cpu_class": {
+      "value": {
+        "on-demand": "dedicated",
+        "shared-burstable": "burstable:20",
+        "spot": "dedicated"
+      },
+      "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes-b-series-burstable",
+      "quote": "The B-series provides you with the ability to purchase a VM size with baseline performance that can build up credits when its using less than its baseline. When the VM has accumulated credits, the VM can burst above the baseline using up to 100% of the vCPU when your application requires higher CPU performance.",
+      "note": "Only the B-series (this card's 'shared-burstable' mode) is described by Azure as burstable/credit-based; published per-size baselines from the Bv1/Bv2 size docs: Standard_B2s 20%, Standard_B2ms 30%, Standard_B4ms 22.5%, Standard_B4als_v2 30%. Since sizes in this mode have mixed baselines, the lowest published baseline (Standard_B2s, 20%) is used as the representative value per the field's single-string-per-mode format; see per-size baselines in this note. The on-demand mode (D/F-series, e.g. Standard_D2s_v5, Standard_F2s_v2) and the spot mode (Standard_D4als_v7) are Azure's general-purpose/compute-optimized families, which are documented separately from the B-series burstable/credit model and receive dedicated, non-oversubscribed vCPU allocation with no CPU-credit throttling; no Azure doc describes them as shared or burstable, so they are classed dedicated by exclusion from the B-series burstable definition.",
+      "checked": "2026-09-30"
+    },
+    "usage_api": {
+      "value": true,
+      "source": "https://learn.microsoft.com/en-us/rest/api/cost-management/query",
+      "quote": "The Query API retrieves detailed cost and usage data for any scope by filtering on dimensions and grouping by dimensions. You can query costs by resource ID, subscription, resource group, tags, and other properties.",
+      "note": "granularity: per-sandbox; cost: yes; Azure Cost Management / Billing API's Query endpoint returns billable usage quantities (meter quantities) and costs, filterable by resource (per-VM), tags, or grouping by various dimensions including resource ID. Supports both consumption-based querying (Consumption API, deprecated) and modern Cost Management.",
+      "confidence": "high",
+      "checked": "2026-10-01"
+    }
+  },
+  "locations": [
+    {
+      "country": "US",
+      "state": "GA",
+      "city": "Atlanta",
+      "provider_region": "attatlanta1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "Dallas",
+      "provider_region": "attdallas1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "MI",
+      "city": "Detroit",
+      "provider_region": "attdetroit1",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "NT",
+      "city": "Canberra",
+      "provider_region": "australiacentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "NT",
+      "city": "Canberra",
+      "provider_region": "australiacentral2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "NSW",
+      "city": "Sydney",
+      "provider_region": "australiaeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AU",
+      "state": "VIC",
+      "city": "Melbourne",
+      "provider_region": "australiasoutheast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BE",
+      "state": null,
+      "city": "Brussels",
+      "provider_region": "belgiumcentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": "SP",
+      "city": "São Paulo",
+      "provider_region": "brazilsouth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "BR",
+      "state": "RJ",
+      "city": "Rio de Janeiro",
+      "provider_region": "brazilsoutheast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "ON",
+      "city": "Toronto",
+      "provider_region": "canadacentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CA",
+      "state": "QC",
+      "city": "Quebec City",
+      "provider_region": "canadaeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Pune",
+      "provider_region": "centralindia",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IA",
+      "city": "Des Moines",
+      "provider_region": "centralus",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CL",
+      "state": null,
+      "city": "Santiago",
+      "provider_region": "chilecentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DK",
+      "state": null,
+      "city": "Aarhus",
+      "provider_region": "denmarkeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "HK",
+      "state": null,
+      "city": "Hong Kong",
+      "provider_region": "eastasia",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "eastus",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "eastus2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Paris",
+      "provider_region": "francecentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "FR",
+      "state": null,
+      "city": "Marseille",
+      "provider_region": "francesouth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Berlin",
+      "provider_region": "germanynorth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "DE",
+      "state": null,
+      "city": "Frankfurt",
+      "provider_region": "germanywestcentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Hyderabad",
+      "provider_region": "indiasouthcentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ID",
+      "state": null,
+      "city": "Jakarta",
+      "provider_region": "indonesiacentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Tel Aviv",
+      "provider_region": "israelcentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IL",
+      "state": null,
+      "city": "Haifa",
+      "provider_region": "israelnorthwest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IT",
+      "state": null,
+      "city": "Milan",
+      "provider_region": "italynorth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Tokyo",
+      "provider_region": "japaneast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "JP",
+      "state": null,
+      "city": "Osaka",
+      "provider_region": "japanwest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "jioindiacentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Jamnagar",
+      "provider_region": "jioindiawest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Seoul",
+      "provider_region": "koreacentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "KR",
+      "state": null,
+      "city": "Busan",
+      "provider_region": "koreasouth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "malaysiawest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MX",
+      "state": null,
+      "city": "Mexico City",
+      "provider_region": "mexicocentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NZ",
+      "state": null,
+      "city": "Auckland",
+      "provider_region": "newzealandnorth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "IL",
+      "city": "Chicago",
+      "provider_region": "northcentralus",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IE",
+      "state": null,
+      "city": "Dublin",
+      "provider_region": "northeurope",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NO",
+      "state": null,
+      "city": "Oslo",
+      "provider_region": "norwayeast",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NO",
+      "state": null,
+      "city": "Stavanger",
+      "provider_region": "norwaywest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "PL",
+      "state": null,
+      "city": "Warsaw",
+      "provider_region": "polandcentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "QA",
+      "state": null,
+      "city": "Doha",
+      "provider_region": "qatarcentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Johannesburg",
+      "provider_region": "southafricanorth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ZA",
+      "state": null,
+      "city": "Cape Town",
+      "provider_region": "southafricawest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "San Antonio",
+      "provider_region": "southcentralus",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SG",
+      "state": null,
+      "city": "Singapore",
+      "provider_region": "southeastasia",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "MY",
+      "state": null,
+      "city": "Kuala Lumpur",
+      "provider_region": "southeastasia3",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Chennai",
+      "provider_region": "southindia",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "ES",
+      "state": null,
+      "city": "Madrid",
+      "provider_region": "spaincentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Gävle",
+      "provider_region": "swedencentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "SE",
+      "state": null,
+      "city": "Stockholm",
+      "provider_region": "swedensouth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Zurich",
+      "provider_region": "switzerlandnorth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "CH",
+      "state": null,
+      "city": "Geneva",
+      "provider_region": "switzerlandwest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Taipei",
+      "provider_region": "taiwannorth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "TW",
+      "state": null,
+      "city": "Taipei",
+      "provider_region": "taiwannorthwest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Abu Dhabi",
+      "provider_region": "uaecentral",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "AE",
+      "state": null,
+      "city": "Dubai",
+      "provider_region": "uaenorth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "London",
+      "provider_region": "uksouth",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "GB",
+      "state": null,
+      "city": "Cardiff",
+      "provider_region": "ukwest",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "AZ",
+      "city": "Phoenix",
+      "provider_region": "usgovarizona",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "TX",
+      "city": "San Antonio",
+      "provider_region": "usgovtexas",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "VA",
+      "city": "Ashburn",
+      "provider_region": "usgovvirginia",
+      "self_serve": false,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "WY",
+      "city": "Cheyenne",
+      "provider_region": "westcentralus",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "NL",
+      "state": null,
+      "city": "Amsterdam",
+      "provider_region": "westeurope",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "IN",
+      "state": null,
+      "city": "Mumbai",
+      "provider_region": "westindia",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Jose",
+      "provider_region": "westus",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "CA",
+      "city": "San Jose",
+      "provider_region": "westus2",
+      "self_serve": true,
+      "choosable": true
+    },
+    {
+      "country": "US",
+      "state": "AZ",
+      "city": "Phoenix",
+      "provider_region": "westus3",
+      "self_serve": true,
+      "choosable": true
+    }
+  ],
+  "locations_source": "https://prices.azure.com/api/retail/prices (serviceName eq 'Virtual Machines')",
+  "locations_quote": "Azure operates in multiple datacenters around the world. These datacenters are grouped in to geographic regions, giving you flexibility in choosing where to build your applications. You create Azure resources in defined geographic regions like 'West US', 'North Europe', or 'Southeast Asia'.",
+  "locations_checked": "2026-10-01"
+}
