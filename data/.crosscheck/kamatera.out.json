@@ -1,0 +1,1 @@
+{"id":"kamatera","eligible":true,"total":5.12283105022831,"breakdown":{"compute":5.0228310502283104,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0.1,"plan":0},"unknowns":[],"caveats":["how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

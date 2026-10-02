@@ -1,0 +1,1 @@
+{"id":"buildkite-hosted","eligible":true,"total":78,"breakdown":{"compute":64,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":30,"included":-16},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

@@ -1,0 +1,1 @@
+{"id":"claude-managed-agents","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Cloud sandbox session runtime ($0.08 per running session-hour, flat): needs opt-in (alt)","Self-hosted sandbox environment (your infra, Anthropic orchestration): needs opt-in (alt)","no preset with ≥2 vCPU and ≥4 GiB"]}

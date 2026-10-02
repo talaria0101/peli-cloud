@@ -1,0 +1,1 @@
+{"id":"naver-cloud","mode":"strict","eligible":true,"total":141.391929064,"breakdown":{"compute":141.391929064,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

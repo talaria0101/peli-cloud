@@ -1,0 +1,1 @@
+{"id":"azure-vm","mode":"strict","eligible":true,"total":6.92074200913242,"breakdown":{"compute":6.736666666666666,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.18407534246575338,"egress":0,"plan":0},"unknowns":[],"caveats":[],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"morph-cloud","mode":"strict","eligible":true,"total":13.333333333333336,"breakdown":{"compute":13.333333333333336,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

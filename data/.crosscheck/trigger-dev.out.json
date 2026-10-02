@@ -1,0 +1,1 @@
+{"id":"trigger-dev","eligible":true,"total":76.62500000000003,"breakdown":{"compute":81.60000000000002,"memory":0,"gpu":0,"licence":0,"fees":0.025,"plan":0,"included":-5},"unknowns":[],"compromises":["adjacent product, not a like-for-like sandbox"],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

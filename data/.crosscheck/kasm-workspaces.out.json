@@ -1,0 +1,1 @@
+{"id":"kasm-workspaces","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["no preset with ≥2 vCPU and ≥4 GiB","no pool tier with 40 vCPU / 80 GiB for 20 VMs"]}

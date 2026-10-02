@@ -1,0 +1,1 @@
+{"id":"aws-fargate","mode":"soft","eligible":true,"total":9.683333333333334,"breakdown":{"compute":7.943333333333333,"memory":1.7399999999999998,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":[],"reasons":[],"planLimits":[]}

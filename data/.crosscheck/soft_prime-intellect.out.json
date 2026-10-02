@@ -1,0 +1,1 @@
+{"id":"prime-intellect","mode":"soft","eligible":true,"total":12.26666666666667,"breakdown":{"compute":5.333333333333334,"memory":6.666666666666668,"gpu":0,"licence":0,"fees":0,"storage":0.26666666666666666,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

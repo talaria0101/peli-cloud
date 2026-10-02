@@ -1,0 +1,1 @@
+{"id":"collimate","mode":"strict","eligible":true,"total":21.333333333333332,"breakdown":{"compute":13.333333333333332,"memory":8,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":["disk beyond 0 GiB: price unknown"],"reasons":[],"planLimits":[]}

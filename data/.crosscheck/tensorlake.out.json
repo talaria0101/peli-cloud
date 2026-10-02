@@ -1,0 +1,1 @@
+{"id":"tensorlake","eligible":true,"total":250,"breakdown":{"compute":4.2,"memory":4.8,"gpu":0,"licence":0,"fees":0,"storage":0.13333333333333333,"egress":0,"plan":240.86666666666667},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

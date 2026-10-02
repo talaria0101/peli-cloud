@@ -1,0 +1,1 @@
+{"id":"docker-cloud-sandboxes","eligible":true,"total":23.333333333333336,"breakdown":{"compute":23.333333333333336,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0,"egress":0,"plan":0},"unknowns":[],"compromises":["Docker Agentic Platform (pay-as-you-go): max 10 concurrent"],"caveats":[],"reasons":[]}

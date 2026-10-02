@@ -65,39 +65,85 @@ def shape_resource_rate(m):
             m.get("cpu_basis") or m.get("ram_basis") or "alloc")
 
 
-def cheapest_size_h(m):
-    """Lowest published hourly price among a mode's size table, with its shape.
-
-    A size only counts as usable if the vCPU and RAM are published; a row sold
-    without a machine size cannot be compared on $/h.
-
-    Observed 2026-10-02 against the corpus at f6a71ab09fef:
-    research/cards/scaleway.json mode `dedicated-compute` nests one extra list
-    inside `sizes` (the MEMORY3 row is a list of sizes, not a size). 21 other
-    sizes in the same table are ordinary objects. The engine's own filter
-    `s.vcpu >= W.vcpu` would throw on that element; this file flattens one level
-    and records how many nested rows it had to flatten, so the anomaly is visible
-    rather than silently absorbed.
+def flatten_sizes(sizes):
+    """Return (flat_list, nested_rows). A size element is normally an object,
+    but several cards nest a list inside `sizes` (scaleway dedicated-compute
+    nests the MEMORY3 row; coasty wraps its single rate in a one-element list).
+    A size whose vCPU/RAM are null sells a rate without a machine shape; it is
+    kept but marked, because the engine prices it and a shape-less rate is still
+    a rate.
     """
-    sizes = m.get("sizes")
-    if not isinstance(sizes, list) or not sizes:
-        return None
     flat, nested = [], 0
-    for s in sizes:
+    for s in (sizes or []):
         if isinstance(s, dict):
             flat.append(s)
         elif isinstance(s, list):
             nested += 1
             flat.extend(x for x in s if isinstance(x, dict))
-    usable = [s for s in flat
-              if known(s.get("hour")) and known(s.get("vcpu")) and known(s.get("ram_gib"))]
-    if not usable:
+    return flat, nested
+
+
+def usable_sizes(sizes):
+    """Sizes with a published positive hourly rate, smallest-shaped first."""
+    flat, nested = flatten_sizes(sizes)
+    ok = [s for s in flat if known(s.get("hour"))]
+    return ok, nested
+
+
+def cheapest_size_h(m):
+    """Lowest published hourly price among a mode's size table, with its shape.
+
+    Prefers sizes that publish a machine shape; a shape-less size is the
+    fallback. See flatten_sizes for the nested-row irregularity.
+    """
+    ok, nested = usable_sizes(m.get("sizes"))
+    if not ok:
         return {"nested_rows": nested} if nested else None
-    s = min(usable, key=lambda x: x["hour"])
-    return {"name": s.get("name"), "vcpu": s["vcpu"], "ram_gib": s["ram_gib"],
+    shaped = [s for s in ok if known(s.get("vcpu")) and known(s.get("ram_gib"))]
+    s = min(shaped or ok, key=lambda x: x["hour"])
+    return {"name": s.get("name"), "vcpu": s.get("vcpu"), "ram_gib": s.get("ram_gib"),
             "hour": s["hour"], "disk_gib": s.get("disk_gib"),
             "nested_rows": nested,
+            "shaped": bool(shaped),
             "month_cap": s.get("month_cap") if known(s.get("month_cap")) else None}
+
+
+MODE_CLASSES = {}
+
+
+def classify_mode(card_class, m):
+    """Is this mode a legitimate answer to "run a sandbox, or a VM, or anything
+    that runs my code" on a card with a published rate?
+
+    Two states are kept apart on purpose, because collapsing them is what makes a
+    catalogue wrong:
+
+      'no'             the mode cannot carry a Linux sandbox workload at all. A
+                       browser-session product (Browserbase, Browserless) sells
+                       minutes of a remote browser, not machines. Ranking one
+                       beside a VM provider compares two different purchases,
+                       and this catalogue is of providers.
+      'not-self-serve' the mode could carry the workload, but only through spot
+                       pricing, a negotiated contract or a multi-month term. It
+                       stays in the catalogue, flagged. It does not become the
+                       headline price.
+      'yes'            published rate, self-serve, reachable by a new account.
+
+    The upstream engine reaches the same split independently: priceSoft names
+    these "browser-session product, not a general sandbox", "adjacent product,
+    not a like-for-like sandbox" and "interruptible (spot)".
+    references/battleships/site/engine.js at commit f6a71ab09fef.
+    """
+    if m.get("addon_only") or m.get("gpu_only") or m.get("trial_only"):
+        return "no"
+    if card_class == "browser":
+        return "no"
+    if m.get("internet") in ("allowlist", "none"):
+        return "no"
+    flags = set(m.get("flags") or [])
+    if flags & {"spot", "sales", "commit", "promo", "alt"}:
+        return "not-self-serve"
+    return "yes"
 
 
 def plans_of(card):
@@ -139,6 +185,7 @@ def extract_card(path):
                "flags": m.get("flags") or [],
                "plan_required": None, "min_commit": None,
                "buyable_month_usd": None, "entry_month_usd": None,
+               "mode_class": classify_mode(card.get("category"), m),
                "vcpu_h": None, "ram_gib_h": None,
                "smallest_shape": None, "cheapest_hour": None}
 
@@ -158,6 +205,20 @@ def extract_card(path):
         size = cheapest_size_h(m)
         if size and size.get("nested_rows"):
             row["nested_size_rows"] = size["nested_rows"]
+        # A size table holds every size. Keep all of them, so the ranker can pick
+        # the cheapest one that actually satisfies a requested shape instead of
+        # the cheapest one that happens to be the smallest. Shape-less sizes are
+        # kept too, marked, because a rate without a shape is still a rate.
+        if pricing == "sizes":
+            ok, _nested = usable_sizes(m.get("sizes"))
+            row["sizes"] = [{"name": s.get("name"), "vcpu": s.get("vcpu"),
+                             "ram_gib": s.get("ram_gib"), "hour": s.get("hour"),
+                             "disk_gib": s.get("disk_gib"),
+                             "month_cap": s.get("month_cap"),
+                             "shaped": known(s.get("vcpu")) and known(s.get("ram_gib"))}
+                            for s in ok]
+            if _nested:
+                row["nested_size_rows"] = _nested
         if pricing == "sizes" and size and known(size.get("hour")):
             row["cheapest_hour"] = size["hour"]
             row["smallest_shape"] = {"name": size["name"], "vcpu": size["vcpu"],
@@ -190,18 +251,20 @@ def extract_card(path):
     # $0 does not distinguish "a genuine free tier" from "no price is published".
     # A card whose $0 plans are all placeholders, beta, early-access or
     # application-gated has no free tier and is recorded as unpriced.
-    def _real(p):
-        f = p.get("flags") or []
-        return not ({"addon", "sales"} & set(f)) and not (
-            {"beta", "early-access", "application", "announced"} & set(f))
-    priced_real = [p["fee"] for p in plans if _real(p) and known(p.get("fee"))]
-    entry = min(priced_real) if priced_real else None
-    real_plans = [p for p in plans if _real(p)]
-
     def _free_tier(plans_):
         return [p for p in plans_
                 if known(p.get("fee")) and p["fee"] == 0
                 and not ({"addon", "sales"} & set(p.get("flags") or []))]
+    # An entry plan may be beta / early-access / application-gated: it is still
+    # a real, published price a new account can buy. Only sales/addon/announced
+    # are excluded, since those are not self-serve at all. obs = kedge and
+    # microsandbox, both beta-flagged plans with published rates, which the
+    # first cut wrongly dropped from the universe.
+    def _entry_ok(p):
+        return not ({"addon", "sales", "announced"} & set(p.get("flags") or []))
+    entry_plans = [p["fee"] for p in plans if _entry_ok(p) and known(p.get("fee"))]
+    entry = min(entry_plans) if entry_plans else None
+    real_plans = [p for p in plans if _entry_ok(p)]
 
     return {
         "id": cid,
@@ -210,12 +273,15 @@ def extract_card(path):
         "category": card.get("category"),
         "category_class": (card.get("category") or "").split(" ")[0] or None,
         "isolation": card.get("isolation"),
+        "is_browser_product": card.get("category") == "browser",
         "card_sha256_12": digest(path),
         "n_plans": len(plans),
         "n_modes": len(modes),
         "entry_month_usd": entry,
         "has_genuine_free_tier": bool(_free_tier(plans)),
         "n_free_tier_plans": len(_free_tier(plans)),
+        "entry_plan_is_beta": any("beta" in (p.get("flags") or []) for p in real_plans
+                                  if known(p.get("fee")) and p["fee"] == entry),
         "min_commit_month_usd": min([p["fee"] for p in ent if known(p.get("fee"))], default=None),
         "has_sales_plan": bool(sales),
         "free_monthly_credit": free.get("monthly_credit") if known(free.get("monthly_credit")) else 0,

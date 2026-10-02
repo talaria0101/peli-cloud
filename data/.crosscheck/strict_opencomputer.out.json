@@ -1,0 +1,1 @@
+{"id":"opencomputer","mode":"strict","eligible":true,"total":20,"breakdown":{"compute":50.400000000000006,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":20,"included":-50.400000000000006},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"gcp-compute","mode":"strict","eligible":true,"total":12.476880502283104,"breakdown":{"compute":11.168569999999999,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.228310502283105,"egress":1.08,"plan":0},"unknowns":[],"caveats":[],"reasons":[],"planLimits":[]}

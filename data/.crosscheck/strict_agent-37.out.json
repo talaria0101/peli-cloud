@@ -1,0 +1,1 @@
+{"id":"agent-37","mode":"strict","eligible":true,"total":0.9680365296803655,"breakdown":{"compute":0.29223744292237447,"memory":0.5114155251141553,"gpu":0,"licence":0,"fees":0,"storage":0.16438356164383564,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

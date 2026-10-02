@@ -1,0 +1,1 @@
+{"id":"unikraft-cloud","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["no pool tier with 40 vCPU / 80 GiB for 20 VMs","Enterprise: dedicated hosts / on-prem / BYOC (custom price): needs opt-in (sales)"]}

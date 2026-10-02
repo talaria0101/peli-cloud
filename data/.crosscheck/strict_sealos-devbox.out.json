@@ -1,0 +1,1 @@
+{"id":"sealos-devbox","mode":"strict","eligible":true,"total":2030,"breakdown":{"compute":2030,"plan":0},"unknowns":[],"caveats":["flat pool: the tier is billed whether used or not","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

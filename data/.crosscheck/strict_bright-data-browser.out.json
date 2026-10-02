@@ -1,0 +1,1 @@
+{"id":"bright-data-browser","mode":"strict","eligible":true,"total":0,"breakdown":{"compute":0,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["machine size per session not published","idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

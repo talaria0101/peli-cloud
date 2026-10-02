@@ -1,0 +1,1 @@
+{"id":"beam","eligible":true,"total":37.86,"breakdown":{"compute":22.5,"memory":15.36,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":["disk beyond 0 GiB: price unknown"],"reasons":[]}

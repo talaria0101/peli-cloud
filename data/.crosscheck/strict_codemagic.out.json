@@ -1,0 +1,1 @@
+{"id":"codemagic","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Free (individual): max 1 concurrent","Pay as you go (team): max 1 concurrent","Pay as you go (team, 2 concurrent): max 2 concurrent","Pay as you go (team, 3 concurrent): max 3 concurrent","Pay as you go (team, 4 concurrent): max 4 concurrent","Enterprise: negotiated plan"]}

@@ -1,0 +1,1 @@
+{"id":"cerebrium","mode":"soft","eligible":true,"total":10.641724200913242,"breakdown":{"compute":6.288,"memory":4.2624,"gpu":0,"licence":0,"fees":0,"storage":0.09132420091324202,"plan":0},"unknowns":[],"compromises":["interruptible (spot)"],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

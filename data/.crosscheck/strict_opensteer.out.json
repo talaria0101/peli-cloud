@@ -1,0 +1,1 @@
+{"id":"opensteer","mode":"strict","eligible":true,"total":28.333333333333336,"breakdown":{"compute":33.333333333333336,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0,"included":-5},"unknowns":[],"caveats":["machine size per session not published","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

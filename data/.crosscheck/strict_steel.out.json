@@ -1,0 +1,1 @@
+{"id":"steel","mode":"strict","eligible":true,"total":250,"breakdown":{"compute":10.666666666666668,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":250,"included":-10.666666666666668},"unknowns":[],"caveats":["machine size per session not published","idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown"],"reasons":[],"planLimits":[]}

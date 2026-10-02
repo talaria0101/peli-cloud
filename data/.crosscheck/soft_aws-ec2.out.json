@@ -1,0 +1,1 @@
+{"id":"aws-ec2","mode":"soft","eligible":true,"total":8.365981735159815,"breakdown":{"compute":8.183333333333332,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.18264840182648398,"egress":0,"plan":0},"unknowns":[],"caveats":[],"reasons":[],"planLimits":[]}

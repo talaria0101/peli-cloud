@@ -1,0 +1,1 @@
+{"id":"aws-agentcore","mode":"soft","eligible":true,"total":12.478,"breakdown":{"compute":8.95,"memory":3.528,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

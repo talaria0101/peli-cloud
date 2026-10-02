@@ -1,0 +1,1 @@
+{"id":"runpod","eligible":true,"total":10.228310502283103,"breakdown":{"compute":9.999999999999998,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.228310502283105,"egress":0,"plan":0},"unknowns":[],"caveats":["how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

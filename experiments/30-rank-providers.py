@@ -77,45 +77,52 @@ def known(x):
         return False
 
 
-def all_in_month(provider, mode, shape_wanted=True):
+def all_in_month(provider, mode, shape_wanted=True, allow_not_self_serve=False):
     """Cheapest all-in monthly dollars for this provider's best entry mode.
 
-    Returns (total, breakdown_dict, compromises) or (None, reason, []).
-    Every component is a published number or it is not used.
+    Modes are filtered by the extractor's three-way classification. A
+    'not-self-serve' mode (spot, negotiated, term commit, promo) is only
+    considered when allow_not_self_serve is set, and when it wins, the row says
+    so. Excluding them by default is the difference between "the cheapest
+    sandbox" and "the cheapest sandbox nobody has to negotiate for".
     """
     compromises = []
     w = WORKLOAD
     best = None
 
     for m in mode.get("modes", []):
-        if m.get("addon_only"):
+        cls = m.get("mode_class")
+        if cls == "no":
             continue
-        if m.get("gpu_only"):
-            # A GPU-only mode is not this workload's compute. Counting it would
-            # rank a H100 fleet at the top of a CPU sandbox table.
+        if cls == "not-self-serve" and not allow_not_self_serve:
             continue
         flags = set(m.get("flags") or [])
         if "stock" in flags:
             compromises.append("stock-limited, not guaranteed available")
 
         plan_fee = m.get("min_commit") or 0.0
-        if known(m.get("cheapest_hour")):
-            # A size table: pick the cheapest published size that satisfies the
-            # requested shape. A size that is smaller than asked is a
-            # compromise, not a match, and says so.
-            sz = m.get("smallest_shape") or {}
-            if shape_wanted and known(sz.get("vcpu")) and known(sz.get("ram_gib")):
-                if sz["vcpu"] < w["vcpu"] or sz["ram_gib"] < w["ram_gib"]:
-                    compromises.append(
-                        "smallest usable size is %s vCPU / %s GiB"
-                        % (sz["vcpu"], sz["ram_gib"]))
-            hour = m.get("hour")
-            if not known(hour):
+        hour = None
+        shape = m.get("smallest_shape")
+        if m.get("pricing") == "sizes":
+            sizes = m.get("sizes") or []
+            # Cheapest published size that satisfies the requested shape. A size
+            # smaller than asked is a compromise, not a match, and says so.
+            fits = [s for s in sizes
+                    if (not shape_wanted or (known(s.get("vcpu")) and known(s.get("ram_gib"))
+                        and s["vcpu"] >= w["vcpu"] and s["ram_gib"] >= w["ram_gib"]))]
+            pool = fits or sizes
+            if not pool:
                 continue
+            s = min(pool, key=lambda x: x["hour"])
+            hour = s["hour"]
+            shape = {"name": s.get("name"), "vcpu": s.get("vcpu"), "ram_gib": s.get("ram_gib")}
+            if shape_wanted and not fits and known(s.get("vcpu")):
+                compromises.append("smallest usable size is %s vCPU / %s GiB"
+                                   % (s["vcpu"], s["ram_gib"]))
             hours = w["session_min"] / 60.0 * w["sessions_month"]
-            cap = sz.get("month_cap")
+            cap = s.get("month_cap")
             usage = hour * hours
-            if cap:
+            if known(cap):
                 usage = min(usage, cap)
             compute = usage
         elif known(m.get("vcpu_h")) or known(m.get("ram_gib_h")):
@@ -124,28 +131,23 @@ def all_in_month(provider, mode, shape_wanted=True):
             ram_basis = m.get("ram_basis", "alloc")
             vh = m.get("vcpu_h") or 0.0
             rh = m.get("ram_gib_h") or 0.0
-            if cpu_basis == "busy":
-                cpu = shape[0] * vh * w.get("cpu_util", 1.0)
-            else:
-                cpu = shape[0] * vh
-            if ram_basis == "busy":
-                ram = shape[1] * rh * w.get("ram_util", 1.0)
-            else:
-                ram = shape[1] * rh
+            cpu = shape[0] * vh * (w.get("cpu_util", 1.0) if cpu_basis == "busy" else 1.0)
+            ram = shape[1] * rh * (w.get("ram_util", 1.0) if ram_basis == "busy" else 1.0)
             hours = w["session_min"] / 60.0 * w["sessions_month"]
             compute = (cpu + ram) * hours
-            hour = None
         else:
             continue
 
-        total = compute + plan_fee
-        cand = {"total": total, "compute": compute, "plan_fee": plan_fee,
+        if not known(hour) and not (known(m.get("vcpu_h")) or known(m.get("ram_gib_h"))):
+            continue
+
+        cand = {"total": compute + plan_fee, "compute": compute, "plan_fee": plan_fee,
                 "mode": m.get("mode"), "pricing": m.get("pricing"),
                 "hour": hour, "vcpu_h": m.get("vcpu_h"),
-                "ram_gib_h": m.get("ram_gib_h"), "shape": m.get("smallest_shape"),
-                "gpu_only": bool(m.get("gpu_only")),
+                "ram_gib_h": m.get("ram_gib_h"), "shape": shape,
+                "mode_class": cls, "gpu_only": bool(m.get("gpu_only")),
                 "plan": m.get("plan_required")}
-        if best is None or total < best["total"]:
+        if best is None or cand["total"] < best["total"]:
             best = cand
 
     if best is None:
@@ -175,14 +177,22 @@ def main():
         if entry is None:
             unrankable.append((p["id"], "no priced self-serve plan"))
             continue
-        best, reason, comp = all_in_month(p, p)
-        if best is None:
-            unrankable.append((p["id"], reason))
+        # Tier 1: self-serve only. Tier 2: spot / negotiated / term commit allowed.
+        best, reason, comp = all_in_month(p, p, allow_not_self_serve=False)
+        best2, reason2, comp2 = all_in_month(p, p, allow_not_self_serve=True)
+        if best is None and best2 is None:
+            unrankable.append((p["id"], reason or reason2))
             continue
+        if best is None:
+            best, comp = best2, comp2
+            tier = "not-self-serve-only"
+        else:
+            tier = "self-serve" if (best2 is None or best["total"] <= best2["total"]) else "self-serve-wins"
         row = {
             "id": p["id"], "name": p.get("name"), "url": p.get("url"),
             "category": p.get("category_class"), "isolation": p.get("isolation"),
             "entry_month_usd": entry,
+            "tier": tier,
             "has_genuine_free_tier": p.get("has_genuine_free_tier"),
             "free_monthly_credit": p.get("free_monthly_credit"),
             "free_one_time_credit": p.get("free_one_time_credit"),
@@ -196,6 +206,10 @@ def main():
             "entry_shape": best["shape"], "entry_plan": best["plan"],
             "card_sha256_12": p.get("card_sha256_12"),
         }
+        if best2 is not None and best2["total"] > best["total"]:
+            row["cheaper_with_negotiation_usd"] = round(best2["total"], 2)
+            row["cheaper_with_negotiation_mode"] = best2["mode"]
+            comp = list(comp) + ["cheaper only with spot / negotiated / term pricing: $%.2f" % best2["total"]]
         row["compromises"] = sorted(set(comp))
         rows.append(row)
 
@@ -211,6 +225,10 @@ def main():
     print("              or (per-vCPU + per-GiB rates x shape x session hours).")
     print("              Always-on, egress, storage and IPv4 are NOT included;")
     print("              they are priced by the provider's own card, not here.")
+    print("tiers       : self-serve = a new account can buy it at that price with no")
+    print("              negotiation. not-self-serve-only = the cheapest published")
+    print("              regime is spot, negotiated, or a multi-month term commit.")
+    print("              Both appear; the second never outranks the first silently.")
     print()
 
     if not rows:
@@ -220,15 +238,15 @@ def main():
     print("== ranked %d of %d cards (%d unrankable) ==" %
           (len(rows), universe["card_count"], len(unrankable)))
     print()
-    hdr = "%-4s %-30s %-13s %9s %9s %-13s %s" % (
-        "rank", "provider", "category", "entry$/mo", "all-in$/mo", "isolation", "priced by")
+    hdr = "%-4s %-30s %-13s %9s %9s %-13s %-14s %s" % (
+        "rank", "provider", "category", "entry$/mo", "all-in$/mo", "isolation", "tier", "priced by")
     print(hdr)
     print("-" * len(hdr))
     for r in rows:
-        print("%-4d %-30s %-13s %9s %9.2f %-13s %s" % (
+        print("%-4d %-30s %-13s %9s %9.2f %-13s %-14s %s" % (
             r["rank"], (r["name"] or r["id"])[:30], (r["category"] or "-")[:13],
             ("%.2f" % r["entry_month_usd"]) if r["entry_month_usd"] else "-",
-            r["all_in_month_usd"], (r["isolation"] or "-")[:13], r["priced_by"]))
+            r["all_in_month_usd"], (r["isolation"] or "-")[:13], r["tier"], r["priced_by"]))
     print()
     print("== unrankable (%d) ==" % len(unrankable))
     for pid, why in sorted(unrankable):

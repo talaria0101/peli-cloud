@@ -1,0 +1,1 @@
+{"id":"azure-windows","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["no Linux","Azure Spot VM (representative East US): needs opt-in (spot)"]}

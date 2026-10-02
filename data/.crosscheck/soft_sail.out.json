@@ -1,0 +1,1 @@
+{"id":"sail","mode":"soft","eligible":true,"total":11.066666666666666,"breakdown":{"compute":2.9999999999999996,"memory":2.1333333333333337,"gpu":0,"licence":0,"fees":10,"storage":0.9333333333333335,"plan":0,"included":-5},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"e2b","eligible":true,"total":22.080000000000002,"breakdown":{"compute":13.440000000000001,"memory":8.64,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

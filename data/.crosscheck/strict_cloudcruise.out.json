@@ -1,0 +1,1 @@
+{"id":"cloudcruise","mode":"strict","eligible":true,"total":494,"breakdown":{"compute":500,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0,"included":-6},"unknowns":[],"caveats":["machine size per session not published","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

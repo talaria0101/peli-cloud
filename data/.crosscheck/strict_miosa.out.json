@@ -1,0 +1,1 @@
+{"id":"miosa","mode":"strict","eligible":true,"total":500,"breakdown":{"compute":20.6916,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0.5,"plan":478.8084},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

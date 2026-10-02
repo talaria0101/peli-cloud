@@ -1,0 +1,1 @@
+{"id":"alibaba-ack","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["ACK cluster runtime: needs opt-in (alt)","ACK pods on virtual nodes (ECI), per vCPU/GiB: needs opt-in (alt)"]}

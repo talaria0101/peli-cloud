@@ -1,0 +1,1 @@
+{"id":"hostinger-vps","eligible":true,"total":299.8,"breakdown":{"compute":299.8,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"compromises":["24-month prepaid commitment"],"caveats":["monthly cap reached","how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

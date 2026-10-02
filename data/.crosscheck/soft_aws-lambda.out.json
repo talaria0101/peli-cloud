@@ -1,0 +1,1 @@
+{"id":"aws-lambda","mode":"soft","eligible":true,"total":25.741094977168952,"breakdown":{"compute":0,"memory":25.6,"gpu":0,"licence":0,"fees":0.00019999999999999998,"storage":0.14089497716894978,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"tensordock","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["H100, spot: needs opt-in (spot)","A100, spot: needs opt-in (spot)","RTX4090, spot: needs opt-in (spot)","size list not published"]}

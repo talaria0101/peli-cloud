@@ -1,16 +1,82 @@
 {
  "ranked": [
   {
+   "all_in_month_usd": 0.03,
+   "card_sha256_12": "ae2a9c723ba6",
+   "category": "hyperscaler",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 1 GiB",
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 0.03,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "STARDUST1-S",
+    "ram_gib": 1,
+    "vcpu": 1
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0006826799999999999,
+   "id": "scaleway",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Scaleway Instances",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "stardust",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 1,
+   "tier": "self-serve",
+   "url": "https://www.scaleway.com/en/pricing/virtual-instances/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 0.27,
+   "card_sha256_12": "fb09501257c4",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 0.27,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Tencent Lighthouse 2C4G (Silicon Valley)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.00548,
+   "id": "zeabur",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Zeabur",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "managed-server",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 2,
+   "tier": "not-self-serve-only",
+   "url": "https://zeabur.com/pricing",
+   "vcpu_h": null
+  },
+  {
    "all_in_month_usd": 0.3,
    "card_sha256_12": "7517cb195785",
    "category": "agent-sandbox",
-   "compromises": [
-    "smallest usable size is 1 vCPU / 4 GiB"
-   ],
+   "compromises": [],
    "compute_month_usd": 0.3,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 1,
    "has_genuine_free_tier": true,
@@ -24,9 +90,43 @@
    "priced_by": "standard",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0009589041095890411,
-   "rank": 1,
+   "rank": 3,
+   "tier": "self-serve",
    "url": "https://www.agent37.com/pricing",
    "vcpu_h": 0.0010958904109589042
+  },
+  {
+   "all_in_month_usd": 0.33,
+   "card_sha256_12": "ba01fbf91536",
+   "category": "hyperscaler",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 1 GiB"
+   ],
+   "compute_month_usd": 0.33,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "nxf-1x1",
+    "ram_gib": 1,
+    "vcpu": 1
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.00655,
+   "id": "ibm-cloud-vpc",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "IBM Cloud VPC",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "burstable-10",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 4,
+   "tier": "self-serve",
+   "url": "https://www.ibm.com/products/virtual-servers/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 0.46,
@@ -36,7 +136,10 @@
    "compute_month_usd": 0.46,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 300,
    "has_genuine_free_tier": true,
@@ -50,19 +153,271 @@
    "priced_by": "e4-burstable-12",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0015,
-   "rank": 2,
+   "rank": 5,
+   "tier": "self-serve",
    "url": "https://www.oracle.com/cloud/compute/pricing/",
    "vcpu_h": 0.0015625
   },
   {
-   "all_in_month_usd": 0.48,
+   "all_in_month_usd": 0.5,
+   "card_sha256_12": "32c01ecb4890",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 0.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "cpu-basic",
+    "ram_gib": 16,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.01,
+   "id": "huggingface-jobs",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Hugging Face Jobs (hf-sandbox backend)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 6,
+   "tier": "not-self-serve-only",
+   "url": "https://huggingface.co/docs/hub/en/jobs-pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 0.69,
+   "card_sha256_12": "386be352b4e0",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 0.69,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 25,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0137,
+   "id": "zipbox",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "zipbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 7,
+   "tier": "self-serve",
+   "url": "https://zipbox.ai/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 0.74,
+   "card_sha256_12": "188c23858116",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 0.74,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "S",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0147914,
+   "id": "ionos",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "IONOS Cloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "cubes",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 8,
+   "tier": "self-serve",
+   "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 0.9,
+   "card_sha256_12": "91f064915e0d",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 0.9,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0.9,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.018,
+   "id": "boat",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "boat.dev",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 9,
+   "tier": "self-serve",
+   "url": "https://docs.boat.dev/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 0.9,
+   "card_sha256_12": "60be50e29c84",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 0.9,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "medium",
+    "ram_gib": 4,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 10,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.018,
+   "id": "lizard",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Lizard",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "sandbox",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 10,
+   "tier": "self-serve",
+   "url": "https://lizard.build/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 0.97,
+   "card_sha256_12": "5a055f992a18",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 0.97,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "g0-standard-2-4",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.01934,
+   "id": "gcore",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Gcore Cloud / Functions / GPU",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "vm",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 11,
+   "tier": "self-serve",
+   "url": "https://gcore.com/cloud/virtual-machines",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.0,
+   "card_sha256_12": "2afcb5de9e64",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 1.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "x1",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.02,
+   "id": "shellbox",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "shellbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 12,
+   "tier": "self-serve",
+   "url": "https://shellbox.dev/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.02,
+   "card_sha256_12": "2840c8a90b5f",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 1.02,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Growth process sandbox (600 MB RAM, vCPU not published)",
+    "ram_gib": 0.6,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.02048,
+   "id": "yepcode",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "YepCode Run",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "growth",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 13,
+   "tier": "not-self-serve-only",
+   "url": "https://yepcode.io/pricing/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.2,
    "card_sha256_12": "361292ae0b0d",
    "category": "gpu-cloud",
    "compromises": [],
-   "compute_month_usd": 0.48,
+   "compute_month_usd": 1.2,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -73,118 +428,199 @@
    "min_commit_month_usd": null,
    "name": "Verda (formerly DataCrunch)",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "spot-cpu",
+   "priced_by": "on-demand-cpu",
    "pricing_kind": "resource",
    "ram_gib_h": 0,
-   "rank": 3,
+   "rank": 14,
+   "tier": "self-serve-wins",
    "url": "https://verda.com/pricing",
-   "vcpu_h": 0.0048
+   "vcpu_h": 0.012
   },
   {
-   "all_in_month_usd": 0.7,
-   "card_sha256_12": "412dd9baaa6f",
-   "category": "gpu-cloud",
-   "compromises": [
-    "stock-limited, not guaranteed available"
-   ],
-   "compute_month_usd": 0.7,
-   "entry_month_usd": 0,
-   "entry_plan": null,
-   "entry_shape": null,
-   "free_monthly_credit": 0,
-   "free_one_time_credit": 0,
-   "has_genuine_free_tier": true,
-   "has_sales_plan": false,
-   "hour": null,
-   "id": "tensordock",
-   "isolation": "vm",
-   "min_commit_month_usd": null,
-   "name": "TensorDock",
-   "platform_fee_month_usd": 0.0,
-   "priced_by": "on-demand-h100-sxm5-0",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.002,
-   "rank": 4,
-   "url": "https://www.tensordock.com/",
-   "vcpu_h": 0.003
-  },
-  {
-   "all_in_month_usd": 0.82,
-   "card_sha256_12": "35829634aac8",
-   "category": "gpu-cloud",
+   "all_in_month_usd": 1.24,
+   "card_sha256_12": "1586374b9114",
+   "category": "dev-env",
    "compromises": [],
-   "compute_month_usd": 0.82,
+   "compute_month_usd": 1.24,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "2 CPU 4 GB / 50 GB disk",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
-   "free_one_time_credit": 0,
+   "free_one_time_credit": 25,
    "has_genuine_free_tier": true,
    "has_sales_plan": false,
-   "hour": null,
-   "id": "nebius",
+   "hour": 0.024735,
+   "id": "cube",
    "isolation": "vm",
    "min_commit_month_usd": null,
-   "name": "Nebius",
+   "name": "Cube Computer",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "spot-l40s-amd-13",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.0016,
-   "rank": 5,
-   "url": "https://docs.nebius.com/compute/resources/pricing",
-   "vcpu_h": 0.005
+   "priced_by": "per-second-sizes",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 15,
+   "tier": "not-self-serve-only",
+   "url": "https://cube.computer/",
+   "vcpu_h": null
   },
   {
-   "all_in_month_usd": 0.87,
-   "card_sha256_12": "097a3aa78c11",
+   "all_in_month_usd": 1.28,
+   "card_sha256_12": "012d801cc615",
    "category": "hyperscaler",
    "compromises": [],
-   "compute_month_usd": 0.87,
+   "compute_month_usd": 1.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "d2-4",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0256,
+   "id": "ovhcloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "OVHcloud Public Cloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "d2-hourly",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 16,
+   "tier": "self-serve",
+   "url": "https://us.ovhcloud.com/public-cloud/prices/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.37,
+   "card_sha256_12": "05d9d2aa1dad",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 1.37,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "A-2c-4g-50GB",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
    "has_sales_plan": false,
-   "hour": null,
-   "id": "aws-fargate",
-   "isolation": "firecracker",
+   "hour": 0.0273972602739726,
+   "id": "kamatera",
+   "isolation": "vm",
    "min_commit_month_usd": null,
-   "name": "AWS Fargate",
+   "name": "Kamatera",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "spot-arm64-asia",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.000783,
-   "rank": 6,
-   "url": "https://aws.amazon.com/fargate/pricing/",
-   "vcpu_h": 0.007149
+   "priced_by": "hourly-A",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 17,
+   "tier": "self-serve",
+   "url": "https://www.kamatera.com/pricing/",
+   "vcpu_h": null
   },
   {
-   "all_in_month_usd": 1.06,
-   "card_sha256_12": "73bd73c321c9",
-   "category": "paas",
+   "all_in_month_usd": 1.41,
+   "card_sha256_12": "f2f099c5b489",
+   "category": "hyperscaler",
    "compromises": [],
-   "compute_month_usd": 1.06,
+   "compute_month_usd": 1.41,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "ecs.e-c1m2.large",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 90,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0281,
+   "id": "alibaba-ecs",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Alibaba Cloud ECS International",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "economy",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 18,
+   "tier": "self-serve",
+   "url": "https://www.alibabacloud.com/en/product/ecs/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.44,
+   "card_sha256_12": "d78739775622",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 1.44,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "eco-large",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "fly-machines",
-   "isolation": "firecracker",
+   "hour": 0.0288,
+   "id": "koyeb",
+   "isolation": "vm",
    "min_commit_month_usd": null,
-   "name": "Fly.io Machines",
+   "name": "Koyeb Sandboxes",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "reserved-1y-shared-us",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.00500256,
-   "rank": 7,
-   "url": "https://fly.io/pricing",
-   "vcpu_h": 0.0005778
+   "priced_by": "eco",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 19,
+   "tier": "self-serve",
+   "url": "https://www.koyeb.com/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.49,
+   "card_sha256_12": "0a8617cd45a5",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 1.49,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Medium",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 250,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.029762,
+   "id": "civo",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Civo Compute",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "standard",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 20,
+   "tier": "self-serve",
+   "url": "https://www.civo.com/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 1.49,
@@ -194,7 +630,10 @@
    "compute_month_usd": 1.49,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 5.22,
    "free_one_time_credit": 300,
    "has_genuine_free_tier": true,
@@ -208,131 +647,424 @@
    "priced_by": "cloud-run-instances",
    "pricing_kind": "resource",
    "ram_gib_h": 0.006948,
-   "rank": 8,
+   "rank": 21,
+   "tier": "self-serve",
    "url": "https://cloud.google.com/run/pricing",
    "vcpu_h": 0.000972
   },
   {
-   "all_in_month_usd": 1.63,
-   "card_sha256_12": "3f312eb98cf3",
+   "all_in_month_usd": 1.5,
+   "card_sha256_12": "767c56f29983",
    "category": "hyperscaler",
    "compromises": [],
-   "compute_month_usd": 1.63,
-   "entry_month_usd": 73,
-   "entry_plan": null,
-   "entry_shape": null,
-   "free_monthly_credit": 0,
-   "free_one_time_credit": 300,
-   "has_genuine_free_tier": false,
-   "has_sales_plan": false,
-   "hour": null,
-   "id": "gke-agent-sandbox",
-   "isolation": "gvisor",
-   "min_commit_month_usd": null,
-   "name": "GKE Agent Sandbox",
-   "platform_fee_month_usd": 0.0,
-   "priced_by": "autopilot-spot",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.0014767,
-   "rank": 9,
-   "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
-   "vcpu_h": 0.0133
-  },
-  {
-   "all_in_month_usd": 1.67,
-   "card_sha256_12": "9ec89ff12331",
-   "category": "agent-sandbox",
-   "compromises": [
-    "smallest usable size is 0.1 vCPU / 0.25 GiB"
-   ],
-   "compute_month_usd": 1.67,
+   "compute_month_usd": 1.5,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "code-interpreter-session",
+    "ram_gib": null,
+    "vcpu": null
+   },
+   "free_monthly_credit": 5.4,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.03,
+   "id": "azure-container-apps",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Azure Container Apps (Consumption, Dedicated, Dynamic Sessions)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "dynamic-sessions-code-interpreter",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 22,
+   "tier": "self-serve",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/container-apps/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.5,
+   "card_sha256_12": "1a3955567f82",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 1.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "session-60min",
+    "ram_gib": null,
+    "vcpu": null
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "northflank",
-   "isolation": "vm",
+   "hour": 0.03,
+   "id": "together-code-sandbox",
+   "isolation": "firecracker",
    "min_commit_month_usd": null,
-   "name": "Northflank Sandboxes",
+   "name": "Together Code Sandbox",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "byoc",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.00139,
-   "rank": 10,
-   "url": "https://northflank.com/pricing",
-   "vcpu_h": 0.01389
+   "priced_by": "code-interpreter",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 23,
+   "tier": "self-serve",
+   "url": "https://www.together.ai/pricing",
+   "vcpu_h": null
   },
   {
-   "all_in_month_usd": 1.82,
-   "card_sha256_12": "188c23858116",
-   "category": "hyperscaler",
-   "compromises": [
-    "smallest usable size is 1 vCPU / 2 GiB"
-   ],
-   "compute_month_usd": 1.82,
+   "all_in_month_usd": 1.51,
+   "card_sha256_12": "feaf3c4706a6",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 1.51,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "small (2 vCPU / 8 GiB / 32 GiB)",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
-   "has_sales_plan": false,
-   "hour": null,
-   "id": "ionos",
+   "has_sales_plan": true,
+   "hour": 0.030238,
+   "id": "arker",
    "isolation": "vm",
    "min_commit_month_usd": null,
-   "name": "IONOS Cloud",
+   "name": "Arker",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "vcpu-server",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.0022756,
-   "rank": 11,
-   "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
-   "vcpu_h": 0.0136536
+   "priced_by": "eu-hetzner-proposed",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 24,
+   "tier": "self-serve",
+   "url": "https://arker.ai/docs/pricing",
+   "vcpu_h": null
   },
   {
-   "all_in_month_usd": 2.09,
+   "all_in_month_usd": 1.56,
    "card_sha256_12": "9f248a4b9df6",
    "category": "hyperscaler",
-   "compromises": [
-    "smallest usable size is 1 vCPU / 2 GiB"
-   ],
-   "compute_month_usd": 2.09,
+   "compromises": [],
+   "compute_month_usd": 1.56,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "burstable-2",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": false,
-   "hour": null,
+   "hour": 0.0312,
    "id": "ubicloud",
    "isolation": "vm",
    "min_commit_month_usd": null,
    "name": "Ubicloud",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "gpu-vm",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0,
-   "rank": 12,
+   "priced_by": "burstable",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 25,
+   "tier": "self-serve",
    "url": "https://www.ubicloud.com/docs/about/pricing",
-   "vcpu_h": 0.020885
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.63,
+   "card_sha256_12": "50a2a28773a1",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 1.63,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "t1i.medium",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 220.92,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.03255,
+   "id": "kakao-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "KakaoCloud Virtual Machine",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "shared-burstable",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 26,
+   "tier": "self-serve",
+   "url": "https://www.kakaocloud.com/services/virtual-machine/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.68,
+   "card_sha256_12": "c36840fcc446",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 1.68,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "e2-medium",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.03350571,
+   "id": "gcp-windows",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Google Compute Engine (Windows Server)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "shared-burstable",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 27,
+   "tier": "self-serve",
+   "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.76,
+   "card_sha256_12": "73bd73c321c9",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 1.76,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "fly-machines",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Fly.io Machines",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "shared-us",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0083376,
+   "rank": 28,
+   "tier": "self-serve-wins",
+   "url": "https://fly.io/pricing",
+   "vcpu_h": 0.000963
+  },
+  {
+   "all_in_month_usd": 1.84,
+   "card_sha256_12": "35829634aac8",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 1.84,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "nebius",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Nebius",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "cpu-d3",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0032,
+   "rank": 29,
+   "tier": "self-serve",
+   "url": "https://docs.nebius.com/compute/resources/pricing",
+   "vcpu_h": 0.012
+  },
+  {
+   "all_in_month_usd": 1.86,
+   "card_sha256_12": "fff50378c044",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 1.86,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2C4G",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 2.98,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.037255081727,
+   "id": "tencent-cloud-studio",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Tencent Cloud Studio",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 30,
+   "tier": "self-serve",
+   "url": "https://cloud.tencent.cn/document/product/1039/131894",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 1.88,
+   "card_sha256_12": "7da1bee85f62",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 1.88,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "B2als_v2",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0376,
+   "id": "azure-vm",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Azure Virtual Machines (Linux)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "burstable-basv2-30",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 31,
+   "tier": "self-serve-wins",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.0,
+   "card_sha256_12": "1577940ebf98",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 2.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "C4",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.04,
+   "id": "paperspace",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Paperspace",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "hourly-core",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 32,
+   "tier": "self-serve",
+   "url": "https://docs.digitalocean.com/products/paperspace/pricing/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.08,
+   "card_sha256_12": "eb08cb5ecee6",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 2.08,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Standard_B2s",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0416,
+   "id": "azure-windows",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Azure Virtual Machines (Windows Server)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "shared-burstable",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 33,
+   "tier": "self-serve",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.2,
+   "card_sha256_12": "abc404360181",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 2.2,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "E1LC-2.6GB",
+    "ram_gib": 6,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.044,
+   "id": "e2e-networks",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "E2E Networks",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "e1-linux",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 34,
+   "tier": "self-serve",
+   "url": "https://www.e2enetworks.com/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 2.27,
    "card_sha256_12": "e3df3ac9b117",
    "category": "agent-sandbox",
-   "compromises": [
-    "stock-limited, not guaranteed available"
-   ],
+   "compromises": [],
    "compute_month_usd": 2.27,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -346,9 +1078,41 @@
    "priced_by": "cpu-on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.005523,
-   "rank": 13,
+   "rank": 35,
+   "tier": "self-serve",
    "url": "https://tama.computer/",
    "vcpu_h": 0.01166
+  },
+  {
+   "all_in_month_usd": 2.33,
+   "card_sha256_12": "0c52fdf94b71",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 2.33,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "standard-medium",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.04666,
+   "id": "exoscale",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Exoscale",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "standard",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 36,
+   "tier": "self-serve",
+   "url": "https://www.exoscale.com/pricing/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 2.33,
@@ -358,7 +1122,10 @@
    "compute_month_usd": 2.33,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 15,
    "free_one_time_credit": 5,
    "has_genuine_free_tier": true,
@@ -372,7 +1139,8 @@
    "priced_by": "floor-burst",
    "pricing_kind": "resource",
    "ram_gib_h": null,
-   "rank": 14,
+   "rank": 37,
+   "tier": "self-serve",
    "url": "https://docs.run.cloud/sandboxes/index.md",
    "vcpu_h": 0.0233
   },
@@ -380,14 +1148,14 @@
    "all_in_month_usd": 2.39,
    "card_sha256_12": "2398ca54ecae",
    "category": "hyperscaler",
-   "compromises": [
-    "smallest usable size is 1 vCPU / 0.5 GiB",
-    "smallest usable size is 1 vCPU / 1 GiB"
-   ],
+   "compromises": [],
    "compute_month_usd": 2.39,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_genuine_free_tier": true,
@@ -401,9 +1169,229 @@
    "priced_by": "v5-shared",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0040411,
-   "rank": 15,
+   "rank": 38,
+   "tier": "self-serve",
    "url": "https://www.digitalocean.com/pricing/droplets",
    "vcpu_h": 0.0158219
+  },
+  {
+   "all_in_month_usd": 2.46,
+   "card_sha256_12": "0e4b2f4aee6d",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 2.46,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "c7g.large",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0491,
+   "id": "aws-ec2",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "AWS EC2 (reference VMs)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-arm64-asia",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 39,
+   "tier": "self-serve-wins",
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.46,
+   "card_sha256_12": "762af596f333",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 2.46,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "c2i.2 (shared vCPU)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.049255,
+   "id": "stackit",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "STACKIT Compute Engine",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "single",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 40,
+   "tier": "self-serve",
+   "url": "https://pim.api.stackit.cloud/v1/skus",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.5,
+   "card_sha256_12": "5c527de4f143",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 5 GiB"
+   ],
+   "compute_month_usd": 2.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "code execution container",
+    "ram_gib": 5,
+    "vcpu": 1
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.05,
+   "id": "claude-managed-agents",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Claude Managed Agents",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "code-execution-tool",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 41,
+   "tier": "self-serve",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing#claude-managed-agents-pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.5,
+   "card_sha256_12": "f217fa389f2b",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 2.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Linux running default",
+    "ram_gib": null,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.05,
+   "id": "coasty",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Coasty",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "linux-running-default",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 42,
+   "tier": "self-serve",
+   "url": "https://coasty.ai/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.5,
+   "card_sha256_12": "abe7d921cfba",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 2.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2 vCPU / 8 GB",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.05,
+   "id": "jarvislabs",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Jarvislabs",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "cpu-vm",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 43,
+   "tier": "self-serve",
+   "url": "https://jarvislabs.ai/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.5,
+   "card_sha256_12": "e2bcaa322cf1",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 2.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2 vCPU / 4096 MiB (default, 1 unit, kept warm)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.05,
+   "id": "mosaic",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Mosaic Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 44,
+   "tier": "self-serve",
+   "url": "https://sandbox.mosaicos.com/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 2.6,
+   "card_sha256_12": "bd38fe01f5e9",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 2.6,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "large",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.052,
+   "id": "machine0",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "machine0",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 45,
+   "tier": "self-serve",
+   "url": "https://machine0.io/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 2.75,
@@ -413,7 +1401,10 @@
    "compute_month_usd": 2.75,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -427,63 +1418,133 @@
    "priced_by": "economy",
    "pricing_kind": "resource",
    "ram_gib_h": 0.006876,
-   "rank": 16,
+   "rank": 46,
+   "tier": "self-serve",
    "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
    "vcpu_h": 0.013716
   },
   {
-   "all_in_month_usd": 2.85,
-   "card_sha256_12": "7797594ddba5",
-   "category": "agent-sandbox",
+   "all_in_month_usd": 2.9,
+   "card_sha256_12": "097a3aa78c11",
+   "category": "hyperscaler",
    "compromises": [],
-   "compute_month_usd": 2.85,
+   "compute_month_usd": 2.9,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "aws-fargate",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "AWS Fargate",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-arm64-asia",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.00261,
+   "rank": 47,
+   "tier": "self-serve-wins",
+   "url": "https://aws.amazon.com/fargate/pricing/",
+   "vcpu_h": 0.02383
+  },
+  {
+   "all_in_month_usd": 3.0,
+   "card_sha256_12": "0f6e5065abfc",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 3.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "t3.medium",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.06,
+   "id": "aws-ec2-windows",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "AWS EC2 (Windows Server)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "shared-burstable",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 48,
+   "tier": "self-serve",
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 3.0,
+   "card_sha256_12": "6e8e709d5b5f",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Standard",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.06,
+   "id": "celesto",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Celesto Cloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 49,
+   "tier": "self-serve",
+   "url": "https://celesto.ai/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 3.0,
+   "card_sha256_12": "a8a508691481",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 3.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "cpu3c-2-4",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "solari",
-   "isolation": "vm",
+   "hour": 0.06,
+   "id": "runpod",
+   "isolation": "container",
    "min_commit_month_usd": null,
-   "name": "Solari",
+   "name": "Runpod",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "enterprise",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.0055,
-   "rank": 17,
-   "url": "https://docs.getsolari.com/pricing",
-   "vcpu_h": 0.0175
-  },
-  {
-   "all_in_month_usd": 2.9,
-   "card_sha256_12": "c36840fcc446",
-   "category": "windows",
-   "compromises": [
-    "smallest usable size is 2 vCPU / 2 GiB"
-   ],
-   "compute_month_usd": 2.9,
-   "entry_month_usd": 0,
-   "entry_plan": null,
-   "entry_shape": null,
-   "free_monthly_credit": 0,
-   "free_one_time_credit": 300,
-   "has_genuine_free_tier": true,
-   "has_sales_plan": false,
-   "hour": null,
-   "id": "gcp-windows",
-   "isolation": "vm",
-   "min_commit_month_usd": null,
-   "name": "Google Compute Engine (Windows Server)",
-   "platform_fee_month_usd": 0.0,
-   "priced_by": "on-demand",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.003069707,
-   "rank": 18,
-   "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
-   "vcpu_h": 0.02290217
+   "priced_by": "cpu-pod",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 50,
+   "tier": "self-serve",
+   "url": "https://www.runpod.io/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 3.0,
@@ -493,7 +1554,10 @@
    "compute_month_usd": 3.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -507,9 +1571,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.015,
-   "rank": 19,
+   "rank": 51,
+   "tier": "self-serve",
    "url": "https://sandbox0.ai/pricing",
    "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 3.0,
+   "card_sha256_12": "800a0f3a8984",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 3.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "vx1-g-2c-8g (VX1 General Purpose, dedicated, boot from block storage (billed separately))",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.06,
+   "id": "vultr",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Vultr Cloud Compute",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "dedicated-vx1",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 52,
+   "tier": "self-serve",
+   "url": "https://www.vultr.com/pricing/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 3.1,
@@ -519,7 +1615,10 @@
    "compute_month_usd": 3.1,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 5,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -533,7 +1632,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.008,
-   "rank": 20,
+   "rank": 53,
+   "tier": "self-serve",
    "url": "https://docs.sailresearch.com/pricing",
    "vcpu_h": 0.015
   },
@@ -545,7 +1645,10 @@
    "compute_month_usd": 3.22,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -559,7 +1662,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.008047097653,
-   "rank": 21,
+   "rank": 54,
+   "tier": "self-serve",
    "url": "https://ppio.com/docs/sandbox/pricing.md",
    "vcpu_h": 0.016094195306
   },
@@ -571,7 +1675,10 @@
    "compute_month_usd": 3.22,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 15.450427,
    "has_genuine_free_tier": true,
@@ -585,7 +1692,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.008047,
-   "rank": 22,
+   "rank": 55,
+   "tier": "self-serve",
    "url": "https://astraflow.ucloud.cn/docs/agent-sandbox",
    "vcpu_h": 0.016094
   },
@@ -597,7 +1705,10 @@
    "compute_month_usd": 3.27,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -611,9 +1722,102 @@
    "priced_by": "sandbox",
    "pricing_kind": "resource",
    "ram_gib_h": 0.005472026404,
-   "rank": 23,
+   "rank": 56,
+   "tier": "self-serve",
    "url": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh",
    "vcpu_h": 0.021727163663
+  },
+  {
+   "all_in_month_usd": 3.33,
+   "card_sha256_12": "9ec89ff12331",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.33,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "nf-compute-200",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.0667,
+   "id": "northflank",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Northflank Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 57,
+   "tier": "self-serve-wins",
+   "url": "https://northflank.com/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 3.35,
+   "card_sha256_12": "f661189e3e32",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 3.35,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "e2-standard-2",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.06701142,
+   "id": "gcp-compute",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Google Compute Engine (Linux VMs)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 58,
+   "tier": "self-serve-wins",
+   "url": "https://cloud.google.com/products/compute/pricing/general-purpose",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 3.42,
+   "card_sha256_12": "1d8a7ab7dc09",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.42,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 5,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "kedge",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Kedge",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "disposable-sandbox",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.00684931506849315,
+   "rank": 59,
+   "tier": "self-serve",
+   "url": "https://kedge.dev/docs/billing",
+   "vcpu_h": 0.02054794520547945
   },
   {
    "all_in_month_usd": 3.46,
@@ -623,7 +1827,10 @@
    "compute_month_usd": 3.46,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -637,35 +1844,72 @@
    "priced_by": "eci-virtual-node",
    "pricing_kind": "resource",
    "ram_gib_h": 0.003456,
-   "rank": 24,
+   "rank": 60,
+   "tier": "not-self-serve-only",
    "url": "https://www.alibabacloud.com/product/kubernetes",
    "vcpu_h": 0.02772
   },
   {
-   "all_in_month_usd": 3.7,
-   "card_sha256_12": "a1d5216198eb",
-   "category": "agent-sandbox",
+   "all_in_month_usd": 3.47,
+   "card_sha256_12": "af9eaa227ee0",
+   "category": "paas",
    "compromises": [],
-   "compute_month_usd": 3.7,
+   "compute_month_usd": 3.47,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "dedicated 2 vCPU / 8 GiB",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "beam",
-   "isolation": "gvisor",
-   "min_commit_month_usd": null,
-   "name": "Beam",
+   "hour": 0.0694,
+   "id": "replit",
+   "isolation": "vm",
+   "min_commit_month_usd": 18,
+   "name": "Replit",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "byoc",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.009,
-   "rank": 25,
-   "url": "https://www.beam.cloud/pricing",
-   "vcpu_h": 0.019
+   "priced_by": "reserved-vm",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 61,
+   "tier": "self-serve",
+   "url": "https://docs.replit.com/billing/deployment-pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 3.6,
+   "card_sha256_12": "f7227dfcb7fc",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 3.6,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "arm1.small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.072,
+   "id": "aws-codebuild",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "AWS CodeBuild",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "sandbox-arm",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 62,
+   "tier": "self-serve",
+   "url": "https://aws.amazon.com/codebuild/pricing/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 3.96,
@@ -675,7 +1919,10 @@
    "compute_month_usd": 3.96,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -689,9 +1936,71 @@
    "priced_by": "interruptible",
    "pricing_kind": "resource",
    "ram_gib_h": 0.007992,
-   "rank": 26,
+   "rank": 63,
+   "tier": "not-self-serve-only",
    "url": "https://cerebrium.ai/pricing",
    "vcpu_h": 0.02358
+  },
+  {
+   "all_in_month_usd": 3.99,
+   "card_sha256_12": "7797594ddba5",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.99,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "solari",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Solari",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0077,
+   "rank": 64,
+   "tier": "self-serve-wins",
+   "url": "https://docs.getsolari.com/pricing",
+   "vcpu_h": 0.0245
+  },
+  {
+   "all_in_month_usd": 4.0,
+   "card_sha256_12": "c608597f6801",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 4.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "c1a.2x",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.08,
+   "id": "crusoe",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Crusoe",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-cpu-general",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 65,
+   "tier": "self-serve",
+   "url": "https://www.crusoe.ai/cloud/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 4.0,
@@ -701,7 +2010,10 @@
    "compute_month_usd": 4.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -715,7 +2027,8 @@
    "priced_by": "active-only",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0075,
-   "rank": 27,
+   "rank": 66,
+   "tier": "self-serve",
    "url": "https://withruntime.com/pricing",
    "vcpu_h": 0.025
   },
@@ -727,7 +2040,10 @@
    "compute_month_usd": 4.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -741,37 +2057,10 @@
    "priced_by": "openshift-dedicated-worker-subscription",
    "pricing_kind": "resource",
    "ram_gib_h": 0,
-   "rank": 28,
+   "rank": 67,
+   "tier": "self-serve",
    "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
    "vcpu_h": 0.04275
-  },
-  {
-   "all_in_month_usd": 4.32,
-   "card_sha256_12": "8ace4fb74929",
-   "category": "agent-sandbox",
-   "compromises": [
-    "smallest usable size is 1 vCPU / 2 GiB"
-   ],
-   "compute_month_usd": 4.32,
-   "entry_month_usd": 0,
-   "entry_plan": null,
-   "entry_shape": null,
-   "free_monthly_credit": 0,
-   "free_one_time_credit": 200,
-   "has_genuine_free_tier": true,
-   "has_sales_plan": true,
-   "hour": null,
-   "id": "blaxel",
-   "isolation": "firecracker",
-   "min_commit_month_usd": null,
-   "name": "Blaxel",
-   "platform_fee_month_usd": 0.0,
-   "priced_by": "batch-job",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.0216,
-   "rank": 29,
-   "url": "https://blaxel.ai/pricing",
-   "vcpu_h": 0
   },
   {
    "all_in_month_usd": 4.32,
@@ -781,7 +2070,10 @@
    "compute_month_usd": 4.32,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_genuine_free_tier": true,
@@ -795,21 +2087,85 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0144,
-   "rank": 30,
+   "rank": 68,
+   "tier": "self-serve",
    "url": "https://buddy.works/pricing",
    "vcpu_h": 0.0144
+  },
+  {
+   "all_in_month_usd": 4.48,
+   "card_sha256_12": "c890936f992b",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 4.48,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "s2v2m4 (2nd Gen)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 260,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0896,
+   "id": "samsung-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Samsung SDS Cloud Platform",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "virtual-server",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 69,
+   "tier": "self-serve-wins",
+   "url": "https://cloud.samsungsds.com/serviceportal/pricing.html",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 4.5,
+   "card_sha256_12": "aa89cc72b2c0",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 4.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "memory_limit 1g",
+    "ram_gib": 1,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.09,
+   "id": "openai-containers",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "OpenAI Containers (Code Interpreter / Hosted Shell)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "container-session",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 70,
+   "tier": "self-serve",
+   "url": "https://developers.openai.com/api/docs/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 4.5,
    "card_sha256_12": "f026f32cb63c",
    "category": "agent-sandbox",
-   "compromises": [
-    "stock-limited, not guaranteed available"
-   ],
+   "compromises": [],
    "compute_month_usd": 4.5,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -823,37 +2179,103 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0125,
-   "rank": 31,
+   "rank": 71,
+   "tier": "self-serve",
    "url": "https://www.primeintellect.ai/sandboxes",
    "vcpu_h": 0.02
   },
   {
-   "all_in_month_usd": 4.75,
-   "card_sha256_12": "af9eaa227ee0",
-   "category": "paas",
-   "compromises": [
-    "smallest usable size is 0.5 vCPU / 2 GiB"
-   ],
-   "compute_month_usd": 4.75,
+   "all_in_month_usd": 4.5,
+   "card_sha256_12": "6aa366e5f58a",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 4.5,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.09,
+   "id": "sandbox-as-a-service",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Sandbox as a Service",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 72,
+   "tier": "self-serve",
+   "url": "https://sandbox-as-a-service.com/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 4.54,
+   "card_sha256_12": "8262e1fea907",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 1.04,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "starter-2c-4g",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.020833333333333332,
+   "id": "upcloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "UpCloud",
+   "platform_fee_month_usd": 3.5,
+   "priced_by": "starter",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 73,
+   "tier": "self-serve",
+   "url": "https://upcloud.com/pricing/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 4.59,
+   "card_sha256_12": "c888aaef653a",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 4.59,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "M",
+    "ram_gib": 4,
+    "vcpu": 4
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "replit",
+   "hour": 0.091833333333,
+   "id": "clever-cloud",
    "isolation": "vm",
-   "min_commit_month_usd": 18,
-   "name": "Replit",
+   "min_commit_month_usd": 557.52,
+   "name": "Clever Cloud",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "autoscale",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.00432,
-   "rank": 32,
-   "url": "https://docs.replit.com/billing/deployment-pricing",
-   "vcpu_h": 0.03888
+   "priced_by": "docker-par",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 74,
+   "tier": "self-serve",
+   "url": "https://www.clever.cloud/pricing/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 4.96,
@@ -863,7 +2285,10 @@
    "compute_month_usd": 4.96,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -877,7 +2302,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0113,
-   "rank": 33,
+   "rank": 75,
+   "tier": "self-serve",
    "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions",
    "vcpu_h": 0.027
   },
@@ -889,7 +2315,10 @@
    "compute_month_usd": 5.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -903,9 +2332,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0,
-   "rank": 34,
+   "rank": 76,
+   "tier": "self-serve",
    "url": "https://cloud.morph.so/web/subscribe",
    "vcpu_h": 0.05
+  },
+  {
+   "all_in_month_usd": 5.19,
+   "card_sha256_12": "2b9468227002",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 5.19,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2x8",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.1038,
+   "id": "baseten",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Baseten",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "cpu-only",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 77,
+   "tier": "not-self-serve-only",
+   "url": "https://docs.baseten.co/deployment/resources",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 5.25,
@@ -915,7 +2376,10 @@
    "compute_month_usd": 5.25,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -929,9 +2393,71 @@
    "priced_by": "vm-tier",
    "pricing_kind": "resource",
    "ram_gib_h": 0,
-   "rank": 35,
+   "rank": 78,
+   "tier": "self-serve",
    "url": "https://exe.dev/pricing",
    "vcpu_h": 0.0525
+  },
+  {
+   "all_in_month_usd": 5.4,
+   "card_sha256_12": "c9cbeab89345",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 5.4,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2cpu m8g.large",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.108,
+   "id": "runs-on",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "RunsOn",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-arm64",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 79,
+   "tier": "self-serve-wins",
+   "url": "https://runs-on.com/pricing/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 5.43,
+   "card_sha256_12": "3f312eb98cf3",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 5.43,
+   "entry_month_usd": 73,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "gke-agent-sandbox",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "GKE Agent Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "autopilot",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0049225,
+   "rank": 80,
+   "tier": "self-serve-wins",
+   "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+   "vcpu_h": 0.0445
   },
   {
    "all_in_month_usd": 5.5,
@@ -941,7 +2467,10 @@
    "compute_month_usd": 5.5,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_genuine_free_tier": true,
@@ -955,7 +2484,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.015,
-   "rank": 36,
+   "rank": 81,
+   "tier": "self-serve",
    "url": "https://docs.isorun.ai/getting-started/pricing",
    "vcpu_h": 0.025
   },
@@ -967,7 +2497,10 @@
    "compute_month_usd": 5.56,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 10,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -981,7 +2514,8 @@
    "priced_by": "instacloud-compute",
    "pricing_kind": "resource",
    "ram_gib_h": 0.013896,
-   "rank": 37,
+   "rank": 82,
+   "tier": "self-serve",
    "url": "https://www.instacloud.com/pricing",
    "vcpu_h": 0.027792
   },
@@ -993,7 +2527,10 @@
    "compute_month_usd": 5.56,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_genuine_free_tier": true,
@@ -1007,7 +2544,8 @@
    "priced_by": "container-service",
    "pricing_kind": "resource",
    "ram_gib_h": 0.013896,
-   "rank": 38,
+   "rank": 83,
+   "tier": "self-serve",
    "url": "https://railway.com/pricing",
    "vcpu_h": 0.027792
   },
@@ -1015,13 +2553,14 @@
    "all_in_month_usd": 5.83,
    "card_sha256_12": "518341af243e",
    "category": "agent-sandbox",
-   "compromises": [
-    "stock-limited, not guaranteed available"
-   ],
+   "compromises": [],
    "compute_month_usd": 5.83,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
@@ -1035,9 +2574,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.01152,
-   "rank": 39,
+   "rank": 84,
+   "tier": "self-serve",
    "url": "https://docs.novita.ai/guides/sandbox-pricing",
    "vcpu_h": 0.03528
+  },
+  {
+   "all_in_month_usd": 5.93,
+   "card_sha256_12": "f147445c9450",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 5.93,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "s-2vcpu-4gb",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.118688,
+   "id": "createos",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "CreateOS Sandbox (NodeOps)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 85,
+   "tier": "self-serve",
+   "url": "https://createos.sh/products/sandbox",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 6.0,
@@ -1047,7 +2618,10 @@
    "compute_month_usd": 6.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1061,19 +2635,87 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0,
-   "rank": 40,
+   "rank": 86,
+   "tier": "self-serve",
    "url": "https://baponi.ai/pricing/",
    "vcpu_h": 0.06
   },
   {
    "all_in_month_usd": 6.0,
-   "card_sha256_12": "df321a3e6d4e",
-   "category": "agent-sandbox",
+   "card_sha256_12": "f1c9336c9a9a",
+   "category": "paas",
    "compromises": [],
    "compute_month_usd": 6.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "Large",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.12,
+   "id": "modelence",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Modelence",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "containers",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 87,
+   "tier": "not-self-serve-only",
+   "url": "https://modelence.com",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 6.0,
+   "card_sha256_12": "0bb72ed81801",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 6.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Medium",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.12,
+   "id": "specific",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Specific",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "services",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 88,
+   "tier": "not-self-serve-only",
+   "url": "https://specific.dev/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 6.0,
+   "card_sha256_12": "df321a3e6d4e",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 1 GiB"
+   ],
+   "compute_month_usd": 6.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1087,7 +2729,8 @@
    "priced_by": "pro",
    "pricing_kind": "resource",
    "ram_gib_h": 0.009,
-   "rank": 41,
+   "rank": 89,
+   "tier": "self-serve",
    "url": "https://www.tensorlake.ai/pricing",
    "vcpu_h": 0.042
   },
@@ -1099,7 +2742,10 @@
    "compute_month_usd": 6.1,
    "entry_month_usd": 1.83,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": false,
@@ -1113,7 +2759,8 @@
    "priced_by": "provisioned-idle",
    "pricing_kind": "resource",
    "ram_gib_h": 0.030492,
-   "rank": 42,
+   "rank": 90,
+   "tier": "not-self-serve-only",
    "url": "https://cloud.tencent.com/document/product/583/17299",
    "vcpu_h": 0
   },
@@ -1125,7 +2772,10 @@
    "compute_month_usd": 6.4,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1139,9 +2789,72 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.012,
-   "rank": 43,
+   "rank": 91,
+   "tier": "self-serve",
    "url": "https://collimate.ai/pricing",
    "vcpu_h": 0.04
+  },
+  {
+   "all_in_month_usd": 6.55,
+   "card_sha256_12": "bf52cefb5281",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 6.55,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "x1e.xlarge.2",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 284.45,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.1309243704,
+   "id": "open-telekom-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Open Telekom Cloud / T Cloud Public",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "flexible-x1e-de",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 92,
+   "tier": "self-serve",
+   "url": "https://www.open-telekom-cloud.com/en/prices",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 6.6,
+   "card_sha256_12": "ea3a5da9b2f0",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 6.6,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Linux 2S",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.132,
+   "id": "bitrise",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Bitrise (mobile CI)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-linux",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 93,
+   "tier": "self-serve",
+   "url": "https://bitrise.io/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 6.61,
@@ -1151,7 +2864,10 @@
    "compute_month_usd": 6.61,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 18.38,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1165,35 +2881,105 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0129,
-   "rank": 44,
+   "rank": 94,
+   "tier": "self-serve",
    "url": "https://www.freestyle.sh/pricing",
    "vcpu_h": 0.04032
   },
   {
-   "all_in_month_usd": 6.7,
-   "card_sha256_12": "767c56f29983",
+   "all_in_month_usd": 6.8,
+   "card_sha256_12": "bfb3a9f85fd1",
    "category": "hyperscaler",
    "compromises": [],
-   "compute_month_usd": 6.7,
+   "compute_month_usd": 1.8,
    "entry_month_usd": 0,
-   "entry_plan": null,
-   "entry_shape": null,
-   "free_monthly_credit": 5.4,
-   "free_one_time_credit": 200,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "g6-standard-2",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
    "has_sales_plan": false,
-   "hour": null,
-   "id": "azure-container-apps",
+   "hour": 0.036,
+   "id": "linode",
    "isolation": "vm",
    "min_commit_month_usd": null,
-   "name": "Azure Container Apps (Consumption, Dedicated, Dynamic Sessions)",
+   "name": "Akamai Cloud / Linode",
+   "platform_fee_month_usd": 5,
+   "priced_by": "shared",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 95,
+   "tier": "self-serve",
+   "url": "https://www.akamai.com/cloud/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 7.0,
+   "card_sha256_12": "7e7ff3793781",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 7.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 25,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.14,
+   "id": "docker-cloud-sandboxes",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Docker Cloud Sandboxes",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "dedicated",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.004978,
-   "rank": 45,
-   "url": "https://azure.microsoft.com/en-us/pricing/details/container-apps/",
-   "vcpu_h": 0.057077
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 96,
+   "tier": "self-serve",
+   "url": "https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 7.01,
+   "card_sha256_12": "ef9f51c5bc68",
+   "category": "hyperscaler",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 0.52,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "CX23",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.0104,
+   "id": "hetzner-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Hetzner Cloud",
+   "platform_fee_month_usd": 6.49,
+   "priced_by": "shared-cost-optimized-eu",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 97,
+   "tier": "self-serve",
+   "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 7.03,
@@ -1203,7 +2989,10 @@
    "compute_month_usd": 7.03,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1217,9 +3006,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.013411829422,
-   "rank": 46,
+   "rank": 98,
+   "tier": "self-serve",
    "url": "https://cloud.tencent.com/document/product/1814/133249",
    "vcpu_h": 0.043454327326
+  },
+  {
+   "all_in_month_usd": 7.07,
+   "card_sha256_12": "5e63c4fb3898",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 7.07,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "High CPU-g3 4/8",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.141391929064,
+   "id": "naver-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "NAVER Cloud / LINE-NAVER scope",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "vpc-g3",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 99,
+   "tier": "self-serve",
+   "url": "https://www.ncloud.com/product/compute/server",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 7.2,
@@ -1229,7 +3050,10 @@
    "compute_month_usd": 7.2,
    "entry_month_usd": 5,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": false,
@@ -1243,35 +3067,41 @@
    "priced_by": "dispatch-isolates",
    "pricing_kind": "resource",
    "ram_gib_h": 0,
-   "rank": 47,
+   "rank": 100,
+   "tier": "self-serve",
    "url": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/",
    "vcpu_h": 0.072
   },
   {
-   "all_in_month_usd": 7.44,
-   "card_sha256_12": "1a3955567f82",
+   "all_in_month_usd": 7.43,
+   "card_sha256_12": "f0bd24e77db4",
    "category": "agent-sandbox",
    "compromises": [],
-   "compute_month_usd": 7.44,
+   "compute_month_usd": 7.43,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
-   "free_monthly_credit": 0,
+   "entry_shape": {
+    "name": "Nano",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 5.944,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "together-code-sandbox",
+   "hour": 0.1486,
+   "id": "codesandbox-sdk",
    "isolation": "firecracker",
    "min_commit_month_usd": null,
-   "name": "Together Code Sandbox",
+   "name": "CodeSandbox SDK",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "custom-plan",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.0149,
-   "rank": 48,
-   "url": "https://www.together.ai/pricing",
-   "vcpu_h": 0.0446
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 101,
+   "tier": "self-serve-wins",
+   "url": "https://codesandbox.io/docs/sdk/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 7.45,
@@ -1281,7 +3111,10 @@
    "compute_month_usd": 7.45,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 20,
    "has_genuine_free_tier": true,
@@ -1295,35 +3128,103 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.01458,
-   "rank": 49,
+   "rank": 102,
+   "tier": "self-serve",
    "url": "https://www.dedaluslabs.ai/pricing",
    "vcpu_h": 0.04536
   },
   {
+   "all_in_month_usd": 7.49,
+   "card_sha256_12": "9b05704241bc",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 0.49,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Basic",
+    "ram_gib": 0.5,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.00972,
+   "id": "heroku",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Heroku",
+   "platform_fee_month_usd": 7,
+   "priced_by": "cedar-common",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 103,
+   "tier": "not-self-serve-only",
+   "url": "https://www.heroku.com/pricing/",
+   "vcpu_h": null
+  },
+  {
    "all_in_month_usd": 7.5,
-   "card_sha256_12": "77edfc07db49",
-   "category": "browser",
+   "card_sha256_12": "b8b69eabe5c0",
+   "category": "macos",
    "compromises": [],
    "compute_month_usd": 7.5,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
-   "free_monthly_credit": 0,
-   "free_one_time_credit": 5,
+   "entry_shape": {
+    "name": "blacksmith-2vcpu-ubuntu-2404-arm (2 vCPU / 6 GB)",
+    "ram_gib": 6,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 12,
+   "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "hyperbrowser",
+   "hour": 0.15,
+   "id": "blacksmith",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Blacksmith (GitHub Actions runners)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-linux-arm64",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 104,
+   "tier": "self-serve",
+   "url": "https://www.blacksmith.sh/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 7.76,
+   "card_sha256_12": "d110b4f7c925",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 7.76,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 10,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.155187,
+   "id": "miosa",
    "isolation": "firecracker",
    "min_commit_month_usd": null,
-   "name": "Hyperbrowser",
+   "name": "MIOSA",
    "platform_fee_month_usd": 0.0,
    "priced_by": "sandbox",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.015,
-   "rank": 50,
-   "url": "https://www.hyperbrowser.ai/pricing",
-   "vcpu_h": 0.045
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 105,
+   "tier": "self-serve-wins",
+   "url": "https://miosa.ai/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 8.0,
@@ -1333,7 +3234,10 @@
    "compute_month_usd": 8.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 6.87,
    "free_one_time_credit": 200,
    "has_genuine_free_tier": true,
@@ -1347,7 +3251,8 @@
    "priced_by": "provisioned-concurrency-arm64",
    "pricing_kind": "resource",
    "ram_gib_h": 0.04,
-   "rank": 51,
+   "rank": 106,
+   "tier": "self-serve",
    "url": "https://aws.amazon.com/lambda/pricing/",
    "vcpu_h": 0
   },
@@ -1359,7 +3264,10 @@
    "compute_month_usd": 8.0,
    "entry_month_usd": 20,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": false,
@@ -1373,7 +3281,8 @@
    "priced_by": "native",
    "pricing_kind": "resource",
    "ram_gib_h": 0.01,
-   "rank": 52,
+   "rank": 107,
+   "tier": "not-self-serve-only",
    "url": "https://tinfoil.sh",
    "vcpu_h": 0.06
   },
@@ -1385,7 +3294,10 @@
    "compute_month_usd": 8.2,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 30,
    "has_genuine_free_tier": true,
@@ -1399,37 +3311,40 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.021875,
-   "rank": 53,
+   "rank": 108,
+   "tier": "self-serve",
    "url": "https://fly.io/pricing",
    "vcpu_h": 0.03825
   },
   {
    "all_in_month_usd": 8.24,
-   "card_sha256_12": "bb4dead1857b",
-   "category": "hyperscaler",
-   "compromises": [
-    "smallest usable size is 2 vCPU / 1.5 GiB"
-   ],
+   "card_sha256_12": "ad0cce50b597",
+   "category": "agent-sandbox",
+   "compromises": [],
    "compute_month_usd": 8.24,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
-   "has_sales_plan": false,
+   "has_sales_plan": true,
    "hour": null,
-   "id": "google-agent-engine",
-   "isolation": "gvisor",
+   "id": "microsandbox",
+   "isolation": "vm",
    "min_commit_month_usd": null,
-   "name": "Google Agent Runtime / Agent Engine",
+   "name": "microsandbox",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "runtime-3y",
+   "priced_by": "on-demand",
    "pricing_kind": "resource",
-   "ram_gib_h": 0.0072,
-   "rank": 54,
-   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
-   "vcpu_h": 0.068
+   "ram_gib_h": 0.0162,
+   "rank": 109,
+   "tier": "self-serve",
+   "url": "https://microsandbox.dev/pricing",
+   "vcpu_h": 0.05
   },
   {
    "all_in_month_usd": 8.24,
@@ -1439,7 +3354,10 @@
    "compute_month_usd": 8.24,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
@@ -1453,37 +3371,41 @@
    "priced_by": "active-plus-base",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 55,
+   "rank": 110,
+   "tier": "self-serve",
    "url": "https://smolmachines.com/pricing",
    "vcpu_h": 0.05
   },
   {
-   "all_in_month_usd": 8.24,
-   "card_sha256_12": "cf834bc6e633",
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "8ace4fb74929",
    "category": "agent-sandbox",
-   "compromises": [
-    "smallest usable size is 2 vCPU / 1.5 GiB"
-   ],
-   "compute_month_usd": 8.24,
+   "compromises": [],
+   "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "4 GB",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
-   "free_one_time_credit": 300,
+   "free_one_time_credit": 200,
    "has_genuine_free_tier": true,
-   "has_sales_plan": false,
-   "hour": null,
-   "id": "vertex-computer-use",
-   "isolation": "container",
+   "has_sales_plan": true,
+   "hour": 0.1656,
+   "id": "blaxel",
+   "isolation": "firecracker",
    "min_commit_month_usd": null,
-   "name": "Google Agent Platform Sandbox (Code Execution / Shell / Computer Use)",
+   "name": "Blaxel",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "savings-3y",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.0072,
-   "rank": 56,
-   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
-   "vcpu_h": 0.068
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 111,
+   "tier": "self-serve-wins",
+   "url": "https://blaxel.ai/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 8.28,
@@ -1493,7 +3415,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_genuine_free_tier": true,
@@ -1507,7 +3432,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 57,
+   "rank": 112,
+   "tier": "self-serve",
    "url": "https://www.daytona.io/pricing",
    "vcpu_h": 0.0504
   },
@@ -1519,7 +3445,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_genuine_free_tier": true,
@@ -1533,7 +3462,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 58,
+   "rank": 113,
+   "tier": "self-serve",
    "url": "https://www.daytona.io/pricing",
    "vcpu_h": 0.0504
   },
@@ -1545,7 +3475,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
@@ -1559,7 +3492,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 59,
+   "rank": 114,
+   "tier": "self-serve",
    "url": "https://docs.declaw.ai/platform/billing",
    "vcpu_h": 0.0504
   },
@@ -1571,7 +3505,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
@@ -1585,7 +3522,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 60,
+   "rank": 115,
+   "tier": "self-serve",
    "url": "https://e2b.dev/pricing",
    "vcpu_h": 0.0504
   },
@@ -1597,7 +3535,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_genuine_free_tier": true,
@@ -1611,7 +3552,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 61,
+   "rank": 116,
+   "tier": "self-serve",
    "url": "https://hopx.ai/pricing",
    "vcpu_h": 0.0504
   },
@@ -1623,7 +3565,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_genuine_free_tier": true,
@@ -1637,8 +3582,39 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 62,
+   "rank": 117,
+   "tier": "self-serve",
    "url": "https://instavm.io/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "3612a3cdfbdf",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "leap0",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Leap0",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "preview",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 118,
+   "tier": "self-serve",
+   "url": "https://leap0.dev/",
    "vcpu_h": 0.0504
   },
   {
@@ -1649,7 +3625,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1663,7 +3642,8 @@
    "priced_by": "managed",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0414,
-   "rank": 63,
+   "rank": 119,
+   "tier": "self-serve",
    "url": "https://www.omnara.com/pricing",
    "vcpu_h": 0
   },
@@ -1675,7 +3655,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1689,7 +3672,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 64,
+   "rank": 120,
+   "tier": "self-serve",
    "url": "https://openreward.ai/pricing",
    "vcpu_h": 0.0504
   },
@@ -1701,7 +3685,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_genuine_free_tier": true,
@@ -1715,7 +3702,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 65,
+   "rank": 121,
+   "tier": "self-serve",
    "url": "https://runta.com/pricing/",
    "vcpu_h": 0.0504
   },
@@ -1727,7 +3715,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
@@ -1741,7 +3732,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 66,
+   "rank": 122,
+   "tier": "self-serve",
    "url": "https://superserve.ai/pricing",
    "vcpu_h": 0.0504
   },
@@ -1753,7 +3745,10 @@
    "compute_month_usd": 8.28,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
@@ -1767,35 +3762,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 67,
+   "rank": 123,
+   "tier": "self-serve",
    "url": "https://tenki.cloud/pricing",
    "vcpu_h": 0.0504
   },
   {
-   "all_in_month_usd": 8.3,
-   "card_sha256_12": "ba990621efb8",
-   "category": "gpu-cloud",
+   "all_in_month_usd": 8.5,
+   "card_sha256_12": "e582d9e946bc",
+   "category": "dev-env",
    "compromises": [],
-   "compute_month_usd": 8.3,
+   "compute_month_usd": 8.5,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "a1.small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
-   "has_sales_plan": false,
-   "hour": null,
-   "id": "thunder-compute",
-   "isolation": "container",
+   "has_sales_plan": true,
+   "hour": 0.17,
+   "id": "amp",
+   "isolation": "vm",
    "min_commit_month_usd": null,
-   "name": "Thunder Compute",
+   "name": "Amp Orbs",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "gpu-sandbox",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.016,
-   "rank": 68,
-   "url": "https://www.thundercompute.com/pricing",
-   "vcpu_h": 0.051
+   "priced_by": "orb-compute",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 124,
+   "tier": "not-self-serve-only",
+   "url": "https://ampcode.com/docs/orbs/sizes-and-costs",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 8.53,
@@ -1805,7 +3806,10 @@
    "compute_month_usd": 8.53,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 28.445,
    "has_genuine_free_tier": true,
@@ -1819,9 +3823,74 @@
    "priced_by": "beta",
    "pricing_kind": "resource",
    "ram_gib_h": 0.017067,
-   "rank": 69,
+   "rank": 125,
+   "tier": "self-serve",
    "url": "https://orkestr.eu/sandboxes",
    "vcpu_h": 0.051201
+  },
+  {
+   "all_in_month_usd": 8.54,
+   "card_sha256_12": "9fec535ecd4d",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 4 vCPU / 2 GiB"
+   ],
+   "compute_month_usd": 8.54,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Standard sandbox-hour (up to 4 vCPU / 2 GB)",
+    "ram_gib": 2,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.1707,
+   "id": "omnirun",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "OmniRun",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "scale",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 126,
+   "tier": "self-serve",
+   "url": "https://omnirun.io/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 8.55,
+   "card_sha256_12": "2ff26e0ca588",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 0.55,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "small",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.010959,
+   "id": "upstash-box",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Upstash Box",
+   "platform_fee_month_usd": 8,
+   "priced_by": "keepalive-small",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 127,
+   "tier": "self-serve",
+   "url": "https://upstash.com/pricing/box",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 8.64,
@@ -1831,7 +3900,10 @@
    "compute_month_usd": 8.64,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1845,7 +3917,8 @@
    "priced_by": "active-only",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0162,
-   "rank": 70,
+   "rank": 128,
+   "tier": "self-serve",
    "url": "https://www.pandastack.ai/pricing/",
    "vcpu_h": 0.054
   },
@@ -1857,7 +3930,10 @@
    "compute_month_usd": 8.92,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1871,7 +3947,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0223125,
-   "rank": 71,
+   "rank": 129,
+   "tier": "self-serve",
    "url": "https://cua.ai/pricing",
    "vcpu_h": 0.044625
   },
@@ -1883,7 +3960,10 @@
    "compute_month_usd": 8.92,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1897,9 +3977,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0223125,
-   "rank": 72,
+   "rank": 130,
+   "tier": "self-serve",
    "url": "https://cua.ai/pricing",
    "vcpu_h": 0.044625
+  },
+  {
+   "all_in_month_usd": 9.0,
+   "card_sha256_12": "9f4a4ec00065",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 9.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2vcpu-4gb",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.18,
+   "id": "archil",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Archil",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "team-sandbox",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 131,
+   "tier": "self-serve",
+   "url": "https://archil.com/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 9.0,
@@ -1909,7 +4021,10 @@
    "compute_month_usd": 9.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1923,9 +4038,72 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.009,
-   "rank": 73,
+   "rank": 132,
+   "tier": "self-serve",
    "url": "https://developers.cloudflare.com/containers/platform/pricing/",
    "vcpu_h": 0.072
+  },
+  {
+   "all_in_month_usd": 9.0,
+   "card_sha256_12": "47b977d44036",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 9.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2-core",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.18,
+   "id": "github-codespaces",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "GitHub Codespaces",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 133,
+   "tier": "self-serve",
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 9.0,
+   "card_sha256_12": "12855585f700",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 9.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2 vCPU, 8 GB ($0.003/min)",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.18,
+   "id": "warpbuild",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "WarpBuild (GitHub Actions runners)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "linux-arm64",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 134,
+   "tier": "self-serve",
+   "url": "https://www.warpbuild.com/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 9.45,
@@ -1935,7 +4113,10 @@
    "compute_month_usd": 9.45,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -1949,7 +4130,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.01845,
-   "rank": 74,
+   "rank": 135,
+   "tier": "self-serve",
    "url": "https://www.langchain.com/pricing",
    "vcpu_h": 0.0576
   },
@@ -1961,7 +4143,10 @@
    "compute_month_usd": 9.5,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 30,
    "has_genuine_free_tier": true,
@@ -1975,9 +4160,43 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.018,
-   "rank": 75,
+   "rank": 136,
+   "tier": "self-serve",
    "url": "https://boxd.sh/pricing",
    "vcpu_h": 0.059
+  },
+  {
+   "all_in_month_usd": 9.5,
+   "card_sha256_12": "a706189c256d",
+   "category": "hyperscaler",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 9.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "vm.small",
+    "ram_gib": 16,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.19,
+   "id": "latitude-sh",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "Latitude.sh",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "virtual-machines",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 137,
+   "tier": "self-serve",
+   "url": "https://www.latitude.sh/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 10.0,
@@ -1987,7 +4206,10 @@
    "compute_month_usd": 10.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2001,35 +4223,132 @@
    "priced_by": "memory-optimized",
    "pricing_kind": "resource",
    "ram_gib_h": 0.05,
-   "rank": 76,
+   "rank": 138,
+   "tier": "not-self-serve-only",
    "url": "https://www.aptible.com",
    "vcpu_h": 0
   },
   {
    "all_in_month_usd": 10.0,
-   "card_sha256_12": "2ff26e0ca588",
+   "card_sha256_12": "eb8b32d63d57",
    "category": "agent-sandbox",
    "compromises": [],
    "compute_month_usd": 10.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "Medium",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
+   "hour": 0.2,
+   "id": "capy",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Capy",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "native",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 139,
+   "tier": "not-self-serve-only",
+   "url": "https://capy.ai",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 10.3,
+   "card_sha256_12": "bb4dead1857b",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 10.3,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
    "hour": null,
-   "id": "upstash-box",
+   "id": "google-agent-engine",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Google Agent Runtime / Agent Engine",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "sandbox",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.009,
+   "rank": 140,
+   "tier": "self-serve-wins",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+   "vcpu_h": 0.085
+  },
+  {
+   "all_in_month_usd": 10.3,
+   "card_sha256_12": "cf834bc6e633",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 10.3,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "vertex-computer-use",
    "isolation": "container",
    "min_commit_month_usd": null,
-   "name": "Upstash Box",
+   "name": "Google Agent Platform Sandbox (Code Execution / Shell / Computer Use)",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "payg-small",
+   "priced_by": "on-demand",
    "pricing_kind": "resource",
-   "ram_gib_h": 0,
-   "rank": 77,
-   "url": "https://upstash.com/pricing/box",
-   "vcpu_h": 0.1
+   "ram_gib_h": 0.009,
+   "rank": 141,
+   "tier": "self-serve-wins",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+   "vcpu_h": 0.085
+  },
+  {
+   "all_in_month_usd": 10.8,
+   "card_sha256_12": "d4aa32b62b93",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 10.8,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "L",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.216,
+   "id": "azure-container-apps-sandboxes",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Azure Container Apps Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "tiers",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 142,
+   "tier": "self-serve-wins",
+   "url": "https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-overview",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 10.8,
@@ -2039,7 +4358,10 @@
    "compute_month_usd": 10.8,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2053,7 +4375,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0108,
-   "rank": 78,
+   "rank": 143,
+   "tier": "not-self-serve-only",
    "url": "https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes",
    "vcpu_h": 0.0864
   },
@@ -2065,7 +4388,10 @@
    "compute_month_usd": 10.84,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_genuine_free_tier": true,
@@ -2079,9 +4405,40 @@
    "priced_by": "code-interpreter",
    "pricing_kind": "resource",
    "ram_gib_h": 0.00945,
-   "rank": 79,
+   "rank": 144,
+   "tier": "self-serve-wins",
    "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
    "vcpu_h": 0.0895
+  },
+  {
+   "all_in_month_usd": 11.36,
+   "card_sha256_12": "a1d5216198eb",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 11.36,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": [
+    2,
+    4
+   ],
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "beam",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Beam",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.02304,
+   "rank": 145,
+   "tier": "self-serve-wins",
+   "url": "https://www.beam.cloud/pricing",
+   "vcpu_h": 0.0675
   },
   {
    "all_in_month_usd": 11.6,
@@ -2091,7 +4448,10 @@
    "compute_month_usd": 11.6,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2105,9 +4465,41 @@
    "priced_by": "team-on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.008,
-   "rank": 80,
+   "rank": 146,
+   "tier": "self-serve",
    "url": "https://sandbox.stateset.app/",
    "vcpu_h": 0.1
+  },
+  {
+   "all_in_month_usd": 11.71,
+   "card_sha256_12": "bf02a2870c4e",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 1.71,
+   "entry_month_usd": 10,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Micro",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 30,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": 0.03424657534246575,
+   "id": "prized",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Prized",
+   "platform_fee_month_usd": 10,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 147,
+   "tier": "self-serve",
+   "url": "https://prized.dev/docs/billing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 11.88,
@@ -2117,7 +4509,10 @@
    "compute_month_usd": 11.88,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2131,35 +4526,72 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0234,
-   "rank": 81,
+   "rank": 148,
+   "tier": "self-serve",
    "url": "https://openpond.ai/pricing",
    "vcpu_h": 0.072
   },
   {
    "all_in_month_usd": 12.0,
-   "card_sha256_12": "49a17c448f8d",
-   "category": "browser",
+   "card_sha256_12": "152374636f11",
+   "category": "dev-env",
    "compromises": [],
    "compute_month_usd": 12.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "devbox-S",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "kernel",
+   "hour": 0.24,
+   "id": "namespace",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Namespace",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "devbox-linux",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 149,
+   "tier": "self-serve-wins",
+   "url": "https://namespace.so/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 12.0,
+   "card_sha256_12": "135e165cf224",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 12.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.24,
+   "id": "starsling",
    "isolation": "firecracker",
    "min_commit_month_usd": null,
-   "name": "Kernel",
+   "name": "StarSling",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "app-invocation",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.06000012,
-   "rank": 82,
-   "url": "https://www.onkernel.com/pricing",
-   "vcpu_h": 0
+   "priced_by": "ci",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 150,
+   "tier": "self-serve",
+   "url": "https://starsling.dev/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 12.0,
@@ -2169,7 +4601,10 @@
    "compute_month_usd": 12.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2183,9 +4618,103 @@
    "priced_by": "edge",
    "pricing_kind": "resource",
    "ram_gib_h": 0.01,
-   "rank": 83,
+   "rank": 151,
+   "tier": "not-self-serve-only",
    "url": "https://wasmer.io/pricing",
    "vcpu_h": 0.1
+  },
+  {
+   "all_in_month_usd": 12.3,
+   "card_sha256_12": "16b5570e019e",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 12.3,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "large",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.246,
+   "id": "azure-foundry-agents",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Microsoft Foundry hosted agents (East US)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "hosted-eastus",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 152,
+   "tier": "not-self-serve-only",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 12.5,
+   "card_sha256_12": "214f3a7f5232",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 12.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "CPU hour (hardware entitlement undisclosed)",
+    "ram_gib": null,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.25,
+   "id": "mastra",
+   "isolation": "dedicated-vm",
+   "min_commit_month_usd": null,
+   "name": "Mastra",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "teams-cpu-time",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 153,
+   "tier": "not-self-serve-only",
+   "url": "https://mastra.ai",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 12.5,
+   "card_sha256_12": "369a24f1f299",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 12.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Standard (4 vCPU / 16 GB, 1 OCU/h)",
+    "ram_gib": 16,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.25,
+   "id": "ona",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Ona (formerly Gitpod)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 154,
+   "tier": "self-serve-wins",
+   "url": "https://ona.com/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 12.61,
@@ -2195,7 +4724,10 @@
    "compute_month_usd": 12.61,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_genuine_free_tier": true,
@@ -2209,9 +4741,72 @@
    "priced_by": "on-demand-arm64",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0132,
-   "rank": 84,
+   "rank": 155,
+   "tier": "self-serve",
    "url": "https://aws.amazon.com/lambda/pricing/",
    "vcpu_h": 0.0997
+  },
+  {
+   "all_in_month_usd": 12.82,
+   "card_sha256_12": "cc56c4ed0307",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 5.82,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "2c-4g (Pro)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.116438,
+   "id": "render",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Render",
+   "platform_fee_month_usd": 7,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 156,
+   "tier": "self-serve-wins",
+   "url": "https://render.com/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 13.2,
+   "card_sha256_12": "5844620c0769",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 6.6,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Cloud VPS 4",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 6.6,
+   "id": "contabo",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Contabo",
+   "platform_fee_month_usd": 6.6,
+   "priced_by": "core",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 157,
+   "tier": "self-serve",
+   "url": "https://contabo.com/en-us/pricing/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 13.97,
@@ -2221,7 +4816,10 @@
    "compute_month_usd": 13.97,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2235,9 +4833,74 @@
    "priced_by": "agentos",
    "pricing_kind": "resource",
    "ram_gib_h": 0.01044,
-   "rank": 85,
+   "rank": 158,
+   "tier": "self-serve",
    "url": "https://rivet.dev/pricing/",
    "vcpu_h": 0.1188
+  },
+  {
+   "all_in_month_usd": 14.0,
+   "card_sha256_12": "37eda0ed6fa7",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 14.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Standard (2 vCPU / 4 GB)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.28,
+   "id": "aws-workspaces",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Amazon WorkSpaces Personal (Windows)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "linux-autostop",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 159,
+   "tier": "self-serve",
+   "url": "https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 15.0,
+   "card_sha256_12": "4d53eb2c06b7",
+   "category": "dev-env",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 1 GiB"
+   ],
+   "compute_month_usd": 15.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "1-CPU",
+    "ram_gib": 1,
+    "vcpu": 1
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.3,
+   "id": "datalayer",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Datalayer Runtimes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 160,
+   "tier": "self-serve",
+   "url": "https://datalayer.io/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 15.0,
@@ -2247,7 +4910,10 @@
    "compute_month_usd": 15.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2261,9 +4927,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.025,
-   "rank": 86,
+   "rank": 161,
+   "tier": "self-serve",
    "url": "https://deno.com/deploy/pricing",
    "vcpu_h": 0.1
+  },
+  {
+   "all_in_month_usd": 15.0,
+   "card_sha256_12": "4cbfa640d2fd",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 15.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Linux arm64 2-core",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.3,
+   "id": "github-actions",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "GitHub Actions hosted runners",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "linux-arm64",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 162,
+   "tier": "self-serve",
+   "url": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 15.0,
@@ -2273,7 +4971,10 @@
    "compute_month_usd": 15.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2287,9 +4988,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.04,
-   "rank": 87,
+   "rank": 163,
+   "tier": "self-serve",
    "url": "https://islo.dev/pricing",
    "vcpu_h": 0.07
+  },
+  {
+   "all_in_month_usd": 15.59,
+   "card_sha256_12": "0e8602a9a04e",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 6.66,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "2C4GB",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.133279,
+   "id": "sakura-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Sakura Internet Cloud",
+   "platform_fee_month_usd": 8.92,
+   "priced_by": "normal-ishikari",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 164,
+   "tier": "self-serve",
+   "url": "https://cloud.sakura.ad.jp/products/server/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 15.75,
@@ -2299,7 +5032,10 @@
    "compute_month_usd": 15.75,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2313,7 +5049,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.04375,
-   "rank": 88,
+   "rank": 165,
+   "tier": "self-serve",
    "url": "https://agentcomputer.ai/pricing",
    "vcpu_h": 0.07
   },
@@ -2325,7 +5062,10 @@
    "compute_month_usd": 15.84,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_genuine_free_tier": true,
@@ -2339,9 +5079,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0252,
-   "rank": 89,
+   "rank": 166,
+   "tier": "self-serve",
    "url": "https://www.runloop.ai/pricing",
    "vcpu_h": 0.108
+  },
+  {
+   "all_in_month_usd": 16.31,
+   "card_sha256_12": "6cf3cb451d3f",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 16.31,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "macmini.m1.8-16-512 (M1)",
+    "ram_gib": 16,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 24.17,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.326295,
+   "id": "flow-swiss-mac",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "Flow Swiss Mac Bare Metal",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "dedicated",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 167,
+   "tier": "self-serve",
+   "url": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 16.56,
@@ -2351,7 +5123,10 @@
    "compute_month_usd": 16.56,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2365,9 +5140,41 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0324,
-   "rank": 90,
+   "rank": 168,
+   "tier": "self-serve",
    "url": "https://www.amika.dev/pricing",
    "vcpu_h": 0.1008
+  },
+  {
+   "all_in_month_usd": 17.02,
+   "card_sha256_12": "34975dd6e233",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 8.51,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "VPS 500 G12.5",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 8.510744,
+   "id": "netcup",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "netcup VPS",
+   "platform_fee_month_usd": 8.51,
+   "priced_by": "term-1",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 169,
+   "tier": "self-serve-wins",
+   "url": "https://www.netcup.com/en/server/vps",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 17.04,
@@ -2377,7 +5184,10 @@
    "compute_month_usd": 17.04,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2391,9 +5201,103 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.0212,
-   "rank": 91,
+   "rank": 170,
+   "tier": "self-serve",
    "url": "https://vercel.com/docs/sandbox/pricing",
    "vcpu_h": 0.128
+  },
+  {
+   "all_in_month_usd": 17.5,
+   "card_sha256_12": "ba3b6c8f665a",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 17.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "n1-cpu-small",
+    "ram_gib": 4,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.35,
+   "id": "hyperstack",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Hyperstack",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-cpu",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 171,
+   "tier": "self-serve",
+   "url": "https://www.hyperstack.cloud/gpu-pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 17.56,
+   "card_sha256_12": "9fe56742d7e9",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 17.56,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Dedicated Mac mini M4 10-core, 16 GB, 256 GB (weekly)",
+    "ram_gib": 16,
+    "vcpu": 10
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.35119,
+   "id": "rentamac",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "RentaMac (rentamac.io)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "weekly",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 172,
+   "tier": "self-serve",
+   "url": "https://rentamac.io/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 18.0,
+   "card_sha256_12": "d35a129f0b46",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 18.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "machine medium (2 CPU / 7.5 GB, 10 cr/min)",
+    "ram_gib": 7.5,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.36,
+   "id": "circleci",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "CircleCI",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "linux-machine",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 173,
+   "tier": "self-serve",
+   "url": "https://circleci.com/pricing/price-list/",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 18.0,
@@ -2403,23 +5307,121 @@
    "compute_month_usd": 18.0,
    "entry_month_usd": 20,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "depot-ubuntu-24.04",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": false,
    "has_sales_plan": true,
-   "hour": null,
+   "hour": 0.36,
    "id": "depot",
    "isolation": "vm",
    "min_commit_month_usd": null,
    "name": "Depot (GitHub Actions runners)",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "sandbox-sdk-beta",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0,
-   "rank": 92,
+   "priced_by": "linux",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 174,
+   "tier": "self-serve",
    "url": "https://depot.dev/pricing",
-   "vcpu_h": 0.18
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 18.0,
+   "card_sha256_12": "cb4c0635133b",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 18.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "e2-standard-2",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.36,
+   "id": "google-cloud-build",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Google Cloud Build",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "default-e2-standard-2",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 175,
+   "tier": "self-serve",
+   "url": "https://cloud.google.com/build/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 18.0,
+   "card_sha256_12": "bf110206428f",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 18.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "cpu",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.36,
+   "id": "replicate",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Replicate",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "private-cpu",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 176,
+   "tier": "not-self-serve-only",
+   "url": "https://replicate.com/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 18.9,
+   "card_sha256_12": "9048ab57aee1",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 18.9,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "2 vCPU / 4 GB (bursts to 8/16)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 10,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.378,
+   "id": "opencomputer",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "OpenComputer",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 177,
+   "tier": "self-serve",
+   "url": "https://opencomputer.dev/sandboxes",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 18.99,
@@ -2429,7 +5431,10 @@
    "compute_month_usd": 18.99,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 30,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2443,7 +5448,8 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.024012,
-   "rank": 93,
+   "rank": 178,
+   "tier": "self-serve",
    "url": "https://modal.com/pricing",
    "vcpu_h": 0.141912
   },
@@ -2455,7 +5461,10 @@
    "compute_month_usd": 19.03,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2469,21 +5478,54 @@
    "priced_by": "on-demand",
    "pricing_kind": "resource",
    "ram_gib_h": 0.024192,
-   "rank": 94,
+   "rank": 179,
+   "tier": "self-serve",
    "url": "https://www.ellipsis.dev/pricing",
    "vcpu_h": 0.141912
+  },
+  {
+   "all_in_month_usd": 19.23,
+   "card_sha256_12": "c7c142fff599",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 1.23,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "basic",
+    "ram_gib": 32,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.024658,
+   "id": "zo-computer",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Zo Computer",
+   "platform_fee_month_usd": 18,
+   "priced_by": "always-on-basic",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 180,
+   "tier": "not-self-serve-only",
+   "url": "https://www.zo.computer/pricing",
+   "vcpu_h": null
   },
   {
    "all_in_month_usd": 19.86,
    "card_sha256_12": "510a497703d5",
    "category": "agent-sandbox",
-   "compromises": [
-    "smallest usable size is 1 vCPU / 2 GiB"
-   ],
+   "compromises": [],
    "compute_month_usd": 19.86,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 3.310635582565,
    "has_genuine_free_tier": true,
@@ -2497,7 +5539,8 @@
    "priced_by": "base-cu",
    "pricing_kind": "resource",
    "ram_gib_h": 0.016553177913,
-   "rank": 95,
+   "rank": 181,
+   "tier": "self-serve-wins",
    "url": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
    "vcpu_h": 0.165531779128
   },
@@ -2509,7 +5552,10 @@
    "compute_month_usd": 20.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": [
+    2,
+    4
+   ],
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
@@ -2523,40 +5569,918 @@
    "priced_by": "workspace",
    "pricing_kind": "resource",
    "ram_gib_h": 0.04,
-   "rank": 96,
+   "rank": 182,
+   "tier": "self-serve",
    "url": "https://shardflux.dev/#pricing",
    "vcpu_h": 0.12
   },
   {
-   "all_in_month_usd": 30.0,
-   "card_sha256_12": "cc56c4ed0307",
-   "category": "paas",
+   "all_in_month_usd": 20.0,
+   "card_sha256_12": "ee6a0a1a5bde",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 20.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Cloud PC for Agents (hardware spec not published)",
+    "ram_gib": null,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.4,
+   "id": "windows-365-agents",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Windows 365 for Agents",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 183,
+   "tier": "self-serve",
+   "url": "https://learn.microsoft.com/en-us/windows-365/agents/pricing-paygo-always-available",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 20.0,
+   "card_sha256_12": "d0df126fc3f0",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 20.0,
+   "entry_month_usd": 8.25,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Xcode Cloud compute hour (Apple-managed, spec not published)",
+    "ram_gib": null,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": 0.4,
+   "id": "xcode-cloud",
+   "isolation": "apple-vm",
+   "min_commit_month_usd": null,
+   "name": "Apple Xcode Cloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "compute-hours",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 184,
+   "tier": "not-self-serve-only",
+   "url": "https://developer.apple.com/xcode-cloud/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 22.5,
+   "card_sha256_12": "90d80ec36741",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 22.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "split: macOS VM slot = half of a reserved M4 Mac mini (5 CPU / 8 GiB)",
+    "ram_gib": 8,
+    "vcpu": 5
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.45,
+   "id": "use-computer",
+   "isolation": "apple-vm",
+   "min_commit_month_usd": null,
+   "name": "use.computer",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "reservation",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 185,
+   "tier": "self-serve",
+   "url": "https://use.computer/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 24.0,
+   "card_sha256_12": "f57b37ad0833",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 24.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Small LINUX_AMD64_2X4",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 16,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.48,
+   "id": "buildkite-hosted",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Buildkite hosted agents",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "linux",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 186,
+   "tier": "self-serve",
+   "url": "https://buildkite.com/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 24.0,
+   "card_sha256_12": "4c5a4f0ef0d1",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 24.0,
+   "entry_month_usd": 50,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "small",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 120,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": 0.48,
+   "id": "replicas",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Replicas",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "api-automation",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 187,
+   "tier": "self-serve",
+   "url": "https://replicas.dev",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 25.5,
+   "card_sha256_12": "ce58db801b6e",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 25.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Large (CPU)",
+    "ram_gib": 32,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 30,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.51,
+   "id": "lightning-ai",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Lightning AI",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 188,
+   "tier": "self-serve-wins",
+   "url": "https://lightning.ai/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 27.39,
+   "card_sha256_12": "402936d72d55",
+   "category": "macos",
    "compromises": [
-    "smallest usable size is 0.5 vCPU / 0.5 GiB"
+    "stock-limited, not guaranteed available"
    ],
+   "compute_month_usd": 2.4,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Cloud Basic: 4 vCPU, 4 GB, 80 GB SSD",
+    "ram_gib": 4,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.047932,
+   "id": "hostmyapple",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "HostMyApple",
+   "platform_fee_month_usd": 24.99,
+   "priced_by": "vps",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 189,
+   "tier": "self-serve",
+   "url": "https://hostmyapple.com/mac-vps-hosting",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 29.87,
+   "card_sha256_12": "a358afc4429a",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 3.87,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "vc2-2c-4gb + Windows licence: 2 vCPU, 4 GB, 80 GB SSD ($20 base + $32 licence = $52/mo)",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.077381,
+   "id": "vultr-windows",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Vultr Cloud Compute (Windows Server)",
+   "platform_fee_month_usd": 26,
+   "priced_by": "on-demand",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 190,
+   "tier": "self-serve",
+   "url": "https://docs.vultr.com/support/platform/billing/is-a-windows-license-included-in-the-monthly-price",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 30.0,
+   "card_sha256_12": "876ebd3a6ae2",
+   "category": "paas",
+   "compromises": [],
    "compute_month_usd": 30.0,
    "entry_month_usd": 0,
    "entry_plan": null,
-   "entry_shape": null,
+   "entry_shape": {
+    "name": "size 1x",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.6,
+   "id": "bitbucket-pipelines",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Bitbucket Pipelines",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "cloud-runners",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 191,
+   "tier": "self-serve",
+   "url": "https://www.atlassian.com/software/bitbucket/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 30.0,
+   "card_sha256_12": "828330c13d56",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 30.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Pro-default",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_genuine_free_tier": true,
    "has_sales_plan": true,
-   "hour": null,
-   "id": "render",
+   "hour": 0.6,
+   "id": "boxes-dev",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "boxes.dev",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "pro",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 192,
+   "tier": "self-serve",
+   "url": "https://boxes.dev/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 30.0,
+   "card_sha256_12": "a70345346b48",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 30.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "saas-windows-medium-amd64 (2 vCPU / 7.5 GB, factor 1)",
+    "ram_gib": 7.5,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.6,
+   "id": "gitlab-runners",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "GitLab.com hosted runners",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "windows",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 193,
+   "tier": "self-serve",
+   "url": "https://docs.gitlab.com/ci/pipelines/compute_minutes/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 30.6,
+   "card_sha256_12": "006e635af6ef",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 30.6,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Medium 2x",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.6120000000000001,
+   "id": "trigger-dev",
    "isolation": "container",
    "min_commit_month_usd": null,
-   "name": "Render",
+   "name": "Trigger.dev",
    "platform_fee_month_usd": 0.0,
-   "priced_by": "workflow-flex",
-   "pricing_kind": "resource",
-   "ram_gib_h": 0.05,
-   "rank": 97,
-   "url": "https://render.com/pricing",
-   "vcpu_h": 0.2
+   "priced_by": "tasks",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 194,
+   "tier": "not-self-serve-only",
+   "url": "https://trigger.dev/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 32.05,
+   "card_sha256_12": "2227104fd4d8",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 2.05,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Standard server",
+    "ram_gib": 4,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.041096,
+   "id": "manus-cloud-computer",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Manus Cloud Computer",
+   "platform_fee_month_usd": 30,
+   "priced_by": "standard-server",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 195,
+   "tier": "self-serve",
+   "url": "https://help.manus.im/en/articles/15392078-understanding-cloud-computer-plans-and-billing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 36.58,
+   "card_sha256_12": "443491f2efdf",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 36.58,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "sandbox-md",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.73152,
+   "id": "sfcompute",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "SF Compute (GPU market + Autoresearch sandboxes)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "sandbox",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 196,
+   "tier": "self-serve-wins",
+   "url": "https://autoresearch.sfcompute.com/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 37.8,
+   "card_sha256_12": "75353a5450ee",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 37.8,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "rtx5000-28",
+    "ram_gib": null,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.756,
+   "id": "ovh-gpu",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "OVHcloud GPU instances",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "windows-gpu",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 197,
+   "tier": "self-serve",
+   "url": "https://www.ovhcloud.com/en/public-cloud/prices/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 38.47,
+   "card_sha256_12": "9bad99caf7d4",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 2.47,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Business 2 vCPU, 8 GB, 128 GB",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.049315,
+   "id": "windows-365",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Windows 365 Cloud PC (Business / Enterprise)",
+   "platform_fee_month_usd": 36,
+   "priced_by": "business",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 198,
+   "tier": "self-serve",
+   "url": "https://www.microsoft.com/en-us/windows-365/business/compare-plans-pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 43.98,
+   "card_sha256_12": "963b4d017d13",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 24.49,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "KVM 2",
+    "ram_gib": 8,
+    "vcpu": 2
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 24.49,
+   "id": "hostinger-vps",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Hostinger VPS",
+   "platform_fee_month_usd": 19.49,
+   "priced_by": "monthly-1m",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 199,
+   "tier": "self-serve-wins",
+   "url": "https://www.hostinger.com/vps-hosting",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 54.0,
+   "card_sha256_12": "875fdcae6f00",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 54.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Workflows linux-medium (4 vCPU / 16 GiB / 14 GiB SSD)",
+    "ram_gib": 16,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 1.08,
+   "id": "expo",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Expo",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "wf-linux-medium",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 200,
+   "tier": "self-serve",
+   "url": "https://expo.dev",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 63.04,
+   "card_sha256_12": "4ec922f5e297",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 4.04,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Intel 4-core, 8 GB, 120 GB SSD (macOS Sonoma)",
+    "ram_gib": 8,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.080822,
+   "id": "macincloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "MacinCloud",
+   "platform_fee_month_usd": 59,
+   "priced_by": "dedicated-intel-legacy",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 201,
+   "tier": "self-serve-wins",
+   "url": "https://www.macincloud.com/pages/dedicated.html",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 72.47,
+   "card_sha256_12": "6f538f91e922",
+   "category": "hyperscaler",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 5.38,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "AX41 (limited stock, $0 setup)",
+    "ram_gib": 64,
+    "vcpu": 12
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.1075,
+   "id": "hetzner-dedicated",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "Hetzner Dedicated AX / EX",
+   "platform_fee_month_usd": 67.1,
+   "priced_by": "ax",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 202,
+   "tier": "self-serve",
+   "url": "https://www.hetzner.com/dedicated-rootserver/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 73.76,
+   "card_sha256_12": "da9ebd3e61d0",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 4.73,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "Mac mini M2 8-core, 8 GB, 256 GB (EUR 59/mo)",
+    "ram_gib": 8,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.094562,
+   "id": "greenmini",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "Green Mini host",
+   "platform_fee_month_usd": 69.03,
+   "priced_by": "always-on-commit",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 203,
+   "tier": "not-self-serve-only",
+   "url": "https://portal.greenmini.host/checkout/order",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 87.51,
+   "card_sha256_12": "cbb4fd497ee3",
+   "category": "macos",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 5.61,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "MAC M1.S: M1 8-core, 8 GB, 256 GB (EUR 70/mo)",
+    "ram_gib": 8,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.112192,
+   "id": "oakhost",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "OakHost",
+   "platform_fee_month_usd": 81.9,
+   "priced_by": "always-on-commit",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 204,
+   "tier": "self-serve",
+   "url": "https://www.oakhost.com/mac-mini-hosting",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 93.76,
+   "card_sha256_12": "5d4a410f8985",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 6.01,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "M1-M: M1 8-core, 8 GB, 256 GB (EUR 75/month)",
+    "ram_gib": 8,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.120205,
+   "id": "scaleway-apple-silicon",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "Scaleway Apple silicon (Mac mini)",
+   "platform_fee_month_usd": 87.75,
+   "priced_by": "always-on-commit",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 205,
+   "tier": "self-serve",
+   "url": "https://www.scaleway.com/en/pricing/apple-silicon/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 116.47,
+   "card_sha256_12": "e0a7b6f9b474",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 7.47,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "M2.S Mac mini: M2 8-core, 8 GB, 256 GB ($109/mo)",
+    "ram_gib": 8,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 0.149315,
+   "id": "macstadium",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "MacStadium",
+   "platform_fee_month_usd": 109,
+   "priced_by": "always-on-commit",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 206,
+   "tier": "self-serve",
+   "url": "https://www.macstadium.com/pricing",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 135.0,
+   "card_sha256_12": "009f57f5c993",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 135.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "Windows VM (8 vCPU / 32 GB)",
+    "ram_gib": 32,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": 2.7,
+   "id": "codemagic",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Codemagic (mobile CI)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "windows",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 207,
+   "tier": "self-serve",
+   "url": "https://codemagic.io/pricing/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 160.27,
+   "card_sha256_12": "30f65263d6a7",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 10.27,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "macOS M4 Pro runner (4 vCPU / 16 GB)",
+    "ram_gib": 16,
+    "vcpu": 4
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.205479,
+   "id": "cirrus-runners",
+   "isolation": "apple-vm",
+   "min_commit_month_usd": null,
+   "name": "Cirrus Runners",
+   "platform_fee_month_usd": 150,
+   "priced_by": "always-on-commit",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 208,
+   "tier": "self-serve-wins",
+   "url": "https://cirrus-runners.app/pricing/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 186.0,
+   "card_sha256_12": "71db3ba82080",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 186.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "macOS Standard (M1)",
+    "ram_gib": 7,
+    "vcpu": 3
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 3.72,
+   "id": "azure-pipelines",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Azure Pipelines",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "github-hosted-payg",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 209,
+   "tier": "not-self-serve-only",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 300.0,
+   "card_sha256_12": "089dd6a9eceb",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 300.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": {
+    "name": "one stateful provider environment",
+    "ram_gib": null,
+    "vcpu": null
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 20,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 6,
+   "id": "archal",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Archal",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "native",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 210,
+   "tier": "not-self-serve-only",
+   "url": "https://www.archal.ai/",
+   "vcpu_h": null
+  },
+  {
+   "all_in_month_usd": 507.0,
+   "card_sha256_12": "a05647a866fe",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 32.5,
+   "entry_month_usd": 0,
+   "entry_plan": "usage cap",
+   "entry_shape": {
+    "name": "mac2.metal (Apple M1, 8 vCPU / 16 GiB)",
+    "ram_gib": 16,
+    "vcpu": 8
+   },
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": 0.65,
+   "id": "aws-ec2-mac",
+   "isolation": "dedicated-host",
+   "min_commit_month_usd": null,
+   "name": "AWS EC2 Mac (Dedicated Host)",
+   "platform_fee_month_usd": 474.5,
+   "priced_by": "dedicated-host",
+   "pricing_kind": "sizes",
+   "ram_gib_h": null,
+   "rank": 211,
+   "tier": "self-serve-wins",
+   "url": "https://aws.amazon.com/ec2/instance-types/mac/",
+   "vcpu_h": null
   }
  ],
- "ranked_at": "2026-10-02T01:39:09Z",
+ "ranked_at": "2026-10-02T01:44:35Z",
  "ranking_commit": "6215580ae1d4",
  "unrankable": [
   {
@@ -2576,14 +6500,6 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "alibaba-ecs",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "amp",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "anchor-browser",
    "reason": "no published rate or size"
   },
@@ -2596,19 +6512,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "archal",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "archil",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "arga-labs",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "arker",
    "reason": "no published rate or size"
   },
   {
@@ -2620,75 +6524,11 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "aws-codebuild",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "aws-ec2-mac",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "aws-ec2-windows",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "aws-ec2",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "aws-workspaces",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "azure-container-apps-sandboxes",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "azure-dev-box",
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "azure-foundry-agents",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "azure-gpu",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "azure-pipelines",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "azure-vm",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "azure-windows",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "baseten",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "bitbucket-pipelines",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "bitrise",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "blacksmith",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "boat",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "boxes-dev",
    "reason": "no published rate or size"
   },
   {
@@ -2724,19 +6564,11 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "buildkite-hosted",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "butter",
    "reason": "no priced self-serve plan"
   },
   {
    "id": "bytebot",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "capy",
    "reason": "no published rate or size"
   },
   {
@@ -2748,36 +6580,12 @@
    "reason": "not a compute provider (other)"
   },
   {
-   "id": "celesto",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "chronicle-labs",
-   "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "circleci",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "cirrus-runners",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "civo",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "claude-managed-agents",
    "reason": "no priced self-serve plan"
   },
   {
    "id": "claw2agent",
    "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "clever-cloud",
-   "reason": "no published rate or size"
   },
   {
    "id": "cloudaxis",
@@ -2804,19 +6612,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "coasty",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "codemagic",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "coder",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "codesandbox-sdk",
    "reason": "no published rate or size"
   },
   {
@@ -2829,10 +6625,6 @@
   },
   {
    "id": "computeruse-space",
-   "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "contabo",
    "reason": "no published rate or size"
   },
   {
@@ -2840,27 +6632,11 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "createos",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "crusoe",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "cube",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "cyberdesk",
    "reason": "no priced self-serve plan"
   },
   {
    "id": "dagger",
-   "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "datalayer",
    "reason": "no published rate or size"
   },
   {
@@ -2872,15 +6648,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "docker-cloud-sandboxes",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "dockup",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "e2e-networks",
    "reason": "no published rate or size"
   },
   {
@@ -2888,16 +6656,8 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "exoscale",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "expanse",
    "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "expo",
-   "reason": "no published rate or size"
   },
   {
    "id": "fal",
@@ -2912,10 +6672,6 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "flow-swiss-mac",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "flowdeploy",
    "reason": "no priced self-serve plan"
   },
@@ -2924,15 +6680,7 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "gcore",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "gcp-compute-gpu",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "gcp-compute",
    "reason": "no published rate or size"
   },
   {
@@ -2940,32 +6688,12 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "github-actions",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "github-codespaces",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "gitlab-runners",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "gologin",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "google-cloud-build",
    "reason": "no published rate or size"
   },
   {
    "id": "google-colab",
    "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "greenmini",
-   "reason": "no published rate or size"
   },
   {
    "id": "h-company",
@@ -2984,18 +6712,6 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "heroku",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "hetzner-cloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "hetzner-dedicated",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "hetzner-gpu",
    "reason": "no published rate or size"
   },
@@ -3004,19 +6720,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "hostinger-vps",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "hostmyapple",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "hud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "huggingface-jobs",
    "reason": "no published rate or size"
   },
   {
@@ -3032,16 +6736,12 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "hyperstack",
+   "id": "hyperbrowser",
    "reason": "no published rate or size"
   },
   {
    "id": "hyrex",
    "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "ibm-cloud-vpc",
-   "reason": "no published rate or size"
   },
   {
    "id": "intuned",
@@ -3056,19 +6756,7 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "jarvislabs",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "kaggle",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "kakao-cloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "kamatera",
    "reason": "no published rate or size"
   },
   {
@@ -3076,11 +6764,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "kedge",
-   "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "koyeb",
+   "id": "kernel",
    "reason": "no published rate or size"
   },
   {
@@ -3093,18 +6777,6 @@
   },
   {
    "id": "lapdev",
-   "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "latitude-sh",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "leap0",
-   "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "lightning-ai",
    "reason": "no published rate or size"
   },
   {
@@ -3116,26 +6788,6 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "linode",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "lizard",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "machine0",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "macincloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "macstadium",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "magnitude",
    "reason": "no published rate or size"
   },
@@ -3144,24 +6796,12 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "manus-cloud-computer",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "maritime",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "mastra",
    "reason": "no published rate or size"
   },
   {
    "id": "metorial",
    "reason": "no published rate or size"
-  },
-  {
-   "id": "microsandbox",
-   "reason": "no priced self-serve plan"
   },
   {
    "id": "minicor",
@@ -3172,39 +6812,15 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "miosa",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "mistral-compute",
    "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "modelence",
-   "reason": "no published rate or size"
   },
   {
    "id": "moonshot-kimi",
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "mosaic",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "namespace",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "naver-cloud",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "nebius-contree",
-   "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "netcup",
    "reason": "no published rate or size"
   },
   {
@@ -3220,19 +6836,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "oakhost",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "okteto",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "omnirun",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "ona",
    "reason": "no published rate or size"
   },
   {
@@ -3240,19 +6844,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "open-telekom-cloud",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "openagi",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "openai-containers",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "opencomputer",
    "reason": "no published rate or size"
   },
   {
@@ -3268,19 +6860,7 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "ovh-gpu",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "ovhcloud",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "paperpod",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "paperspace",
    "reason": "no published rate or size"
   },
   {
@@ -3312,10 +6892,6 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "prized",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "reflex",
    "reason": "no published rate or size"
   },
@@ -3329,18 +6905,6 @@
   },
   {
    "id": "remote-browser",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "rentamac",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "replicas",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "replicate",
    "reason": "no published rate or size"
   },
   {
@@ -3364,35 +6928,7 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "runpod",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "runs-on",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "sakura-cloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "samsung-cloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "sandbox-as-a-service",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "scaleway-apple-silicon",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "scaleway-gpu",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "scaleway",
    "reason": "no published rate or size"
   },
   {
@@ -3432,16 +6968,8 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "sfcompute",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "shadeform",
    "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "shellbox",
-   "reason": "no published rate or size"
   },
   {
    "id": "shuttle",
@@ -3465,18 +6993,6 @@
   },
   {
    "id": "smooth",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "specific",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "stackit",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "starsling",
    "reason": "no published rate or size"
   },
   {
@@ -3504,12 +7020,12 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "tencent-cloud-studio",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "tencent-cubesandbox",
    "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "tensordock",
+   "reason": "no published rate or size"
   },
   {
    "id": "tensorpool",
@@ -3518,6 +7034,10 @@
   {
    "id": "texel-ai",
    "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "thunder-compute",
+   "reason": "no published rate or size"
   },
   {
    "id": "tilde-run",
@@ -3540,19 +7060,7 @@
    "reason": "no priced self-serve plan"
   },
   {
-   "id": "trigger-dev",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "unikraft-cloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "upcloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "use-computer",
    "reason": "no published rate or size"
   },
   {
@@ -3572,18 +7080,6 @@
    "reason": "no published rate or size"
   },
   {
-   "id": "vultr-windows",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "vultr",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "warpbuild",
-   "reason": "no published rate or size"
-  },
-  {
    "id": "webapp-io",
    "reason": "no published rate or size"
   },
@@ -3593,26 +7089,6 @@
   },
   {
    "id": "windmill",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "windows-365-agents",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "windows-365",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "xcode-cloud",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "yepcode",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "zeabur",
    "reason": "no published rate or size"
   },
   {
@@ -3626,14 +7102,6 @@
   {
    "id": "zibra-labs",
    "reason": "no priced self-serve plan"
-  },
-  {
-   "id": "zipbox",
-   "reason": "no published rate or size"
-  },
-  {
-   "id": "zo-computer",
-   "reason": "no published rate or size"
   }
  ],
  "upstream_card_commit": "f6a71ab09fefa68e355ef47c52315e099f99c921",

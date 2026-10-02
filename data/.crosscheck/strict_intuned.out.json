@@ -1,0 +1,1 @@
+{"id":"intuned","mode":"strict","eligible":true,"total":120,"breakdown":{"compute":33.333333333333336,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":120,"included":-33.333333333333336},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

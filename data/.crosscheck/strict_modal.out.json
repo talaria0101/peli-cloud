@@ -1,0 +1,1 @@
+{"id":"modal","mode":"strict","eligible":true,"total":0,"breakdown":{"compute":14.191199999999998,"memory":6.4032,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0,"included":-20.5944},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"gke-agent-sandbox","eligible":true,"total":73,"breakdown":{"compute":8.01,"memory":1.7721,"gpu":0,"licence":0,"fees":0,"plan":73,"included":-9.7821},"unknowns":[],"compromises":["beta / preview pricing: may change","term commitment"],"caveats":["disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[]}

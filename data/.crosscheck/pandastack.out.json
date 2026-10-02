@@ -1,0 +1,1 @@
+{"id":"pandastack","eligible":true,"total":26.13917808219178,"breakdown":{"compute":21.599999999999998,"memory":4.32,"gpu":0,"licence":0,"fees":0,"storage":0.21917808219178084,"egress":0,"plan":0},"unknowns":[],"compromises":["smallest size offered is 8 vCPU / 4 GiB"],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

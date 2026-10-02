@@ -1,0 +1,1 @@
+{"id":"sprites","mode":"strict","eligible":true,"total":9.694863013698628,"breakdown":{"compute":3.8249999999999993,"memory":5.833333333333333,"gpu":0,"licence":0,"fees":0,"storage":0.03652968036529681,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

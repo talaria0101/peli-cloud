@@ -1,0 +1,1 @@
+{"id":"scrapfly","mode":"strict","eligible":true,"total":500,"breakdown":{"compute":1.9200000000000002,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":35.84,"plan":500,"included":-37.760000000000005},"unknowns":[],"caveats":["machine size per session not published","idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown"],"reasons":[],"planLimits":[]}

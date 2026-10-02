@@ -1,0 +1,1 @@
+{"id":"hetzner-gpu","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["no preset with ≥2 vCPU and ≥4 GiB"]}

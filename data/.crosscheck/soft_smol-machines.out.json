@@ -1,0 +1,1 @@
+{"id":"smol-machines","mode":"soft","eligible":true,"total":9.953333333333333,"breakdown":{"compute":5,"memory":4.32,"gpu":0,"licence":0,"fees":0,"storage":0.13333333333333333,"egress":0.5,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"netcup","mode":"strict","eligible":true,"total":100.58152,"breakdown":{"compute":100.58152,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":["monthly cap reached"],"reasons":[],"planLimits":[]}

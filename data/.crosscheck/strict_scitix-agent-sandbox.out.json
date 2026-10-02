@@ -1,0 +1,1 @@
+{"id":"scitix-agent-sandbox","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Self-hosted runtime + externally billed clusters: needs opt-in (alt)","Self-hosted container backend: needs opt-in (alt)","Self-hosted microVM backend: needs opt-in (alt)","Pre-warmed pool capacity: needs opt-in (alt)"]}

@@ -1,0 +1,1 @@
+{"id":"gologin","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Professional: max 1 concurrent","Professional: Enterprise size not allowed","Business: max 2 concurrent","Business: Enterprise size not allowed","Enterprise: max 3 concurrent","Custom: negotiated plan"]}

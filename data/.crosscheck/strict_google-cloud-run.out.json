@@ -1,0 +1,1 @@
+{"id":"google-cloud-run","mode":"strict","eligible":true,"total":5.190918721461188,"breakdown":{"compute":0.25920000000000004,"memory":3.7056000000000004,"gpu":0,"licence":0,"fees":0,"storage":0.14611872146118723,"egress":1.08,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

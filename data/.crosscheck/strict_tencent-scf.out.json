@@ -1,0 +1,1 @@
+{"id":"tencent-scf","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Event function: needs opt-in (alt)","Web function: needs opt-in (alt)","Provisioned concurrency (idle): needs opt-in (alt)"]}

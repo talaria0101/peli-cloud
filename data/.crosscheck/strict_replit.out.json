@@ -1,0 +1,1 @@
+{"id":"replit","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Autoscale / Scheduled deployment (compute units while serving or running): needs opt-in (alt)","commit regime only covers always-on instances"]}

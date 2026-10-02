@@ -1,0 +1,1 @@
+{"id":"netcup","eligible":true,"total":100.58152,"breakdown":{"compute":100.58152,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"compromises":["2-12 months (per size) commitment"],"caveats":["monthly cap reached","how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

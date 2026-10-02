@@ -1,0 +1,1 @@
+{"id":"celesto","eligible":true,"total":9.999999999999998,"breakdown":{"compute":9.999999999999998,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"compromises":["Usage-based paid: max 10 concurrent"],"caveats":["egress price not published"],"reasons":[]}

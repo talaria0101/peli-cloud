@@ -1,0 +1,1 @@
+{"id":"aws-codebuild","mode":"strict","eligible":true,"total":9.6,"breakdown":{"compute":9.6,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

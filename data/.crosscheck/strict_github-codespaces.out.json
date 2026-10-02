@@ -1,0 +1,1 @@
+{"id":"github-codespaces","mode":"strict","eligible":true,"total":14.699999999999996,"breakdown":{"compute":25.499999999999996,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0,"included":-10.8},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"azure-container-apps","eligible":true,"total":28.800000000000004,"breakdown":{"compute":23.040000000000003,"memory":5.760000000000001,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 4 GiB: price unknown"],"reasons":[]}

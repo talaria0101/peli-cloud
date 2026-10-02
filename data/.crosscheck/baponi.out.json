@@ -1,0 +1,1 @@
+{"id":"baponi","eligible":true,"total":119.18264840182648,"breakdown":{"compute":32,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.18264840182648404,"egress":0,"plan":97,"included":-10},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

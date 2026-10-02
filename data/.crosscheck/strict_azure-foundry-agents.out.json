@@ -1,0 +1,1 @@
+{"id":"azure-foundry-agents","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["East US hosted agent compute: needs opt-in (alt)","EU hosted agent compute (Sweden Central, France Central, UK South): needs opt-in (alt)"]}

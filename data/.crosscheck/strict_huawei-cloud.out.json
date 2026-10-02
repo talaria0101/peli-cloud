@@ -1,0 +1,1 @@
+{"id":"huawei-cloud","mode":"strict","eligible":true,"total":54.110169321066664,"breakdown":{"compute":44.141807767466666,"memory":8.8283615536,"gpu":0,"licence":0,"fees":0,"storage":0,"egress":1.1400000000000001,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

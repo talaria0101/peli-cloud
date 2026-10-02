@@ -1,0 +1,1 @@
+{"id":"isorun","mode":"strict","eligible":true,"total":14.688584474885847,"breakdown":{"compute":6.666666666666668,"memory":8,"gpu":0,"licence":0,"fees":0,"storage":0.021917808219178082,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[],"planLimits":[]}

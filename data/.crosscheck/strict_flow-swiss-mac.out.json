@@ -1,0 +1,1 @@
+{"id":"flow-swiss-mac","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["no Linux","Mac split into 2 macOS VMs (Apple SLA cap), per-VM price: needs opt-in (alt)","CI Engine (managed ephemeral macOS CI runners on M4 Pro), monthly per concurrent job: needs opt-in (alt, commit)"]}

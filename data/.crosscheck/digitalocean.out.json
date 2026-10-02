@@ -1,0 +1,1 @@
+{"id":"digitalocean","eligible":true,"total":5.951666666666666,"breakdown":{"compute":5.951666666666666,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"compromises":["Pay as you go: max 3 concurrent"],"caveats":[],"reasons":[]}

@@ -1,0 +1,1 @@
+{"id":"stateset","mode":"soft","eligible":true,"total":339.1671666666667,"breakdown":{"compute":33.333333333333336,"memory":5.333333333333333,"gpu":0,"licence":0,"fees":0.0005,"egress":1.5,"plan":299},"unknowns":[],"caveats":["disk beyond 0 GiB: price unknown"],"reasons":[],"planLimits":[]}

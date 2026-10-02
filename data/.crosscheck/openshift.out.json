@@ -1,0 +1,1 @@
+{"id":"openshift","eligible":true,"total":14.25,"breakdown":{"compute":14.25,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["disk beyond 0 GiB: price unknown","egress price not published","how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

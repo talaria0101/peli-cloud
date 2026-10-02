@@ -1,0 +1,1 @@
+{"id":"ovh-gpu","mode":"soft","eligible":true,"total":146.66666666666666,"breakdown":{"compute":146.66666666666666,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"compromises":["machine size not published"],"caveats":["machine size per session not published"],"reasons":[],"planLimits":[]}

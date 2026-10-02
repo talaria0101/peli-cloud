@@ -1,0 +1,1 @@
+{"id":"shardflux","mode":"strict","eligible":true,"total":79,"breakdown":{"compute":11.999999999999998,"memory":21.333333333333336,"gpu":0,"licence":0,"fees":0,"storage":0,"plan":79,"included":-33.333333333333336},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

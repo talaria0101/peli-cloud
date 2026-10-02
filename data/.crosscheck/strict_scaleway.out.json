@@ -1,0 +1,1 @@
+{"id":"scaleway","mode":"strict","eligible":true,"total":24.458148799999996,"breakdown":{"compute":22.979008799999995,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":1.4791399999999997,"egress":0,"plan":0},"unknowns":[],"caveats":[],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"caution","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Fully managed enclave: needs opt-in (sales)","Managed enclave in own AWS: needs opt-in (sales, alt)","AGPL self-host: needs opt-in (alt)"]}

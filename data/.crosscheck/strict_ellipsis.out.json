@@ -1,0 +1,1 @@
+{"id":"ellipsis","mode":"strict","eligible":true,"total":60.89472000000001,"breakdown":{"compute":45.411840000000005,"memory":15.482880000000002,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

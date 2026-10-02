@@ -1,0 +1,1 @@
+{"id":"hetzner-gpu","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["GEX45 Blackwell SFF 24GB, on-demand (×1): needs opt-in (alt)","GEX131 Blackwell Max-Q 96GB, on-demand (×1): needs opt-in (alt)","no preset with ≥2 vCPU and ≥4 GiB"]}

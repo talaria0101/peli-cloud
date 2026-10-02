@@ -1,0 +1,1 @@
+{"id":"hyperbrowser","mode":"strict","eligible":true,"total":30,"breakdown":{"compute":13.333333333333336,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":16.666666666666664},"unknowns":[],"caveats":["machine size per session not published","idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[],"planLimits":[]}

@@ -1,0 +1,1 @@
+{"id":"runloop","mode":"soft","eligible":true,"total":42.696438356164386,"breakdown":{"compute":28.8,"memory":13.440000000000001,"gpu":0,"licence":0,"fees":0,"storage":0.4564383561643836,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[],"planLimits":[]}

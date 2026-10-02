@@ -1,0 +1,12 @@
+{
+ "at": "2026-10-02T01:44:36Z",
+ "both": 142,
+ "cards": 366,
+ "cheapest_n": 15,
+ "cheapest_overlap": 9,
+ "engine_crashed": 0,
+ "engine_eligible": 164,
+ "neither": 133,
+ "only_engine": 22,
+ "only_peli_cloud": 69
+}

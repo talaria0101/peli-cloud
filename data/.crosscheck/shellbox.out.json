@@ -1,0 +1,1 @@
+{"id":"shellbox","eligible":true,"total":2.666666666666667,"breakdown":{"compute":2.666666666666667,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"compromises":["Prepaid: max 16 concurrent","Prepaid: max 32 vCPU running at once (needs 40)"],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

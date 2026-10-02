@@ -1,0 +1,1 @@
+{"id":"novita","eligible":true,"total":15.552000000000003,"breakdown":{"compute":9.408000000000001,"memory":6.144000000000001,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

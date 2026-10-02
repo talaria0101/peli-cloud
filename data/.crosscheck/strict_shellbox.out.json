@@ -1,0 +1,1 @@
+{"id":"shellbox","mode":"strict","eligible":false,"total":null,"breakdown":null,"unknowns":[],"reasons":["Prepaid: max 16 concurrent","Prepaid: max 32 vCPU running at once (needs 40)"]}
