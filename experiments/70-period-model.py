@@ -41,6 +41,13 @@ import datetime
 
 CARD_COMMIT = "f6a71ab09fef"
 
+# Hours in the month a monthly rent is divided by, when a card encodes a
+# subscription's monthly price in its hourly field. 730, not 720, because that
+# is the basis vendors quote in their own copy: Agent 37 publishes "From
+# $4.76/month, 2 vCPU, 4 GB RAM and 4 GB persistent disk at 730 running hours."
+# Using 720 would make such a row 1.4% dearer than the vendor states.
+MONTH_HOURS = 730.0
+
 # ---------------------------------------------------------------------------
 # Advertised sizes the corpus card threw away.
 #
@@ -296,6 +303,31 @@ def mode_hourly(m, shape, pid=None):
             s.get("name"), s.get("vcpu"), s.get("ram_gib"))
         if s.get("advertised"):
             how += " [ADVERTISED, not in the card; page disagrees with the docs]"
+        # A size whose `hour` EQUALS its `month_cap` is a monthly rent encoded in
+        # the hourly field, and the corpus says so in the mode's own note:
+        #
+        #   hostinger-vps: "Estimator-only encoding: sizes.hour and month_cap
+        #   both equal full monthly rent, with a one-hour synthetic minimum.
+        #   This is NOT a vendor hourly tariff."
+        #
+        # 173 sizes across 8 cards are encoded this way (alibaba-ecs, contabo,
+        # hostinger-vps, huawei-cloud, netcup, and three more). Multiplying the
+        # rent by the hours in the period produced figures no reader could
+        # believe: Hostinger's KVM 2 published at $17,632.80/month and
+        # $30,952.80/month for the devbox shape, because $24.49 of monthly rent
+        # was multiplied by 720 hours. 24 published rows were wrong this way.
+        #
+        # The fix is to divide by the month the rent is for, so the rate becomes
+        # a genuine per-hour figure and every horizon lands on the same monthly
+        # rent, which is what a monthly VPS actually costs. The card publishes
+        # no hours-per-month, so 730 is used, the same basis Agent 37's own
+        # published figure uses ("at 730 running hours").
+        cap = s.get("month_cap")
+        if isinstance(cap, (int, float)) and cap > 0 and abs(s["hour"] - cap) < 1e-9:
+            per_h = s["hour"] / MONTH_HOURS
+            how += " [monthly rent $%g encoded as an hourly rate; /%d h]" % (
+                s["hour"], MONTH_HOURS)
+            return per_h * mult, how
         return s["hour"] * mult, how
     v = m.get("vcpu_h")
     r = m.get("ram_gib_h")

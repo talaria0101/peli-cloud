@@ -373,6 +373,32 @@ the same corpus with a different model and found two things about mine.
   neither. Every affected row is therefore marked **`disputed`** in the
   catalogue's "buy it?" column and the conflict is printed under the table. If
   the docs are right, the row goes back to $5.40.
+- **Bug 11: a month's rent was multiplied by the hours in the period, and 24
+  published rows were nonsense because of it.** This one was found by reading
+  the top of my own table for absurdity, not by any check: Hostinger's KVM 2
+  published at **$17,632.80/month** and its devbox shape at **$30,952.80**, at
+  24/7. The corpus card explains itself, in the mode's own note:
+  *"Estimator-only encoding: sizes.hour and month_cap both equal full monthly
+  rent, with a one-hour synthetic minimum. This is NOT a vendor hourly tariff."*
+  **173 sizes across 8 cards** are encoded that way (alibaba-ecs, contabo,
+  hostinger-vps, huawei-cloud, netcup and three more), and the model was
+  multiplying the rent by 720 hours. Fix: when a size's `hour` equals its
+  `month_cap`, the rent is divided by **730** hours, the basis Agent 37's own
+  copy uses (*"at 730 running hours"*), and every horizon then lands on the same
+  monthly rent, which is what a monthly VPS actually costs.
+
+  This was not only a cosmetic absurdity. Contabo ($6.60/month) and netcup
+  ($8.51/month) are genuinely among the cheapest things in this market at this
+  shape, and **both were excluded from the top ten entirely** because their
+  inflated figures put them beyond every sandbox. Corrected, Contabo is rank 3
+  at $2.71 and netcup rank 7 at $3.50, ahead of IONOS, Gcore and Alibaba. The
+  defect was suppressing the answer to the question the catalogue exists to
+  answer.
+
+  The signal was available in the data the whole time and nothing read it:
+  `hour == month_cap` is not a coincidence, it is the corpus telling us the
+  field has been overloaded. Nine rows above $2,000/month remain, all from
+  Nextmv, whose $9.72/hour for a 6-core machine is a real published rate.
 
 ## 6. Independent cross-check against the upstream engine (the control)
 

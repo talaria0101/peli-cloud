@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T03:35:43Z",
+ "at": "2026-10-02T03:40:03Z",
  "rows": [
   {
    "bytes": 6780749,
@@ -188,7 +188,7 @@
    "why": "named by the operator ($20 subscription edge case)"
   },
   {
-   "bytes": 204511,
+   "bytes": 204468,
    "id": "e2b",
    "matched": [
     [
@@ -1083,7 +1083,7 @@
    "why": "dev-env"
   },
   {
-   "bytes": 193604,
+   "bytes": 193602,
    "id": "northflank",
    "matched": [
     [

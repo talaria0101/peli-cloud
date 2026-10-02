@@ -63,6 +63,13 @@ Each one is a real defect that shipped: these are not hypotheticals.
      correction moved it. A count a script can compute should not be typed.
      GUARD J compares the prose against data/period-model.json.
 
+  9. a month's rent multiplied by the hours in the period
+     173 sizes across 8 cards carry a monthly rent in the hourly field. Hostinger
+     published at $17,632.80/month and Contabo and netcup were pushed out of the
+     top ten by figures 700x their real rent. GUARD K checks the division, that
+     a genuine hourly rate is not divided, that a cap which merely exists is not
+     mistaken for equality, and that no published 24/7 row exceeds $8,000.
+
 Each mutation must make 61 FAIL. A mutation that leaves 61 passing is itself a
 finding: it means the guard does not cover the defect it claims to.
 
@@ -149,6 +156,15 @@ MUTATIONS = [
         "**81 providers** publish a one-time",
         "**79 providers** publish a one-time",
         "61 GUARD J reports the one-time count as 81 and fails",
+    ),
+    (
+        "a monthly rent is multiplied by hours again",
+        MODEL,
+        '        cap = s.get("month_cap")\n'
+        '        if isinstance(cap, (int, float)) and cap > 0 and abs(s["hour"] - cap) < 1e-9:',
+        '        cap = None  # MUTATED: the monthly-rent signal is ignored\n'
+        '        if False:',
+        "61 GUARD K reports hostinger-vps back at $17,632.80/month",
     ),
 ]
 

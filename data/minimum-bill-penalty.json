@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T03:35:13Z",
+ "at": "2026-10-02T03:39:36Z",
  "caveat": "each profile is compared against the SAME demand, smoothed; these are bounds, not predicted bills",
  "demand_hours_per_day": 10.0,
  "profiles": {
@@ -189,38 +189,38 @@
    "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview"
   },
   {
-   "burst_month": 4.22,
-   "granularity_s": 1,
-   "hourly": 0.0281,
+   "burst_month": 10.65,
+   "granularity_s": 3600,
+   "hourly": 0.017753,
    "id": "alibaba-ecs",
-   "min_billed_hours": 0.03333333333333333,
-   "min_billed_seconds": 120,
+   "min_billed_hours": 1.0,
+   "min_billed_seconds": 3600,
    "name": "Alibaba Cloud ECS International",
    "not_self_serve": false,
-   "penalty_usd": 0.0,
-   "penalty_x": 1.0,
+   "penalty_usd": 7.99,
+   "penalty_x": 4.0,
    "profiles": {
     "few-long": {
      "billed_day_h": 10.0,
      "demand_day_h": 10.0,
      "hours_each": 2.0,
-     "month": 8.43,
-     "month_smooth_same_demand": 8.43,
+     "month": 5.33,
+     "month_smooth_same_demand": 5.33,
      "penalty_x": 1.0,
      "starts": 5
     },
     "many-short": {
-     "billed_day_h": 5.0,
+     "billed_day_h": 20.0,
      "demand_day_h": 5.0,
      "hours_each": 0.25,
-     "month": 4.22,
-     "month_smooth_same_demand": 4.22,
-     "penalty_x": 1.0,
+     "month": 10.65,
+     "month_smooth_same_demand": 2.66,
+     "penalty_x": 4.0,
      "starts": 20
     }
    },
    "smooth_day_h": 10.0,
-   "smooth_month": 8.43,
+   "smooth_month": 5.33,
    "url": "https://www.alibabacloud.com/en/product/ecs/pricing"
   },
   {
@@ -1764,23 +1764,23 @@
    "url": "https://collimate.ai/pricing"
   },
   {
-   "burst_month": 3960.0,
+   "burst_month": 5.42,
    "granularity_s": 3600,
-   "hourly": 6.6,
+   "hourly": 0.009041,
    "id": "contabo",
    "min_billed_hours": 1.0,
    "min_billed_seconds": 3600,
    "name": "Contabo",
    "not_self_serve": false,
-   "penalty_usd": 2970.0,
+   "penalty_usd": 4.06,
    "penalty_x": 4.0,
    "profiles": {
     "few-long": {
      "billed_day_h": 10.0,
      "demand_day_h": 10.0,
      "hours_each": 2.0,
-     "month": 1980.0,
-     "month_smooth_same_demand": 1980.0,
+     "month": 2.71,
+     "month_smooth_same_demand": 2.71,
      "penalty_x": 1.0,
      "starts": 5
     },
@@ -1788,14 +1788,14 @@
      "billed_day_h": 20.0,
      "demand_day_h": 5.0,
      "hours_each": 0.25,
-     "month": 3960.0,
-     "month_smooth_same_demand": 990.0,
+     "month": 5.42,
+     "month_smooth_same_demand": 1.36,
      "penalty_x": 4.0,
      "starts": 20
     }
    },
    "smooth_day_h": 10.0,
-   "smooth_month": 1980.0,
+   "smooth_month": 2.71,
    "url": "https://contabo.com/en-us/pricing/"
   },
   {
@@ -3164,23 +3164,23 @@
    "url": "https://hopx.ai/pricing"
   },
   {
-   "burst_month": 14694.0,
+   "burst_month": 20.13,
    "granularity_s": 3600,
-   "hourly": 24.49,
+   "hourly": 0.033548,
    "id": "hostinger-vps",
    "min_billed_hours": 1.0,
    "min_billed_seconds": 3600,
    "name": "Hostinger VPS",
    "not_self_serve": false,
-   "penalty_usd": 11020.5,
+   "penalty_usd": 15.1,
    "penalty_x": 4.0,
    "profiles": {
     "few-long": {
      "billed_day_h": 10.0,
      "demand_day_h": 10.0,
      "hours_each": 2.0,
-     "month": 7347.0,
-     "month_smooth_same_demand": 7347.0,
+     "month": 10.06,
+     "month_smooth_same_demand": 10.06,
      "penalty_x": 1.0,
      "starts": 5
     },
@@ -3188,14 +3188,14 @@
      "billed_day_h": 20.0,
      "demand_day_h": 5.0,
      "hours_each": 0.25,
-     "month": 14694.0,
-     "month_smooth_same_demand": 3673.5,
+     "month": 20.13,
+     "month_smooth_same_demand": 5.03,
      "penalty_x": 4.0,
      "starts": 20
     }
    },
    "smooth_day_h": 10.0,
-   "smooth_month": 7347.0,
+   "smooth_month": 10.06,
    "url": "https://www.hostinger.com/vps-hosting"
   },
   {
@@ -4354,23 +4354,23 @@
    "url": "https://docs.nebius.com/compute/resources/pricing"
   },
   {
-   "burst_month": 5106.45,
+   "burst_month": 7.0,
    "granularity_s": 3600,
-   "hourly": 8.510744,
+   "hourly": 0.011659,
    "id": "netcup",
    "min_billed_hours": 1.0,
    "min_billed_seconds": 3600,
    "name": "netcup VPS",
    "not_self_serve": false,
-   "penalty_usd": 3829.84,
+   "penalty_usd": 5.25,
    "penalty_x": 4.0,
    "profiles": {
     "few-long": {
      "billed_day_h": 10.0,
      "demand_day_h": 10.0,
      "hours_each": 2.0,
-     "month": 2553.22,
-     "month_smooth_same_demand": 2553.22,
+     "month": 3.5,
+     "month_smooth_same_demand": 3.5,
      "penalty_x": 1.0,
      "starts": 5
     },
@@ -4378,14 +4378,14 @@
      "billed_day_h": 20.0,
      "demand_day_h": 5.0,
      "hours_each": 0.25,
-     "month": 5106.45,
-     "month_smooth_same_demand": 1276.61,
+     "month": 7.0,
+     "month_smooth_same_demand": 1.75,
      "penalty_x": 4.0,
      "starts": 20
     }
    },
    "smooth_day_h": 10.0,
-   "smooth_month": 2553.22,
+   "smooth_month": 3.5,
    "url": "https://www.netcup.com/en/server/vps"
   },
   {

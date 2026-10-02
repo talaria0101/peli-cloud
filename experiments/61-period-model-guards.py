@@ -399,6 +399,47 @@ ck("FINDINGS $0-tier count matches the data (%d)" % len(zero_no_credit),
    ("%d\n   cards sell a $0 plan" % len(zero_no_credit)) in find_txt
    or ("%d cards sell a $0 plan" % len(zero_no_credit)) in find_txt)
 
+print("GUARD K: a monthly rent must never be multiplied by hours")
+# 173 sizes across 8 cards carry a month's rent in the hourly field, and the
+# card says so in the mode's note. Multiplying it by 720 published Hostinger at
+# $17,632.80/month and its devbox at $30,952.80, and pushed Contabo and netcup
+# out of the top ten entirely because their real rents are among the lowest in
+# the market.
+MONTH_MODE = {"pricing": "sizes", "sizes": [
+    {"name": "KVM 2", "vcpu": 2, "ram_gib": 8, "hour": 24.49, "month_cap": 24.49}]}
+h_rent, how_rent = pm.mode_hourly(MONTH_MODE, {"vcpu": 2, "ram_gib": 4})
+ck("a monthly rent is divided into an hourly rate",
+   h_rent is not None and abs(h_rent - 24.49 / 730.0) < 1e-6, str(h_rent))
+ck("the row says it came from a monthly rent", "monthly rent" in how_rent, how_rent[:70])
+HOUR_MODE = {"pricing": "sizes", "sizes": [
+    {"name": "medium", "vcpu": 2, "ram_gib": 4, "hour": 0.0137, "month_cap": None}]}
+h_hour, how_hour = pm.mode_hourly(HOUR_MODE, {"vcpu": 2, "ram_gib": 4})
+ck("a real hourly rate is NOT divided", abs(h_hour - 0.0137) < 1e-9, str(h_hour))
+ck("a real hourly rate is not labelled a rent", "monthly rent" not in how_hour)
+CAP_MODE = {"pricing": "sizes", "sizes": [
+    {"name": "capped", "vcpu": 2, "ram_gib": 4, "hour": 0.02, "month_cap": 14.0}]}
+h_cap, _ = pm.mode_hourly(CAP_MODE, {"vcpu": 2, "ram_gib": 4})
+ck("a size with a cap but a different hour is not treated as a rent",
+   abs(h_cap - 0.02) < 1e-9, str(h_cap))
+# And through the data: no published row may be an order of magnitude absurd.
+_worst = 0.0
+_worst_name = ""
+for _p in doc['providers']:
+    for _s in (_p.get('shapes') or {}).values():
+        _pd = _s['periods'].get('24h')
+        if _pd and _pd['billed_month_no_credit'] > _worst:
+            _worst = _pd['billed_month_no_credit']
+            _worst_name = _p['name']
+ck("no 24/7 row exceeds $8,000/month (worst is %s at $%.2f)" % (_worst_name, _worst),
+   _worst <= 8000.0, "worst %s $%.2f" % (_worst_name, _worst))
+for _pid, _cap in (("hostinger-vps", 40.0), ("netcup", 20.0), ("contabo", 20.0)):
+    _r = [p for p in doc['providers'] if p['id'] == _pid]
+    ck("%s is in the model and priced sanely at 24/7" % _pid, bool(_r))
+    if _r:
+        _v = _r[0]['shapes']['agent']['periods']['24h']['billed_month_no_credit']
+        ck("%s 24/7 is under $%g (got $%.2f)" % (_pid, _cap, _v), _v <= _cap,
+           "$%.2f" % _v)
+
 print()
 print("TOTAL:", len(fails), "failures")
 sys.exit(1 if fails else 0)
