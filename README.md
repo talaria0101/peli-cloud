@@ -58,7 +58,10 @@ resource allowance; `docs/FINDINGS.md` section 6.1 says so explicitly.
 **The same providers at 24/7** (the regime where a sandbox becomes a VPS) cost
 more, and the order barely changes. Agent 37 publishes its own always-on
 figure: *"From $4.76/month, 2 vCPU, 4 GB RAM and 4 GB persistent disk at 730
-running hours."*
+running hours."* This catalogue prints **$4.34** for the same 2 vCPU / 4 GiB at
+24/7, and the two agree once the excluded disk is accounted for: the card's
+$0.80/vCPU-mo and $0.70/GB-mo over 730 h is $4.40 of compute, and the
+remainder is the 4 GB of persistent disk this model does not price.
 
 **Free tiers, which revision 1 buried in a column:**
 

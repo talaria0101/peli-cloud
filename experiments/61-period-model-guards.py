@@ -440,6 +440,31 @@ for _pid, _cap in (("hostinger-vps", 40.0), ("netcup", 20.0), ("contabo", 20.0))
         ck("%s 24/7 is under $%g (got $%.2f)" % (_pid, _cap, _v), _v <= _cap,
            "$%.2f" % _v)
 
+print("GUARD L: the one figure a vendor publishes must reconcile with the model")
+# Agent 37 is the only provider in the sample that publishes its own always-on
+# total, so it is the only place a reader can check this model's arithmetic
+# against a vendor rather than against the corpus. Its page says "From
+# $4.76/month. 2 vCPU, 4 GB RAM and 4 GB persistent disk at 730 running hours."
+# The model prints $4.34 because it does not price disk. The two must reconcile:
+# 2 x $0.80 + 4 x $0.70 over 730 hours is $4.40 of compute, and the $0.36
+# remainder is the 4 GB of disk. If the model ever drifts from the card's rates
+# this stops reconciling, and the README's claim becomes false.
+a37 = [p for p in doc['providers'] if p['id'] == 'agent-37']
+ck("agent-37 is in the model", bool(a37))
+if a37:
+    _s = a37[0]['shapes']['agent']
+    _compute_730 = _s['hourly'] * 730.0
+    ck("the model reconciles with the vendor's 730-hour basis ($%.2f of compute)"
+       % _compute_730, abs(_compute_730 - 4.40) < 0.02, "$%.2f" % _compute_730)
+    ck("the vendor's $4.76 minus compute is the excluded disk ($%.2f)"
+       % (4.76 - _compute_730), 0.25 < (4.76 - _compute_730) < 0.50,
+       "$%.2f" % (4.76 - _compute_730))
+    _v = _s['periods']['24h']['billed_month_no_credit']
+    ck("the model's own 24/7 figure is the compute, not the vendor's total",
+       abs(_v - _compute_730) < 0.12, "$%.2f vs $%.2f" % (_v, _compute_730))
+    ck("the README explains the gap instead of quoting $4.76 beside $4.34",
+       "4 GB of persistent disk" in readme and "$4.34" in readme)
+
 print()
 print("TOTAL:", len(fails), "failures")
 sys.exit(1 if fails else 0)
