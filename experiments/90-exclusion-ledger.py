@@ -40,13 +40,14 @@ REASONS = {
     "ranked-partial": "Ranked for some shapes only.",
     "gpu-only": "GPU-only provider: every mode sells a GPU, and no CPU rate is "
                 "published. Priced separately as a GPU workload, not dropped.",
-    "no-rate": "Publishes modes but no hourly rate and no size table. Nothing is "
-               "published to price. Spot-checked first-party on 2026-10-02: "
-               "ainclave.com/pricing, bytebot.ai and butter.dev each return a page "
-               "with ZERO dollar figures and steer to contact or enterprise, so "
-               "this is the vendor's choice and not a gap in the corpus. The "
-               "remaining 83 carry the corpus's finding at its commit and were "
-               "not re-fetched.",
+    "no-rate": "The card publishes modes but no hourly rate and no size table, so "
+               "there is nothing here to compute. REPROBED 2026-10-02 against each "
+               "provider's own page (experiments/95-reprobe-unpriced.py): 45 of 86 "
+               "genuinely publish no dollar figure, 7 were unreachable, and 34 DO "
+               "publish prices, which means for those the corpus card is incomplete "
+               "rather than the vendor being silent. They are not re-priced here "
+               "because a $199/mo figure beside a support plan is not machine-hour "
+               "data; closing that gap is the corpus maintainer's work.",
     "too-big": "Publishes rates, but no published size meets the smallest shape "
                "priced here (1 vCPU / 1 GiB). It is a larger machine than this "
                "catalogue covers, not an unpriced one.",

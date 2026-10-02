@@ -1,6 +1,6 @@
 # peli-cloud — every provider, cheapest first, at every period
 
-**Generated 2026-10-02T02:18:05Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
+**Generated 2026-10-02T02:24:57Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
 
 ## How to read this
 
@@ -862,7 +862,7 @@ Produced by `experiments/90-exclusion-ledger.py` at corpus commit `f6a71ab09fef`
 | `ranked-partial` | 9 | Ranked for some shapes only. |
 | `gpu-only` | 15 | GPU-only provider: every mode sells a GPU, and no CPU rate is published. Priced separately as a GPU workload, not dropped. |
 | `too-big` | 17 | Publishes rates, but no published size meets the smallest shape priced here (1 vCPU / 1 GiB). It is a larger machine than this catalogue covers, not an unpriced one. |
-| `no-rate` | 86 | Publishes modes but no hourly rate and no size table. Nothing is published to price. Spot-checked first-party on 2026-10-02: ainclave.com/pricing, bytebot.ai and butter.dev each return a page with ZERO dollar figures and steer to contact or enterprise, so this is the vendor's choice and not a gap in the corpus. The remaining 83 carry the corpus's finding at its commit and were not re-fetched. |
+| `no-rate` | 86 | The card publishes modes but no hourly rate and no size table, so there is nothing here to compute. REPROBED 2026-10-02 against each provider's own page (experiments/95-reprobe-unpriced.py): 45 of 86 genuinely publish no dollar figure, 7 were unreachable, and 34 DO publish prices, which means for those the corpus card is incomplete rather than the vendor being silent. They are not re-priced here because a $199/mo figure beside a support plan is not machine-hour data; closing that gap is the corpus maintainer's work. |
 | `off-category` | 41 | Browser, scraping or non-compute product: sells minutes of a remote browser or a SaaS, not machines. Surveyed for free credit, excluded from ranking. |
 | **total** | **366** | must equal the corpus card count |
 
@@ -883,98 +883,107 @@ Produced by `experiments/90-exclusion-ledger.py` at corpus commit `f6a71ab09fef`
 | self-host | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 | finops | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
 
-### The 86 that publish no price at all
+### The 86 with no price in the card
 
-This is the largest group of providers not in the ranking, so it is named rather than summarised. They are absent because nothing is published to price, not because the model refused them. Spot-checked first-party on 2026-10-02: `ainclave.com/pricing`, `bytebot.ai` and `butter.dev` each return a page with **zero dollar figures** and route to contact or enterprise. The rest carry the corpus's finding at its commit and were not re-fetched.
+The largest group of providers outside the ranking, so it is named rather than summarised. They are absent because the **card** carries no rate and no size table, not because this model refused them.
 
-| provider | category | what the card says | link |
-|---|---|---|---|
-| [Agency Tool Company](https://agencytool.com) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `agency-tool-company` |
-| [Agent Relay](https://agentrelay.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `agent-relay` |
-| [ainclave](https://www.ainclave.com/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `ainclave` |
-| [Apoxy](https://apoxy.dev) | paas | modes exist but publish neither a size table nor a per-resource rate | `apoxy` |
-| [Arga Labs](https://www.argalabs.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `arga-labs` |
-| [Artillery](https://www.artillery.io/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `artillery` |
-| [AutoComputer](https://www.autocomputer.ai/) | windows | modes exist but publish neither a size table nor a per-resource rate | `autocomputer` |
-| [Brimble Sandboxes](https://brimble.io/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `brimble` |
-| [BuildJet](https://buildjet.com/for-github-actions) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `buildjet` |
-| [Butter](https://butter.dev) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `butter` |
-| [Bytebot](https://www.bytebot.ai/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `bytebot` |
-| [Caution](https://caution.co/pricing.html) | paas | modes exist but publish neither a size table nor a per-resource rate | `caution` |
-| [Chronicle Labs](https://chronicle-labs.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `chronicle-labs` |
-| [Clusy](https://www.clusy.io/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `clusy` |
-| [Coder](https://coder.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `coder` |
-| [Cyberdesk](https://www.cyberdesk.io) | windows | modes exist but publish neither a size table nor a per-resource rate | `cyberdesk` |
-| [Dagger](https://dagger.io) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `dagger` |
-| [Dexto](https://www.dexto.ai/docs/models/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `dexto` |
-| [Dockup](https://getdockup.com/) | paas | modes exist but publish neither a size table nor a per-resource rate | `dockup` |
-| [Eventual](https://www.eventual.ai/) | paas | modes exist but publish neither a size table nor a per-resource rate | `eventual` |
-| [Expanse](https://expanse.sh) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `expanse` |
-| [FlowDeploy](https://flowdeploy.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `flowdeploy` |
-| [Fluidstack](https://fluidstack.io/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `fluidstack` |
-| [Halluminate](https://halluminate.ai/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `halluminate` |
-| [Hatchet](https://hatchet.run) | paas | modes exist but publish neither a size table nor a per-resource rate | `hatchet-run` |
-| [Heroic Labs](http://heroiclabs.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `heroic-labs` |
-| [Hoplite](https://hoplite.sh) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `hoplite` |
-| [HumanLayer](https://humanlayer.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `humanlayer` |
-| [Hyrex](https://www.hyrex.io) | paas | modes exist but publish neither a size table nor a per-resource rate | `hyrex` |
-| [Isle](https://www.tryisle.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `isle` |
-| [Jamsocket](https://jamsocket.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `jamsocket` |
-| [Kaggle Notebooks](https://www.kaggle.com/docs/notebooks) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `kaggle` |
-| [KubeSail](https://kubesail.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `kubesail` |
-| [Lapdev](https://lap.dev/pricing/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `lapdev` |
-| [Limrun](https://lim.run) | macos | modes exist but publish neither a size table nor a per-resource rate | `limrun` |
-| [Manufact](https://manufact.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `manufact` |
-| [Metorial](https://metorial.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `metorial` |
-| [Minicor](https://minicor.com) | windows | modes exist but publish neither a size table nor a per-resource rate | `minicor` |
-| [MiniMax Agent hosting / developer API scope](https://platform.minimax.io/docs/llms.txt) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `minimax` |
-| [Mistral Compute / AI Cloud](https://mistral.ai/products/aicloud/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `mistral-compute` |
-| [Nebius ConTree (Token Factory Sandboxes)](https://tokenfactory.nebius.com/sandboxes/about) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `nebius-contree` |
-| [Nodus Compute](https://www.nodus-compute.ai/pricing/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `nodus-compute` |
-| [Okteto](https://okteto.com) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `okteto` |
-| [OneCLI](https://onecli.sh) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `onecli` |
-| [OpenHands Remote Sandbox / Cloud](https://docs.openhands.dev/openhands/usage/sandboxes/remote) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `openhands-runtime` |
-| [Orgo](https://www.orgo.ai/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `orgo` |
-| [OVHcloud GPU instances](https://www.ovhcloud.com/en/public-cloud/prices/) | gpu-cloud | a rate exists but no shape in this catalogue matched it | `ovh-gpu` |
-| [PaperPod](https://www.paperpod.dev/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `paperpod` |
-| [Party](https://party.build) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `party` |
-| [Pipekit](https://pipekit.io/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `pipekit` |
-| [Pipeshift](https://pipeshift.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `pipeshift` |
-| [Playgent](https://useplaygent.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `playgent` |
-| [Ploomber](https://ploomber.io/) | paas | modes exist but publish neither a size table nor a per-resource rate | `ploomber` |
-| [PoplarML](http://poplarml.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `poplarml` |
-| [Porter](https://porter.run) | paas | modes exist but publish neither a size table nor a per-resource rate | `porter` |
-| [Reflex](https://reflex.dev/pricing/) | paas | modes exist but publish neither a size table nor a per-resource rate | `reflex` |
-| [Refresh](https://www.refresh.dev) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `refresh` |
-| [Release](https://release.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `release` |
-| [Rescale](https://rescale.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `rescale` |
-| [Revyl](https://www.revyl.com) | macos | modes exist but publish neither a size table nor a per-resource rate | `revyl` |
-| [Riza Code Interpreter](https://riza.io/pricing) | agent-sandbox | a rate exists but no shape in this catalogue matched it | `riza` |
-| [RunKit](https://runkit.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `runkit` |
-| [ScitiX Agent Sandbox](https://scitix.github.io/Agent-Sandbox/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `scitix-agent-sandbox` |
-| [SeaCloudAI Sandbox](https://sandbox-gateway.cloud.seaart.ai) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `seacloudai` |
-| [Sealos DevBox](https://sealos.io/pricing/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `sealos-devbox` |
-| [Server4Agent](https://www.server4agent.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `server4agent` |
-| [SF Tensor](https://sf-tensor.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `sf-tensor` |
-| [Shadeform](https://www.shadeform.ai/) | gpu-cloud | a rate exists but no shape in this catalogue matched it | `shadeform` |
-| [Shuttle](https://www.shuttle.dev) | paas | modes exist but publish neither a size table nor a per-resource rate | `shuttle` |
-| [Sieve](https://sievedata.com/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `sieve` |
-| [Signadot](https://www.signadot.com/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `signadot` |
-| [Skyhook](https://skyhook.io) | paas | modes exist but publish neither a size table nor a per-resource rate | `skyhook` |
-| [Tart + Orchard (Cirrus Labs)](https://tart.run/licensing/) | macos | a rate exists but no shape in this catalogue matched it | `tart-orchard` |
-| [Teclada](https://www.teclada.com/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `teclada` |
-| [Tencent Cloud CubeSandbox](https://github.com/TencentCloud/CubeSandbox) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `tencent-cubesandbox` |
-| [TensorPool](https://tensorpool.dev) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `tensorpool` |
-| [Texel.ai](https://texel.ai) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `texel-ai` |
-| [Tilde.run (discontinued)](https://lakefs.io/blog/we-recently-shut-down-tilde-run/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `tilde-run` |
-| [Trainy](https://trainy.ai/) | paas | modes exist but publish neither a size table nor a per-resource rate | `trainy` |
-| [Unikraft Cloud](https://unikraft.com/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `unikraft-cloud` |
-| [Vibrant Labs](https://vibrantlabs.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `vibrant-labs` |
-| [webapp.io](https://webapp.io) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `webapp-io` |
-| [StackBlitz WebContainers](https://stackblitz.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `webcontainers` |
-| [Windmill](https://www.windmill.dev/pricing) | paas | modes exist but publish neither a size table nor a per-resource rate | `windmill` |
-| [Zhipu Z Managed Agents](https://docs.bigmodel.cn/cn/managed-agents/overview.md) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `zhipu` |
-| [Zibra Labs](https://zibralabs.ai/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `zibra-labs` |
+Each was then re-probed against the provider's own page (`experiments/95-reprobe-unpriced.py`). Of the 86:
+
+- **45 publish no dollar figure at all.** The corpus is right.
+- **7 were unreachable.** No verdict either way.
+- **20 publish a machine rate** (`/min`, `/hour`, `/month`) that the card never captured. For these the corpus card is simply wrong. BuildJet is the clearest: $0.004/min for 2 vCPU / 8 GB, published, and the card carries no rate.
+- **14 carry dollars that are not a machine rate**, such as an enterprise SSO tier. Ambiguous, and left ambiguous.
+
+None of the 20 or 14 are re-priced here. Turning a marketing page into a card is the implementing session's work; a research session that guesses a rate produces a number nobody can check.
+
+| provider | category | card says | page re-probe | figures seen | link |
+|---|---|---|---|---|---|
+| [Agency Tool Company](https://agencytool.com) | dev-env | no rate, no sizes | no-price-on-page | - | `agency-tool-company` |
+| [Agent Relay](https://agentrelay.com) | paas | no rate, no sizes | no-price-on-page | - | `agent-relay` |
+| [ainclave](https://www.ainclave.com/pricing) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `ainclave` |
+| [Apoxy](https://apoxy.dev) | paas | no rate, no sizes | machine-rate-on-page | $0.05, $0.25 | `apoxy` |
+| [Arga Labs](https://www.argalabs.com/) | agent-sandbox | no rate, no sizes | dollars-but-not-a-rate | $10 | `arga-labs` |
+| [Artillery](https://www.artillery.io/pricing) | dev-env | no rate, no sizes | machine-rate-on-page | $ 0, $ 199, $ 499, $1199 | `artillery` |
+| [AutoComputer](https://www.autocomputer.ai/) | windows | no rate, no sizes | unreachable | - | `autocomputer` |
+| [Brimble Sandboxes](https://brimble.io/pricing) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $ 0, $ 11, $ 3, $0.032 | `brimble` |
+| [BuildJet](https://buildjet.com/for-github-actions) | dev-env | no rate, no sizes | machine-rate-on-page | $0.004, $0.008, $0.016, $0.032, $0.048, $0.0 | `buildjet` |
+| [Butter](https://butter.dev) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `butter` |
+| [Bytebot](https://www.bytebot.ai/) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `bytebot` |
+| [Caution](https://caution.co/pricing.html) | paas | no rate, no sizes | no-price-on-page | - | `caution` |
+| [Chronicle Labs](https://chronicle-labs.com) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `chronicle-labs` |
+| [Clusy](https://www.clusy.io/pricing) | dev-env | no rate, no sizes | machine-rate-on-page | $0, $12, $200, $30, $90 | `clusy` |
+| [Coder](https://coder.com/pricing) | dev-env | no rate, no sizes | no-price-on-page | - | `coder` |
+| [Cyberdesk](https://www.cyberdesk.io) | windows | no rate, no sizes | no-price-on-page | - | `cyberdesk` |
+| [Dagger](https://dagger.io) | dev-env | no rate, no sizes | no-price-on-page | - | `dagger` |
+| [Dexto](https://www.dexto.ai/docs/models/) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $0.00, $0.00474, $0.005, $0.00588, $0.006, $ | `dexto` |
+| [Dockup](https://getdockup.com/) | paas | no rate, no sizes | dollars-but-not-a-rate | $45 | `dockup` |
+| [Eventual](https://www.eventual.ai/) | paas | no rate, no sizes | no-price-on-page | - | `eventual` |
+| [Expanse](https://expanse.sh) | gpu-cloud | no rate, no sizes | dollars-but-not-a-rate | $8 | `expanse` |
+| [FlowDeploy](https://flowdeploy.com) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `flowdeploy` |
+| [Fluidstack](https://fluidstack.io/) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `fluidstack` |
+| [Halluminate](https://halluminate.ai/) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `halluminate` |
+| [Hatchet](https://hatchet.run) | paas | no rate, no sizes | no-price-on-page | - | `hatchet-run` |
+| [Heroic Labs](http://heroiclabs.com) | paas | no rate, no sizes | dollars-but-not-a-rate | $۹ | `heroic-labs` |
+| [Hoplite](https://hoplite.sh) | agent-sandbox | no rate, no sizes | dollars-but-not-a-rate | $ 82.50, $0, $99 | `hoplite` |
+| [HumanLayer](https://humanlayer.com) | agent-sandbox | no rate, no sizes | dollars-but-not-a-rate | $100 | `humanlayer` |
+| [Hyrex](https://www.hyrex.io) | paas | no rate, no sizes | unreachable | - | `hyrex` |
+| [Isle](https://www.tryisle.com/) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $0, $29 | `isle` |
+| [Jamsocket](https://jamsocket.com) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $30 | `jamsocket` |
+| [Kaggle Notebooks](https://www.kaggle.com/docs/notebooks) | dev-env | no rate, no sizes | no-price-on-page | - | `kaggle` |
+| [KubeSail](https://kubesail.com) | paas | no rate, no sizes | no-price-on-page | - | `kubesail` |
+| [Lapdev](https://lap.dev/pricing/) | dev-env | no rate, no sizes | no-price-on-page | - | `lapdev` |
+| [Limrun](https://lim.run) | macos | no rate, no sizes | no-price-on-page | - | `limrun` |
+| [Manufact](https://manufact.com) | paas | no rate, no sizes | machine-rate-on-page | $0, $0.10, $1, $2, $25, $250, $5 | `manufact` |
+| [Metorial](https://metorial.com) | paas | no rate, no sizes | dollars-but-not-a-rate | $49.00 | `metorial` |
+| [Minicor](https://minicor.com) | windows | no rate, no sizes | no-price-on-page | - | `minicor` |
+| [MiniMax Agent hosting / developer API scope](https://platform.minimax.io/docs/llms.txt) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `minimax` |
+| [Mistral Compute / AI Cloud](https://mistral.ai/products/aicloud/) | gpu-cloud | no rate, no sizes | unreachable | - | `mistral-compute` |
+| [Nebius ConTree (Token Factory Sandboxes)](https://tokenfactory.nebius.com/sandboxes/about) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `nebius-contree` |
+| [Nodus Compute](https://www.nodus-compute.ai/pricing/) | agent-sandbox | no rate, no sizes | dollars-but-not-a-rate | $0.0075, $0.0179, $0.0316, $0.0357, $0.0396, | `nodus-compute` |
+| [Okteto](https://okteto.com) | dev-env | no rate, no sizes | no-price-on-page | - | `okteto` |
+| [OneCLI](https://onecli.sh) | agent-sandbox | no rate, no sizes | dollars-but-not-a-rate | $5 | `onecli` |
+| [OpenHands Remote Sandbox / Cloud](https://docs.openhands.dev/openhands/usage/sandboxes/remote) | dev-env | no rate, no sizes | no-price-on-page | - | `openhands-runtime` |
+| [Orgo](https://www.orgo.ai/pricing) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $ 29, $ 399, $ 99, $10, $29, $5, $50 | `orgo` |
+| [OVHcloud GPU instances](https://www.ovhcloud.com/en/public-cloud/prices/) | gpu-cloud | no rate, no sizes | machine-rate-on-page | $ 200, $0.0000027, $0.0000033, $0.00000597,  | `ovh-gpu` |
+| [PaperPod](https://www.paperpod.dev/) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $0.0001, $0.02, $1, $100, $20, $5, $5.00 | `paperpod` |
+| [Party](https://party.build) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $0, $0.04, $0.14, $0.21, $0.31, $0.36, $0.93 | `party` |
+| [Pipekit](https://pipekit.io/pricing) | dev-env | no rate, no sizes | dollars-but-not-a-rate | $799 | `pipekit` |
+| [Pipeshift](https://pipeshift.com) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `pipeshift` |
+| [Playgent](https://useplaygent.com) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `playgent` |
+| [Ploomber](https://ploomber.io/) | paas | no rate, no sizes | unreachable | - | `ploomber` |
+| [PoplarML](http://poplarml.com) | gpu-cloud | no rate, no sizes | unreachable | - | `poplarml` |
+| [Porter](https://porter.run) | paas | no rate, no sizes | dollars-but-not-a-rate | $181, $20, $312, $347, $46, $60, $70, $72, $ | `porter` |
+| [Reflex](https://reflex.dev/pricing/) | paas | no rate, no sizes | machine-rate-on-page | $ 25, $0, $100, $200, $25, $50 | `reflex` |
+| [Refresh](https://www.refresh.dev) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `refresh` |
+| [Release](https://release.com/pricing) | dev-env | no rate, no sizes | no-price-on-page | - | `release` |
+| [Rescale](https://rescale.com) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `rescale` |
+| [Revyl](https://www.revyl.com) | macos | no rate, no sizes | no-price-on-page | - | `revyl` |
+| [Riza Code Interpreter](https://riza.io/pricing) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $250 | `riza` |
+| [RunKit](https://runkit.com/) | agent-sandbox | no rate, no sizes | unreachable | - | `runkit` |
+| [ScitiX Agent Sandbox](https://scitix.github.io/Agent-Sandbox/) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `scitix-agent-sandbox` |
+| [SeaCloudAI Sandbox](https://sandbox-gateway.cloud.seaart.ai) | agent-sandbox | no rate, no sizes | unreachable | - | `seacloudai` |
+| [Sealos DevBox](https://sealos.io/pricing/) | dev-env | no rate, no sizes | machine-rate-on-page | $0, $0.05, $0.15, $10, $12,451, $128, $2,030 | `sealos-devbox` |
+| [Server4Agent](https://www.server4agent.com/pricing) | dev-env | no rate, no sizes | machine-rate-on-page | $0, $0.08, $0.10, $0.12, $1, $10, $150, $2,  | `server4agent` |
+| [SF Tensor](https://sf-tensor.com) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `sf-tensor` |
+| [Shadeform](https://www.shadeform.ai/) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `shadeform` |
+| [Shuttle](https://www.shuttle.dev) | paas | no rate, no sizes | no-price-on-page | - | `shuttle` |
+| [Sieve](https://sievedata.com/) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `sieve` |
+| [Signadot](https://www.signadot.com/) | dev-env | no rate, no sizes | dollars-but-not-a-rate | $2 | `signadot` |
+| [Skyhook](https://skyhook.io) | paas | no rate, no sizes | no-price-on-page | - | `skyhook` |
+| [Tart + Orchard (Cirrus Labs)](https://tart.run/licensing/) | macos | no rate, no sizes | dollars-but-not-a-rate | $12, $12,000, $36,000 | `tart-orchard` |
+| [Teclada](https://www.teclada.com/) | dev-env | no rate, no sizes | machine-rate-on-page | $100, $500 | `teclada` |
+| [Tencent Cloud CubeSandbox](https://github.com/TencentCloud/CubeSandbox) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `tencent-cubesandbox` |
+| [TensorPool](https://tensorpool.dev) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `tensorpool` |
+| [Texel.ai](https://texel.ai) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `texel-ai` |
+| [Tilde.run (discontinued)](https://lakefs.io/blog/we-recently-shut-down-tilde-run/) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `tilde-run` |
+| [Trainy](https://trainy.ai/) | paas | no rate, no sizes | dollars-but-not-a-rate | $1,231, $1,232, $18,240, $2,034, $461, $640 | `trainy` |
+| [Unikraft Cloud](https://unikraft.com/pricing) | agent-sandbox | no rate, no sizes | machine-rate-on-page | $0, $199, $39 | `unikraft-cloud` |
+| [Vibrant Labs](https://vibrantlabs.com/) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `vibrant-labs` |
+| [webapp.io](https://webapp.io) | dev-env | no rate, no sizes | no-price-on-page | - | `webapp-io` |
+| [StackBlitz WebContainers](https://stackblitz.com/pricing) | dev-env | no rate, no sizes | no-price-on-page | - | `webcontainers` |
+| [Windmill](https://www.windmill.dev/pricing) | paas | no rate, no sizes | machine-rate-on-page | $ 0, $ 10, $ 100, $ 120, $ 20, $ 50, $170 | `windmill` |
+| [Zhipu Z Managed Agents](https://docs.bigmodel.cn/cn/managed-agents/overview.md) | agent-sandbox | no rate, no sizes | no-price-on-page | - | `zhipu` |
+| [Zibra Labs](https://zibralabs.ai/) | gpu-cloud | no rate, no sizes | no-price-on-page | - | `zibra-labs` |
 
 ### The 17 priced, but only for larger machines
 

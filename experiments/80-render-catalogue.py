@@ -359,22 +359,42 @@ def main():
 
         norate = [x for x in ledger["ledger"] if x["status"] == "no-rate"]
         if norate:
-            A("### The %d that publish no price at all" % len(norate))
+            A("### The %d with no price in the card" % len(norate))
             A("")
-            A("This is the largest group of providers not in the ranking, so it is "
-              "named rather than summarised. They are absent because nothing is "
-              "published to price, not because the model refused them. Spot-checked "
-              "first-party on 2026-10-02: `ainclave.com/pricing`, `bytebot.ai` and "
-              "`butter.dev` each return a page with **zero dollar figures** and route "
-              "to contact or enterprise. The rest carry the corpus's finding at its "
-              "commit and were not re-fetched.")
+            A("The largest group of providers outside the ranking, so it is named "
+              "rather than summarised. They are absent because the **card** carries "
+              "no rate and no size table, not because this model refused them.")
             A("")
-            A("| provider | category | what the card says | link |")
-            A("|---|---|---|---|")
+            A("Each was then re-probed against the provider's own page "
+              "(`experiments/95-reprobe-unpriced.py`). Of the %d:" % len(norate))
+            A("")
+            A("- **45 publish no dollar figure at all.** The corpus is right.")
+            A("- **7 were unreachable.** No verdict either way.")
+            A("- **20 publish a machine rate** (`/min`, `/hour`, `/month`) that the "
+              "card never captured. For these the corpus card is simply wrong. "
+              "BuildJet is the clearest: $0.004/min for 2 vCPU / 8 GB, published, "
+              "and the card carries no rate.")
+            A("- **14 carry dollars that are not a machine rate**, such as an "
+              "enterprise SSO tier. Ambiguous, and left ambiguous.")
+            A("")
+            A("None of the 20 or 14 are re-priced here. Turning a marketing page "
+              "into a card is the implementing session's work; a research session "
+              "that guesses a rate produces a number nobody can check.")
+            A("")
+            A("| provider | category | card says | page re-probe | figures seen | link |")
+            A("|---|---|---|---|---|---|")
+            probe = {}
+            pp = os.path.join(root, "data", "unpriced-reprobe.json")
+            if os.path.exists(pp):
+                with open(pp, encoding="utf-8") as fh:
+                    for r in json.load(fh).get("results") or []:
+                        probe[r["id"]] = r
             for x in norate:
-                A("| %s | %s | %s | `%s` |" % (
-                    link(x["name"] or x["id"], x.get("url")), x["category"],
-                    (x["detail"] or "")[:70], x["id"]))
+                pr = probe.get(x["id"]) or {}
+                v = pr.get("verdict", "not probed")
+                figs = ", ".join(pr.get("figures") or [])[:44] if pr.get("figures") else "-"
+                A("| %s | %s | no rate, no sizes | %s | %s | `%s` |" % (
+                    link(x["name"] or x["id"], x.get("url")), x["category"], v, figs, x["id"]))
             A("")
 
         toobig = [x for x in ledger["ledger"] if x["status"] == "too-big"]
