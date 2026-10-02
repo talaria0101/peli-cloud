@@ -1,1 +1,0 @@
-{"id":"expo","eligible":true,"total":449,"breakdown":{"compute":180,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":449,"included":-180},"unknowns":[],"compromises":["Production + 5 extra concurrency: max 7 concurrent","needs talk to sales: above plan \"Production + 5 extra concurrency\" limits: contact sales for more"],"caveats":["egress price not published"],"reasons":[]}

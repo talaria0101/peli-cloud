@@ -1,1 +1,0 @@
-{"id":"sakura-cloud","eligible":true,"total":136.33516438356165,"breakdown":{"compute":133.279,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":3.0561643835616437,"egress":0,"plan":0},"unknowns":[],"caveats":["outbound bandwidth capped at 100 Mbps"],"reasons":[]}

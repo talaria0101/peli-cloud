@@ -1,1 +1,0 @@
-{"id":"boxd","eligible":true,"total":20.693333333333335,"breakdown":{"compute":15.733333333333334,"memory":4.8,"gpu":0,"licence":0,"fees":0,"storage":0.16,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

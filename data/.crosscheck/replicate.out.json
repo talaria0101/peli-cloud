@@ -1,1 +1,0 @@
-{"id":"replicate","eligible":true,"total":48,"breakdown":{"compute":48,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"compromises":["adjacent product, not a like-for-like sandbox"],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[]}

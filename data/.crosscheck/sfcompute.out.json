@@ -1,1 +1,0 @@
-{"id":"sfcompute","eligible":true,"total":97.536,"breakdown":{"compute":97.536,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

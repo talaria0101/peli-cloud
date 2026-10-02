@@ -1,1 +1,0 @@
-{"id":"openpond","eligible":true,"total":31.68,"breakdown":{"compute":19.2,"memory":12.48,"gpu":0,"licence":0,"fees":0,"plan":10,"included":-10},"unknowns":[],"compromises":["Starter: max 10 concurrent"],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

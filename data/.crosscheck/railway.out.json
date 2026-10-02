@@ -1,1 +1,0 @@
-{"id":"railway","eligible":true,"total":6.9848,"breakdown":{"compute":2.7792,"memory":3.7056000000000004,"gpu":0,"licence":0,"fees":0,"egress":0.5,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown"],"reasons":[]}

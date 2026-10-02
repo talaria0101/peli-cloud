@@ -1,1 +1,0 @@
-{"id":"freestyle","eligible":true,"total":50,"breakdown":{"compute":10.752,"memory":6.880000000000001,"gpu":0,"licence":0,"fees":0,"storage":0.11466666666666668,"egress":0,"plan":32.25333333333333},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

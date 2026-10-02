@@ -1,1 +1,0 @@
-{"id":"amika","eligible":true,"total":62.040000000000006,"breakdown":{"compute":26.880000000000003,"memory":17.28,"gpu":0,"licence":0,"fees":0,"storage":2.8800000000000003,"plan":30,"included":-15},"unknowns":[],"compromises":["Developer (one user): max 10 concurrent"],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

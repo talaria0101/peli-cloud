@@ -1,1 +1,0 @@
-{"id":"alibaba-ack","eligible":true,"total":11.544,"breakdown":{"compute":9.24,"memory":2.304,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"compromises":["adjacent product, not a like-for-like sandbox","no internet unless you add a paid add-on (Internet NAT Gateway + EIP)"],"caveats":["egress price not published"],"reasons":[]}

@@ -1,1 +1,0 @@
-{"id":"hetzner-dedicated","eligible":true,"total":107.5,"breakdown":{"compute":107.5,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"compromises":["smallest size offered is 12 vCPU / 64 GiB"],"caveats":[],"reasons":[]}

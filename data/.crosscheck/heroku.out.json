@@ -1,1 +1,0 @@
-{"id":"heroku","eligible":true,"total":1027.7773333333334,"breakdown":{"compute":27.777333333333335,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":1000.0000000000001},"unknowns":[],"compromises":["adjacent product, not a like-for-like sandbox"],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","egress price not published"],"reasons":[]}

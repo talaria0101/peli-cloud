@@ -1,1 +1,0 @@
-{"id":"upstash-box","eligible":true,"total":10.182648401826484,"breakdown":{"compute":10,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.18264840182648404,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

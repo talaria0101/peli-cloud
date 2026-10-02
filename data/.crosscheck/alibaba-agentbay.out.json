@@ -1,1 +1,0 @@
-{"id":"alibaba-agentbay","eligible":true,"total":162.22666666666666,"breakdown":{"compute":7.2,"memory":6.026666666666666,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":149},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time","disk beyond 0 GiB: price unknown","outbound bandwidth capped at 10 Mbps"],"reasons":[]}

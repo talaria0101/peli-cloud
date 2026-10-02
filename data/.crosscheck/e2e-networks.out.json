@@ -1,1 +1,0 @@
-{"id":"e2e-networks","eligible":true,"total":8.166666666666666,"breakdown":{"compute":8.166666666666666,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"caveats":["egress price not published","how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

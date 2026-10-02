@@ -1,1 +1,0 @@
-{"id":"paperspace","eligible":true,"total":41.369863013698634,"breakdown":{"compute":40,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":1.3698630136986303,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

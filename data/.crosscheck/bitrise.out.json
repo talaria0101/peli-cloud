@@ -1,1 +1,0 @@
-{"id":"bitrise","eligible":true,"total":235.6,"breakdown":{"compute":17.6,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":218},"unknowns":[],"compromises":["Pro: max 10 concurrent"],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

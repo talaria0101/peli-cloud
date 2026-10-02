@@ -1,1 +1,0 @@
-{"id":"azure-foundry-agents","eligible":true,"total":32.800000000000004,"breakdown":{"compute":32.800000000000004,"memory":0,"gpu":0,"licence":0,"fees":0,"plan":0},"unknowns":[],"compromises":["adjacent product, not a like-for-like sandbox"],"caveats":["idle auto-suspend saves ~20% of billed time","egress price not published"],"reasons":[]}

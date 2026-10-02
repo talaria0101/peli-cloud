@@ -1,1 +1,0 @@
-{"id":"blaxel","eligible":true,"total":22.299178082191784,"breakdown":{"compute":22.080000000000002,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.21917808219178084,"egress":0,"plan":0},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

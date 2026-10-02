@@ -1,1 +1,0 @@
-{"id":"oracle-cloud","eligible":true,"total":1.617865296803653,"breakdown":{"compute":0.5208333333333334,"memory":1,"gpu":0,"licence":0,"fees":0,"storage":0.09703196347031963,"egress":0,"plan":0},"unknowns":[],"compromises":["burstable CPU: 12.5% of each vCPU guaranteed, throttled above that"],"caveats":[],"reasons":[]}

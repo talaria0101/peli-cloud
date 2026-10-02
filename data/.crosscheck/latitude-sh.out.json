@@ -1,1 +1,0 @@
-{"id":"latitude-sh","eligible":true,"total":190,"breakdown":{"compute":190,"memory":0,"gpu":0,"licence":0,"fees":0,"egress":0,"plan":0},"unknowns":[],"caveats":["how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

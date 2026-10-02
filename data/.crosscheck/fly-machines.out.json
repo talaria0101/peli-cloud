@@ -1,1 +1,0 @@
-{"id":"fly-machines","eligible":true,"total":3.296084602739726,"breakdown":{"compute":0.15408,"memory":2.668032,"gpu":0,"licence":0,"fees":0,"storage":0.273972602739726,"egress":0.2,"plan":0},"unknowns":[],"compromises":["1-year commitment","burstable CPU: 6.25% of each vCPU guaranteed, throttled above that"],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

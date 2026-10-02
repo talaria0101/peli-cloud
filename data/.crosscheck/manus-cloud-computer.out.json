@@ -1,1 +1,0 @@
-{"id":"manus-cloud-computer","eligible":true,"total":600,"breakdown":{"compute":600,"plan":0},"unknowns":[],"caveats":["egress price not published","monthly / always-on product: priced as 20 machines kept on and reused","how many machines can run at once: limit not published, probably fine at 20 (the typical published limit is 50)"],"reasons":[]}

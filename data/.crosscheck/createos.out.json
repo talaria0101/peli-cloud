@@ -1,1 +1,0 @@
-{"id":"createos","eligible":true,"total":75,"breakdown":{"compute":15.825066666666668,"memory":0,"gpu":0,"licence":0,"fees":0,"storage":0.2112,"egress":0,"plan":58.96373333333333},"unknowns":[],"caveats":["idle auto-suspend saves ~20% of billed time"],"reasons":[]}

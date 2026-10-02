@@ -151,8 +151,30 @@ def main():
             "}",
         ]
         sp = os.path.join(tmp, "batch.js")
+        # batch.js is committed, so it must not carry the absolute path of
+        # whoever ran the pass: the copy on main published the previous
+        # session's tree (/tmp/peli/...) and the artefact differed on every
+        # machine. node resolves a relative require() against the MODULE's own
+        # directory, not cwd, so the paths are made relative to batch.js with
+        # path.join(__dirname, ...) rather than left bare. That is what makes
+        # them resolve from any checkout.
+        to_rel = lambda p: os.path.relpath(p, tmp).replace(os.sep, "/")
+        # The cards array holds values that are passed straight to
+        # fs.readFileSync, so each entry must EVALUATE to a path. Emitting
+        # json.dumps(["path.join(...)"]) would store the seven-character string
+        # "path.join(...)" itself, and every read would fail with ENOENT on a
+        # path that does not exist. So the array is built as a JS expression
+        # with a string in each slot, not as JSON.
+        cards_js = "[" + ",".join(
+            'path.join(__dirname,%s)' % json.dumps(to_rel(os.path.join(cards_dir, c)))
+            for c in chunk) + "]"
         with open(sp, "w", encoding="utf-8") as fh:
-            fh.write("\n".join(script))
+            fh.write("\n".join(script)
+                     .replace(json.dumps(engine),
+                              'path.join(__dirname,%s)' % json.dumps(to_rel(engine)))
+                     .replace(json.dumps([os.path.join(cards_dir, c) for c in chunk]),
+                              cards_js)
+                     .replace(json.dumps(tmp), '__dirname'))
         r = subprocess.run(["node", sp], capture_output=True, text=True, cwd=root)
         if r.returncode != 0:
             print("batch %d-%d failed: %s" % (i, i + len(chunk), r.stderr.strip()[:200]),
