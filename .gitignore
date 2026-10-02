@@ -9,3 +9,11 @@ __pycache__/
 # is a build input restored by experiments/10-fetch-corpus.sh at a pinned
 # commit. See NOTICE.
 references/battleships/
+
+# The relay SSH check's work dir. It holds a minted dropssh pair - a node token
+# and a connect token, both bearer credentials that expire within 72 h - plus
+# host and client private keys. The script writes it mode 600 and never prints
+# a token, but a credential in a working tree is one `git add .` away from being
+# published, so the directory is excluded here rather than trusted. Drop it to
+# rotate the pair.
+.dropssh-check/

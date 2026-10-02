@@ -17,6 +17,8 @@ each in their own table, and every row linking to the page its numbers came from
 | before you commit to a cheap provider | table B1, the minimum bill |
 | ten minutes | [docs/CATALOGUE.md](docs/CATALOGUE.md) in full |
 | to buy something | table C, then the duty cycle that matches your agent |
+| **a shell with no card and no account** | **[docs/ANONYMOUS-VMS.md](docs/ANONYMOUS-VMS.md)** |
+| **an SSH session into this sandbox from outside** | **[research/verification/ssh-relay-2026-10-02.md](research/verification/ssh-relay-2026-10-02.md)**, then `sh tools/ssh-relay-check.sh` |
 | to distrust me | [experiments/](experiments/) and `data/*.json` |
 | to know what was wrong | [docs/FINDINGS.md](docs/FINDINGS.md) |
 
@@ -156,6 +158,36 @@ verification notes were read.
 
 Every script prints its conditions and writes a JSON artefact under `data/`.
 
+## The second question: free and anonymous machines, and SSH into a cage
+
+The catalogue prices providers. A separate page answers what you can get a
+shell on for nothing, and what it actually takes:
+
+    python3 tools/check-anon-vms.py                       # guard the census
+    python3 tools/render-anon-vms.py                      # write docs/ANONYMOUS-VMS.md from the JSON
+    sh      tools/ssh-relay-check.sh                      # a REAL ssh login into this sandbox, over a relay
+    sh      tests/ssh-relay-regressions.sh                # 11 clauses; each names the control it needs
+    sh      tests/one-login.sh <name>                     # one login, passwd name drivable (PASSWD_NAME=<n>)
+
+[`docs/ANONYMOUS-VMS.md`](docs/ANONYMOUS-VMS.md) carries 26 rows: **17 free or
+anonymous machines that answer SSH, 7 of them dialled and banner-verified, 1
+genuinely anonymous.** Railway's free VM is the only row needing no account and
+no card, and its own FAQ says so: *"Railway identifies you by your SSH key."*
+
+Two things that page is careful about, because both are easy to get wrong:
+
+- **`banner-verified` is not a login.** It means a relay dialed the host and
+  read its SSH version string. On this host the relay's forward path stops
+  before key exchange completes on every target tried, so the page separates
+  the three claims rather than counting them as one.
+- **SSH is not always on port 22.** Blinkenshell's own FAQ says it uses port
+  2222. A sweep that only tries 22 records that entire class of host as dead.
+
+[`research/verification/ssh-relay-2026-10-02.md`](research/verification/ssh-relay-2026-10-02.md)
+records how a real SSH session works on a host that cannot bind a TCP port and
+has no `/etc/passwd`, the five things that had to be true, the dropssh defect
+this work found, and one claim of its own that was measured and then withdrawn.
+
 **The corpus is not in this repository.** `ariana-dot-dev/battleships` publishes
 no licence, so its 1183 files are fetched by `10-fetch-corpus.sh` rather than
 redistributed here. See [`NOTICE`](NOTICE) for the evidence and for what that
@@ -169,7 +201,11 @@ committed copy.
     data/                      generated artefacts
     poc/                       a query tool over the period model
     docs/CATALOGUE.md          the catalogue: four tables, every provider linked
+    docs/ANONYMOUS-VMS.md      free/anonymous machines that answer SSH, generated from its JSON
     docs/FINDINGS.md           the write-up, opening with what it did not establish
+    tools/                     the anonymous-VM census guard and renderer, and the relay SSH check
+    tests/                     the relay SSH regressions, 11 clauses, each with a control
+    research/verification/     first-party notes behind the numbers
 
 ## Licence
 
