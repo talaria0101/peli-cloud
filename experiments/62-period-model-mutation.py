@@ -224,6 +224,13 @@ MUTATIONS = [
         "51 writes a lower-yield artefact over a higher-yield one",
     ),
     (
+        "the stripper discards JSON-LD pricing blocks",
+        PROBE,
+        "    t = re.sub(r'<script[^>]*type\\s*=\\s*[\"\\']application/ld\\+json[\"\\'][^>]*>(.*?)</script>',\n               _keep_jsonld, body, flags=re.S | re.I)",
+        "    t = body  # MUTATED: JSON-LD is not extracted, so the script is dropped",
+        "51's self-test reports that stripped text has no price where one exists",
+    ),
+    (
         "the keep rate is applied to the duty cycle, billing idle time",
         MODEL,
         '                held_h = hours_per_day\n                compute_day = c["hourly"] * held_h',

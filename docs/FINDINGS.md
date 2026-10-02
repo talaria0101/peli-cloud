@@ -685,7 +685,7 @@ stopped, paused or idle.
 | `partial` | 3 | one resource stops billing and another does not |
 | `bills_uptime` | 2 | the vendor says a stopped machine is still billed |
 | `unstated` | 140 | the page was fetched and read, and says nothing either way |
-| `shell` | 26 | the page renders client-side; nothing was read |
+| `shell` | 26 | no price in the text; 4 of these were a stripper bug, see below |
 | `unreachable` | 4 | the page could not be fetched from this host |
 
 13 of 183 is a low yield and it is the honest one. **The probe is not a way of
@@ -764,9 +764,21 @@ measured rows than the run before. The probe is now read by the model itself as
 an input, so there is no step to forget, and GUARD O fails if the probed rows
 ever stop reaching the artefact.
 
-**What this does not establish.** 140 pages were read and said nothing; 26 could
-not be read at all because they render client-side; 4 were unreachable from this
-host. Reading those 150 properly means a headless browser or a vendor
+- **The stripper threw away pages that were not shells.** 26 providers were
+  reported as "no price rendered in the HTML (client-side)". One of them,
+  **aptible**, is a 713 KB page that carries a **JSON-LD block inside a
+  `<script>` tag** holding the very billing sentences the probe is looking for,
+  including *"Starting at $499/month"*. Stripping every `<script>` discarded it,
+  the page looked empty, and the verdict became a confident false statement
+  about a page that plainly renders its prices. JSON-LD is data a vendor
+  publishes on purpose for exactly this purpose, so it is now extracted before
+  the scripts are dropped. Re-checking all 26: **4 were mislabelled this way and
+  22 are genuinely client-rendered.** A `shell` verdict that is really a stripper
+  bug is worse than no verdict, because it explains the row away instead of
+  leaving it open, so the three JSON-LD cases are in the self-test too.
+
+**What this does not establish.** 140 pages were read and said nothing; 22 render
+client-side and could not be read as text; 5 were unreachable from this host. Reading those 150 properly means a headless browser or a vendor
 questionnaire, and neither is a thing this pass did. The 509 rows that still
 carry `1.00` are the ones to re-examine first if this catalogue is used to buy
 something held for a month.

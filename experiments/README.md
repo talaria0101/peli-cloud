@@ -54,6 +54,11 @@ three things ran first and can find them.
   Every published verdict carries the quote it came from, and the classifier
   runs a 14-case self-test on known real pages before it is allowed to publish,
   because it classified four of them wrongly before it classified them right.
+- **A page that renders its prices inside a `<script>` is not a shell.**
+  JSON-LD blocks are data the vendor publishes on purpose; stripping them
+  alongside executable JavaScript made 4 of 26 "client-rendered" verdicts
+  false. The stripper extracts JSON-LD first, and three cases in the self-test
+  keep it that way.
 - **`partial` is never mapped to one number.** A provider that stops billing CPU
   when paused and keeps billing RAM cannot be expressed by a scalar keep rate,
   and mapping it to 0.00 understates the bill by the resource that keeps

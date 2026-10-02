@@ -225,13 +225,39 @@ def is_evidence(quote):
 
 
 def strip_markup(body):
-    """Visible text, with scripts and styles removed."""
-    t = re.sub(r"<script.*?</script>", " ", body, flags=re.S | re.I)
+    """Visible text, with scripts and styles removed.
+
+    EXCEPT for JSON-LD blocks, which are kept. 26 pages were being called
+    "client-rendered shells" when they are not: aptible's pricing page is 713 KB
+    and carries a JSON-LD block inside a <script> tag holding exactly the
+    billing sentences this probe is looking for, among them "Starting at
+    $499/month". Stripping every script threw that away, the page looked empty,
+    and the verdict became `shell` -- "no price rendered in the HTML" -- which
+    is a confident false statement about a page that plainly renders its prices.
+
+    The distinction that matters: a <script> tag holding executable JavaScript
+    has no text a reader would see, and a JSON-LD block is data the vendor
+    publishes ON PURPOSE for exactly this purpose. Only the second is evidence,
+    so only the first is dropped.
+    """
+    # Keep the contents of application/ld+json and ld+json script blocks.
+    kept = []
+
+    def _keep_jsonld(m):
+        kept.append(m.group(1))
+        return " "
+
+    t = re.sub(r'<script[^>]*type\s*=\s*["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+               _keep_jsonld, body, flags=re.S | re.I)
+    t = re.sub(r"<script.*?</script>", " ", t, flags=re.S | re.I)
     t = re.sub(r"<style.*?</style>", " ", t, flags=re.S | re.I)
     t = re.sub(r"<!--.*?-->", " ", t, flags=re.S)
     t = re.sub(r"<[^>]+>", " ", t)
     t = html.unescape(t)
-    return re.sub(r"\s+", " ", t)
+    t = re.sub(r"\s+", " ", t)
+    for k in kept:
+        t += " " + re.sub(r"\s+", " ", html.unescape(k))
+    return t
 
 
 def fetch(url):
@@ -380,6 +406,28 @@ SELFTEST = [
      "while it runs)."),
 ]
 
+# A separate check, because it is a different kind of failure. 26 pages were
+# called "client-rendered shells" when they were not: aptible's pricing page
+# embeds a JSON-LD block inside a <script> tag containing the billing text, and
+# stripping every script discarded it. The page then looked empty and the
+# verdict became "no price rendered in the HTML", which is a confident false
+# statement about a page that plainly renders its prices. A shell verdict that
+# is really a stripper bug is worse than no verdict, because it explains away the
+# row instead of leaving it open.
+JSONLD_CASES = [
+    # (description, html, must the stripped text contain a price?)
+    ("json-ld pricing survives the stripper",
+     '<html><body><script type="application/ld+json">'
+     '{"@type":"Product","offers":{"price":"499","priceCurrency":"USD",'
+     '"description":"Dedicated stack. Starting at $499/month."}}'
+     '</script></body></html>', True),
+    ("an ordinary script is still dropped",
+     '<html><body><script>var price = "$999";</script>'
+     '<p>$10 per month</p></body></html>', True),
+    ("a genuinely empty page stays empty",
+     '<html><body><div id="root"></div></body></html>', False),
+]
+
 
 def selftest():
     """Run the known-answer cases. Returns the list of failures."""
@@ -389,6 +437,12 @@ def selftest():
         got = v if v else "unstated"
         if got != want:
             bad.append("%s: got %s, want %s" % (pid, got, want))
+    for desc, src, want_price in JSONLD_CASES:
+        text = strip_markup(src)
+        has = bool(re.search(r"\$\s?\d", text))
+        if has != want_price:
+            bad.append("%s: stripped text has_price=%s, want %s"
+                       % (desc, has, want_price))
     return bad
 
 
