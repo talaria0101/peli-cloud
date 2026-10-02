@@ -1,0 +1,3651 @@
+{
+ "ranked": [
+  {
+   "all_in_month_usd": 0.3,
+   "card_sha256_12": "7517cb195785",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 4 GiB"
+   ],
+   "compute_month_usd": 0.3,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 1,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "agent-37",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Agent 37",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "standard",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0009589041095890411,
+   "rank": 1,
+   "url": "https://www.agent37.com/pricing",
+   "vcpu_h": 0.0010958904109589042
+  },
+  {
+   "all_in_month_usd": 0.46,
+   "card_sha256_12": "99f3ed1a8554",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 0.46,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "oracle-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Oracle Cloud Infrastructure",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "e4-burstable-12",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0015,
+   "rank": 2,
+   "url": "https://www.oracle.com/cloud/compute/pricing/",
+   "vcpu_h": 0.0015625
+  },
+  {
+   "all_in_month_usd": 0.48,
+   "card_sha256_12": "361292ae0b0d",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 0.48,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "verda",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Verda (formerly DataCrunch)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "spot-cpu",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 3,
+   "url": "https://verda.com/pricing",
+   "vcpu_h": 0.0048
+  },
+  {
+   "all_in_month_usd": 0.7,
+   "card_sha256_12": "412dd9baaa6f",
+   "category": "gpu-cloud",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 0.7,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "tensordock",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "TensorDock",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-h100-sxm5-0",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.002,
+   "rank": 4,
+   "url": "https://www.tensordock.com/",
+   "vcpu_h": 0.003
+  },
+  {
+   "all_in_month_usd": 0.82,
+   "card_sha256_12": "35829634aac8",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 0.82,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "nebius",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Nebius",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "spot-l40s-amd-13",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0016,
+   "rank": 5,
+   "url": "https://docs.nebius.com/compute/resources/pricing",
+   "vcpu_h": 0.005
+  },
+  {
+   "all_in_month_usd": 0.87,
+   "card_sha256_12": "097a3aa78c11",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 0.87,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "aws-fargate",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "AWS Fargate",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "spot-arm64-asia",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.000783,
+   "rank": 6,
+   "url": "https://aws.amazon.com/fargate/pricing/",
+   "vcpu_h": 0.007149
+  },
+  {
+   "all_in_month_usd": 1.06,
+   "card_sha256_12": "73bd73c321c9",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 1.06,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "fly-machines",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Fly.io Machines",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "reserved-1y-shared-us",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.00500256,
+   "rank": 7,
+   "url": "https://fly.io/pricing",
+   "vcpu_h": 0.0005778
+  },
+  {
+   "all_in_month_usd": 1.49,
+   "card_sha256_12": "c17cdf33f271",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 1.49,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 5.22,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "google-cloud-run",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Google Cloud Run",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "cloud-run-instances",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.006948,
+   "rank": 8,
+   "url": "https://cloud.google.com/run/pricing",
+   "vcpu_h": 0.000972
+  },
+  {
+   "all_in_month_usd": 1.63,
+   "card_sha256_12": "3f312eb98cf3",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 1.63,
+   "entry_month_usd": 73,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "gke-agent-sandbox",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "GKE Agent Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "autopilot-spot",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0014767,
+   "rank": 9,
+   "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
+   "vcpu_h": 0.0133
+  },
+  {
+   "all_in_month_usd": 1.67,
+   "card_sha256_12": "9ec89ff12331",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 0.1 vCPU / 0.25 GiB"
+   ],
+   "compute_month_usd": 1.67,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "northflank",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Northflank Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "byoc",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.00139,
+   "rank": 10,
+   "url": "https://northflank.com/pricing",
+   "vcpu_h": 0.01389
+  },
+  {
+   "all_in_month_usd": 1.82,
+   "card_sha256_12": "188c23858116",
+   "category": "hyperscaler",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 2 GiB"
+   ],
+   "compute_month_usd": 1.82,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "ionos",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "IONOS Cloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "vcpu-server",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0022756,
+   "rank": 11,
+   "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
+   "vcpu_h": 0.0136536
+  },
+  {
+   "all_in_month_usd": 2.09,
+   "card_sha256_12": "9f248a4b9df6",
+   "category": "hyperscaler",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 2 GiB"
+   ],
+   "compute_month_usd": 2.09,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "ubicloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Ubicloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "gpu-vm",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 12,
+   "url": "https://www.ubicloud.com/docs/about/pricing",
+   "vcpu_h": 0.020885
+  },
+  {
+   "all_in_month_usd": 2.27,
+   "card_sha256_12": "e3df3ac9b117",
+   "category": "agent-sandbox",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 2.27,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "tama",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "tama",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "cpu-on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.005523,
+   "rank": 13,
+   "url": "https://tama.computer/",
+   "vcpu_h": 0.01166
+  },
+  {
+   "all_in_month_usd": 2.33,
+   "card_sha256_12": "ae8dbe3816c4",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 2.33,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 15,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "run-cloud",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Run Cloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "floor-burst",
+   "pricing_kind": "resource",
+   "ram_gib_h": null,
+   "rank": 14,
+   "url": "https://docs.run.cloud/sandboxes/index.md",
+   "vcpu_h": 0.0233
+  },
+  {
+   "all_in_month_usd": 2.39,
+   "card_sha256_12": "2398ca54ecae",
+   "category": "hyperscaler",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 0.5 GiB",
+    "smallest usable size is 1 vCPU / 1 GiB"
+   ],
+   "compute_month_usd": 2.39,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "digitalocean",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "DigitalOcean Droplets",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "v5-shared",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0040411,
+   "rank": 15,
+   "url": "https://www.digitalocean.com/pricing/droplets",
+   "vcpu_h": 0.0158219
+  },
+  {
+   "all_in_month_usd": 2.75,
+   "card_sha256_12": "5292a1708d2d",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 2.75,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "alibaba-agentrun",
+   "isolation": null,
+   "min_commit_month_usd": null,
+   "name": "Alibaba Cloud Agent Sandbox / FC / AgentRun",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "economy",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.006876,
+   "rank": 16,
+   "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
+   "vcpu_h": 0.013716
+  },
+  {
+   "all_in_month_usd": 2.85,
+   "card_sha256_12": "7797594ddba5",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 2.85,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "solari",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Solari",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "enterprise",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0055,
+   "rank": 17,
+   "url": "https://docs.getsolari.com/pricing",
+   "vcpu_h": 0.0175
+  },
+  {
+   "all_in_month_usd": 2.9,
+   "card_sha256_12": "c36840fcc446",
+   "category": "windows",
+   "compromises": [
+    "smallest usable size is 2 vCPU / 2 GiB"
+   ],
+   "compute_month_usd": 2.9,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "gcp-windows",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Google Compute Engine (Windows Server)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.003069707,
+   "rank": 18,
+   "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
+   "vcpu_h": 0.02290217
+  },
+  {
+   "all_in_month_usd": 3.0,
+   "card_sha256_12": "51f381cc30e6",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "sandbox0",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Sandbox0",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.015,
+   "rank": 19,
+   "url": "https://sandbox0.ai/pricing",
+   "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 3.1,
+   "card_sha256_12": "8e1651969bd2",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.1,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 5,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "sail",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Sail Research (Sailboxes)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.008,
+   "rank": 20,
+   "url": "https://docs.sailresearch.com/pricing",
+   "vcpu_h": 0.015
+  },
+  {
+   "all_in_month_usd": 3.22,
+   "card_sha256_12": "7245d697125f",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.22,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "ppio-sandbox",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "PPIO Agent Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.008047097653,
+   "rank": 21,
+   "url": "https://ppio.com/docs/sandbox/pricing.md",
+   "vcpu_h": 0.016094195306
+  },
+  {
+   "all_in_month_usd": 3.22,
+   "card_sha256_12": "2dcdcea72f66",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.22,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 15.450427,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "ucloud",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "UCloud Agent Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.008047,
+   "rank": 22,
+   "url": "https://astraflow.ucloud.cn/docs/agent-sandbox",
+   "vcpu_h": 0.016094
+  },
+  {
+   "all_in_month_usd": 3.27,
+   "card_sha256_12": "dcaa83b0e4a3",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.27,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "volcengine-agentkit",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Volcano Engine AgentKit / veFaaS sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "sandbox",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.005472026404,
+   "rank": 23,
+   "url": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh",
+   "vcpu_h": 0.021727163663
+  },
+  {
+   "all_in_month_usd": 3.46,
+   "card_sha256_12": "4393eaaa653a",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 3.46,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "alibaba-ack",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Alibaba Cloud ACK (Harbor backend)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "eci-virtual-node",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.003456,
+   "rank": 24,
+   "url": "https://www.alibabacloud.com/product/kubernetes",
+   "vcpu_h": 0.02772
+  },
+  {
+   "all_in_month_usd": 3.7,
+   "card_sha256_12": "a1d5216198eb",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 3.7,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "beam",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Beam",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "byoc",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.009,
+   "rank": 25,
+   "url": "https://www.beam.cloud/pricing",
+   "vcpu_h": 0.019
+  },
+  {
+   "all_in_month_usd": 3.96,
+   "card_sha256_12": "30b427f9defd",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 3.96,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "cerebrium",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Cerebrium",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "interruptible",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.007992,
+   "rank": 26,
+   "url": "https://cerebrium.ai/pricing",
+   "vcpu_h": 0.02358
+  },
+  {
+   "all_in_month_usd": 4.0,
+   "card_sha256_12": "48d48e3f92fd",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 4.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "withruntime",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Runtime (withruntime.com)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "active-only",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0075,
+   "rank": 27,
+   "url": "https://withruntime.com/pricing",
+   "vcpu_h": 0.025
+  },
+  {
+   "all_in_month_usd": 4.28,
+   "card_sha256_12": "3b700b2cd569",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 4.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "openshift",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Red Hat OpenShift (Harbor backend)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "openshift-dedicated-worker-subscription",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 28,
+   "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
+   "vcpu_h": 0.04275
+  },
+  {
+   "all_in_month_usd": 4.32,
+   "card_sha256_12": "8ace4fb74929",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 2 GiB"
+   ],
+   "compute_month_usd": 4.32,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "blaxel",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Blaxel",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "batch-job",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0216,
+   "rank": 29,
+   "url": "https://blaxel.ai/pricing",
+   "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 4.32,
+   "card_sha256_12": "96b48f18a27c",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 4.32,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "buddy",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Buddy Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0144,
+   "rank": 30,
+   "url": "https://buddy.works/pricing",
+   "vcpu_h": 0.0144
+  },
+  {
+   "all_in_month_usd": 4.5,
+   "card_sha256_12": "f026f32cb63c",
+   "category": "agent-sandbox",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 4.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "prime-intellect",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Prime Intellect Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0125,
+   "rank": 31,
+   "url": "https://www.primeintellect.ai/sandboxes",
+   "vcpu_h": 0.02
+  },
+  {
+   "all_in_month_usd": 4.75,
+   "card_sha256_12": "af9eaa227ee0",
+   "category": "paas",
+   "compromises": [
+    "smallest usable size is 0.5 vCPU / 2 GiB"
+   ],
+   "compute_month_usd": 4.75,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "replit",
+   "isolation": "vm",
+   "min_commit_month_usd": 18,
+   "name": "Replit",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "autoscale",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.00432,
+   "rank": 32,
+   "url": "https://docs.replit.com/billing/deployment-pricing",
+   "vcpu_h": 0.03888
+  },
+  {
+   "all_in_month_usd": 4.96,
+   "card_sha256_12": "04f534b647ed",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 4.96,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "alibaba-agentbay",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Alibaba Cloud AgentBay",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0113,
+   "rank": 33,
+   "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions",
+   "vcpu_h": 0.027
+  },
+  {
+   "all_in_month_usd": 5.0,
+   "card_sha256_12": "7ea6b80f3617",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 5.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "morph-cloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Morph Cloud",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 34,
+   "url": "https://cloud.morph.so/web/subscribe",
+   "vcpu_h": 0.05
+  },
+  {
+   "all_in_month_usd": 5.25,
+   "card_sha256_12": "47cf943effa5",
+   "category": "dev-env",
+   "compromises": [],
+   "compute_month_usd": 5.25,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "exe-dev",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "exe.dev",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "vm-tier",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 35,
+   "url": "https://exe.dev/pricing",
+   "vcpu_h": 0.0525
+  },
+  {
+   "all_in_month_usd": 5.5,
+   "card_sha256_12": "baabbaed2c07",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 5.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 50,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "isorun",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Isorun",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.015,
+   "rank": 36,
+   "url": "https://docs.isorun.ai/getting-started/pricing",
+   "vcpu_h": 0.025
+  },
+  {
+   "all_in_month_usd": 5.56,
+   "card_sha256_12": "ae7a2ff71c7e",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 5.56,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 10,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "insforge-instacloud",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "InsForge (InstaCloud)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "instacloud-compute",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.013896,
+   "rank": 37,
+   "url": "https://www.instacloud.com/pricing",
+   "vcpu_h": 0.027792
+  },
+  {
+   "all_in_month_usd": 5.56,
+   "card_sha256_12": "bd5c2f2ea9ad",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 5.56,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "railway",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Railway",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "container-service",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.013896,
+   "rank": 38,
+   "url": "https://railway.com/pricing",
+   "vcpu_h": 0.027792
+  },
+  {
+   "all_in_month_usd": 5.83,
+   "card_sha256_12": "518341af243e",
+   "category": "agent-sandbox",
+   "compromises": [
+    "stock-limited, not guaranteed available"
+   ],
+   "compute_month_usd": 5.83,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "novita",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Novita AI Agent Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.01152,
+   "rank": 39,
+   "url": "https://docs.novita.ai/guides/sandbox-pricing",
+   "vcpu_h": 0.03528
+  },
+  {
+   "all_in_month_usd": 6.0,
+   "card_sha256_12": "91754ad62e23",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 6.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "baponi",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Baponi",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 40,
+   "url": "https://baponi.ai/pricing/",
+   "vcpu_h": 0.06
+  },
+  {
+   "all_in_month_usd": 6.0,
+   "card_sha256_12": "df321a3e6d4e",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 6.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "tensorlake",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Tensorlake Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "pro",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.009,
+   "rank": 41,
+   "url": "https://www.tensorlake.ai/pricing",
+   "vcpu_h": 0.042
+  },
+  {
+   "all_in_month_usd": 6.1,
+   "card_sha256_12": "ac2ee929c87c",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 6.1,
+   "entry_month_usd": 1.83,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "tencent-scf",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Tencent Cloud SCF",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "provisioned-idle",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.030492,
+   "rank": 42,
+   "url": "https://cloud.tencent.com/document/product/583/17299",
+   "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 6.4,
+   "card_sha256_12": "80ba43a1afe9",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 6.4,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "collimate",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Collimate",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.012,
+   "rank": 43,
+   "url": "https://collimate.ai/pricing",
+   "vcpu_h": 0.04
+  },
+  {
+   "all_in_month_usd": 6.61,
+   "card_sha256_12": "fe85f2bf0536",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 6.61,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 18.38,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "freestyle",
+   "isolation": "bare-metal-vm",
+   "min_commit_month_usd": null,
+   "name": "Freestyle",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0129,
+   "rank": 44,
+   "url": "https://www.freestyle.sh/pricing",
+   "vcpu_h": 0.04032
+  },
+  {
+   "all_in_month_usd": 6.7,
+   "card_sha256_12": "767c56f29983",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 6.7,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 5.4,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "azure-container-apps",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Azure Container Apps (Consumption, Dedicated, Dynamic Sessions)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "dedicated",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.004978,
+   "rank": 45,
+   "url": "https://azure.microsoft.com/en-us/pricing/details/container-apps/",
+   "vcpu_h": 0.057077
+  },
+  {
+   "all_in_month_usd": 7.03,
+   "card_sha256_12": "96f975d14dc5",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 7.03,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "tencent-agent-runtime",
+   "isolation": null,
+   "min_commit_month_usd": null,
+   "name": "Tencent Cloud Agent Runtime \u2014 Agent Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.013411829422,
+   "rank": 46,
+   "url": "https://cloud.tencent.com/document/product/1814/133249",
+   "vcpu_h": 0.043454327326
+  },
+  {
+   "all_in_month_usd": 7.2,
+   "card_sha256_12": "67194834eafc",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 7.2,
+   "entry_month_usd": 5,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "cloudflare-workers-for-platforms",
+   "isolation": "isolate",
+   "min_commit_month_usd": null,
+   "name": "Cloudflare Workers for Platforms",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "dispatch-isolates",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 47,
+   "url": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/",
+   "vcpu_h": 0.072
+  },
+  {
+   "all_in_month_usd": 7.44,
+   "card_sha256_12": "1a3955567f82",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 7.44,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "together-code-sandbox",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Together Code Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "custom-plan",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0149,
+   "rank": 48,
+   "url": "https://www.together.ai/pricing",
+   "vcpu_h": 0.0446
+  },
+  {
+   "all_in_month_usd": 7.45,
+   "card_sha256_12": "53d29d1934b4",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 7.45,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 20,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "dedalus-labs",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Dedalus Labs",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.01458,
+   "rank": 49,
+   "url": "https://www.dedaluslabs.ai/pricing",
+   "vcpu_h": 0.04536
+  },
+  {
+   "all_in_month_usd": 7.5,
+   "card_sha256_12": "77edfc07db49",
+   "category": "browser",
+   "compromises": [],
+   "compute_month_usd": 7.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "hyperbrowser",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Hyperbrowser",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "sandbox",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.015,
+   "rank": 50,
+   "url": "https://www.hyperbrowser.ai/pricing",
+   "vcpu_h": 0.045
+  },
+  {
+   "all_in_month_usd": 8.0,
+   "card_sha256_12": "c78351ba8708",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 8.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 6.87,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "aws-lambda",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "AWS Lambda",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "provisioned-concurrency-arm64",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.04,
+   "rank": 51,
+   "url": "https://aws.amazon.com/lambda/pricing/",
+   "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 8.0,
+   "card_sha256_12": "20f6a6a6cc83",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 8.0,
+   "entry_month_usd": 20,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "tinfoil",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Tinfoil",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "native",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.01,
+   "rank": 52,
+   "url": "https://tinfoil.sh",
+   "vcpu_h": 0.06
+  },
+  {
+   "all_in_month_usd": 8.2,
+   "card_sha256_12": "2250639a7b94",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.2,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 30,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "sprites",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Sprites (Fly.io)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.021875,
+   "rank": 53,
+   "url": "https://fly.io/pricing",
+   "vcpu_h": 0.03825
+  },
+  {
+   "all_in_month_usd": 8.24,
+   "card_sha256_12": "bb4dead1857b",
+   "category": "hyperscaler",
+   "compromises": [
+    "smallest usable size is 2 vCPU / 1.5 GiB"
+   ],
+   "compute_month_usd": 8.24,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "google-agent-engine",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Google Agent Runtime / Agent Engine",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "runtime-3y",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0072,
+   "rank": 54,
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+   "vcpu_h": 0.068
+  },
+  {
+   "all_in_month_usd": 8.24,
+   "card_sha256_12": "8fe761b5fad0",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.24,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "smol-machines",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "smol machines",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "active-plus-base",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 55,
+   "url": "https://smolmachines.com/pricing",
+   "vcpu_h": 0.05
+  },
+  {
+   "all_in_month_usd": 8.24,
+   "card_sha256_12": "cf834bc6e633",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 2 vCPU / 1.5 GiB"
+   ],
+   "compute_month_usd": 8.24,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 300,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "vertex-computer-use",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Google Agent Platform Sandbox (Code Execution / Shell / Computer Use)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "savings-3y",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0072,
+   "rank": 56,
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
+   "vcpu_h": 0.068
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "9cdc20b32109",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "daytona",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Daytona",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 57,
+   "url": "https://www.daytona.io/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "bc50578ba150",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "daytona-windows",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Daytona (Windows sandboxes)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 58,
+   "url": "https://www.daytona.io/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "14ede83791fa",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "declaw",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Declaw",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 59,
+   "url": "https://docs.declaw.ai/platform/billing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "28108cdb3605",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "e2b",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "E2B",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 60,
+   "url": "https://e2b.dev/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "5c8cbc995220",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "hopx",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Hopx",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 61,
+   "url": "https://hopx.ai/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "a89f49beea7d",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 50,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "instavm",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "InstaVM",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 62,
+   "url": "https://instavm.io/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "b818cd2db07c",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "omnara",
+   "isolation": null,
+   "min_commit_month_usd": null,
+   "name": "Omnara",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "managed",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0414,
+   "rank": 63,
+   "url": "https://www.omnara.com/pricing",
+   "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "4c6d13593024",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "openreward",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "OpenReward Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 64,
+   "url": "https://openreward.ai/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "7bcb34fc9814",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 50,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "runta",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Runta",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 65,
+   "url": "https://runta.com/pricing/",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "bbea986f113c",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "superserve",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Superserve",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 66,
+   "url": "https://superserve.ai/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.28,
+   "card_sha256_12": "1fb7a0f06b4f",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.28,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "tenki",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Tenki Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 67,
+   "url": "https://tenki.cloud/pricing",
+   "vcpu_h": 0.0504
+  },
+  {
+   "all_in_month_usd": 8.3,
+   "card_sha256_12": "ba990621efb8",
+   "category": "gpu-cloud",
+   "compromises": [],
+   "compute_month_usd": 8.3,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "thunder-compute",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Thunder Compute",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "gpu-sandbox",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.016,
+   "rank": 68,
+   "url": "https://www.thundercompute.com/pricing",
+   "vcpu_h": 0.051
+  },
+  {
+   "all_in_month_usd": 8.53,
+   "card_sha256_12": "95437cb5a238",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.53,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 28.445,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "orkestr",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "orkestr Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "beta",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.017067,
+   "rank": 69,
+   "url": "https://orkestr.eu/sandboxes",
+   "vcpu_h": 0.051201
+  },
+  {
+   "all_in_month_usd": 8.64,
+   "card_sha256_12": "ac990230ccc1",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.64,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "pandastack",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "PandaStack",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "active-only",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0162,
+   "rank": 70,
+   "url": "https://www.pandastack.ai/pricing/",
+   "vcpu_h": 0.054
+  },
+  {
+   "all_in_month_usd": 8.92,
+   "card_sha256_12": "53714dc06bd8",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 8.92,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "cua",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Cua Fleet",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0223125,
+   "rank": 71,
+   "url": "https://cua.ai/pricing",
+   "vcpu_h": 0.044625
+  },
+  {
+   "all_in_month_usd": 8.92,
+   "card_sha256_12": "5f5c4b189375",
+   "category": "windows",
+   "compromises": [],
+   "compute_month_usd": 8.92,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "cua-windows",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Cua Fleet (Windows Server)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0223125,
+   "rank": 72,
+   "url": "https://cua.ai/pricing",
+   "vcpu_h": 0.044625
+  },
+  {
+   "all_in_month_usd": 9.0,
+   "card_sha256_12": "608f3c817b38",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 9.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "cloudflare-sandbox",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Cloudflare Sandbox SDK / Containers",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.009,
+   "rank": 73,
+   "url": "https://developers.cloudflare.com/containers/platform/pricing/",
+   "vcpu_h": 0.072
+  },
+  {
+   "all_in_month_usd": 9.45,
+   "card_sha256_12": "74bbc91fa199",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 9.45,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "langsmith-sandbox",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "LangSmith Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.01845,
+   "rank": 74,
+   "url": "https://www.langchain.com/pricing",
+   "vcpu_h": 0.0576
+  },
+  {
+   "all_in_month_usd": 9.5,
+   "card_sha256_12": "dac2ffe0656f",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 9.5,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 30,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "boxd",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "boxd",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.018,
+   "rank": 75,
+   "url": "https://boxd.sh/pricing",
+   "vcpu_h": 0.059
+  },
+  {
+   "all_in_month_usd": 10.0,
+   "card_sha256_12": "828fc70d0b2c",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 10.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "aptible",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Aptible",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "memory-optimized",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.05,
+   "rank": 76,
+   "url": "https://www.aptible.com",
+   "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 10.0,
+   "card_sha256_12": "2ff26e0ca588",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 10.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "upstash-box",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Upstash Box",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "payg-small",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 77,
+   "url": "https://upstash.com/pricing/box",
+   "vcpu_h": 0.1
+  },
+  {
+   "all_in_month_usd": 10.8,
+   "card_sha256_12": "46ca8c6d4632",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 10.8,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "github-copilot-cloud-sandboxes",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "GitHub Copilot cloud sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0108,
+   "rank": 78,
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes",
+   "vcpu_h": 0.0864
+  },
+  {
+   "all_in_month_usd": 10.84,
+   "card_sha256_12": "d49bf1c4c879",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 10.84,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 100,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "aws-agentcore",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Amazon Bedrock AgentCore (Runtime / Code Interpreter / Browser)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "code-interpreter",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.00945,
+   "rank": 79,
+   "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+   "vcpu_h": 0.0895
+  },
+  {
+   "all_in_month_usd": 11.6,
+   "card_sha256_12": "9ec3e58d7ee9",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 11.6,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "stateset",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "StateSet Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "team-on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.008,
+   "rank": 80,
+   "url": "https://sandbox.stateset.app/",
+   "vcpu_h": 0.1
+  },
+  {
+   "all_in_month_usd": 11.88,
+   "card_sha256_12": "572b052e58bc",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 11.88,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "openpond",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "OpenPond Cloud Sandboxes",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0234,
+   "rank": 81,
+   "url": "https://openpond.ai/pricing",
+   "vcpu_h": 0.072
+  },
+  {
+   "all_in_month_usd": 12.0,
+   "card_sha256_12": "49a17c448f8d",
+   "category": "browser",
+   "compromises": [],
+   "compute_month_usd": 12.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "kernel",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Kernel",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "app-invocation",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.06000012,
+   "rank": 82,
+   "url": "https://www.onkernel.com/pricing",
+   "vcpu_h": 0
+  },
+  {
+   "all_in_month_usd": 12.0,
+   "card_sha256_12": "28c32547d810",
+   "category": "paas",
+   "compromises": [],
+   "compute_month_usd": 12.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "wasmer",
+   "isolation": "isolate",
+   "min_commit_month_usd": null,
+   "name": "Wasmer",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "edge",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.01,
+   "rank": 83,
+   "url": "https://wasmer.io/pricing",
+   "vcpu_h": 0.1
+  },
+  {
+   "all_in_month_usd": 12.61,
+   "card_sha256_12": "a853d5a0357a",
+   "category": "hyperscaler",
+   "compromises": [],
+   "compute_month_usd": 12.61,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "aws-lambda-microvms",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "AWS Lambda MicroVMs",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand-arm64",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0132,
+   "rank": 84,
+   "url": "https://aws.amazon.com/lambda/pricing/",
+   "vcpu_h": 0.0997
+  },
+  {
+   "all_in_month_usd": 13.97,
+   "card_sha256_12": "6e9d825ae2ed",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 13.97,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "rivet",
+   "isolation": null,
+   "min_commit_month_usd": null,
+   "name": "Rivet (Actors & agentOS)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "agentos",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.01044,
+   "rank": 85,
+   "url": "https://rivet.dev/pricing/",
+   "vcpu_h": 0.1188
+  },
+  {
+   "all_in_month_usd": 15.0,
+   "card_sha256_12": "fb5e099727e5",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 15.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "deno-sandbox",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Deno Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.025,
+   "rank": 86,
+   "url": "https://deno.com/deploy/pricing",
+   "vcpu_h": 0.1
+  },
+  {
+   "all_in_month_usd": 15.0,
+   "card_sha256_12": "10cc7df4a8f7",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 15.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "islo",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Islo",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.04,
+   "rank": 87,
+   "url": "https://islo.dev/pricing",
+   "vcpu_h": 0.07
+  },
+  {
+   "all_in_month_usd": 15.75,
+   "card_sha256_12": "2df8c93fee3d",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 15.75,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "agentcomputer",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "AgentComputer",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.04375,
+   "rank": 88,
+   "url": "https://agentcomputer.ai/pricing",
+   "vcpu_h": 0.07
+  },
+  {
+   "all_in_month_usd": 15.84,
+   "card_sha256_12": "ddef15ced82f",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 15.84,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 50,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "runloop",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Runloop",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0252,
+   "rank": 89,
+   "url": "https://www.runloop.ai/pricing",
+   "vcpu_h": 0.108
+  },
+  {
+   "all_in_month_usd": 16.56,
+   "card_sha256_12": "7ee2ff38cad3",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 16.56,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "amika",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Amika",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0324,
+   "rank": 90,
+   "url": "https://www.amika.dev/pricing",
+   "vcpu_h": 0.1008
+  },
+  {
+   "all_in_month_usd": 17.04,
+   "card_sha256_12": "91c3a274eeb0",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 17.04,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "vercel-sandbox",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Vercel Sandbox",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.0212,
+   "rank": 91,
+   "url": "https://vercel.com/docs/sandbox/pricing",
+   "vcpu_h": 0.128
+  },
+  {
+   "all_in_month_usd": 18.0,
+   "card_sha256_12": "460a954ed4a6",
+   "category": "macos",
+   "compromises": [],
+   "compute_month_usd": 18.0,
+   "entry_month_usd": 20,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": false,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "depot",
+   "isolation": "vm",
+   "min_commit_month_usd": null,
+   "name": "Depot (GitHub Actions runners)",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "sandbox-sdk-beta",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0,
+   "rank": 92,
+   "url": "https://depot.dev/pricing",
+   "vcpu_h": 0.18
+  },
+  {
+   "all_in_month_usd": 18.99,
+   "card_sha256_12": "366f58b0cda8",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 18.99,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 30,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "modal",
+   "isolation": "gvisor",
+   "min_commit_month_usd": null,
+   "name": "Modal",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.024012,
+   "rank": 93,
+   "url": "https://modal.com/pricing",
+   "vcpu_h": 0.141912
+  },
+  {
+   "all_in_month_usd": 19.03,
+   "card_sha256_12": "bd96b499c140",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 19.03,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": false,
+   "hour": null,
+   "id": "ellipsis",
+   "isolation": "qemu-kvm",
+   "min_commit_month_usd": null,
+   "name": "Ellipsis",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "on-demand",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.024192,
+   "rank": 94,
+   "url": "https://www.ellipsis.dev/pricing",
+   "vcpu_h": 0.141912
+  },
+  {
+   "all_in_month_usd": 19.86,
+   "card_sha256_12": "510a497703d5",
+   "category": "agent-sandbox",
+   "compromises": [
+    "smallest usable size is 1 vCPU / 2 GiB"
+   ],
+   "compute_month_usd": 19.86,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 3.310635582565,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "huawei-cloud",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Huawei Cloud AgentArts",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "base-cu",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.016553177913,
+   "rank": 95,
+   "url": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
+   "vcpu_h": 0.165531779128
+  },
+  {
+   "all_in_month_usd": 20.0,
+   "card_sha256_12": "5b0e4d8e9ecf",
+   "category": "agent-sandbox",
+   "compromises": [],
+   "compute_month_usd": 20.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "shardflux",
+   "isolation": "firecracker",
+   "min_commit_month_usd": null,
+   "name": "Shardflux",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "workspace",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.04,
+   "rank": 96,
+   "url": "https://shardflux.dev/#pricing",
+   "vcpu_h": 0.12
+  },
+  {
+   "all_in_month_usd": 30.0,
+   "card_sha256_12": "cc56c4ed0307",
+   "category": "paas",
+   "compromises": [
+    "smallest usable size is 0.5 vCPU / 0.5 GiB"
+   ],
+   "compute_month_usd": 30.0,
+   "entry_month_usd": 0,
+   "entry_plan": null,
+   "entry_shape": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "has_genuine_free_tier": true,
+   "has_sales_plan": true,
+   "hour": null,
+   "id": "render",
+   "isolation": "container",
+   "min_commit_month_usd": null,
+   "name": "Render",
+   "platform_fee_month_usd": 0.0,
+   "priced_by": "workflow-flex",
+   "pricing_kind": "resource",
+   "ram_gib_h": 0.05,
+   "rank": 97,
+   "url": "https://render.com/pricing",
+   "vcpu_h": 0.2
+  }
+ ],
+ "ranked_at": "2026-10-02T01:39:09Z",
+ "ranking_commit": "6215580ae1d4",
+ "unrankable": [
+  {
+   "id": "agency-tool-company",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "agent-relay",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "ainclave",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "airtop",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "alibaba-ecs",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "amp",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "anchor-browser",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "anka-build-cloud",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "apoxy",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "archal",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "archil",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "arga-labs",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "arker",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "artillery",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "autocomputer",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "aws-codebuild",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "aws-ec2-mac",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "aws-ec2-windows",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "aws-ec2",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "aws-workspaces",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "azure-container-apps-sandboxes",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "azure-dev-box",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "azure-foundry-agents",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "azure-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "azure-pipelines",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "azure-vm",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "azure-windows",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "baseten",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "bitbucket-pipelines",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "bitrise",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "blacksmith",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "boat",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "boxes-dev",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "bright-data-browser",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "brimble",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "browser-use",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "browseract",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "browserbase",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "browsercloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "browserless",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "buildjet",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "buildkite-hosted",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "butter",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "bytebot",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "capy",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "caution",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "cedana",
+   "reason": "not a compute provider (other)"
+  },
+  {
+   "id": "celesto",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "chronicle-labs",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "circleci",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cirrus-runners",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "civo",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "claude-managed-agents",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "claw2agent",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "clever-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cloudaxis",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cloudbrowser",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cloudcruise",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cloudflare-browser",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cloudrouter",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "clusy",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "coasty",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "codemagic",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "coder",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "codesandbox-sdk",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "comfy-deploy",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "computeruse-cloud",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "computeruse-space",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "contabo",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "coreweave",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "createos",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "crusoe",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cube",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "cyberdesk",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "dagger",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "datalayer",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "dexto",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "digitalocean-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "docker-cloud-sandboxes",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "dockup",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "e2e-networks",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "eventual",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "exoscale",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "expanse",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "expo",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "fal",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "ferr",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "firecrawl",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "flow-swiss-mac",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "flowdeploy",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "fluidstack",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "gcore",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "gcp-compute-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "gcp-compute",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "gemini-code-execution",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "github-actions",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "github-codespaces",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "gitlab-runners",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "gologin",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "google-cloud-build",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "google-colab",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "greenmini",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "h-company",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "halluminate",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "hatchet-run",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "heroic-labs",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "heroku",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hetzner-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hetzner-dedicated",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hetzner-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hoplite",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hostinger-vps",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hostmyapple",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "huggingface-jobs",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "humanlayer",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hyperbeam",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hyperbolic",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hyperstack",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "hyrex",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "ibm-cloud-vpc",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "intuned",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "isle",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "jamsocket",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "jarvislabs",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "kaggle",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "kakao-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "kamatera",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "kasm-workspaces",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "kedge",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "koyeb",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "kubesail",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "lambda",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "lapdev",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "latitude-sh",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "leap0",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "lightning-ai",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "lightpanda",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "limrun",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "linode",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "lizard",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "machine0",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "macincloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "macstadium",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "magnitude",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "manufact",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "manus-cloud-computer",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "maritime",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "mastra",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "metorial",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "microsandbox",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "minicor",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "minimax",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "miosa",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "mistral-compute",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "modelence",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "moonshot-kimi",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "mosaic",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "namespace",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "naver-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "nebius-contree",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "netcup",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "nextmv",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "nodus-compute",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "notte",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "oakhost",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "okteto",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "omnirun",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "ona",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "onecli",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "open-telekom-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "openagi",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "openai-containers",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "opencomputer",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "openhands-runtime",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "opensteer",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "orgo",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "ovh-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "ovhcloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "paperpod",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "paperspace",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "party",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "pipekit",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "pipeshift",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "playgent",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "ploomber",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "poplarml",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "porter",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "prized",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "reflex",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "refresh",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "release",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "remote-browser",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "rentamac",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "replicas",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "replicate",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "rescale",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "revyl",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "riza",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "runanywhere",
+   "reason": "not a compute provider (inference-api)"
+  },
+  {
+   "id": "runkit",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "runpod",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "runs-on",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "sakura-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "samsung-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "sandbox-as-a-service",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "scaleway-apple-silicon",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "scaleway-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "scaleway",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "scitix-agent-sandbox",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "scrapeless",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "scrapfly",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "scrapingbee",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "seacloudai",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "sealos-devbox",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "self-host-baremetal",
+   "reason": "not a compute provider (self-host)"
+  },
+  {
+   "id": "server4agent",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "sf-tensor",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "sfcompute",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "shadeform",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "shellbox",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "shuttle",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "sieve",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "signadot",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "skyhook",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "skyvern",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "smooth",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "specific",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "stackit",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "starsling",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "steel",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "strong-compute",
+   "reason": "not a compute provider (finops)"
+  },
+  {
+   "id": "surfsky",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "tabstack",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "tart-orchard",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "teclada",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "tencent-cloud-studio",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "tencent-cubesandbox",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "tensorpool",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "texel-ai",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "tilde-run",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "tilion",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "tinyfish",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "together-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "trainy",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "trigger-dev",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "unikraft-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "upcloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "use-computer",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "vast-ai",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "vibrant-labs",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "voltage-park",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "vultr-gpu",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "vultr-windows",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "vultr",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "warpbuild",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "webapp-io",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "webcontainers",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "windmill",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "windows-365-agents",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "windows-365",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "xcode-cloud",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "yepcode",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "zeabur",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "zenrows",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "zhipu",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "zibra-labs",
+   "reason": "no priced self-serve plan"
+  },
+  {
+   "id": "zipbox",
+   "reason": "no published rate or size"
+  },
+  {
+   "id": "zo-computer",
+   "reason": "no published rate or size"
+  }
+ ],
+ "upstream_card_commit": "f6a71ab09fefa68e355ef47c52315e099f99c921",
+ "workload": {
+  "always_on": 0,
+  "concurrency": 2,
+  "disk_gib": 20,
+  "monthly_credit": 0,
+  "ram_gib": 4,
+  "session_min": 10,
+  "sessions_month": 300,
+  "vcpu": 2
+ },
+ "workload_label": "2 vCPU / 4 GiB / 20 GiB, 300 x 10-min sessions a month, nothing always-on"
+}
