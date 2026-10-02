@@ -1,6 +1,6 @@
 # peli-cloud — every provider, cheapest first, at every period
 
-**Generated 2026-10-02T02:13:20Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
+**Generated 2026-10-02T02:18:05Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
 
 ## How to read this
 
@@ -49,7 +49,7 @@ Every table below is priced at three shapes and four duty cycles:
 
 ### A2. One-time credit — free exactly once
 
-79 providers publish a signup credit. It is worth its face value once and never renews.
+81 providers publish a signup credit. It is worth its face value once and never renews.
 
 | # | provider | category | one-time credit | what that buys at the `agent` rate | link |
 |---|---|---|---|---|---|
@@ -78,60 +78,62 @@ Every table below is priced at three shapes and four duty cycles:
 | 23 | [Daytona](https://www.daytona.io/pricing) | agent-sandbox | $200 | 1208 machine-hours (40 h/day for a month) | `daytona` |
 | 24 | [Hopx](https://hopx.ai/pricing) | agent-sandbox | $200 | 1208 machine-hours (40 h/day for a month) | `hopx` |
 | 25 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | hyperscaler | $200 | 6103 machine-hours (203 h/day for a month) | `ibm-cloud-vpc` |
-| 26 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | hyperscaler | $200 | 7812 machine-hours (260 h/day for a month) | `ovhcloud` |
-| 27 | [Replicas](https://replicas.dev) | agent-sandbox | $120 | 250 machine-hours (8 h/day for a month) | `replicas` |
-| 28 | [Amazon Bedrock AgentCore (Runtime / Code Interpreter / Browser)](https://aws.amazon.com/bedrock/agentcore/pricing/) | hyperscaler | $100 | 461 machine-hours (15 h/day for a month) | `aws-agentcore` |
-| 29 | [AWS EC2 Mac (Dedicated Host)](https://aws.amazon.com/ec2/instance-types/mac/) | macos | $100 | 154 machine-hours (5 h/day for a month) | `aws-ec2-mac` |
-| 30 | [AWS EC2 (Windows Server)](https://aws.amazon.com/ec2/pricing/on-demand/) | windows | $100 | 1667 machine-hours (56 h/day for a month) | `aws-ec2-windows` |
-| 31 | [AWS EC2 (reference VMs)](https://aws.amazon.com/ec2/pricing/on-demand/) | hyperscaler | $100 | 2037 machine-hours (68 h/day for a month) | `aws-ec2` |
-| 32 | [AWS Fargate](https://aws.amazon.com/fargate/pricing/) | hyperscaler | $100 | 1721 machine-hours (57 h/day for a month) | `aws-fargate` |
-| 33 | [Declaw](https://docs.declaw.ai/platform/billing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `declaw` |
-| 34 | [E2B](https://e2b.dev/pricing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `e2b` |
-| 35 | [Kamatera](https://www.kamatera.com/pricing/) | hyperscaler | $100 | 3650 machine-hours (122 h/day for a month) | `kamatera` |
-| 36 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | hyperscaler | $100 | 2778 machine-hours (93 h/day for a month) | `linode` |
-| 37 | [Novita AI Agent Sandbox](https://docs.novita.ai/guides/sandbox-pricing) | agent-sandbox | $100 | 857 machine-hours (29 h/day for a month) | `novita` |
-| 38 | [smol machines](https://smolmachines.com/pricing) | agent-sandbox | $100 | 607 machine-hours (20 h/day for a month) | `smol-machines` |
-| 39 | [Superserve](https://superserve.ai/pricing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `superserve` |
-| 40 | [Tenki Sandbox](https://tenki.cloud/pricing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `tenki` |
-| 41 | [use.computer](https://use.computer/) | macos | $100 | 222 machine-hours (7 h/day for a month) | `use-computer` |
-| 42 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | hyperscaler | $90 | 3203 machine-hours (107 h/day for a month) | `alibaba-ecs` |
-| 43 | [InstaVM](https://instavm.io/pricing) | agent-sandbox | $50 | 302 machine-hours (10 h/day for a month) | `instavm` |
-| 44 | [Isorun](https://docs.isorun.ai/getting-started/pricing) | agent-sandbox | $50 | 455 machine-hours (15 h/day for a month) | `isorun` |
-| 45 | [Runloop](https://www.runloop.ai/pricing) | agent-sandbox | $50 | 158 machine-hours (5 h/day for a month) | `runloop` |
-| 46 | [Runta](https://runta.com/pricing/) | agent-sandbox | $50 | 302 machine-hours (10 h/day for a month) | `runta` |
-| 47 | [boxd](https://boxd.sh/pricing) | agent-sandbox | $30 | 158 machine-hours (5 h/day for a month) | `boxd` |
-| 48 | [Lightning AI](https://lightning.ai/pricing) | dev-env | $30 | 59 machine-hours (2 h/day for a month) | `lightning-ai` |
-| 49 | [Prized](https://prized.dev/docs/billing) | dev-env | $30 | 876 machine-hours (29 h/day for a month) | `prized` |
-| 50 | [Sprites (Fly.io)](https://fly.io/pricing) | agent-sandbox | $30 | 183 machine-hours (6 h/day for a month) | `sprites` |
-| 51 | [Steel.dev](https://docs.steel.dev/overview/pricinglimits) | browser (browser product, not a machine) | $30 | - | `steel` |
-| 52 | [orkestr Sandboxes](https://orkestr.eu/sandboxes) | agent-sandbox | $28.445 | 167 machine-hours (6 h/day for a month) | `orkestr` |
-| 53 | [Cube Computer](https://cube.computer/) | dev-env | $25 | 1011 machine-hours (34 h/day for a month) | `cube` |
-| 54 | [Docker Cloud Sandboxes](https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/) | agent-sandbox | $25 | 179 machine-hours (6 h/day for a month) | `docker-cloud-sandboxes` |
-| 55 | [zipbox](https://zipbox.ai/pricing) | agent-sandbox | $25 | 1825 machine-hours (61 h/day for a month) | `zipbox` |
-| 56 | [Flow Swiss Mac Bare Metal](https://doc.flow.swiss/platform/pricing/mac-bare-metal) | macos | $24.17 | 74 machine-hours (2 h/day for a month) | `flow-swiss-mac` |
-| 57 | [Dedalus Labs](https://www.dedaluslabs.ai/pricing) | agent-sandbox | $20 | 134 machine-hours (4 h/day for a month) | `dedalus-labs` |
-| 58 | [Buildkite hosted agents](https://buildkite.com/pricing) | macos | $16 | 33 machine-hours (1 h/day for a month) | `buildkite-hosted` |
-| 59 | [UCloud Agent Sandbox](https://astraflow.ucloud.cn/docs/agent-sandbox) | agent-sandbox | $15.4504 | 240 machine-hours (8 h/day for a month) | `ucloud` |
-| 60 | [Browser Use Cloud](https://browser-use.com/pricing) | browser (browser product, not a machine) | $15 | - | `browser-use` |
-| 61 | [Lizard](https://lizard.build/pricing) | agent-sandbox | $10 | 556 machine-hours (19 h/day for a month) | `lizard` |
-| 62 | [MIOSA](https://miosa.ai/pricing) | agent-sandbox | $10 | 64 machine-hours (2 h/day for a month) | `miosa` |
-| 63 | [Notte](https://www.notte.cc/pricing) | browser (browser product, not a machine) | $10 | - | `notte` |
-| 64 | [OpenComputer](https://opencomputer.dev/sandboxes) | agent-sandbox | $10 | 26 machine-hours (1 h/day for a month) | `opencomputer` |
-| 65 | [TinyFish](https://www.tinyfish.ai/pricing) | browser (browser product, not a machine) | $8 | - | `tinyfish` |
-| 66 | [Buddy Sandboxes](https://buddy.works/pricing) | agent-sandbox | $5 | 58 machine-hours (2 h/day for a month) | `buddy` |
-| 67 | [CreateOS Sandbox (NodeOps)](https://createos.sh/products/sandbox) | agent-sandbox | $5 | 42 machine-hours (1 h/day for a month) | `createos` |
-| 68 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | hyperscaler | $5 | 140 machine-hours (5 h/day for a month) | `digitalocean` |
-| 69 | [Hyperbrowser](https://www.hyperbrowser.ai/pricing) | browser (browser product, not a machine) | $5 | - | `hyperbrowser` |
-| 70 | [Railway](https://railway.com/pricing) | agent-sandbox | $5 | 45 machine-hours (1 h/day for a month) | `railway` |
-| 71 | [RunAnywhere](https://www.runanywhere.ai/) | inference-api (browser product, not a machine) | $5 | - | `runanywhere` |
-| 72 | [Sandbox as a Service](https://sandbox-as-a-service.com/pricing) | agent-sandbox | $5 | 56 machine-hours (2 h/day for a month) | `sandbox-as-a-service` |
-| 73 | [Smooth](https://www.smooth.sh/pricing) | browser (browser product, not a machine) | $5 | - | `smooth` |
-| 74 | [Huawei Cloud AgentArts](https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf) | agent-sandbox | $3.31064 | 8 machine-hours (0 h/day for a month) | `huawei-cloud` |
-| 75 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | dev-env | $2.98 | 80 machine-hours (3 h/day for a month) | `tencent-cloud-studio` |
-| 76 | [Agent 37](https://www.agent37.com/pricing) | agent-sandbox | $1 | 166 machine-hours (6 h/day for a month) | `agent-37` |
-| 77 | [boat.dev](https://docs.boat.dev/pricing) | agent-sandbox | $0.9 | 50 machine-hours (2 h/day for a month) | `boat` |
-| 78 | [BrowserAct](https://www.browseract.com/pricing) | browser (browser product, not a machine) | $0.32 | - | `browseract` |
-| 79 | [Scrapfly Cloud Browser](https://scrapfly.io/pricing) | browser (browser product, not a machine) | $0.15 | - | `scrapfly` |
+| 26 | [OVHcloud GPU instances](https://www.ovhcloud.com/en/public-cloud/prices/) | gpu-cloud | $200 | - | `ovh-gpu` |
+| 27 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | hyperscaler | $200 | 7812 machine-hours (260 h/day for a month) | `ovhcloud` |
+| 28 | [Replicas](https://replicas.dev) | agent-sandbox | $120 | 250 machine-hours (8 h/day for a month) | `replicas` |
+| 29 | [Amazon Bedrock AgentCore (Runtime / Code Interpreter / Browser)](https://aws.amazon.com/bedrock/agentcore/pricing/) | hyperscaler | $100 | 461 machine-hours (15 h/day for a month) | `aws-agentcore` |
+| 30 | [AWS EC2 Mac (Dedicated Host)](https://aws.amazon.com/ec2/instance-types/mac/) | macos | $100 | 154 machine-hours (5 h/day for a month) | `aws-ec2-mac` |
+| 31 | [AWS EC2 (Windows Server)](https://aws.amazon.com/ec2/pricing/on-demand/) | windows | $100 | 1667 machine-hours (56 h/day for a month) | `aws-ec2-windows` |
+| 32 | [AWS EC2 (reference VMs)](https://aws.amazon.com/ec2/pricing/on-demand/) | hyperscaler | $100 | 2037 machine-hours (68 h/day for a month) | `aws-ec2` |
+| 33 | [AWS Fargate](https://aws.amazon.com/fargate/pricing/) | hyperscaler | $100 | 1721 machine-hours (57 h/day for a month) | `aws-fargate` |
+| 34 | [Declaw](https://docs.declaw.ai/platform/billing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `declaw` |
+| 35 | [E2B](https://e2b.dev/pricing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `e2b` |
+| 36 | [Kamatera](https://www.kamatera.com/pricing/) | hyperscaler | $100 | 3650 machine-hours (122 h/day for a month) | `kamatera` |
+| 37 | [Akamai Cloud / Linode](https://www.akamai.com/cloud/pricing) | hyperscaler | $100 | 2778 machine-hours (93 h/day for a month) | `linode` |
+| 38 | [Novita AI Agent Sandbox](https://docs.novita.ai/guides/sandbox-pricing) | agent-sandbox | $100 | 857 machine-hours (29 h/day for a month) | `novita` |
+| 39 | [smol machines](https://smolmachines.com/pricing) | agent-sandbox | $100 | 607 machine-hours (20 h/day for a month) | `smol-machines` |
+| 40 | [Superserve](https://superserve.ai/pricing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `superserve` |
+| 41 | [Tenki Sandbox](https://tenki.cloud/pricing) | agent-sandbox | $100 | 604 machine-hours (20 h/day for a month) | `tenki` |
+| 42 | [use.computer](https://use.computer/) | macos | $100 | 222 machine-hours (7 h/day for a month) | `use-computer` |
+| 43 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | hyperscaler | $90 | 3203 machine-hours (107 h/day for a month) | `alibaba-ecs` |
+| 44 | [InstaVM](https://instavm.io/pricing) | agent-sandbox | $50 | 302 machine-hours (10 h/day for a month) | `instavm` |
+| 45 | [Isorun](https://docs.isorun.ai/getting-started/pricing) | agent-sandbox | $50 | 455 machine-hours (15 h/day for a month) | `isorun` |
+| 46 | [Runloop](https://www.runloop.ai/pricing) | agent-sandbox | $50 | 158 machine-hours (5 h/day for a month) | `runloop` |
+| 47 | [Runta](https://runta.com/pricing/) | agent-sandbox | $50 | 302 machine-hours (10 h/day for a month) | `runta` |
+| 48 | [boxd](https://boxd.sh/pricing) | agent-sandbox | $30 | 158 machine-hours (5 h/day for a month) | `boxd` |
+| 49 | [Lightning AI](https://lightning.ai/pricing) | dev-env | $30 | 59 machine-hours (2 h/day for a month) | `lightning-ai` |
+| 50 | [Prized](https://prized.dev/docs/billing) | dev-env | $30 | 876 machine-hours (29 h/day for a month) | `prized` |
+| 51 | [Sprites (Fly.io)](https://fly.io/pricing) | agent-sandbox | $30 | 183 machine-hours (6 h/day for a month) | `sprites` |
+| 52 | [Steel.dev](https://docs.steel.dev/overview/pricinglimits) | browser (browser product, not a machine) | $30 | - | `steel` |
+| 53 | [orkestr Sandboxes](https://orkestr.eu/sandboxes) | agent-sandbox | $28.445 | 167 machine-hours (6 h/day for a month) | `orkestr` |
+| 54 | [Cube Computer](https://cube.computer/) | dev-env | $25 | 1011 machine-hours (34 h/day for a month) | `cube` |
+| 55 | [Docker Cloud Sandboxes](https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/) | agent-sandbox | $25 | 179 machine-hours (6 h/day for a month) | `docker-cloud-sandboxes` |
+| 56 | [zipbox](https://zipbox.ai/pricing) | agent-sandbox | $25 | 1825 machine-hours (61 h/day for a month) | `zipbox` |
+| 57 | [Flow Swiss Mac Bare Metal](https://doc.flow.swiss/platform/pricing/mac-bare-metal) | macos | $24.17 | 74 machine-hours (2 h/day for a month) | `flow-swiss-mac` |
+| 58 | [Dedalus Labs](https://www.dedaluslabs.ai/pricing) | agent-sandbox | $20 | 134 machine-hours (4 h/day for a month) | `dedalus-labs` |
+| 59 | [Buildkite hosted agents](https://buildkite.com/pricing) | macos | $16 | 33 machine-hours (1 h/day for a month) | `buildkite-hosted` |
+| 60 | [UCloud Agent Sandbox](https://astraflow.ucloud.cn/docs/agent-sandbox) | agent-sandbox | $15.4504 | 240 machine-hours (8 h/day for a month) | `ucloud` |
+| 61 | [Browser Use Cloud](https://browser-use.com/pricing) | browser (browser product, not a machine) | $15 | - | `browser-use` |
+| 62 | [Lizard](https://lizard.build/pricing) | agent-sandbox | $10 | 556 machine-hours (19 h/day for a month) | `lizard` |
+| 63 | [MIOSA](https://miosa.ai/pricing) | agent-sandbox | $10 | 64 machine-hours (2 h/day for a month) | `miosa` |
+| 64 | [Notte](https://www.notte.cc/pricing) | browser (browser product, not a machine) | $10 | - | `notte` |
+| 65 | [OpenComputer](https://opencomputer.dev/sandboxes) | agent-sandbox | $10 | 26 machine-hours (1 h/day for a month) | `opencomputer` |
+| 66 | [TinyFish](https://www.tinyfish.ai/pricing) | browser (browser product, not a machine) | $8 | - | `tinyfish` |
+| 67 | [Buddy Sandboxes](https://buddy.works/pricing) | agent-sandbox | $5 | 58 machine-hours (2 h/day for a month) | `buddy` |
+| 68 | [CreateOS Sandbox (NodeOps)](https://createos.sh/products/sandbox) | agent-sandbox | $5 | 42 machine-hours (1 h/day for a month) | `createos` |
+| 69 | [DigitalOcean GPU Droplets](https://www.digitalocean.com/pricing/gpu-droplets) | gpu-cloud | $5 | - | `digitalocean-gpu` |
+| 70 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | hyperscaler | $5 | 140 machine-hours (5 h/day for a month) | `digitalocean` |
+| 71 | [Hyperbrowser](https://www.hyperbrowser.ai/pricing) | browser (browser product, not a machine) | $5 | - | `hyperbrowser` |
+| 72 | [Railway](https://railway.com/pricing) | agent-sandbox | $5 | 45 machine-hours (1 h/day for a month) | `railway` |
+| 73 | [RunAnywhere](https://www.runanywhere.ai/) | inference-api (browser product, not a machine) | $5 | - | `runanywhere` |
+| 74 | [Sandbox as a Service](https://sandbox-as-a-service.com/pricing) | agent-sandbox | $5 | 56 machine-hours (2 h/day for a month) | `sandbox-as-a-service` |
+| 75 | [Smooth](https://www.smooth.sh/pricing) | browser (browser product, not a machine) | $5 | - | `smooth` |
+| 76 | [Huawei Cloud AgentArts](https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf) | agent-sandbox | $3.31064 | 8 machine-hours (0 h/day for a month) | `huawei-cloud` |
+| 77 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | dev-env | $2.98 | 80 machine-hours (3 h/day for a month) | `tencent-cloud-studio` |
+| 78 | [Agent 37](https://www.agent37.com/pricing) | agent-sandbox | $1 | 166 machine-hours (6 h/day for a month) | `agent-37` |
+| 79 | [boat.dev](https://docs.boat.dev/pricing) | agent-sandbox | $0.9 | 50 machine-hours (2 h/day for a month) | `boat` |
+| 80 | [BrowserAct](https://www.browseract.com/pricing) | browser (browser product, not a machine) | $0.32 | - | `browseract` |
+| 81 | [Scrapfly Cloud Browser](https://scrapfly.io/pricing) | browser (browser product, not a machine) | $0.15 | - | `scrapfly` |
 
 ### A3. $0 entry tier, no credit published — unknown, not free
 
@@ -602,6 +604,36 @@ _173 more at this duty cycle; the full rank is table C._
 
 ---
 
+## B2. GPU providers — priced per GPU-hour
+
+A GPU box is billed per GPU-hour, not per vCPU. Ranking one beside a CPU box compares two currencies, so these get their own table. Revision 2 dropped all of them silently; there are 17.
+
+Cheapest published model per provider, with the hour/day/week/month cost of holding ONE of that GPU:
+
+| # | provider | cheapest GPU | $/GPU-hour | $/day | $/week | $/month | spot? | link |
+|---|---|---|---|---|---|---|---|---|
+| 1 | [Microsoft Azure GPU VMs](https://prices.azure.com/api/retail/prices) | T4 | 0.15 | 0.15 | 1.04 | 4.48 | yes | `azure-gpu` |
+| 2 | [Vast.ai](https://github.com/vast-ai/docs/blob/main/guides/pricing.mdx) | RTX-4090 | 0.35 | 0.35 | 2.43 | 10.40 | no | `vast-ai` |
+| 3 | [TensorDock](https://www.tensordock.com/) | RTX-4090 | 0.35 | 0.35 | 2.45 | 10.50 | no | `tensordock` |
+| 4 | [Thunder Compute](https://www.thundercompute.com/pricing) | RTX-A6000 | 0.35 | 0.35 | 2.45 | 10.50 | no | `thunder-compute` |
+| 5 | [Google Compute Engine GPU VMs](https://cloud.google.com/products/compute/pricing/accelerator-optimized) | L4 | 0.42 | 0.42 | 2.97 | 12.72 | yes | `gcp-compute-gpu` |
+| 6 | [OVHcloud GPU instances](https://www.ovhcloud.com/en/public-cloud/prices/) | Quadro-RTX-5000 | 0.60 | 0.60 | 4.20 | 18.00 | no | `ovh-gpu` |
+| 7 | [Comfy Deploy](https://app.comfydeploy.com/pricing) | T4 | 0.65 | 0.65 | 4.54 | 19.44 | no | `comfy-deploy` |
+| 8 | [Lambda](https://lambda.ai/pricing) | Quadro-RTX-6000 | 0.69 | 0.69 | 4.83 | 20.70 | no | `lambda` |
+| 9 | [DigitalOcean GPU Droplets](https://www.digitalocean.com/pricing/gpu-droplets) | RTX-4000-Ada | 0.76 | 0.76 | 5.32 | 22.80 | no | `digitalocean-gpu` |
+| 10 | [CoreWeave](https://www.coreweave.com/pricing) | L40 | 0.78 | 0.78 | 5.49 | 23.51 | yes | `coreweave` |
+| 11 | [Scaleway GPU instances](https://www.scaleway.com/en/pricing/gpu/) | L4 | 0.90 | 0.90 | 6.27 | 26.88 | no | `scaleway-gpu` |
+| 12 | [Vultr Cloud GPU](https://api.vultr.com/v2/plans?type=vcg) | L40S | 1.67 | 1.67 | 11.70 | 50.13 | no | `vultr-gpu` |
+| 13 | [Together AI](https://www.together.ai/pricing) | H100 | 1.99 | 1.99 | 13.93 | 59.70 | yes | `together-gpu` |
+| 14 | [Voltage Park](https://www.voltagepark.com/pricing) | H100 | 1.99 | 1.99 | 13.93 | 59.70 | no | `voltage-park` |
+| 15 | [fal](https://fal.ai/pricing) | RTX-PRO-6000 | 2.99 | 2.99 | 20.93 | 89.70 | no | `fal` |
+| 16 | [Hyperbolic](https://www.hyperbolic.ai/marketplace) | H100-SXM | 3.19 | 3.19 | 22.33 | 95.70 | no | `hyperbolic` |
+| 17 | [Shadeform](https://www.shadeform.ai/) | H100 | 5.99 | 5.99 | 41.93 | 179.70 | no | `shadeform` |
+
+The full per-model price list for each provider is in `data/period-model.json` under `gpu_tiers`. Spot prices are interruptible: the machine can be reclaimed. Every row here is a published rate, none is a negotiated price.
+
+---
+
 ## C. Every provider, ranked
 
 Nothing truncated. One row per provider that priced at any shape and period, ordered by its `agent` month at 10 h/day **before credits are applied**, so a provider whose credit happens to cover this month is never presented as the cheapest thing in the market. The period columns after the first are also before credit, except where a credit is shown in the `free/mo` column.
@@ -818,23 +850,199 @@ Nothing truncated. One row per provider that priced at any shape and period, ord
 
 ---
 
-## D. What could not be priced, and why
+## D. Every card accounted for
 
-A missing row is a result. This is what would have to become true for each excluded card to get a price.
+A missing row is a result. This is what happened to all 276 cards in the corpus, so a deliberate exclusion cannot be mistaken for an oversight.
 
-11 cards published no rate or size for any shape.
+Produced by `experiments/90-exclusion-ledger.py` at corpus commit `f6a71ab09fef`.
+
+| status | cards | what it means |
+|---|---|---|
+| `ranked` | 198 | Ranked in table C. |
+| `ranked-partial` | 9 | Ranked for some shapes only. |
+| `gpu-only` | 15 | GPU-only provider: every mode sells a GPU, and no CPU rate is published. Priced separately as a GPU workload, not dropped. |
+| `too-big` | 17 | Publishes rates, but no published size meets the smallest shape priced here (1 vCPU / 1 GiB). It is a larger machine than this catalogue covers, not an unpriced one. |
+| `no-rate` | 86 | Publishes modes but no hourly rate and no size table. Nothing is published to price. Spot-checked first-party on 2026-10-02: ainclave.com/pricing, bytebot.ai and butter.dev each return a page with ZERO dollar figures and steer to contact or enterprise, so this is the vendor's choice and not a gap in the corpus. The remaining 83 carry the corpus's finding at its commit and were not re-fetched. |
+| `off-category` | 41 | Browser, scraping or non-compute product: sells minutes of a remote browser or a SaaS, not machines. Surveyed for free credit, excluded from ranking. |
+| **total** | **366** | must equal the corpus card count |
+
+### Where it breaks down by category
+
+| category | total | ranked | partial | gpu-only | too big | no price | off-category |
+|---|---|---|---|---|---|---|---|
+| agent-sandbox | 126 | 81 | 6 | 0 | 9 | 30 | 0 |
+| hyperscaler | 44 | 43 | 1 | 0 | 0 | 0 | 0 |
+| paas | 42 | 22 | 0 | 0 | 2 | 18 | 0 |
+| gpu-cloud | 41 | 11 | 0 | 15 | 1 | 14 | 0 |
+| browser | 37 | 0 | 0 | 0 | 0 | 0 | 37 |
+| dev-env | 33 | 13 | 1 | 0 | 1 | 18 | 0 |
+| macos | 26 | 20 | 1 | 0 | 2 | 3 | 0 |
+| windows | 13 | 8 | 0 | 0 | 2 | 3 | 0 |
+| other | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| inference-api | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| self-host | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+| finops | 1 | 0 | 0 | 0 | 0 | 0 | 1 |
+
+### The 86 that publish no price at all
+
+This is the largest group of providers not in the ranking, so it is named rather than summarised. They are absent because nothing is published to price, not because the model refused them. Spot-checked first-party on 2026-10-02: `ainclave.com/pricing`, `bytebot.ai` and `butter.dev` each return a page with **zero dollar figures** and route to contact or enterprise. The rest carry the corpus's finding at its commit and were not re-fetched.
+
+| provider | category | what the card says | link |
+|---|---|---|---|
+| [Agency Tool Company](https://agencytool.com) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `agency-tool-company` |
+| [Agent Relay](https://agentrelay.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `agent-relay` |
+| [ainclave](https://www.ainclave.com/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `ainclave` |
+| [Apoxy](https://apoxy.dev) | paas | modes exist but publish neither a size table nor a per-resource rate | `apoxy` |
+| [Arga Labs](https://www.argalabs.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `arga-labs` |
+| [Artillery](https://www.artillery.io/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `artillery` |
+| [AutoComputer](https://www.autocomputer.ai/) | windows | modes exist but publish neither a size table nor a per-resource rate | `autocomputer` |
+| [Brimble Sandboxes](https://brimble.io/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `brimble` |
+| [BuildJet](https://buildjet.com/for-github-actions) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `buildjet` |
+| [Butter](https://butter.dev) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `butter` |
+| [Bytebot](https://www.bytebot.ai/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `bytebot` |
+| [Caution](https://caution.co/pricing.html) | paas | modes exist but publish neither a size table nor a per-resource rate | `caution` |
+| [Chronicle Labs](https://chronicle-labs.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `chronicle-labs` |
+| [Clusy](https://www.clusy.io/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `clusy` |
+| [Coder](https://coder.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `coder` |
+| [Cyberdesk](https://www.cyberdesk.io) | windows | modes exist but publish neither a size table nor a per-resource rate | `cyberdesk` |
+| [Dagger](https://dagger.io) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `dagger` |
+| [Dexto](https://www.dexto.ai/docs/models/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `dexto` |
+| [Dockup](https://getdockup.com/) | paas | modes exist but publish neither a size table nor a per-resource rate | `dockup` |
+| [Eventual](https://www.eventual.ai/) | paas | modes exist but publish neither a size table nor a per-resource rate | `eventual` |
+| [Expanse](https://expanse.sh) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `expanse` |
+| [FlowDeploy](https://flowdeploy.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `flowdeploy` |
+| [Fluidstack](https://fluidstack.io/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `fluidstack` |
+| [Halluminate](https://halluminate.ai/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `halluminate` |
+| [Hatchet](https://hatchet.run) | paas | modes exist but publish neither a size table nor a per-resource rate | `hatchet-run` |
+| [Heroic Labs](http://heroiclabs.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `heroic-labs` |
+| [Hoplite](https://hoplite.sh) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `hoplite` |
+| [HumanLayer](https://humanlayer.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `humanlayer` |
+| [Hyrex](https://www.hyrex.io) | paas | modes exist but publish neither a size table nor a per-resource rate | `hyrex` |
+| [Isle](https://www.tryisle.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `isle` |
+| [Jamsocket](https://jamsocket.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `jamsocket` |
+| [Kaggle Notebooks](https://www.kaggle.com/docs/notebooks) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `kaggle` |
+| [KubeSail](https://kubesail.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `kubesail` |
+| [Lapdev](https://lap.dev/pricing/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `lapdev` |
+| [Limrun](https://lim.run) | macos | modes exist but publish neither a size table nor a per-resource rate | `limrun` |
+| [Manufact](https://manufact.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `manufact` |
+| [Metorial](https://metorial.com) | paas | modes exist but publish neither a size table nor a per-resource rate | `metorial` |
+| [Minicor](https://minicor.com) | windows | modes exist but publish neither a size table nor a per-resource rate | `minicor` |
+| [MiniMax Agent hosting / developer API scope](https://platform.minimax.io/docs/llms.txt) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `minimax` |
+| [Mistral Compute / AI Cloud](https://mistral.ai/products/aicloud/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `mistral-compute` |
+| [Nebius ConTree (Token Factory Sandboxes)](https://tokenfactory.nebius.com/sandboxes/about) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `nebius-contree` |
+| [Nodus Compute](https://www.nodus-compute.ai/pricing/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `nodus-compute` |
+| [Okteto](https://okteto.com) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `okteto` |
+| [OneCLI](https://onecli.sh) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `onecli` |
+| [OpenHands Remote Sandbox / Cloud](https://docs.openhands.dev/openhands/usage/sandboxes/remote) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `openhands-runtime` |
+| [Orgo](https://www.orgo.ai/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `orgo` |
+| [OVHcloud GPU instances](https://www.ovhcloud.com/en/public-cloud/prices/) | gpu-cloud | a rate exists but no shape in this catalogue matched it | `ovh-gpu` |
+| [PaperPod](https://www.paperpod.dev/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `paperpod` |
+| [Party](https://party.build) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `party` |
+| [Pipekit](https://pipekit.io/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `pipekit` |
+| [Pipeshift](https://pipeshift.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `pipeshift` |
+| [Playgent](https://useplaygent.com) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `playgent` |
+| [Ploomber](https://ploomber.io/) | paas | modes exist but publish neither a size table nor a per-resource rate | `ploomber` |
+| [PoplarML](http://poplarml.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `poplarml` |
+| [Porter](https://porter.run) | paas | modes exist but publish neither a size table nor a per-resource rate | `porter` |
+| [Reflex](https://reflex.dev/pricing/) | paas | modes exist but publish neither a size table nor a per-resource rate | `reflex` |
+| [Refresh](https://www.refresh.dev) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `refresh` |
+| [Release](https://release.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `release` |
+| [Rescale](https://rescale.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `rescale` |
+| [Revyl](https://www.revyl.com) | macos | modes exist but publish neither a size table nor a per-resource rate | `revyl` |
+| [Riza Code Interpreter](https://riza.io/pricing) | agent-sandbox | a rate exists but no shape in this catalogue matched it | `riza` |
+| [RunKit](https://runkit.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `runkit` |
+| [ScitiX Agent Sandbox](https://scitix.github.io/Agent-Sandbox/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `scitix-agent-sandbox` |
+| [SeaCloudAI Sandbox](https://sandbox-gateway.cloud.seaart.ai) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `seacloudai` |
+| [Sealos DevBox](https://sealos.io/pricing/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `sealos-devbox` |
+| [Server4Agent](https://www.server4agent.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `server4agent` |
+| [SF Tensor](https://sf-tensor.com) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `sf-tensor` |
+| [Shadeform](https://www.shadeform.ai/) | gpu-cloud | a rate exists but no shape in this catalogue matched it | `shadeform` |
+| [Shuttle](https://www.shuttle.dev) | paas | modes exist but publish neither a size table nor a per-resource rate | `shuttle` |
+| [Sieve](https://sievedata.com/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `sieve` |
+| [Signadot](https://www.signadot.com/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `signadot` |
+| [Skyhook](https://skyhook.io) | paas | modes exist but publish neither a size table nor a per-resource rate | `skyhook` |
+| [Tart + Orchard (Cirrus Labs)](https://tart.run/licensing/) | macos | a rate exists but no shape in this catalogue matched it | `tart-orchard` |
+| [Teclada](https://www.teclada.com/) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `teclada` |
+| [Tencent Cloud CubeSandbox](https://github.com/TencentCloud/CubeSandbox) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `tencent-cubesandbox` |
+| [TensorPool](https://tensorpool.dev) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `tensorpool` |
+| [Texel.ai](https://texel.ai) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `texel-ai` |
+| [Tilde.run (discontinued)](https://lakefs.io/blog/we-recently-shut-down-tilde-run/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `tilde-run` |
+| [Trainy](https://trainy.ai/) | paas | modes exist but publish neither a size table nor a per-resource rate | `trainy` |
+| [Unikraft Cloud](https://unikraft.com/pricing) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `unikraft-cloud` |
+| [Vibrant Labs](https://vibrantlabs.com/) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `vibrant-labs` |
+| [webapp.io](https://webapp.io) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `webapp-io` |
+| [StackBlitz WebContainers](https://stackblitz.com/pricing) | dev-env | modes exist but publish neither a size table nor a per-resource rate | `webcontainers` |
+| [Windmill](https://www.windmill.dev/pricing) | paas | modes exist but publish neither a size table nor a per-resource rate | `windmill` |
+| [Zhipu Z Managed Agents](https://docs.bigmodel.cn/cn/managed-agents/overview.md) | agent-sandbox | modes exist but publish neither a size table nor a per-resource rate | `zhipu` |
+| [Zibra Labs](https://zibralabs.ai/) | gpu-cloud | modes exist but publish neither a size table nor a per-resource rate | `zibra-labs` |
+
+### The 17 priced, but only for larger machines
 
 | provider | category | link |
 |---|---|---|
+| [Veertu Anka Build Cloud](https://docs.veertu.com/anka/licensing/) | macos | `anka-build-cloud` |
+| [Archal](https://www.archal.ai/) | agent-sandbox | `archal` |
+| [Microsoft Dev Box (closed to new customers; retiring 2028-09-18)](https://azure.microsoft.com/en-us/products/dev-box/) | windows | `azure-dev-box` |
+| [Claw 2 Agent](https://claw2agent.com/pricing) | agent-sandbox | `claw2agent` |
+| [cloudrouter (Manaflow)](https://cloudrouter.dev) | agent-sandbox | `cloudrouter` |
+| [Coasty](https://coasty.ai/pricing) | agent-sandbox | `coasty` |
+| [Computer Use Cloud (computeruse.run)](https://computeruse.run/) | agent-sandbox | `computeruse-cloud` |
+| [ComputerUse.space](https://computeruse.space/) | agent-sandbox | `computeruse-space` |
+| [Gemini API code execution](https://ai.google.dev/gemini-api/docs/code-execution) | agent-sandbox | `gemini-code-execution` |
+| [Hetzner GPU servers](https://www.hetzner.com/dedicated-rootserver/matrix-gpu/) | gpu-cloud | `hetzner-gpu` |
+| [HUD](https://www.hud.ai/) | agent-sandbox | `hud` |
+| [Kasm Workspaces](https://kasm.com/community-edition) | dev-env | `kasm-workspaces` |
+| [Maritime](https://maritime.sh/pricing) | agent-sandbox | `maritime` |
+| [Mastra](https://mastra.ai) | paas | `mastra` |
+| [Windows 365 for Agents](https://learn.microsoft.com/en-us/windows-365/agents/pricing-paygo-always-available) | windows | `windows-365-agents` |
+| [Apple Xcode Cloud](https://developer.apple.com/xcode-cloud/) | macos | `xcode-cloud` |
+| [YepCode Run](https://yepcode.io/pricing/) | paas | `yepcode` |
+
+### The 41 off-category products
+
+Browser, scraping and non-compute products. They sell minutes of a remote browser or a SaaS, not machines, so ranking them beside a VM provider compares two purchases. They are still surveyed for free credit in tables A1 and A2.
+
+| provider | category | link |
+|---|---|---|
+| [Airtop](https://www.airtop.ai/pricing) | browser | `airtop` |
+| [Anchor Browser](https://anchorbrowser.io/pricing) | browser | `anchor-browser` |
 | [Bright Data Browser API](https://brightdata.com/pricing/scraping-browser) | browser | `bright-data-browser` |
 | [Browser Use Cloud](https://browser-use.com/pricing) | browser | `browser-use` |
 | [BrowserAct](https://www.browseract.com/pricing) | browser | `browseract` |
+| [Browserbase](https://www.browserbase.com/pricing) | browser | `browserbase` |
+| [BrowserCloud](https://browsercloud.io/pricing) | browser | `browsercloud` |
+| [Browserless](https://www.browserless.io/pricing) | browser | `browserless` |
+| [Cedana](https://cedana.com/) | other | `cedana` |
+| [CloudAxis](https://cloudaxis.ai/pricing/) | browser | `cloudaxis` |
+| [CloudBrowser AI](https://cloudbrowser.ai/) | browser | `cloudbrowser` |
+| [CloudCruise](https://cloudcruise.com/pricing) | browser | `cloudcruise` |
+| [Cloudflare Browser Run / Kitesurf](https://developers.cloudflare.com/browser-run/pricing/) | browser | `cloudflare-browser` |
+| [Ferr](https://ferr.dev/) | browser | `ferr` |
+| [Firecrawl Interact / Browser Sandbox](https://www.firecrawl.dev/pricing) | browser | `firecrawl` |
+| [Gologin Cloud Browser](https://gologin.com/cloud-browser/) | browser | `gologin` |
+| [H Company / Surfer / H Agents API](https://www.hcompany.ai/pricing) | browser | `h-company` |
+| [Hyperbeam](https://hyperbeam.com/) | browser | `hyperbeam` |
 | [Hyperbrowser](https://www.hyperbrowser.ai/pricing) | browser | `hyperbrowser` |
+| [Intuned](https://intunedhq.com/pricing) | browser | `intuned` |
+| [Kernel](https://www.onkernel.com/pricing) | browser | `kernel` |
+| [Lightpanda Cloud](https://lightpanda.io/pricing) | browser | `lightpanda` |
+| [Magnitude](https://magnitude.dev/) | browser | `magnitude` |
 | [Notte](https://www.notte.cc/pricing) | browser | `notte` |
+| [OpenAGI / Lux](https://developer.agiopen.org/docs/pricing) | browser | `openagi` |
+| [Opensteer](https://opensteer.com/pricing) | browser | `opensteer` |
+| [Remote Browser](https://remote-browser.dev/pricing) | browser | `remote-browser` |
 | [RunAnywhere](https://www.runanywhere.ai/) | inference-api | `runanywhere` |
 | [Scrapeless Agent Browser](https://www.scrapeless.com/en/pricing) | browser | `scrapeless` |
 | [Scrapfly Cloud Browser](https://scrapfly.io/pricing) | browser | `scrapfly` |
+| [Scraping Bee](https://www.scrapingbee.com/pricing/) | browser | `scrapingbee` |
+| [Self-hosted bare-metal sandbox fleet (hardware floor)](https://www.hetzner.com/dedicated-rootserver/ax42/) | self-host | `self-host-baremetal` |
+| [Skyvern](https://www.skyvern.com/pricing) | browser | `skyvern` |
 | [Smooth](https://www.smooth.sh/pricing) | browser | `smooth` |
 | [Steel.dev](https://docs.steel.dev/overview/pricinglimits) | browser | `steel` |
+| [Strong Compute](https://strongcompute.com) | finops | `strong-compute` |
+| [Surfsky](https://surfsky.io/pricing) | browser | `surfsky` |
+| [Tabstack](https://tabstack.ai/) | browser | `tabstack` |
+| [Tilion](https://tilion.com/pricing) | browser | `tilion` |
 | [TinyFish](https://www.tinyfish.ai/pricing) | browser | `tinyfish` |
+| [Zenrows Browser Sessions](https://www.zenrows.com/pricing) | browser | `zenrows` |
 

@@ -52,6 +52,12 @@ SHAPES = {
 # Duty cycles. 24 h/day is one column of the table, not the headline: it is the
 # regime that turns a stoppable sandbox into a VPS.
 DUTY_CYCLES = [1, 4, 10, 24]
+
+# A GPU card is priced by GPU-hour, not by vCPU/RAM. Ranking one against a CPU
+# box is comparing two currencies, so it gets its own table. GPU models named in
+# the corpus, cheapest-first within each provider.
+GPU_TIERS = ["RTX-4090", "L4", "A10G", "A100-40G", "RTX-A6000", "A100-80G",
+             "L40S", "RTX-6000-Ada", "H100", "H200", "B200", "B300"]
 HOURS_PER_DAY = 24.0
 DAYS_PER_WEEK = 7.0
 DAYS_PER_MONTH = 30.0
@@ -208,6 +214,39 @@ def main():
         entry = card.get("free") or {}
         mc_raw = entry.get("monthly_credit")
         ot_raw = entry.get("one_time_credit")
+
+        # --- GPU-only cards -------------------------------------------------
+        # A GPU provider publishes no CPU rate, only $/GPU-hour. Revision 2
+        # dropped all of these; they are a real product class for agents, so
+        # they are captured here and rendered as their own table rather than
+        # silently excluded.
+        if not off_category:
+            gmodes = [m for m in (card.get("modes") or [])
+                      if m.get("gpu_only") and isinstance(m.get("gpu"), dict)]
+            if gmodes and not best_per_shape:
+                tiers = {}
+                for m in gmodes:
+                    for gname, gprice in (m.get("gpu") or {}).items():
+                        if not isinstance(gprice, (int, float)) or gprice <= 0:
+                            continue  # a 0 GPU rate is an unpublished model
+                        prev = tiers.get(gname)
+                        spot = "spot" in set(m.get("flags") or [])
+                        if prev is None or (spot and not prev["spot"]):
+                            tiers[gname] = {"hour": float(gprice),
+                                            "mode": m.get("key"), "spot": spot}
+                if tiers:
+                    mc0 = entry.get("monthly_credit")
+                    ot0 = entry.get("one_time_credit")
+                    rows.append({
+                        "id": pid, "name": card.get("name"), "url": card.get("url"),
+                        "category": cls, "isolation": card.get("isolation"),
+                        "free_monthly_credit": mc0 if isinstance(mc0, (int, float)) else 0,
+                        "free_one_time_credit": ot0 if isinstance(ot0, (int, float)) else 0,
+                        "entry_fee": None, "usage_credit_floor": None,
+                        "surcharge_floor": None, "has_free_tier": False,
+                        "gpu_only": True, "gpu_tiers": tiers, "shapes": {},
+                    })
+                    continue
 
         if off_category:
             # Kept ONLY for the free-credit census, never ranked against the

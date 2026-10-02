@@ -1,0 +1,4499 @@
+{
+ "at": "2026-10-02T02:18:05Z",
+ "card_commit": "f6a71ab09fef",
+ "counts": {
+  "gpu-only": 15,
+  "no-rate": 86,
+  "off-category": 41,
+  "ranked": 198,
+  "ranked-partial": 9,
+  "too-big": 17
+ },
+ "ledger": [
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "agency-tool-company",
+   "isolation": "bare-metal",
+   "name": "Agency Tool Company",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://agencytool.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "agent-37",
+   "isolation": "gvisor",
+   "name": "Agent 37",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.agent37.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "agent-relay",
+   "isolation": null,
+   "name": "Agent Relay",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://agentrelay.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "agentcomputer",
+   "isolation": "firecracker",
+   "name": "AgentComputer",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://agentcomputer.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "ainclave",
+   "isolation": "firecracker",
+   "name": "ainclave",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.ainclave.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "airtop",
+   "isolation": "vm",
+   "name": "Airtop",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.airtop.ai/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "alibaba-ack",
+   "isolation": "container",
+   "name": "Alibaba Cloud ACK (Harbor backend)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.alibabacloud.com/product/kubernetes"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "alibaba-agentbay",
+   "isolation": "container",
+   "name": "Alibaba Cloud AgentBay",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "alibaba-agentrun",
+   "isolation": null,
+   "name": "Alibaba Cloud Agent Sandbox / FC / AgentRun",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "alibaba-ecs",
+   "isolation": "vm",
+   "name": "Alibaba Cloud ECS International",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.alibabacloud.com/en/product/ecs/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "amika",
+   "isolation": "vm",
+   "name": "Amika",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.amika.dev/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "amp",
+   "isolation": "vm",
+   "name": "Amp Orbs",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://ampcode.com/docs/orbs/sizes-and-costs"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "anchor-browser",
+   "isolation": "dedicated-vm",
+   "name": "Anchor Browser",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://anchorbrowser.io/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "anka-build-cloud",
+   "isolation": "apple-vm",
+   "name": "Veertu Anka Build Cloud",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://docs.veertu.com/anka/licensing/"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "apoxy",
+   "isolation": "gvisor",
+   "name": "Apoxy",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://apoxy.dev"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "aptible",
+   "isolation": "container",
+   "name": "Aptible",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.aptible.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "archal",
+   "isolation": "container",
+   "name": "Archal",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://www.archal.ai/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "archil",
+   "isolation": "vm",
+   "name": "Archil",
+   "shapes_priced": [
+    "agent",
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://archil.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "arga-labs",
+   "isolation": "container",
+   "name": "Arga Labs",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.argalabs.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "arker",
+   "isolation": "vm",
+   "name": "Arker",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://arker.ai/docs/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "artillery",
+   "isolation": "container",
+   "name": "Artillery",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.artillery.io/pricing"
+  },
+  {
+   "category": "windows",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "autocomputer",
+   "isolation": "firecracker",
+   "name": "AutoComputer",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.autocomputer.ai/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "aws-agentcore",
+   "isolation": "firecracker",
+   "name": "Amazon Bedrock AgentCore (Runtime / Code Interpreter / Browser)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/bedrock/agentcore/pricing/"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "aws-codebuild",
+   "isolation": "container",
+   "name": "AWS CodeBuild",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/codebuild/pricing/"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "aws-ec2-mac",
+   "isolation": "dedicated-host",
+   "name": "AWS EC2 Mac (Dedicated Host)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/ec2/instance-types/mac/"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "aws-ec2-windows",
+   "isolation": "vm",
+   "name": "AWS EC2 (Windows Server)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "aws-ec2",
+   "isolation": "vm",
+   "name": "AWS EC2 (reference VMs)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/ec2/pricing/on-demand/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "aws-fargate",
+   "isolation": "firecracker",
+   "name": "AWS Fargate",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/fargate/pricing/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "aws-lambda-microvms",
+   "isolation": "firecracker",
+   "name": "AWS Lambda MicroVMs",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/lambda/pricing/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "aws-lambda",
+   "isolation": "firecracker",
+   "name": "AWS Lambda",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/lambda/pricing/"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "aws-workspaces",
+   "isolation": "vm",
+   "name": "Amazon WorkSpaces Personal (Windows)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "azure-container-apps-sandboxes",
+   "isolation": "vm",
+   "name": "Azure Container Apps Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-overview"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "azure-container-apps",
+   "isolation": "vm",
+   "name": "Azure Container Apps (Consumption, Dedicated, Dynamic Sessions)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/container-apps/"
+  },
+  {
+   "category": "windows",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "azure-dev-box",
+   "isolation": "vm",
+   "name": "Microsoft Dev Box (closed to new customers; retiring 2028-09-18)",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://azure.microsoft.com/en-us/products/dev-box/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "azure-foundry-agents",
+   "isolation": "vm",
+   "name": "Microsoft Foundry hosted agents (East US)",
+   "shapes_priced": [
+    "agent",
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "azure-gpu",
+   "isolation": "vm",
+   "name": "Microsoft Azure GPU VMs",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://prices.azure.com/api/retail/prices"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "azure-pipelines",
+   "isolation": "vm",
+   "name": "Azure Pipelines",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "azure-vm",
+   "isolation": "vm",
+   "name": "Azure Virtual Machines (Linux)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "azure-windows",
+   "isolation": "vm",
+   "name": "Azure Virtual Machines (Windows Server)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "baponi",
+   "isolation": "container",
+   "name": "Baponi",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://baponi.ai/pricing/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "baseten",
+   "isolation": "container",
+   "name": "Baseten",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.baseten.co/deployment/resources"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "beam",
+   "isolation": "gvisor",
+   "name": "Beam",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.beam.cloud/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "bitbucket-pipelines",
+   "isolation": "container",
+   "name": "Bitbucket Pipelines",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.atlassian.com/software/bitbucket/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "bitrise",
+   "isolation": "vm",
+   "name": "Bitrise (mobile CI)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://bitrise.io/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "blacksmith",
+   "isolation": "vm",
+   "name": "Blacksmith (GitHub Actions runners)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.blacksmith.sh/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "blaxel",
+   "isolation": "firecracker",
+   "name": "Blaxel",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://blaxel.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "boat",
+   "isolation": "vm",
+   "name": "boat.dev",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.boat.dev/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "boxd",
+   "isolation": "vm",
+   "name": "boxd",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://boxd.sh/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "boxes-dev",
+   "isolation": "firecracker",
+   "name": "boxes.dev",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://boxes.dev/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "bright-data-browser",
+   "isolation": null,
+   "name": "Bright Data Browser API",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://brightdata.com/pricing/scraping-browser"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "brimble",
+   "isolation": "gvisor",
+   "name": "Brimble Sandboxes",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://brimble.io/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "browser-use",
+   "isolation": null,
+   "name": "Browser Use Cloud",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://browser-use.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "browseract",
+   "isolation": null,
+   "name": "BrowserAct",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.browseract.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "browserbase",
+   "isolation": "vm",
+   "name": "Browserbase",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.browserbase.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "browsercloud",
+   "isolation": "container",
+   "name": "BrowserCloud",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://browsercloud.io/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "browserless",
+   "isolation": "container",
+   "name": "Browserless",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.browserless.io/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "buddy",
+   "isolation": "vm",
+   "name": "Buddy Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://buddy.works/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "buildjet",
+   "isolation": null,
+   "name": "BuildJet",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://buildjet.com/for-github-actions"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "buildkite-hosted",
+   "isolation": "vm",
+   "name": "Buildkite hosted agents",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://buildkite.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "butter",
+   "isolation": "gvisor",
+   "name": "Butter",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://butter.dev"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "bytebot",
+   "isolation": "container",
+   "name": "Bytebot",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.bytebot.ai/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "capy",
+   "isolation": "vm",
+   "name": "Capy",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://capy.ai"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "caution",
+   "isolation": "vm",
+   "name": "Caution",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://caution.co/pricing.html"
+  },
+  {
+   "category": "other",
+   "detail": null,
+   "id": "cedana",
+   "isolation": null,
+   "name": "Cedana",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://cedana.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "celesto",
+   "isolation": "vm",
+   "name": "Celesto Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://celesto.ai/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "cerebrium",
+   "isolation": "container",
+   "name": "Cerebrium",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cerebrium.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "chronicle-labs",
+   "isolation": "qemu-kvm",
+   "name": "Chronicle Labs",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://chronicle-labs.com"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "circleci",
+   "isolation": "vm",
+   "name": "CircleCI",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://circleci.com/pricing/price-list/"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "cirrus-runners",
+   "isolation": "apple-vm",
+   "name": "Cirrus Runners",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cirrus-runners.app/pricing/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "civo",
+   "isolation": "vm",
+   "name": "Civo Compute",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.civo.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "claude-managed-agents",
+   "isolation": "container",
+   "name": "Claude Managed Agents",
+   "shapes_priced": [
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://platform.claude.com/docs/en/about-claude/pricing#claude-managed-agents-pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "claw2agent",
+   "isolation": "dedicated-vm",
+   "name": "Claw 2 Agent",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://claw2agent.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "clever-cloud",
+   "isolation": "vm",
+   "name": "Clever Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.clever.cloud/pricing/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "cloudaxis",
+   "isolation": null,
+   "name": "CloudAxis",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://cloudaxis.ai/pricing/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "cloudbrowser",
+   "isolation": "container",
+   "name": "CloudBrowser AI",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://cloudbrowser.ai/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "cloudcruise",
+   "isolation": "dedicated-vm",
+   "name": "CloudCruise",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://cloudcruise.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "cloudflare-browser",
+   "isolation": "container",
+   "name": "Cloudflare Browser Run / Kitesurf",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://developers.cloudflare.com/browser-run/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "cloudflare-sandbox",
+   "isolation": "vm",
+   "name": "Cloudflare Sandbox SDK / Containers",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://developers.cloudflare.com/containers/platform/pricing/"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "cloudflare-workers-for-platforms",
+   "isolation": "isolate",
+   "name": "Cloudflare Workers for Platforms",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "cloudrouter",
+   "isolation": "firecracker",
+   "name": "cloudrouter (Manaflow)",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://cloudrouter.dev"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "clusy",
+   "isolation": "firecracker",
+   "name": "Clusy",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.clusy.io/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "coasty",
+   "isolation": "vm",
+   "name": "Coasty",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://coasty.ai/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "codemagic",
+   "isolation": "vm",
+   "name": "Codemagic (mobile CI)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://codemagic.io/pricing/"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "coder",
+   "isolation": null,
+   "name": "Coder",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://coder.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "codesandbox-sdk",
+   "isolation": "firecracker",
+   "name": "CodeSandbox SDK",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://codesandbox.io/docs/sdk/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "collimate",
+   "isolation": "firecracker",
+   "name": "Collimate",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://collimate.ai/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "comfy-deploy",
+   "isolation": null,
+   "name": "Comfy Deploy",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://app.comfydeploy.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "computeruse-cloud",
+   "isolation": null,
+   "name": "Computer Use Cloud (computeruse.run)",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://computeruse.run/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "computeruse-space",
+   "isolation": "dedicated-host",
+   "name": "ComputerUse.space",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://computeruse.space/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "contabo",
+   "isolation": "vm",
+   "name": "Contabo",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://contabo.com/en-us/pricing/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "coreweave",
+   "isolation": "container",
+   "name": "CoreWeave",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.coreweave.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "createos",
+   "isolation": "firecracker",
+   "name": "CreateOS Sandbox (NodeOps)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://createos.sh/products/sandbox"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "crusoe",
+   "isolation": "vm",
+   "name": "Crusoe",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.crusoe.ai/cloud/pricing"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "cua-windows",
+   "isolation": "vm",
+   "name": "Cua Fleet (Windows Server)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cua.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "cua",
+   "isolation": "vm",
+   "name": "Cua Fleet",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cua.ai/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "cube",
+   "isolation": "vm",
+   "name": "Cube Computer",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cube.computer/"
+  },
+  {
+   "category": "windows",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "cyberdesk",
+   "isolation": null,
+   "name": "Cyberdesk",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.cyberdesk.io"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "dagger",
+   "isolation": "container",
+   "name": "Dagger",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://dagger.io"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "datalayer",
+   "isolation": "container",
+   "name": "Datalayer Runtimes",
+   "shapes_priced": [
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://datalayer.io/pricing"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "daytona-windows",
+   "isolation": "vm",
+   "name": "Daytona (Windows sandboxes)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.daytona.io/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "daytona",
+   "isolation": "container",
+   "name": "Daytona",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.daytona.io/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "declaw",
+   "isolation": "firecracker",
+   "name": "Declaw",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.declaw.ai/platform/billing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "dedalus-labs",
+   "isolation": "vm",
+   "name": "Dedalus Labs",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.dedaluslabs.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "deno-sandbox",
+   "isolation": "firecracker",
+   "name": "Deno Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://deno.com/deploy/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "depot",
+   "isolation": "vm",
+   "name": "Depot (GitHub Actions runners)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://depot.dev/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "dexto",
+   "isolation": null,
+   "name": "Dexto",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.dexto.ai/docs/models/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "digitalocean-gpu",
+   "isolation": "vm",
+   "name": "DigitalOcean GPU Droplets",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.digitalocean.com/pricing/gpu-droplets"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "digitalocean",
+   "isolation": "vm",
+   "name": "DigitalOcean Droplets",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.digitalocean.com/pricing/droplets"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "docker-cloud-sandboxes",
+   "isolation": "vm",
+   "name": "Docker Cloud Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "dockup",
+   "isolation": "container",
+   "name": "Dockup",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://getdockup.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "e2b",
+   "isolation": "firecracker",
+   "name": "E2B",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://e2b.dev/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "e2e-networks",
+   "isolation": "vm",
+   "name": "E2E Networks",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.e2enetworks.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "ellipsis",
+   "isolation": "qemu-kvm",
+   "name": "Ellipsis",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.ellipsis.dev/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "eventual",
+   "isolation": null,
+   "name": "Eventual",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.eventual.ai/"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "exe-dev",
+   "isolation": "vm",
+   "name": "exe.dev",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://exe.dev/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "exoscale",
+   "isolation": "vm",
+   "name": "Exoscale",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.exoscale.com/pricing/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "expanse",
+   "isolation": null,
+   "name": "Expanse",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://expanse.sh"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "expo",
+   "isolation": "vm",
+   "name": "Expo",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://expo.dev"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "fal",
+   "isolation": "container",
+   "name": "fal",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://fal.ai/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "ferr",
+   "isolation": "container",
+   "name": "Ferr",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://ferr.dev/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "firecrawl",
+   "isolation": "container",
+   "name": "Firecrawl Interact / Browser Sandbox",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.firecrawl.dev/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "flow-swiss-mac",
+   "isolation": "dedicated-host",
+   "name": "Flow Swiss Mac Bare Metal",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://doc.flow.swiss/platform/pricing/mac-bare-metal"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "flowdeploy",
+   "isolation": null,
+   "name": "FlowDeploy",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://flowdeploy.com"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "fluidstack",
+   "isolation": "dedicated-host",
+   "name": "Fluidstack",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://fluidstack.io/"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "fly-machines",
+   "isolation": "firecracker",
+   "name": "Fly.io Machines",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://fly.io/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "freestyle",
+   "isolation": "bare-metal-vm",
+   "name": "Freestyle",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.freestyle.sh/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "gcore",
+   "isolation": "vm",
+   "name": "Gcore Cloud / Functions / GPU",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://gcore.com/cloud/virtual-machines"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "gcp-compute-gpu",
+   "isolation": "vm",
+   "name": "Google Compute Engine GPU VMs",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://cloud.google.com/products/compute/pricing/accelerator-optimized"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "gcp-compute",
+   "isolation": "vm",
+   "name": "Google Compute Engine (Linux VMs)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.google.com/products/compute/pricing/general-purpose"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "gcp-windows",
+   "isolation": "vm",
+   "name": "Google Compute Engine (Windows Server)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "gemini-code-execution",
+   "isolation": "container",
+   "name": "Gemini API code execution",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://ai.google.dev/gemini-api/docs/code-execution"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "github-actions",
+   "isolation": "vm",
+   "name": "GitHub Actions hosted runners",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.github.com/en/billing/reference/actions-runner-pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "github-codespaces",
+   "isolation": "vm",
+   "name": "GitHub Codespaces",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "github-copilot-cloud-sandboxes",
+   "isolation": "firecracker",
+   "name": "GitHub Copilot cloud sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "gitlab-runners",
+   "isolation": "vm",
+   "name": "GitLab.com hosted runners",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.gitlab.com/ci/pipelines/compute_minutes/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "gke-agent-sandbox",
+   "isolation": "gvisor",
+   "name": "GKE Agent Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "gologin",
+   "isolation": "container",
+   "name": "Gologin Cloud Browser",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://gologin.com/cloud-browser/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "google-agent-engine",
+   "isolation": "gvisor",
+   "name": "Google Agent Runtime / Agent Engine",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "google-cloud-build",
+   "isolation": "vm",
+   "name": "Google Cloud Build",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.google.com/build/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "google-cloud-run",
+   "isolation": "gvisor",
+   "name": "Google Cloud Run",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.google.com/run/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "google-colab",
+   "isolation": "vm",
+   "name": "Google Colab",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://developers.google.com/colab"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "greenmini",
+   "isolation": "dedicated-host",
+   "name": "Green Mini host",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://portal.greenmini.host/checkout/order"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "h-company",
+   "isolation": null,
+   "name": "H Company / Surfer / H Agents API",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.hcompany.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "halluminate",
+   "isolation": null,
+   "name": "Halluminate",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://halluminate.ai/"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "hatchet-run",
+   "isolation": "container",
+   "name": "Hatchet",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://hatchet.run"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "heroic-labs",
+   "isolation": "dedicated-vm",
+   "name": "Heroic Labs",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "http://heroiclabs.com"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "heroku",
+   "isolation": "container",
+   "name": "Heroku",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.heroku.com/pricing/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "hetzner-cloud",
+   "isolation": "vm",
+   "name": "Hetzner Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "hetzner-dedicated",
+   "isolation": "dedicated-host",
+   "name": "Hetzner Dedicated AX / EX",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.hetzner.com/dedicated-rootserver/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "hetzner-gpu",
+   "isolation": "dedicated-host",
+   "name": "Hetzner GPU servers",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://www.hetzner.com/dedicated-rootserver/matrix-gpu/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "hoplite",
+   "isolation": "gvisor",
+   "name": "Hoplite",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://hoplite.sh"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "hopx",
+   "isolation": "firecracker",
+   "name": "Hopx",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://hopx.ai/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "hostinger-vps",
+   "isolation": "vm",
+   "name": "Hostinger VPS",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.hostinger.com/vps-hosting"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "hostmyapple",
+   "isolation": "vm",
+   "name": "HostMyApple",
+   "shapes_priced": [
+    "agent",
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://hostmyapple.com/mac-vps-hosting"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "huawei-cloud",
+   "isolation": "container",
+   "name": "Huawei Cloud AgentArts",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "hud",
+   "isolation": "vm",
+   "name": "HUD",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://www.hud.ai/"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "huggingface-jobs",
+   "isolation": "container",
+   "name": "Hugging Face Jobs (hf-sandbox backend)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://huggingface.co/docs/hub/en/jobs-pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "humanlayer",
+   "isolation": null,
+   "name": "HumanLayer",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://humanlayer.com"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "hyperbeam",
+   "isolation": null,
+   "name": "Hyperbeam",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://hyperbeam.com/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "hyperbolic",
+   "isolation": "vm",
+   "name": "Hyperbolic",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.hyperbolic.ai/marketplace"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "hyperbrowser",
+   "isolation": "firecracker",
+   "name": "Hyperbrowser",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.hyperbrowser.ai/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "hyperstack",
+   "isolation": "vm",
+   "name": "Hyperstack",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.hyperstack.cloud/gpu-pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "hyrex",
+   "isolation": null,
+   "name": "Hyrex",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.hyrex.io"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "ibm-cloud-vpc",
+   "isolation": "vm",
+   "name": "IBM Cloud VPC",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.ibm.com/products/virtual-servers/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "insforge-instacloud",
+   "isolation": "vm",
+   "name": "InsForge (InstaCloud)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.instacloud.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "instavm",
+   "isolation": "firecracker",
+   "name": "InstaVM",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://instavm.io/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "intuned",
+   "isolation": "vm",
+   "name": "Intuned",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://intunedhq.com/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "ionos",
+   "isolation": "vm",
+   "name": "IONOS Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "isle",
+   "isolation": null,
+   "name": "Isle",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.tryisle.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "islo",
+   "isolation": "vm",
+   "name": "Islo",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://islo.dev/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "isorun",
+   "isolation": "vm",
+   "name": "Isorun",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.isorun.ai/getting-started/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "jamsocket",
+   "isolation": "gvisor",
+   "name": "Jamsocket",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://jamsocket.com"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "jarvislabs",
+   "isolation": "vm",
+   "name": "Jarvislabs",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://jarvislabs.ai/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "kaggle",
+   "isolation": "container",
+   "name": "Kaggle Notebooks",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.kaggle.com/docs/notebooks"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "kakao-cloud",
+   "isolation": "vm",
+   "name": "KakaoCloud Virtual Machine",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.kakaocloud.com/services/virtual-machine/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "kamatera",
+   "isolation": "vm",
+   "name": "Kamatera",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.kamatera.com/pricing/"
+  },
+  {
+   "category": "dev-env",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "kasm-workspaces",
+   "isolation": "container",
+   "name": "Kasm Workspaces",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://kasm.com/community-edition"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "kedge",
+   "isolation": "vm",
+   "name": "Kedge",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://kedge.dev/docs/billing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "kernel",
+   "isolation": "firecracker",
+   "name": "Kernel",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.onkernel.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "koyeb",
+   "isolation": "vm",
+   "name": "Koyeb Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.koyeb.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "kubesail",
+   "isolation": null,
+   "name": "KubeSail",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://kubesail.com"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "lambda",
+   "isolation": "vm",
+   "name": "Lambda",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://lambda.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "langsmith-sandbox",
+   "isolation": "vm",
+   "name": "LangSmith Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.langchain.com/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "lapdev",
+   "isolation": "container",
+   "name": "Lapdev",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://lap.dev/pricing/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "latitude-sh",
+   "isolation": "dedicated-host",
+   "name": "Latitude.sh",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.latitude.sh/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "leap0",
+   "isolation": "firecracker",
+   "name": "Leap0",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://leap0.dev/"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "lightning-ai",
+   "isolation": "vm",
+   "name": "Lightning AI",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://lightning.ai/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "lightpanda",
+   "isolation": "container",
+   "name": "Lightpanda Cloud",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://lightpanda.io/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "limrun",
+   "isolation": "apple-vm",
+   "name": "Limrun",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://lim.run"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "linode",
+   "isolation": "vm",
+   "name": "Akamai Cloud / Linode",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.akamai.com/cloud/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "lizard",
+   "isolation": "container",
+   "name": "Lizard",
+   "shapes_priced": [
+    "agent",
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://lizard.build/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "machine0",
+   "isolation": "vm",
+   "name": "machine0",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://machine0.io/"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "macincloud",
+   "isolation": "vm",
+   "name": "MacinCloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.macincloud.com/pages/dedicated.html"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "macstadium",
+   "isolation": "dedicated-host",
+   "name": "MacStadium",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.macstadium.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "magnitude",
+   "isolation": null,
+   "name": "Magnitude",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://magnitude.dev/"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "manufact",
+   "isolation": "firecracker",
+   "name": "Manufact",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://manufact.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "manus-cloud-computer",
+   "isolation": "vm",
+   "name": "Manus Cloud Computer",
+   "shapes_priced": [
+    "agent",
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://help.manus.im/en/articles/15392078-understanding-cloud-computer-plans-and-billing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "maritime",
+   "isolation": "firecracker",
+   "name": "Maritime",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://maritime.sh/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "mastra",
+   "isolation": "dedicated-vm",
+   "name": "Mastra",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://mastra.ai"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "metorial",
+   "isolation": "container",
+   "name": "Metorial",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://metorial.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "microsandbox",
+   "isolation": "vm",
+   "name": "microsandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://microsandbox.dev/pricing"
+  },
+  {
+   "category": "windows",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "minicor",
+   "isolation": "dedicated-vm",
+   "name": "Minicor",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://minicor.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "minimax",
+   "isolation": null,
+   "name": "MiniMax Agent hosting / developer API scope",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://platform.minimax.io/docs/llms.txt"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "miosa",
+   "isolation": "firecracker",
+   "name": "MIOSA",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://miosa.ai/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "mistral-compute",
+   "isolation": "bare-metal",
+   "name": "Mistral Compute / AI Cloud",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://mistral.ai/products/aicloud/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "modal",
+   "isolation": "gvisor",
+   "name": "Modal",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://modal.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "modelence",
+   "isolation": "container",
+   "name": "Modelence",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://modelence.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "moonshot-kimi",
+   "isolation": null,
+   "name": "Moonshot Kimi Hosted Agents sandbox",
+   "shapes_priced": [
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://platform.kimi.com/docs/pricing/hosted-agents.md"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "morph-cloud",
+   "isolation": "vm",
+   "name": "Morph Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.morph.so/web/subscribe"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "mosaic",
+   "isolation": "firecracker",
+   "name": "Mosaic Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://sandbox.mosaicos.com/"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "namespace",
+   "isolation": "vm",
+   "name": "Namespace",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://namespace.so/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "naver-cloud",
+   "isolation": "vm",
+   "name": "NAVER Cloud / LINE-NAVER scope",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.ncloud.com/product/compute/server"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "nebius-contree",
+   "isolation": "vm",
+   "name": "Nebius ConTree (Token Factory Sandboxes)",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://tokenfactory.nebius.com/sandboxes/about"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "nebius",
+   "isolation": "vm",
+   "name": "Nebius",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.nebius.com/compute/resources/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "netcup",
+   "isolation": "vm",
+   "name": "netcup VPS",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.netcup.com/en/server/vps"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "nextmv",
+   "isolation": "container",
+   "name": "Nextmv",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://nextmv.io"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "nodus-compute",
+   "isolation": null,
+   "name": "Nodus Compute",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.nodus-compute.ai/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "northflank",
+   "isolation": "vm",
+   "name": "Northflank Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://northflank.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "notte",
+   "isolation": "container",
+   "name": "Notte",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.notte.cc/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "novita",
+   "isolation": "firecracker",
+   "name": "Novita AI Agent Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.novita.ai/guides/sandbox-pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "oakhost",
+   "isolation": "dedicated-host",
+   "name": "OakHost",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.oakhost.com/mac-mini-hosting"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "okteto",
+   "isolation": "container",
+   "name": "Okteto",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://okteto.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "omnara",
+   "isolation": null,
+   "name": "Omnara",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.omnara.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "omnirun",
+   "isolation": "firecracker",
+   "name": "OmniRun",
+   "shapes_priced": [
+    "tiny"
+   ],
+   "status": "ranked-partial",
+   "url": "https://omnirun.io/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "ona",
+   "isolation": "vm",
+   "name": "Ona (formerly Gitpod)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://ona.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "onecli",
+   "isolation": "vm",
+   "name": "OneCLI",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://onecli.sh"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "open-telekom-cloud",
+   "isolation": "vm",
+   "name": "Open Telekom Cloud / T Cloud Public",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.open-telekom-cloud.com/en/prices"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "openagi",
+   "isolation": null,
+   "name": "OpenAGI / Lux",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://developer.agiopen.org/docs/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "openai-containers",
+   "isolation": "vm",
+   "name": "OpenAI Containers (Code Interpreter / Hosted Shell)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://developers.openai.com/api/docs/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "opencomputer",
+   "isolation": "vm",
+   "name": "OpenComputer",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://opencomputer.dev/sandboxes"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "openhands-runtime",
+   "isolation": "container",
+   "name": "OpenHands Remote Sandbox / Cloud",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://docs.openhands.dev/openhands/usage/sandboxes/remote"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "openpond",
+   "isolation": "firecracker",
+   "name": "OpenPond Cloud Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://openpond.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "openreward",
+   "isolation": "container",
+   "name": "OpenReward Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://openreward.ai/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "openshift",
+   "isolation": "container",
+   "name": "Red Hat OpenShift (Harbor backend)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "opensteer",
+   "isolation": null,
+   "name": "Opensteer",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://opensteer.com/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "oracle-cloud",
+   "isolation": "vm",
+   "name": "Oracle Cloud Infrastructure",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.oracle.com/cloud/compute/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "orgo",
+   "isolation": "vm",
+   "name": "Orgo",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.orgo.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "orkestr",
+   "isolation": "vm",
+   "name": "orkestr Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://orkestr.eu/sandboxes"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "a rate exists but no shape in this catalogue matched it",
+   "id": "ovh-gpu",
+   "isolation": "vm",
+   "name": "OVHcloud GPU instances",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.ovhcloud.com/en/public-cloud/prices/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "ovhcloud",
+   "isolation": "vm",
+   "name": "OVHcloud Public Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://us.ovhcloud.com/public-cloud/prices/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "pandastack",
+   "isolation": "firecracker",
+   "name": "PandaStack",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.pandastack.ai/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "paperpod",
+   "isolation": "container",
+   "name": "PaperPod",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.paperpod.dev/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "paperspace",
+   "isolation": "vm",
+   "name": "Paperspace",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.digitalocean.com/products/paperspace/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "party",
+   "isolation": "container",
+   "name": "Party",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://party.build"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "pipekit",
+   "isolation": "container",
+   "name": "Pipekit",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://pipekit.io/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "pipeshift",
+   "isolation": "dedicated-vm",
+   "name": "Pipeshift",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://pipeshift.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "playgent",
+   "isolation": null,
+   "name": "Playgent",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://useplaygent.com"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "ploomber",
+   "isolation": null,
+   "name": "Ploomber",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://ploomber.io/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "poplarml",
+   "isolation": null,
+   "name": "PoplarML",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "http://poplarml.com"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "porter",
+   "isolation": "container",
+   "name": "Porter",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://porter.run"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "ppio-sandbox",
+   "isolation": "firecracker",
+   "name": "PPIO Agent Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://ppio.com/docs/sandbox/pricing.md"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "prime-intellect",
+   "isolation": "vm",
+   "name": "Prime Intellect Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.primeintellect.ai/sandboxes"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "prized",
+   "isolation": "vm",
+   "name": "Prized",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://prized.dev/docs/billing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "railway",
+   "isolation": "vm",
+   "name": "Railway",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://railway.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "reflex",
+   "isolation": "container",
+   "name": "Reflex",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://reflex.dev/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "refresh",
+   "isolation": null,
+   "name": "Refresh",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.refresh.dev"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "release",
+   "isolation": "container",
+   "name": "Release",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://release.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "remote-browser",
+   "isolation": "container",
+   "name": "Remote Browser",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://remote-browser.dev/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "render",
+   "isolation": "container",
+   "name": "Render",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://render.com/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "rentamac",
+   "isolation": "dedicated-host",
+   "name": "RentaMac (rentamac.io)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://rentamac.io/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "replicas",
+   "isolation": "vm",
+   "name": "Replicas",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://replicas.dev"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "replicate",
+   "isolation": "container",
+   "name": "Replicate",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://replicate.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "replit",
+   "isolation": "vm",
+   "name": "Replit",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.replit.com/billing/deployment-pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "rescale",
+   "isolation": "dedicated-vm",
+   "name": "Rescale",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://rescale.com"
+  },
+  {
+   "category": "macos",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "revyl",
+   "isolation": "container",
+   "name": "Revyl",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.revyl.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "rivet",
+   "isolation": null,
+   "name": "Rivet (Actors & agentOS)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://rivet.dev/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "a rate exists but no shape in this catalogue matched it",
+   "id": "riza",
+   "isolation": "isolate",
+   "name": "Riza Code Interpreter",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://riza.io/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "run-cloud",
+   "isolation": "firecracker",
+   "name": "Run Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.run.cloud/sandboxes/index.md"
+  },
+  {
+   "category": "inference-api",
+   "detail": null,
+   "id": "runanywhere",
+   "isolation": null,
+   "name": "RunAnywhere",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.runanywhere.ai/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "runkit",
+   "isolation": null,
+   "name": "RunKit",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://runkit.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "runloop",
+   "isolation": "vm",
+   "name": "Runloop",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.runloop.ai/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "runpod",
+   "isolation": "container",
+   "name": "Runpod",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.runpod.io/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "runs-on",
+   "isolation": "vm",
+   "name": "RunsOn",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://runs-on.com/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "runta",
+   "isolation": "vm",
+   "name": "Runta",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://runta.com/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "sail",
+   "isolation": "firecracker",
+   "name": "Sail Research (Sailboxes)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.sailresearch.com/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "sakura-cloud",
+   "isolation": "vm",
+   "name": "Sakura Internet Cloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.sakura.ad.jp/products/server/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "samsung-cloud",
+   "isolation": "vm",
+   "name": "Samsung SDS Cloud Platform",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.samsungsds.com/serviceportal/pricing.html"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "sandbox-as-a-service",
+   "isolation": "vm",
+   "name": "Sandbox as a Service",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://sandbox-as-a-service.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "sandbox0",
+   "isolation": "gvisor",
+   "name": "Sandbox0",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://sandbox0.ai/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "scaleway-apple-silicon",
+   "isolation": "dedicated-host",
+   "name": "Scaleway Apple silicon (Mac mini)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.scaleway.com/en/pricing/apple-silicon/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "scaleway-gpu",
+   "isolation": "vm",
+   "name": "Scaleway GPU instances",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.scaleway.com/en/pricing/gpu/"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "scaleway",
+   "isolation": "vm",
+   "name": "Scaleway Instances",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.scaleway.com/en/pricing/virtual-instances/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "scitix-agent-sandbox",
+   "isolation": "container",
+   "name": "ScitiX Agent Sandbox",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://scitix.github.io/Agent-Sandbox/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "scrapeless",
+   "isolation": null,
+   "name": "Scrapeless Agent Browser",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.scrapeless.com/en/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "scrapfly",
+   "isolation": null,
+   "name": "Scrapfly Cloud Browser",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://scrapfly.io/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "scrapingbee",
+   "isolation": null,
+   "name": "Scraping Bee",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.scrapingbee.com/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "seacloudai",
+   "isolation": "container",
+   "name": "SeaCloudAI Sandbox",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://sandbox-gateway.cloud.seaart.ai"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "sealos-devbox",
+   "isolation": "container",
+   "name": "Sealos DevBox",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://sealos.io/pricing/"
+  },
+  {
+   "category": "self-host",
+   "detail": null,
+   "id": "self-host-baremetal",
+   "isolation": "firecracker",
+   "name": "Self-hosted bare-metal sandbox fleet (hardware floor)",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.hetzner.com/dedicated-rootserver/ax42/"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "server4agent",
+   "isolation": "container",
+   "name": "Server4Agent",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.server4agent.com/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "sf-tensor",
+   "isolation": "gvisor",
+   "name": "SF Tensor",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://sf-tensor.com"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "sfcompute",
+   "isolation": "vm",
+   "name": "SF Compute (GPU market + Autoresearch sandboxes)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://autoresearch.sfcompute.com/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "a rate exists but no shape in this catalogue matched it",
+   "id": "shadeform",
+   "isolation": "dedicated-vm",
+   "name": "Shadeform",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.shadeform.ai/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "shardflux",
+   "isolation": "firecracker",
+   "name": "Shardflux",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://shardflux.dev/#pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "shellbox",
+   "isolation": "firecracker",
+   "name": "shellbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://shellbox.dev/"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "shuttle",
+   "isolation": null,
+   "name": "Shuttle",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.shuttle.dev"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "sieve",
+   "isolation": null,
+   "name": "Sieve",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://sievedata.com/"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "signadot",
+   "isolation": "container",
+   "name": "Signadot",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.signadot.com/"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "skyhook",
+   "isolation": "container",
+   "name": "Skyhook",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://skyhook.io"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "skyvern",
+   "isolation": "container",
+   "name": "Skyvern",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.skyvern.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "smol-machines",
+   "isolation": "vm",
+   "name": "smol machines",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://smolmachines.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "smooth",
+   "isolation": null,
+   "name": "Smooth",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.smooth.sh/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "solari",
+   "isolation": "vm",
+   "name": "Solari",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.getsolari.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "specific",
+   "isolation": "container",
+   "name": "Specific",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://specific.dev/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "sprites",
+   "isolation": "firecracker",
+   "name": "Sprites (Fly.io)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://fly.io/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "stackit",
+   "isolation": "vm",
+   "name": "STACKIT Compute Engine",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://pim.api.stackit.cloud/v1/skus"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "starsling",
+   "isolation": "firecracker",
+   "name": "StarSling",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://starsling.dev/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "stateset",
+   "isolation": "gvisor",
+   "name": "StateSet Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://sandbox.stateset.app/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "steel",
+   "isolation": "container",
+   "name": "Steel.dev",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://docs.steel.dev/overview/pricinglimits"
+  },
+  {
+   "category": "finops",
+   "detail": null,
+   "id": "strong-compute",
+   "isolation": "container",
+   "name": "Strong Compute",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://strongcompute.com"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "superserve",
+   "isolation": "firecracker",
+   "name": "Superserve",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://superserve.ai/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "surfsky",
+   "isolation": "container",
+   "name": "Surfsky",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://surfsky.io/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "tabstack",
+   "isolation": null,
+   "name": "Tabstack",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://tabstack.ai/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "tama",
+   "isolation": "vm",
+   "name": "tama",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://tama.computer/"
+  },
+  {
+   "category": "macos",
+   "detail": "a rate exists but no shape in this catalogue matched it",
+   "id": "tart-orchard",
+   "isolation": "apple-vm",
+   "name": "Tart + Orchard (Cirrus Labs)",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://tart.run/licensing/"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "teclada",
+   "isolation": null,
+   "name": "Teclada",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.teclada.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "tencent-agent-runtime",
+   "isolation": null,
+   "name": "Tencent Cloud Agent Runtime \u2014 Agent Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.tencent.com/document/product/1814/133249"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "tencent-cloud-studio",
+   "isolation": "container",
+   "name": "Tencent Cloud Studio",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.tencent.cn/document/product/1039/131894"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "tencent-cubesandbox",
+   "isolation": "vm",
+   "name": "Tencent Cloud CubeSandbox",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://github.com/TencentCloud/CubeSandbox"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "tencent-scf",
+   "isolation": "container",
+   "name": "Tencent Cloud SCF",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.tencent.com/document/product/583/17299"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "tenki",
+   "isolation": "vm",
+   "name": "Tenki Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://tenki.cloud/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "tensordock",
+   "isolation": "vm",
+   "name": "TensorDock",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.tensordock.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "tensorlake",
+   "isolation": "firecracker",
+   "name": "Tensorlake Sandboxes",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.tensorlake.ai/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "tensorpool",
+   "isolation": null,
+   "name": "TensorPool",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://tensorpool.dev"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "texel-ai",
+   "isolation": null,
+   "name": "Texel.ai",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://texel.ai"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "thunder-compute",
+   "isolation": "container",
+   "name": "Thunder Compute",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.thundercompute.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "tilde-run",
+   "isolation": "container",
+   "name": "Tilde.run (discontinued)",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://lakefs.io/blog/we-recently-shut-down-tilde-run/"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "tilion",
+   "isolation": null,
+   "name": "Tilion",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://tilion.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "tinfoil",
+   "isolation": "vm",
+   "name": "Tinfoil",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://tinfoil.sh"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "tinyfish",
+   "isolation": null,
+   "name": "TinyFish",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.tinyfish.ai/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "together-code-sandbox",
+   "isolation": "firecracker",
+   "name": "Together Code Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.together.ai/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "together-gpu",
+   "isolation": "container",
+   "name": "Together AI",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.together.ai/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "trainy",
+   "isolation": "container",
+   "name": "Trainy",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://trainy.ai/"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "trigger-dev",
+   "isolation": "container",
+   "name": "Trigger.dev",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://trigger.dev/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "ubicloud",
+   "isolation": "vm",
+   "name": "Ubicloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.ubicloud.com/docs/about/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "ucloud",
+   "isolation": "firecracker",
+   "name": "UCloud Agent Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://astraflow.ucloud.cn/docs/agent-sandbox"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "unikraft-cloud",
+   "isolation": "firecracker",
+   "name": "Unikraft Cloud",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://unikraft.com/pricing"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "upcloud",
+   "isolation": "vm",
+   "name": "UpCloud",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://upcloud.com/pricing/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "upstash-box",
+   "isolation": "container",
+   "name": "Upstash Box",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://upstash.com/pricing/box"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "use-computer",
+   "isolation": "apple-vm",
+   "name": "use.computer",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://use.computer/"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "vast-ai",
+   "isolation": "container",
+   "name": "Vast.ai",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://github.com/vast-ai/docs/blob/main/guides/pricing.mdx"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "vercel-sandbox",
+   "isolation": "firecracker",
+   "name": "Vercel Sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://vercel.com/docs/sandbox/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "verda",
+   "isolation": "vm",
+   "name": "Verda (formerly DataCrunch)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://verda.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "vertex-computer-use",
+   "isolation": "container",
+   "name": "Google Agent Platform Sandbox (Code Execution / Shell / Computer Use)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "vibrant-labs",
+   "isolation": null,
+   "name": "Vibrant Labs",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://vibrantlabs.com/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "volcengine-agentkit",
+   "isolation": "vm",
+   "name": "Volcano Engine AgentKit / veFaaS sandbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "voltage-park",
+   "isolation": "vm",
+   "name": "Voltage Park",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://www.voltagepark.com/pricing"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": null,
+   "id": "vultr-gpu",
+   "isolation": "vm",
+   "name": "Vultr Cloud GPU",
+   "shapes_priced": [],
+   "status": "gpu-only",
+   "url": "https://api.vultr.com/v2/plans?type=vcg"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "vultr-windows",
+   "isolation": "vm",
+   "name": "Vultr Cloud Compute (Windows Server)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://docs.vultr.com/support/platform/billing/is-a-windows-license-included-in-the-monthly-price"
+  },
+  {
+   "category": "hyperscaler",
+   "detail": null,
+   "id": "vultr",
+   "isolation": "vm",
+   "name": "Vultr Cloud Compute",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.vultr.com/pricing/"
+  },
+  {
+   "category": "macos",
+   "detail": null,
+   "id": "warpbuild",
+   "isolation": "vm",
+   "name": "WarpBuild (GitHub Actions runners)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.warpbuild.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "wasmer",
+   "isolation": "isolate",
+   "name": "Wasmer",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://wasmer.io/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "webapp-io",
+   "isolation": null,
+   "name": "webapp.io",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://webapp.io"
+  },
+  {
+   "category": "dev-env",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "webcontainers",
+   "isolation": "v8-isolate",
+   "name": "StackBlitz WebContainers",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://stackblitz.com/pricing"
+  },
+  {
+   "category": "paas",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "windmill",
+   "isolation": "container",
+   "name": "Windmill",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://www.windmill.dev/pricing"
+  },
+  {
+   "category": "windows",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "windows-365-agents",
+   "isolation": "vm",
+   "name": "Windows 365 for Agents",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://learn.microsoft.com/en-us/windows-365/agents/pricing-paygo-always-available"
+  },
+  {
+   "category": "windows",
+   "detail": null,
+   "id": "windows-365",
+   "isolation": "vm",
+   "name": "Windows 365 Cloud PC (Business / Enterprise)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.microsoft.com/en-us/windows-365/business/compare-plans-pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "withruntime",
+   "isolation": "firecracker",
+   "name": "Runtime (withruntime.com)",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://withruntime.com/pricing"
+  },
+  {
+   "category": "macos",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "xcode-cloud",
+   "isolation": "apple-vm",
+   "name": "Apple Xcode Cloud",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://developer.apple.com/xcode-cloud/"
+  },
+  {
+   "category": "paas",
+   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "id": "yepcode",
+   "isolation": "firecracker",
+   "name": "YepCode Run",
+   "shapes_priced": [],
+   "status": "too-big",
+   "url": "https://yepcode.io/pricing/"
+  },
+  {
+   "category": "paas",
+   "detail": null,
+   "id": "zeabur",
+   "isolation": "container",
+   "name": "Zeabur",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://zeabur.com/pricing"
+  },
+  {
+   "category": "browser",
+   "detail": null,
+   "id": "zenrows",
+   "isolation": "container",
+   "name": "Zenrows Browser Sessions",
+   "shapes_priced": [],
+   "status": "off-category",
+   "url": "https://www.zenrows.com/pricing"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "zhipu",
+   "isolation": null,
+   "name": "Zhipu Z Managed Agents",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://docs.bigmodel.cn/cn/managed-agents/overview.md"
+  },
+  {
+   "category": "gpu-cloud",
+   "detail": "modes exist but publish neither a size table nor a per-resource rate",
+   "id": "zibra-labs",
+   "isolation": null,
+   "name": "Zibra Labs",
+   "shapes_priced": [],
+   "status": "no-rate",
+   "url": "https://zibralabs.ai/"
+  },
+  {
+   "category": "agent-sandbox",
+   "detail": null,
+   "id": "zipbox",
+   "isolation": "firecracker",
+   "name": "zipbox",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://zipbox.ai/pricing"
+  },
+  {
+   "category": "dev-env",
+   "detail": null,
+   "id": "zo-computer",
+   "isolation": "container",
+   "name": "Zo Computer",
+   "shapes_priced": [
+    "agent",
+    "devbox",
+    "tiny"
+   ],
+   "status": "ranked",
+   "url": "https://www.zo.computer/pricing"
+  }
+ ],
+ "reasons": {
+  "gpu-only": "GPU-only provider: every mode sells a GPU, and no CPU rate is published. Priced separately as a GPU workload, not dropped.",
+  "no-rate": "Publishes modes but no hourly rate and no size table. Nothing is published to price. Spot-checked first-party on 2026-10-02: ainclave.com/pricing, bytebot.ai and butter.dev each return a page with ZERO dollar figures and steer to contact or enterprise, so this is the vendor's choice and not a gap in the corpus. The remaining 83 carry the corpus's finding at its commit and were not re-fetched.",
+  "off-category": "Browser, scraping or non-compute product: sells minutes of a remote browser or a SaaS, not machines. Surveyed for free credit, excluded from ranking.",
+  "ranked": "Ranked in table C.",
+  "ranked-partial": "Ranked for some shapes only.",
+  "too-big": "Publishes rates, but no published size meets the smallest shape priced here (1 vCPU / 1 GiB). It is a larger machine than this catalogue covers, not an unpriced one.",
+  "unreadable": "Card could not be parsed."
+ },
+ "total": 366
+}

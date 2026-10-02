@@ -245,6 +245,39 @@ def main():
                 A("_%d more at this duty cycle; the full rank is table C._" % (len(paid) - 25))
             A("")
 
+    # ---------------- Table B2: GPU ----------------
+    gpu = [p for p in providers if p.get("gpu_only")]
+    if gpu:
+        A("---")
+        A("")
+        A("## B2. GPU providers — priced per GPU-hour")
+        A("")
+        A("A GPU box is billed per GPU-hour, not per vCPU. Ranking one beside a CPU "
+          "box compares two currencies, so these get their own table. Revision 2 "
+          "dropped all of them silently; there are %d." % len(gpu))
+        A("")
+        A("Cheapest published model per provider, with the hour/day/week/month cost "
+          "of holding ONE of that GPU:")
+        A("")
+        A("| # | provider | cheapest GPU | $/GPU-hour | $/day | $/week | $/month | spot? | link |")
+        A("|---|---|---|---|---|---|---|---|---|")
+        grows = []
+        for p in gpu:
+            name, info = min(p["gpu_tiers"].items(), key=lambda kv: kv[1]["hour"])
+            h = info["hour"]
+            grows.append((h, p, name, info))
+        grows.sort(key=lambda x: x[0])
+        for i, (h, p, name, info) in enumerate(grows, 1):
+            A("| %d | %s | %s | %.2f | %.2f | %.2f | %.2f | %s | `%s` |" % (
+                i, link(p["name"] or p["id"], p.get("url")), name, h,
+                h * 1, h * 7, h * 30, "yes" if info["spot"] else "no", p["id"]))
+        A("")
+        A("The full per-model price list for each provider is in "
+          "`data/period-model.json` under `gpu_tiers`. Spot prices are interruptible: "
+          "the machine can be reclaimed. Every row here is a published rate, none "
+          "is a negotiated price.")
+        A("")
+
     # ---------------- Table C: full rank ----------------
     A("---")
     A("")
@@ -278,26 +311,101 @@ def main():
             ("$%g" % floor) if floor else "-", "`%s`" % p["id"]))
     A("")
 
-    # ---------------- Table D: no price ----------------
+    # ---------------- Table D: the ledger ----------------
     A("---")
     A("")
-    A("## D. What could not be priced, and why")
+    A("## D. Every card accounted for")
     A("")
-    A("A missing row is a result. This is what would have to become true for each "
-      "excluded card to get a price.")
+    A("A missing row is a result. This is what happened to all "
+      "%d cards in the corpus, so a deliberate exclusion cannot be mistaken for "
+      "an oversight." % (len(providers) + 41))
     A("")
-    noshape = [p for p in providers if not p.get("shapes")]
-    if noshape:
-        A("%d cards published no rate or size for any shape." % len(noshape))
+
+    ledger_path = os.path.join(root, "data", "exclusion-ledger.json")
+    ledger = None
+    if os.path.exists(ledger_path):
+        with open(ledger_path, encoding="utf-8") as fh:
+            ledger = json.load(fh)
+
+    if ledger:
+        A("Produced by `experiments/90-exclusion-ledger.py` at corpus commit `%s`."
+          % ledger["card_commit"])
         A("")
-        A("| provider | category | link |")
+        A("| status | cards | what it means |")
         A("|---|---|---|")
-        for p in noshape:
-            A("| %s | %s | `%s` |" % (link(p["name"] or p["id"], p.get("url")),
-                                     p.get("category") or "-", p["id"]))
+        for st in ("ranked", "ranked-partial", "gpu-only", "too-big", "no-rate",
+                   "off-category"):
+            if ledger["counts"].get(st):
+                A("| `%s` | %d | %s |" % (st, ledger["counts"][st],
+                                           ledger["reasons"].get(st, "")))
+        A("| **total** | **%d** | must equal the corpus card count |" % ledger["total"])
+        A("")
+
+        A("### Where it breaks down by category")
+        A("")
+        A("| category | total | ranked | partial | gpu-only | too big | no price | off-category |")
+        A("|---|---|---|---|---|---|---|---|")
+        cats = {}
+        for x in ledger["ledger"]:
+            c = cats.setdefault(x["category"], {})
+            c[x["status"]] = c.get(x["status"], 0) + 1
+        for cat in sorted(cats, key=lambda c: -sum(cats[c].values())):
+            c = cats[cat]
+            A("| %s | %d | %d | %d | %d | %d | %d | %d |" % (
+                cat, sum(c.values()), c.get("ranked", 0), c.get("ranked-partial", 0),
+                c.get("gpu-only", 0), c.get("too-big", 0), c.get("no-rate", 0),
+                c.get("off-category", 0)))
+        A("")
+
+        norate = [x for x in ledger["ledger"] if x["status"] == "no-rate"]
+        if norate:
+            A("### The %d that publish no price at all" % len(norate))
+            A("")
+            A("This is the largest group of providers not in the ranking, so it is "
+              "named rather than summarised. They are absent because nothing is "
+              "published to price, not because the model refused them. Spot-checked "
+              "first-party on 2026-10-02: `ainclave.com/pricing`, `bytebot.ai` and "
+              "`butter.dev` each return a page with **zero dollar figures** and route "
+              "to contact or enterprise. The rest carry the corpus's finding at its "
+              "commit and were not re-fetched.")
+            A("")
+            A("| provider | category | what the card says | link |")
+            A("|---|---|---|---|")
+            for x in norate:
+                A("| %s | %s | %s | `%s` |" % (
+                    link(x["name"] or x["id"], x.get("url")), x["category"],
+                    (x["detail"] or "")[:70], x["id"]))
+            A("")
+
+        toobig = [x for x in ledger["ledger"] if x["status"] == "too-big"]
+        if toobig:
+            A("### The %d priced, but only for larger machines" % len(toobig))
+            A("")
+            A("| provider | category | link |")
+            A("|---|---|---|")
+            for x in toobig:
+                A("| %s | %s | `%s` |" % (link(x["name"] or x["id"], x.get("url")),
+                                           x["category"], x["id"]))
+            A("")
+
+        offcat = [x for x in ledger["ledger"] if x["status"] == "off-category"]
+        if offcat:
+            A("### The %d off-category products" % len(offcat))
+            A("")
+            A("Browser, scraping and non-compute products. They sell minutes of a "
+              "remote browser or a SaaS, not machines, so ranking them beside a VM "
+              "provider compares two purchases. They are still surveyed for free "
+              "credit in tables A1 and A2.")
+            A("")
+            A("| provider | category | link |")
+            A("|---|---|---|")
+            for x in offcat:
+                A("| %s | %s | `%s` |" % (link(x["name"] or x["id"], x.get("url")),
+                                           x["category"], x["id"]))
+            A("")
     else:
-        A("None: every card in the corpus published at least one shape.")
-    A("")
+        A("_Run `experiments/90-exclusion-ledger.py` to generate this section._")
+        A("")
 
     dest = os.path.join(root, "docs", "CATALOGUE.md")
     with open(dest, "w", encoding="utf-8") as fh:
@@ -307,7 +415,10 @@ def main():
     print("  A2 one-time credit  : %d" % len([p for p in credited if p.get("free_one_time_credit")]))
     print("  A3 $0 tier, unknown : %d" % len(zerounknown))
     print("  C  ranked           : %d providers" % len(ranked))
-    print("  D  no price         : %d cards" % len(noshape))
+    if ledger:
+        print("  D  ledger           : %d cards, all accounted for" % ledger["total"])
+        for st, n in sorted(ledger["counts"].items()):
+            print("       %-14s %d" % (st, n))
     return 0
 
 

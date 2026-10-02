@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T02:13:20Z",
+ "at": "2026-10-02T02:18:05Z",
  "card_commit": "f6a71ab09fef",
  "duty_cycles_h_per_day": [
   1,
@@ -4475,6 +4475,63 @@
    },
    "surcharge_floor": null,
    "url": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A10": {
+     "hour": 3.2,
+     "mode": "on-demand-nv36ads-a10-v5",
+     "spot": false
+    },
+    "A100-80GB": {
+     "hour": 0.67877,
+     "mode": "spot-standard-nc24ads-a100-v4-4",
+     "spot": true
+    },
+    "H100": {
+     "hour": 2.27119,
+     "mode": "spot-standard-nd96isr-h100-v5-9",
+     "spot": true
+    },
+    "H100-NVL": {
+     "hour": 1.289904,
+     "mode": "spot-nc40ads-h100-v5",
+     "spot": true
+    },
+    "H200": {
+     "hour": 10.6,
+     "mode": "on-demand-nd96isr-h200-v5",
+     "spot": false
+    },
+    "MI300X": {
+     "hour": 6.0,
+     "mode": "on-demand-nd96isr-mi300x-v5",
+     "spot": false
+    },
+    "RTX-PRO-6000": {
+     "hour": 5.5,
+     "mode": "on-demand-nc144lds-xl-rtxpro6000-v6",
+     "spot": false
+    },
+    "T4": {
+     "hour": 0.149174,
+     "mode": "spot-standard-nc4as-t4-v3-13",
+     "spot": true
+    }
+   },
+   "has_free_tier": false,
+   "id": "azure-gpu",
+   "isolation": "vm",
+   "name": "Microsoft Azure GPU VMs",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://prices.azure.com/api/retail/prices",
    "usage_credit_floor": null
   },
   {
@@ -9991,6 +10048,68 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A100": {
+     "hour": 4.104,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "A100-80GB": {
+     "hour": 6.1488,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "A10G": {
+     "hour": 1.2132,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "B200": {
+     "hour": 9.3744,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "H100": {
+     "hour": 8.4168,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "H200": {
+     "hour": 6.8112,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "L4": {
+     "hour": 1.152,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "L40S": {
+     "hour": 2.1456,
+     "mode": "serverless-gpu",
+     "spot": false
+    },
+    "T4": {
+     "hour": 0.648,
+     "mode": "serverless-gpu",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "comfy-deploy",
+   "isolation": null,
+   "name": "Comfy Deploy",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://app.comfydeploy.com/pricing",
+   "usage_credit_floor": null
+  },
+  {
    "category": "hyperscaler",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -10186,6 +10305,73 @@
    },
    "surcharge_floor": null,
    "url": "https://contabo.com/en-us/pricing/",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A100-80GB": {
+     "hour": 1.20625,
+     "mode": "spot-a100-us",
+     "spot": true
+    },
+    "B200": {
+     "hour": 4.26375,
+     "mode": "spot-b200-9",
+     "spot": true
+    },
+    "B300": {
+     "hour": 4.48,
+     "mode": "spot-b300-8",
+     "spot": true
+    },
+    "GB200": {
+     "hour": 10.5,
+     "mode": "on-demand-gb200-nvl72",
+     "spot": false
+    },
+    "GH200": {
+     "hour": 6.5,
+     "mode": "on-demand-gh200-7",
+     "spot": false
+    },
+    "H100": {
+     "hour": 2.46375,
+     "mode": "spot-h100-10",
+     "spot": true
+    },
+    "H200": {
+     "hour": 2.61625,
+     "mode": "spot-h200-11",
+     "spot": true
+    },
+    "L40": {
+     "hour": 0.78375,
+     "mode": "spot-l40-us",
+     "spot": true
+    },
+    "L40S": {
+     "hour": 0.985,
+     "mode": "spot-l40s-us",
+     "spot": true
+    },
+    "RTX-PRO-6000": {
+     "hour": 1.38625,
+     "mode": "spot-rtx-pro-6000-12",
+     "spot": true
+    }
+   },
+   "has_free_tier": false,
+   "id": "coreweave",
+   "isolation": "container",
+   "name": "CoreWeave",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.coreweave.com/pricing",
    "usage_credit_floor": null
   },
   {
@@ -12457,6 +12643,73 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "B300": {
+     "hour": 8.0,
+     "mode": "spot-b300-17",
+     "spot": true
+    },
+    "H100": {
+     "hour": 4.41,
+     "mode": "on-demand-h100-6",
+     "spot": false
+    },
+    "H200": {
+     "hour": 4.47,
+     "mode": "on-demand-h200-4",
+     "spot": false
+    },
+    "L40S": {
+     "hour": 1.57,
+     "mode": "on-demand-l40s-10",
+     "spot": false
+    },
+    "MI300X": {
+     "hour": 2.59,
+     "mode": "on-demand-mi300x-2",
+     "spot": false
+    },
+    "MI325X": {
+     "hour": 3.8,
+     "mode": "on-demand-mi325x-0",
+     "spot": false
+    },
+    "MI350X": {
+     "hour": 2.46,
+     "mode": "spot-mi350x-19",
+     "spot": true
+    },
+    "MI355X": {
+     "hour": 2.97,
+     "mode": "spot-mi355x-18",
+     "spot": true
+    },
+    "RTX-4000-Ada": {
+     "hour": 0.76,
+     "mode": "on-demand-rtx-4000-ada-8",
+     "spot": false
+    },
+    "RTX-6000-Ada": {
+     "hour": 1.57,
+     "mode": "on-demand-rtx-6000-ada-9",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "digitalocean-gpu",
+   "isolation": "vm",
+   "name": "DigitalOcean GPU Droplets",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.digitalocean.com/pricing/gpu-droplets",
+   "usage_credit_floor": null
+  },
+  {
    "category": "hyperscaler",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -14041,6 +14294,53 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "B200": {
+     "hour": 6.25,
+     "mode": "serverless-b200-2",
+     "spot": false
+    },
+    "B300": {
+     "hour": 8.5,
+     "mode": "serverless-b300-0",
+     "spot": false
+    },
+    "GB200": {
+     "hour": 9.99,
+     "mode": "serverless-gb200",
+     "spot": false
+    },
+    "H100": {
+     "hour": 4.5,
+     "mode": "serverless-h100-6",
+     "spot": false
+    },
+    "H200": {
+     "hour": 4.5,
+     "mode": "serverless-h200-4",
+     "spot": false
+    },
+    "RTX-PRO-6000": {
+     "hour": 2.99,
+     "mode": "serverless-rtx-pro-6000-8",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "fal",
+   "isolation": "container",
+   "name": "fal",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://fal.ai/pricing",
+   "usage_credit_floor": null
+  },
+  {
    "category": "macos",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -14836,6 +15136,53 @@
    },
    "surcharge_floor": null,
    "url": "https://gcore.com/cloud/virtual-machines",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A100-40GB": {
+     "hour": 2.20401,
+     "mode": "spot-a2-highgpu-1g-6",
+     "spot": true
+    },
+    "A100-80GB": {
+     "hour": 3.041237534,
+     "mode": "spot-a2-ultragpu-1g-7",
+     "spot": true
+    },
+    "B200": {
+     "hour": 4.9542,
+     "mode": "spot-a4-highgpu-8g-9",
+     "spot": true
+    },
+    "H100": {
+     "hour": 6.620287,
+     "mode": "spot-a3-highgpu-1g",
+     "spot": true
+    },
+    "H200": {
+     "hour": 10.600864,
+     "mode": "on-demand-a3-ultragpu-8g-4",
+     "spot": false
+    },
+    "L4": {
+     "hour": 0.424056,
+     "mode": "spot-g2-standard-4-10",
+     "spot": true
+    }
+   },
+   "has_free_tier": false,
+   "id": "gcp-compute-gpu",
+   "isolation": "vm",
+   "name": "Google Compute Engine GPU VMs",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://cloud.google.com/products/compute/pricing/accelerator-optimized",
    "usage_credit_floor": null
   },
   {
@@ -18816,6 +19163,38 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "B200": {
+     "hour": 5.99,
+     "mode": "on-demand-b200-2",
+     "spot": false
+    },
+    "H100-SXM": {
+     "hour": 3.19,
+     "mode": "on-demand-h100-sxm-0",
+     "spot": false
+    },
+    "H200": {
+     "hour": 3.99,
+     "mode": "on-demand-h200-1",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "hyperbolic",
+   "isolation": "vm",
+   "name": "Hyperbolic",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.hyperbolic.ai/marketplace",
+   "usage_credit_floor": null
+  },
+  {
    "category": "browser",
    "entry_fee": null,
    "free_monthly_credit": 0,
@@ -21224,6 +21603,68 @@
    },
    "surcharge_floor": 29,
    "url": "https://www.koyeb.com/pricing",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A10": {
+     "hour": 1.29,
+     "mode": "on-demand-a10-6",
+     "spot": false
+    },
+    "A100-40GB": {
+     "hour": 1.99,
+     "mode": "on-demand-a100-40gb-sxm-4",
+     "spot": false
+    },
+    "A100-SXM-80GB": {
+     "hour": 2.79,
+     "mode": "on-demand-a100-80gb-sxm-19",
+     "spot": false
+    },
+    "B200": {
+     "hour": 6.99,
+     "mode": "on-demand-b200-sxm6-0",
+     "spot": false
+    },
+    "GH200": {
+     "hour": 2.29,
+     "mode": "on-demand-gh200-1",
+     "spot": false
+    },
+    "H100": {
+     "hour": 4.29,
+     "mode": "on-demand-h100-sxm-2",
+     "spot": false
+    },
+    "Quadro-RTX-6000": {
+     "hour": 0.69,
+     "mode": "on-demand-rtx6000-quadro-8",
+     "spot": false
+    },
+    "RTX-A6000": {
+     "hour": 1.09,
+     "mode": "on-demand-rtx-a6000-7",
+     "spot": false
+    },
+    "V100": {
+     "hour": 0.79,
+     "mode": "on-demand-v100-16gb-21",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "lambda",
+   "isolation": "vm",
+   "name": "Lambda",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://lambda.ai/pricing",
    "usage_credit_floor": null
   },
   {
@@ -28074,6 +28515,58 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 200,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A10": {
+     "hour": 1.0,
+     "mode": "on-demand-a10-45-1",
+     "spot": false
+    },
+    "A100-80GB": {
+     "hour": 3.07,
+     "mode": "on-demand-a100-180-2",
+     "spot": false
+    },
+    "H100": {
+     "hour": 2.99,
+     "mode": "on-demand-h100-380-3",
+     "spot": false
+    },
+    "L4": {
+     "hour": 1.0,
+     "mode": "on-demand-l4-90-5",
+     "spot": false
+    },
+    "L40S": {
+     "hour": 1.8,
+     "mode": "on-demand-l40s-90-0",
+     "spot": false
+    },
+    "Quadro-RTX-5000": {
+     "hour": 0.6,
+     "mode": "on-demand-rtx5000-28-6",
+     "spot": false
+    },
+    "V100": {
+     "hour": 0.77,
+     "mode": "on-demand-t1-45-7",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "ovh-gpu",
+   "isolation": "vm",
+   "name": "OVHcloud GPU instances",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.ovhcloud.com/en/public-cloud/prices/",
+   "usage_credit_floor": null
+  },
+  {
    "category": "hyperscaler",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -32859,6 +33352,48 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "B300": {
+     "hour": 8.5335,
+     "mode": "on-demand-b300-sxm-8-288g-b300-sxm-0",
+     "spot": false
+    },
+    "H100": {
+     "hour": 3.60267303,
+     "mode": "on-demand-h100-sxm-8-80g-h100-sxm-1",
+     "spot": false
+    },
+    "L4": {
+     "hour": 0.8960175,
+     "mode": "on-demand-l4-8-24g-l4-16",
+     "spot": false
+    },
+    "L40S": {
+     "hour": 1.672463598,
+     "mode": "on-demand-l40s-8-48g-l40s-8",
+     "spot": false
+    },
+    "P100": {
+     "hour": 1.38925,
+     "mode": "on-demand-render-s-p100",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "scaleway-gpu",
+   "isolation": "vm",
+   "name": "Scaleway GPU instances",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.scaleway.com/en/pricing/gpu/",
+   "usage_credit_floor": null
+  },
+  {
    "category": "hyperscaler",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -33284,6 +33819,28 @@
    },
    "surcharge_floor": null,
    "url": "https://autoresearch.sfcompute.com/",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "H100": {
+     "hour": 5.99,
+     "mode": "on-demand-h100",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "shadeform",
+   "isolation": "dedicated-vm",
+   "name": "Shadeform",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.shadeform.ai/",
    "usage_credit_floor": null
   },
   {
@@ -36301,6 +36858,33 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "H100": {
+     "hour": 2.25,
+     "mode": "on-demand-h100-sxm5-0",
+     "spot": false
+    },
+    "RTX-4090": {
+     "hour": 0.35,
+     "mode": "on-demand-rtx4090-2",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "tensordock",
+   "isolation": "vm",
+   "name": "TensorDock",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.tensordock.com/",
+   "usage_credit_floor": null
+  },
+  {
    "category": "agent-sandbox",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -36497,6 +37081,43 @@
    "surcharge_floor": null,
    "url": "https://www.tensorlake.ai/pricing",
    "usage_credit_floor": 250
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A100-80GB": {
+     "hour": 1.09,
+     "mode": "gpu-bundles",
+     "spot": false
+    },
+    "H100": {
+     "hour": 3.2,
+     "mode": "gpu-bundles",
+     "spot": false
+    },
+    "L40": {
+     "hour": 0.79,
+     "mode": "gpu-bundles",
+     "spot": false
+    },
+    "RTX-A6000": {
+     "hour": 0.35,
+     "mode": "gpu-bundles",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "thunder-compute",
+   "isolation": "container",
+   "name": "Thunder Compute",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.thundercompute.com/pricing",
+   "usage_credit_floor": null
   },
   {
    "category": "paas",
@@ -36917,6 +37538,43 @@
      }
     }
    },
+   "surcharge_floor": null,
+   "url": "https://www.together.ai/pricing",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "B200": {
+     "hour": 4.09,
+     "mode": "spot-clusters-hgx-sxm-6",
+     "spot": true
+    },
+    "B300": {
+     "hour": 4.99,
+     "mode": "spot-clusters-hgx-sxm-7",
+     "spot": true
+    },
+    "H100": {
+     "hour": 1.99,
+     "mode": "spot-clusters-hgx-sxm-4",
+     "spot": true
+    },
+    "H200": {
+     "hour": 2.99,
+     "mode": "spot-clusters-hgx-sxm-5",
+     "spot": true
+    }
+   },
+   "has_free_tier": false,
+   "id": "together-gpu",
+   "isolation": "container",
+   "name": "Together AI",
+   "shapes": {},
    "surcharge_floor": null,
    "url": "https://www.together.ai/pricing",
    "usage_credit_floor": null
@@ -38120,6 +38778,58 @@
    "usage_credit_floor": null
   },
   {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A100-40GB": {
+     "hour": 0.426667,
+     "mode": "on-demand-a100-sxm4",
+     "spot": false
+    },
+    "B200": {
+     "hour": 7.5,
+     "mode": "on-demand-b200",
+     "spot": false
+    },
+    "H100": {
+     "hour": 3.133333,
+     "mode": "on-demand-h100",
+     "spot": false
+    },
+    "H200": {
+     "hour": 4.276316,
+     "mode": "on-demand-h200",
+     "spot": false
+    },
+    "RTX-4090": {
+     "hour": 0.346667,
+     "mode": "on-demand-rtx4090",
+     "spot": false
+    },
+    "RTX-5090": {
+     "hour": 0.44,
+     "mode": "on-demand-rtx5090",
+     "spot": false
+    },
+    "RTX-PRO-6000": {
+     "hour": 1.4,
+     "mode": "on-demand-rtx-pro-6000",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "vast-ai",
+   "isolation": "container",
+   "name": "Vast.ai",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://github.com/vast-ai/docs/blob/main/guides/pricing.mdx",
+   "usage_credit_floor": null
+  },
+  {
    "category": "agent-sandbox",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -38909,6 +39619,60 @@
    },
    "surcharge_floor": null,
    "url": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "H100": {
+     "hour": 1.99,
+     "mode": "on-demand-h100",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "voltage-park",
+   "isolation": "vm",
+   "name": "Voltage Park",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.voltagepark.com/pricing",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "gpu-cloud",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0,
+   "gpu_only": true,
+   "gpu_tiers": {
+    "A100-80GB": {
+     "hour": 2.397,
+     "mode": "on-demand-vcg-a100-12c-120g-80vram",
+     "spot": false
+    },
+    "H100": {
+     "hour": 2.99,
+     "mode": "on-demand-vcg-h100-216c-1914gb-640vram",
+     "spot": false
+    },
+    "L40S": {
+     "hour": 1.671,
+     "mode": "on-demand-vcg-l40s-16c-180g-48vram-10",
+     "spot": false
+    }
+   },
+   "has_free_tier": false,
+   "id": "vultr-gpu",
+   "isolation": "vm",
+   "name": "Vultr Cloud GPU",
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://api.vultr.com/v2/plans?type=vcg",
    "usage_credit_floor": null
   },
   {
