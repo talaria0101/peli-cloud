@@ -48,9 +48,10 @@ in `experiments/`.
   plain VM is. **No sandbox was created and stopped**, so no keep rate in this
   document is observed behaviour. It is a reading of the vendor's own feature
   list. Only **8 of 366** cards publish `auto_stop_idle` on any mode (11 modes
-  in total), so **544 of 605** priced rows fall back to the conservative `1.00`
-  and are assumptions, not readings. See section 6.2, where a vendor's own page
-  is found contradicting that fallback.
+  in total), so **539 of 605** priced rows fall back to the conservative `1.00`
+  and are assumptions, not readings. Five rows are read first-party; see
+  section 6.2, which also explains what the fallback does and does not get
+  wrong.
 - **The period model excludes egress, storage beyond what a card bundles, IPv4
   and team seats.** A provider cheap here can be dear there. The full corpus
   cards carry those fields; these tables do not price them.
@@ -426,16 +427,14 @@ recording, since the comparison is more useful than either side alone.
   was measuring formatting rather than prices until it was made unit-aware.
 - **It quantified a free *allowance* rather than a free *credit*.** Oracle's
   Always Free Ampere A1 covers 1,500 OCPU-h + 9,000 GB-h a month, which covers
-  this shape even 24/7, so the honest Oracle row is $0, not the $7.41 I publish.
-  My model applies `monthly_credit` and nothing else, so that row is wrong by
-  the largest single amount in either catalogue. **This is a known gap in my
-  line and I have not fixed it**, and it is a structural one: `oracle-cloud.json`
-  carries `"free": {"monthly_credit": 0, "one_time_credit": 300}` and **no
-  allowance field exists anywhere in the corpus**, so an allowance is not merely
-  unmodelled, it is unrepresentable without inventing a field and converting an
-  allowance into dollars at the provider's own rate table. The correct fix is a
-  separate allowance model priced per resource-hour, not a discount on the
-  dollar credit.
+  this shape even 24/7, so the honest Oracle row is $0 and the $7.41 I published
+  was wrong by the largest single amount in either catalogue. **This is now
+  fixed in my line**; see section 6.3. The structural problem it identified was
+  real: `oracle-cloud.json` carries
+  `"free": {"monthly_credit": 0, "one_time_credit": 300}` and **no allowance
+  field exists anywhere in the corpus**, so an allowance could not be expressed
+  at all without adding one. The fix adds an allowance model denominated in the
+  provider's own unit, not a dollar discount on the credit.
 
 **What it does worse.**
 
@@ -528,16 +527,142 @@ The card (`lizard.json`, mode `sandbox`) publishes
   kind of row that gets bought as a stoppable machine and then found to bill
   continuously.
 
-**I have not fixed this, and the reason is that the fix is not a patch.** The
-corpus has no field for a published suspension, and the honest version of the
-fix is a per-provider first-party read of each vendor's idle policy, which is
-the work `50-firstparty-audit.py` does for prices and does not yet do for
-billing posture. 544 rows is not something to guess at. The defensible interim
-is the one already in place: the default is the **conservative** one, `1.00`, so
-every affected row overstates rather than understates the bill, and the basis
-is printed on every row so a reader can see which rows are assumed. A vendor
-that publishes a suspension policy and is not in the card's `features` is the
-gap, and it is upstream's gap as much as mine.
+### 6.2 The keep rate: what was wrong, and what is now fixed
+
+**539 of 605 priced rows** take their keep rate from the fallback in section 0:
+the corpus card publishes no suspension feature, so the row is recorded as
+`1.00`, billed for uptime. Five rows are now read first-party. Only 61 rows have
+a published basis in the card (`auto_stop_idle` 5, `pause_resume` 10,
+`requires_always_on` 46).
+
+I went looking for a card where the vendor's own page contradicts that default,
+and found one on the row I had just corrected.
+
+`lizard.build/pricing`, fetched 2026-10-02:
+
+> Sandboxes come in three sizes, priced per hour and billed per second while
+> they run: Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM)
+> at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour.
+
+and, on the same page:
+
+> ...and paused sandboxes do not count as running.
+
+The card (`lizard.json`, mode `sandbox`) publishes
+`features: {"isolation": "container"}` and nothing else, so the model recorded
+`keep_rate: 1.00`, basis *"billed for uptime (no suspension feature published)"*.
+**The page says the opposite: a paused sandbox does not bill.**
+
+**There were two separate defects here, and the second was worse than the first.**
+
+1. *The fallback was wrong for Lizard.* Fixed by reading the policy
+   first-party, which is now a first-class table
+   (`KEEP_RATES_FIRSTPARTY`) rather than a comment. It carries one entry in each
+   direction, because a fix that only ever lowers the keep rate is its own bug:
+   **CreateOS**'s page says *"PAUSED sandboxes stop vCPU billing but KEEP
+   billing RAM at $0.01159025/GB-h"*, so its keep rate is **1.0**, and it is
+   recorded to stop the model assuming every sandbox suspends.
+
+2. *The keep rate was never used in any arithmetic.* This is the one that
+   mattered. `keep_rate` was computed, stored, printed on every row and on
+   every table, and then **never multiplied by anything**. The period loop set
+   `compute_day = hourly * hours_per_day` for every provider regardless of
+   keep. So a provider recorded as suspending on idle, `namespace`, published a
+   keep rate of 0.00 and a 24/7 bill of exactly 24x its hourly rate, and the
+   `keep` column in the catalogue was decoration.
+
+**The fix, and a wrong turn on the way to it.** The first attempt multiplied the
+duty cycle by the keep rate, which billed a suspending provider for **zero**
+hours. That is nonsense, and reasoning it through is what shows why: the duty
+cycle *is* the awake time, so a provider that suspends on idle and one that
+does not cost the same for a stated 10 h/day, because in both cases the machine
+is busy for those 10 hours. The keep rate answers a different question, which
+is the one a reader comparing a sandbox to a VPS actually has: **what does it
+cost to hold a box you are not using?**
+
+So the model now reports two figures per row instead of one:
+
+- `$/month`, the stated duty cycle. Unchanged by the keep rate, correctly.
+- **`held 24/7`**, a full month of holding. This is where the keep rate bites,
+  and the new column in table B.
+
+The difference is the argument for a sandbox over a VPS, and it was invisible
+before. Lizard: **$0.27** used an hour a day, **$0.27** held around the clock.
+Contabo: $0.27 used, **$6.51** held. Agent 37, which does not suspend: $0.18
+used, $4.34 held, identical at both duty cycles.
+
+**What is still not fixed, and is stated rather than hidden.** 539 rows still
+take the conservative `1.00` fallback, and for each of those the `held 24/7`
+figure is an upper bound. The fallback is deliberately the expensive one, so
+every affected row **overstates** what holding costs, never understates it. The
+basis is printed on every row, so a reader can see which rows are measured and
+which are assumed. Reading all 539 first-party is real work and not something to
+fake: the two entries above took two page fetches each and one of them exists
+only to stop the fix going the wrong way.
+
+### 6.3 Free allowances, which are not credits, and now are modelled
+
+An allowance is a quantity of a resource that is free. A credit is dollars off
+the bill. `monthly_credit` cannot express the first, which is why Oracle's row
+was wrong by the largest amount in this catalogue.
+
+Oracle's own page, fetched 2026-10-02, states verbatim:
+
+> All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month for
+> free for VM instances using the VM.Standard.A1.Flex shape, which has an Arm
+> processor. For Always Free tenancies, this is equivalent to 2 OCPUs and 12 GB
+> of memory.
+
+Two things in that sentence matter and both are honoured. The allowance is
+denominated in **OCPU-hours and GB-hours**, not dollars, so it is applied
+against the mode's own per-resource rates. And it is scoped to **one SKU**, the
+A1.Flex shape, so it is applied only to the `a1` mode: converting it into a
+dollar credit and applying it to a cheaper SKU is exactly the fault the other
+implementation has with Azure's and Google's grants, where the credit lands on
+a meter the grant was not issued against.
+
+The arithmetic, at the corpus's own `a1` rates of $0.01/OCPU-h and
+$0.0015/GB-h:
+
+| shape | duty cycle | OCPU-h used | GB-h used | bill |
+|---|---|---|---|---|
+| 1 vCPU / 1 GiB | 10 h/day | 300 | 300 | **$0.00** |
+| 2 vCPU / 4 GiB | 10 h/day | 600 | 1,200 | **$0.00** |
+| 2 vCPU / 4 GiB | 24/7 | 1,440 | 2,880 | **$0.00** |
+| 4 vCPU / 8 GiB | 10 h/day | 1,200 | 2,400 | **$0.00** |
+| 4 vCPU / 8 GiB | 24/7 | 2,880 | 5,760 | **$13.80** |
+
+The last row is the one that shows the model is not simply saying "free": 2,880
+OCPU-h against a 1,500 allowance leaves 1,380 billable, and 5,760 GB-h against
+9,000 is covered. `$0.00` there would have been the lazy answer.
+
+**The mode selection had to change too, and that is where the bug was.** Ranking
+by hourly rate alone picked `e4-burstable` at $0.0091/h over `a1` at $0.0260/h
+for the agent shape, so the cheaper *rate* won and the billable mode was
+published while the free one sat unused. Candidates are now ranked on the price
+the buyer pays at the reference duty cycle, allowance included, with the raw
+rate still on the row. Oracle is rank 1 in all three shapes, and its $0 rows are
+given their own table in the catalogue rather than being dropped by the
+"pre-credit price must exceed $0.004" filter that exists to keep credit-exhausted
+rows out of a paid ranking.
+
+**Two wrong turns, both recorded because both produced confident nonsense.**
+
+- The saving was `$0.52` on a `$3.45` bill while reporting *100% covered*. The
+  rates dict was keyed by allowance unit and looked up by mode field, so no unit
+  matched and the loop skipped everything, saving nothing. A silent zero in a
+  function that returns a number is the hardest kind of bug to see.
+- With that fixed it still under-charged, because the hours passed in were the
+  hours in one **day** while the allowance is per **month**, so it covered 1/30th
+  of the usage. Both the divisor and the period are now explicit in the call.
+
+Both were caught by hand-checking one row against arithmetic done on paper
+before the code was written, which is the only reason they were caught at all.
+
+**Not modelled, and stated:** the allowance is home-region only; Oracle may
+reclaim capacity; boot volume is extra, as the card's own note says; and
+`VM.Standard.E2.1.Micro` is a separate, much smaller free tier that this
+catalogue does not price because it cannot fit the agent shape.
 
 ---
 

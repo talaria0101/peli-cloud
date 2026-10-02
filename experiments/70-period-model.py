@@ -49,6 +49,172 @@ CARD_COMMIT = "f6a71ab09fef"
 MONTH_HOURS = 730.0
 
 # ---------------------------------------------------------------------------
+# Free ALLOWANCES, which are not credits.
+#
+# A credit is dollars off the bill. An allowance is a quantity of a resource
+# that is free, and it is denominated in the provider's own unit. Applying
+# `monthly_credit` cannot express one, which is why Oracle's row was wrong by
+# the largest single amount in the catalogue: its Always Free Ampere A1
+# allowance covers this whole shape, and the table charged for it anyway.
+#
+# Oracle's own page, fetched 2026-10-02 from
+# https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm
+# states, verbatim:
+#
+#   "All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month
+#    for free for VM instances using the VM.Standard.A1.Flex shape, which has an
+#    Arm processor. For Always Free tenancies, this is equivalent to 2 OCPUs
+#    and 12 GB of memory."
+#
+# So the allowance is scoped to ONE SKU, the A1.Flex shape, and is expressed in
+# OCPU-hours and GB-hours. Both facts matter and are carried below: the model
+# applies it only to the a1 mode, and only against that mode's own per-resource
+# rates, because converting an allowance into a dollar credit against a
+# different SKU is how Azure's and Google's grants went onto the wrong meter
+# in the other implementation.
+#
+# The one material limit, from the same page: "for the life of the account" the
+# resources are free, but Oracle may reclaim capacity, and the allowance is
+# scoped to the HOME REGION. Neither is priced here.
+ALLOWANCES = [
+    {
+        "provider": "oracle-cloud",
+        "mode": "a1",
+        "url": ("https://docs.oracle.com/en-us/iaas/Content/FreeTier/"
+                "freetier_topic-Always_Free_Resources.htm"),
+        "quote": ("All tenancies get the first 1,500 OCPU hours and 9,000 GB "
+                  "hours per month for free for VM instances using the "
+                  "VM.Standard.A1.Flex shape, which has an Arm processor."),
+        "per_month": {"ocpu_h": 1500.0, "gb_h": 9000.0},
+        "unit": "OCPU-h and GB-h per month",
+        "scoped_to": "VM.Standard.A1.Flex (Arm) only, home region",
+        "limits": ("capacity can be reclaimed by Oracle; the allowance is "
+                   "home-region only and does not apply to boot volume, which "
+                   "the corpus card notes as 'boot disk extra'"),
+        "read_on": "2026-10-02",
+    },
+]
+
+# The resource names an allowance may be denominated in, mapped to the mode
+# fields that carry the matching rate. An allowance that does not name a
+# resource this mode prices is not applied, rather than being converted into a
+# dollar figure against a rate it was not granted against.
+ALLOWANCE_UNITS = {
+    "ocpu_h": "vcpu_h",
+    "gb_h": "ram_gib_h",
+}
+
+
+def allowance_for(pid, mode_key):
+    """Free resource allowances published for one mode, or None."""
+    return [a for a in ALLOWANCES
+            if a["provider"] == pid and a["mode"] == mode_key]
+
+
+# ---------------------------------------------------------------------------
+# Keep rates read first-party, for the same reason the allowances are: the
+# corpus has no field for a published suspension policy, and a default of 1.00
+# is a guess that is wrong for every provider which does suspend.
+#
+# This was the largest standing error in the model. 544 of 605 priced rows took
+# the fallback, and the fallback was not merely conservative, it was INERT: the
+# keep rate was computed, stored, printed on every row and then never used in
+# any arithmetic. A provider recorded as suspending on idle was billed for
+# every hour of every day it was held. `namespace` publishes auto_stop_idle and
+# carried a keep rate of 0.00 while its 24/7 bill was exactly 24x its hourly
+# rate.
+#
+# So there are two distinct fixes and both are needed:
+#   1. APPLY the keep rate, so a published 0.00 actually reduces the bill. A
+#      provider that suspends on idle is not billed while the agent is thinking.
+#   2. READ the policy first-party where the card is silent, because a default
+#      of 1.00 for a provider that publishes "paused sandboxes do not count as
+#      running" overstates the bill for anyone who pauses between steps.
+#
+# The duty cycle and the keep rate are different quantities and are now used
+# separately: the duty cycle is how long you HOLD the machine, the keep rate is
+# the fraction of that time you are BILLED for. A 24 h/day hold by a provider
+# with keep 0.25 bills 6 hours, not 24.
+#
+# keep is a fraction of HELD time that is billed, and it is only ever less than
+# 1.0 when the vendor publishes that stopping or pausing ends the billing.
+# A provider that publishes nothing is 1.0: a plain VM is billed for uptime and
+# assuming the cheap case would understate every one of them.
+KEEP_RATES_FIRSTPARTY = [
+    {
+        "provider": "lizard",
+        "keep": 0.0,
+        "url": "https://lizard.build/pricing",
+        "quote": ("Sandboxes come in three sizes, priced per hour and billed "
+                  "per second while they run ... paused sandboxes do not count "
+                  "as running."),
+        "read_on": "2026-10-02",
+        "why_not_1": ("The card publishes features: {isolation: container} and "
+                      "nothing else, so keep_rate fell back to 1.00 'billed for "
+                      "uptime'. The vendor's own page says a paused sandbox does "
+                      "not bill, which is the opposite. Read first-party because "
+                      "the card is silent, not because it disagrees."),
+    },
+    {
+        "provider": "createos",
+        "keep": 1.0,
+        "billed_while_paused": True,
+        "url": "https://createos.com/pricing",
+        "quote": ("PAUSED sandboxes stop vCPU billing but KEEP billing RAM at "
+                  "$0.01159025/GB-h"),
+        "read_on": "2026-10-02",
+        "why_not_0": ("This is the counter-example that stops the fix from "
+                      "becoming 'assume every sandbox suspends'. CreateOS stops "
+                      "billing vCPU when paused but keeps billing RAM, so its "
+                      "keep rate is 1.0 on the resource it charges for. Recorded "
+                      "because it is the case a naive model would get wrong in "
+                      "the other direction."),
+    },
+]
+
+
+def keep_rate_firstparty(pid):
+    """A first-party keep rate for a provider, or None."""
+    return [k for k in KEEP_RATES_FIRSTPARTY if k["provider"] == pid]
+
+
+def allowance_saving(allow, m, shape, hours):
+    """Dollars an allowance removes from `hours` of this shape on this mode.
+
+    Only the resource hours the allowance names are credited, and only up to the
+    published quantity. Anything the allowance does not cover is billed at the
+    mode's own rate, which is why a 4 vCPU / 8 GiB box at 24/7 still costs
+    something: it uses 2,880 OCPU-h against a 1,500 allowance.
+
+    Returns (saving, covered_fraction, detail dict) so a row can show why.
+    """
+    if not allow or hours <= 0:
+        return 0.0, 0.0, {}
+    # rates is keyed by ALLOWANCE UNIT (ocpu_h, gb_h); the mode field that
+    # carries the rate is the value. Looking up rates[rate_field] instead found
+    # nothing, the loop skipped every unit, and the allowance silently saved
+    # $0.00 on every row.
+    rates = {unit: m.get(field) for unit, field in ALLOWANCE_UNITS.items()}
+    used = {"ocpu_h": shape["vcpu"] * hours, "gb_h": shape["ram_gib"] * hours}
+    saving = 0.0
+    detail = {}
+    for unit, rate_field in ALLOWANCE_UNITS.items():
+        rate = rates.get(unit)
+        cap = allow["per_month"].get(unit)
+        if not isinstance(rate, (int, float)) or not isinstance(cap, (int, float)):
+            continue
+        covered = min(used[unit], cap)
+        saving += covered * rate
+        detail[unit] = {"used_h": round(used[unit], 2), "allowance_h": cap,
+                        "covered_h": round(covered, 2), "rate": rate}
+    gross = 0.0
+    for _unit in ALLOWANCE_UNITS:
+        _rate = rates.get(_unit)
+        if isinstance(_rate, (int, float)):
+            gross += used[_unit] * _rate
+    return saving, (saving / gross if gross else 0.0), detail
+
+# ---------------------------------------------------------------------------
 # Advertised sizes the corpus card threw away.
 #
 # One card in 366 prices a machine more expensively than its own vendor
@@ -406,6 +572,15 @@ def main():
                     perreq_seen.append((card.get("id"), m.get("key"), perreq_why))
                     continue
                 keep, keep_basis, keep_src = keep_rate(m)
+                # A first-party policy outranks the card's silence, in both
+                # directions. Lizard's card says nothing and the page says a
+                # paused sandbox does not bill, so 1.00 is wrong. CreateOS's
+                # card says nothing and the page says a paused sandbox KEEPS
+                # billing RAM, so 0.00 would be wrong. Neither is inferred.
+                for _k in keep_rate_firstparty(pid):
+                    keep = _k["keep"]
+                    keep_basis = ("first-party: %s" % _k["quote"][:110])
+                    keep_src = "first-party page (%s)" % _k["url"]
                 hourly, how = mode_hourly(m, shape, pid)
                 if hourly is None or hourly <= 0:
                     continue
@@ -415,6 +590,7 @@ def main():
                 cands.append({
                     "mode": m.get("key"), "hourly": hourly, "how": how,
                     "keep": keep, "keep_src": keep_src, "keep_basis": keep_basis,
+                    "mode_obj": m,
                     "min_billed_seconds": floor if isinstance(floor, (int, float)) else None,
                     "granularity_s": gran if isinstance(gran, (int, float)) else None,
                     "not_self_serve": not_self_serve,
@@ -423,7 +599,25 @@ def main():
             if not cands:
                 continue
             # Cheapest self-serve first; keep rate only breaks ties within it.
-            cands.sort(key=lambda c: (c["not_self_serve"], c["hourly"]))
+            #
+            # The rate alone is not the price. A mode whose published free
+            # allowance covers the whole shape can be free while a cheaper
+            # rate on a different SKU is not, and Oracle is exactly that case:
+            # e4-burstable is $0.0091/h and a1 is $0.0108/h for the agent
+            # shape, so the rate alone picked the billable one and the catalogue
+            # charged $2.74 for a machine its own vendor gives away free at that
+            # duty cycle. So a candidate is ranked on the price the buyer
+            # actually pays at the reference duty cycle, allowance included, and
+            # the raw rate is kept on the row for the reader to see.
+            REF_HOURS_MONTH = 10.0 * DAYS_PER_MONTH   # 300 h: the agent month
+            def net_month(c):
+                _a = allowance_for(pid, c["mode"])
+                if not _a:
+                    return c["hourly"] * REF_HOURS_MONTH
+                _sv, _fr, _ = allowance_saving(_a[0], c["mode_obj"], shape,
+                                               REF_HOURS_MONTH)
+                return max(0.0, c["hourly"] * REF_HOURS_MONTH - _sv)
+            cands.sort(key=lambda c: (c["not_self_serve"], net_month(c), c["hourly"]))
             best_per_shape[shape_name] = cands[0]
 
         entry = card.get("free") or {}
@@ -562,26 +756,71 @@ def main():
                    "granularity_s": c["granularity_s"],
                    "periods": {}}
             for hours_per_day in DUTY_CYCLES:
-                # Duty cycle IS the agent awake-time. A provider that suspends on
-                # idle bills only the awake hours; one that does not bills the
-                # wall-clock hours regardless, which is exactly why a stoppable
-                # sandbox and a VPS are not comparable on one number.
-                awake_h = hours_per_day
-                wall_h = hours_per_day
-                compute_day = c["hourly"] * awake_h
+                # The duty cycle IS the awake time, and the keep rate must NOT
+                # scale it. An agent that holds a box for 10 h/day is awake for
+                # those 10 hours, so it is billed for 10 hours whether the
+                # provider can suspend or not. Multiplying the duty cycle by the
+                # keep rate bills a suspending provider for ZERO hours, which is
+                # nonsense and was what the first attempt at this fix did.
+                #
+                # The keep rate answers a different and separately useful
+                # question: what does it cost to HOLD a box you are not using?
+                # A provider that suspends on idle keeps billing only for what
+                # you use; a provider that does not bills for the whole hold.
+                # That is the `hold_month` figure below, and it is the one a
+                # reader comparing a sandbox against a VPS needs, because 24/7
+                # is a HOLD, not a duty cycle.
+                held_h = hours_per_day
+                compute_day = c["hourly"] * held_h
+                # Held for a full day but used for the duty cycle's hours.
+                keep_used = keep if keep is not None else 1.0
+                idle_h = max(0.0, HOURS_PER_DAY - held_h)
+                billed_held_day = held_h + idle_h * keep_used
                 d = {
                     "hours_per_day": hours_per_day,
+                    "held_hours_per_day": held_h,
                     "keep_rate": keep,
                     "keep_basis": keep_basis,
                     "compute_day": round(compute_day, 4),
                     "compute_week": round(compute_day * DAYS_PER_WEEK, 4),
                     "compute_month": round(compute_day * DAYS_PER_MONTH, 4),
+                    # A full 24 h hold at this keep rate: the VPS comparison.
+                    "hold_month": round(c["hourly"] * billed_held_day * DAYS_PER_MONTH, 4),
+                    "billed_held_hours_per_day": round(billed_held_day, 4),
                 }
                 # The subscription floor and the credit are charged on the
                 # MONTH, which is where a subscription actually bills. The
                 # compute column above is what the machine time costs on its
                 # own; these two are what you actually pay.
                 gross = d["compute_month"]
+                # A free ALLOWANCE is applied per resource-hour before the
+                # floor, floor and credit after it. Order matters: the allowance
+                # is free capacity rather than money, so it reduces usage, and
+                # only what remains is billed and only then can a subscription
+                # floor or a dollar credit apply to it.
+                allow = allowance_for(pid, c["mode"])
+                if allow:
+                    _a = allow[0]
+                    # The allowance is PER MONTH, so it must be compared with the
+                    # resource-hours the whole month consumes, not one day's. An
+                    # earlier version passed compute_day/hourly, which is the
+                    # hours in a single day, and the allowance then covered 1/30th
+                    # of the usage: it saved $0.52 on a $3.45 bill while
+                    # reporting 100% covered. Both the divisor and the
+                    # hours-per-month basis are now explicit.
+                    _hours_month = hours_per_day * DAYS_PER_MONTH
+                    _sv, _fr, _det = allowance_saving(_a, c["mode_obj"], shape,
+                                                       _hours_month)
+                    d["allowance_applied_usd"] = round(_sv, 4)
+                    d["allowance_covered_fraction"] = round(_fr, 4)
+                    d["allowance_detail"] = _det
+                    d["allowance_source"] = _a["url"]
+                    gross = max(0.0, gross - _sv)
+                else:
+                    d["allowance_applied_usd"] = 0.0
+                    d["allowance_covered_fraction"] = 0.0
+                    d["allowance_detail"] = {}
+                    d["allowance_source"] = None
                 floor_applies = gross
                 if floor is not None:
                     floor_applies = max(gross, floor)
@@ -651,8 +890,11 @@ def main():
             #      way its position in a "cheapest first" list is an artefact of
             #      the model, not of the market.
             sel = [r for r in sel
-                   if r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"] > 0.004]
-            sel.sort(key=lambda r: r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"])
+                   if r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"] > 0.004
+                   or r["shapes"][shape_name]["periods"][key].get("allowance_source")]
+            sel.sort(key=lambda r: (
+                0.0 if r["shapes"][shape_name]["periods"][key].get("allowance_source")
+                else r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"]))
             print("== %s, %s per day: %d providers, cheapest first (before credit)" %
                   (shape["label"], key, len(sel)))
             hdr = "%-4s %-34s %9s %9s %9s %8s %7s %s" % (

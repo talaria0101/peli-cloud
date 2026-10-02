@@ -78,7 +78,8 @@ def main():
         if not s:
             return (9e9,)
         pd = s["periods"].get("10h") or list(s["periods"].values())[0]
-        return (pd["billed_month_no_credit"], pd["billed_month_with_credit"])
+        return (0.0 if pd.get("allowance_source") else pd["billed_month_no_credit"],
+                pd["billed_month_with_credit"])
 
     A("# peli-cloud — every provider, cheapest first, at every period")
     A("")
@@ -208,6 +209,16 @@ def main():
     A("Cheapest first within each cell. `$/h` is the published machine rate; the "
       "period columns are that rate times the hours you hold it, before any floor.")
     A("")
+    A("**`$/month` and `held 24/7` are different questions and the difference is "
+      "the keep rate.** `$/month` is what the stated duty cycle costs: you use "
+      "the machine for that many hours a day. `held 24/7` is what it costs to "
+      "keep the box for every hour of the month, which is the comparison against "
+      "a VPS. They are equal when `keep` is 1.00, and they diverge when the "
+      "provider suspends on idle: a sandbox you hold but barely use is cheap, and "
+      "that is the whole reason to choose one. `keep` is the fraction of held "
+      "time you are billed for; 0.00 means a paused or suspended sandbox stops "
+      "billing.")
+    A("")
 
     for shape_name in SHAPES_ORDER:
         if shape_name not in shapes:
@@ -223,18 +234,65 @@ def main():
                 if not pd:
                     continue
                 sel.append((p, s, pd))
+            # Rows that are genuinely $0 BEFORE any credit, because a published
+            # free allowance covers the whole usage. These are the cheapest
+            # thing in the market and the table below the paid one would drop
+            # them, so they get their own table with the evidence attached.
+            free_rows = [x for x in sel
+                         if x[2]["billed_month_no_credit"] == 0.0
+                         and x[2].get("allowance_source")]
+            if free_rows:
+                A("#### %s per day — %d provider(s) free on a published allowance" %
+                  (dkey, len(free_rows)))
+                A("")
+                A("| provider | shape | keep | allowance covers | source |")
+                A("|---|---|---|---|---|")
+                for p, s, pd in free_rows:
+                    A("| %s | %s | %.2f | %d%% | %s |" % (
+                        link(p["name"] or p["id"], p.get("url")), shape_name,
+                        s.get("keep_rate") or 0.0,
+                        round(100 * (pd.get("allowance_covered_fraction") or 0)),
+                        pd.get("allowance_source")))
+                A("")
+                for p, s, pd in free_rows:
+                    det = pd.get("allowance_detail") or {}
+                    if det:
+                        bits = ", ".join(
+                            "%s: %g h used of %g h free at $%g/h"
+                            % (k, v["used_h"], v["allowance_h"], v["rate"])
+                            for k, v in sorted(det.items()))
+                        A("- **%s**, %s per day, at %s h/day: %s. The bill is $0 "
+                          "before any credit, which is a free allowance and not a "
+                          "$0 plan." % (p["name"] or p["id"], dkey, pd["hours_per_day"],
+                                         bits))
+                A("")
+            sel = []
+            for p in priced:
+                s = p["shapes"][shape_name]
+                pd = s["periods"].get(dkey)
+                if not pd:
+                    continue
+                sel.append((p, s, pd))
             # Sort by the price you pay ONCE THE CREDIT IS GONE, not by the
             # credit-adjusted price. Sorting by the adjusted price puts any
             # provider whose credit happens to exceed this month's bill at the
             # top of every table. That is true only until the credit runs out,
             # and it makes a $14/month provider read as cheaper than a $1/month
             # one. A credit-exhausted row is marked, never sorted as if free.
-            paid = [x for x in sel if x[2]["billed_month_no_credit"] > 0.004]
-            paid.sort(key=lambda x: (x[2]["billed_month_no_credit"],
+            # A row is excluded from the PAID table when its pre-credit month is
+            # $0, because a $0 position is either a credit-exhausted row or a
+            # meter this model cannot express. A row that is $0 because a
+            # PUBLISHED ALLOWANCE covers the usage is neither: it is genuinely
+            # the cheapest thing in the market, so it ranks first and says why.
+            paid = [x for x in sel
+                    if x[2]["billed_month_no_credit"] > 0.004
+                    or x[2].get("allowance_source")]
+            paid.sort(key=lambda x: (0.0 if x[2].get("allowance_source")
+                                     else x[2]["billed_month_no_credit"],
                                      x[2]["billed_month_with_credit"]))
             A("#### %s per day — %d paid providers" % (dkey, len(paid)))
             A("")
-            A("| # | provider | $/hour | $/day | $/week | $/month | after credit | credit | keep | floor | buy it? | link |")
+            A("| # | provider | $/hour | $/day | $/week | $/month | held 24/7 | after credit | credit | keep | floor | buy it? | link |")
             A("|---|---|---|---|---|---|---|---|---|---|---|---|")
             for i, (p, s, pd) in enumerate(paid[:25], 1):
                 floor = p.get("usage_credit_floor")
@@ -253,9 +311,10 @@ def main():
                 # page's own docs contradict, so the column says so.
                 if "[ADVERTISED" in (s.get("how") or ""):
                     buy = "**disputed**"
-                A("| %d | %s | %.4f | %.2f | %.2f | %.2f | %.2f | %s | %.2f | %s | %s | `%s` |" % (
+                A("| %d | %s | %.4f | %.2f | %.2f | %.2f | %.2f | %.2f | %s | %.2f | %s | %s | `%s` |" % (
                     i, link(p["name"] or p["id"], p.get("url")), s["hourly"],
                     pd["compute_day"], pd["compute_week"], pd["billed_month_no_credit"],
+                    pd.get("hold_month", 0.0),
                     pd["billed_month_with_credit"], used, s["keep_rate"],
                     ("$%g" % floor) if floor else "-", buy, p["id"]))
             if len(paid) > 25:

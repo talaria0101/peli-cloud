@@ -104,7 +104,11 @@ cstart=cat.index('## C.')
 # the top N ranked rows of table C (any rank number, not just 1)
 crows = [l for l in cat[cstart:].split('\n')
          if re.match(r'^\|\s*\d+\s*\|', l)]
-ck("table C row 1 is Agent 37", bool(crows) and 'Agent 37' in crows[0], crows[0][:70] if crows else "no rows")
+ck("table C row 1 leads with the genuinely-free row, when one exists",
+   ('Oracle Cloud' in crows[0]) if any('Oracle Cloud' in l for l in crows)
+   else ('Agent 37' in crows[0]), crows[0][:78] if crows else "no rows")
+# The dispute marker is asserted on the row for lizard wherever it appears,
+# whatever its rank, because the allowance change moved ranks around.
 
 print("GUARD F: the CONSOLE table must rank on the pre-credit price too")
 # The console table in 70 sorted on billed_month_with_credit while the renderer
@@ -121,8 +125,24 @@ if out70.returncode == 0:
         '2 vCPU / 4 GiB, 10h per day' in out70.stdout else ''
     con_rows = [l for l in seg.split('\n') if re.match(r'^\d+\s{2,}\S', l)]
     ck("console names the pre-credit basis", 'before credit' in seg, seg.split('\n')[0][:80])
-    ck("console row 1 is Agent 37, not Run Cloud",
-       bool(con_rows) and 'Agent 37' in con_rows[0], con_rows[0][:60] if con_rows else 'no rows')
+    # The point of this guard is that no row BOUGHT its position with a credit.
+    # It is not that Agent 37 leads: a genuinely free provider leads now, and
+    # pinning a name would have failed the moment a real $0 appeared.
+    # A $0 month is legitimate only when a published allowance covers the usage.
+    # Oracle now leads every shape with one. The month is the 5th column of the
+    # console table, so it is read positionally: a regex for "0.00" matched
+    # Lizard's KEEP column, which is legitimately 0.00, and failed the guard.
+    _zero_rows = []
+    for l in con_rows:
+        cols = re.split(r'\s{2,}', l.strip())
+        if len(cols) >= 5 and cols[4].strip() in ('0.00', '0.0', '0'):
+            if 'Oracle Cloud' not in l:
+                _zero_rows.append(l[:60])
+    ck("no console row is $0 without a published allowance behind it",
+       not _zero_rows, str(_zero_rows[:1])[:80])
+    ck("the cheapest console row is not the credit-exhausted one",
+       bool(con_rows) and 'Run Cloud' not in con_rows[0],
+       con_rows[0][:60] if con_rows else 'no rows')
     # And the two rankings must agree on the whole visible table, not just row 1.
     # Compare the console's agent/10h table with the catalogue's own agent/10h
     # ranking. An earlier version of this guard compared the console's agent
@@ -142,9 +162,18 @@ if out70.returncode == 0:
     # only 1C1GB, so it is rank 16 of 206 in the console's tiny table and row 4
     # of C. Both are right; they answer different questions.
     bstart = cat.index('### 2 vCPU / 4 GiB')
-    bseg = cat[bstart:].split('#### 10h per day')[1].split('#### 24h per day')[0] \
-        if '#### 10h per day' in cat[bstart:] else ''
+    # Two traps here, both hit. The 10 h/day cell now opens with a
+    # free-on-an-allowance table whose heading ALSO begins "#### 10h per day",
+    # and str.split(...)[1] returns the text after the LAST match, not the first,
+    # so this was reading the 24 h/day cell and finding no paid table at all.
+    # partition takes the first, and the paid heading is then found by its count.
+    _head = '#### 10h per day'
+    _after = cat[bstart:].partition(_head)[2] if _head in cat[bstart:] else ''
+    _paid_at = _after.find('paid providers')
+    bseg = _after[_paid_at:].partition('#### 24h per day')[0] if _paid_at >= 0 else ''
     brows = [l for l in bseg.split('\n') if re.match(r'^\|\s*\d+\s*\|', l)]
+    ck("the agent 10h/day paid table was located", len(brows) >= 5,
+       "%d rows" % len(brows))
     names_c = [l.split('|')[2].strip().lstrip('[').split(']')[0].split('(')[0].strip()
                for l in brows[:5]]
     names_7 = []
@@ -202,6 +231,17 @@ for p in doc['providers']:
         # classifier saw and ask again. A mismatch means the row is carrying a
         # basis belonging to some other mode of the same card.
         probe = {}
+        if (s.get('keep_source') or '').startswith('first-party'):
+            # A first-party read is the strongest basis there is and is not
+            # reconstructible from the mode fields, because it comes from the
+            # page rather than the card. The probe below cannot second-guess it,
+            # so it is checked against the recorded table instead.
+            _fp = pm.keep_rate_firstparty(p['id'])
+            if _fp:
+                expected = 'first-party: %s' % _fp[0]['quote'][:110]
+                if expected != got:
+                    mis.append((p['id'], sname, got, expected))
+                continue
         if s.get('keep_rate') == 0.0:
             probe['features'] = {'auto_stop_idle': True}
         elif s.get('keep_source') == 'requires_always_on':
@@ -279,9 +319,11 @@ ck("the catalogue marks the row disputed, not confirmed",
 # the "buy it?" column only exists in table B.
 _cat = open(os.path.join(ROOT, 'docs/CATALOGUE.md')).read()
 _cseg = _cat[_cat.index('## C.'):_cat.index('## D.')]
-_crow2 = [l for l in _cseg.split('\n') if l.startswith('| 2 |')]
-ck("table C marks the disputed row", bool(_crow2) and 'disputed' in _crow2[0],
-   (_crow2[0][:78] if _crow2 else "no row 2"))
+_crows = [l for l in _cseg.split('\n')
+          if l.startswith('|') and '`lizard`' in l]
+ck("table C marks the disputed row wherever it now ranks",
+   bool(_crows) and all('disputed' in l for l in _crows),
+   (_crows[0][:74] if _crows else "no lizard row"))
 ck("table C carries the footnote explaining the mark",
    'corpus card dropped' in _cseg)
 _disputed_ids = {a["provider"] for a in pm.ADVERTISED_SIZES}
@@ -337,8 +379,13 @@ def agent_rows():
             out.append((pd['billed_month_no_credit'], p['name']))
     return sorted(out)
 rows10 = agent_rows()
-_by_id = {p['id']: p for p in doc['providers']}
-for want, (cost, name) in enumerate(rows10[:8], 1):
+# The README's headline table lists PAID rows. A provider that is genuinely $0
+# on a published allowance is the cheapest thing in the market; it is called out
+# in prose with its own table in the catalogue rather than folded into the paid
+# list, so the two sequences agree only over the paid rows. Checking the
+# $0-inclusive sequence made this fail the moment a real free row appeared.
+paid10 = [(c, n) for (c, n) in rows10 if c > 0.004]
+for want, (cost, name) in enumerate(paid10[:8], 1):
     p = [x for x in doc['providers'] if x['name'] == name][0]
     # Match on the row's position and its price, not on the display name: the
     # README legitimately shortens "Oracle Cloud Infrastructure" to "Oracle
@@ -350,7 +397,7 @@ for want, (cost, name) in enumerate(rows10[:8], 1):
        "rank %d, $%.4f/h, $%.2f/mo" % (want, p['shapes']['agent']['hourly'], cost))
 # And the one ordinal claim in prose, which said "third" for a provider that
 # the Lizard correction moved.
-hz = [i for i, (_c, n) in enumerate(rows10, 1) if n and n.startswith('Hetzner')]
+hz = [i for i, (_c, n) in enumerate(paid10, 1) if n and n.startswith('Hetzner')]
 ck("README's Hetzner ordinal matches its real rank %s" % (hz[0] if hz else '?'),
    ("Hetzner ranks %s at" % {1: 'first', 2: 'second', 3: 'third', 4: 'fourth',
                              5: 'fifth', 6: 'sixth', 7: 'seventh',
@@ -464,6 +511,143 @@ if a37:
        abs(_v - _compute_730) < 0.12, "$%.2f vs $%.2f" % (_v, _compute_730))
     ck("the README explains the gap instead of quoting $4.76 beside $4.34",
        "4 GB of persistent disk" in readme and "$4.34" in readme)
+
+print("GUARD M: a free ALLOWANCE is applied per resource-hour, not as a credit")
+# Oracle's Always Free A1 is 1500 OCPU-h + 9000 GB-h per month, denominated in
+# the provider's own units. The corpus has no allowance field, so the model had
+# none and published $2.74 for a machine the vendor gives away free. Two bugs
+# lived here and both produced confident nonsense: the rate lookup was keyed by
+# the wrong name and saved $0 silently, and the hours passed in were one day's
+# while the allowance is monthly, so it covered 1/30th of the usage.
+_a1 = pm.allowance_for("oracle-cloud", "a1")
+ck("the A1 allowance is recorded", len(_a1) == 1)
+if _a1:
+    _a = _a1[0]
+    ck("it is denominated in OCPU-h and GB-h, not dollars",
+       set(_a["per_month"]) == {"ocpu_h", "gb_h"}, str(sorted(_a["per_month"])))
+    ck("it carries the first-party quote",
+       "1,500 OCPU hours and 9,000 GB hours" in _a["quote"])
+    ck("it is scoped to one SKU and says so", "A1.Flex" in _a["scoped_to"])
+    ck("the quantities are the page's", _a["per_month"]["ocpu_h"] == 1500.0
+       and _a["per_month"]["gb_h"] == 9000.0, str(_a["per_month"]))
+    _mode = {"pricing": "resource", "vcpu_h": 0.01, "ram_gib_h": 0.0015}
+    # 2 vCPU / 4 GiB at 24/7 = 1440 OCPU-h and 2880 GB-h, both inside the
+    # allowance, so the bill is zero. Hand-computed before the code existed.
+    _sv, _fr, _det = pm.allowance_saving(_a, _mode, {"vcpu": 2, "ram_gib": 4}, 720)
+    ck("2 vCPU / 4 GiB at 24/7 is fully covered and saves $18.72",
+       abs(_sv - 18.72) < 0.01, "$%.2f" % _sv)
+    ck("...and is reported as 100% covered", abs(_fr - 1.0) < 1e-6, "%.3f" % _fr)
+    # 4 vCPU / 8 GiB at 24/7 = 2880 OCPU-h and 5760 GB-h. OCPU-h exceeds the
+    # 1500 allowance and is billed for the 1380 remainder; GB-h is inside the
+    # 9000 and is free. Saving = 1500*0.01 + 5760*0.0015 = $23.64, leaving
+    # 1380*0.01 = $13.80. An earlier version of this guard expected a $20.70
+    # saving, which was arithmetic done in my head and wrong; the model was
+    # right and the check was not.
+    _sv4, _fr4, _d4 = pm.allowance_saving(_a, _mode, {"vcpu": 4, "ram_gib": 8}, 720)
+    ck("4 vCPU / 8 GiB at 24/7 is only partly covered",
+       0.6 < _fr4 < 0.7, "%.3f" % _fr4)
+    ck("...and the allowance removes $23.64, leaving $13.80 billable",
+       abs(_sv4 - 23.64) < 0.02, "$%.2f" % _sv4)
+    ck("...with the OCPU remainder billed and the GB hours free",
+       abs(_d4['ocpu_h']['covered_h'] - 1500.0) < 0.01
+       and abs(_d4['ocpu_h']['used_h'] - 2880.0) < 0.01
+       and abs(_d4['gb_h']['used_h'] - 5760.0) < 0.01
+       and _d4['gb_h']['covered_h'] == 5760.0, str(_d4))
+    # One day of hours must NOT be enough to exhaust a monthly allowance.
+    _svd, _frd, _dd = pm.allowance_saving(_a, _mode, {"vcpu": 2, "ram_gib": 4}, 24)
+    ck("a single day does not consume the whole monthly allowance",
+       _frd < 1.0 or _svd < 18.72, "%.3f" % _frd)
+    # And it must not apply to a mode the grant was not issued against.
+    ck("the allowance does NOT apply to a non-A1 mode",
+       pm.allowance_for("oracle-cloud", "e4-burstable-12") == [])
+    ck("an unrelated provider has no allowance", pm.allowance_for("e2b", "on-demand") == [])
+_oc = [p for p in doc['providers'] if p['id'] == 'oracle-cloud']
+ck("oracle is in the model", bool(_oc))
+if _oc:
+    for _sh in ('tiny', 'agent'):
+        _s = _oc[0]['shapes'].get(_sh)
+        ck("oracle %s picks the A1 mode, not the cheaper-rate SKU" % _sh,
+           _s and _s['mode'] == 'a1', _s['mode'] if _s else 'absent')
+        if _s:
+            ck("oracle %s is $0.00 at 10 h/day, before any credit" % _sh,
+               abs(_s['periods']['10h']['billed_month_no_credit']) < 1e-9,
+               "$%.2f" % _s['periods']['10h']['billed_month_no_credit'])
+            ck("oracle %s is $0.00 at 24/7 too" % _sh,
+               abs(_s['periods']['24h']['billed_month_no_credit']) < 1e-9,
+               "$%.2f" % _s['periods']['24h']['billed_month_no_credit'])
+            ck("oracle %s records where the allowance came from" % _sh,
+               'docs.oracle.com' in (_s['periods']['10h'].get('allowance_source') or ''))
+    _dv = _oc[0]['shapes']['devbox']['periods']['24h']
+    ck("oracle devbox at 24/7 is $13.80, not $0",
+       abs(_dv['billed_month_no_credit'] - 13.80) < 0.02,
+       "$%.2f" % _dv['billed_month_no_credit'])
+_cat2 = open(os.path.join(ROOT, 'docs', 'CATALOGUE.md'), encoding='utf-8').read()
+ck("the catalogue gives free-allowance rows their own table",
+   'free on a published allowance' in _cat2)
+ck("that table names Oracle and its source",
+   'Oracle Cloud' in _cat2.split('free on a published allowance')[1][:600]
+   and 'docs.oracle.com' in _cat2.split('free on a published allowance')[1][:600])
+
+print("GUARD N: the keep rate must change a number, not just a column")
+# keep_rate was computed, stored, printed on every row and never used. The first
+# attempt at the fix multiplied the duty cycle by it, which billed a suspending
+# provider for ZERO hours. The keep rate belongs on the HELD figure, not on the
+# duty cycle, and the held figure is what a reader comparing a sandbox to a VPS
+# needs.
+_ns = [p for p in doc['providers'] if p['id'] == 'namespace']
+ck("namespace (auto_stop_idle) is in the model", bool(_ns))
+if _ns:
+    _s = _ns[0]['shapes'].get('agent') or _ns[0]['shapes'].get('tiny')
+    ck("namespace's keep rate is 0.00", _s['keep_rate'] == 0.0, str(_s['keep_rate']))
+    _p10, _p24 = _s['periods']['10h'], _s['periods']['24h']
+    ck("a keep of 0.00 must NOT zero the duty-cycle bill",
+       _p10['billed_month_no_credit'] > 0 and _p24['billed_month_no_credit'] > 0,
+       "10h=$%.2f 24h=$%.2f" % (_p10['billed_month_no_credit'],
+                               _p24['billed_month_no_credit']))
+    ck("holding it costs LESS than using it (keep 0.00 suspends when idle)",
+       _p10['hold_month'] < _p10['billed_month_no_credit'],
+       "held $%.2f vs used $%.2f" % (_p10['hold_month'],
+                                     _p10['billed_month_no_credit']))
+    ck("at 24/7 the held figure equals 24h x rate, and is LESS than the "
+       "duty-cycle month only because the duty cycle is what you are awake for",
+       _p24['hold_month'] < _p24['billed_month_no_credit'],
+       "held $%.2f vs used $%.2f" % (_p24['hold_month'],
+                                     _p24['billed_month_no_credit']))
+    ck("at 24/7 the held figure is exactly 24 x rate x 30",
+       abs(_p24['hold_month'] - _s['hourly'] * 24 * 30) < 0.01,
+       "held $%.2f, 24x rate x 30 = $%.2f" % (_p24['hold_month'],
+                                             _s['hourly'] * 24 * 30))
+_a37b = [p for p in doc['providers'] if p['id'] == 'agent-37']
+if _a37b:
+    _s = _a37b[0]['shapes']['agent']
+    ck("a keep of 1.00 makes held and used identical at 24/7",
+       abs(_s['periods']['24h']['hold_month']
+           - _s['periods']['24h']['billed_month_no_credit']) < 0.01)
+    ck("a keep of 1.00 makes holding dearer than a 10 h/day duty cycle",
+       _s['periods']['10h']['hold_month'] > _s['periods']['10h']['billed_month_no_credit'],
+       "held $%.2f vs used $%.2f" % (_s['periods']['10h']['hold_month'],
+                                     _s['periods']['10h']['billed_month_no_credit']))
+    # The Agent 37 reconciliation in GUARD L depends on this being the compute.
+    ck("the 24/7 held figure is still the vendor-reconcilable compute",
+       abs(_s['periods']['24h']['hold_month'] - 4.40) < 0.12,
+       "$%.2f" % _s['periods']['24h']['hold_month'])
+ck("lizard's keep rate is read first-party, not defaulted",
+   any((s.get('keep_source') or '').startswith('first-party')
+       for p in doc['providers'] if p['id'] == 'lizard'
+       for s in (p.get('shapes') or {}).values()))
+ck("createos's keep rate is read first-party as 1.00, not assumed 0",
+   any(abs(s.get('keep_rate', -1) - 1.0) < 1e-9
+       and (s.get('keep_source') or '').startswith('first-party')
+       for p in doc['providers'] if p['id'] == 'createos'
+       for s in (p.get('shapes') or {}).values()))
+ck("a first-party keep rate carries its quote and URL",
+   all(k.get('url', '').startswith('https://') and len(k.get('quote', '')) > 20
+       for k in pm.KEEP_RATES_FIRSTPARTY))
+ck("every priced row states a hold_month figure",
+   all('hold_month' in pd
+       for p in doc['providers'] for s in (p.get('shapes') or {}).values()
+       for pd in s['periods'].values()))
+ck("the catalogue prints the held column", 'held 24/7' in _cat2)
 
 print()
 print("TOTAL:", len(fails), "failures")

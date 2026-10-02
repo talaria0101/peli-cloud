@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T03:42:09Z",
+ "at": "2026-10-02T03:58:57Z",
  "caveat": "each profile is compared against the SAME demand, smoothed; these are bounds, not predicted bills",
  "demand_hours_per_day": 10.0,
  "profiles": {
@@ -4809,9 +4809,9 @@
    "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing"
   },
   {
-   "burst_month": 1.37,
+   "burst_month": 3.9,
    "granularity_s": 1,
-   "hourly": 0.009125,
+   "hourly": 0.026,
    "id": "oracle-cloud",
    "min_billed_hours": 0.016666666666666666,
    "min_billed_seconds": 60,
@@ -4824,8 +4824,8 @@
      "billed_day_h": 10.0,
      "demand_day_h": 10.0,
      "hours_each": 2.0,
-     "month": 2.74,
-     "month_smooth_same_demand": 2.74,
+     "month": 7.8,
+     "month_smooth_same_demand": 7.8,
      "penalty_x": 1.0,
      "starts": 5
     },
@@ -4833,14 +4833,14 @@
      "billed_day_h": 5.0,
      "demand_day_h": 5.0,
      "hours_each": 0.25,
-     "month": 1.37,
-     "month_smooth_same_demand": 1.37,
+     "month": 3.9,
+     "month_smooth_same_demand": 3.9,
      "penalty_x": 1.0,
      "starts": 20
     }
    },
    "smooth_day_h": 10.0,
-   "smooth_month": 2.74,
+   "smooth_month": 7.8,
    "url": "https://www.oracle.com/cloud/compute/pricing/"
   },
   {

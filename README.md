@@ -33,11 +33,15 @@ it, and a single monthly number cannot rank this market.
 | 1 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 1.81 |
 | 2 | [Lizard](https://lizard.build/pricing) | 0.0090 | 2.70 |
 | 3 | [Contabo](https://contabo.com/en-us/pricing/) | 0.0090 | 2.71 |
-| 4 | [Oracle Cloud](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 2.74 |
-| 5 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 3.12 |
-| 6 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 3.29 |
-| 7 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 3.50 |
-| 8 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 4.11 |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 3.12 |
+| 5 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 3.29 |
+| 6 | [netcup VPS](https://www.netcup.com/en/server/vps) | 0.0117 | 3.50 |
+| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 4.11 |
+| 8 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 4.44 |
+
+**Oracle Cloud is cheaper than all of these at $0.00** and is not in the table
+because it is free rather than cheap. Its Always Free allowance covers the
+shape; see below and catalogue table B.
 
 **Contabo and netcup are monthly VPSs, and they are here on purpose.** Their
 corpus cards encode a month's rent in the hourly field and say so, so the model
@@ -82,10 +86,28 @@ but its $20 plan is a *usage credit*, not a surcharge — boat's own docs say
 *"not a fee: every dollar comes back as sandbox time"*. So the bill cannot fall
 below $20 and boat is **$20 at every duty cycle**, including 1 h/day.
 
-**The cheapest providers round up to the hour.** Hetzner ranks fifth at
+**The cheapest providers round up to the hour.** Hetzner ranks fourth at
 $0.0104/hour and its billing FAQ says *"always round up the hourly usage"*, with
 powered-off servers billed. An agent that starts a sandbox per tool call pays 4x
 the headline rate. **25 of 202 providers** are affected; the full table is B1.
+
+**One provider is genuinely free, and it is not a `$0` plan.** Oracle's Always
+Free Ampere A1 allowance covers this shape outright. Oracle's own page says
+*"All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month for
+free for VM instances using the VM.Standard.A1.Flex shape."* A 2 vCPU / 4 GiB box
+at 24/7 uses 1,440 OCPU-h and 2,880 GB-h, so the bill is **$0.00 before any
+credit**. A 4 vCPU / 8 GiB box at 24/7 uses 2,880 OCPU-h, more than the
+allowance, and costs **$13.80**. The allowance is scoped to that one shape and
+the home region, and Oracle may reclaim capacity. Table B carries it as its own
+table with the arithmetic rather than folding it into the paid ranking.
+
+**Holding a box is a different question from using it, and the keep rate is the
+difference.** The catalogue now prints `held 24/7` beside the duty-cycle
+figures. Lizard costs **$0.27** whether you use it an hour a day or hold it
+around the clock, because its page says a paused sandbox does not bill. Contabo
+costs $0.27 to use for an hour a day and **$6.51** to hold. That is the whole
+argument for a sandbox over a VPS, and it was not visible in this catalogue
+before.
 
 **A `$0` tier is not a free tier.** 16 cards mark one `trial_only` because it
 blocks usage or expires. Replit's is $0 and buys nothing; its real entry is $18.

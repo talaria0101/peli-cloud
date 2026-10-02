@@ -31,6 +31,24 @@ three things ran first and can find them.
   credits); `rate_known()` demands a strictly positive hourly rate. Conflating
   them broke 219 providers once and hid a real `$0.50` size once. Both failures
   are recorded in `docs/FINDINGS.md` section 5.
+- **A free allowance is not a credit.** An allowance is a quantity of a
+  resource, denominated in the provider's own unit (Oracle: 1,500 OCPU-h and
+  9,000 GB-h a month), and is scoped to one SKU. `monthly_credit` is dollars
+  and cannot express it, which is why Oracle's row was wrong by the largest
+  amount in the catalogue. It is applied per resource-hour, only to the mode it
+  was granted against, and before the floor and the credit, because it is free
+  capacity rather than money. Converting an allowance into a dollar figure and
+  applying it to a cheaper SKU is how Azure's and Google's grants land on the
+  wrong meter in other catalogues.
+- **The keep rate is a fraction of HELD time, and it does not scale a duty
+  cycle.** The duty cycle is how long you hold the machine; the keep rate is how
+  much of that you are billed for. Multiplying the two bills a suspending
+  provider for zero hours. The keep rate belongs on the `held 24/7` figure,
+  which is the sandbox-versus-VPS comparison, and the table prints both.
+- **A card field can disagree with its own name.** `hour == month_cap` means the
+  corpus encoded a monthly rent in the hourly field, and the card's note says so.
+  173 sizes across 8 cards are encoded that way. Multiplying the rent by hours
+  published Hostinger at $17,632.80/month.
 - **Never call the subject's own engine to grade it.** `20` reads the raw card
   fields. `40` calls the upstream engine separately and the two are compared, so
   a disagreement is visible instead of inherited.

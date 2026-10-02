@@ -1,8 +1,8 @@
 {
- "at": "2026-10-02T03:42:39Z",
+ "at": "2026-10-02T03:59:26Z",
  "rows": [
   {
-   "bytes": 6781155,
+   "bytes": 6781156,
    "id": "scaleway",
    "status": "shell (no $ in HTML)",
    "url": "https://www.scaleway.com/en/pricing/virtual-instances/",
@@ -188,7 +188,7 @@
    "why": "named by the operator ($20 subscription edge case)"
   },
   {
-   "bytes": 204468,
+   "bytes": 204511,
    "id": "e2b",
    "matched": [
     [

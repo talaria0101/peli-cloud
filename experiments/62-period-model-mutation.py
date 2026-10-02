@@ -70,6 +70,18 @@ Each one is a real defect that shipped: these are not hypotheticals.
      a genuine hourly rate is not divided, that a cap which merely exists is not
      mistaken for equality, and that no published 24/7 row exceeds $8,000.
 
+ 10. the free allowance stops being priced
+     Oracle's A1 allowance covers the whole agent shape, so ignoring it published
+     $7.80 for a machine the vendor gives away. GUARD M checks the arithmetic
+     against hand-computed values, that the allowance is scoped to the one SKU
+     it was granted against, and that one day of usage cannot exhaust a monthly
+     allowance.
+
+ 11. the keep rate stops changing any number
+     It was computed, printed and never used. GUARD N checks that a keep of 0.00
+     does not zero the duty-cycle bill, that holding costs less than using for a
+     suspending provider, and that a keep of 1.00 leaves them equal at 24/7.
+
 Each mutation must make 61 FAIL. A mutation that leaves 61 passing is itself a
 finding: it means the guard does not cover the defect it claims to.
 
@@ -98,9 +110,11 @@ MUTATIONS = [
     (
         "console table sorted on the credit-adjusted price",
         MODEL,
-        'sel.sort(key=lambda r: r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"])',
-        'sel.sort(key=lambda r: r["shapes"][shape_name]["periods"][key]["billed_month_with_credit"])',
-        "61 GUARD F reports Run Cloud at rank 1 instead of Agent 37",
+        '            sel.sort(key=lambda r: (\n'
+        '                0.0 if r["shapes"][shape_name]["periods"][key].get("allowance_source")\n'
+        '                else r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"]))',
+        '            sel.sort(key=lambda r: r["shapes"][shape_name]["periods"][key]["billed_month_with_credit"])',
+        "61 GUARD F reports Run Cloud at rank 1 instead of the cheapest paid row",
     ),
     (
         "keep_basis read from the leaked loop variable",
@@ -165,6 +179,34 @@ MUTATIONS = [
         '        cap = None  # MUTATED: the monthly-rent signal is ignored\n'
         '        if False:',
         "61 GUARD K reports hostinger-vps back at $17,632.80/month",
+    ),
+    (
+        "the free allowance is ignored again",
+        MODEL,
+        '    for unit, rate_field in ALLOWANCE_UNITS.items():\n        rate = rates.get(unit)',
+        '    for unit, rate_field in []:  # MUTATED: no unit is priced\n        rate = rates.get(unit)',
+        "61 GUARD M reports oracle at $7.80 instead of $0.00",
+    ),
+    (
+        "the allowance is applied to the wrong mode",
+        MODEL,
+        '            if a["provider"] == pid and a["mode"] == mode_key]',
+        '            if a["provider"] == pid]  # MUTATED: scoped to no single SKU',
+        "61 GUARD M reports the allowance leaking onto oracle\'s non-A1 modes",
+    ),
+    (
+        "the keep rate stops affecting any number again",
+        MODEL,
+        '                "hold_month": round(c["hourly"] * billed_held_day * DAYS_PER_MONTH, 4),',
+        '                "hold_month": round(c["hourly"] * hours_per_day * DAYS_PER_MONTH, 4),',
+        "61 GUARD N reports the held figure identical to the duty cycle",
+    ),
+    (
+        "the keep rate is applied to the duty cycle, billing idle time",
+        MODEL,
+        '                held_h = hours_per_day\n                compute_day = c["hourly"] * held_h',
+        '                held_h = hours_per_day\n                keep_used = keep if keep is not None else 1.0\n                compute_day = c["hourly"] * held_h * keep_used  # MUTATED',
+        "61 GUARD N reports namespace at $0.00 for a suspending provider",
     ),
 ]
 
