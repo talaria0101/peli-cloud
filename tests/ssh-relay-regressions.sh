@@ -56,7 +56,18 @@ if [ ! -x "$WORK/dropbear" ] || [ ! -x "$WORK/dropssh" ]; then
   echo "setup building fixtures via tools/ssh-relay-check.sh ..."
   sh tools/ssh-relay-check.sh >/tmp/ssh-relay-setup.log 2>&1
   setup_rc=$?
-  if [ -x "$WORK/dropbear" ] && [ -x "$WORK/dropssh" ]; then
+  # ⛔ "UNPACKED" IS NOT "WORKING". The first version of this fix tested only
+  # that the binaries existed, so a run with an unusable RELAY counted as
+  # fixtures-built and every network clause then FAILED - the exact
+  # red-on-arrival gate this whole change exists to remove. Control: run the
+  # suite with the relay pointed at a dead address and no network; it must SKIP
+  # the network clauses, not fail them.
+  #
+  # ⛔ AND THE TEST IS -s, NOT -f. `dropssh pair` creates pair.txt and writes
+  # the error into pair.err before failing, so the file EXISTS and is ZERO
+  # BYTES when the relay was unreachable. A -f test counted that as success.
+  if [ -x "$WORK/dropbear" ] && [ -x "$WORK/dropssh" ] && [ -s "$WORK/hostkey" ] \
+     && [ -s "$WORK/pair.txt" ]; then
     built=yes
   else
     echo "setup FAILED (rc=$setup_rc); clauses needing the release will be SKIPPED."
