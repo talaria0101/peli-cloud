@@ -1,6 +1,6 @@
 # peli-cloud — every provider, cheapest first, at every period
 
-**Generated 2026-10-02T03:12:53Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
+**Generated 2026-10-02T03:25:41Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
 
 ## How to read this
 
@@ -114,7 +114,7 @@ Every table below is priced at three shapes and four duty cycles:
 | 59 | [Buildkite hosted agents](https://buildkite.com/pricing) | macos | $16 | 33 machine-hours (1 h/day for a month) | `buildkite-hosted` |
 | 60 | [UCloud Agent Sandbox](https://astraflow.ucloud.cn/docs/agent-sandbox) | agent-sandbox | $15.4504 | 240 machine-hours (8 h/day for a month) | `ucloud` |
 | 61 | [Browser Use Cloud](https://browser-use.com/pricing) | browser (browser product, not a machine) | $15 | - | `browser-use` |
-| 62 | [Lizard](https://lizard.build/pricing) | agent-sandbox | $10 | 556 machine-hours (19 h/day for a month) | `lizard` |
+| 62 | [Lizard](https://lizard.build/pricing) | agent-sandbox | $10 | 1111 machine-hours (37 h/day for a month) | `lizard` |
 | 63 | [MIOSA](https://miosa.ai/pricing) | agent-sandbox | $10 | 64 machine-hours (2 h/day for a month) | `miosa` |
 | 64 | [Notte](https://www.notte.cc/pricing) | browser (browser product, not a machine) | $10 | - | `notte` |
 | 65 | [OpenComputer](https://opencomputer.dev/sandboxes) | agent-sandbox | $10 | 26 machine-hours (1 h/day for a month) | `opencomputer` |
@@ -231,20 +231,24 @@ Cheapest first within each cell. `$/h` is the published machine rate; the period
 | 11 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.01 | 0.06 | 0.24 | 0.24 | - | 1.00 | - | yes | `ionos` |
 | 12 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.01 | 0.06 | 0.25 | 0.25 | - | 1.00 | - | yes | `kakao-cloud` |
 | 13 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.01 | 0.06 | 0.27 | 0.27 | - | 1.00 | - | yes | `digitalocean` |
-| 14 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.01 | 0.06 | 0.27 | 0.27 | - | 1.00 | - | yes | `gcore` |
-| 15 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 0.31 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 16 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.01 | 0.08 | 0.32 | 0.32 | - | 1.00 | - | **no** | `moonshot-kimi` |
-| 17 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.01 | 0.08 | 0.33 | 0.33 | - | 1.00 | - | yes | `upstash-box` |
-| 18 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.01 | 0.08 | 0.36 | 0.36 | - | 1.00 | - | yes | `verda` |
-| 19 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.01 | 0.09 | 0.39 | 0.39 | - | 1.00 | - | yes | `ovhcloud` |
-| 20 | [machine0](https://machine0.io/) | 0.0130 | 0.01 | 0.09 | 0.39 | 0.39 | - | 1.00 | - | yes | `machine0` |
-| 21 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.01 | 0.10 | 0.41 | 0.41 | - | 1.00 | - | yes | `kamatera` |
-| 22 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.01 | 0.10 | 0.42 | 0.42 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 23 | [Exoscale](https://www.exoscale.com/pricing/) | 0.0146 | 0.01 | 0.10 | 0.44 | 0.44 | - | 1.00 | - | yes | `exoscale` |
-| 24 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | 0.0149 | 0.01 | 0.10 | 0.45 | 0.45 | - | 1.00 | - | yes | `tencent-cloud-studio` |
-| 25 | [Sandbox0](https://sandbox0.ai/pricing) | 0.0150 | 0.01 | 0.10 | 0.45 | 0.45 | - | 1.00 | - | yes | `sandbox0` |
+| 14 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.01 | 0.06 | 0.27 | 0.27 | - | 1.00 | - | **disputed** | `lizard` |
+| 15 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.01 | 0.06 | 0.27 | 0.27 | - | 1.00 | - | yes | `gcore` |
+| 16 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 0.31 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 17 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.01 | 0.08 | 0.32 | 0.32 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 18 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.01 | 0.08 | 0.33 | 0.33 | - | 1.00 | - | yes | `upstash-box` |
+| 19 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.01 | 0.08 | 0.36 | 0.36 | - | 1.00 | - | yes | `verda` |
+| 20 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.01 | 0.09 | 0.39 | 0.39 | - | 1.00 | - | yes | `ovhcloud` |
+| 21 | [machine0](https://machine0.io/) | 0.0130 | 0.01 | 0.09 | 0.39 | 0.39 | - | 1.00 | - | yes | `machine0` |
+| 22 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.01 | 0.10 | 0.41 | 0.41 | - | 1.00 | - | yes | `kamatera` |
+| 23 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.01 | 0.10 | 0.42 | 0.42 | - | 1.00 | - | yes | `alibaba-ecs` |
+| 24 | [Exoscale](https://www.exoscale.com/pricing/) | 0.0146 | 0.01 | 0.10 | 0.44 | 0.44 | - | 1.00 | - | yes | `exoscale` |
+| 25 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | 0.0149 | 0.01 | 0.10 | 0.45 | 0.45 | - | 1.00 | - | yes | `tencent-cloud-studio` |
 
 _181 more at this duty cycle; the full rank is table C._
+
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
 
 #### 4h per day — 206 paid providers
 
@@ -263,20 +267,24 @@ _181 more at this duty cycle; the full rank is table C._
 | 11 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.03 | 0.22 | 0.96 | 0.96 | - | 1.00 | - | yes | `ionos` |
 | 12 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.03 | 0.23 | 0.98 | 0.98 | - | 1.00 | - | yes | `kakao-cloud` |
 | 13 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.04 | 0.25 | 1.07 | 1.07 | - | 1.00 | - | yes | `digitalocean` |
-| 14 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.04 | 0.25 | 1.09 | 1.09 | - | 1.00 | - | yes | `gcore` |
-| 15 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 1.25 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 16 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.04 | 0.30 | 1.29 | 1.29 | - | 1.00 | - | **no** | `moonshot-kimi` |
-| 17 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.04 | 0.31 | 1.32 | 1.32 | - | 1.00 | - | yes | `upstash-box` |
-| 18 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.05 | 0.34 | 1.44 | 1.44 | - | 1.00 | - | yes | `verda` |
-| 19 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.05 | 0.36 | 1.55 | 1.55 | - | 1.00 | - | yes | `ovhcloud` |
-| 20 | [machine0](https://machine0.io/) | 0.0130 | 0.05 | 0.36 | 1.56 | 1.56 | - | 1.00 | - | yes | `machine0` |
-| 21 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.05 | 0.38 | 1.64 | 1.64 | - | 1.00 | - | yes | `kamatera` |
-| 22 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.06 | 0.39 | 1.69 | 1.69 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 23 | [Exoscale](https://www.exoscale.com/pricing/) | 0.0146 | 0.06 | 0.41 | 1.75 | 1.75 | - | 1.00 | - | yes | `exoscale` |
-| 24 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | 0.0149 | 0.06 | 0.42 | 1.79 | 1.79 | - | 1.00 | - | yes | `tencent-cloud-studio` |
-| 25 | [Sandbox0](https://sandbox0.ai/pricing) | 0.0150 | 0.06 | 0.42 | 1.80 | 1.80 | - | 1.00 | - | yes | `sandbox0` |
+| 14 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.04 | 0.25 | 1.08 | 1.08 | - | 1.00 | - | **disputed** | `lizard` |
+| 15 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.04 | 0.25 | 1.09 | 1.09 | - | 1.00 | - | yes | `gcore` |
+| 16 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 1.25 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 17 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.04 | 0.30 | 1.29 | 1.29 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 18 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.04 | 0.31 | 1.32 | 1.32 | - | 1.00 | - | yes | `upstash-box` |
+| 19 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.05 | 0.34 | 1.44 | 1.44 | - | 1.00 | - | yes | `verda` |
+| 20 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.05 | 0.36 | 1.55 | 1.55 | - | 1.00 | - | yes | `ovhcloud` |
+| 21 | [machine0](https://machine0.io/) | 0.0130 | 0.05 | 0.36 | 1.56 | 1.56 | - | 1.00 | - | yes | `machine0` |
+| 22 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.05 | 0.38 | 1.64 | 1.64 | - | 1.00 | - | yes | `kamatera` |
+| 23 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.06 | 0.39 | 1.69 | 1.69 | - | 1.00 | - | yes | `alibaba-ecs` |
+| 24 | [Exoscale](https://www.exoscale.com/pricing/) | 0.0146 | 0.06 | 0.41 | 1.75 | 1.75 | - | 1.00 | - | yes | `exoscale` |
+| 25 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | 0.0149 | 0.06 | 0.42 | 1.79 | 1.79 | - | 1.00 | - | yes | `tencent-cloud-studio` |
 
 _181 more at this duty cycle; the full rank is table C._
+
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
 
 #### 10h per day — 206 paid providers
 
@@ -295,20 +303,24 @@ _181 more at this duty cycle; the full rank is table C._
 | 11 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.08 | 0.56 | 2.39 | 2.39 | - | 1.00 | - | yes | `ionos` |
 | 12 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.08 | 0.57 | 2.45 | 2.45 | - | 1.00 | - | yes | `kakao-cloud` |
 | 13 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.09 | 0.63 | 2.68 | 2.68 | - | 1.00 | - | yes | `digitalocean` |
-| 14 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.09 | 0.64 | 2.73 | 2.73 | - | 1.00 | - | yes | `gcore` |
-| 15 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 3.12 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 16 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.11 | 0.75 | 3.22 | 3.22 | - | 1.00 | - | **no** | `moonshot-kimi` |
-| 17 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.11 | 0.77 | 3.29 | 3.29 | - | 1.00 | - | yes | `upstash-box` |
-| 18 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.12 | 0.84 | 3.60 | 3.60 | - | 1.00 | - | yes | `verda` |
-| 19 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.13 | 0.90 | 3.87 | 3.87 | - | 1.00 | - | yes | `ovhcloud` |
-| 20 | [machine0](https://machine0.io/) | 0.0130 | 0.13 | 0.91 | 3.90 | 3.90 | - | 1.00 | - | yes | `machine0` |
-| 21 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.14 | 0.96 | 4.11 | 4.11 | - | 1.00 | - | yes | `kamatera` |
-| 22 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.14 | 0.99 | 4.23 | 4.23 | - | 1.00 | - | yes | `alibaba-ecs` |
-| 23 | [Exoscale](https://www.exoscale.com/pricing/) | 0.0146 | 0.15 | 1.02 | 4.37 | 4.37 | - | 1.00 | - | yes | `exoscale` |
-| 24 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | 0.0149 | 0.15 | 1.04 | 4.47 | 4.47 | - | 1.00 | - | yes | `tencent-cloud-studio` |
-| 25 | [Sandbox0](https://sandbox0.ai/pricing) | 0.0150 | 0.15 | 1.05 | 4.50 | 4.50 | - | 1.00 | - | yes | `sandbox0` |
+| 14 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.09 | 0.63 | 2.70 | 2.70 | - | 1.00 | - | **disputed** | `lizard` |
+| 15 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.09 | 0.64 | 2.73 | 2.73 | - | 1.00 | - | yes | `gcore` |
+| 16 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 3.12 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 17 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.11 | 0.75 | 3.22 | 3.22 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 18 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.11 | 0.77 | 3.29 | 3.29 | - | 1.00 | - | yes | `upstash-box` |
+| 19 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.12 | 0.84 | 3.60 | 3.60 | - | 1.00 | - | yes | `verda` |
+| 20 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.13 | 0.90 | 3.87 | 3.87 | - | 1.00 | - | yes | `ovhcloud` |
+| 21 | [machine0](https://machine0.io/) | 0.0130 | 0.13 | 0.91 | 3.90 | 3.90 | - | 1.00 | - | yes | `machine0` |
+| 22 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.14 | 0.96 | 4.11 | 4.11 | - | 1.00 | - | yes | `kamatera` |
+| 23 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.14 | 0.99 | 4.23 | 4.23 | - | 1.00 | - | yes | `alibaba-ecs` |
+| 24 | [Exoscale](https://www.exoscale.com/pricing/) | 0.0146 | 0.15 | 1.02 | 4.37 | 4.37 | - | 1.00 | - | yes | `exoscale` |
+| 25 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | 0.0149 | 0.15 | 1.04 | 4.47 | 4.47 | - | 1.00 | - | yes | `tencent-cloud-studio` |
 
 _181 more at this duty cycle; the full rank is table C._
+
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
 
 #### 24h per day — 206 paid providers
 
@@ -327,20 +339,24 @@ _181 more at this duty cycle; the full rank is table C._
 | 11 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0080 | 0.19 | 1.34 | 5.73 | 5.73 | - | 1.00 | - | yes | `ionos` |
 | 12 | [KakaoCloud Virtual Machine](https://www.kakaocloud.com/services/virtual-machine/pricing) | 0.0082 | 0.20 | 1.37 | 5.89 | 5.89 | - | 1.00 | - | yes | `kakao-cloud` |
 | 13 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | 0.0089 | 0.21 | 1.50 | 6.43 | 6.43 | - | 1.00 | - | yes | `digitalocean` |
-| 14 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.22 | 1.53 | 6.55 | 6.55 | - | 1.00 | - | yes | `gcore` |
-| 15 | [Fly.io Machines](https://fly.io/pricing) | 0.0093 | 0.22 | 1.56 | 6.70 | 6.70 | - | 1.00 | $5 | yes | `fly-machines` |
-| 16 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 17 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.26 | 1.80 | 7.73 | 7.73 | - | 1.00 | - | **no** | `moonshot-kimi` |
-| 18 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.26 | 1.84 | 7.89 | 7.89 | - | 1.00 | - | yes | `upstash-box` |
-| 19 | [Zeabur](https://zeabur.com/pricing) | 0.0041 | 0.10 | 0.69 | 7.96 | 7.96 | - | 1.00 | - | **no** | `zeabur` |
-| 20 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.29 | 2.02 | 8.64 | 8.64 | - | 1.00 | - | yes | `verda` |
-| 21 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.31 | 2.17 | 9.29 | 9.29 | - | 1.00 | - | yes | `ovhcloud` |
-| 22 | [machine0](https://machine0.io/) | 0.0130 | 0.31 | 2.18 | 9.36 | 9.36 | - | 1.00 | - | yes | `machine0` |
-| 23 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.33 | 2.30 | 9.86 | 9.86 | - | 1.00 | - | yes | `kamatera` |
-| 24 | [Prized](https://prized.dev/docs/billing) | 0.0137 | 0.33 | 2.30 | 10.00 | 10.00 | - | 1.00 | $10 | yes | `prized` |
-| 25 | [Alibaba Cloud ECS International](https://www.alibabacloud.com/en/product/ecs/pricing) | 0.0141 | 0.34 | 2.37 | 10.15 | 10.15 | - | 1.00 | - | yes | `alibaba-ecs` |
+| 14 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.22 | 1.51 | 6.48 | 6.48 | - | 1.00 | - | **disputed** | `lizard` |
+| 15 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0091 | 0.22 | 1.53 | 6.55 | 6.55 | - | 1.00 | - | yes | `gcore` |
+| 16 | [Fly.io Machines](https://fly.io/pricing) | 0.0093 | 0.22 | 1.56 | 6.70 | 6.70 | - | 1.00 | $5 | yes | `fly-machines` |
+| 17 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 18 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | 0.0107 | 0.26 | 1.80 | 7.73 | 7.73 | - | 1.00 | - | **no** | `moonshot-kimi` |
+| 19 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.26 | 1.84 | 7.89 | 7.89 | - | 1.00 | - | yes | `upstash-box` |
+| 20 | [Zeabur](https://zeabur.com/pricing) | 0.0041 | 0.10 | 0.69 | 7.96 | 7.96 | - | 1.00 | - | **no** | `zeabur` |
+| 21 | [Verda (formerly DataCrunch)](https://verda.com/pricing) | 0.0120 | 0.29 | 2.02 | 8.64 | 8.64 | - | 1.00 | - | yes | `verda` |
+| 22 | [OVHcloud Public Cloud](https://us.ovhcloud.com/public-cloud/prices/) | 0.0129 | 0.31 | 2.17 | 9.29 | 9.29 | - | 1.00 | - | yes | `ovhcloud` |
+| 23 | [machine0](https://machine0.io/) | 0.0130 | 0.31 | 2.18 | 9.36 | 9.36 | - | 1.00 | - | yes | `machine0` |
+| 24 | [Kamatera](https://www.kamatera.com/pricing/) | 0.0137 | 0.33 | 2.30 | 9.86 | 9.86 | - | 1.00 | - | yes | `kamatera` |
+| 25 | [Prized](https://prized.dev/docs/billing) | 0.0137 | 0.33 | 2.30 | 10.00 | 10.00 | - | 1.00 | $10 | yes | `prized` |
 
 _181 more at this duty cycle; the full rank is table C._
+
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
 
 ### 2 vCPU / 4 GiB — agent
 
@@ -349,12 +365,12 @@ _181 more at this duty cycle; the full rank is table C._
 | # | provider | $/hour | $/day | $/week | $/month | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.01 | 0.04 | 0.18 | 0.18 | - | 1.00 | - | yes | `agent-37` |
-| 2 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.01 | 0.06 | 0.27 | 0.27 | - | 1.00 | - | yes | `oracle-cloud` |
-| 3 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 0.31 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 4 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.01 | 0.08 | 0.33 | 0.33 | - | 1.00 | - | yes | `upstash-box` |
-| 5 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.01 | 0.10 | 0.41 | 0.41 | - | 1.00 | - | yes | `zipbox` |
-| 6 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.01 | 0.10 | 0.44 | 0.44 | - | 1.00 | - | yes | `ionos` |
-| 7 | [Lizard](https://lizard.build/pricing) | 0.0180 | 0.02 | 0.13 | 0.54 | 0.54 | - | 1.00 | - | yes | `lizard` |
+| 2 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.01 | 0.06 | 0.27 | 0.27 | - | 1.00 | - | **disputed** | `lizard` |
+| 3 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.01 | 0.06 | 0.27 | 0.27 | - | 1.00 | - | yes | `oracle-cloud` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.01 | 0.07 | 0.31 | 0.31 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 5 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.01 | 0.08 | 0.33 | 0.33 | - | 1.00 | - | yes | `upstash-box` |
+| 6 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.01 | 0.10 | 0.41 | 0.41 | - | 1.00 | - | yes | `zipbox` |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.01 | 0.10 | 0.44 | 0.44 | - | 1.00 | - | yes | `ionos` |
 | 8 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.02 | 0.14 | 0.58 | 0.58 | - | 1.00 | - | yes | `gcore` |
 | 9 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.02 | 0.14 | 0.60 | 0.60 | - | 1.00 | - | yes | `shellbox` |
 | 10 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.02 | 0.15 | 0.62 | 0.62 | - | 1.00 | - | yes | `upcloud` |
@@ -376,17 +392,21 @@ _181 more at this duty cycle; the full rank is table C._
 
 _177 more at this duty cycle; the full rank is table C._
 
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
+
 #### 4h per day — 202 paid providers
 
 | # | provider | $/hour | $/day | $/week | $/month | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.02 | 0.17 | 0.72 | 0.72 | - | 1.00 | - | yes | `agent-37` |
-| 2 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.04 | 0.26 | 1.09 | 1.09 | - | 1.00 | - | yes | `oracle-cloud` |
-| 3 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 1.25 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 4 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.04 | 0.31 | 1.32 | 1.32 | - | 1.00 | - | yes | `upstash-box` |
-| 5 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.05 | 0.38 | 1.64 | 1.64 | - | 1.00 | - | yes | `zipbox` |
-| 6 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.06 | 0.41 | 1.77 | 1.77 | - | 1.00 | - | yes | `ionos` |
-| 7 | [Lizard](https://lizard.build/pricing) | 0.0180 | 0.07 | 0.50 | 2.16 | 2.16 | - | 1.00 | - | yes | `lizard` |
+| 2 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.04 | 0.25 | 1.08 | 1.08 | - | 1.00 | - | **disputed** | `lizard` |
+| 3 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.04 | 0.26 | 1.09 | 1.09 | - | 1.00 | - | yes | `oracle-cloud` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.04 | 0.29 | 1.25 | 1.25 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 5 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.04 | 0.31 | 1.32 | 1.32 | - | 1.00 | - | yes | `upstash-box` |
+| 6 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.05 | 0.38 | 1.64 | 1.64 | - | 1.00 | - | yes | `zipbox` |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.06 | 0.41 | 1.77 | 1.77 | - | 1.00 | - | yes | `ionos` |
 | 8 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.08 | 0.54 | 2.32 | 2.32 | - | 1.00 | - | yes | `gcore` |
 | 9 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.08 | 0.56 | 2.40 | 2.40 | - | 1.00 | - | yes | `shellbox` |
 | 10 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.08 | 0.58 | 2.50 | 2.50 | - | 1.00 | - | yes | `upcloud` |
@@ -408,17 +428,21 @@ _177 more at this duty cycle; the full rank is table C._
 
 _177 more at this duty cycle; the full rank is table C._
 
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
+
 #### 10h per day — 202 paid providers
 
 | # | provider | $/hour | $/day | $/week | $/month | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.06 | 0.42 | 1.81 | 1.81 | - | 1.00 | - | yes | `agent-37` |
-| 2 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.09 | 0.64 | 2.74 | 2.74 | - | 1.00 | - | yes | `oracle-cloud` |
-| 3 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 3.12 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 4 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.11 | 0.77 | 3.29 | 3.29 | - | 1.00 | - | yes | `upstash-box` |
-| 5 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.14 | 0.96 | 4.11 | 4.11 | - | 1.00 | - | yes | `zipbox` |
-| 6 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.15 | 1.04 | 4.44 | 4.44 | - | 1.00 | - | yes | `ionos` |
-| 7 | [Lizard](https://lizard.build/pricing) | 0.0180 | 0.18 | 1.26 | 5.40 | 5.40 | - | 1.00 | - | yes | `lizard` |
+| 2 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.09 | 0.63 | 2.70 | 2.70 | - | 1.00 | - | **disputed** | `lizard` |
+| 3 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.09 | 0.64 | 2.74 | 2.74 | - | 1.00 | - | yes | `oracle-cloud` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.10 | 0.73 | 3.12 | 3.12 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 5 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.11 | 0.77 | 3.29 | 3.29 | - | 1.00 | - | yes | `upstash-box` |
+| 6 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.14 | 0.96 | 4.11 | 4.11 | - | 1.00 | - | yes | `zipbox` |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.15 | 1.04 | 4.44 | 4.44 | - | 1.00 | - | yes | `ionos` |
 | 8 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.19 | 1.35 | 5.80 | 5.80 | - | 1.00 | - | yes | `gcore` |
 | 9 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.20 | 1.40 | 6.00 | 6.00 | - | 1.00 | - | yes | `shellbox` |
 | 10 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.21 | 1.46 | 6.25 | 6.25 | - | 1.00 | - | yes | `upcloud` |
@@ -440,18 +464,22 @@ _177 more at this duty cycle; the full rank is table C._
 
 _177 more at this duty cycle; the full rank is table C._
 
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
+
 #### 24h per day — 202 paid providers
 
 | # | provider | $/hour | $/day | $/week | $/month | after credit | credit | keep | floor | buy it? | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 0.14 | 1.01 | 4.34 | 4.34 | - | 1.00 | - | yes | `agent-37` |
-| 2 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.22 | 1.53 | 6.57 | 6.57 | - | 1.00 | - | yes | `oracle-cloud` |
-| 3 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | - | 1.00 | - | yes | `hetzner-cloud` |
-| 4 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.26 | 1.84 | 7.89 | 7.89 | - | 1.00 | - | yes | `upstash-box` |
-| 5 | [Zeabur](https://zeabur.com/pricing) | 0.0055 | 0.13 | 0.92 | 8.95 | 8.95 | - | 1.00 | - | **no** | `zeabur` |
-| 6 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.33 | 2.30 | 9.86 | 9.86 | - | 1.00 | - | yes | `zipbox` |
-| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.35 | 2.48 | 10.65 | 10.65 | - | 1.00 | - | yes | `ionos` |
-| 8 | [Lizard](https://lizard.build/pricing) | 0.0180 | 0.43 | 3.02 | 12.96 | 12.96 | - | 1.00 | - | yes | `lizard` |
+| 2 | [Lizard](https://lizard.build/pricing) | 0.0090 | 0.22 | 1.51 | 6.48 | 6.48 | - | 1.00 | - | **disputed** | `lizard` |
+| 3 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 0.22 | 1.53 | 6.57 | 6.57 | - | 1.00 | - | yes | `oracle-cloud` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 0.25 | 1.75 | 7.49 | 7.49 | - | 1.00 | - | yes | `hetzner-cloud` |
+| 5 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 0.26 | 1.84 | 7.89 | 7.89 | - | 1.00 | - | yes | `upstash-box` |
+| 6 | [Zeabur](https://zeabur.com/pricing) | 0.0055 | 0.13 | 0.92 | 8.95 | 8.95 | - | 1.00 | - | **no** | `zeabur` |
+| 7 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 0.33 | 2.30 | 9.86 | 9.86 | - | 1.00 | - | yes | `zipbox` |
+| 8 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 0.35 | 2.48 | 10.65 | 10.65 | - | 1.00 | - | yes | `ionos` |
 | 9 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 0.46 | 3.25 | 13.92 | 13.92 | - | 1.00 | - | yes | `gcore` |
 | 10 | [shellbox](https://shellbox.dev/) | 0.0200 | 0.48 | 3.36 | 14.40 | 14.40 | - | 1.00 | - | yes | `shellbox` |
 | 11 | [UpCloud](https://upcloud.com/pricing/) | 0.0208 | 0.50 | 3.50 | 15.00 | 15.00 | - | 1.00 | - | yes | `upcloud` |
@@ -471,6 +499,10 @@ _177 more at this duty cycle; the full rank is table C._
 | 25 | [IBM Cloud VPC](https://www.ibm.com/products/virtual-servers/pricing) | 0.0328 | 0.79 | 5.51 | 23.59 | 23.59 | - | 1.00 | - | yes | `ibm-cloud-vpc` |
 
 _177 more at this duty cycle; the full rank is table C._
+
+**Rows marked `disputed` are not confirmed prices.** A size the vendor advertises is missing from the corpus card, so the rate here is the vendor's own and the corpus discarded it:
+
+- **Lizard** — Small (2 vCPU / 4 GB RAM) at $0.009/h, advertised on [Lizard](https://lizard.build/pricing): "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour. Medium is the default." The card carries only the default size, so the rate was absent from the ranking. Conflict: lizard.build/docs says create options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB rather than 8 GB; the pricing page and the docs disagree and no changelog dates either
 
 ### 4 vCPU / 8 GiB — devbox
 
@@ -683,13 +715,13 @@ Nothing truncated. One row per provider that priced at any shape and period, ord
 | # | provider | category | isolation | $/h agent | 1h/day | 4h/day | 10h/day | 24h/day | free/mo | floor | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | [Agent 37](https://www.agent37.com/pricing) | agent-sandbox | gvisor | 0.0060 | 0.18 | 0.72 | 1.81 | 4.34 | - | - | `agent-37` |
-| 2 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | hyperscaler | vm | 0.0091 | 0.27 | 1.09 | 2.74 | 6.57 | - | - | `oracle-cloud` |
-| 3 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | hyperscaler | vm | 0.0104 | 0.31 | 1.25 | 3.12 | 7.49 | - | - | `hetzner-cloud` |
-| 4 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | agent-sandbox | - | 0.0107 | 0.32 | 1.29 | 3.22 | 7.73 | - | - | `moonshot-kimi` |
-| 5 | [Upstash Box](https://upstash.com/pricing/box) | agent-sandbox | container | 0.0110 | 0.33 | 1.32 | 3.29 | 7.89 | - | - | `upstash-box` |
-| 6 | [zipbox](https://zipbox.ai/pricing) | agent-sandbox | firecracker | 0.0137 | 0.41 | 1.64 | 4.11 | 9.86 | - | - | `zipbox` |
-| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | hyperscaler | vm | 0.0148 | 0.44 | 1.77 | 4.44 | 10.65 | - | - | `ionos` |
-| 8 | [Lizard](https://lizard.build/pricing) | agent-sandbox | container | 0.0180 | 0.54 | 2.16 | 5.40 | 12.96 | - | - | `lizard` |
+| 2 | [Lizard](https://lizard.build/pricing) | agent-sandbox | container | 0.0090 | 0.27 | 1.08 | 2.70 | 6.48 | - | - | `lizard` |
+| 3 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | hyperscaler | vm | 0.0091 | 0.27 | 1.09 | 2.74 | 6.57 | - | - | `oracle-cloud` |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | hyperscaler | vm | 0.0104 | 0.31 | 1.25 | 3.12 | 7.49 | - | - | `hetzner-cloud` |
+| 5 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | agent-sandbox | - | 0.0107 | 0.32 | 1.29 | 3.22 | 7.73 | - | - | `moonshot-kimi` |
+| 6 | [Upstash Box](https://upstash.com/pricing/box) | agent-sandbox | container | 0.0110 | 0.33 | 1.32 | 3.29 | 7.89 | - | - | `upstash-box` |
+| 7 | [zipbox](https://zipbox.ai/pricing) | agent-sandbox | firecracker | 0.0137 | 0.41 | 1.64 | 4.11 | 9.86 | - | - | `zipbox` |
+| 8 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | hyperscaler | vm | 0.0148 | 0.44 | 1.77 | 4.44 | 10.65 | - | - | `ionos` |
 | 9 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | hyperscaler | vm | 0.0193 | 0.58 | 2.32 | 5.80 | 13.92 | - | - | `gcore` |
 | 10 | [shellbox](https://shellbox.dev/) | agent-sandbox | firecracker | 0.0200 | 0.60 | 2.40 | 6.00 | 14.40 | - | - | `shellbox` |
 | 11 | [UpCloud](https://upcloud.com/pricing/) | hyperscaler | vm | 0.0208 | 0.62 | 2.50 | 6.25 | 15.00 | - | - | `upcloud` |

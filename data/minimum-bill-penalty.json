@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T03:12:24Z",
+ "at": "2026-10-02T03:25:12Z",
  "caveat": "each profile is compared against the SAME demand, smoothed; these are bounds, not predicted bills",
  "demand_hours_per_day": 10.0,
  "profiles": {
@@ -3864,9 +3864,9 @@
    "url": "https://www.akamai.com/cloud/pricing"
   },
   {
-   "burst_month": 2.7,
+   "burst_month": 1.35,
    "granularity_s": 1,
-   "hourly": 0.018,
+   "hourly": 0.009,
    "id": "lizard",
    "min_billed_hours": 0.0,
    "min_billed_seconds": 0,
@@ -3879,8 +3879,8 @@
      "billed_day_h": 10.0,
      "demand_day_h": 10.0,
      "hours_each": 2.0,
-     "month": 5.4,
-     "month_smooth_same_demand": 5.4,
+     "month": 2.7,
+     "month_smooth_same_demand": 2.7,
      "penalty_x": 1.0,
      "starts": 5
     },
@@ -3888,14 +3888,14 @@
      "billed_day_h": 5.0,
      "demand_day_h": 5.0,
      "hours_each": 0.25,
-     "month": 2.7,
-     "month_smooth_same_demand": 2.7,
+     "month": 1.35,
+     "month_smooth_same_demand": 1.35,
      "penalty_x": 1.0,
      "starts": 20
     }
    },
    "smooth_day_h": 10.0,
-   "smooth_month": 5.4,
+   "smooth_month": 2.7,
    "url": "https://lizard.build/pricing"
   },
   {

@@ -16,6 +16,7 @@ Defects guarded:
   C  fee_is_credit added as a surcharge instead of applied as a floor
   D  a credit-covered bill sorting as if it were free
   E  the renderer ranking on the credit-adjusted price
+  I  a size the corpus card dropped that the vendor advertises (lizard)
 
 Exit codes: 0 every guard held, 1 at least one failed, 2 could not run.
 """
@@ -204,6 +205,64 @@ ck("no row carries a keep_basis from another mode", not mis, str(mis[:3]))
 ck("every priced row states its keep basis",
    all(s.get('keep_basis') for p in doc['providers']
        for s in (p.get('shapes') or {}).values()))
+
+print("GUARD I: a size the card dropped but the vendor advertises is priced and flagged")
+# lizard's card carries only the default size (medium, 4 vCPU, $0.018) and sets
+# min_vcpu 4, while the vendor's own pricing page sells Small (2 vCPU / 4 GB) at
+# $0.009/h. The card's own note quotes that sentence. Before the correction the
+# row was $5.40/month at 10 h/day; the advertised size makes it $2.70, which is
+# second only to Agent 37.
+adv = pm.advertised_sizes("lizard", "sandbox")
+ck("lizard advertises a size the card dropped", len(adv) == 1, "found %d" % len(adv))
+if adv:
+    a = adv[0]
+    ck("the advertised rate is the page's $0.009/h", a["hour"] == 0.009, str(a["hour"]))
+    ck("it carries the first-party quote", "$0.009/hour" in a["quote"])
+    ck("it carries the URL it was read from", a["url"].startswith("https://"))
+    ck("it carries the conflict, not just the price", bool(a.get("disputed")))
+    ck("it is a real fit for the agent shape", a["vcpu"] >= 2 and a["ram_gib"] >= 4)
+    # Through the REAL code path, not by reimplementing the arithmetic. The
+    # mode key matters: advertised_sizes is looked up by (provider, mode), so a
+    # card passed without its key finds nothing and returns the card's own
+    # price. That is the correct behaviour, and an earlier version of this guard
+    # omitted the key and read the omission as a failure of the correction.
+    h, how = pm.mode_hourly({"key": "sandbox", "pricing": "sizes", "sizes": [
+        {"name": "medium", "vcpu": 4, "ram_gib": 4, "hour": 0.018}],
+        "min_vcpu": 4}, {"vcpu": 2, "ram_gib": 4}, "lizard")
+    ck("the card's own size is overridden by the advertised one", h == 0.009, str(h))
+    ck("the row is marked as coming from the advertisement", "ADVERTISED" in how, how[:60])
+    hk, _ = pm.mode_hourly({"key": "sandbox", "pricing": "sizes", "sizes": [
+        {"name": "medium", "vcpu": 4, "ram_gib": 4, "hour": 0.018}],
+        "min_vcpu": 4}, {"vcpu": 2, "ram_gib": 4}, "e2b")
+    ck("the same card under a provider with no advertisement is untouched",
+       hk == 0.018, str(hk))
+    # And the card's size is still reachable when it is genuinely the cheapest
+    # fit, so the correction is not a blanket override.
+    h4, _ = pm.mode_hourly({"pricing": "sizes", "sizes": [
+        {"name": "medium", "vcpu": 4, "ram_gib": 4, "hour": 0.018}],
+        "min_vcpu": 4}, {"vcpu": 4, "ram_gib": 8}, "lizard")
+    ck("a shape the advertised size cannot serve still uses the card", h4 is None,
+       "got %s" % h4)
+    # A provider with no advertised sizes is untouched.
+    hz, _ = pm.mode_hourly({"pricing": "sizes", "sizes": [
+        {"name": "a", "vcpu": 2, "ram_gib": 4, "hour": 0.5}]},
+        {"vcpu": 2, "ram_gib": 4}, "e2b")
+    ck("a provider with no advertisement is priced from its card alone", hz == 0.5, str(hz))
+liz = [p for p in doc['providers'] if p['id'] == 'lizard']
+ck("lizard is in the model", len(liz) == 1)
+if liz:
+    ck("lizard's agent rate is the advertised $0.009/h",
+       abs(liz[0]['shapes']['agent']['hourly'] - 0.009) < 1e-9,
+       str(liz[0]['shapes']['agent']['hourly']))
+    ck("lizard is no longer $5.40/month at 10 h/day",
+       abs(liz[0]['shapes']['agent']['periods']['10h']['billed_month_no_credit'] - 2.70) < 0.01,
+       "%.2f" % liz[0]['shapes']['agent']['periods']['10h']['billed_month_no_credit'])
+ck("the catalogue marks the row disputed, not confirmed",
+   '**disputed**' in open(os.path.join(ROOT, 'docs/CATALOGUE.md')).read())
+ck("the corpus is not vendored, because it carries no licence",
+   not os.path.isdir(os.path.join(ROOT, 'references', 'battleships', '.git')) or
+   'NOTICE' in os.listdir(ROOT),
+   "NOTICE present=%s" % ('NOTICE' in os.listdir(ROOT)))
 
 print()
 print("TOTAL:", len(fails), "failures")

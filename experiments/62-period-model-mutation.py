@@ -41,6 +41,12 @@ Each one is a real defect that shipped: these are not hypotheticals.
      that was true, and none of them had a working guard. The planted version
      now exits 2 with a message instead of crashing silently.
 
+  5. a size the corpus card dropped that the vendor advertises
+     lizard's card keeps only the default size and pins min_vcpu 4, so the
+     $0.009/h Small machine the vendor sells was absent from the ranking and
+     the row was priced at double. Reverting the correction puts lizard back at
+     $5.40/month and unflags the row.
+
 Each mutation must make 61 FAIL. A mutation that leaves 61 passing is itself a
 finding: it means the guard does not cover the defect it claims to.
 
@@ -96,6 +102,13 @@ MUTATIONS = [
         "ROOT = os.environ.get('PELI_ROOT') or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))",
         "ROOT = '/workspace/peli-cloud'",
         "61 exits 2 with 'could not run', not a bare FileNotFoundError",
+    ),
+    (
+        "the advertised lizard size ignored again",
+        MODEL,
+        '        for a in advertised_sizes(pid, m.get("key")):',
+        '        for a in []:  # MUTATED: the vendor\'s advertised size is ignored',
+        "61 GUARD I reports lizard back at $5.40/month with no ADVERTISED marker",
     ),
 ]
 

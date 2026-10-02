@@ -41,6 +41,62 @@ import datetime
 
 CARD_COMMIT = "f6a71ab09fef"
 
+# ---------------------------------------------------------------------------
+# Advertised sizes the corpus card threw away.
+#
+# One card in 366 prices a machine more expensively than its own vendor
+# advertises, and the price is quoted in the card's own note:
+#
+#   lizard, mode `sandbox`, sizes: [{medium, 4 vCPU, 4 GiB, $0.018/h}]
+#   note:   "Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB
+#           RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at
+#           $0.036/hour. Medium is the default."
+#   min_vcpu: 4, max_vcpu: 4
+#
+# The size table keeps only the default, and `min_vcpu: 4` makes the 2 vCPU
+# tier structurally unreachable to any shape below 4 vCPU. The result is that
+# the cheapest advertised machine is absent from the ranking and the row is
+# priced at 2x its real rate: $5.40/month at 10 h/day where the advertised
+# Small is $2.70, which is second only to Agent 37.
+#
+# The rate below was read off lizard.build/pricing on 2026-10-02, and the same
+# sentence is in the corpus card's note, so the two agree. Lizard's sandbox docs
+# say "Create options do not change these limits" (4 vCPU / 4096 MiB) and
+# disagree on Medium's RAM, so the docs reading is not obviously wrong. This
+# table therefore RECORDS both and marks the row disputed rather than quietly
+# replacing the corpus. See docs/FINDINGS.md section 5.5.
+#
+# Format: (provider, mode, name, vcpu, ram_gib, hour, source_url, quote)
+# One entry. It is here because the vendor's own page says so and the card does
+# not, not because the shape is convenient.
+# ---------------------------------------------------------------------------
+ADVERTISED_SIZES = [
+    {
+        "provider": "lizard",
+        "mode": "sandbox",
+        "name": "small",
+        "label": "Small (2 vCPU / 4 GB RAM)",
+        "vcpu": 2,
+        "ram_gib": 4,
+        "hour": 0.009,
+        "url": "https://lizard.build/pricing",
+        "quote": ("Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, "
+                  "8 GB RAM) at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at "
+                  "$0.036/hour. Medium is the default."),
+        "disputed": ("lizard.build/docs says create options do not change the "
+                     "limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB "
+                     "rather than 8 GB; the pricing page and the docs disagree "
+                     "and no changelog dates either"),
+    },
+]
+
+
+def advertised_sizes(pid, mode_key):
+    """Sizes the vendor advertises and the card dropped, for one mode."""
+    return [s for s in ADVERTISED_SIZES
+            if s["provider"] == pid and s["mode"] == mode_key]
+
+
 # Shapes. The first revision ranked only one; the market has floors and they
 # differ by a factor of ten between a 1 GiB and a 4 GiB box, so both are here.
 SHAPES = {
@@ -209,7 +265,7 @@ def keep_rate(m):
     return 1.0, "billed for uptime (no suspension feature published)", "default"
 
 
-def mode_hourly(m, shape):
+def mode_hourly(m, shape, pid=None):
     """Published $/hour for one shape on this mode, or (None, reason)."""
     pricing = m.get("pricing")
     if pricing == "sizes":
@@ -219,6 +275,15 @@ def mode_hourly(m, shape):
                 sizes.append(s)
             elif isinstance(s, list):
                 sizes.extend(x for x in s if isinstance(x, dict))
+        # A size the vendor advertises and the card dropped is added back before
+        # the fit test, otherwise min_vcpu on the card hides it. See
+        # ADVERTISED_SIZES at the top of this file for the evidence.
+        for a in advertised_sizes(pid, m.get("key")):
+            if not any(str(s.get("name", "")).lower() == a["name"] for s in sizes):
+                sizes.append({"name": a["name"], "vcpu": a["vcpu"],
+                              "ram_gib": a["ram_gib"], "hour": a["hour"],
+                              "advertised": True, "disputed": a["disputed"],
+                              "source": a["url"], "quote": a["quote"]})
         fits = [s for s in sizes
                 if isinstance(s.get("hour"), (int, float)) and s["hour"] > 0
                 and (s.get("vcpu") or 0) >= shape["vcpu"]
@@ -227,8 +292,11 @@ def mode_hourly(m, shape):
             return None, "no published size fits this shape"
         s = min(fits, key=lambda x: x["hour"])
         mult = num(m.get("multiplier")) or 1.0
-        return s["hour"] * mult, "size %s (%s vCPU / %s GiB)" % (
+        how = "size %s (%s vCPU / %s GiB)" % (
             s.get("name"), s.get("vcpu"), s.get("ram_gib"))
+        if s.get("advertised"):
+            how += " [ADVERTISED, not in the card; page disagrees with the docs]"
+        return s["hour"] * mult, how
     v = m.get("vcpu_h")
     r = m.get("ram_gib_h")
     if isinstance(v, (int, float)) or isinstance(r, (int, float)):
@@ -306,7 +374,7 @@ def main():
                     perreq_seen.append((card.get("id"), m.get("key"), perreq_why))
                     continue
                 keep, keep_basis, keep_src = keep_rate(m)
-                hourly, how = mode_hourly(m, shape)
+                hourly, how = mode_hourly(m, shape, pid)
                 if hourly is None or hourly <= 0:
                     continue
                 not_self_serve = bool(flags & {"spot", "sales", "commit", "promo", "alt"})

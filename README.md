@@ -31,13 +31,24 @@ it, and a single monthly number cannot rank this market.
 | # | provider | $/hour | $/month |
 |---|---|---|---|
 | 1 | [Agent 37](https://www.agent37.com/pricing) | 0.0060 | 1.81 |
-| 2 | [Oracle Cloud](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 2.74 |
-| 3 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 3.12 |
-| 4 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 3.29 |
-| 5 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 4.11 |
-| 6 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 4.44 |
-| 7 | [Lizard](https://lizard.build/pricing) | 0.0180 | 5.40 |
-| 8 | [shellbox](https://shellbox.dev/) | 0.0200 | 6.00 |
+| 2 | [Lizard](https://lizard.build/pricing) | 0.0090 | 2.70 |
+| 3 | [Oracle Cloud](https://www.oracle.com/cloud/compute/pricing/) | 0.0091 | 2.74 |
+| 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | 0.0104 | 3.12 |
+| 5 | [Upstash Box](https://upstash.com/pricing/box) | 0.0110 | 3.29 |
+| 6 | [zipbox](https://zipbox.ai/pricing) | 0.0137 | 4.11 |
+| 7 | [IONOS Cloud](https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en) | 0.0148 | 4.44 |
+| 8 | [Gcore Cloud / Functions / GPU](https://gcore.com/cloud/virtual-machines) | 0.0193 | 5.80 |
+
+**Lizard at rank 2 is a disputed row, not a confirmed one.** Its corpus card
+carries only the default 4 vCPU size, but the vendor's own pricing page sells
+*Small (2 vCPU / 4 GB) at $0.009/hour* and the card's note quotes that sentence.
+Lizard's sandbox docs contradict it. The catalogue marks the row `disputed` and
+prints the conflict; `docs/FINDINGS.md` section 5.5 has the quotes.
+
+**Oracle's row is the largest known understatement in this table.** Its Always
+Free Ampere A1 allowance covers this shape even at 24/7, so a qualifying account
+pays $0. This model applies dollar credits only and cannot represent a
+resource allowance; `docs/FINDINGS.md` section 6.1 says so explicitly.
 
 **The same providers at 24/7** (the regime where a sandbox becomes a VPS) are
 roughly 2.4x the 10 h/day figure, and the order barely changes. Agent 37
@@ -71,7 +82,7 @@ verification notes were read.
 
 ## Reproduce it
 
-    bash   experiments/10-fetch-corpus.sh               # re-fetch the corpus at its pinned commit
+    bash   experiments/10-fetch-corpus.sh               # REQUIRED FIRST: fetch the corpus at its pinned commit
     python3 experiments/20-extract-provider-universe.py # read every card from primary fields
     python3 experiments/70-period-model.py              # price 3 shapes x 4 duty cycles
     python3 experiments/90-exclusion-ledger.py         # account for all 366 cards
@@ -80,9 +91,17 @@ verification notes were read.
     python3 experiments/40-crosscheck-engine.py         # re-price with the corpus's own engine
     python3 experiments/50-firstparty-audit.py          # re-fetch vendor pages for a sample
     python3 experiments/60-guard-mutation.py            # can the guards actually fail?
+    python3 experiments/61-period-model-guards.py       # do the period model's guards hold?
+    python3 experiments/62-period-model-mutation.py     # do they catch the defects that shipped?
     python3 poc/peli-cloud-query.py --budget 5          # query the old single-workload ranking
 
 Every script prints its conditions and writes a JSON artefact under `data/`.
+
+**The corpus is not in this repository.** `ariana-dot-dev/battleships` publishes
+no licence, so its 1183 files are fetched by `10-fetch-corpus.sh` rather than
+redistributed here. See [`NOTICE`](NOTICE) for the evidence and for what that
+costs: every figure below is checkable by re-running, not diffable against a
+committed copy.
 
 ## Layout
 
@@ -95,4 +114,5 @@ Every script prints its conditions and writes a JSON artefact under `data/`.
 
 ## Licence
 
-0BSD.
+The code and prose here are 0BSD. The third-party corpus is **fetched, not
+redistributed**, because it carries no licence: see [`NOTICE`](NOTICE).

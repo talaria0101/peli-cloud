@@ -329,7 +329,109 @@ it. Each is stated with the output that exposed it.
   message when no tree is found, which is this repo's code for "could not run"
   and is distinguishable from a guard failure at a glance.
 
+### 5.5 A licence problem, and a price that was double the vendor's
+
+Both found by reading a **parallel independent implementation** of the same
+corpus (`Nemo-010/peli-cloud`, 8 commits, its own `tools/rank.py` and
+`research/tools/derive.mjs`) rather than by re-reading my own output. It reached
+the same corpus with a different model and found two things about mine.
+
+- **Bug 9: I was redistributing an unlicensed corpus under 0BSD.**
+  `ariana-dot-dev/battleships` publishes **no licence**:
+  `gh api repos/ariana-dot-dev/battleships --jq .license` returns `null` and
+  `gh api repos/ariana-dot-dev/battleships/license` returns 404, and its tree
+  has no `LICENSE` file. This repository committed all **1183** of its files
+  (13 MB) inside a project whose `LICENSE` grants anyone anything. That is a
+  grant of redistribution rights over somebody else's work that nobody granted,
+  and the `0BSD` line in the README implied the whole tree was mine to give
+  away. Fix: the corpus is no longer committed. It is a build input, restored by
+  `10-fetch-corpus.sh` at the pinned commit, and `.gitignore` keeps it out. The
+  cost is stated in `NOTICE`: every figure in the catalogue becomes
+  *checkable* rather than *diffable*, and if upstream is rewritten the pinned
+  commit becomes unreachable and the inputs are gone.
+- **Bug 10: Lizard was priced at double the vendor's advertised rate.** The card
+  (`research/cards/lizard.json`, mode `sandbox`) carries **one** size, `medium`
+  at 4 vCPU / 4 GiB / $0.018/h, and pins `min_vcpu: 4`, so no shape below 4 vCPU
+  can be priced at all. The **same card's note** quotes the vendor's FAQ:
+  *"Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM) at
+  $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour."* The cheapest
+  advertised machine was in the card as prose and absent from its data. I
+  re-fetched `lizard.build/pricing` on 2026-10-02 and the sentence is still
+  there, word for word, so the rate is the vendor's own and my table was
+  charging twice for the same class of machine: **$5.40/month at 10 h/day
+  against $2.70**, which is second only to Agent 37. Fix: an explicit
+  `ADVERTISED_SIZES` table in `70-period-model.py` carrying the URL, the quote
+  and the conflict, consulted before the card's size table. A regex that scraped
+  sizes out of note prose was considered and rejected: it matched one card and
+  would have been a fragile way to turn prose into prices.
+  **This is a correction, not a confirmation.** `lizard.build/docs` says create
+  options do not change the limits (4 vCPU / 4096 MiB) and gives Medium 4096 MiB
+  rather than 8 GB, so the two first-party pages contradict each other and
+  `lizard.build/changelog` renders *"Couldn't load this page."*, which dates
+  neither. Every affected row is therefore marked **`disputed`** in the
+  catalogue's "buy it?" column and the conflict is printed under the table. If
+  the docs are right, the row goes back to $5.40.
+
 ## 6. Independent cross-check against the upstream engine (the control)
+
+### 6.1 What the parallel implementation does better, and what it does worse
+
+`Nemo-010/peli-cloud` re-priced the same 366 cards at the same pinned commit
+with a different model and its own code (`tools/rank.py`,
+`research/tools/derive.mjs`). It found the two defects in section 5.5, which is
+the strongest evidence in this document, because they were found by a different
+model rather than by re-reading my own output. It is also wrong in ways worth
+recording, since the comparison is more useful than either side alone.
+
+**What it does better.**
+
+- **A per-request session model instead of a duty-cycle multiplier.** It prices
+  each horizon as the cheapest split into sessions of at least 30 minutes, so a
+  provider with an 8-hour session cap still appears with a note saying restarts
+  are needed. My model multiplies a rate by hours and never asks how those hours
+  are delivered, so a session-capped provider is priced as though the cap did
+  not exist. Mine is the arithmetic; its is the closer approximation of how a
+  sandbox is actually used.
+- **It checks the 13 pages it re-fetched against the card, one at a time, with
+  quotes and a verdict per provider** (`research/verification/2026-10-02.md`).
+  Mine checks 19 with a numeric matcher, and section 0 records that the matcher
+  was measuring formatting rather than prices until it was made unit-aware.
+- **It quantified a free *allowance* rather than a free *credit*.** Oracle's
+  Always Free Ampere A1 covers 1,500 OCPU-h + 9,000 GB-h a month, which covers
+  this shape even 24/7, so the honest Oracle row is $0, not the $7.41 I publish.
+  My model applies `monthly_credit` and nothing else, so that row is wrong by
+  the largest single amount in either catalogue. **This is a known gap in my
+  line and I have not fixed it**, and it is a structural one: `oracle-cloud.json`
+  carries `"free": {"monthly_credit": 0, "one_time_credit": 300}` and **no
+  allowance field exists anywhere in the corpus**, so an allowance is not merely
+  unmodelled, it is unrepresentable without inventing a field and converting an
+  allowance into dollars at the provider's own rate table. The correct fix is a
+  separate allowance model priced per resource-hour, not a discount on the
+  dollar credit.
+
+**What it does worse.**
+
+- **It ranks on the credit-adjusted price, and publishes `$0` rows.** Kedge is
+  `$0` at 1 h, 10 h, 1 day and 1 week, and rank 3 in its sandbox table, because
+  its $5 monthly credit exceeds those bills. The true cost of Kedge at 1 h is
+  about $0.03. Azure Container Apps is rank 5 at $3.60 for the same reason and
+  Google Cloud Run rank 7 at $4.36. It applies the credit inside the upstream
+  engine and **never preserves the pre-credit figure**: `total_no_credit` appears
+  nowhere in its committed `data/usage.json`, so it cannot rank on it even in
+  principle. That is bug 5 in this document, which I fixed in my own line
+  before reading its work.
+- **Its README cites `data/derived.json` three times, including as the place to
+  find `total_no_credit`, and that file is not committed.** `tools/rank.py`
+  reads it, so the published catalogue depends on an artefact a reader cannot
+  obtain without re-running its whole toolchain.
+- **A `$0` in its "cheapest at each horizon" table is a credit artefact.** The
+  1 h column lists "Amika $0, Anchor Browser $0, Azure $0", which reads as
+  three free sandboxes and is one free tier plus two credits.
+
+**Neither of us is right about the shape of this market.** Mine publishes 3
+shapes x 4 duty cycles and one comparison shape; its own README says plainly
+that it is "a shape ranking, not a fit ranking" and that required features are
+not applied. Both inherit every error in one corpus at one commit.
 
 A ranking that is one model's opinion is a survey. I re-priced the same 366
 cards with battleships' **own** `site/engine.js`, in two modes, on the same day:

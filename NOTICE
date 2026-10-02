@@ -1,0 +1,47 @@
+# NOTICE
+
+## Licence of this repository
+
+The **code and prose** here (everything under `experiments/`, `poc/`, `docs/`,
+and the data peli-cloud derives and publishes) is released under 0BSD; see
+`LICENSE`.
+
+## Third-party material, and one correction
+
+### The corpus is fetched, not vendored
+
+`references/battleships/` is the `ariana-dot-dev/battleships` provider corpus.
+**It carries no licence.** The GitHub API reports `license: null` for that
+repository and its tree contains no `LICENSE` file:
+
+    gh api repos/ariana-dot-dev/battleships --jq .license    # null
+    gh api repos/ariana-dot-dev/battleships/license          # 404 Not Found
+
+Earlier revisions of this repository committed all 1183 of its files (13 MB)
+inside a 0BSD project. That granted redistribution rights over somebody else's
+work that nobody had granted, so the corpus is no longer committed. It is a
+build input, restored by:
+
+    bash experiments/10-fetch-corpus.sh
+
+at the pinned commit `f6a71ab09fefa68e355ef47c52315e099f99c921`.
+
+**What this costs.** The corpus is no longer readable without running that
+script, so every figure in `docs/CATALOGUE.md` and `data/*.json` is
+checkable rather than diffable. If upstream is rewritten and the pinned commit
+becomes unreachable, this repository's inputs are gone and the method is dead;
+`10-fetch-corpus.sh` exits 1 in that case and says so.
+
+### Provider pages are not committed
+
+No provider pricing page is stored here. `experiments/50-firstparty-audit.py`
+re-fetches them live and records the HTTP status, byte count and the figures it
+matched in `data/firstparty-audit.json`. Short price strings quoted in
+`docs/FINDINGS.md` are quoted for verification, not relicensed.
+
+## What is definitely wrong here
+
+This is a research pass, not a product. It is a shape ranking, not a fit
+ranking; it inherits every price error in one corpus at one commit; and 440
+figures in the first-party sample could not be confirmed. Read section 0 of
+`docs/FINDINGS.md` before any table.

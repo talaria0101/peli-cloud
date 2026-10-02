@@ -1,3 +1,11 @@
 node_modules/
 __pycache__/
 *.pyc
+
+# The third-party corpus is fetched, not vendored. ariana-dot-dev/battleships
+# publishes no licence: `gh api repos/ariana-dot-dev/battleships` returns
+# license: null and there is no LICENSE file in its tree. Redistributing its
+# 1183 files inside a 0BSD project grants rights nobody granted, so the corpus
+# is a build input restored by experiments/10-fetch-corpus.sh at a pinned
+# commit. See NOTICE.
+references/battleships/

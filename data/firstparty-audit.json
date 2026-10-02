@@ -1,8 +1,8 @@
 {
- "at": "2026-10-02T03:12:52Z",
+ "at": "2026-10-02T03:25:41Z",
  "rows": [
   {
-   "bytes": 6781203,
+   "bytes": 6781154,
    "id": "scaleway",
    "status": "shell (no $ in HTML)",
    "url": "https://www.scaleway.com/en/pricing/virtual-instances/",
@@ -1083,7 +1083,7 @@
    "why": "dev-env"
   },
   {
-   "bytes": 193604,
+   "bytes": 193602,
    "id": "northflank",
    "matched": [
     [

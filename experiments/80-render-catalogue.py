@@ -24,6 +24,16 @@ import json
 import os
 import sys
 import datetime
+import importlib.util
+
+# The advertised-size table lives in the period model, which is the script that
+# decides what a size costs. The renderer reads it from there rather than
+# keeping a second copy that could drift.
+_pm_spec = importlib.util.spec_from_file_location(
+    "pm", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       "experiments", "70-period-model.py"))
+pm = importlib.util.module_from_spec(_pm_spec)
+_pm_spec.loader.exec_module(pm)
 
 SHAPES_ORDER = ["tiny", "agent", "devbox"]
 DUTY = ["1h", "4h", "10h", "24h"]
@@ -237,6 +247,12 @@ def main():
                     used = "-"
                 buy = ("**no**" if s["not_self_serve"]
                        else ("spot/term" if "spot" in s["flags"] else "yes"))
+                # A row priced from a size the vendor advertises and the corpus
+                # card dropped is CORRECTED, not confirmed. Saying "yes" would
+                # tell a reader to buy on a rate that a first-party page and that
+                # page's own docs contradict, so the column says so.
+                if "[ADVERTISED" in (s.get("how") or ""):
+                    buy = "**disputed**"
                 A("| %d | %s | %.4f | %.2f | %.2f | %.2f | %.2f | %s | %.2f | %s | %s | `%s` |" % (
                     i, link(p["name"] or p["id"], p.get("url")), s["hourly"],
                     pd["compute_day"], pd["compute_week"], pd["billed_month_no_credit"],
@@ -245,6 +261,22 @@ def main():
             if len(paid) > 25:
                 A("")
                 A("_%d more at this duty cycle; the full rank is table C._" % (len(paid) - 25))
+            disputed = [x for x in paid[:25] if "[ADVERTISED" in (x[1].get("how") or "")]
+            if disputed:
+                A("")
+                A("**Rows marked `disputed` are not confirmed prices.** A size the "
+                  "vendor advertises is missing from the corpus card, so the rate "
+                  "here is the vendor's own and the corpus discarded it:")
+                for p, s, _pd in disputed:
+                    adv = [a for a in pm.ADVERTISED_SIZES
+                           if a["provider"] == p["id"] and a["mode"] == s.get("mode")]
+                    for a in adv:
+                        A("")
+                        A("- **%s** — %s at $%g/h, advertised on [%s](%s): \"%s\" "
+                          "The card carries only the default size, so the rate was "
+                          "absent from the ranking. Conflict: %s"
+                          % (p["name"], a["label"], a["hour"], p["name"], a["url"],
+                             a["quote"], a["disputed"]))
             A("")
 
     # ---------------- Table B1.5: minimum bill ----------------
