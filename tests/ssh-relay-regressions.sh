@@ -24,12 +24,48 @@ check() { # name, command expected to exit 0
   fi
 }
 
+# needs() runs a clause only when its fixtures exist, and COUNTS the ones it
+# declines to run. A skipped clause is reported, never counted as a pass.
+needcheck() { # name, command
+  if [ "$built" != yes ]; then
+    echo "skip $1 (no fixtures: run tools/ssh-relay-check.sh)"; skip=$((skip+1)); return
+  fi
+  check "$@"
+}
+
 echo "work=$WORK"
 echo "uid=$(id -u) bind_inet=$(python3 -c "
 import socket
 try:
     s=socket.socket(); s.bind(('127.0.0.1',0)); print('yes'); s.close()
 except Exception: print('no')") passwd_db=$([ -r /etc/passwd ] && echo yes || echo no)"
+
+# ----------------------------------------------------------------- setup ---
+# ⛔ THE SUITE BUILDS ITS OWN FIXTURES. It did not, and on a fresh clone of the
+# commit that added it, three clauses FAILED rather than skipping: they read
+# $WORK/dropbear, $WORK/dropssh and a live relay, and a fresh clone has none of
+# them. A gate that is red on the commit it ships with teaches a reader to
+# ignore the gate, so the fixtures are built here and the skip stays a skip.
+#
+# `tools/ssh-relay-check.sh` is the fixture builder: it fetches the pinned
+# release, unpacks it, and proves the path end to end. If it cannot run, the
+# clauses that need it are SKIPPED and named, never failed.
+skip=0
+built=no
+if [ ! -x "$WORK/dropbear" ] || [ ! -x "$WORK/dropssh" ]; then
+  echo "setup building fixtures via tools/ssh-relay-check.sh ..."
+  sh tools/ssh-relay-check.sh >/tmp/ssh-relay-setup.log 2>&1
+  setup_rc=$?
+  if [ -x "$WORK/dropbear" ] && [ -x "$WORK/dropssh" ]; then
+    built=yes
+  else
+    echo "setup FAILED (rc=$setup_rc); clauses needing the release will be SKIPPED."
+    echo "setup said:"; sed 's/^/  | /' /tmp/ssh-relay-setup.log | tail -6
+  fi
+else
+  built=yes
+fi
+[ "$built" = yes ] && echo "fixtures ready in $WORK"
 
 # ---------------------------------------------------------------- release ---
 # The tarball carries uid/gid 1001 and GNU tar restores ownership by default.
@@ -58,7 +94,7 @@ check "release_unpacks_without_chown" sh -c '
 # one deletes the only passwd path that works without the shim, and it deletes
 # it silently, because a probe that finds nothing drops the flag rather than
 # failing.
-check "release_dropbear_has_passwd_file_code_not_help_line" sh -c '
+needcheck "release_dropbear_has_passwd_file_code_not_help_line" sh -c '
   [ -x '"$WORK"'/dropbear ] || exit 1
   '"$WORK"'/dropbear -h 2>&1 | grep -q -- "-Y" && exit 0   # help lists it: fine
   strings '"$WORK"'/dropbear | grep -q "passwd file"        # else the code is there
@@ -68,7 +104,7 @@ check "release_dropbear_has_passwd_file_code_not_help_line" sh -c '
 # Driven over the live relay in its own file: the rule has two distinct refusal
 # log lines and the control must differ from the subject by one word, which is
 # more than an inline sh -c can hold without the quoting becoming the bug.
-check "passwd_line_name_must_match_the_ssh_login" sh tests/assert-passwd-name.sh
+needcheck "passwd_line_name_must_match_the_ssh_login" sh tests/assert-passwd-name.sh
 
 # ----------------------------------------------------------------- server ---
 # dropssh's `doctor` SERVER PROBE RESOLVES --server AGAINST THE PROBE'S OWN
@@ -102,7 +138,7 @@ check "passwd_line_name_must_match_the_ssh_login" sh tests/assert-passwd-name.sh
 # dropbear-inetd-pipe-tolerance.patch tolerates ENOTSOCK, and that is the
 # /dev/null case; the socketpair case is fine. The probe's own design is
 # correct and this clause says so.
-check "doctor_server_probe_needs_an_absolute_path" sh tests/assert-doctor-probe.sh
+needcheck "doctor_server_probe_needs_an_absolute_path" sh tests/assert-doctor-probe.sh
 
 # ----------------------------------------------------------------- script ---
 # The script must carry the two flags and the shim, because each of them was a
@@ -135,12 +171,7 @@ check "script_reads_the_exit_code_from_the_process_that_produced_it" \
 # The end-to-end path. Skipped, not passed, when the network or the work dir is
 # absent, and it says so: a clause that reports a pass it did not run is worse
 # than no clause.
-live() {
-  if [ ! -d "$WORK" ]; then echo "skip relay_live_login (no $WORK; run tools/ssh-relay-check.sh first)"; skip=$((skip+1)); return; fi
-  check relay_live_login sh tools/ssh-relay-check.sh
-}
-skip=0
-live
+needcheck relay_live_login sh tools/ssh-relay-check.sh
 
 # No credential is committed. 64 hex is the token shape dropssh's pair returns.
 check "no_committed_tokens" sh -c '

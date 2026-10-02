@@ -24,8 +24,25 @@ URL="https://github.com/talaria0101/dropssh/releases/download/$DROPSSH_VERSION/$
 RELAY="${DROPSSH_RELAY:-tcp.ssh.relay.ajam.dev}"
 
 mkdir -p "$WORK"
-cd "$WORK"
+cd "$WORK" || exit 1
 umask 077
+
+# 1a. THE WORK DIR MUST BE ON A FILESYSTEM THAT WILL RUN THE BINARIES.
+#     Measured 2026-10-02 on this sandbox: a dropbearkey copied into the /tmp
+#     dataset is refused with "Permission denied" and exit 126, byte-identical to
+#     the same file under /workspace (same mode rwx------, same ownership). The
+#     two are separate ZFS datasets on one pool and the /tmp one will not
+#     execve. A check that discovers this only when dropbearkey dies leaves an
+#     exit 126 and no explanation, which is what happened the first time.
+case "$WORK" in
+  /tmp|/tmp/*|/var/tmp|/var/tmp/*)
+    echo "FAIL: work dir $WORK is under /tmp, and this host's /tmp dataset refuses"
+    echo "      to execute a binary copied into it (measured: Permission denied,"
+    echo "      exit 126, same binary and mode that run fine elsewhere). Set"
+    echo "      DROPSSH_WORK to a directory on the workspace dataset, e.g."
+    echo "      DROPSSH_WORK=\"\$PWD/.dropssh-check\" sh tools/ssh-relay-check.sh"
+    exit 1 ;;
+esac
 
 # 1. Fetch the pinned release once. Its own SHA256SUMS is checked against the
 #    files it shipped with, so a truncated download fails here and not at login.
