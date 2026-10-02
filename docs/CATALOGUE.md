@@ -1,6 +1,6 @@
 # peli-cloud — every provider, cheapest first, at every period
 
-**Generated 2026-10-02T02:07:11Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
+**Generated 2026-10-02T02:10:39Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
 
 ## How to read this
 
@@ -29,7 +29,7 @@ Every table below is priced at three shapes and four duty cycles:
 
 ### A1. Recurring credit — free every month, until it runs out
 
-11 providers publish a credit that recurs. **This is the complete list; there is no large free tier in this market.** The biggest is $30/month.
+13 providers publish a credit that recurs. **This is the complete list; there is no large free tier in this market.** The biggest is $30/month.
 
 | # | provider | category | credit / month | what that buys at the `agent` rate | keep | link |
 |---|---|---|---|---|---|---|
@@ -38,16 +38,18 @@ Every table below is priced at three shapes and four duty cycles:
 | 3 | [Run Cloud](https://docs.run.cloud/sandboxes/index.md) | agent-sandbox | $15 | 322 machine-hours (10.7 h/day for a month) | 1.00 | `run-cloud` |
 | 4 | [Blacksmith (GitHub Actions runners)](https://www.blacksmith.sh/pricing) | macos | $12 | 80 machine-hours (2.7 h/day for a month) | 1.00 | `blacksmith` |
 | 5 | [InsForge (InstaCloud)](https://www.instacloud.com/pricing) | paas | $10 | 90 machine-hours (3.0 h/day for a month) | 1.00 | `insforge-instacloud` |
-| 6 | [AWS Lambda](https://aws.amazon.com/lambda/pricing/) | hyperscaler | $6.87 | 43 machine-hours (1.4 h/day for a month) | 1.00 | `aws-lambda` |
-| 7 | [CodeSandbox SDK](https://codesandbox.io/docs/sdk/pricing) | agent-sandbox | $5.944 | 40 machine-hours (1.3 h/day for a month) | 1.00 | `codesandbox-sdk` |
-| 8 | [Azure Container Apps (Consumption, Dedicated, Dynamic Sessions)](https://azure.microsoft.com/en-us/pricing/details/container-apps/) | hyperscaler | $5.4 | 25 machine-hours (0.8 h/day for a month) | 1.00 | `azure-container-apps` |
-| 9 | [Google Cloud Run](https://cloud.google.com/run/pricing) | hyperscaler | $5.22 | 176 machine-hours (5.9 h/day for a month) | 1.00 | `google-cloud-run` |
-| 10 | [Kedge](https://kedge.dev/docs/billing) | agent-sandbox | $5 | 73 machine-hours (2.4 h/day for a month) | 1.00 | `kedge` |
-| 11 | [Sail Research (Sailboxes)](https://docs.sailresearch.com/pricing) | agent-sandbox | $5 | 81 machine-hours (2.7 h/day for a month) | 1.00 | `sail` |
+| 6 | [Bright Data Browser API](https://brightdata.com/pricing/scraping-browser) | browser | $7.5 | - | 0.00 | `bright-data-browser` |
+| 7 | [AWS Lambda](https://aws.amazon.com/lambda/pricing/) | hyperscaler | $6.87 | 43 machine-hours (1.4 h/day for a month) | 1.00 | `aws-lambda` |
+| 8 | [CodeSandbox SDK](https://codesandbox.io/docs/sdk/pricing) | agent-sandbox | $5.944 | 40 machine-hours (1.3 h/day for a month) | 1.00 | `codesandbox-sdk` |
+| 9 | [Azure Container Apps (Consumption, Dedicated, Dynamic Sessions)](https://azure.microsoft.com/en-us/pricing/details/container-apps/) | hyperscaler | $5.4 | 25 machine-hours (0.8 h/day for a month) | 1.00 | `azure-container-apps` |
+| 10 | [Google Cloud Run](https://cloud.google.com/run/pricing) | hyperscaler | $5.22 | 176 machine-hours (5.9 h/day for a month) | 1.00 | `google-cloud-run` |
+| 11 | [Kedge](https://kedge.dev/docs/billing) | agent-sandbox | $5 | 73 machine-hours (2.4 h/day for a month) | 1.00 | `kedge` |
+| 12 | [Sail Research (Sailboxes)](https://docs.sailresearch.com/pricing) | agent-sandbox | $5 | 81 machine-hours (2.7 h/day for a month) | 1.00 | `sail` |
+| 13 | [Scrapeless Agent Browser](https://www.scrapeless.com/en/pricing) | browser | $0.09 | - | 0.00 | `scrapeless` |
 
 ### A2. One-time credit — free exactly once
 
-70 providers publish a signup credit. It is worth its face value once and never renews.
+79 providers publish a signup credit. It is worth its face value once and never renews.
 
 | # | provider | category | one-time credit | what that buys at the `agent` rate | link |
 |---|---|---|---|---|---|
@@ -101,26 +103,35 @@ Every table below is priced at three shapes and four duty cycles:
 | 48 | [Lightning AI](https://lightning.ai/pricing) | dev-env | $30 | 59 machine-hours (2 h/day for a month) | `lightning-ai` |
 | 49 | [Prized](https://prized.dev/docs/billing) | dev-env | $30 | 876 machine-hours (29 h/day for a month) | `prized` |
 | 50 | [Sprites (Fly.io)](https://fly.io/pricing) | agent-sandbox | $30 | 183 machine-hours (6 h/day for a month) | `sprites` |
-| 51 | [orkestr Sandboxes](https://orkestr.eu/sandboxes) | agent-sandbox | $28.445 | 167 machine-hours (6 h/day for a month) | `orkestr` |
-| 52 | [Cube Computer](https://cube.computer/) | dev-env | $25 | 1011 machine-hours (34 h/day for a month) | `cube` |
-| 53 | [Docker Cloud Sandboxes](https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/) | agent-sandbox | $25 | 179 machine-hours (6 h/day for a month) | `docker-cloud-sandboxes` |
-| 54 | [zipbox](https://zipbox.ai/pricing) | agent-sandbox | $25 | 1825 machine-hours (61 h/day for a month) | `zipbox` |
-| 55 | [Flow Swiss Mac Bare Metal](https://doc.flow.swiss/platform/pricing/mac-bare-metal) | macos | $24.17 | 74 machine-hours (2 h/day for a month) | `flow-swiss-mac` |
-| 56 | [Dedalus Labs](https://www.dedaluslabs.ai/pricing) | agent-sandbox | $20 | 134 machine-hours (4 h/day for a month) | `dedalus-labs` |
-| 57 | [Buildkite hosted agents](https://buildkite.com/pricing) | macos | $16 | 33 machine-hours (1 h/day for a month) | `buildkite-hosted` |
-| 58 | [UCloud Agent Sandbox](https://astraflow.ucloud.cn/docs/agent-sandbox) | agent-sandbox | $15.4504 | 240 machine-hours (8 h/day for a month) | `ucloud` |
-| 59 | [Lizard](https://lizard.build/pricing) | agent-sandbox | $10 | 556 machine-hours (19 h/day for a month) | `lizard` |
-| 60 | [MIOSA](https://miosa.ai/pricing) | agent-sandbox | $10 | 64 machine-hours (2 h/day for a month) | `miosa` |
-| 61 | [OpenComputer](https://opencomputer.dev/sandboxes) | agent-sandbox | $10 | 26 machine-hours (1 h/day for a month) | `opencomputer` |
-| 62 | [Buddy Sandboxes](https://buddy.works/pricing) | agent-sandbox | $5 | 58 machine-hours (2 h/day for a month) | `buddy` |
-| 63 | [CreateOS Sandbox (NodeOps)](https://createos.sh/products/sandbox) | agent-sandbox | $5 | 42 machine-hours (1 h/day for a month) | `createos` |
-| 64 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | hyperscaler | $5 | 140 machine-hours (5 h/day for a month) | `digitalocean` |
-| 65 | [Railway](https://railway.com/pricing) | agent-sandbox | $5 | 45 machine-hours (1 h/day for a month) | `railway` |
-| 66 | [Sandbox as a Service](https://sandbox-as-a-service.com/pricing) | agent-sandbox | $5 | 56 machine-hours (2 h/day for a month) | `sandbox-as-a-service` |
-| 67 | [Huawei Cloud AgentArts](https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf) | agent-sandbox | $3.31064 | 8 machine-hours (0 h/day for a month) | `huawei-cloud` |
-| 68 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | dev-env | $2.98 | 80 machine-hours (3 h/day for a month) | `tencent-cloud-studio` |
-| 69 | [Agent 37](https://www.agent37.com/pricing) | agent-sandbox | $1 | 166 machine-hours (6 h/day for a month) | `agent-37` |
-| 70 | [boat.dev](https://docs.boat.dev/pricing) | agent-sandbox | $0.9 | 50 machine-hours (2 h/day for a month) | `boat` |
+| 51 | [Steel.dev](https://docs.steel.dev/overview/pricinglimits) | browser (browser product, not a machine) | $30 | - | `steel` |
+| 52 | [orkestr Sandboxes](https://orkestr.eu/sandboxes) | agent-sandbox | $28.445 | 167 machine-hours (6 h/day for a month) | `orkestr` |
+| 53 | [Cube Computer](https://cube.computer/) | dev-env | $25 | 1011 machine-hours (34 h/day for a month) | `cube` |
+| 54 | [Docker Cloud Sandboxes](https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/) | agent-sandbox | $25 | 179 machine-hours (6 h/day for a month) | `docker-cloud-sandboxes` |
+| 55 | [zipbox](https://zipbox.ai/pricing) | agent-sandbox | $25 | 1825 machine-hours (61 h/day for a month) | `zipbox` |
+| 56 | [Flow Swiss Mac Bare Metal](https://doc.flow.swiss/platform/pricing/mac-bare-metal) | macos | $24.17 | 74 machine-hours (2 h/day for a month) | `flow-swiss-mac` |
+| 57 | [Dedalus Labs](https://www.dedaluslabs.ai/pricing) | agent-sandbox | $20 | 134 machine-hours (4 h/day for a month) | `dedalus-labs` |
+| 58 | [Buildkite hosted agents](https://buildkite.com/pricing) | macos | $16 | 33 machine-hours (1 h/day for a month) | `buildkite-hosted` |
+| 59 | [UCloud Agent Sandbox](https://astraflow.ucloud.cn/docs/agent-sandbox) | agent-sandbox | $15.4504 | 240 machine-hours (8 h/day for a month) | `ucloud` |
+| 60 | [Browser Use Cloud](https://browser-use.com/pricing) | browser (browser product, not a machine) | $15 | - | `browser-use` |
+| 61 | [Lizard](https://lizard.build/pricing) | agent-sandbox | $10 | 556 machine-hours (19 h/day for a month) | `lizard` |
+| 62 | [MIOSA](https://miosa.ai/pricing) | agent-sandbox | $10 | 64 machine-hours (2 h/day for a month) | `miosa` |
+| 63 | [Notte](https://www.notte.cc/pricing) | browser (browser product, not a machine) | $10 | - | `notte` |
+| 64 | [OpenComputer](https://opencomputer.dev/sandboxes) | agent-sandbox | $10 | 26 machine-hours (1 h/day for a month) | `opencomputer` |
+| 65 | [TinyFish](https://www.tinyfish.ai/pricing) | browser (browser product, not a machine) | $8 | - | `tinyfish` |
+| 66 | [Buddy Sandboxes](https://buddy.works/pricing) | agent-sandbox | $5 | 58 machine-hours (2 h/day for a month) | `buddy` |
+| 67 | [CreateOS Sandbox (NodeOps)](https://createos.sh/products/sandbox) | agent-sandbox | $5 | 42 machine-hours (1 h/day for a month) | `createos` |
+| 68 | [DigitalOcean Droplets](https://www.digitalocean.com/pricing/droplets) | hyperscaler | $5 | 140 machine-hours (5 h/day for a month) | `digitalocean` |
+| 69 | [Hyperbrowser](https://www.hyperbrowser.ai/pricing) | browser (browser product, not a machine) | $5 | - | `hyperbrowser` |
+| 70 | [Railway](https://railway.com/pricing) | agent-sandbox | $5 | 45 machine-hours (1 h/day for a month) | `railway` |
+| 71 | [RunAnywhere](https://www.runanywhere.ai/) | inference-api (browser product, not a machine) | $5 | - | `runanywhere` |
+| 72 | [Sandbox as a Service](https://sandbox-as-a-service.com/pricing) | agent-sandbox | $5 | 56 machine-hours (2 h/day for a month) | `sandbox-as-a-service` |
+| 73 | [Smooth](https://www.smooth.sh/pricing) | browser (browser product, not a machine) | $5 | - | `smooth` |
+| 74 | [Huawei Cloud AgentArts](https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf) | agent-sandbox | $3.31064 | 8 machine-hours (0 h/day for a month) | `huawei-cloud` |
+| 75 | [Tencent Cloud Studio](https://cloud.tencent.cn/document/product/1039/131894) | dev-env | $2.98 | 80 machine-hours (3 h/day for a month) | `tencent-cloud-studio` |
+| 76 | [Agent 37](https://www.agent37.com/pricing) | agent-sandbox | $1 | 166 machine-hours (6 h/day for a month) | `agent-37` |
+| 77 | [boat.dev](https://docs.boat.dev/pricing) | agent-sandbox | $0.9 | 50 machine-hours (2 h/day for a month) | `boat` |
+| 78 | [BrowserAct](https://www.browseract.com/pricing) | browser (browser product, not a machine) | $0.32 | - | `browseract` |
+| 79 | [Scrapfly Cloud Browser](https://scrapfly.io/pricing) | browser (browser product, not a machine) | $0.15 | - | `scrapfly` |
 
 ### A3. $0 entry tier, no credit published — unknown, not free
 
@@ -811,5 +822,19 @@ Nothing truncated. One row per provider that priced at any shape and period, ord
 
 A missing row is a result. This is what would have to become true for each excluded card to get a price.
 
-None: every card in the corpus published at least one shape.
+11 cards published no rate or size for any shape.
+
+| provider | category | link |
+|---|---|---|
+| [Bright Data Browser API](https://brightdata.com/pricing/scraping-browser) | browser | `bright-data-browser` |
+| [Browser Use Cloud](https://browser-use.com/pricing) | browser | `browser-use` |
+| [BrowserAct](https://www.browseract.com/pricing) | browser | `browseract` |
+| [Hyperbrowser](https://www.hyperbrowser.ai/pricing) | browser | `hyperbrowser` |
+| [Notte](https://www.notte.cc/pricing) | browser | `notte` |
+| [RunAnywhere](https://www.runanywhere.ai/) | inference-api | `runanywhere` |
+| [Scrapeless Agent Browser](https://www.scrapeless.com/en/pricing) | browser | `scrapeless` |
+| [Scrapfly Cloud Browser](https://scrapfly.io/pricing) | browser | `scrapfly` |
+| [Smooth](https://www.smooth.sh/pricing) | browser | `smooth` |
+| [Steel.dev](https://docs.steel.dev/overview/pricinglimits) | browser | `steel` |
+| [TinyFish](https://www.tinyfish.ai/pricing) | browser | `tinyfish` |
 

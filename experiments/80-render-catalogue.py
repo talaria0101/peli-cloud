@@ -157,9 +157,10 @@ def main():
         s = p["shapes"].get("agent") or p["shapes"].get("tiny")
         h = ("%.0f machine-hours (%.0f h/day for a month)" % (ot / s["hourly"], ot / s["hourly"] / 30)
              if s and s["hourly"] else "-")
-        A("| %d | %s | %s | $%g | %s | %s |" % (
-            i, link(p["name"] or p["id"], p.get("url")), p.get("category") or "-", ot, h,
-            "`%s`" % p["id"]))
+        note = " (browser product, not a machine)" if p.get("off_category_credit_only") else ""
+        A("| %d | %s | %s%s | $%g | %s | `%s` |" % (
+            i, link(p["name"] or p["id"], p.get("url")), p.get("category") or "-", note, ot, h,
+            p["id"]))
     A("")
 
     A("### A3. $0 entry tier, no credit published — unknown, not free")
@@ -258,7 +259,7 @@ def main():
     A("| # | provider | category | isolation | $/h agent | 1h/day | 4h/day | 10h/day | 24h/day | free/mo | floor | link |")
     A("|---|---|---|---|---|---|---|---|---|---|---|---|")
 
-    ranked = sorted(providers, key=sort_key)
+    ranked = sorted([p for p in providers if p.get("shapes")], key=sort_key)
     for i, p in enumerate(ranked, 1):
         s = p["shapes"].get("agent") or p["shapes"].get("tiny") or p["shapes"].get("devbox")
         if not s:
@@ -285,7 +286,7 @@ def main():
     A("A missing row is a result. This is what would have to become true for each "
       "excluded card to get a price.")
     A("")
-    noshape = [p for p in providers if not p["shapes"]]
+    noshape = [p for p in providers if not p.get("shapes")]
     if noshape:
         A("%d cards published no rate or size for any shape." % len(noshape))
         A("")

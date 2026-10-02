@@ -171,8 +171,11 @@ def main():
             continue
 
         cls = (card.get("category") or "").split(" ")[0] or None
-        if cls in ("browser", "self-host", "other", "finops", "inference-api"):
-            continue
+        # Browser / non-compute categories are excluded from the RANKINGS but
+        # are still surveyed for the FREE-TIER census: a browser provider with a
+        # recurring credit is a fact about the market's free tiers, and dropping
+        # it would understate what a buyer can get for nothing.
+        off_category = cls in ("browser", "self-host", "other", "finops", "inference-api")
 
         best_per_shape = {}
         for shape_name, shape in SHAPES.items():
@@ -202,10 +205,31 @@ def main():
             cands.sort(key=lambda c: (c["not_self_serve"], c["hourly"]))
             best_per_shape[shape_name] = cands[0]
 
+        entry = card.get("free") or {}
+        mc_raw = entry.get("monthly_credit")
+        ot_raw = entry.get("one_time_credit")
+
+        if off_category:
+            # Kept ONLY for the free-credit census, never ranked against the
+            # compute providers: a browser product is not a machine.
+            if (isinstance(mc_raw, (int, float)) and mc_raw > 0) or \
+               (isinstance(ot_raw, (int, float)) and ot_raw > 0):
+                rows.append({
+                    "id": pid, "name": card.get("name"), "url": card.get("url"),
+                    "category": cls, "isolation": card.get("isolation"),
+                    "free_monthly_credit": mc_raw if isinstance(mc_raw, (int, float)) else 0,
+                    "free_one_time_credit": ot_raw if isinstance(ot_raw, (int, float)) else 0,
+                    "entry_fee": None, "usage_credit_floor": None,
+                    "surcharge_floor": None, "has_free_tier": False,
+                    "off_category_credit_only": True, "shapes": {},
+                })
+            else:
+                skipped += 1
+            continue
+
         if not best_per_shape:
             continue
 
-        entry = card.get("free") or {}
         plans = card.get("plans")
         if isinstance(plans, dict):
             plans = [dict(v, name=k) for k, v in plans.items()]

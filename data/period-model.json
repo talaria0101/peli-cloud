@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T02:07:11Z",
+ "at": "2026-10-02T02:10:39Z",
  "card_commit": "f6a71ab09fef",
  "duty_cycles_h_per_day": [
   1,
@@ -7074,6 +7074,51 @@
    },
    "surcharge_floor": 19,
    "url": "https://boxes.dev/",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 7.5,
+   "free_one_time_credit": 0,
+   "has_free_tier": false,
+   "id": "bright-data-browser",
+   "isolation": null,
+   "name": "Bright Data Browser API",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://brightdata.com/pricing/scraping-browser",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 15,
+   "has_free_tier": false,
+   "id": "browser-use",
+   "isolation": null,
+   "name": "Browser Use Cloud",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://browser-use.com/pricing",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0.32,
+   "has_free_tier": false,
+   "id": "browseract",
+   "isolation": null,
+   "name": "BrowserAct",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.browseract.com/pricing",
    "usage_credit_floor": null
   },
   {
@@ -18771,6 +18816,21 @@
    "usage_credit_floor": null
   },
   {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_free_tier": false,
+   "id": "hyperbrowser",
+   "isolation": "firecracker",
+   "name": "Hyperbrowser",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.hyperbrowser.ai/pricing",
+   "usage_credit_floor": null
+  },
+  {
    "category": "gpu-cloud",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -25517,6 +25577,21 @@
    "usage_credit_floor": null
   },
   {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 10,
+   "has_free_tier": false,
+   "id": "notte",
+   "isolation": "container",
+   "name": "Notte",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.notte.cc/pricing",
+   "usage_credit_floor": null
+  },
+  {
    "category": "agent-sandbox",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -30789,6 +30864,21 @@
    "usage_credit_floor": null
   },
   {
+   "category": "inference-api",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_free_tier": false,
+   "id": "runanywhere",
+   "isolation": null,
+   "name": "RunAnywhere",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.runanywhere.ai/",
+   "usage_credit_floor": null
+  },
+  {
    "category": "agent-sandbox",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -32969,6 +33059,36 @@
    "usage_credit_floor": null
   },
   {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0.09,
+   "free_one_time_credit": 0,
+   "has_free_tier": false,
+   "id": "scrapeless",
+   "isolation": null,
+   "name": "Scrapeless Agent Browser",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.scrapeless.com/en/pricing",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 0.15,
+   "has_free_tier": false,
+   "id": "scrapfly",
+   "isolation": null,
+   "name": "Scrapfly Cloud Browser",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://scrapfly.io/pricing",
+   "usage_credit_floor": null
+  },
+  {
    "category": "gpu-cloud",
    "entry_fee": 0,
    "free_monthly_credit": 0,
@@ -33758,6 +33878,21 @@
    },
    "surcharge_floor": 20,
    "url": "https://smolmachines.com/pricing",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 5,
+   "has_free_tier": false,
+   "id": "smooth",
+   "isolation": null,
+   "name": "Smooth",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.smooth.sh/pricing",
    "usage_credit_floor": null
   },
   {
@@ -34954,6 +35089,21 @@
    },
    "surcharge_floor": 49,
    "url": "https://sandbox.stateset.app/",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 30,
+   "has_free_tier": false,
+   "id": "steel",
+   "isolation": "container",
+   "name": "Steel.dev",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://docs.steel.dev/overview/pricinglimits",
    "usage_credit_floor": null
   },
   {
@@ -36550,6 +36700,21 @@
    },
    "surcharge_floor": 20,
    "url": "https://tinfoil.sh",
+   "usage_credit_floor": null
+  },
+  {
+   "category": "browser",
+   "entry_fee": null,
+   "free_monthly_credit": 0,
+   "free_one_time_credit": 8,
+   "has_free_tier": false,
+   "id": "tinyfish",
+   "isolation": null,
+   "name": "TinyFish",
+   "off_category_credit_only": true,
+   "shapes": {},
+   "surcharge_floor": null,
+   "url": "https://www.tinyfish.ai/pricing",
    "usage_credit_floor": null
   },
   {
