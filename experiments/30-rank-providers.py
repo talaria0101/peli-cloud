@@ -192,6 +192,8 @@ def main():
             "id": p["id"], "name": p.get("name"), "url": p.get("url"),
             "category": p.get("category_class"), "isolation": p.get("isolation"),
             "entry_month_usd": entry,
+            "next_paid_tier_month_usd": p.get("next_paid_tier_month_usd"),
+            "entry_plan_name": p.get("entry_plan_name"),
             "tier": tier,
             "has_genuine_free_tier": p.get("has_genuine_free_tier"),
             "free_monthly_credit": p.get("free_monthly_credit"),
@@ -211,6 +213,11 @@ def main():
             row["cheaper_with_negotiation_mode"] = best2["mode"]
             comp = list(comp) + ["cheaper only with spot / negotiated / term pricing: $%.2f" % best2["total"]]
         row["compromises"] = sorted(set(comp))
+        # Make the trial trap impossible to miss on the row itself.
+        if entry == 0 and p.get("next_paid_tier_month_usd"):
+            row["compromises"].append(
+                "cheapest is the $0 tier (%s); the first plan you can stay on is $%g/mo"
+                % (p.get("entry_plan_name") or "entry plan", p["next_paid_tier_month_usd"]))
         rows.append(row)
 
     rows.sort(key=lambda r: (r["all_in_month_usd"], r["id"]))

@@ -300,6 +300,18 @@ def extract_card(path):
     entry = min(entry_plans) if entry_plans else None
     real_plans = [p for p in plans if _entry_ok(p)]
 
+    # The trap in every cheap row: the $0 entry tier is a TRIAL with a smaller
+    # concurrency cap and an expiry, and the first plan you can stay on costs
+    # real money. Recording the next paid tier turns "cheapest provider" into
+    # "cheapest to try" versus "cheapest to keep", which are not the same row.
+    paid = sorted({p["fee"] for p in plans
+                   if _entry_ok(p) and known(p.get("fee")) and p["fee"] > 0})
+    next_paid = paid[0] if paid else None
+    entry_objs = [p for p in plans if _entry_ok(p) and known(p.get("fee"))
+                  and p["fee"] == entry] if entry is not None else []
+    entry_name = entry_objs[0].get("name") if entry_objs else None
+    entry_note = entry_objs[0].get("note") if entry_objs else None
+
     return {
         "id": cid,
         "name": card.get("name"),
@@ -312,6 +324,9 @@ def extract_card(path):
         "n_plans": len(plans),
         "n_modes": len(modes),
         "entry_month_usd": entry,
+        "next_paid_tier_month_usd": next_paid,
+        "entry_plan_name": entry_name,
+        "entry_plan_note": entry_note,
         "has_genuine_free_tier": bool(_free_tier(plans)),
         "n_free_tier_plans": len(_free_tier(plans)),
         "entry_plan_is_beta": any("beta" in (p.get("flags") or []) for p in real_plans

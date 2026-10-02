@@ -65,11 +65,11 @@ right answer only if you can live with 1 GiB, an always-on hourly meter and no
 agent-sandbox ergonomics.
 
 **The cheapest actual agent-sandbox on this workload is about $0.30 a month
-(Agent 37) and $0.69 (zipbox); the best-known are Lizard and boat at about
-$0.90.** The big-name per-resource sandboxes (E2B, Daytona) price at about
-$8.28 a month for the same 50 hours, because they bill $0.0504 per vCPU-hour
-and $0.0162 per GiB-hour, which is roughly 9x the effective rate of the
-size-based sandboxes for a 2-vCPU box.
+(Agent 37) and $0.69 (zipbox); Lizard and boat both come out at about $0.90.**
+The big-name per-resource sandboxes (E2B, Daytona) price at about $8.28 a month
+for the same 50 hours, because they bill $0.0504 per vCPU-hour and $0.0162 per
+GiB-hour, which is roughly 9x the effective rate of the size-based sandboxes for
+a 2-vCPU box.
 
 That gap is the single most useful thing in this pass: **per-resource pricing
 and preset-size pricing are different products with very different totals at
@@ -85,14 +85,23 @@ the large credits ($200-$300) are all **one-time signup credits** that never
 recur. A buyer who treats a $300 Google/AWS/Azure signup credit as "free
 forever" is wrong; it is free once.
 
-**boat's $20-subscription caveat is real and is the single biggest trap in the
-cheapest rows.** Several of the cheapest sandbox rows are only reachable after a
-prepay or a minimum top-up, which the corpus records as `min_commit` /
-`included_usd`. boat in particular has near-free hourly rates but the cheapest
-way to actually buy it involves a $20-class commitment. The `platform_fee` and
-`min_commit` columns in `data/ranking-cheapest-first.json` carry this per row;
-the table's `entry fee` column carries the plan fee, and the `notes` column names
-when a mode is stock-limited or shape-capped.
+**The cheapest rows are full of trial-tier prices, and that is the biggest trap
+in the table.** boat's $0.90 is the arithmetic of its **Trial** plan: $0 fee,
+2 concurrent sandboxes, a one-time $0.90 credit, and the card's own condition
+reads "auto-converts to the chosen paid plan after 7 days unless cancelled".
+The next tier up is **$20/month** for 100 concurrent. So the operator's "$20
+subscription upfront" instinct is right about boat, and the $0.90 in this table
+is a seven-day number wearing a monthly label. The same pattern runs through the
+rows above it: read `entry fee` and `tier`, not just the all-in column.
+
+**What a prepay or minimum actually costs, per row,** is carried in
+`data/ranking-cheapest-first.json` as `platform_fee_month_usd`,
+`min_commit_month_usd` and `entry_plan`. For the rows where the cheapest
+published regime is a prepay, a minimum top-up or a negotiated contract, the
+`compromises` column says so in words. Three tiers exist and never blend: a
+`self-serve` row is one a new account can buy at that price with no
+negotiation; a `not-self-serve-only` row means the cheapest published regime is
+spot, a term commit or a sales conversation.
 
 ---
 
