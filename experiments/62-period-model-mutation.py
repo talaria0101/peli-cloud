@@ -47,6 +47,22 @@ Each one is a real defect that shipped: these are not hypotheticals.
      the row was priced at double. Reverting the correction puts lizard back at
      $5.40/month and unflags the row.
 
+  6. the dispute marker dropped from table C
+     Table C is where a reader lands and it had no marker at all: lizard at
+     rank 2 with $0.0090 and nothing saying the vendor's docs contradict it.
+     The marker rides on the provider name because the "buy it?" column exists
+     only in table B.
+
+  7. the footnote explaining the dispute removed
+     A mark with no explanation is a mystery to a reader, and this one is a
+     price taken from a page that contradicts itself.
+
+  8. the README's hand-typed counts go stale
+     The README said 79 one-time credits and 124 $0-tier cards where the data
+     said 81 and 116, and still said "Hetzner ranks third" after the Lizard
+     correction moved it. A count a script can compute should not be typed.
+     GUARD J compares the prose against data/period-model.json.
+
 Each mutation must make 61 FAIL. A mutation that leaves 61 passing is itself a
 finding: it means the guard does not cover the defect it claims to.
 
@@ -68,6 +84,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 MODEL = "experiments/70-period-model.py"
 GUARDS = "experiments/61-period-model-guards.py"
+RENDER = "experiments/80-render-catalogue.py"
 
 # Each mutation is (name, file, old, new, what a correct guard must notice).
 MUTATIONS = [
@@ -109,6 +126,29 @@ MUTATIONS = [
         '        for a in advertised_sizes(pid, m.get("key")):',
         '        for a in []:  # MUTATED: the vendor\'s advertised size is ignored',
         "61 GUARD I reports lizard back at $5.40/month with no ADVERTISED marker",
+    ),
+    (
+        "table C loses the dispute marker",
+        RENDER,
+        '        if "[ADVERTISED" in (s.get("how") or ""):\n            nm += " **(disputed)**"',
+        '        if False:  # MUTATED: table C loses the dispute marker\n            nm += " **(disputed)**"',
+        "61 GUARD I reports table C row 2 unmarked",
+    ),
+    (
+        "the footnote explaining the dispute is removed",
+        RENDER,
+        '    if any("[ADVERTISED" in ((p["shapes"].get("agent") or p["shapes"].get("tiny")\n'
+        '                              or p["shapes"].get("devbox") or {}).get("how") or "")\n'
+        '           for p in ranked):',
+        '    if False:  # MUTATED: the dispute footnote is gone',
+        "61 GUARD I reports the footnote missing from table C",
+    ),
+    (
+        "the README's hand-typed counts go stale again",
+        "README.md",
+        "**81 providers** publish a one-time",
+        "**79 providers** publish a one-time",
+        "61 GUARD J reports the one-time count as 81 and fails",
     ),
 ]
 

@@ -50,27 +50,31 @@ Free Ampere A1 allowance covers this shape even at 24/7, so a qualifying account
 pays $0. This model applies dollar credits only and cannot represent a
 resource allowance; `docs/FINDINGS.md` section 6.1 says so explicitly.
 
-**The same providers at 24/7** (the regime where a sandbox becomes a VPS) are
-roughly 2.4x the 10 h/day figure, and the order barely changes. Agent 37
-publishes its own always-on figure: *"From $4.76/month, 2 vCPU, 4 GB RAM and
-4 GB persistent disk at 730 running hours."*
+**The same providers at 24/7** (the regime where a sandbox becomes a VPS) cost
+more, and the order barely changes. Agent 37 publishes its own always-on
+figure: *"From $4.76/month, 2 vCPU, 4 GB RAM and 4 GB persistent disk at 730
+running hours."*
 
 **Free tiers, which revision 1 buried in a column:**
 
 - **13 providers** publish a credit that recurs every month. The largest in the
   entire market is **Modal at $30/month**, then Freestyle $18.38, Run Cloud $15.
-- **79 providers** publish a one-time signup credit. The famous $300 from
+- **81 providers** publish a one-time signup credit. The famous $300 from
   Google, AWS, Azure, Oracle and IBM are **one-time**. They do not renew.
-- **124 cards** sell a $0 plan and publish no credit, quota or cap. Whether that
+- **116 cards** sell a $0 plan and publish no credit, quota or cap. Whether that
   is a usable free tier or an unpriced meter is not in the card, so it is
   listed separately and called unknown rather than free.
+
+Every count in this section is generated into `docs/CATALOGUE.md` tables A1, A2
+and A3 and checked by `61-period-model-guards.py`, which fails if this prose
+disagrees with the data. Prose that a script can compute should not be typed.
 
 **Subscription floors beat the hourly rate.** boat's metered rate is $0.018/hour,
 but its $20 plan is a *usage credit*, not a surcharge — boat's own docs say
 *"not a fee: every dollar comes back as sandbox time"*. So the bill cannot fall
 below $20 and boat is **$20 at every duty cycle**, including 1 h/day.
 
-**The cheapest providers round up to the hour.** Hetzner ranks third at
+**The cheapest providers round up to the hour.** Hetzner ranks fourth at
 $0.0104/hour and its billing FAQ says *"always round up the hourly usage"*, with
 powered-off servers billed. An agent that starts a sandbox per tool call pays 4x
 the headline rate. **25 of 202 providers** are affected; the full table is B1.

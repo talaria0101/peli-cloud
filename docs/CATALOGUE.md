@@ -1,6 +1,6 @@
 # peli-cloud — every provider, cheapest first, at every period
 
-**Generated 2026-10-02T03:25:41Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
+**Generated 2026-10-02T03:35:43Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
 
 ## How to read this
 
@@ -715,7 +715,7 @@ Nothing truncated. One row per provider that priced at any shape and period, ord
 | # | provider | category | isolation | $/h agent | 1h/day | 4h/day | 10h/day | 24h/day | free/mo | floor | link |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | [Agent 37](https://www.agent37.com/pricing) | agent-sandbox | gvisor | 0.0060 | 0.18 | 0.72 | 1.81 | 4.34 | - | - | `agent-37` |
-| 2 | [Lizard](https://lizard.build/pricing) | agent-sandbox | container | 0.0090 | 0.27 | 1.08 | 2.70 | 6.48 | - | - | `lizard` |
+| 2 | [Lizard](https://lizard.build/pricing) **(disputed)** | agent-sandbox | container | 0.0090 | 0.27 | 1.08 | 2.70 | 6.48 | - | - | `lizard` |
 | 3 | [Oracle Cloud Infrastructure](https://www.oracle.com/cloud/compute/pricing/) | hyperscaler | vm | 0.0091 | 0.27 | 1.09 | 2.74 | 6.57 | - | - | `oracle-cloud` |
 | 4 | [Hetzner Cloud](https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/) | hyperscaler | vm | 0.0104 | 0.31 | 1.25 | 3.12 | 7.49 | - | - | `hetzner-cloud` |
 | 5 | [Moonshot Kimi Hosted Agents sandbox](https://platform.kimi.com/docs/pricing/hosted-agents.md) | agent-sandbox | - | 0.0107 | 0.32 | 1.29 | 3.22 | 7.73 | - | - | `moonshot-kimi` |
@@ -920,6 +920,8 @@ Nothing truncated. One row per provider that priced at any shape and period, ord
 | 204 | [netcup VPS](https://www.netcup.com/en/server/vps) | hyperscaler | vm | 8.5107 | 255.32 | 1021.29 | 2553.22 | 6127.74 | - | - | `netcup` |
 | 205 | [Nextmv](https://nextmv.io) | paas | container | 9.7200 | 291.60 | 1166.40 | 2916.00 | 6998.40 | - | - | `nextmv` |
 | 206 | [Hostinger VPS](https://www.hostinger.com/vps-hosting) | hyperscaler | vm | 24.4900 | 734.70 | 2938.80 | 7347.00 | 17632.80 | - | - | `hostinger-vps` |
+
+**(disputed)** marks a row priced from a size the vendor advertises and the corpus card dropped, where the vendor's own pricing page and its own docs contradict each other. The price is the vendor's, not a confirmed figure. See FINDINGS section 5.5 and the note under table B.
 
 ---
 

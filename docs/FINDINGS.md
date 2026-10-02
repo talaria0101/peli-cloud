@@ -47,7 +47,10 @@ in `experiments/`.
   that publishes nothing is recorded as `1.00`, billed for uptime, because a
   plain VM is. **No sandbox was created and stopped**, so no keep rate in this
   document is observed behaviour. It is a reading of the vendor's own feature
-  list. Only 28 of 366 cards publish `auto_stop_idle` at all.
+  list. Only **8 of 366** cards publish `auto_stop_idle` on any mode (11 modes
+  in total), so **544 of 605** priced rows fall back to the conservative `1.00`
+  and are assumptions, not readings. See section 6.2, where a vendor's own page
+  is found contradicting that fallback.
 - **The period model excludes egress, storage beyond what a card bundles, IPv4
   and team seats.** A provider cheap here can be dear there. The full corpus
   cards carry those fields; these tables do not price them.
@@ -131,9 +134,9 @@ $0.36 of disk.
    is **$20 at every duty cycle**, including 1 hour/day. A provider whose floor
    exceeds your usage is a rental, not a metered box.
 2. **Free credit is smaller and rarer than it is advertised.** 13 of 366 cards
-   publish a credit that recurs; the largest is Modal at **$30/month**. 79
+   publish a credit that recurs; the largest is Modal at **$30/month**. 81
    publish a one-time signup credit, and the famous $300 figures from Google,
-   AWS, Azure, Oracle and IBM are **one-time**: they do not renew. A further 124
+   AWS, Azure, Oracle and IBM are **one-time**: they do not renew. A further 116
    cards sell a $0 plan and publish no credit, quota or cap at all, which is
    recorded as unknown rather than free.
 3. **The cheapest row is a different provider at every duty cycle, and the
@@ -153,8 +156,7 @@ the earlier ones got wrong, and the corrections are the useful part.
 | "the cheapest is Scaleway Stardust at $0.03/month" | that was a 1 vCPU / 1 GiB machine priced as if the workload were 2 vCPU / 4 GiB, and it is stock-limited. At the real shape it is not the cheapest, and it is not an agent sandbox | table C, `tiny` vs `agent` |
 | one monthly total per provider | reads a stoppable machine as a fixed monthly host, which is the VPS comparison the task is not asking for | the whole of table B |
 | no hourly figure, no duty cycle | the cheapest provider is a function of hours; one number hides the answer | `$/hour`, `$/day`, `$/week`, `$/month` per duty cycle |
-| "no large recurring free-credit tier; 13 of 366, max $30" | correct, but it was a paragraph in the middle of a write-up, and the *one-time* credits were folded into the same sentence | tables A1, A2 and A3, separately |
-| boat at $0.90, "the first plan you can stay on is $20" | the $20 is not a cheaper tier you upgrade to, it is a **floor** the bill cannot fall below. The row was directionally right and structurally wrong | `floor` column; boat is $20 at every duty cycle |
+| "no large recurring free-credit tier; 13 of 366, max $30" | correct, but it was a paragraph in the middle of a write-up, and the *one-time* credits were folded into the same sentence | tables A1, A2 and A3, separately || boat at $0.90, "the first plan you can stay on is $20" | the $20 is not a cheaper tier you upgrade to, it is a **floor** the bill cannot fall below. The row was directionally right and structurally wrong | `floor` column; boat is $20 at every duty cycle |
 | 211 ranked rows, ranked on one workload | a provider that fits 4 vCPU was ranked against one that fits 1 vCPU | three shapes, priced separately |
 | the two named providers were checked; the third was a typo | correct, and still true, but it was the most-emphasised finding in the document when it is a one-line naming correction | section 4 |
 
@@ -464,6 +466,52 @@ So the cross-check does not "confirm" my ranking; it **localises** exactly where
 the two definitions of the question part company, and every part-company row is
 explained. That is the strongest form of agreement available here, because the
 two models were built independently and the residual is not noise.
+
+### 6.2 The keep rate is a default, and I have a first-party page contradicting it
+
+**544 of 605 priced rows** take their keep rate from the fallback in section 0:
+the corpus card publishes no suspension feature, so the row is recorded as
+`1.00`, billed for uptime. Only 61 rows have a published basis
+(`auto_stop_idle` 5, `pause_resume` 10, `requires_always_on` 46).
+
+I went looking for a card where the vendor's own page contradicts that default,
+and found one on the row I had just corrected.
+
+`lizard.build/pricing`, fetched 2026-10-02:
+
+> Sandboxes come in three sizes, priced per hour and billed per second while
+> they run: Small (2 vCPU, 4 GB RAM) at $0.009/hour, Medium (4 vCPU, 8 GB RAM)
+> at $0.018/hour, and Large (8 vCPU, 16 GB RAM) at $0.036/hour.
+
+and, on the same page:
+
+> ...and paused sandboxes do not count as running.
+
+The card (`lizard.json`, mode `sandbox`) publishes
+`features: {"isolation": "container"}` and nothing else, so my model records
+`keep_rate: 1.00`, basis *"billed for uptime (no suspension feature published)"*.
+**The page says the opposite: a paused sandbox does not bill.** So:
+
+- My **10 h/day** figures are unaffected. They already assume the machine is
+  held for exactly the hours in the duty cycle, and a suspension only matters
+  when you hold a machine *longer* than you use it.
+- My **24/7** figure for Lizard, **$6.48/month**, is therefore **too high** for
+  anyone who pauses between agent steps, and it is the shape of number a reader
+  would use to judge a sandbox as a VPS. It is also, at $6.48, *cheaper* than a
+  4 vCPU Lizard box at the same vendor ($12.96) would be, which is exactly the
+  kind of row that gets bought as a stoppable machine and then found to bill
+  continuously.
+
+**I have not fixed this, and the reason is that the fix is not a patch.** The
+corpus has no field for a published suspension, and the honest version of the
+fix is a per-provider first-party read of each vendor's idle policy, which is
+the work `50-firstparty-audit.py` does for prices and does not yet do for
+billing posture. 544 rows is not something to guess at. The defensible interim
+is the one already in place: the default is the **conservative** one, `1.00`, so
+every affected row overstates rather than understates the bill, and the basis
+is printed on every row so a reader can see which rows are assumed. A vendor
+that publishes a suspension policy and is not in the card's `features` is the
+gap, and it is upstream's gap as much as mine.
 
 ---
 

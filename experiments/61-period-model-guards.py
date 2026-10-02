@@ -273,10 +273,131 @@ if liz:
        "%.2f" % liz[0]['shapes']['agent']['periods']['10h']['billed_month_no_credit'])
 ck("the catalogue marks the row disputed, not confirmed",
    '**disputed**' in open(os.path.join(ROOT, 'docs/CATALOGUE.md')).read())
+# Table C is the table a reader lands on, and it had no marker: lizard sat at
+# rank 2 with $0.0090 and nothing saying the vendor's docs contradict the price.
+# The marker now rides on the provider name, which every table prints, because
+# the "buy it?" column only exists in table B.
+_cat = open(os.path.join(ROOT, 'docs/CATALOGUE.md')).read()
+_cseg = _cat[_cat.index('## C.'):_cat.index('## D.')]
+_crow2 = [l for l in _cseg.split('\n') if l.startswith('| 2 |')]
+ck("table C marks the disputed row", bool(_crow2) and 'disputed' in _crow2[0],
+   (_crow2[0][:78] if _crow2 else "no row 2"))
+ck("table C carries the footnote explaining the mark",
+   'corpus card dropped' in _cseg)
+_disputed_ids = {a["provider"] for a in pm.ADVERTISED_SIZES}
+for _pid in _disputed_ids:
+    _rows = [l for l in _cat.split('\n')
+             if l.startswith('|') and ('`%s`' % _pid) in l and '/h agent' in l or
+             (l.startswith('|') and ('`%s`' % _pid) in l and '$/hour' in l)]
+    ck("every ranked row of %s carries the dispute" % _pid,
+       all('disputed' in l for l in _rows), "%d row(s) unmarked" % sum(
+           1 for l in _rows if 'disputed' not in l))
 ck("the corpus is not vendored, because it carries no licence",
    not os.path.isdir(os.path.join(ROOT, 'references', 'battleships', '.git')) or
    'NOTICE' in os.listdir(ROOT),
    "NOTICE present=%s" % ('NOTICE' in os.listdir(ROOT)))
+
+print("GUARD J: the README's prose counts must equal the data")
+# These numbers were typed by hand and went stale: the README said 79 one-time
+# credits and 124 $0-tier cards while the data said 81 and 116, and it still
+# said "Hetzner ranks third" after Lizard moved to second. A count a script can
+# compute should not be typed, and this is the check that stops it being typed
+# again.
+readme = open(os.path.join(ROOT, 'README.md'), encoding='utf-8').read()
+recurring = [p for p in doc['providers'] if (p.get('free_monthly_credit') or 0) > 0]
+one_time = [p for p in doc['providers'] if (p.get('free_one_time_credit') or 0) > 0]
+zero_no_credit = [p for p in doc['providers']
+                  if p.get('has_free_tier')
+                  and not (p.get('free_monthly_credit') or 0)
+                  and not (p.get('free_one_time_credit') or 0)]
+trial = [p for p in doc['providers'] if p.get('trial_only_plans')]
+ck("README recurring-credit count is %d" % len(recurring),
+   ("**%d providers** publish a credit that recurs" % len(recurring)) in readme)
+ck("README one-time-credit count is %d" % len(one_time),
+   ("**%d providers** publish a one-time" % len(one_time)) in readme)
+ck("README $0-tier count is %d" % len(zero_no_credit),
+   ("**%d cards** sell a $0 plan" % len(zero_no_credit)) in readme)
+ck("README trial_only count is %d" % len(trial),
+   ("%d cards mark one `trial_only`" % len(trial)) in readme)
+# The largest recurring credit, named in the prose.
+top = max(recurring, key=lambda p: p['free_monthly_credit'])
+ck("README names the largest recurring credit correctly (%s $%g)"
+   % (top['name'], top['free_monthly_credit']),
+   ("**%s at $%g/month**" % (top['name'], top['free_monthly_credit'])) in readme)
+# The rank claims in the headline table, checked against the ordering the
+# renderer actually uses.
+def agent_rows():
+    out = []
+    for p in doc['providers']:
+        s = p['shapes'].get('agent')
+        if not s:
+            continue
+        pd = s['periods'].get('10h')
+        if pd and pd['billed_month_no_credit'] > 0.004:
+            out.append((pd['billed_month_no_credit'], p['name']))
+    return sorted(out)
+rows10 = agent_rows()
+_by_id = {p['id']: p for p in doc['providers']}
+for want, (cost, name) in enumerate(rows10[:8], 1):
+    p = [x for x in doc['providers'] if x['name'] == name][0]
+    # Match on the row's position and its price, not on the display name: the
+    # README legitimately shortens "Oracle Cloud Infrastructure" to "Oracle
+    # Cloud", and a guard that demanded the exact string would force the README
+    # to be worse. The price is the part that must not drift.
+    ck("README headline table row %d is %s at $%.2f" % (want, name, cost),
+       ("| %d | [" % want) in readme and
+       ("| %.4f | %.2f |" % (p['shapes']['agent']['hourly'], cost)) in readme,
+       "rank %d, $%.4f/h, $%.2f/mo" % (want, p['shapes']['agent']['hourly'], cost))
+# And the one ordinal claim in prose, which said "third" for a provider that
+# the Lizard correction moved.
+hz = [i for i, (_c, n) in enumerate(rows10, 1) if n and n.startswith('Hetzner')]
+ck("README's Hetzner ordinal matches its real rank %s" % (hz[0] if hz else '?'),
+   ("Hetzner ranks %s at" % {1: 'first', 2: 'second', 3: 'third', 4: 'fourth',
+                             5: 'fifth', 6: 'sixth', 7: 'seventh',
+                             8: 'eighth'}.get(hz[0] if hz else 0, '?')) in readme,
+   "rank is %s" % (hz[0] if hz else '?'))
+
+# FINDINGS carries the same hand-typed numbers and they drifted too: section 0
+# claimed 28 of 366 cards publish auto_stop_idle when 8 do, and section 2
+# repeated the stale 79 and 124. Section 0 is the one a reader is told to read
+# before any table, so a wrong count there is the worst place for one.
+find_txt = open(os.path.join(ROOT, 'docs', 'FINDINGS.md'), encoding='utf-8').read()
+_cards_dir = os.path.join(ROOT, 'references', 'battleships', 'research', 'cards')
+_asis = sorted(f for f in os.listdir(_cards_dir)) if os.path.isdir(_cards_dir) else []
+if _asis:
+    _n_asis = 0
+    for _f in _asis:
+        if not _f.endswith('.json'):
+            continue
+        _c = json.load(open(os.path.join(_cards_dir, _f), encoding='utf-8'))
+        if any((m.get('features') or {}).get('auto_stop_idle') is True
+               for m in _c.get('modes') or []):
+            _n_asis += 1
+    ck("FINDINGS states the auto_stop_idle coverage correctly (%d cards)" % _n_asis,
+       ("**%d of %d** cards publish `auto_stop_idle`" % (_n_asis, len(_asis))) in find_txt
+       or ("Only %d of %d cards publish `auto_stop_idle`" % (_n_asis, len(_asis))) in find_txt,
+       "looked for %d of %d" % (_n_asis, len(_asis)))
+    _rows_default = sum(
+        1 for p in doc['providers'] for s in (p.get('shapes') or {}).values()
+        if s.get('keep_source') == 'default')
+    _total_rows = sum(len(p.get('shapes') or {}) for p in doc['providers'])
+    # 544 rows take the FALLBACK, not 605 minus the auto-suspend rows. An
+    # earlier version of this guard subtracted only features.auto_stop_idle and
+    # demanded "600 of 605", which is the complement of the right answer: the
+    # fallback is the keep_source 'default' rows, and requires_always_on and
+    # pause_resume are published bases, not fallbacks.
+    ck("FINDINGS states the default-keep-rate row count correctly",
+       ("**%d of %d** priced rows" % (_rows_default, _total_rows)) in find_txt,
+       "expected %d of %d" % (_rows_default, _total_rows))
+else:
+    print("  skip auto_stop_idle recount (corpus not fetched; run "
+          "experiments/10-fetch-corpus.sh to check it)")
+ck("FINDINGS one-time count matches the data (%d)" % len(one_time),
+   ("%d\n   publish a one-time signup credit" % len(one_time)) in find_txt
+   or ("%d publish a one-time signup credit" % len(one_time)) in find_txt)
+ck("FINDINGS $0-tier count matches the data (%d)" % len(zero_no_credit),
+   ("%d\n   cards sell a $0 plan" % len(zero_no_credit)) in find_txt
+   or ("%d cards sell a $0 plan" % len(zero_no_credit)) in find_txt)
 
 print()
 print("TOTAL:", len(fails), "failures")

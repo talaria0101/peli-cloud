@@ -417,13 +417,29 @@ def main():
             pd = P.get(dk)
             return "%.2f" % pd["billed_month_with_credit"] if pd else "-"
         floor = p.get("usage_credit_floor")
+        # A disputed row must be marked in THIS table too. Table C is the one a
+        # reader lands on, and it had no marker at all: lizard appeared at rank 2
+        # with $0.0090 and nothing saying the vendor's own docs contradict it.
+        # The mark goes on the provider name, which every table shows, rather
+        # than on a column only table B has.
+        nm = link(p["name"] or p["id"], p.get("url"))
+        if "[ADVERTISED" in (s.get("how") or ""):
+            nm += " **(disputed)**"
         A("| %d | %s | %s | %s | %.4f | %s | %s | %s | %s | %s | %s | %s |" % (
-            i, link(p["name"] or p["id"], p.get("url")), p.get("category") or "-",
+            i, nm, p.get("category") or "-",
             p.get("isolation") or "-", s["hourly"], cell("1h"), cell("4h"), cell("10h"),
             cell("24h"),
             ("$%g" % p["free_monthly_credit"]) if p.get("free_monthly_credit") else "-",
             ("$%g" % floor) if floor else "-", "`%s`" % p["id"]))
     A("")
+    if any("[ADVERTISED" in ((p["shapes"].get("agent") or p["shapes"].get("tiny")
+                              or p["shapes"].get("devbox") or {}).get("how") or "")
+           for p in ranked):
+        A("**(disputed)** marks a row priced from a size the vendor advertises "
+          "and the corpus card dropped, where the vendor's own pricing page and "
+          "its own docs contradict each other. The price is the vendor's, not a "
+          "confirmed figure. See FINDINGS section 5.5 and the note under table B.")
+        A("")
 
     # ---------------- Table D: the ledger ----------------
     A("---")

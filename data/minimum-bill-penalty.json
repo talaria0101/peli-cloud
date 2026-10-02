@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T03:25:12Z",
+ "at": "2026-10-02T03:35:13Z",
  "caveat": "each profile is compared against the SAME demand, smoothed; these are bounds, not predicted bills",
  "demand_hours_per_day": 10.0,
  "profiles": {
