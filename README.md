@@ -20,6 +20,7 @@ each in their own table, and every row linking to the page its numbers came from
 | **a shell with no card and no account** | **[docs/ANONYMOUS-VMS.md](docs/ANONYMOUS-VMS.md)** |
 | **to doubt the census** | **[research/deep-reviews-anon-vms.md](research/deep-reviews-anon-vms.md)** - five reviews; three of them removed rows |
 | **an SSH session into this sandbox from outside** | **[research/verification/ssh-relay-2026-10-02.md](research/verification/ssh-relay-2026-10-02.md)**, then `sh tools/ssh-relay-check.sh` |
+| **an SSH session OUT to Railway's anonymous VM** | `sh tools/poc-forward-relay.sh` - the relay's forward path works; dropssh v0.2.3's forward client does not |
 | to distrust me | [experiments/](experiments/) and `data/*.json` |
 | to know what was wrong | [docs/FINDINGS.md](docs/FINDINGS.md) |
 
@@ -170,6 +171,7 @@ shell on for nothing, and what it actually takes:
     python3 tests/selftest-check-quotes.py                # the quote checker's own known answers
     python3 tests/selftest-check-quotes.py --mutate       # and the mutation that must be caught
     sh      tools/ssh-relay-check.sh                      # a REAL ssh login into this sandbox, over a relay
+    sh      tools/poc-forward-relay.sh                    # the forward path OUT, and dropssh's defect in it
     sh      tests/ssh-relay-regressions.sh                # 11 clauses; each names the control it needs
     sh      tests/one-login.sh <name>                     # one login, passwd name drivable (PASSWD_NAME=<n>)
 

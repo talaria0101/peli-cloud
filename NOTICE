@@ -45,3 +45,14 @@ This is a research pass, not a product. It is a shape ranking, not a fit
 ranking; it inherits every price error in one corpus at one commit; and 440
 figures in the first-party sample could not be confirmed. Read section 0 of
 `docs/FINDINGS.md` before any table.
+
+## The relay, and the two clients written against it
+
+`tools/poc-forward-relay.sh` and the two clients it drives are in
+`peli-cloud`, but the relay itself (`tcp.ssh.relay.ajam.dev`) is **not** part of
+this repository and is not relicensed by anything here. The measurements in
+`research/verification/ssh-relay-2026-10-02.md` and
+`docs/ANONYMOUS-VMS.md` are observations of that service's behaviour on
+2026-10-02, and one of them is a **defect report against dropssh v0.2.3's
+forward client**, filed upstream as talaria0101/dropssh#17 with #16 corrected.
+Nothing here claims the relay is defective; the measured claim is the opposite.

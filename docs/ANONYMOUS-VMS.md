@@ -24,13 +24,12 @@ Three different claims are in this page and they are **not** the same claim.
 | `no` | No inbound SSH endpoint is published. |
 
 **6 rows are banner-verified. That is not a login count, and on this
-host a login over the relay forward path does not complete.** The cause is not
-SSH: review R25 sent a plain HTTP request down the same forward path and also got
-nothing back, so this host opens a forward session, reads the target's first
-bytes, and cannot get its own bytes delivered past that point - for any
-protocol. Which end is at fault is not established. The measurement, the
-controls and what would settle it are in
-[`research/verification/ssh-relay-2026-10-02.md`](../research/verification/ssh-relay-2026-10-02.md).
+host the forward path cannot carry an ssh session using dropssh v0.2.3's own
+client.** The relay is not at fault: the relay's own diagnostic calls the
+targets live, and a from-scratch WebSocket client carries a complete session to
+Railway's anonymous VM. What is broken is dropssh's forward branch, which blocks
+in `ws_read()` and therefore never services its own stdin. One session, exit 0,
+proves both halves - see [`tools/poc-forward-relay.sh`](../tools/poc-forward-relay.sh).
 
 ## What the three classes mean
 
