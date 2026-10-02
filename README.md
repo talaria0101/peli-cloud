@@ -14,6 +14,7 @@ each in their own table, and every row linking to the page its numbers came from
 | you have | read |
 |---|---|
 | two minutes | [docs/CATALOGUE.md](docs/CATALOGUE.md) section A, then the 10 h/day `agent` table |
+| before you commit to a cheap provider | table B1, the minimum bill |
 | ten minutes | [docs/CATALOGUE.md](docs/CATALOGUE.md) in full |
 | to buy something | table C, then the duty cycle that matches your agent |
 | to distrust me | [experiments/](experiments/) and `data/*.json` |
@@ -58,11 +59,23 @@ but its $20 plan is a *usage credit*, not a surcharge — boat's own docs say
 *"not a fee: every dollar comes back as sandbox time"*. So the bill cannot fall
 below $20 and boat is **$20 at every duty cycle**, including 1 h/day.
 
+**The cheapest providers round up to the hour.** Hetzner ranks third at
+$0.0104/hour and its billing FAQ says *"always round up the hourly usage"*, with
+powered-off servers billed. An agent that starts a sandbox per tool call pays 4x
+the headline rate. **25 of 202 providers** are affected; the full table is B1.
+
+**A `$0` tier is not a free tier.** 16 cards mark one `trial_only` because it
+blocks usage or expires. Replit's is $0 and buys nothing; its real entry is $18.
+River, Vercel and boat were all published at $0 until the corpus's own
+verification notes were read.
+
 ## Reproduce it
 
     bash   experiments/10-fetch-corpus.sh               # re-fetch the corpus at its pinned commit
     python3 experiments/20-extract-provider-universe.py # read every card from primary fields
     python3 experiments/70-period-model.py              # price 3 shapes x 4 duty cycles
+    python3 experiments/90-exclusion-ledger.py         # account for all 366 cards
+    python3 experiments/91-minimum-bill-penalty.py     # what a $/hour table hides
     python3 experiments/80-render-catalogue.py          # render the four tables
     python3 experiments/40-crosscheck-engine.py         # re-price with the corpus's own engine
     python3 experiments/50-firstparty-audit.py          # re-fetch vendor pages for a sample
