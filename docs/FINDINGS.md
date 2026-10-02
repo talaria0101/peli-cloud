@@ -26,6 +26,22 @@ in `experiments/`.
 - **Prices are a snapshot.** They are as published on the vendor page on the
   corpus's check date (mostly 2026-09-28..30) and as re-confirmed by my
   first-party audit on 2026-10-02 for a 19-provider sample. Providers move.
+- **The first-party audit confirms figures; it does not clear them.** Of 19
+  sampled pages, 3 render client-side and were read as unscored, 6 matched
+  every figure on the card, and 10 left some unconfirmed: 440 figures the
+  probe could not find. Most of those (AWS 182, Azure 225, Vercel 22) are
+  per-instance-size rates that no single page prints as one flat list, so they
+  are a limit of reading a page as text, not evidence the corpus is wrong. A
+  figure the card **derives** from a published bundle is reported separately and
+  is not counted as a miss: `fly-machines`' `vcpu_h` 0.02916 is the published
+  $0.043056/h performance price minus the 2 GB of RAM bundled at
+  $0.006948/GB-h, and the audit recomputes that subtraction from the card's own
+  note rather than reporting the card as wrong. This audit started out scoring
+  **0 of 19** as a full match, because it compared printed strings and read
+  E2B's per-second `$0.000014` as a disagreement with the corpus's
+  `$0.0504/hour`; those are the same price and it now matches them by unit
+  equivalence. A probe that reported 511 misses was measuring formatting, not
+  prices.
 - **The keep rate is read from published features, not measured.** A provider that
   publishes `auto_stop_idle: true` is recorded as suspending on idle; a provider
   that publishes nothing is recorded as `1.00`, billed for uptime, because a
@@ -260,6 +276,58 @@ I did not verify that the upstream engine actually throws on the nested size
 list at the live site, only that the element would fail its own predicate. The
 two corpus defects are in somebody else's tree, so they are reported with file
 and mode, not edited.
+
+### 5.4 Four defects in the period model, found by reading its own output
+
+The period model (`70-`) landed with a guard suite that could not run, so the
+four defects below shipped unguarded. All four are fixed, and
+`62-period-model-mutation.py` now plants each one and proves the guard refuses
+it. Each is stated with the output that exposed it.
+
+- **Bug 5: the console table ranked on the credit-adjusted price.** The
+  catalogue and the console were generated from the same artefact by two
+  scripts that disagreed about which number to sort on. `80-render-catalogue.py`
+  sorted on `billed_month_no_credit`; `70-period-model.py` sorted on
+  `billed_month_with_credit`. The console therefore put **Run Cloud** at rank 1
+  of the 2 vCPU / 4 GiB / 10 h/day table with a month of **$0.00**, because its
+  $15 recurring credit exceeded that month's $13.98 bill, while the published
+  catalogue put Agent 37 at $1.81. Same data, same day, two different answers,
+  and the one a reader sees first was the wrong one. The clamp to $0.00 also
+  affected 5 of 202 rows at 1 h/day and 1 of 202 at 10 h/day. Fix: both sort on
+  the pre-credit price, and a row whose pre-credit month is $0.00 is dropped
+  from the ranking rather than shown as free, because a $0.00 position is an
+  artefact of the model, not a price.
+- **Bug 6: `keep_basis` was a leaked loop variable.** The basis travelled on a
+  name bound while scanning a card's modes, so every priced row carried
+  whatever the **last** mode of that card happened to say. `aws-lambda` shipped
+  `keep_source: requires_always_on` beside `keep_basis: "billed for uptime (no
+  suspension feature published)"` — two different claims about the same rate,
+  and a reader cannot tell which is the one that was applied. Fix: the basis
+  travels with the selected candidate, so a row's basis is its own mode's.
+- **Bug 7: the per-invocation exclusion was a note-text match, and it deleted
+  six real providers.** A per-invocation product publishes `vcpu_h: 0` with a
+  real `ram_gib_h`, which the model read as "CPU is free, memory costs
+  $0.06/GiB-h" — pricing a per-millisecond invoker as if it were a 1 vCPU / 1 GiB
+  box billed by the hour. The first fix searched the mode's note for `requests`
+  and `GB-s`. That dropped **36 modes across 23 cards**, including **Lizard,
+  Railway, Kernel, Sail, CreateOS and InstaVM**, every one of which bills per
+  second of running time and is a real sandbox. `requests` also matches
+  Kubernetes *resource* requests (`gke-agent-sandbox`, `google-agent-engine`),
+  inbound HTTP requests (`deno-sandbox`, `sail`, `sandbox0`) and the phrase "no
+  requests" (`azure-container-apps`); `GB-s` is per **second**. The test that
+  works is structural: a mode is per-invocation only if it publishes **no
+  positive hourly rate anywhere**, and a note names the unit. Every exclusion is
+  now listed in `data/period-model.json` under `per_request_modes_skipped`
+  rather than dropped silently.
+- **Bug 8: the guard suite could not run, which is why 5 to 7 shipped.**
+  `61-period-model-guards.py` hardcoded `ROOT = '/workspace/peli-cloud'`, so on
+  any other clone it raised `FileNotFoundError` before executing a single
+  assertion. The exit code was nonzero, but the failure was a traceback with no
+  `FAIL` lines, so a run log showed a red exit and nothing to act on. Every
+  other script in `experiments/` derives `ROOT` from `__file__`; `61` was the
+  only one that did not. Fix: derive it the same way, and exit **2** with a
+  message when no tree is found, which is this repo's code for "could not run"
+  and is distinguishable from a guard failure at a glance.
 
 ## 6. Independent cross-check against the upstream engine (the control)
 

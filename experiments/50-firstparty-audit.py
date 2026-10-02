@@ -112,6 +112,58 @@ def card_rates(card):
     return vals
 
 
+def norm(x):
+    for d in (4, 3, 2, 1, 0):
+        s = ("%." + str(d) + "f") % float(x)
+        if float(s) != 0:
+            s = s.rstrip("0").rstrip(".") if "." in s else s
+            return s.lstrip("0") or "0"
+    return str(x)
+
+
+# Every page that renders a price also renders the UNIT, and vendors publish
+# per-second and per-hour rates for the same machine freely: e2b.dev/pricing
+# prints $0.000014 per vCPU-second, which is the corpus's $0.0504/hour exactly
+# ($0.000014 x 3600 = 0.0504). Comparing the printed strings alone scored that
+# as a disagreement, and the same fault produced 481 "not found" figures across
+# the 19-provider sample, which reads as a first-party audit that found almost
+# nothing wrong with the corpus. It is not evidence either way: it is a unit
+# mismatch. So each page figure is also converted to an hourly equivalent
+# before the comparison, and a corpus rate is matched by EITHER its own printed
+# form or its hourly equivalent.
+PER_SECOND = 3600.0
+PER_MINUTE = 60.0
+PER_DAY = 24.0
+PER_MONTH = 30.0 * 24.0
+
+
+def page_rate_variants(raw):
+    """The numeric forms a page figure should be allowed to match.
+
+    A page may print the rate per second, per minute, per hour, per day or per
+    month, and may print it rounded to fewer significant figures than the corpus
+    holds. The corpus value is what we are trying to corroborate, so every unit
+    equivalent of every page figure is offered to the comparison.
+    """
+    out = set()
+    try:
+        v = float(re.sub(r"[^\d.]", "", raw))
+    except (TypeError, ValueError):
+        return out
+    for scale in (1.0, PER_SECOND, PER_MINUTE, PER_DAY, PER_MONTH,
+                  1.0 / PER_SECOND, 1.0 / PER_MINUTE, 1.0 / PER_DAY, 1.0 / PER_MONTH):
+        x = v * scale
+        for d in (6, 4, 3, 2, 1, 0):
+            s = ("%." + str(d) + "f") % x
+            try:
+                if abs(float(s) - round(float(s), 6)) > 1e-9:
+                    continue
+            except ValueError:
+                continue
+            out.add(norm(s))
+    return {o for o in out if o}
+
+
 def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     cards_dir = os.path.join(root, "references", "battleships", "research", "cards")
@@ -161,19 +213,13 @@ def main():
                          "bytes": len(body), "why": why})
             continue
 
-        # Does every corpus rate appear on the page? Compare as strings with the
-        # number rounded the way a page would print it.
-        def norm(x):
-            for d in (4, 3, 2, 1, 0):
-                s = ("%." + str(d) + "f") % float(x)
-                if float(s) != 0:
-                    s = s.rstrip("0").rstrip(".") if "." in s else s
-                    return s.lstrip("0") or "0"
-            return str(x)
-
+        # Does every corpus rate appear on the page, in any unit the page might
+        # reasonably print it in? Compare as strings with the number rounded the
+        # way a page would print it.
         page_nums = set()
         for s in found:
             page_nums.add(norm(re.sub(r"[^\d.]", "", s) or 0))
+            page_nums |= page_rate_variants(s)
         matched, missing = [], []
         for label, val in rates:
             if norm(val) in page_nums:
@@ -186,8 +232,43 @@ def main():
             disagree += 1
         else:
             agree += 1
+        # A figure the card DERIVES from a published bundled price cannot appear
+        # on the page, because the page prints the bundle, not the difference.
+        # fly-machines is the case: vcpu_h 0.02916 is the performance vCPU price
+        # of $0.043056/h MINUS the 2 GB of RAM bundled with it at $0.006948/GB-h,
+        # and the note says so. The page publishes $0.043056 and $0.006948; the
+        # probe is right that 0.02916 is not printed and wrong to read that as a
+        # disagreement. So a rate is labelled derived when the card's own note
+        # shows the arithmetic that produced it, and those are counted apart.
+        note_all = " ".join((m.get("note") or "") for m in (card.get("modes") or []))
+        has_derivation = bool(re.search(
+            r"minus|derived|backed out|net of|excluding the (bundled|included)", note_all))
+        derived, unverifiable = [], []
+        for label, val in missing:
+            if label.endswith("vcpu_h/h") or label.endswith("ram_gib_h/h"):
+                # Derived means the note shows a SUBTRACTION that yields this
+                # figure, so the page prints the bundle and not the difference.
+                # The arithmetic is checked numerically rather than by matching
+                # the mode key, which need not appear in the note at all
+                # (fly-machines says "performance-4x/8GB", not
+                # "performance-us"). Collect every "A minus B" pair in the
+                # note and see whether one of them lands on the card's value.
+                pairs = re.findall(
+                    r"([0-9]*\.?[0-9]+)\s*(?:/h)?[^)]*\)\s*minus\s*"
+                    r"(?:([0-9]*\.?[0-9]+)\s*x\s*)?\$?([0-9]*\.?[0-9]+)",
+                    note_all)
+                hit = any(abs((float(a) - float(mult or 1) * float(b)) - float(val))
+                          < 5e-4 for a, mult, b in pairs)
+                if has_derivation and hit:
+                    derived.append((label, val))
+                else:
+                    unverifiable.append((label, val))
+            else:
+                unverifiable.append((label, val))
         rows.append({"id": cid, "status": st, "url": eff, "bytes": len(body),
                      "matched": matched, "not_found": missing,
+                     "not_found_derived": derived,
+                     "not_found_unverifiable": unverifiable,
                      "page_money_sample": found[:18], "why": why})
 
     for r in rows:
@@ -200,8 +281,13 @@ def main():
             print("   fetched  : %d bytes, no $ figure in the HTML (client-rendered)"
                   % r.get("bytes", 0))
         if r.get("not_found"):
-            print("   CORPUS RATES NOT ON THE PAGE (read these first):")
-            for label, val in r["not_found"][:8]:
+            der = r.get("not_found_derived") or []
+            unver = r.get("not_found_unverifiable") or []
+            print("   CORPUS RATES NOT PRINTED ON THE PAGE (read these first):")
+            for label, val in der[:8]:
+                print("      %-38s %s   [derived in the card, page prints the bundle]"
+                      % (label, val))
+            for label, val in unver[:8]:
                 print("      %-38s %s" % (label, val))
         if r.get("matched"):
             print("   confirmed on page: %d rate(s), e.g. %s"

@@ -68,6 +68,85 @@ GPU_TIERS = ["RTX-4090", "L4", "A10G", "A100-40G", "RTX-A6000", "A100-80G",
 PRELAUNCH_TOKENS = ("proposed", "preview", "soon", "coming", "waitlist",
                     "upcoming", "unavailable")
 
+# A per-request product is billed per INVOCATION: it publishes a start_fee and
+# the corpus's own note says so. It must not be ranked on a duty cycle, because
+# "1 h/day of a machine" is not a quantity it is sold in.
+#
+# The corpus publishes such a mode as vcpu_h: 0 with a real ram_gib_h, which
+# mode_hourly() reads as "CPU is free, memory costs $0.06/GiB-h". That silently
+# prices a per-millisecond invoker as if it were a 1 vCPU / 1 GiB box billed by
+# the hour, and because Lambda's rate is genuinely low the result sorted it
+# above Agent 37 in the console table. The published catalogue did not, because
+# its renderer filtered the same rows out, so the console and the catalogue
+# disagreed.
+#
+# The FIRST attempt at this test matched note text, on the theory that the
+# vendor's own words are the best evidence. That was wrong and it deleted real
+# products: "requests" also appears in Kubernetes "resource requests"
+# (gke-agent-sandbox, google-agent-engine), in inbound HTTP requests (deno-sandbox,
+# sail, sandbox0), in "no requests" (azure-container-apps) and in the word
+# "GB-s", which is PER SECOND, not per request. 36 modes across 23 cards were
+# dropped, including Lizard, Railway, Kernel, Sail, CreateOS and InstaVM, every
+# one of which bills per second of running time and is a real sandbox.
+#
+# The test that works is structural, not lexical: a mode is per-request only if
+# it publishes NO usable per-unit-of-time rate at all. Every size in the table
+# must lack a positive hour (hour 0 or absent), because that is the corpus's own
+# way of saying "this product is not sold by the hour". A positive start_fee on
+# its own proves nothing: expo encodes a flat $2 per build as start_fee with
+# hour 0, and anchor-browser encodes $0.01 per browser created next to a real
+# $0.05/hour, so a fee without a rate is the signal only in the FIRST case and
+# the second case is a machine with a boot charge.
+PER_REQUEST_NOTE_TOKENS = ("per request", "per invocation", "per 1 ms",
+                           "per millisecond", "per invocation", "invocation",
+                           "per build", "per browser created")
+
+
+def is_per_request(mode):
+    """True when the mode bills per invocation rather than per unit of time.
+
+    Structural test: no positive hourly rate anywhere on the mode, and a note
+    that names a per-unit-of-invocation charge, or a positive start_fee standing
+    alone with every size lacking a price per hour. A size table containing any
+    positive hour means the product IS sold by the hour, whatever else it
+    charges, and the mode is a machine and stays in the ranking.
+
+    Returns (bool, reason) so the exclusion is reportable, not silent.
+    """
+    if mode.get("pricing") == "pool":
+        return False, None
+    has_time_rate = (isinstance(mode.get("vcpu_h"), (int, float))
+                     and mode["vcpu_h"] > 0) or \
+                    (isinstance(mode.get("ram_gib_h"), (int, float))
+                     and mode["ram_gib_h"] > 0)
+    sizes = mode.get("sizes")
+    flattens = []
+    for s in (sizes or []):
+        if isinstance(s, dict):
+            flattens.append(s)
+        elif isinstance(s, list):
+            flattens.extend(x for x in s if isinstance(x, dict))
+    any_positive_hour = any(
+        isinstance(s.get("hour"), (int, float)) and s["hour"] > 0 for s in flattens)
+    if has_time_rate or any_positive_hour:
+        return False, None
+    note = (mode.get("note") or "").lower()
+    for t in PER_REQUEST_NOTE_TOKENS:
+        if t in note:
+            return True, "no hourly rate published; note says %r" % t
+    # A positive start_fee on its own is NOT enough. hetzner-gpu publishes
+    # start_fee 1049 next to month_cap 2099 and no hour at all, because it sells
+    # a dedicated GPU server by the month, not by the invocation. Charging a
+    # flat fee and publishing no hour is the corpus's shape for several
+    # different things, and only a note that names the unit distinguishes them.
+    # Reported as not-per-request so it falls through to the ordinary "too big
+    # for these shapes" path in the exclusion ledger, which is what it is.
+    sf = mode.get("start_fee")
+    if isinstance(sf, (int, float)) and sf > 0:
+        return False, None
+    return False, None
+
+
 
 def is_prelaunch(mode_key, label):
     k = (mode_key or "").lower()
@@ -186,6 +265,7 @@ def main():
     skipped = 0
     prelaunch_seen = []
     prelaunch_only = []
+    perreq_seen = []
     for fn in sorted(os.listdir(cards_dir)):
         if not fn.endswith(".json"):
             continue
@@ -218,6 +298,13 @@ def main():
                     # a buyer can be charged, and it must not win the ranking.
                     prelaunch_seen.append((card.get("id"), m.get("key"), why))
                     continue
+                perreq, perreq_why = is_per_request(m)
+                if perreq:
+                    # Recorded, then skipped: a per-invocation product is not a
+                    # machine you hold for N hours, so it cannot be ranked on a
+                    # duty cycle. Dropping it is not a judgement about price.
+                    perreq_seen.append((card.get("id"), m.get("key"), perreq_why))
+                    continue
                 keep, keep_basis, keep_src = keep_rate(m)
                 hourly, how = mode_hourly(m, shape)
                 if hourly is None or hourly <= 0:
@@ -227,7 +314,7 @@ def main():
                 gran = m.get("granularity_s")
                 cands.append({
                     "mode": m.get("key"), "hourly": hourly, "how": how,
-                    "keep": keep, "keep_src": keep_src,
+                    "keep": keep, "keep_src": keep_src, "keep_basis": keep_basis,
                     "min_billed_seconds": floor if isinstance(floor, (int, float)) else None,
                     "granularity_s": gran if isinstance(gran, (int, float)) else None,
                     "not_self_serve": not_self_serve,
@@ -358,8 +445,18 @@ def main():
         }
         for shape_name, c in best_per_shape.items():
             keep = c["keep"]
+            # keep_basis is read from the SELECTED candidate, not from the loop
+            # variable left behind by the per-mode scan above. Those two were the
+            # same object only by accident: the scan rebinds keep_basis for every
+            # mode it visits, so the value that reached this row was whatever the
+            # LAST mode of the card happened to say. aws-lambda published that as
+            # keep_source=requires_always_on alongside keep_basis="billed for
+            # uptime (no suspension feature published)", which are different
+            # claims about the same rate and a reader cannot tell which is true.
+            keep_basis = c["keep_basis"]
             per = {"mode": c["mode"], "how": c["how"], "hourly": round(c["hourly"], 6),
                    "keep_rate": keep, "keep_source": c["keep_src"],
+                   "keep_basis": keep_basis,
                    "not_self_serve": c["not_self_serve"], "flags": c["flags"],
                    "min_billed_seconds": c["min_billed_seconds"],
                    "granularity_s": c["granularity_s"],
@@ -414,6 +511,17 @@ def main():
         print("cards that are now UNPRICED because every mode was pre-launch:")
         for pid, modes in prelaunch_only:
             print("  %-18s %s" % (pid, ", ".join(modes)))
+    if perreq_seen:
+        seen_p = []
+        for rec in perreq_seen:
+            if (rec[0], rec[1]) not in [(a, b) for a, b, _ in seen_p]:
+                seen_p.append(rec)
+        perreq_seen = seen_p
+        print()
+        print("per-request modes SKIPPED (billed per invocation, not per unit of "
+              "running time, so there is no $/hour to rank on a duty cycle):")
+        for pid, mode, why in perreq_seen:
+            print("  %-18s %-34s (note says %r)" % (pid, mode, why))
     print()
 
     # ---- the table the task actually asked for -------------------------------
@@ -424,8 +532,28 @@ def main():
         for hours in DUTY_CYCLES:
             key = "%dh" % hours
             sel = [r for r in priced if key in r["shapes"][shape_name]["periods"]]
-            sel.sort(key=lambda r: r["shapes"][shape_name]["periods"][key]["billed_month_with_credit"])
-            print("== %s, %s per day: %d providers, cheapest first" %
+            # Rank on the price BEFORE credits, and drop rows that are free
+            # before credit even starts. Two reasons, both found by running this
+            # and reading its own output:
+            #
+            #   1. Sorting on billed_month_with_credit put Run Cloud at the top of
+            #      the 2 vCPU / 4 GiB / 10 h/day table with a month of $0.00, and
+            #      it does so purely because its $15 recurring credit happens to
+            #      exceed this month's $13.98 bill. That is true only until the
+            #      credit is gone, and it presented a $14/month provider as the
+            #      cheapest in the market. experiments/80-render-catalogue.py and
+            #      docs/CATALOGUE.md already ranked on the pre-credit price; this
+            #      table did not, so the console and the published catalogue
+            #      disagreed about the same data.
+            #   2. A row whose PRE-credit month is $0.00 is not a price a buyer
+            #      can be ranked on at all: it is a metered product whose rate
+            #      this model cannot express, or a credit-exhausted row. Either
+            #      way its position in a "cheapest first" list is an artefact of
+            #      the model, not of the market.
+            sel = [r for r in sel
+                   if r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"] > 0.004]
+            sel.sort(key=lambda r: r["shapes"][shape_name]["periods"][key]["billed_month_no_credit"])
+            print("== %s, %s per day: %d providers, cheapest first (before credit)" %
                   (shape["label"], key, len(sel)))
             hdr = "%-4s %-34s %9s %9s %9s %8s %7s %s" % (
                 "#", "provider", "$/day", "$/week", "$/month", "keep", "floor", "basis")
@@ -439,7 +567,7 @@ def main():
                 fls = "-" if fl is None else "$%g" % fl
                 print("%-4d %-34s %9.2f %9.2f %9.2f %8s %7s %s" % (
                     i, (r["name"] or r["id"])[:34], p["compute_day"], p["compute_week"],
-                    p["billed_month_with_credit"], keep, fls,
+                    p["billed_month_no_credit"], keep, fls,
                     ("spot/term" if s["not_self_serve"] else "self-serve")))
             print()
 
@@ -449,6 +577,8 @@ def main():
                    "shapes": SHAPES, "duty_cycles_h_per_day": DUTY_CYCLES,
                    "prelaunch_modes_skipped": [
                        {"id": a, "mode": b, "signal": c} for a, b, c in prelaunch_seen],
+                   "per_request_modes_skipped": [
+                       {"id": a, "mode": b, "signal": c} for a, b, c in perreq_seen],
                    "providers": rows}, fh, indent=1, sort_keys=True)
     print("wrote %s (%d providers)" % (dest, len(rows)))
     return 0

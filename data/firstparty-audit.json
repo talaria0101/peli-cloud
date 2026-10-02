@@ -1,8 +1,8 @@
 {
- "at": "2026-10-02T01:47:28Z",
+ "at": "2026-10-02T03:03:21Z",
  "rows": [
   {
-   "bytes": 6781154,
+   "bytes": 6781155,
    "id": "scaleway",
    "status": "shell (no $ in HTML)",
    "url": "https://www.scaleway.com/en/pricing/virtual-instances/",
@@ -16,12 +16,6 @@
      "sandbox/medium",
      0.018
     ],
-    [
-     "free.one_time_credit",
-     10
-    ]
-   ],
-   "not_found": [
     [
      "plan Free trial",
      0
@@ -37,8 +31,15 @@
     [
      "free.monthly_credit",
      0
+    ],
+    [
+     "free.one_time_credit",
+     10
     ]
    ],
+   "not_found": [],
+   "not_found_derived": [],
+   "not_found_unverifiable": [],
    "page_money_sample": [
     "$10",
     "$0.000006948",
@@ -51,7 +52,7 @@
     "$0.036/hour",
     "$20"
    ],
-   "status": "partial",
+   "status": "match",
    "url": "https://lizard.build/pricing",
    "why": "named by the operator"
   },
@@ -85,6 +86,13 @@
     ]
    ],
    "not_found": [
+    [
+     "free.monthly_credit",
+     18.38
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
     [
      "free.monthly_credit",
      18.38
@@ -124,6 +132,10 @@
      0.2
     ],
     [
+     "plan Trial",
+     0
+    ],
+    [
      "plan $20/mo",
      20
     ],
@@ -138,12 +150,6 @@
     [
      "plan $2000/mo",
      2000
-    ]
-   ],
-   "not_found": [
-    [
-     "plan Trial",
-     0
     ],
     [
      "free.monthly_credit",
@@ -154,6 +160,9 @@
      0.9
     ]
    ],
+   "not_found": [],
+   "not_found_derived": [],
+   "not_found_unverifiable": [],
    "page_money_sample": [
     "$0.018",
     "$0.036",
@@ -174,14 +183,22 @@
     "$0.933",
     "$0.132"
    ],
-   "status": "partial",
+   "status": "match",
    "url": "https://docs.boat.dev/pricing",
    "why": "named by the operator ($20 subscription edge case)"
   },
   {
-   "bytes": 204511,
+   "bytes": 204468,
    "id": "e2b",
    "matched": [
+    [
+     "on-demand.vcpu_h/h",
+     0.0504
+    ],
+    [
+     "on-demand.ram_gib_h/h",
+     0.0162
+    ],
     [
      "plan Hobby",
      0
@@ -205,13 +222,16 @@
    ],
    "not_found": [
     [
-     "on-demand.vcpu_h/h",
-     0.0504
+     "plan Pro+ (600 concurrent)",
+     650
     ],
     [
-     "on-demand.ram_gib_h/h",
-     0.0162
-    ],
+     "plan Pro++ (1,100 concurrent)",
+     1150
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
     [
      "plan Pro+ (600 concurrent)",
      650
@@ -290,12 +310,6 @@
      0.0162
     ],
     [
-     "free.one_time_credit",
-     200
-    ]
-   ],
-   "not_found": [
-    [
      "plan Tier 1 (email verified)",
      0
     ],
@@ -308,12 +322,25 @@
      0
     ],
     [
-     "plan Tier 4 ($2,000 top-up every 30 days)",
-     2000
-    ],
-    [
      "free.monthly_credit",
      0
+    ],
+    [
+     "free.one_time_credit",
+     200
+    ]
+   ],
+   "not_found": [
+    [
+     "plan Tier 4 ($2,000 top-up every 30 days)",
+     2000
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
+    [
+     "plan Tier 4 ($2,000 top-up every 30 days)",
+     2000
     ]
    ],
    "page_money_sample": [
@@ -344,24 +371,6 @@
    "bytes": 273911,
    "id": "modal",
    "matched": [
-    [
-     "plan Starter",
-     0
-    ],
-    [
-     "plan Team",
-     250
-    ],
-    [
-     "free.monthly_credit",
-     30
-    ],
-    [
-     "free.one_time_credit",
-     0
-    ]
-   ],
-   "not_found": [
     [
      "on-demand.vcpu_h/h",
      0.141912
@@ -401,8 +410,27 @@
     [
      "vm-sandbox.ram_gib_h/h",
      0.024012
+    ],
+    [
+     "plan Starter",
+     0
+    ],
+    [
+     "plan Team",
+     250
+    ],
+    [
+     "free.monthly_credit",
+     30
+    ],
+    [
+     "free.one_time_credit",
+     0
     ]
    ],
+   "not_found": [],
+   "not_found_derived": [],
+   "not_found_unverifiable": [],
    "page_money_sample": [
     "$ 0.001972",
     "$ 0.001736",
@@ -423,7 +451,7 @@
     "$30 / mo",
     "$250"
    ],
-   "status": "partial",
+   "status": "match",
    "url": "https://modal.com/pricing",
    "why": "well-known sandbox, larger per-resource rate"
   },
@@ -432,38 +460,16 @@
    "id": "fly-machines",
    "matched": [
     [
-     "plan Legacy Scale",
-     29
-    ]
-   ],
-   "not_found": [
-    [
-     "performance-us.vcpu_h/h",
-     0.02916
-    ],
-    [
      "performance-us.ram_gib_h/h",
      0.0083376
-    ],
-    [
-     "performance-eu.vcpu_h/h",
-     0.02916
     ],
     [
      "performance-eu.ram_gib_h/h",
      0.0083376
     ],
     [
-     "performance-asia.vcpu_h/h",
-     0.02916
-    ],
-    [
      "performance-asia.ram_gib_h/h",
      0.0083376
-    ],
-    [
-     "performance-other.vcpu_h/h",
-     0.02916
     ],
     [
      "performance-other.ram_gib_h/h",
@@ -502,10 +508,6 @@
      0.0083376
     ],
     [
-     "reserved-1y-performance-us.vcpu_h/h",
-     0.017496
-    ],
-    [
      "reserved-1y-performance-us.ram_gib_h/h",
      0.00500256
     ],
@@ -526,12 +528,62 @@
      5
     ],
     [
+     "plan Legacy Scale",
+     29
+    ],
+    [
      "free.monthly_credit",
      0
     ],
     [
      "free.one_time_credit",
      0
+    ]
+   ],
+   "not_found": [
+    [
+     "performance-us.vcpu_h/h",
+     0.02916
+    ],
+    [
+     "performance-eu.vcpu_h/h",
+     0.02916
+    ],
+    [
+     "performance-asia.vcpu_h/h",
+     0.02916
+    ],
+    [
+     "performance-other.vcpu_h/h",
+     0.02916
+    ],
+    [
+     "reserved-1y-performance-us.vcpu_h/h",
+     0.017496
+    ]
+   ],
+   "not_found_derived": [
+    [
+     "performance-us.vcpu_h/h",
+     0.02916
+    ],
+    [
+     "performance-eu.vcpu_h/h",
+     0.02916
+    ],
+    [
+     "performance-asia.vcpu_h/h",
+     0.02916
+    ],
+    [
+     "performance-other.vcpu_h/h",
+     0.02916
+    ]
+   ],
+   "not_found_unverifiable": [
+    [
+     "reserved-1y-performance-us.vcpu_h/h",
+     0.017496
     ]
    ],
    "page_money_sample": [
@@ -571,8 +623,36 @@
      0.0212
     ],
     [
+     "region-dub1.ram_gib_h/h",
+     0.0278
+    ],
+    [
+     "region-icn1.ram_gib_h/h",
+     0.028
+    ],
+    [
+     "region-cpt1.vcpu_h/h",
+     0.2
+    ],
+    [
+     "region-gru1.vcpu_h/h",
+     0.221
+    ],
+    [
+     "plan Hobby",
+     0
+    ],
+    [
      "plan Pro",
      20
+    ],
+    [
+     "free.monthly_credit",
+     0
+    ],
+    [
+     "free.one_time_credit",
+     0
     ]
    ],
    "not_found": [
@@ -605,16 +685,8 @@
      0.168
     ],
     [
-     "region-dub1.ram_gib_h/h",
-     0.0278
-    ],
-    [
      "region-icn1.vcpu_h/h",
      0.169
-    ],
-    [
-     "region-icn1.ram_gib_h/h",
-     0.028
     ],
     [
      "region-hkg1.vcpu_h/h",
@@ -657,8 +729,95 @@
      0.0304
     ],
     [
-     "region-cpt1.vcpu_h/h",
-     0.2
+     "region-cpt1.ram_gib_h/h",
+     0.0332
+    ],
+    [
+     "region-kix1-hnd1.vcpu_h/h",
+     0.202
+    ],
+    [
+     "region-kix1-hnd1.ram_gib_h/h",
+     0.0334
+    ],
+    [
+     "region-gru1.ram_gib_h/h",
+     0.0366
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
+    [
+     "region-bom1.vcpu_h/h",
+     0.14
+    ],
+    [
+     "region-bom1.ram_gib_h/h",
+     0.0232
+    ],
+    [
+     "region-yul1.vcpu_h/h",
+     0.147
+    ],
+    [
+     "region-yul1.ram_gib_h/h",
+     0.0243
+    ],
+    [
+     "region-sin1-arn1.vcpu_h/h",
+     0.16
+    ],
+    [
+     "region-sin1-arn1.ram_gib_h/h",
+     0.0266
+    ],
+    [
+     "region-dub1.vcpu_h/h",
+     0.168
+    ],
+    [
+     "region-icn1.vcpu_h/h",
+     0.169
+    ],
+    [
+     "region-hkg1.vcpu_h/h",
+     0.176
+    ],
+    [
+     "region-hkg1.ram_gib_h/h",
+     0.0292
+    ],
+    [
+     "region-lhr1-cdg1.vcpu_h/h",
+     0.177
+    ],
+    [
+     "region-lhr1-cdg1.ram_gib_h/h",
+     0.0292
+    ],
+    [
+     "region-sfo1.vcpu_h/h",
+     0.177
+    ],
+    [
+     "region-sfo1.ram_gib_h/h",
+     0.0294
+    ],
+    [
+     "region-syd1.vcpu_h/h",
+     0.18
+    ],
+    [
+     "region-syd1.ram_gib_h/h",
+     0.0298
+    ],
+    [
+     "region-fra1.vcpu_h/h",
+     0.184
+    ],
+    [
+     "region-fra1.ram_gib_h/h",
+     0.0304
     ],
     [
      "region-cpt1.ram_gib_h/h",
@@ -673,24 +832,8 @@
      0.0334
     ],
     [
-     "region-gru1.vcpu_h/h",
-     0.221
-    ],
-    [
      "region-gru1.ram_gib_h/h",
      0.0366
-    ],
-    [
-     "plan Hobby",
-     0
-    ],
-    [
-     "free.monthly_credit",
-     0
-    ],
-    [
-     "free.one_time_credit",
-     0
     ]
    ],
    "page_money_sample": [
@@ -730,6 +873,10 @@
      0
     ],
     [
+     "actions-runner/Large",
+     0.5
+    ],
+    [
      "plan Developer",
      0
     ],
@@ -758,10 +905,17 @@
     [
      "actions-runner/Medium",
      0.25
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
+    [
+     "actions-runner/Small",
+     0.15
     ],
     [
-     "actions-runner/Large",
-     0.5
+     "actions-runner/Medium",
+     0.25
     ]
    ],
    "page_money_sample": [
@@ -784,6 +938,10 @@
     [
      "batch-job.vcpu_h/h",
      0
+    ],
+    [
+     "batch-job.ram_gib_h/h",
+     0.0216
     ],
     [
      "plan Pay-as-you-go Tier 0 (free)",
@@ -822,10 +980,25 @@
     [
      "on-demand/16 GB",
      0.6624
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
+    [
+     "on-demand/2 GB",
+     0.0828
     ],
     [
-     "batch-job.ram_gib_h/h",
-     0.0216
+     "on-demand/4 GB",
+     0.1656
+    ],
+    [
+     "on-demand/8 GB",
+     0.3312
+    ],
+    [
+     "on-demand/16 GB",
+     0.6624
     ]
    ],
    "page_money_sample": [
@@ -862,16 +1035,6 @@
      0.0252
     ],
     [
-     "plan Pro",
-     250
-    ],
-    [
-     "free.one_time_credit",
-     50
-    ]
-   ],
-   "not_found": [
-    [
      "plan Trial",
      0
     ],
@@ -880,10 +1043,21 @@
      0
     ],
     [
+     "plan Pro",
+     250
+    ],
+    [
      "free.monthly_credit",
      0
+    ],
+    [
+     "free.one_time_credit",
+     50
     ]
    ],
+   "not_found": [],
+   "not_found_derived": [],
+   "not_found_unverifiable": [],
    "page_money_sample": [
     "$50",
     "$250 /mo",
@@ -904,7 +1078,7 @@
     "$0.0252",
     "$60"
    ],
-   "status": "partial",
+   "status": "match",
    "url": "https://runloop.ai/pricing",
    "why": "dev-env"
   },
@@ -997,6 +1171,14 @@
      0.00833
     ],
     [
+     "byoc.vcpu_h/h",
+     0.01389
+    ],
+    [
+     "byoc.ram_gib_h/h",
+     0.00139
+    ],
+    [
      "gpu.vcpu_h/h",
      0
     ],
@@ -1021,16 +1203,9 @@
      0
     ]
    ],
-   "not_found": [
-    [
-     "byoc.vcpu_h/h",
-     0.01389
-    ],
-    [
-     "byoc.ram_gib_h/h",
-     0.00139
-    ]
-   ],
+   "not_found": [],
+   "not_found_derived": [],
+   "not_found_unverifiable": [],
    "page_money_sample": [
     "$ 0.01667",
     "$ 0.00833 / GB",
@@ -1051,7 +1226,7 @@
     "$ 0.0167 /hr",
     "$ 18.00 /mo"
    ],
-   "status": "partial",
+   "status": "match",
    "url": "https://northflank.com/pricing",
    "why": "paas"
   },
@@ -1074,9 +1249,7 @@
     [
      "windows.ram_gib_h/h",
      0.0223125
-    ]
-   ],
-   "not_found": [
+    ],
     [
      "plan Cua Fleet usage-based",
      0
@@ -1090,18 +1263,46 @@
      0
     ]
    ],
+   "not_found": [],
+   "not_found_derived": [],
+   "not_found_unverifiable": [],
    "page_money_sample": [
     "$0.044625",
     "$0.0223125/GiB"
    ],
-   "status": "partial",
+   "status": "match",
    "url": "https://cua.ai/#pricing",
    "why": "windows/macos sandbox"
   },
   {
    "bytes": 367272,
    "id": "aws-ec2",
-   "matched": [],
+   "matched": [
+    [
+     "gpu-l4/g6.xlarge",
+     0
+    ],
+    [
+     "gpu-a10g/g5.xlarge",
+     0
+    ],
+    [
+     "gpu-l40s/g6e.xlarge",
+     0
+    ],
+    [
+     "gpu-h100/p5.4xlarge",
+     0
+    ],
+    [
+     "plan Pay-as-you-go (no platform fee)",
+     0
+    ],
+    [
+     "free.monthly_credit",
+     0
+    ]
+   ],
    "not_found": [
     [
      "on-demand/c7i.large",
@@ -1780,10 +1981,6 @@
      9.6768
     ],
     [
-     "gpu-l4/g6.xlarge",
-     0
-    ],
-    [
      "gpu-l4/g6.2xlarge",
      0.1728
     ],
@@ -1798,10 +1995,6 @@
     [
      "gpu-l4/g6.16xlarge",
      2.592
-    ],
-    [
-     "gpu-a10g/g5.xlarge",
-     0
     ],
     [
      "gpu-a10g/g5.2xlarge",
@@ -1820,10 +2013,6 @@
      3.09
     ],
     [
-     "gpu-l40s/g6e.xlarge",
-     0
-    ],
-    [
      "gpu-l40s/g6e.2xlarge",
      0.38108
     ],
@@ -1840,16 +2029,735 @@
      5.71619
     ],
     [
-     "gpu-h100/p5.4xlarge",
-     0
+     "free.one_time_credit",
+     100
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
+    [
+     "on-demand/c7i.large",
+     0.08925
     ],
     [
-     "plan Pay-as-you-go (no platform fee)",
-     0
+     "on-demand/m7i.large",
+     0.1008
     ],
     [
-     "free.monthly_credit",
-     0
+     "on-demand/c7i.xlarge",
+     0.1785
+    ],
+    [
+     "on-demand/m7i.xlarge",
+     0.2016
+    ],
+    [
+     "on-demand/c7i.2xlarge",
+     0.357
+    ],
+    [
+     "on-demand/m7i.2xlarge",
+     0.4032
+    ],
+    [
+     "on-demand/c7i.4xlarge",
+     0.714
+    ],
+    [
+     "on-demand/m7i.4xlarge",
+     0.8064
+    ],
+    [
+     "on-demand/c7i.8xlarge",
+     1.428
+    ],
+    [
+     "on-demand/m7i.8xlarge",
+     1.6128
+    ],
+    [
+     "on-demand-eu/c7i.large",
+     0.09555
+    ],
+    [
+     "on-demand-eu/m7i.large",
+     0.1071
+    ],
+    [
+     "on-demand-eu/c7i.xlarge",
+     0.1911
+    ],
+    [
+     "on-demand-eu/m7i.xlarge",
+     0.2142
+    ],
+    [
+     "on-demand-eu/c7i.2xlarge",
+     0.3822
+    ],
+    [
+     "on-demand-eu/m7i.2xlarge",
+     0.4284
+    ],
+    [
+     "on-demand-eu/c7i.4xlarge",
+     0.7644
+    ],
+    [
+     "on-demand-eu/m7i.4xlarge",
+     0.8568
+    ],
+    [
+     "on-demand-eu/c7i.8xlarge",
+     1.5288
+    ],
+    [
+     "on-demand-eu/m7i.8xlarge",
+     1.7136
+    ],
+    [
+     "on-demand-asia/c7i.large",
+     0.08925
+    ],
+    [
+     "on-demand-asia/m7i.large",
+     0.10605
+    ],
+    [
+     "on-demand-asia/c7i.xlarge",
+     0.1785
+    ],
+    [
+     "on-demand-asia/m7i.xlarge",
+     0.2121
+    ],
+    [
+     "on-demand-asia/c7i.2xlarge",
+     0.357
+    ],
+    [
+     "on-demand-asia/m7i.2xlarge",
+     0.4242
+    ],
+    [
+     "on-demand-asia/c7i.4xlarge",
+     0.714
+    ],
+    [
+     "on-demand-asia/m7i.4xlarge",
+     0.8484
+    ],
+    [
+     "on-demand-asia/c7i.8xlarge",
+     1.428
+    ],
+    [
+     "on-demand-asia/m7i.8xlarge",
+     1.6968
+    ],
+    [
+     "on-demand-arm64/c7g.large",
+     0.0725
+    ],
+    [
+     "on-demand-arm64/m7g.large",
+     0.0816
+    ],
+    [
+     "on-demand-arm64/c7g.xlarge",
+     0.145
+    ],
+    [
+     "on-demand-arm64/m7g.xlarge",
+     0.1632
+    ],
+    [
+     "on-demand-arm64/c7g.2xlarge",
+     0.29
+    ],
+    [
+     "on-demand-arm64/m7g.2xlarge",
+     0.3264
+    ],
+    [
+     "on-demand-arm64/c7g.4xlarge",
+     0.58
+    ],
+    [
+     "on-demand-arm64/m7g.4xlarge",
+     0.6528
+    ],
+    [
+     "on-demand-arm64/c7g.8xlarge",
+     1.16
+    ],
+    [
+     "on-demand-arm64/m7g.8xlarge",
+     1.3056
+    ],
+    [
+     "on-demand-arm64-eu/c7g.large",
+     0.0774
+    ],
+    [
+     "on-demand-arm64-eu/m7g.large",
+     0.0867
+    ],
+    [
+     "on-demand-arm64-eu/c7g.xlarge",
+     0.1547
+    ],
+    [
+     "on-demand-arm64-eu/m7g.xlarge",
+     0.1734
+    ],
+    [
+     "on-demand-arm64-eu/c7g.2xlarge",
+     0.3094
+    ],
+    [
+     "on-demand-arm64-eu/m7g.2xlarge",
+     0.3468
+    ],
+    [
+     "on-demand-arm64-eu/c7g.4xlarge",
+     0.6189
+    ],
+    [
+     "on-demand-arm64-eu/m7g.4xlarge",
+     0.6936
+    ],
+    [
+     "on-demand-arm64-eu/c7g.8xlarge",
+     1.2378
+    ],
+    [
+     "on-demand-arm64-eu/m7g.8xlarge",
+     1.3872
+    ],
+    [
+     "on-demand-arm64-asia/c7g.large",
+     0.0491
+    ],
+    [
+     "on-demand-arm64-asia/m7g.large",
+     0.0583
+    ],
+    [
+     "on-demand-arm64-asia/c7g.xlarge",
+     0.0982
+    ],
+    [
+     "on-demand-arm64-asia/m7g.xlarge",
+     0.1166
+    ],
+    [
+     "on-demand-arm64-asia/c7g.2xlarge",
+     0.1963
+    ],
+    [
+     "on-demand-arm64-asia/m7g.2xlarge",
+     0.2333
+    ],
+    [
+     "on-demand-arm64-asia/c7g.4xlarge",
+     0.3926
+    ],
+    [
+     "on-demand-arm64-asia/m7g.4xlarge",
+     0.4666
+    ],
+    [
+     "on-demand-arm64-asia/c7g.8xlarge",
+     0.7853
+    ],
+    [
+     "on-demand-arm64-asia/m7g.8xlarge",
+     0.9331
+    ],
+    [
+     "burstable-t3/t3.large",
+     0.0832
+    ],
+    [
+     "burstable-t3/t3.xlarge",
+     0.1664
+    ],
+    [
+     "burstable-t3/t3.2xlarge",
+     0.3328
+    ],
+    [
+     "reserved-1y/c7i.large",
+     0.05904
+    ],
+    [
+     "reserved-1y/m7i.large",
+     0.06668
+    ],
+    [
+     "reserved-1y/c7i.xlarge",
+     0.11808
+    ],
+    [
+     "reserved-1y/m7i.xlarge",
+     0.13336
+    ],
+    [
+     "reserved-1y/c7i.2xlarge",
+     0.23616
+    ],
+    [
+     "reserved-1y/m7i.2xlarge",
+     0.26672
+    ],
+    [
+     "reserved-1y/c7i.4xlarge",
+     0.47231
+    ],
+    [
+     "reserved-1y/m7i.4xlarge",
+     0.53343
+    ],
+    [
+     "reserved-1y/c7i.8xlarge",
+     0.94462
+    ],
+    [
+     "reserved-1y/m7i.8xlarge",
+     1.06687
+    ],
+    [
+     "reserved-3y/c7i.large",
+     0.03929
+    ],
+    [
+     "reserved-3y/m7i.large",
+     0.04572
+    ],
+    [
+     "reserved-3y/c7i.xlarge",
+     0.07859
+    ],
+    [
+     "reserved-3y/m7i.xlarge",
+     0.09145
+    ],
+    [
+     "reserved-3y/c7i.2xlarge",
+     0.15717
+    ],
+    [
+     "reserved-3y/m7i.2xlarge",
+     0.18289
+    ],
+    [
+     "reserved-3y/c7i.4xlarge",
+     0.31435
+    ],
+    [
+     "reserved-3y/m7i.4xlarge",
+     0.36578
+    ],
+    [
+     "reserved-3y/c7i.8xlarge",
+     0.62869
+    ],
+    [
+     "reserved-3y/m7i.8xlarge",
+     0.73157
+    ],
+    [
+     "reserved-1y-arm64/c7g.large",
+     0.0478
+    ],
+    [
+     "reserved-1y-arm64/m7g.large",
+     0.054
+    ],
+    [
+     "reserved-1y-arm64/c7g.xlarge",
+     0.0955
+    ],
+    [
+     "reserved-1y-arm64/m7g.xlarge",
+     0.108
+    ],
+    [
+     "reserved-1y-arm64/c7g.2xlarge",
+     0.1911
+    ],
+    [
+     "reserved-1y-arm64/m7g.2xlarge",
+     0.2159
+    ],
+    [
+     "reserved-1y-arm64/c7g.4xlarge",
+     0.3822
+    ],
+    [
+     "reserved-1y-arm64/m7g.4xlarge",
+     0.4318
+    ],
+    [
+     "reserved-1y-arm64/c7g.8xlarge",
+     0.7644
+    ],
+    [
+     "reserved-1y-arm64/m7g.8xlarge",
+     0.8637
+    ],
+    [
+     "reserved-3y-arm64/c7g.large",
+     0.0319
+    ],
+    [
+     "reserved-3y-arm64/m7g.large",
+     0.037
+    ],
+    [
+     "reserved-3y-arm64/c7g.xlarge",
+     0.0637
+    ],
+    [
+     "reserved-3y-arm64/m7g.xlarge",
+     0.074
+    ],
+    [
+     "reserved-3y-arm64/c7g.2xlarge",
+     0.1274
+    ],
+    [
+     "reserved-3y-arm64/m7g.2xlarge",
+     0.1481
+    ],
+    [
+     "reserved-3y-arm64/c7g.4xlarge",
+     0.2549
+    ],
+    [
+     "reserved-3y-arm64/m7g.4xlarge",
+     0.2961
+    ],
+    [
+     "reserved-3y-arm64/c7g.8xlarge",
+     0.5098
+    ],
+    [
+     "reserved-3y-arm64/m7g.8xlarge",
+     0.5922
+    ],
+    [
+     "spot/c7i.large",
+     0.0276
+    ],
+    [
+     "spot/m7i.large",
+     0.0417
+    ],
+    [
+     "spot/c7i.xlarge",
+     0.0491
+    ],
+    [
+     "spot/m7i.xlarge",
+     0.0814
+    ],
+    [
+     "spot/c7i.2xlarge",
+     0.1722
+    ],
+    [
+     "spot/m7i.2xlarge",
+     0.1675
+    ],
+    [
+     "spot/c7i.4xlarge",
+     0.2477
+    ],
+    [
+     "spot/m7i.4xlarge",
+     0.2937
+    ],
+    [
+     "spot/c7i.8xlarge",
+     0.4959
+    ],
+    [
+     "spot/m7i.8xlarge",
+     0.5522
+    ],
+    [
+     "spot-eu/c7i.large",
+     0.0155
+    ],
+    [
+     "spot-eu/m7i.large",
+     0.0158
+    ],
+    [
+     "spot-eu/c7i.xlarge",
+     0.035
+    ],
+    [
+     "spot-eu/m7i.xlarge",
+     0.0332
+    ],
+    [
+     "spot-eu/c7i.2xlarge",
+     0.0684
+    ],
+    [
+     "spot-eu/m7i.2xlarge",
+     0.0793
+    ],
+    [
+     "spot-eu/c7i.4xlarge",
+     0.1043
+    ],
+    [
+     "spot-eu/m7i.4xlarge",
+     0.1054
+    ],
+    [
+     "spot-eu/c7i.8xlarge",
+     0.2137
+    ],
+    [
+     "spot-eu/m7i.8xlarge",
+     0.2556
+    ],
+    [
+     "spot-asia/c7i.large",
+     0.0399
+    ],
+    [
+     "spot-asia/m7i.large",
+     0.0509
+    ],
+    [
+     "spot-asia/c7i.xlarge",
+     0.0827
+    ],
+    [
+     "spot-asia/m7i.xlarge",
+     0.0713
+    ],
+    [
+     "spot-asia/c7i.2xlarge",
+     0.1538
+    ],
+    [
+     "spot-asia/m7i.2xlarge",
+     0.1576
+    ],
+    [
+     "spot-asia/c7i.4xlarge",
+     0.231
+    ],
+    [
+     "spot-asia/m7i.4xlarge",
+     0.2776
+    ],
+    [
+     "spot-asia/c7i.8xlarge",
+     0.4702
+    ],
+    [
+     "spot-asia/m7i.8xlarge",
+     0.5768
+    ],
+    [
+     "spot-arm64/c7g.large",
+     0.0245
+    ],
+    [
+     "spot-arm64/m7g.large",
+     0.0386
+    ],
+    [
+     "spot-arm64/c7g.xlarge",
+     0.055
+    ],
+    [
+     "spot-arm64/m7g.xlarge",
+     0.0857
+    ],
+    [
+     "spot-arm64/c7g.2xlarge",
+     0.125
+    ],
+    [
+     "spot-arm64/m7g.2xlarge",
+     0.1449
+    ],
+    [
+     "spot-arm64/c7g.4xlarge",
+     0.2105
+    ],
+    [
+     "spot-arm64/m7g.4xlarge",
+     0.2386
+    ],
+    [
+     "spot-arm64/c7g.8xlarge",
+     0.4104
+    ],
+    [
+     "spot-arm64/m7g.8xlarge",
+     0.5501
+    ],
+    [
+     "spot-arm64-eu/c7g.large",
+     0.0196
+    ],
+    [
+     "spot-arm64-eu/m7g.large",
+     0.0208
+    ],
+    [
+     "spot-arm64-eu/c7g.xlarge",
+     0.0354
+    ],
+    [
+     "spot-arm64-eu/m7g.xlarge",
+     0.035
+    ],
+    [
+     "spot-arm64-eu/c7g.2xlarge",
+     0.0675
+    ],
+    [
+     "spot-arm64-eu/m7g.2xlarge",
+     0.0598
+    ],
+    [
+     "spot-arm64-eu/c7g.4xlarge",
+     0.0682
+    ],
+    [
+     "spot-arm64-eu/m7g.4xlarge",
+     0.0762
+    ],
+    [
+     "spot-arm64-eu/c7g.8xlarge",
+     0.1384
+    ],
+    [
+     "spot-arm64-eu/m7g.8xlarge",
+     0.213
+    ],
+    [
+     "spot-arm64-asia/c7g.large",
+     0.0268
+    ],
+    [
+     "spot-arm64-asia/m7g.large",
+     0.0326
+    ],
+    [
+     "spot-arm64-asia/c7g.xlarge",
+     0.0551
+    ],
+    [
+     "spot-arm64-asia/m7g.xlarge",
+     0.0589
+    ],
+    [
+     "spot-arm64-asia/c7g.2xlarge",
+     0.0976
+    ],
+    [
+     "spot-arm64-asia/m7g.2xlarge",
+     0.1047
+    ],
+    [
+     "spot-arm64-asia/c7g.4xlarge",
+     0.1796
+    ],
+    [
+     "spot-arm64-asia/m7g.4xlarge",
+     0.211
+    ],
+    [
+     "spot-arm64-asia/c7g.8xlarge",
+     0.3354
+    ],
+    [
+     "spot-arm64-asia/m7g.8xlarge",
+     0.4052
+    ],
+    [
+     "on-demand-metal/c7g.metal (Arm)",
+     2.32
+    ],
+    [
+     "on-demand-metal/m7g.metal (Arm)",
+     2.6112
+    ],
+    [
+     "on-demand-metal/c7i.metal-24xl",
+     4.284
+    ],
+    [
+     "on-demand-metal/m7i.metal-24xl",
+     4.8384
+    ],
+    [
+     "on-demand-metal/c7i.metal-48xl",
+     8.568
+    ],
+    [
+     "on-demand-metal/m7i.metal-48xl",
+     9.6768
+    ],
+    [
+     "gpu-l4/g6.2xlarge",
+     0.1728
+    ],
+    [
+     "gpu-l4/g6.4xlarge",
+     0.5184
+    ],
+    [
+     "gpu-l4/g6.8xlarge",
+     1.2096
+    ],
+    [
+     "gpu-l4/g6.16xlarge",
+     2.592
+    ],
+    [
+     "gpu-a10g/g5.2xlarge",
+     0.206
+    ],
+    [
+     "gpu-a10g/g5.4xlarge",
+     0.618
+    ],
+    [
+     "gpu-a10g/g5.8xlarge",
+     1.442
+    ],
+    [
+     "gpu-a10g/g5.16xlarge",
+     3.09
+    ],
+    [
+     "gpu-l40s/g6e.2xlarge",
+     0.38108
+    ],
+    [
+     "gpu-l40s/g6e.4xlarge",
+     1.14324
+    ],
+    [
+     "gpu-l40s/g6e.8xlarge",
+     2.66756
+    ],
+    [
+     "gpu-l40s/g6e.16xlarge",
+     5.71619
     ],
     [
      "free.one_time_credit",
@@ -1869,7 +2777,7 @@
     "$0.05",
     "$0.096"
    ],
-   "status": "no match",
+   "status": "partial",
    "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
    "why": "hyperscaler reference"
   },
@@ -1877,6 +2785,14 @@
    "bytes": 470908,
    "id": "azure-vm",
    "matched": [
+    [
+     "plan Pay-as-you-go subscription (no plan fee)",
+     0
+    ],
+    [
+     "free.monthly_credit",
+     0
+    ],
     [
      "free.one_time_credit",
      200
@@ -2782,14 +3698,909 @@
     [
      "reserved-1y-arm64/D32pls_v6",
      0.58527
+    ]
+   ],
+   "not_found_derived": [],
+   "not_found_unverifiable": [
+    [
+     "on-demand/D2s_v5",
+     0.096
     ],
     [
-     "plan Pay-as-you-go subscription (no plan fee)",
-     0
+     "on-demand/D4s_v5",
+     0.192
     ],
     [
-     "free.monthly_credit",
-     0
+     "on-demand/D8s_v5",
+     0.384
+    ],
+    [
+     "on-demand/D16s_v5",
+     0.768
+    ],
+    [
+     "on-demand/D32s_v5",
+     1.536
+    ],
+    [
+     "on-demand/D2as_v5",
+     0.086
+    ],
+    [
+     "on-demand/D4as_v5",
+     0.172
+    ],
+    [
+     "on-demand/D8as_v5",
+     0.344
+    ],
+    [
+     "on-demand/D16as_v5",
+     0.688
+    ],
+    [
+     "on-demand/D32as_v5",
+     1.376
+    ],
+    [
+     "on-demand/D2ls_v5",
+     0.085
+    ],
+    [
+     "on-demand/D4ls_v5",
+     0.17
+    ],
+    [
+     "on-demand/D8ls_v5",
+     0.34
+    ],
+    [
+     "on-demand/D16ls_v5",
+     0.68
+    ],
+    [
+     "on-demand/F2s_v2",
+     0.0846
+    ],
+    [
+     "on-demand/F4s_v2",
+     0.169
+    ],
+    [
+     "on-demand/F8s_v2",
+     0.338
+    ],
+    [
+     "on-demand/F16s_v2",
+     0.677
+    ],
+    [
+     "on-demand/F32s_v2",
+     1.353
+    ],
+    [
+     "on-demand/D2als_v7",
+     0.0804
+    ],
+    [
+     "on-demand/D4als_v7",
+     0.161
+    ],
+    [
+     "on-demand/D8als_v7",
+     0.322
+    ],
+    [
+     "on-demand/D16als_v7",
+     0.643
+    ],
+    [
+     "on-demand/D32als_v7",
+     1.286
+    ],
+    [
+     "on-demand-arm64/D2ps_v5",
+     0.077
+    ],
+    [
+     "on-demand-arm64/D4ps_v5",
+     0.154
+    ],
+    [
+     "on-demand-arm64/D8ps_v5",
+     0.308
+    ],
+    [
+     "on-demand-arm64/D2pls_v6",
+     0.062
+    ],
+    [
+     "on-demand-arm64/D4pls_v6",
+     0.124
+    ],
+    [
+     "on-demand-arm64/D8pls_v6",
+     0.248
+    ],
+    [
+     "on-demand-arm64/D16pls_v6",
+     0.496
+    ],
+    [
+     "on-demand-arm64/D32pls_v6",
+     0.992
+    ],
+    [
+     "on-demand-arm64/D2ps_v6",
+     0.0702
+    ],
+    [
+     "on-demand-arm64/D4ps_v6",
+     0.14
+    ],
+    [
+     "on-demand-arm64/D8ps_v6",
+     0.281
+    ],
+    [
+     "on-demand-arm64/D16ps_v6",
+     0.562
+    ],
+    [
+     "on-demand-arm64/D32ps_v6",
+     1.123
+    ],
+    [
+     "burstable-basv2-30/B2als_v2",
+     0.0376
+    ],
+    [
+     "burstable-basv2-30/B4als_v2",
+     0.133
+    ],
+    [
+     "burstable-basv2-30/B8als_v2",
+     0.266
+    ],
+    [
+     "burstable-basv2-30/B16als_v2",
+     0.533
+    ],
+    [
+     "burstable-basv2-40/B2as_v2",
+     0.0752
+    ],
+    [
+     "burstable-basv2-40/B4as_v2",
+     0.15
+    ],
+    [
+     "burstable-basv2-40/B8as_v2",
+     0.301
+    ],
+    [
+     "burstable-bv1/B2s",
+     0.0416
+    ],
+    [
+     "burstable-bv1/B2ms",
+     0.0832
+    ],
+    [
+     "burstable-bv1/B4ms",
+     0.166
+    ],
+    [
+     "burstable-bv1/B8ms",
+     0.333
+    ],
+    [
+     "spot/D2s_v5",
+     0.020266
+    ],
+    [
+     "spot/D4s_v5",
+     0.040531
+    ],
+    [
+     "spot/D8s_v5",
+     0.081062
+    ],
+    [
+     "spot/D16s_v5",
+     0.162125
+    ],
+    [
+     "spot/D32s_v5",
+     0.32425
+    ],
+    [
+     "spot/D2as_v5",
+     0.018155
+    ],
+    [
+     "spot/D4as_v5",
+     0.036309
+    ],
+    [
+     "spot/D8as_v5",
+     0.072618
+    ],
+    [
+     "spot/D16as_v5",
+     0.145237
+    ],
+    [
+     "spot/D32as_v5",
+     0.290474
+    ],
+    [
+     "spot/D2ls_v5",
+     0.017944
+    ],
+    [
+     "spot/D4ls_v5",
+     0.035887
+    ],
+    [
+     "spot/D8ls_v5",
+     0.071774
+    ],
+    [
+     "spot/D16ls_v5",
+     0.143548
+    ],
+    [
+     "spot/F2s_v2",
+     0.018612
+    ],
+    [
+     "spot/F4s_v2",
+     0.03718
+    ],
+    [
+     "spot/F8s_v2",
+     0.07436
+    ],
+    [
+     "spot/F16s_v2",
+     0.14894
+    ],
+    [
+     "spot/F32s_v2",
+     0.29766
+    ],
+    [
+     "spot/D2als_v7",
+     0.015598
+    ],
+    [
+     "spot/D4als_v7",
+     0.031234
+    ],
+    [
+     "spot/D8als_v7",
+     0.062468
+    ],
+    [
+     "spot/D16als_v7",
+     0.124742
+    ],
+    [
+     "spot/D32als_v7",
+     0.249484
+    ],
+    [
+     "reserved-1y/D2s_v5",
+     0.05925
+    ],
+    [
+     "reserved-1y/D4s_v5",
+     0.11849
+    ],
+    [
+     "reserved-1y/D8s_v5",
+     0.23687
+    ],
+    [
+     "reserved-1y/D16s_v5",
+     0.47386
+    ],
+    [
+     "reserved-1y/D32s_v5",
+     0.94772
+    ],
+    [
+     "reserved-1y/D2as_v5",
+     0.05308
+    ],
+    [
+     "reserved-1y/D4as_v5",
+     0.10616
+    ],
+    [
+     "reserved-1y/D8as_v5",
+     0.21221
+    ],
+    [
+     "reserved-1y/D16as_v5",
+     0.42454
+    ],
+    [
+     "reserved-1y/D32as_v5",
+     0.84897
+    ],
+    [
+     "reserved-1y/D2ls_v5",
+     0.0524
+    ],
+    [
+     "reserved-1y/D4ls_v5",
+     0.10491
+    ],
+    [
+     "reserved-1y/D8ls_v5",
+     0.20982
+    ],
+    [
+     "reserved-1y/D16ls_v5",
+     0.41952
+    ],
+    [
+     "reserved-1y/D2als_v7",
+     0.04749
+    ],
+    [
+     "reserved-1y/D4als_v7",
+     0.09486
+    ],
+    [
+     "reserved-1y/D8als_v7",
+     0.18973
+    ],
+    [
+     "reserved-1y/D16als_v7",
+     0.37945
+    ],
+    [
+     "reserved-1y/D32als_v7",
+     0.75902
+    ],
+    [
+     "reserved-3y/D2s_v5",
+     0.03794
+    ],
+    [
+     "reserved-3y/D4s_v5",
+     0.07584
+    ],
+    [
+     "reserved-3y/D8s_v5",
+     0.15167
+    ],
+    [
+     "reserved-3y/D16s_v5",
+     0.30335
+    ],
+    [
+     "reserved-3y/D32s_v5",
+     0.60674
+    ],
+    [
+     "reserved-3y/D2as_v5",
+     0.03398
+    ],
+    [
+     "reserved-3y/D4as_v5",
+     0.06792
+    ],
+    [
+     "reserved-3y/D8as_v5",
+     0.13588
+    ],
+    [
+     "reserved-3y/D16as_v5",
+     0.27177
+    ],
+    [
+     "reserved-3y/D32as_v5",
+     0.54353
+    ],
+    [
+     "reserved-3y/D2ls_v5",
+     0.03356
+    ],
+    [
+     "reserved-3y/D4ls_v5",
+     0.06716
+    ],
+    [
+     "reserved-3y/D8ls_v5",
+     0.13428
+    ],
+    [
+     "reserved-3y/D16ls_v5",
+     0.26861
+    ],
+    [
+     "reserved-3y/D2als_v7",
+     0.03056
+    ],
+    [
+     "reserved-3y/D4als_v7",
+     0.06111
+    ],
+    [
+     "reserved-3y/D8als_v7",
+     0.12222
+    ],
+    [
+     "reserved-3y/D16als_v7",
+     0.24441
+    ],
+    [
+     "reserved-3y/D32als_v7",
+     0.48885
+    ],
+    [
+     "on-demand-eu/D2s_v5",
+     0.102
+    ],
+    [
+     "on-demand-eu/D4s_v5",
+     0.204
+    ],
+    [
+     "on-demand-eu/D8s_v5",
+     0.408
+    ],
+    [
+     "on-demand-eu/D16s_v5",
+     0.816
+    ],
+    [
+     "on-demand-eu/D32s_v5",
+     1.632
+    ],
+    [
+     "on-demand-eu/D2as_v5",
+     0.092
+    ],
+    [
+     "on-demand-eu/D4as_v5",
+     0.184
+    ],
+    [
+     "on-demand-eu/D8as_v5",
+     0.368
+    ],
+    [
+     "on-demand-eu/D16as_v5",
+     0.736
+    ],
+    [
+     "on-demand-eu/D32as_v5",
+     1.472
+    ],
+    [
+     "on-demand-eu/D2ls_v5",
+     0.091
+    ],
+    [
+     "on-demand-eu/D4ls_v5",
+     0.182
+    ],
+    [
+     "on-demand-eu/D8ls_v5",
+     0.364
+    ],
+    [
+     "on-demand-eu/D16ls_v5",
+     0.728
+    ],
+    [
+     "on-demand-eu/F2s_v2",
+     0.097
+    ],
+    [
+     "on-demand-eu/F4s_v2",
+     0.194
+    ],
+    [
+     "on-demand-eu/F8s_v2",
+     0.388
+    ],
+    [
+     "on-demand-eu/F16s_v2",
+     0.776
+    ],
+    [
+     "on-demand-eu/F32s_v2",
+     1.552
+    ],
+    [
+     "on-demand-eu/D2als_v7",
+     0.086
+    ],
+    [
+     "on-demand-eu/D4als_v7",
+     0.172
+    ],
+    [
+     "on-demand-eu/D8als_v7",
+     0.344
+    ],
+    [
+     "on-demand-eu/D16als_v7",
+     0.688
+    ],
+    [
+     "on-demand-eu/D32als_v7",
+     1.376
+    ],
+    [
+     "on-demand-arm64-eu/D2ps_v5",
+     0.082
+    ],
+    [
+     "on-demand-arm64-eu/D4ps_v5",
+     0.164
+    ],
+    [
+     "on-demand-arm64-eu/D8ps_v5",
+     0.328
+    ],
+    [
+     "on-demand-arm64-eu/D2pls_v6",
+     0.0662
+    ],
+    [
+     "on-demand-arm64-eu/D4pls_v6",
+     0.132
+    ],
+    [
+     "on-demand-arm64-eu/D8pls_v6",
+     0.265
+    ],
+    [
+     "on-demand-arm64-eu/D16pls_v6",
+     0.53
+    ],
+    [
+     "on-demand-arm64-eu/D32pls_v6",
+     1.059
+    ],
+    [
+     "on-demand-arm64-eu/D2ps_v6",
+     0.0748
+    ],
+    [
+     "on-demand-arm64-eu/D4ps_v6",
+     0.15
+    ],
+    [
+     "on-demand-arm64-eu/D8ps_v6",
+     0.299
+    ],
+    [
+     "on-demand-arm64-eu/D16ps_v6",
+     0.598
+    ],
+    [
+     "on-demand-arm64-eu/D32ps_v6",
+     1.197
+    ],
+    [
+     "burstable-basv2-30-eu/B2als_v2",
+     0.0389
+    ],
+    [
+     "burstable-basv2-30-eu/B4als_v2",
+     0.138
+    ],
+    [
+     "burstable-basv2-30-eu/B8als_v2",
+     0.275
+    ],
+    [
+     "burstable-basv2-30-eu/B16als_v2",
+     0.551
+    ],
+    [
+     "burstable-basv2-40-eu/B2as_v2",
+     0.0778
+    ],
+    [
+     "burstable-basv2-40-eu/B4as_v2",
+     0.156
+    ],
+    [
+     "burstable-basv2-40-eu/B8as_v2",
+     0.311
+    ],
+    [
+     "burstable-bv1-eu/B2s",
+     0.0432
+    ],
+    [
+     "burstable-bv1-eu/B2ms",
+     0.0864
+    ],
+    [
+     "burstable-bv1-eu/B4ms",
+     0.173
+    ],
+    [
+     "burstable-bv1-eu/B8ms",
+     0.346
+    ],
+    [
+     "spot-eu/D2s_v5",
+     0.01885
+    ],
+    [
+     "spot-eu/D4s_v5",
+     0.037699
+    ],
+    [
+     "spot-eu/D8s_v5",
+     0.075398
+    ],
+    [
+     "spot-eu/D16s_v5",
+     0.150797
+    ],
+    [
+     "spot-eu/D32s_v5",
+     0.301594
+    ],
+    [
+     "spot-eu/D2as_v5",
+     0.017002
+    ],
+    [
+     "spot-eu/D4as_v5",
+     0.034003
+    ],
+    [
+     "spot-eu/D8as_v5",
+     0.068006
+    ],
+    [
+     "spot-eu/D16as_v5",
+     0.136013
+    ],
+    [
+     "spot-eu/D32as_v5",
+     0.272026
+    ],
+    [
+     "spot-eu/D2ls_v5",
+     0.016817
+    ],
+    [
+     "spot-eu/D4ls_v5",
+     0.033634
+    ],
+    [
+     "spot-eu/D8ls_v5",
+     0.067267
+    ],
+    [
+     "spot-eu/D16ls_v5",
+     0.134534
+    ],
+    [
+     "spot-eu/F2s_v2",
+     0.017926
+    ],
+    [
+     "spot-eu/F4s_v2",
+     0.035851
+    ],
+    [
+     "spot-eu/F8s_v2",
+     0.071702
+    ],
+    [
+     "spot-eu/F16s_v2",
+     0.143405
+    ],
+    [
+     "spot-eu/F32s_v2",
+     0.28681
+    ],
+    [
+     "spot-eu/D2als_v7",
+     0.015893
+    ],
+    [
+     "spot-eu/D4als_v7",
+     0.031786
+    ],
+    [
+     "spot-eu/D8als_v7",
+     0.063571
+    ],
+    [
+     "spot-eu/D16als_v7",
+     0.127142
+    ],
+    [
+     "spot-eu/D32als_v7",
+     0.254285
+    ],
+    [
+     "reserved-1y-eu/D2s_v5",
+     0.0629
+    ],
+    [
+     "reserved-1y-eu/D4s_v5",
+     0.12591
+    ],
+    [
+     "reserved-1y-eu/D8s_v5",
+     0.25171
+    ],
+    [
+     "reserved-1y-eu/D16s_v5",
+     0.50342
+    ],
+    [
+     "reserved-1y-eu/D32s_v5",
+     1.00696
+    ],
+    [
+     "reserved-1y-eu/D2as_v5",
+     0.05674
+    ],
+    [
+     "reserved-1y-eu/D4as_v5",
+     0.11358
+    ],
+    [
+     "reserved-1y-eu/D8as_v5",
+     0.22705
+    ],
+    [
+     "reserved-1y-eu/D16as_v5",
+     0.45411
+    ],
+    [
+     "reserved-1y-eu/D32as_v5",
+     0.90822
+    ],
+    [
+     "reserved-1y-eu/D2ls_v5",
+     0.05365
+    ],
+    [
+     "reserved-1y-eu/D4ls_v5",
+     0.10742
+    ],
+    [
+     "reserved-1y-eu/D8ls_v5",
+     0.21473
+    ],
+    [
+     "reserved-1y-eu/D16ls_v5",
+     0.42957
+    ],
+    [
+     "reserved-1y-eu/D2als_v7",
+     0.05068
+    ],
+    [
+     "reserved-1y-eu/D4als_v7",
+     0.10148
+    ],
+    [
+     "reserved-1y-eu/D8als_v7",
+     0.20297
+    ],
+    [
+     "reserved-1y-eu/D16als_v7",
+     0.40594
+    ],
+    [
+     "reserved-1y-eu/D32als_v7",
+     0.81187
+    ],
+    [
+     "reserved-3y-eu/D2s_v5",
+     0.0403
+    ],
+    [
+     "reserved-3y-eu/D4s_v5",
+     0.08059
+    ],
+    [
+     "reserved-3y-eu/D8s_v5",
+     0.16115
+    ],
+    [
+     "reserved-3y-eu/D16s_v5",
+     0.32234
+    ],
+    [
+     "reserved-3y-eu/D32s_v5",
+     0.64463
+    ],
+    [
+     "reserved-3y-eu/D2as_v5",
+     0.03634
+    ],
+    [
+     "reserved-3y-eu/D4as_v5",
+     0.07268
+    ],
+    [
+     "reserved-3y-eu/D8as_v5",
+     0.14536
+    ],
+    [
+     "reserved-3y-eu/D16as_v5",
+     0.29072
+    ],
+    [
+     "reserved-3y-eu/D32as_v5",
+     0.58143
+    ],
+    [
+     "reserved-3y-eu/D2ls_v5",
+     0.03459
+    ],
+    [
+     "reserved-3y-eu/D4ls_v5",
+     0.06918
+    ],
+    [
+     "reserved-3y-eu/D8ls_v5",
+     0.13832
+    ],
+    [
+     "reserved-3y-eu/D16ls_v5",
+     0.27664
+    ],
+    [
+     "reserved-3y-eu/D2als_v7",
+     0.03269
+    ],
+    [
+     "reserved-3y-eu/D4als_v7",
+     0.06537
+    ],
+    [
+     "reserved-3y-eu/D8als_v7",
+     0.13071
+    ],
+    [
+     "reserved-3y-eu/D16als_v7",
+     0.26145
+    ],
+    [
+     "reserved-3y-eu/D32als_v7",
+     0.52287
+    ],
+    [
+     "reserved-1y-arm64/D2pls_v6",
+     0.03653
+    ],
+    [
+     "reserved-1y-arm64/D4pls_v6",
+     0.07317
+    ],
+    [
+     "reserved-1y-arm64/D8pls_v6",
+     0.14635
+    ],
+    [
+     "reserved-1y-arm64/D16pls_v6",
+     0.29269
+    ],
+    [
+     "reserved-1y-arm64/D32pls_v6",
+     0.58527
     ]
    ],
    "page_money_sample": [
