@@ -40,8 +40,11 @@ in `experiments/`.
   and a provider with a high minimum billable unit may bill far more than
   `hours x rate` for a bursty agent. The `min_billed_seconds` column in
   `data/period-model.json` carries that, and nothing in the tables adjusts for it.
-- **This is revision 2, and revision 1 was wrong in seven documented ways**
-  (section 3). The largest: it priced stoppable sandboxes as fixed monthly hosts,
+- **This is revision 3. Revision 1 was wrong in seven documented ways** (section 3)
+  **and revision 2 added three more of its own, found by auditing rather than
+  reading** (section 7): a pre-launch price ranking a provider 6x under its live
+  rate, 34 of 86 "unpriced" cards that are not unpriced, and an exclusion count
+  understated by an order of magnitude. The largest: it priced stoppable sandboxes as fixed monthly hosts,
   which is the VPS comparison this task is not asking for. Revision 1 had also
   fixed four of its own measurement defects before publication (section 5).
   **That is the honest estimate of what is still wrong here:** at least seven
@@ -136,6 +139,17 @@ the earlier ones got wrong, and the corrections are the useful part.
 | boat at $0.90, "the first plan you can stay on is $20" | the $20 is not a cheaper tier you upgrade to, it is a **floor** the bill cannot fall below. The row was directionally right and structurally wrong | `floor` column; boat is $20 at every duty cycle |
 | 211 ranked rows, ranked on one workload | a provider that fits 4 vCPU was ranked against one that fits 1 vCPU | three shapes, priced separately |
 | the two named providers were checked; the third was a typo | correct, and still true, but it was the most-emphasised finding in the document when it is a one-line naming correction | section 4 |
+
+### What revision 2 added
+
+Revision 2 fixed the model but shipped three errors of its own, all found by
+running a check rather than by reading the output:
+
+| revision 2 said | why it was wrong | corrected in |
+|---|---|---|
+| "11 cards could not be priced" | 148 were missing from the ranking; the 11 was a post-filter count | section 7.3, table D |
+| "the 86 unpriced cards are a vendor choice" | generalised from three pages; 20 of them publish a machine rate | section 7.2, `95-reprobe-unpriced.py` |
+| arker at $0.0302/h | that is `eu-hetzner-proposed`, a region that does not exist; the live rate is $0.1877/h | section 7.1, pre-launch skip |
 
 The single defect that produced most of the rest: **revision 1 never asked what
 a sandbox is.** It took a corpus of cards, multiplied a rate by a month, and
@@ -281,7 +295,77 @@ two models were built independently and the residual is not noise.
 
 ---
 
-## 7. Coverage check against the wider market (a real negative result)
+## 7. Three defects in the corpus, found by auditing rather than reading
+
+These came out of revision 2's own checks and none of them is a judgement call
+about pricing. Each names the file and the line of evidence.
+
+### 7.1 A pre-launch price was ranking a provider 6x under its live rate
+
+`research/cards/arker.json` carries six modes. The two cheapest are
+`eu-hetzner-proposed` at **$0.0302/h** and `eu-scaleway-proposed` at $0.0310/h.
+Its live on-demand mode on the same card is **$0.1877/h**. arker was carrying a
+top-20 row in revision 2 on a region that does not exist yet.
+
+leap0's only mode is `preview`, and after the fix it correctly has no price at
+all. computeruse-cloud's only rate-bearing mode is
+`unavailable-preview-active-second-offering`, same outcome. Six modes across
+four cards name a pre-launch region or offering; all six are now skipped and
+listed in `data/period-model.json` under `prelaunch_modes_skipped`.
+
+**Verdict: confirmed.** The trigger is a mode key containing `proposed`,
+`preview`, `soon`, `coming`, `waitlist`, `upcoming` or `unavailable`; the wrong
+result is a ranked row on a price no buyer can be charged.
+
+### 7.2 Thirty-four of the eighty-six "unpriced" cards are not unpriced
+
+Revision 2 wrote that the 86 cards with no rate were "a vendor choice, not a gap
+in the corpus", generalised from three pages I happened to check (ainclave,
+bytebot, butter). Re-probing all 86 with `experiments/95-reprobe-unpriced.py`
+refuted that. The honest split:
+
+| verdict | cards | meaning |
+|---|---|---|
+| no dollar figure on the page | 45 | the corpus is right |
+| unreachable at the card's url | 7 | no verdict either way |
+| **publishes a machine rate the card never captured** | **20** | **the corpus card is wrong** |
+| dollars present, but not a machine rate | 14 | ambiguous, left ambiguous |
+
+BuildJet is the clearest case: it publishes **$0.004/min for 2 vCPU / 8 GB**,
+$0.008, $0.016, up to $0.128, and the card records no rate at all. Artillery
+publishes $0 / $199 / $499 plans. Also in the 20: Brimble, Clusy, Dexto, Isle,
+Nodus Compute, Server4Agent, PaperPod, Party, Metorial, Dockup.
+
+None of the 20 were re-priced here. Turning a marketing page into a card is
+implementation work, and a guessed rate is worse than a visible gap because
+nobody can check it.
+
+**Verdict: confirmed for the 20, refuted for my own revision 2 claim, plausible
+for the 14.** A second pass that classifies each of the 20 by hand would settle
+which are per-machine and which are per-seat.
+
+### 7.3 The exclusion count was understated by an order of magnitude
+
+Revision 2's table D said "11 cards could not be priced". The ledger over all
+366 cards found 148 cards missing from the ranking. The 11 was the count after
+a category filter, not the count of what was missing, and it is exactly the kind
+of number that reads as complete. All 366 are now accounted for in
+`data/exclusion-ledger.json` and rendered in table D:
+
+| status | cards |
+|---|---|
+| ranked at all three shapes | 197 |
+| ranked for some shapes | 9 |
+| gpu-only | 15 |
+| pre-launch only | 2 |
+| priced but only for larger machines | 16 |
+| no rate in the card | 86 |
+| off-category (browser, scraping, non-compute) | 41 |
+| **total** | **366** |
+
+---
+
+## 8. Coverage check against the wider market (a real negative result)
 
 The task said the corpus may not cover all providers and to research widely.
 I searched for providers the corpus might miss and **found none that the corpus
@@ -305,7 +389,7 @@ exist than these three roundups and the corpus surface; assume fewer are
 
 ---
 
-## 8. What the proof of concept does and does not handle
+## 9. What the proof of concept does and does not handle
 
 `experiments/` and `data/` are the instrument. Concretely:
 
@@ -320,6 +404,10 @@ exist than these three roundups and the corpus surface; assume fewer are
 - `30-rank-providers.py` is revision 1's single-workload ranking. It is kept, and
   still runs, because `40` cross-checks against the upstream engine using the
   same shape of question; but it is superseded by 70/80 for ranking purposes.
+- `90-exclusion-ledger.py` assigns every one of the 366 cards a status and a
+  reason, and fails if they do not add up to 366.
+- `95-reprobe-unpriced.py` re-fetches the providers the corpus says are unpriced
+  and separates "publishes nothing" from "publishes a rate the card missed".
 - `40-crosscheck-engine.py` re-prices with the upstream engine (strict and soft)
   and localises the disagreement.
 - `50-firstparty-audit.py` re-fetches vendor pages for a named sample and
@@ -340,17 +428,20 @@ the period figures.
 
 ---
 
-## 9. The exact commands
+## 10. The exact commands
 
 Run from the repo root, in order:
 
     bash   experiments/10-fetch-corpus.sh
     python3 experiments/20-extract-provider-universe.py
     python3 experiments/70-period-model.py          # shapes x duty cycles
+    python3 experiments/90-exclusion-ledger.py     # all 366 accounted for
     python3 experiments/80-render-catalogue.py      # the four tables
+    python3 experiments/95-reprobe-unpriced.py      # re-probe the unpriced cards (network)
     python3 experiments/40-crosscheck-engine.py     # needs node on PATH
     python3 experiments/50-firstparty-audit.py      # needs network
     python3 experiments/60-guard-mutation.py
+    python3 experiments/61-period-model-guards.py
 
 Each prints its conditions (date, corpus commit, workload, model) and writes a
 JSON artefact under `data/`. Numbers in this document came from those runs on
