@@ -1,5 +1,5 @@
 {
- "at": "2026-10-02T02:26:29Z",
+ "at": "2026-10-02T02:34:22Z",
  "card_commit": "f6a71ab09fef",
  "duty_cycles_h_per_day": [
   1,
@@ -43,6 +43,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Wallet (any top-up)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 1,
    "has_free_tier": true,
@@ -241,12 +242,16 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Free (no top-up)"
+   ],
    "url": "https://www.agent37.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -439,12 +444,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://agentcomputer.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "ACK managed Basic",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -643,12 +650,14 @@
     }
    },
    "surcharge_floor": 65.7,
+   "trial_only_plans": [],
    "url": "https://www.alibabacloud.com/product/kubernetes",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Basic",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -841,12 +850,14 @@
     }
    },
    "surcharge_floor": 149,
+   "trial_only_plans": [],
    "url": "https://www.alibabacloud.com/help/en/agentbay/product-overview/agentbay-billing-instructions",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -1039,12 +1050,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://help.aliyun.com/zh/agent-sandbox/product-overview/billing-overview",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 90,
    "has_free_tier": true,
@@ -1237,12 +1250,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.alibabacloud.com/en/product/ecs/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -1435,12 +1450,14 @@
     }
    },
    "surcharge_floor": 30,
+   "trial_only_plans": [],
    "url": "https://www.amika.dev/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby / pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -1639,12 +1656,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://ampcode.com/docs/orbs/sizes-and-costs",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Development",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -1846,12 +1865,14 @@
     }
    },
    "surcharge_floor": 499,
+   "trial_only_plans": [],
    "url": "https://www.aptible.com",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -1983,12 +2004,14 @@
     }
    },
    "surcharge_floor": 500,
+   "trial_only_plans": [],
    "url": "https://archil.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Paid account (pay as you go)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -2181,12 +2204,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://arker.ai/docs/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -2379,12 +2404,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -2577,12 +2604,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/codebuild/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "AWS account (no plan fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -2775,12 +2804,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/ec2/instance-types/mac/",
    "usage_credit_floor": null
   },
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "AWS account (no plan fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -2973,12 +3004,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go (no platform fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -3171,12 +3204,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/ec2/pricing/on-demand/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -3369,12 +3404,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/fargate/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -3567,12 +3604,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/lambda/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 6.87,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -3765,12 +3804,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/lambda/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "AWS account (no plan fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -3963,12 +4004,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://aws.amazon.com/workspaces/desktop-as-a-service/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -4161,12 +4204,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://learn.microsoft.com/en-us/azure/container-apps/sandboxes-overview",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 5.4,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -4359,12 +4404,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://azure.microsoft.com/en-us/pricing/details/container-apps/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -4500,6 +4547,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://azure.microsoft.com/en-us/pricing/details/foundry-agent-service/",
    "usage_credit_floor": null
   },
@@ -4563,6 +4611,7 @@
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Basic",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -4764,12 +4813,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://azure.microsoft.com/en-us/pricing/details/devops/azure-devops-services/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go subscription (no plan fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -4966,12 +5017,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/linux/",
    "usage_credit_floor": null
   },
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go subscription (no plan fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -5170,12 +5223,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://azure.microsoft.com/en-us/pricing/details/virtual-machines/windows/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -5368,12 +5423,14 @@
     }
    },
    "surcharge_floor": 97,
+   "trial_only_plans": [],
    "url": "https://baponi.ai/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Basic",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -5572,12 +5629,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.baseten.co/deployment/resources",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -5770,12 +5829,14 @@
     }
    },
    "surcharge_floor": 89,
+   "trial_only_plans": [],
    "url": "https://www.beam.cloud/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -5968,12 +6029,14 @@
     }
    },
    "surcharge_floor": 18.25,
+   "trial_only_plans": [],
    "url": "https://www.atlassian.com/software/bitbucket/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -6166,12 +6229,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://bitrise.io/pricing",
    "usage_credit_floor": 15
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 12,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -6364,12 +6429,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.blacksmith.sh/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go Tier 0 (free)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -6562,15 +6629,17 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://blaxel.ai/pricing",
    "usage_credit_floor": 20
   },
   {
    "category": "agent-sandbox",
-   "entry_fee": 0,
+   "entry_fee": 20,
+   "entry_plan_name": "$20/mo",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0.9,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "boat",
    "isolation": "vm",
    "name": "boat.dev",
@@ -6760,12 +6829,16 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Trial"
+   ],
    "url": "https://docs.boat.dev/pricing",
    "usage_credit_floor": 20
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 30,
    "has_free_tier": true,
@@ -6958,15 +7031,17 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://boxd.sh/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
-   "entry_fee": 0,
+   "entry_fee": 19,
+   "entry_plan_name": "Starter",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "boxes-dev",
    "isolation": "firecracker",
    "name": "boxes.dev",
@@ -7156,6 +7231,9 @@
     }
    },
    "surcharge_floor": 19,
+   "trial_only_plans": [
+    "Trial"
+   ],
    "url": "https://boxes.dev/",
    "usage_credit_floor": null
   },
@@ -7207,6 +7285,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_free_tier": true,
@@ -7399,12 +7478,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://buddy.works/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 16,
    "has_free_tier": true,
@@ -7597,12 +7678,14 @@
     }
    },
    "surcharge_floor": 30,
+   "trial_only_plans": [],
    "url": "https://buildkite.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go balance (no plan)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -7801,12 +7884,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://capy.ai",
    "usage_credit_floor": 0
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Usage-based paid",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -7999,12 +8084,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://celesto.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -8206,12 +8293,14 @@
     }
    },
    "surcharge_floor": 100,
+   "trial_only_plans": [],
    "url": "https://cerebrium.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -8404,12 +8493,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://circleci.com/pricing/price-list/",
    "usage_credit_floor": 15
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Per-runner subscription",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -8608,12 +8699,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cirrus-runners.app/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 250,
    "has_free_tier": true,
@@ -8806,12 +8899,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.civo.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Claude API (pay-as-you-go, usage tiers)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -8882,12 +8977,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://platform.claude.com/docs/en/about-claude/pricing#claude-managed-agents-pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -9080,12 +9177,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.clever.cloud/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Workers Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -9278,12 +9377,14 @@
     }
    },
    "surcharge_floor": 5,
+   "trial_only_plans": [],
    "url": "https://developers.cloudflare.com/containers/platform/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 5,
+   "entry_plan_name": "Workers Paid (Dynamic Workers)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": false,
@@ -9476,12 +9577,14 @@
     }
    },
    "surcharge_floor": 5,
+   "trial_only_plans": [],
    "url": "https://developers.cloudflare.com/cloudflare-for-platforms/workers-for-platforms/reference/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Free (individual)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -9674,15 +9777,17 @@
     }
    },
    "surcharge_floor": 49,
+   "trial_only_plans": [],
    "url": "https://codemagic.io/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
-   "entry_fee": 0,
+   "entry_fee": 12,
+   "entry_plan_name": "Pro (legacy editor plan)",
    "free_monthly_credit": 5.944,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "codesandbox-sdk",
    "isolation": "firecracker",
    "name": "CodeSandbox SDK",
@@ -9872,12 +9977,16 @@
     }
    },
    "surcharge_floor": 12,
+   "trial_only_plans": [
+    "Build (free)"
+   ],
    "url": "https://codesandbox.io/docs/sdk/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pro",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -10070,6 +10179,9 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Demo"
+   ],
    "url": "https://collimate.ai/pricing",
    "usage_credit_floor": null
   },
@@ -10138,6 +10250,7 @@
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -10330,6 +10443,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://contabo.com/en-us/pricing/",
    "usage_credit_floor": null
   },
@@ -10403,6 +10517,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_free_tier": true,
@@ -10595,12 +10710,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://createos.sh/products/sandbox",
    "usage_credit_floor": 10
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "On-demand",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -10793,12 +10910,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.crusoe.ai/cloud/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "Usage-based (dashboard run.cua.ai)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -10991,12 +11110,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cua.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Cua Fleet usage-based",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -11189,12 +11310,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cua.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid usage",
    "free_monthly_credit": 0,
    "free_one_time_credit": 25,
    "has_free_tier": true,
@@ -11393,12 +11516,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cube.computer/",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -11469,12 +11594,14 @@
     }
    },
    "surcharge_floor": 49,
+   "trial_only_plans": [],
    "url": "https://datalayer.io/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "Tier 1 (email verified)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -11667,12 +11794,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.daytona.io/pricing",
    "usage_credit_floor": 2000
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Tier 1 (email verified)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -11865,12 +11994,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.daytona.io/pricing",
    "usage_credit_floor": 2000
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -12063,12 +12194,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.declaw.ai/platform/billing",
    "usage_credit_floor": 100
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 20,
    "has_free_tier": true,
@@ -12267,12 +12400,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://www.dedaluslabs.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -12465,12 +12600,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://deno.com/deploy/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 20,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": false,
@@ -12665,6 +12802,7 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://depot.dev/pricing",
    "usage_credit_floor": null
   },
@@ -12738,6 +12876,7 @@
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_free_tier": true,
@@ -12930,12 +13069,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.digitalocean.com/pricing/droplets",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Docker Agentic Platform (pay-as-you-go)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 25,
    "has_free_tier": true,
@@ -13128,12 +13269,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -13326,12 +13469,14 @@
     }
    },
    "surcharge_floor": 150,
+   "trial_only_plans": [],
    "url": "https://e2b.dev/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -13524,12 +13669,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.e2enetworks.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Managed usage",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -13722,12 +13869,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.ellipsis.dev/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Legacy Individual (Small..XLarge)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -13920,12 +14069,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://exe.dev/pricing",
    "usage_credit_floor": 15
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -14118,12 +14269,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.exoscale.com/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -14316,6 +14469,7 @@
     }
    },
    "surcharge_floor": 19,
+   "trial_only_plans": [],
    "url": "https://expo.dev",
    "usage_credit_floor": null
   },
@@ -14369,6 +14523,7 @@
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 24.17,
    "has_free_tier": true,
@@ -14561,12 +14716,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://doc.flow.swiss/platform/pricing/mac-bare-metal",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Pay As You Go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -14765,12 +14922,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://fly.io/pricing",
    "usage_credit_floor": 5
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 18.38,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -14963,12 +15122,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.freestyle.sh/pricing",
    "usage_credit_floor": 50
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -15161,6 +15322,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://gcore.com/cloud/virtual-machines",
    "usage_credit_floor": null
   },
@@ -15214,6 +15376,7 @@
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go billing account (no plan fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 300,
    "has_free_tier": true,
@@ -15406,12 +15569,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.google.com/products/compute/pricing/general-purpose",
    "usage_credit_floor": null
   },
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go billing account (no plan fee)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 300,
    "has_free_tier": true,
@@ -15608,12 +15773,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.google.com/compute/disks-image-pricing#windows_server_pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -15806,12 +15973,14 @@
     }
    },
    "surcharge_floor": 4,
+   "trial_only_plans": [],
    "url": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Personal account: GitHub Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -16004,12 +16173,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Copilot Business",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -16211,12 +16382,14 @@
     }
    },
    "surcharge_floor": 10,
+   "trial_only_plans": [],
    "url": "https://docs.github.com/en/billing/concepts/product-billing/cloud-and-local-sandboxes",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -16413,12 +16586,14 @@
     }
    },
    "surcharge_floor": 29,
+   "trial_only_plans": [],
    "url": "https://docs.gitlab.com/ci/pipelines/compute_minutes/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 73,
+   "entry_plan_name": "Pay as you go (one Autopilot cluster)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 300,
    "has_free_tier": false,
@@ -16617,12 +16792,14 @@
     }
    },
    "surcharge_floor": 73,
+   "trial_only_plans": [],
    "url": "https://cloud.google.com/kubernetes-engine/docs/concepts/agent-sandbox",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -16821,12 +16998,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -17019,12 +17198,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.google.com/build/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 5.22,
    "free_one_time_credit": 300,
    "has_free_tier": true,
@@ -17226,12 +17407,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.google.com/run/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": null,
+   "entry_plan_name": null,
    "free_monthly_credit": 0,
    "free_one_time_credit": 300,
    "has_free_tier": false,
@@ -17430,12 +17613,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://developers.google.com/colab",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Dedicated hosting",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -17634,12 +17819,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://portal.greenmini.host/checkout/order",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go (personal account or Heroku Team)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -17838,12 +18025,14 @@
     }
    },
    "surcharge_floor": 5,
+   "trial_only_plans": [],
    "url": "https://www.heroku.com/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go (postpaid)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -18042,12 +18231,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.hetzner.com/general/infrastructure-and-availability/price-adjustment/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -18240,12 +18431,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.hetzner.com/dedicated-rootserver/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-per-use (Free tier)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -18438,12 +18631,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://hopx.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -18636,12 +18831,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.hostinger.com/vps-hosting",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Monthly hosting",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -18777,12 +18974,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://hostmyapple.com/mac-vps-hosting",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 3.310635582565,
    "has_free_tier": true,
@@ -18981,12 +19180,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://support.huaweicloud.com/price-agentarts/agentarts-price-pdf.pdf",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Positive prepaid credit balance",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -19185,6 +19386,7 @@
     }
    },
    "surcharge_floor": 9,
+   "trial_only_plans": [],
    "url": "https://huggingface.co/docs/hub/en/jobs-pricing",
    "usage_credit_floor": null
   },
@@ -19238,6 +19440,7 @@
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid on-demand",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -19430,12 +19633,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.hyperstack.cloud/gpu-pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -19632,12 +19837,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.ibm.com/products/virtual-servers/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 10,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -19830,12 +20037,14 @@
     }
    },
    "surcharge_floor": 25,
+   "trial_only_plans": [],
    "url": "https://www.instacloud.com/pricing",
    "usage_credit_floor": 20
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_free_tier": true,
@@ -20028,12 +20237,14 @@
     }
    },
    "surcharge_floor": 100,
+   "trial_only_plans": [],
    "url": "https://instavm.io/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -20226,12 +20437,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.ionos.com/cloud/support/general-information/price-list/ionos-cloud-eur-en",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -20424,12 +20637,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://islo.dev/pricing",
    "usage_credit_floor": 50
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go (public beta)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_free_tier": true,
@@ -20622,12 +20837,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.isorun.ai/getting-started/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "On-demand",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -20820,12 +21037,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://jarvislabs.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 220.92,
    "has_free_tier": true,
@@ -21022,12 +21241,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.kakaocloud.com/services/virtual-machine/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -21220,12 +21441,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.kamatera.com/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Public preview",
    "free_monthly_credit": 5,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -21424,12 +21647,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://kedge.dev/docs/billing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Starter (legacy pay-as-you-go)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -21628,6 +21853,7 @@
     }
    },
    "surcharge_floor": 29,
+   "trial_only_plans": [],
    "url": "https://www.koyeb.com/pricing",
    "usage_credit_floor": null
   },
@@ -21696,6 +21922,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -21894,12 +22121,14 @@
     }
    },
    "surcharge_floor": 39,
+   "trial_only_plans": [],
    "url": "https://www.langchain.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -22092,12 +22321,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.latitude.sh/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 30,
    "has_free_tier": true,
@@ -22290,12 +22521,14 @@
     }
    },
    "surcharge_floor": 50,
+   "trial_only_plans": [],
    "url": "https://lightning.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -22488,12 +22721,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.akamai.com/cloud/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "After a first top-up",
    "free_monthly_credit": 0,
    "free_one_time_credit": 10,
    "has_free_tier": true,
@@ -22625,12 +22860,16 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Free trial"
+   ],
    "url": "https://lizard.build/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -22823,12 +23062,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://machine0.io/",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Self-serve",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -23027,12 +23268,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.macincloud.com/pages/dedicated.html",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Individual hosted Macs (buy online)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -23225,12 +23468,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.macstadium.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Cloud Computer rental",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -23362,12 +23607,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://help.manus.im/en/articles/15392078-understanding-cloud-computer-plans-and-billing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -23566,12 +23813,14 @@
     }
    },
    "surcharge_floor": 49,
+   "trial_only_plans": [],
    "url": "https://microsandbox.dev/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 10,
    "has_free_tier": true,
@@ -23764,12 +24013,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://miosa.ai/pricing",
    "usage_credit_floor": 500
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Starter",
    "free_monthly_credit": 30,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -23962,12 +24213,14 @@
     }
    },
    "surcharge_floor": 250,
+   "trial_only_plans": [],
    "url": "https://modal.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -24166,12 +24419,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://modelence.com",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": null,
+   "entry_plan_name": null,
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": false,
@@ -24246,12 +24501,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://platform.kimi.com/docs/pricing/hosted-agents.md",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -24444,12 +24701,14 @@
     }
    },
    "surcharge_floor": 40,
+   "trial_only_plans": [],
    "url": "https://cloud.morph.so/web/subscribe",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Metered (checkout required)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -24642,12 +24901,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://sandbox.mosaicos.com/",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Devbox (pay as you go)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -24840,12 +25101,14 @@
     }
    },
    "surcharge_floor": 100,
+   "trial_only_plans": [],
    "url": "https://namespace.so/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -25038,12 +25301,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.ncloud.com/product/compute/server",
    "usage_credit_floor": null
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -25236,12 +25501,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.nebius.com/compute/resources/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -25434,12 +25701,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.netcup.com/en/server/vps",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": null,
+   "entry_plan_name": null,
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": false,
@@ -25638,12 +25907,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://nextmv.io",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Developer Sandbox (free tier)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -25836,6 +26107,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://northflank.com/pricing",
    "usage_credit_floor": null
   },
@@ -25857,6 +26129,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free (no top-up)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -26049,12 +26322,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.novita.ai/guides/sandbox-pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Monthly",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -26253,12 +26528,16 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Try macOS (one-off trial)"
+   ],
    "url": "https://www.oakhost.com/mac-mini-hosting",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Self-serve",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -26451,15 +26730,17 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.omnara.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
-   "entry_fee": 0,
+   "entry_fee": 21.62,
+   "entry_plan_name": "Launch (EUR 19 monthly / EUR180 annual)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "omnirun",
    "isolation": "firecracker",
    "name": "OmniRun",
@@ -26527,12 +26808,16 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Sandbox"
+   ],
    "url": "https://omnirun.io/pricing",
    "usage_credit_floor": 21.62
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Free (legacy)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -26725,12 +27010,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://ona.com/pricing",
    "usage_credit_floor": 20
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 284.45,
    "has_free_tier": true,
@@ -26923,12 +27210,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.open-telekom-cloud.com/en/prices",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "API pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -27127,12 +27416,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://developers.openai.com/api/docs/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "PAYG",
    "free_monthly_credit": 0,
    "free_one_time_credit": 10,
    "has_free_tier": true,
@@ -27331,12 +27622,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://opencomputer.dev/sandboxes",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -27529,12 +27822,14 @@
     }
    },
    "surcharge_floor": 10,
+   "trial_only_plans": [],
    "url": "https://openpond.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -27727,12 +28022,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://openreward.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Developer Sandbox",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -27925,12 +28222,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.redhat.com/en/technologies/cloud-computing/openshift/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 300,
    "has_free_tier": true,
@@ -28129,12 +28428,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.oracle.com/cloud/compute/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 28.445,
    "has_free_tier": true,
@@ -28333,6 +28634,9 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Free"
+   ],
    "url": "https://orkestr.eu/sandboxes",
    "usage_credit_floor": null
   },
@@ -28391,6 +28695,7 @@
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 200,
    "has_free_tier": true,
@@ -28589,12 +28894,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://us.ovhcloud.com/public-cloud/prices/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -28787,12 +29094,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.pandastack.ai/pricing/",
    "usage_credit_floor": 20
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Core usage",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -28985,12 +29294,14 @@
     }
    },
    "surcharge_floor": 8,
+   "trial_only_plans": [],
    "url": "https://docs.digitalocean.com/products/paperspace/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -29183,12 +29494,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://ppio.com/docs/sandbox/pricing.md",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -29381,12 +29694,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.primeintellect.ai/sandboxes",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 10,
+   "entry_plan_name": "Paid credit plan",
    "free_monthly_credit": 0,
    "free_one_time_credit": 30,
    "has_free_tier": false,
@@ -29579,12 +29894,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://prized.dev/docs/billing",
    "usage_credit_floor": 10
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_free_tier": true,
@@ -29777,12 +30094,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://railway.com/pricing",
    "usage_credit_floor": 5
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -29975,12 +30294,14 @@
     }
    },
    "surcharge_floor": 25,
+   "trial_only_plans": [],
    "url": "https://render.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Self-serve",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -30173,12 +30494,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://rentamac.io/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 50,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 120,
    "has_free_tier": false,
@@ -30371,12 +30694,14 @@
     }
    },
    "surcharge_floor": 50,
+   "trial_only_plans": [],
    "url": "https://replicas.dev",
    "usage_credit_floor": null
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Usage",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -30575,15 +30900,17 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://replicate.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
-   "entry_fee": 0,
+   "entry_fee": 18,
+   "entry_plan_name": "Core (annual)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "replit",
    "isolation": "vm",
    "name": "Replit",
@@ -30773,15 +31100,19 @@
     }
    },
    "surcharge_floor": 18,
+   "trial_only_plans": [
+    "Starter (free)"
+   ],
    "url": "https://docs.replit.com/billing/deployment-pricing",
    "usage_credit_floor": 20
   },
   {
    "category": "agent-sandbox",
-   "entry_fee": 0,
+   "entry_fee": 20,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "rivet",
    "isolation": null,
    "name": "Rivet (Actors & agentOS)",
@@ -30971,12 +31302,16 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [
+    "Free"
+   ],
    "url": "https://rivet.dev/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 15,
    "free_one_time_credit": 5,
    "has_free_tier": true,
@@ -31175,6 +31510,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.run.cloud/sandboxes/index.md",
    "usage_credit_floor": null
   },
@@ -31196,6 +31532,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Basic",
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_free_tier": true,
@@ -31388,12 +31725,16 @@
     }
    },
    "surcharge_floor": 250,
+   "trial_only_plans": [
+    "Trial"
+   ],
    "url": "https://www.runloop.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go (prepaid credits)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -31586,12 +31927,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.runpod.io/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Free (non-commercial)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -31784,12 +32127,14 @@
     }
    },
    "surcharge_floor": 29.17,
+   "trial_only_plans": [],
    "url": "https://runs-on.com/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid",
    "free_monthly_credit": 0,
    "free_one_time_credit": 50,
    "has_free_tier": true,
@@ -31982,12 +32327,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://runta.com/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free (pay-as-you-go)",
    "free_monthly_credit": 5,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -32180,12 +32527,14 @@
     }
    },
    "surcharge_floor": 250,
+   "trial_only_plans": [],
    "url": "https://docs.sailresearch.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -32378,12 +32727,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.sakura.ad.jp/products/server/",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 260,
    "has_free_tier": true,
@@ -32576,12 +32927,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.samsungsds.com/serviceportal/pricing.html",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid",
    "free_monthly_credit": 0,
    "free_one_time_credit": 5,
    "has_free_tier": true,
@@ -32774,12 +33127,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://sandbox-as-a-service.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go (prepaid top-ups)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -32972,12 +33327,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://sandbox0.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -33170,6 +33527,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.scaleway.com/en/pricing/apple-silicon/",
    "usage_credit_floor": null
   },
@@ -33218,6 +33576,7 @@
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -33412,6 +33771,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.scaleway.com/en/pricing/virtual-instances/",
    "usage_credit_floor": null
   },
@@ -33448,6 +33808,7 @@
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid credit (pay as you go)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -33640,6 +34001,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://autoresearch.sfcompute.com/",
    "usage_credit_floor": null
   },
@@ -33667,10 +34029,11 @@
   },
   {
    "category": "agent-sandbox",
-   "entry_fee": 0,
+   "entry_fee": 9,
+   "entry_plan_name": "Developer",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "shardflux",
    "isolation": "firecracker",
    "name": "Shardflux",
@@ -33860,12 +34223,16 @@
     }
    },
    "surcharge_floor": 9,
+   "trial_only_plans": [
+    "Free"
+   ],
    "url": "https://shardflux.dev/#pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -34058,12 +34425,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://shellbox.dev/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Standard",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -34256,6 +34625,7 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://smolmachines.com/pricing",
    "usage_credit_floor": null
   },
@@ -34277,6 +34647,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -34469,12 +34840,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://docs.getsolari.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -34673,12 +35046,14 @@
     }
    },
    "surcharge_floor": 25,
+   "trial_only_plans": [],
    "url": "https://specific.dev/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 30,
    "has_free_tier": true,
@@ -34871,12 +35246,14 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://fly.io/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -35069,12 +35446,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://pim.api.stackit.cloud/v1/skus",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Usage",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -35269,12 +35648,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://starsling.dev/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -35467,6 +35848,7 @@
     }
    },
    "surcharge_floor": 49,
+   "trial_only_plans": [],
    "url": "https://sandbox.stateset.app/",
    "usage_credit_floor": null
   },
@@ -35488,6 +35870,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -35680,12 +36063,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://superserve.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay per running second",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -35878,12 +36263,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://tama.computer/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -36076,12 +36463,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.tencent.com/document/product/1814/133249",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 2.98,
    "has_free_tier": true,
@@ -36274,12 +36663,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.tencent.cn/document/product/1039/131894",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 1.83,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": false,
@@ -36478,12 +36869,14 @@
     }
    },
    "surcharge_floor": 1.83,
+   "trial_only_plans": [],
    "url": "https://cloud.tencent.com/document/product/583/17299",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Starter",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -36676,6 +37069,7 @@
     }
    },
    "surcharge_floor": 250,
+   "trial_only_plans": [],
    "url": "https://tenki.cloud/pricing",
    "usage_credit_floor": null
   },
@@ -36708,10 +37102,11 @@
   },
   {
    "category": "agent-sandbox",
-   "entry_fee": 0,
+   "entry_fee": 250,
+   "entry_plan_name": "Pro",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "tensorlake",
    "isolation": "firecracker",
    "name": "Tensorlake Sandboxes",
@@ -36901,6 +37296,10 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Free",
+    "Usage Credits (prepaid)"
+   ],
    "url": "https://www.tensorlake.ai/pricing",
    "usage_credit_floor": 250
   },
@@ -36944,6 +37343,7 @@
   {
    "category": "paas",
    "entry_fee": 20,
+   "entry_plan_name": "Tinfoil Containers",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": false,
@@ -37142,6 +37542,7 @@
     }
    },
    "surcharge_floor": 20,
+   "trial_only_plans": [],
    "url": "https://tinfoil.sh",
    "usage_credit_floor": null
   },
@@ -37163,6 +37564,7 @@
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Together pay-as-you-go (prepaid credits; Code Interpreter only)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -37361,6 +37763,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.together.ai/pricing",
    "usage_credit_floor": null
   },
@@ -37404,6 +37807,7 @@
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -37602,12 +38006,14 @@
     }
    },
    "surcharge_floor": 10,
+   "trial_only_plans": [],
    "url": "https://trigger.dev/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -37804,12 +38210,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.ubicloud.com/docs/about/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 15.450427,
    "has_free_tier": true,
@@ -38002,12 +38410,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://astraflow.ucloud.cn/docs/agent-sandbox",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -38200,12 +38610,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://upcloud.com/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as You Go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -38398,12 +38810,16 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Free"
+   ],
    "url": "https://upstash.com/pricing/box",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Pay-as-you-go reservations",
    "free_monthly_credit": 0,
    "free_one_time_credit": 100,
    "has_free_tier": true,
@@ -38596,6 +39012,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://use.computer/",
    "usage_credit_floor": null
   },
@@ -38653,10 +39070,11 @@
   },
   {
    "category": "agent-sandbox",
-   "entry_fee": 0,
+   "entry_fee": 20,
+   "entry_plan_name": "Pro",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
-   "has_free_tier": true,
+   "has_free_tier": false,
    "id": "vercel-sandbox",
    "isolation": "firecracker",
    "name": "Vercel Sandbox",
@@ -38846,12 +39264,16 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [
+    "Hobby"
+   ],
    "url": "https://vercel.com/docs/sandbox/pricing",
    "usage_credit_floor": 20
   },
   {
    "category": "gpu-cloud",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -39044,12 +39466,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://verda.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Usage based",
    "free_monthly_credit": 0,
    "free_one_time_credit": 300,
    "has_free_tier": true,
@@ -39242,12 +39666,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://cloud.google.com/products/gemini-enterprise-agent-platform/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -39440,6 +39866,7 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.volcengine.com/docs/agentkit/Billing_items?lang=zh",
    "usage_credit_floor": null
   },
@@ -39500,6 +39927,7 @@
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -39692,12 +40120,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://docs.vultr.com/support/platform/billing/is-a-windows-license-included-in-the-monthly-price",
    "usage_credit_floor": null
   },
   {
    "category": "hyperscaler",
    "entry_fee": 0,
+   "entry_plan_name": "Usage account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -39890,12 +40320,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.vultr.com/pricing/",
    "usage_credit_floor": null
   },
   {
    "category": "macos",
    "entry_fee": 0,
+   "entry_plan_name": "Pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -40088,12 +40520,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.warpbuild.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Hobby",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -40292,12 +40726,14 @@
     }
    },
    "surcharge_floor": 10,
+   "trial_only_plans": [],
    "url": "https://wasmer.io/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "windows",
    "entry_fee": 0,
+   "entry_plan_name": "Business",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -40490,12 +40926,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://www.microsoft.com/en-us/windows-365/business/compare-plans-pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid paid account",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -40688,12 +41126,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://withruntime.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "paas",
    "entry_fee": 0,
+   "entry_plan_name": "Free",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -40892,12 +41332,14 @@
     }
    },
    "surcharge_floor": 5,
+   "trial_only_plans": [],
    "url": "https://zeabur.com/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "agent-sandbox",
    "entry_fee": 0,
+   "entry_plan_name": "Prepaid pay as you go",
    "free_monthly_credit": 0,
    "free_one_time_credit": 25,
    "has_free_tier": true,
@@ -41090,12 +41532,14 @@
     }
    },
    "surcharge_floor": null,
+   "trial_only_plans": [],
    "url": "https://zipbox.ai/pricing",
    "usage_credit_floor": null
   },
   {
    "category": "dev-env",
    "entry_fee": 0,
+   "entry_plan_name": "Paid workspace subscription (fee priced in modes)",
    "free_monthly_credit": 0,
    "free_one_time_credit": 0,
    "has_free_tier": true,
@@ -41294,6 +41738,7 @@
     }
    },
    "surcharge_floor": 200,
+   "trial_only_plans": [],
    "url": "https://www.zo.computer/pricing",
    "usage_credit_floor": null
   }

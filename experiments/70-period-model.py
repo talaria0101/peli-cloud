@@ -311,12 +311,27 @@ def main():
         if isinstance(plans, dict):
             plans = [dict(v, name=k) for k, v in plans.items()]
         plans = plans or []
+        # trial_only is EXCLUDED from the entry price on purpose.
+        #
+        # A card marks a plan trial_only when its $0 tier is not a free tier: it
+        # is a hard cap that BLOCKS usage, or a trial that expires, or a plan
+        # with no on-demand credit behind it. Reading its $0 fee as an entry
+        # price says "you can buy this for nothing", which is the opposite of
+        # what the vendor means.
+        #
+        # Found by reading the corpus's own verify notes, which the first three
+        # revisions never did. upstash-box's Free tier is exactly this: the note
+        # reads "the Free tier is a hard cap (usage blocked, not billed)". The
+        # card already sets trial_only, so the flag was there to be read.
         usable = [p for p in plans
                   if isinstance(p.get("fee"), (int, float))
+                  and not p.get("trial_only")
                   and not ({"addon", "sales", "announced"} & set(p.get("flags") or []))]
         fees = sorted(p["fee"] for p in usable)
         # fee_is_credit: the fee comes back as usage, so the bill cannot fall
         # below it. Not a credit: it is a surcharge on top.
+        trial_only_plans = [p["name"] for p in plans
+                            if isinstance(p, dict) and p.get("trial_only")]
         floor = min([p["fee"] for p in usable if p.get("fee_is_credit")], default=None)
         surcharge = min([p["fee"] for p in usable
                          if p["fee"] > 0 and not p.get("fee_is_credit")], default=None)
@@ -331,6 +346,11 @@ def main():
             "free_monthly_credit": monthly_credit or 0,
             "free_one_time_credit": one_time or 0,
             "entry_fee": fees[0] if fees else None,
+            "entry_plan_name": (min((p for p in usable if p["fee"] == fees[0]),
+                                    key=lambda p: 0 if p.get("fee_is_credit") else 1,
+                                    default={}).get("name")
+                             if fees else None),
+            "trial_only_plans": trial_only_plans,
             "usage_credit_floor": floor,
             "surcharge_floor": surcharge,
             "has_free_tier": bool([p for p in usable if p.get("fee") == 0]),

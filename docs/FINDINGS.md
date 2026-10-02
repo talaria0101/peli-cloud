@@ -36,20 +36,22 @@ in `experiments/`.
   and team seats.** A provider cheap here can be dear there. The full corpus
   cards carry those fields; these tables do not price them.
 - **Duty cycles are arithmetic, not measured profiles.** 1, 4, 10 and 24 hours
-  per day are chosen round numbers. A real agent's distribution is not uniform,
-  and a provider with a high minimum billable unit may bill far more than
-  `hours x rate` for a bursty agent. The `min_billed_seconds` column in
-  `data/period-model.json` carries that, and nothing in the tables adjusts for it.
-- **This is revision 3. Revision 1 was wrong in seven documented ways** (section 3)
-  **and revision 2 added three more of its own, found by auditing rather than
-  reading** (section 7): a pre-launch price ranking a provider 6x under its live
-  rate, 34 of 86 "unpriced" cards that are not unpriced, and an exclusion count
-  understated by an order of magnitude. The largest: it priced stoppable sandboxes as fixed monthly hosts,
-  which is the VPS comparison this task is not asking for. Revision 1 had also
-  fixed four of its own measurement defects before publication (section 5).
-  **That is the honest estimate of what is still wrong here:** at least seven
-  things were wrong in a document that read as finished, cited and reviewed, and
-  I found them only when the model itself was questioned. Assume more remain.
+  per day are round numbers. A real agent's distribution is not uniform, and no
+  agent here was instrumented to find out what it is.
+- **The minimum-bill figures are bounds, not bills.** Table B1 of the catalogue
+  prices two usage profiles against the same demand. The `bursty` column sits on
+  the pessimistic side by construction: it assumes every session is shorter than
+  the provider's minimum, so a 15-minute call costs a full hour. That is the
+  right side to err on when choosing, and the wrong side to budget from.
+- **This is revision 4, and every earlier revision shipped errors that a check
+  found and a reading did not.** Revision 1 was wrong in seven documented ways
+  (section 3). Revision 2 added three more of its own (section 7). Revision 3
+  added two: it published $/hour for 202 providers without mentioning that 42 of
+  them bill a one-hour minimum (section 8 of the catalogue), and it read a `$0`
+  tier as a `$0` entry price on 16 cards where the corpus had already flagged
+  the tier as one that blocks usage (section 8). **Three revisions in, the
+  defect rate was still roughly one per revision, and the last one was sitting
+  in a file the corpus had shipped for me.** Assume more remain.
 
 ---
 
@@ -365,7 +367,65 @@ of number that reads as complete. All 366 are now accounted for in
 
 ---
 
-## 8. Coverage check against the wider market (a real negative result)
+## 8. What the corpus's own verify notes say that I did not read
+
+The corpus ships 45 hand-verification notes under `research/verify/`, one per
+provider, each recording what was re-fetched, what was corrected and what could
+not be verified. **Revisions 1, 2 and 3 never opened them.** Reading them found a
+defect that changes published entry prices, and confirmed two findings I had
+reached independently.
+
+### 8.1 A `$0` tier that blocks usage was being sold as a `$0` entry price
+
+`upstash-box.md`: *"the Free tier is a hard cap (usage blocked, not billed), but
+the engine would pick it as 'PAYG minus $0.50'... Added `trial_only: true` so it
+is never auto-picked."* The card already carries the flag. My model never read
+it, so it treated any `$0` plan as a free entry.
+
+16 cards mark a plan `trial_only`. Six of them changed materially once excluded:
+
+| provider | was shown as | is actually | excluded tier |
+|---|---|---|---|
+| Replit | $0 | **$18** | Starter (free) |
+| Rivet | $0 | **$20** | Free |
+| Vercel Sandbox | $0 | **$20** | Hobby |
+| boat | $0 | **$20** | Trial |
+| CodeSandbox SDK | $0 | **$12** | Build (free) |
+| Tensorlake | $0 | **$250** | Free, Usage Credits (prepaid) |
+
+Every row now also names the plan it was priced from, so a `$0` entry can be
+checked against the tier that produces it. runloop is the instructive
+counter-example: its `Basic` plan is a genuine `$0` paid tier next to a `$250`
+`Pro`, so it stays at $0.
+
+**Verdict: confirmed.** Trigger is `trial_only: true` on a plan; wrong result is
+a $0 entry price on a tier that blocks usage or expires.
+
+### 8.2 Two findings the notes independently confirm
+
+- `arker.md` describes the EU rows as *"proposed prices, not currently
+  published offers"*, which is the same conclusion revision 3 reached from the
+  mode key alone. Two independent routes to one finding.
+- `hetzner-cloud.md` quotes the billing FAQ: *"always round up the hourly
+  usage"*, *"never exceed its monthly price cap"*, and powered-off servers are
+  billed. That confirms both halves of what section 8 of the catalogue now
+  shows: the one-hour granularity and the `keep = 1.00`.
+
+### 8.3 A modelling limit these notes expose
+
+Koyeb's card distinguishes eco instances, which *"scale to zero via deep sleep
+only"*, from standard types, which light-sleep. This model has one keep rate per
+mode, so it cannot express a graduated sleep policy, and it has no
+`light_sleep_enabled` field to read. Koyeb is not in the ranked set so nothing
+published here is affected, but a provider with two sleep tiers would be
+mistranscribed: the cheaper tier would be recorded as fully billed.
+
+**Verdict: plausible, not confirmed.** Koyeb would need a real card to test it
+against and is not priced here.
+
+---
+
+## 9. Coverage check against the wider market (a real negative result)
 
 The task said the corpus may not cover all providers and to research widely.
 I searched for providers the corpus might miss and **found none that the corpus
@@ -389,7 +449,7 @@ exist than these three roundups and the corpus surface; assume fewer are
 
 ---
 
-## 9. What the proof of concept does and does not handle
+## 10. What the proof of concept does and does not handle
 
 `experiments/` and `data/` are the instrument. Concretely:
 
@@ -428,7 +488,7 @@ the period figures.
 
 ---
 
-## 10. The exact commands
+## 11. The exact commands
 
 Run from the repo root, in order:
 

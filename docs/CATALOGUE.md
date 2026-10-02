@@ -1,6 +1,6 @@
 # peli-cloud — every provider, cheapest first, at every period
 
-**Generated 2026-10-02T02:26:29Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
+**Generated 2026-10-02T02:34:22Z** from the corpus at `f6a71ab09fef`. Every row links to the provider's own page and to the card the number was read from.
 
 ## How to read this
 
@@ -137,7 +137,7 @@ Every table below is priced at three shapes and four duty cycles:
 
 ### A3. $0 entry tier, no credit published — unknown, not free
 
-123 cards sell a plan whose fee is $0 but publish no credit, no quota and no cap. Whether that is a usable free tier or an unpriced meter is **not in the card**. They are listed here rather than in the paid tables because a $0 fee is not evidence that the machine is free.
+116 cards sell a plan whose fee is $0 but publish no credit, no quota and no cap. Whether that is a usable free tier or an unpriced meter is **not in the card**. They are listed here rather than in the paid tables because a $0 fee is not evidence that the machine is free.
 
 | # | provider | category | $/hour | 24h/day month | link |
 |---|---|---|---|---|---|
@@ -190,19 +190,19 @@ Every table below is priced at three shapes and four duty cycles:
 | 47 | [Scaleway Apple silicon (Mac mini)](https://www.scaleway.com/en/pricing/apple-silicon/) | macos | 0.1202 | 86.55 | `scaleway-apple-silicon` |
 | 48 | [Koyeb Sandboxes](https://www.koyeb.com/pricing) | agent-sandbox | 0.0288 | 49.74 | `koyeb` |
 | 49 | [Collimate](https://collimate.ai/pricing) | agent-sandbox | 0.1280 | 92.16 | `collimate` |
-| 50 | [Replit](https://docs.replit.com/billing/deployment-pricing) | paas | 0.0694 | 67.97 | `replit` |
-| 51 | [Sakura Internet Cloud](https://cloud.sakura.ad.jp/products/server/) | hyperscaler | 0.1333 | 95.96 | `sakura-cloud` |
-| 52 | [Tencent Cloud Agent Runtime — Agent Sandbox](https://cloud.tencent.com/document/product/1814/133249) | agent-sandbox | 0.1406 | 101.20 | `tencent-agent-runtime` |
-| 53 | [NAVER Cloud / LINE-NAVER scope](https://www.ncloud.com/product/compute/server) | hyperscaler | 0.1414 | 101.80 | `naver-cloud` |
-| 54 | [RentaMac (rentamac.io)](https://rentamac.io/pricing) | macos | 0.1459 | 105.04 | `rentamac` |
-| 55 | [Solari](https://docs.getsolari.com/pricing) | agent-sandbox | 0.0798 | 77.46 | `solari` |
-| 56 | [Together Code Sandbox](https://www.together.ai/pricing) | agent-sandbox | 0.1488 | 107.14 | `together-code-sandbox` |
-| 57 | [MacStadium](https://www.macstadium.com/pricing) | macos | 0.1493 | 107.51 | `macstadium` |
-| 58 | [Omnara](https://www.omnara.com/pricing) | agent-sandbox | 0.1656 | 119.23 | `omnara` |
-| 59 | [OpenReward Sandboxes](https://openreward.ai/pricing) | agent-sandbox | 0.1656 | 119.23 | `openreward` |
-| 60 | [OmniRun](https://omnirun.io/pricing) | agent-sandbox | 0.1707 | 122.90 | `omnirun` |
+| 50 | [Sakura Internet Cloud](https://cloud.sakura.ad.jp/products/server/) | hyperscaler | 0.1333 | 95.96 | `sakura-cloud` |
+| 51 | [Tencent Cloud Agent Runtime — Agent Sandbox](https://cloud.tencent.com/document/product/1814/133249) | agent-sandbox | 0.1406 | 101.20 | `tencent-agent-runtime` |
+| 52 | [NAVER Cloud / LINE-NAVER scope](https://www.ncloud.com/product/compute/server) | hyperscaler | 0.1414 | 101.80 | `naver-cloud` |
+| 53 | [RentaMac (rentamac.io)](https://rentamac.io/pricing) | macos | 0.1459 | 105.04 | `rentamac` |
+| 54 | [Solari](https://docs.getsolari.com/pricing) | agent-sandbox | 0.0798 | 77.46 | `solari` |
+| 55 | [Together Code Sandbox](https://www.together.ai/pricing) | agent-sandbox | 0.1488 | 107.14 | `together-code-sandbox` |
+| 56 | [MacStadium](https://www.macstadium.com/pricing) | macos | 0.1493 | 107.51 | `macstadium` |
+| 57 | [Omnara](https://www.omnara.com/pricing) | agent-sandbox | 0.1656 | 119.23 | `omnara` |
+| 58 | [OpenReward Sandboxes](https://openreward.ai/pricing) | agent-sandbox | 0.1656 | 119.23 | `openreward` |
+| 59 | [PandaStack](https://www.pandastack.ai/pricing/) | agent-sandbox | 0.1728 | 124.42 | `pandastack` |
+| 60 | [Cua Fleet (Windows Server)](https://cua.ai/pricing) | windows | 0.1785 | 128.52 | `cua-windows` |
 
-_63 more in `data/period-model.json`._
+_56 more in `data/period-model.json`._
 
 **The trap in this section.** A one-time credit is free once. A monthly credit is free until it runs out, and the largest in the market is $30/month. The big numbers people quote — $300 from Google, AWS, Azure, Oracle or IBM — are **one-time** credits. They do not renew, and treating one as a free tier is the most expensive mistake in this document.
 
