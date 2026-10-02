@@ -1,13 +1,14 @@
 {
- "at": "2026-10-02T02:24:58Z",
+ "at": "2026-10-02T02:27:16Z",
  "card_commit": "f6a71ab09fef",
  "counts": {
   "gpu-only": 15,
   "no-rate": 86,
   "off-category": 41,
-  "ranked": 198,
+  "prelaunch-only": 2,
+  "ranked": 197,
   "ranked-partial": 9,
-  "too-big": 17
+  "too-big": 16
  },
  "ledger": [
   {
@@ -1082,12 +1083,12 @@
   },
   {
    "category": "agent-sandbox",
-   "detail": "every published size is larger than 1 vCPU / 1 GiB",
+   "detail": "every rate-bearing mode is pre-launch",
    "id": "computeruse-cloud",
    "isolation": null,
    "name": "Computer Use Cloud (computeruse.run)",
    "shapes_priced": [],
-   "status": "too-big",
+   "status": "prelaunch-only",
    "url": "https://computeruse.run/"
   },
   {
@@ -2295,16 +2296,12 @@
   },
   {
    "category": "agent-sandbox",
-   "detail": null,
+   "detail": "every rate-bearing mode is pre-launch",
    "id": "leap0",
    "isolation": "firecracker",
    "name": "Leap0",
-   "shapes_priced": [
-    "agent",
-    "devbox",
-    "tiny"
-   ],
-   "status": "ranked",
+   "shapes_priced": [],
+   "status": "prelaunch-only",
    "url": "https://leap0.dev/"
   },
   {
@@ -4490,6 +4487,7 @@
   "gpu-only": "GPU-only provider: every mode sells a GPU, and no CPU rate is published. Priced separately as a GPU workload, not dropped.",
   "no-rate": "The card publishes modes but no hourly rate and no size table, so there is nothing here to compute. REPROBED 2026-10-02 against each provider's own page (experiments/95-reprobe-unpriced.py): 45 of 86 genuinely publish no dollar figure, 7 were unreachable, and 34 DO publish prices, which means for those the corpus card is incomplete rather than the vendor being silent. They are not re-priced here because a $199/mo figure beside a support plan is not machine-hour data; closing that gap is the corpus maintainer's work.",
   "off-category": "Browser, scraping or non-compute product: sells minutes of a remote browser or a SaaS, not machines. Surveyed for free credit, excluded from ranking.",
+  "prelaunch-only": "Every published rate sits on a pre-launch mode (a region or offering that does not exist yet). There is no live price to rank. arker was the serious case: its cheapest mode was `eu-hetzner-proposed` at $0.0302/h against a live on-demand rate of $0.1877/h on the same card.",
   "ranked": "Ranked in table C.",
   "ranked-partial": "Ranked for some shapes only.",
   "too-big": "Publishes rates, but no published size meets the smallest shape priced here (1 vCPU / 1 GiB). It is a larger machine than this catalogue covers, not an unpriced one.",

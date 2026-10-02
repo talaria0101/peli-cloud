@@ -54,12 +54,29 @@ REASONS = {
     "off-category": "Browser, scraping or non-compute product: sells minutes of a "
                     "remote browser or a SaaS, not machines. Surveyed for free "
                     "credit, excluded from ranking.",
+    "prelaunch-only": "Every published rate sits on a pre-launch mode (a region "
+                      "or offering that does not exist yet). There is no live price "
+                      "to rank. arker was the serious case: its cheapest mode was "
+                      "`eu-hetzner-proposed` at $0.0302/h against a live "
+                      "on-demand rate of $0.1877/h on the same card.",
     "unreadable": "Card could not be parsed.",
 }
 
 
 def NOW():
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+PRELAUNCH_TOKENS = ("proposed", "preview", "soon", "coming", "waitlist",
+                    "upcoming", "unavailable")
+
+
+def is_prelaunch(k, label):
+    kl = (k or "").lower()
+    ll = (label or "").lower()
+    if any(t in kl for t in PRELAUNCH_TOKENS):
+        return True
+    return any(t in ll for t in PRELAUNCH_TOKENS) and "preview" not in ll
 
 
 def classify(card, priced_shapes):
@@ -91,6 +108,9 @@ def classify(card, priced_shapes):
     gpu_only = all(m.get("gpu_only") for m in has_rate)
     if gpu_only:
         return "gpu-only", None
+
+    if all(is_prelaunch(m.get("key"), m.get("label")) for m in has_rate):
+        return "prelaunch-only", "every rate-bearing mode is pre-launch"
 
     # A rate exists. Check whether any published size meets 1 vCPU / 1 GiB.
     for m in has_rate:
@@ -158,8 +178,8 @@ def main():
     print()
 
     print("== every card accounted for ==")
-    for st in ("ranked", "ranked-partial", "gpu-only", "too-big", "no-rate",
-               "off-category", "unreadable"):
+    for st in ("ranked", "ranked-partial", "gpu-only", "prelaunch-only",
+               "too-big", "no-rate", "off-category", "unreadable"):
         if by_status.get(st):
             print("  %-14s %4d" % (st, by_status[st]))
     total = sum(by_status.values())

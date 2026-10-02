@@ -224,8 +224,8 @@ def main():
                                      x[2]["billed_month_with_credit"]))
             A("#### %s per day — %d paid providers" % (dkey, len(paid)))
             A("")
-            A("| # | provider | $/hour | $/day | $/week | $/month | after credit | credit | keep | floor | link |")
-            A("|---|---|---|---|---|---|---|---|---|---|---|")
+            A("| # | provider | $/hour | $/day | $/week | $/month | after credit | credit | keep | floor | buy it? | link |")
+            A("|---|---|---|---|---|---|---|---|---|---|---|---|")
             for i, (p, s, pd) in enumerate(paid[:25], 1):
                 floor = p.get("usage_credit_floor")
                 mc = p.get("free_monthly_credit") or 0
@@ -235,11 +235,13 @@ def main():
                     used = "$%g of it" % mc
                 else:
                     used = "-"
-                A("| %d | %s | %.4f | %.2f | %.2f | %.2f | %.2f | %s | %.2f | %s | `%s` |" % (
+                buy = ("**no**" if s["not_self_serve"]
+                       else ("spot/term" if "spot" in s["flags"] else "yes"))
+                A("| %d | %s | %.4f | %.2f | %.2f | %.2f | %.2f | %s | %.2f | %s | %s | `%s` |" % (
                     i, link(p["name"] or p["id"], p.get("url")), s["hourly"],
                     pd["compute_day"], pd["compute_week"], pd["billed_month_no_credit"],
                     pd["billed_month_with_credit"], used, s["keep_rate"],
-                    ("$%g" % floor) if floor else "-", p["id"]))
+                    ("$%g" % floor) if floor else "-", buy, p["id"]))
             if len(paid) > 25:
                 A("")
                 A("_%d more at this duty cycle; the full rank is table C._" % (len(paid) - 25))
@@ -333,8 +335,8 @@ def main():
         A("")
         A("| status | cards | what it means |")
         A("|---|---|---|")
-        for st in ("ranked", "ranked-partial", "gpu-only", "too-big", "no-rate",
-                   "off-category"):
+        for st in ("ranked", "ranked-partial", "gpu-only", "prelaunch-only",
+                   "too-big", "no-rate", "off-category"):
             if ledger["counts"].get(st):
                 A("| `%s` | %d | %s |" % (st, ledger["counts"][st],
                                            ledger["reasons"].get(st, "")))
@@ -395,6 +397,25 @@ def main():
                 figs = ", ".join(pr.get("figures") or [])[:44] if pr.get("figures") else "-"
                 A("| %s | %s | no rate, no sizes | %s | %s | `%s` |" % (
                     link(x["name"] or x["id"], x.get("url")), x["category"], v, figs, x["id"]))
+            A("")
+
+        prel = [x for x in ledger["ledger"] if x["status"] == "prelaunch-only"]
+        if prel:
+            A("### The %d priced only on a pre-launch mode" % len(prel))
+            A("")
+            A("Every rate these cards publish sits on a region or offering that "
+              "does not exist yet, so there is no live price to rank. **This is not "
+              "a theoretical category**: arker was ranked at $0.0302/hour from "
+              "`eu-hetzner-proposed` while the same card's live on-demand rate is "
+              "$0.1877/hour, a factor of six. Revision 2 carried that row until "
+              "the winning mode of every ranked provider was audited for "
+              "pre-launch wording.")
+            A("")
+            A("| provider | category | link |")
+            A("|---|---|---|")
+            for x in prel:
+                A("| %s | %s | `%s` |" % (link(x["name"] or x["id"], x.get("url")),
+                                           x["category"], x["id"]))
             A("")
 
         toobig = [x for x in ledger["ledger"] if x["status"] == "too-big"]

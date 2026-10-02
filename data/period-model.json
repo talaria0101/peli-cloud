@@ -1,11 +1,43 @@
 {
- "at": "2026-10-02T02:24:57Z",
+ "at": "2026-10-02T02:26:29Z",
  "card_commit": "f6a71ab09fef",
  "duty_cycles_h_per_day": [
   1,
   4,
   10,
   24
+ ],
+ "prelaunch_modes_skipped": [
+  {
+   "id": "arker",
+   "mode": "eu-hetzner-proposed",
+   "signal": "mode key"
+  },
+  {
+   "id": "arker",
+   "mode": "eu-scaleway-proposed",
+   "signal": "mode key"
+  },
+  {
+   "id": "computeruse-cloud",
+   "mode": "unavailable-preview-active-second-offering",
+   "signal": "mode key"
+  },
+  {
+   "id": "digitalocean",
+   "mode": "harness-runtime-preview",
+   "signal": "mode key"
+  },
+  {
+   "id": "kedge",
+   "mode": "preview-workspace",
+   "signal": "mode key"
+  },
+  {
+   "id": "leap0",
+   "mode": "preview",
+   "signal": "mode key"
+  }
  ],
  "providers": [
   {
@@ -1965,190 +1997,184 @@
    "name": "Arker",
    "shapes": {
     "agent": {
-     "flags": [
-      "legacy"
-     ],
+     "flags": [],
      "granularity_s": null,
-     "hourly": 0.030238,
+     "hourly": 0.187736,
      "how": "size small (2 vCPU / 8 GiB / 32 GiB) (2 vCPU / 8 GiB)",
      "keep_rate": 1.0,
      "keep_source": "default",
      "min_billed_seconds": null,
-     "mode": "eu-hetzner-proposed",
+     "mode": "on-demand",
      "not_self_serve": false,
      "periods": {
       "10h": {
-       "billed_month_no_credit": 9.0714,
-       "billed_month_with_credit": 9.0714,
-       "compute_day": 0.3024,
-       "compute_month": 9.0714,
-       "compute_week": 2.1167,
+       "billed_month_no_credit": 56.3208,
+       "billed_month_with_credit": 56.3208,
+       "compute_day": 1.8774,
+       "compute_month": 56.3208,
+       "compute_week": 13.1415,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "1h": {
-       "billed_month_no_credit": 0.9071,
-       "billed_month_with_credit": 0.9071,
-       "compute_day": 0.0302,
-       "compute_month": 0.9071,
-       "compute_week": 0.2117,
+       "billed_month_no_credit": 5.6321,
+       "billed_month_with_credit": 5.6321,
+       "compute_day": 0.1877,
+       "compute_month": 5.6321,
+       "compute_week": 1.3142,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "24h": {
-       "billed_month_no_credit": 21.7714,
-       "billed_month_with_credit": 21.7714,
-       "compute_day": 0.7257,
-       "compute_month": 21.7714,
-       "compute_week": 5.08,
+       "billed_month_no_credit": 135.1699,
+       "billed_month_with_credit": 135.1699,
+       "compute_day": 4.5057,
+       "compute_month": 135.1699,
+       "compute_week": 31.5396,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "4h": {
-       "billed_month_no_credit": 3.6286,
-       "billed_month_with_credit": 3.6286,
-       "compute_day": 0.121,
-       "compute_month": 3.6286,
-       "compute_week": 0.8467,
+       "billed_month_no_credit": 22.5283,
+       "billed_month_with_credit": 22.5283,
+       "compute_day": 0.7509,
+       "compute_month": 22.5283,
+       "compute_week": 5.2566,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       }
      }
     },
     "devbox": {
-     "flags": [
-      "legacy"
-     ],
+     "flags": [],
      "granularity_s": null,
-     "hourly": 0.061925,
+     "hourly": 0.372016,
      "how": "size large (4 vCPU / 16 GiB / 32 GiB) (4 vCPU / 16 GiB)",
      "keep_rate": 1.0,
      "keep_source": "default",
      "min_billed_seconds": null,
-     "mode": "eu-scaleway-proposed",
+     "mode": "on-demand",
      "not_self_serve": false,
      "periods": {
       "10h": {
-       "billed_month_no_credit": 18.5775,
-       "billed_month_with_credit": 18.5775,
-       "compute_day": 0.6192,
-       "compute_month": 18.5775,
-       "compute_week": 4.3347,
+       "billed_month_no_credit": 111.6048,
+       "billed_month_with_credit": 111.6048,
+       "compute_day": 3.7202,
+       "compute_month": 111.6048,
+       "compute_week": 26.0411,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "1h": {
-       "billed_month_no_credit": 1.8578,
-       "billed_month_with_credit": 1.8578,
-       "compute_day": 0.0619,
-       "compute_month": 1.8578,
-       "compute_week": 0.4335,
+       "billed_month_no_credit": 11.1605,
+       "billed_month_with_credit": 11.1605,
+       "compute_day": 0.372,
+       "compute_month": 11.1605,
+       "compute_week": 2.6041,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "24h": {
-       "billed_month_no_credit": 44.586,
-       "billed_month_with_credit": 44.586,
-       "compute_day": 1.4862,
-       "compute_month": 44.586,
-       "compute_week": 10.4034,
+       "billed_month_no_credit": 267.8515,
+       "billed_month_with_credit": 267.8515,
+       "compute_day": 8.9284,
+       "compute_month": 267.8515,
+       "compute_week": 62.4987,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "4h": {
-       "billed_month_no_credit": 7.431,
-       "billed_month_with_credit": 7.431,
-       "compute_day": 0.2477,
-       "compute_month": 7.431,
-       "compute_week": 1.7339,
+       "billed_month_no_credit": 44.6419,
+       "billed_month_with_credit": 44.6419,
+       "compute_day": 1.4881,
+       "compute_month": 44.6419,
+       "compute_week": 10.4164,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       }
      }
     },
     "tiny": {
-     "flags": [
-      "legacy"
-     ],
+     "flags": [],
      "granularity_s": null,
-     "hourly": 0.030238,
+     "hourly": 0.187736,
      "how": "size small (2 vCPU / 8 GiB / 32 GiB) (2 vCPU / 8 GiB)",
      "keep_rate": 1.0,
      "keep_source": "default",
      "min_billed_seconds": null,
-     "mode": "eu-hetzner-proposed",
+     "mode": "on-demand",
      "not_self_serve": false,
      "periods": {
       "10h": {
-       "billed_month_no_credit": 9.0714,
-       "billed_month_with_credit": 9.0714,
-       "compute_day": 0.3024,
-       "compute_month": 9.0714,
-       "compute_week": 2.1167,
+       "billed_month_no_credit": 56.3208,
+       "billed_month_with_credit": 56.3208,
+       "compute_day": 1.8774,
+       "compute_month": 56.3208,
+       "compute_week": 13.1415,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "1h": {
-       "billed_month_no_credit": 0.9071,
-       "billed_month_with_credit": 0.9071,
-       "compute_day": 0.0302,
-       "compute_month": 0.9071,
-       "compute_week": 0.2117,
+       "billed_month_no_credit": 5.6321,
+       "billed_month_with_credit": 5.6321,
+       "compute_day": 0.1877,
+       "compute_month": 5.6321,
+       "compute_week": 1.3142,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "24h": {
-       "billed_month_no_credit": 21.7714,
-       "billed_month_with_credit": 21.7714,
-       "compute_day": 0.7257,
-       "compute_month": 21.7714,
-       "compute_week": 5.08,
+       "billed_month_no_credit": 135.1699,
+       "billed_month_with_credit": 135.1699,
+       "compute_day": 4.5057,
+       "compute_month": 135.1699,
+       "compute_week": 31.5396,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       },
       "4h": {
-       "billed_month_no_credit": 3.6286,
-       "billed_month_with_credit": 3.6286,
-       "compute_day": 0.121,
-       "compute_month": 3.6286,
-       "compute_week": 0.8467,
+       "billed_month_no_credit": 22.5283,
+       "billed_month_with_credit": 22.5283,
+       "compute_day": 0.7509,
+       "compute_month": 22.5283,
+       "compute_week": 5.2566,
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
+       "keep_basis": "always-on by contract",
        "keep_rate": 1.0
       }
      }
@@ -12739,7 +12765,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 10,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "1h": {
@@ -12751,7 +12777,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 1,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "24h": {
@@ -12763,7 +12789,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 24,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "4h": {
@@ -12775,7 +12801,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 4,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       }
      }
@@ -12800,7 +12826,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 10,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "1h": {
@@ -12812,7 +12838,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 1,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "24h": {
@@ -12824,7 +12850,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 24,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "4h": {
@@ -12836,7 +12862,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 4,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       }
      }
@@ -12861,7 +12887,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 10,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "1h": {
@@ -12873,7 +12899,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 1,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "24h": {
@@ -12885,7 +12911,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 24,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       },
       "4h": {
@@ -12897,7 +12923,7 @@
        "credit_applied": 0,
        "floor_applied": null,
        "hours_per_day": 4,
-       "keep_basis": "suspends on idle (auto_stop_idle)",
+       "keep_basis": "billed for uptime (no suspension feature published)",
        "keep_rate": 1.0
       }
      }
@@ -22067,210 +22093,6 @@
    },
    "surcharge_floor": null,
    "url": "https://www.latitude.sh/pricing",
-   "usage_credit_floor": null
-  },
-  {
-   "category": "agent-sandbox",
-   "entry_fee": 0,
-   "free_monthly_credit": 0,
-   "free_one_time_credit": 0,
-   "has_free_tier": true,
-   "id": "leap0",
-   "isolation": "firecracker",
-   "name": "Leap0",
-   "shapes": {
-    "agent": {
-     "flags": [
-      "beta"
-     ],
-     "granularity_s": 1,
-     "hourly": 0.1656,
-     "how": "per-resource allocated",
-     "keep_rate": 1.0,
-     "keep_source": "default",
-     "min_billed_seconds": null,
-     "mode": "preview",
-     "not_self_serve": false,
-     "periods": {
-      "10h": {
-       "billed_month_no_credit": 49.68,
-       "billed_month_with_credit": 49.68,
-       "compute_day": 1.656,
-       "compute_month": 49.68,
-       "compute_week": 11.592,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "1h": {
-       "billed_month_no_credit": 4.968,
-       "billed_month_with_credit": 4.968,
-       "compute_day": 0.1656,
-       "compute_month": 4.968,
-       "compute_week": 1.1592,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "24h": {
-       "billed_month_no_credit": 119.232,
-       "billed_month_with_credit": 119.232,
-       "compute_day": 3.9744,
-       "compute_month": 119.232,
-       "compute_week": 27.8208,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "4h": {
-       "billed_month_no_credit": 19.872,
-       "billed_month_with_credit": 19.872,
-       "compute_day": 0.6624,
-       "compute_month": 19.872,
-       "compute_week": 4.6368,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      }
-     }
-    },
-    "devbox": {
-     "flags": [
-      "beta"
-     ],
-     "granularity_s": 1,
-     "hourly": 0.3312,
-     "how": "per-resource allocated",
-     "keep_rate": 1.0,
-     "keep_source": "default",
-     "min_billed_seconds": null,
-     "mode": "preview",
-     "not_self_serve": false,
-     "periods": {
-      "10h": {
-       "billed_month_no_credit": 99.36,
-       "billed_month_with_credit": 99.36,
-       "compute_day": 3.312,
-       "compute_month": 99.36,
-       "compute_week": 23.184,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "1h": {
-       "billed_month_no_credit": 9.936,
-       "billed_month_with_credit": 9.936,
-       "compute_day": 0.3312,
-       "compute_month": 9.936,
-       "compute_week": 2.3184,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "24h": {
-       "billed_month_no_credit": 238.464,
-       "billed_month_with_credit": 238.464,
-       "compute_day": 7.9488,
-       "compute_month": 238.464,
-       "compute_week": 55.6416,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "4h": {
-       "billed_month_no_credit": 39.744,
-       "billed_month_with_credit": 39.744,
-       "compute_day": 1.3248,
-       "compute_month": 39.744,
-       "compute_week": 9.2736,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      }
-     }
-    },
-    "tiny": {
-     "flags": [
-      "beta"
-     ],
-     "granularity_s": 1,
-     "hourly": 0.0666,
-     "how": "per-resource allocated",
-     "keep_rate": 1.0,
-     "keep_source": "default",
-     "min_billed_seconds": null,
-     "mode": "preview",
-     "not_self_serve": false,
-     "periods": {
-      "10h": {
-       "billed_month_no_credit": 19.98,
-       "billed_month_with_credit": 19.98,
-       "compute_day": 0.666,
-       "compute_month": 19.98,
-       "compute_week": 4.662,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 10,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "1h": {
-       "billed_month_no_credit": 1.998,
-       "billed_month_with_credit": 1.998,
-       "compute_day": 0.0666,
-       "compute_month": 1.998,
-       "compute_week": 0.4662,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 1,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "24h": {
-       "billed_month_no_credit": 47.952,
-       "billed_month_with_credit": 47.952,
-       "compute_day": 1.5984,
-       "compute_month": 47.952,
-       "compute_week": 11.1888,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 24,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      },
-      "4h": {
-       "billed_month_no_credit": 7.992,
-       "billed_month_with_credit": 7.992,
-       "compute_day": 0.2664,
-       "compute_month": 7.992,
-       "compute_week": 1.8648,
-       "credit_applied": 0,
-       "floor_applied": null,
-       "hours_per_day": 4,
-       "keep_basis": "billed for uptime (no suspension feature published)",
-       "keep_rate": 1.0
-      }
-     }
-    }
-   },
-   "surcharge_floor": null,
-   "url": "https://leap0.dev/",
    "usage_credit_floor": null
   },
   {

@@ -58,6 +58,25 @@ DUTY_CYCLES = [1, 4, 10, 24]
 # the corpus, cheapest-first within each provider.
 GPU_TIERS = ["RTX-4090", "L4", "A10G", "A100-40G", "RTX-A6000", "A100-80G",
              "L40S", "RTX-6000-Ada", "H100", "H200", "B200", "B300"]
+
+# A mode whose key names a region or offering that does not exist yet is not a
+# price anybody can pay. Found by auditing every ranked row's winning mode on
+# 2026-10-02: arker's cheapest mode was `eu-hetzner-proposed`, a pre-launch
+# region priced at $0.0302/h against a LIVE on-demand rate of $0.1877/h on the
+# same card. That is 6x, and it put arker in the ranking on a price nobody can
+# be charged. leap0's cheapest mode is `preview`.
+PRELAUNCH_TOKENS = ("proposed", "preview", "soon", "coming", "waitlist",
+                    "upcoming", "unavailable")
+
+
+def is_prelaunch(mode_key, label):
+    k = (mode_key or "").lower()
+    l = (label or "").lower()
+    if any(t in k for t in PRELAUNCH_TOKENS):
+        return True, "mode key"
+    if any(t in l for t in PRELAUNCH_TOKENS) and "preview" not in l:
+        return True, "label"
+    return False, None
 HOURS_PER_DAY = 24.0
 DAYS_PER_WEEK = 7.0
 DAYS_PER_MONTH = 30.0
@@ -165,6 +184,8 @@ def main():
 
     rows = []
     skipped = 0
+    prelaunch_seen = []
+    prelaunch_only = []
     for fn in sorted(os.listdir(cards_dir)):
         if not fn.endswith(".json"):
             continue
@@ -184,12 +205,19 @@ def main():
         off_category = cls in ("browser", "self-host", "other", "finops", "inference-api")
 
         best_per_shape = {}
+        pre_before = len(prelaunch_seen)
         for shape_name, shape in SHAPES.items():
             cands = []
             for m in (card.get("modes") or []):
                 if m.get("gpu_only") or m.get("addon_only"):
                     continue
                 flags = set(m.get("flags") or [])
+                pre, why = is_prelaunch(m.get("key"), m.get("label"))
+                if pre:
+                    # Recorded, then skipped: a pre-launch region is not a price
+                    # a buyer can be charged, and it must not win the ranking.
+                    prelaunch_seen.append((card.get("id"), m.get("key"), why))
+                    continue
                 keep, keep_basis, keep_src = keep_rate(m)
                 hourly, how = mode_hourly(m, shape)
                 if hourly is None or hourly <= 0:
@@ -267,6 +295,16 @@ def main():
             continue
 
         if not best_per_shape:
+            # Unpriced for one of three reasons, and they must not be conflated:
+            # a card that only ever had pre-launch modes, a card that never
+            # published a rate, and a card that publishes only GPU modes.
+            rate_modes = [m for m in (card.get("modes") or [])
+                          if (m.get("pricing") == "sizes" and m.get("sizes"))
+                          or isinstance(m.get("vcpu_h"), (int, float))
+                          or isinstance(m.get("ram_gib_h"), (int, float))]
+            if rate_modes and all(is_prelaunch(m.get("key"), m.get("label"))[0]
+                                  for m in rate_modes):
+                prelaunch_only.append((card.get("id"), [m.get("key") for m in rate_modes]))
             continue
 
         plans = card.get("plans")
@@ -341,6 +379,21 @@ def main():
         rows.append(row)
 
     print("priced at least one shape: %d cards (%d unreadable)" % (len(rows), skipped))
+    seen_u = []
+    for rec in prelaunch_seen:
+        if (rec[0], rec[1]) not in [(a, b) for a, b, _ in seen_u]:
+            seen_u.append(rec)
+    prelaunch_seen = seen_u
+    if prelaunch_seen:
+        print()
+        print("pre-launch modes SKIPPED (not a price a buyer can be charged):")
+        for pid, mode, why in prelaunch_seen:
+            print("  %-18s %-46s (%s)" % (pid, mode, why))
+    if prelaunch_only:
+        print()
+        print("cards that are now UNPRICED because every mode was pre-launch:")
+        for pid, modes in prelaunch_only:
+            print("  %-18s %s" % (pid, ", ".join(modes)))
     print()
 
     # ---- the table the task actually asked for -------------------------------
@@ -374,6 +427,8 @@ def main():
     with open(dest, "w", encoding="utf-8") as fh:
         json.dump({"card_commit": CARD_COMMIT, "at": NOW(),
                    "shapes": SHAPES, "duty_cycles_h_per_day": DUTY_CYCLES,
+                   "prelaunch_modes_skipped": [
+                       {"id": a, "mode": b, "signal": c} for a, b, c in prelaunch_seen],
                    "providers": rows}, fh, indent=1, sort_keys=True)
     print("wrote %s (%d providers)" % (dest, len(rows)))
     return 0
