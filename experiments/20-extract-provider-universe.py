@@ -34,7 +34,12 @@ def NOW():
 
 
 def known(x):
-    """Upstream 'published a number' test: not None, not NaN, not a string."""
+    """A published number: not None, not NaN, not a string. Zero counts.
+
+    Zero is deliberately allowed here, because it is the CORRECT value for a
+    plan fee (a free tier) and for a $0 credit. A $0/hour SIZE is a different
+    animal and is filtered by rate_known() below.
+    """
     if x is None:
         return False
     if isinstance(x, str):
@@ -42,6 +47,21 @@ def known(x):
     if isinstance(x, float) and x != x:
         return False
     return True
+
+
+def rate_known(x):
+    """A published hourly RATE, which must be strictly positive.
+
+    Why this is separate from known(): research/cards/aws-ec2.json mode
+    `gpu-l4` lists `g6.xlarge` at `"hour": 0` because AWS no longer publishes a
+    price for it. Left in the extracted size list it is worse than useless: the
+    ranker picks the cheapest size that fits, selects the $0 row, then drops the
+    whole card for being free, when the card in fact has a real $0.50 size beside
+    it. Found by the guard-mutation review on 2026-10-02 with a planted
+    [$0, $0.50] card. A $0 plan fee must NOT be filtered by this: a free plan
+    is real and is how most of this corpus charges.
+    """
+    return known(x) and isinstance(x, (int, float)) and float(x) > 0
 
 
 def digest(path):
@@ -84,9 +104,14 @@ def flatten_sizes(sizes):
 
 
 def usable_sizes(sizes):
-    """Sizes with a published positive hourly rate, smallest-shaped first."""
+    """Sizes with a published POSITIVE hourly rate, cheapest-first order kept.
+
+    A $0 rate is not a free size; it is an unpriced placeholder (aws-ec2's
+    gpu-l4 g6.xlarge is the live example). It is excluded here so it can never
+    be picked as the cheapest option, and its count is reported separately.
+    """
     flat, nested = flatten_sizes(sizes)
-    ok = [s for s in flat if known(s.get("hour"))]
+    ok = [s for s in flat if rate_known(s.get("hour"))]
     return ok, nested
 
 
@@ -210,6 +235,12 @@ def extract_card(path):
         # the cheapest one that happens to be the smallest. Shape-less sizes are
         # kept too, marked, because a rate without a shape is still a rate.
         if pricing == "sizes":
+            # Filter to POSITIVE prices here, not just at pick time. If a $0 row
+            # is left in the list, the ranker's "cheapest size that fits" picks
+            # it and the whole card is dropped for being free, when the card in
+            # fact has a real $0.50 size next to the $0 placeholder. This was
+            # a real defect: a planted card with sizes [$0, $0.50] priced as
+            # None instead of $0.50. See experiments/README.md.
             ok, _nested = usable_sizes(m.get("sizes"))
             row["sizes"] = [{"name": s.get("name"), "vcpu": s.get("vcpu"),
                              "ram_gib": s.get("ram_gib"), "hour": s.get("hour"),
@@ -217,9 +248,12 @@ def extract_card(path):
                              "month_cap": s.get("month_cap"),
                              "shaped": known(s.get("vcpu")) and known(s.get("ram_gib"))}
                             for s in ok]
+            row["n_zero_priced_sizes"] = sum(
+                1 for s in (flatten_sizes(m.get("sizes"))[0])
+                if s.get("hour") == 0)
             if _nested:
                 row["nested_size_rows"] = _nested
-        if pricing == "sizes" and size and known(size.get("hour")):
+        if pricing == "sizes" and size and rate_known(size.get("hour")):
             row["cheapest_hour"] = size["hour"]
             row["smallest_shape"] = {"name": size["name"], "vcpu": size["vcpu"],
                                      "ram_gib": size["ram_gib"]}

@@ -35,10 +35,11 @@ in `experiments/`.
 - **"Cheapest" means cheapest for the stated workload only**, not cheapest
   provider, best provider, or best value.
 - **A previous revision's error rate is unknown to me** because this is revision
-  one. Assume more remain. I found and fixed two real measurement bugs in my own
-  first run (a $0/hour and a shape-mismatch, both described below), which is
-  exactly the class of error that survives into a table if nobody runs a
-  cross-check.
+  one. Assume more remain. I found and fixed **four** real measurement defects
+  in my own first run (two `$0/hour` bugs at different layers, a shape mismatch,
+  and a regression I introduced while fixing the second), all described in
+  section 5. That is the honest estimate of how many are still wrong: four were
+  found by reading the output and by planting one case, so more are likely.
 
 ---
 
@@ -179,36 +180,55 @@ not cheap, because the credit is denominated in hours of the wrong size.
 
 ---
 
-## 5. Measurement defects I found and fixed (and one I found in the corpus)
+## 5. Measurement defects I found and fixed (and two I found in the corpus)
 
 These are the things that would have made this table wrong, kept because a reader
-distrusting the numbers should see what broke and how.
+distrusting the numbers should see what broke and how. The first two were caught
+by reading the pipeline output; the third and fourth were caught by the
+guard-mutation review (planting the defect the guard exists to catch), which is
+how the third should have been found the first time.
 
-- **My bug 1: a `$0/hour` size.** The first run ranked 45 providers at exactly
+- **Bug 1: a `$0/hour` size.** The first run ranked 45 providers at exactly
   $0.00/month. Cause: `aws-ec2`'s `gpu-l4` size table lists `g6.xlarge` at
-  `"hour": 0` (AWS no longer publishes a price for it). My `known()` read a
-  literal 0 as a real price. Fix: a price is "published" only if it is
-  **positive**; zero is not a price. This is the single change that turned 45
-  fake free providers into a real ranking.
-- **My bug 2: shape mismatch counted as a match.** I initially priced each card
-  at its *cheapest* published size regardless of whether it fit 2 vCPU / 4 GiB,
-  so a card whose smallest box was 1 vCPU or 8 vCPU could outrank a card that
-  actually fit. Fix: pick the cheapest size that satisfies the requested shape;
-  when none does, price the largest offered and label it `smallest usable size
-  is N vCPU / M GiB` rather than pretending it fits.
-- **Corpus defect (unfixed, reported): nested size list.**
-  `research/cards/scaleway.json` mode `dedicated-compute` nests a **list inside**
-  its `sizes` array (the MEMORY3 row). The upstream engine's own filter
-  (`s.vcpu >= W.vcpu`) would throw on that element. I did not verify the engine
-  actually throws on the live site, but the shape is a latent bug; my extractor
-  flattens it and reports how many rows it had to flatten.
-- **Corpus defect (reported): `hour: 0`.** As above, in `aws-ec2.json`.
+  `"hour": 0` (AWS no longer publishes a price for it). A truthiness test read a
+  literal 0 as a real price. Fix: an **hourly rate** is published only if it is
+  **positive**; zero is not a rate.
+- **Bug 2: shape mismatch counted as a match.** I first priced each card at its
+  *cheapest* published size regardless of whether it fit 2 vCPU / 4 GiB, so a
+  card whose only box was 1 vCPU or 8 vCPU could outrank a card that actually
+  fit. Fix: pick the cheapest size that satisfies the requested shape; when none
+  does, price the largest offered and label it `smallest usable size is N vCPU /
+  M GiB` rather than pretending it fits.
+- **Bug 3: bug 1, one layer deeper.** Fixing it in the ranker was not enough.
+  The `$0` size stayed in the *extractor's* size list, so the ranker's "cheapest
+  size that fits" still selected it and then dropped the whole card for being
+  free, when the card had a real `$0.50` size beside it. A planted card with
+  sizes `[$0, $0.50]` priced as `None` instead of `$0.50`. Fix: the extractor
+  filters non-positive rates out of the size list and reports how many it
+  dropped, as `n_zero_priced_sizes`.
+- **Bug 4: the fix for bug 3 was itself wrong.** Applying positive-only to
+  *every* number broke 219 providers whose entry plan is legitimately `$0`; the
+  ranking lost Scaleway and the free tiers. A free plan and a `$0/hour` rate are
+  different things. Fix: two functions. `known()` accepts a published number
+  including zero (plan fees, credits); `rate_known()` demands a strictly
+  positive hourly rate. AWS Lambda is the check that the two are now correctly
+  separated: its `vcpu_h` is 0 (CPU bundled) and it is priced on `ram_gib_h:
+  0.04` alone, at $8.00.
+- **Corpus defect (reported, not fixed): a nested size list.**
+  `research/cards/scaleway.json` mode `dedicated-compute` nests a **list
+  inside** its `sizes` array (the MEMORY3 row is a list of sizes, not a size).
+  The upstream engine's own size filter (`s.vcpu >= W.vcpu`) would throw on that
+  element; `coasty` nests one level too. My extractor flattens it and reports
+  how many rows it flattened.
+- **Corpus defect (reported, not fixed): an ambiguous `hour: 0`.**
+  `aws-ec2.json`, as in bug 1. Whether it is an unpriced placeholder or a
+  genuinely free size, the data does not say, and an ambiguous price that reads
+  as free is a defect.
 
-Neither corpus defect is one I introduced, and neither is fixed in the corpus
-(it is someone else's tree). They are recorded here so the corpus maintainer, or
-a future session, can.
-
----
+I did not verify that the upstream engine actually throws on the nested size
+list at the live site, only that the element would fail its own predicate. The
+two corpus defects are in somebody else's tree, so they are reported with file
+and mode, not edited.
 
 ## 6. Independent cross-check against the upstream engine (the control)
 
@@ -284,6 +304,9 @@ exist than these three roundups and the corpus surface; assume fewer are
   and localises the disagreement.
 - `50-firstparty-audit.py` re-fetches vendor pages for a named sample and
   reports agreement, disagreement, and unreadable pages honestly.
+
+The guard-mutation review that produced defects 3 and 4 is a file, so a later
+session can re-run it rather than re-derive it: `experiments/60-guard-mutation.py`.
 
 **Not handled:** no vendor signup was performed, so no *purchase* path, no
 realised price and no real concurrency limit is verified. Free-credit figures

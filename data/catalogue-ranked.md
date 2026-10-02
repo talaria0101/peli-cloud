@@ -88,7 +88,7 @@
 | 86 | [Baponi](https://baponi.ai/pricing/) | agent-sandbox | container | 6.00 | usage | - | self-serve | `on-demand` |  |
 | 87 | [Modelence](https://modelence.com) | paas | container | 6.00 | usage | - | not-self-serve-only | `containers` |  |
 | 88 | [Specific](https://specific.dev/pricing) | paas | container | 6.00 | usage | - | not-self-serve-only | `services` |  |
-| 89 | [Tensorlake Sandboxes](https://www.tensorlake.ai/pricing) | agent-sandbox | firecracker | 6.00 | usage | - | self-serve | `pro` | smallest usable size is 1 vCPU / 1 GiB |
+| 89 | [Tensorlake Sandboxes](https://www.tensorlake.ai/pricing) | agent-sandbox | firecracker | 6.00 | usage | - | self-serve | `pro` |  |
 | 90 | [Tencent Cloud SCF](https://cloud.tencent.com/document/product/583/17299) | hyperscaler | container | 6.10 | 2 | - | not-self-serve-only | `provisioned-idle` |  |
 | 91 | [Collimate](https://collimate.ai/pricing) | agent-sandbox | firecracker | 6.40 | usage | - | self-serve | `on-demand` |  |
 | 92 | [Open Telekom Cloud / T Cloud Public](https://www.open-telekom-cloud.com/en/prices) | hyperscaler | vm | 6.55 | usage | $284.45 once | self-serve | `flexible-x1e-de` |  |

@@ -14,20 +14,26 @@ three things ran first and can find them.
 | `30-rank-providers.py` | which providers are cheapest-first for one stated workload? | `20` |
 | `40-crosscheck-engine.py` | where does peli-cloud's model disagree with the corpus's own engine? | `30`, node |
 | `50-firstparty-audit.py` | do the corpus's prices still match vendors' live pages? | `20`, network |
+| `60-guard-mutation.py` | can the guards in `20` and `30` actually fail, and do they still accept correct input? | `20`, `30` |
 
 `poc/peli-cloud-query.py` queries the result. It does not re-price anything.
 
 ## The rules these scripts keep
 
-- **A price is published only if it is positive.** A literal `0` in a size table
-  means "no longer published", not "free". Getting this wrong put 45 providers
-  at $0.00 in the first run.
+- **A free plan is not a placeholder rate.** `known()` accepts zero (plan fees,
+  credits); `rate_known()` demands a strictly positive hourly rate. Conflating
+  them broke 219 providers once and hid a real `$0.50` size once. Both failures
+  are recorded in `docs/FINDINGS.md` section 5.
 - **Never call the subject's own engine to grade it.** `20` reads the raw card
   fields. `40` calls the upstream engine separately and the two are compared, so
   a disagreement is visible instead of inherited.
 - **Size tables flatten.** Some cards nest a list inside `sizes`.
 - **Zero is not a free tier.** A card whose only zero-dollar plans are `beta` or
-  `application` has no free tier.
+  `application` has no free tier, but a `beta` plan with a published price is
+  still a real price and stays in the universe.
+- **`60` plants the defect each guard exists to catch**, and also proves each
+  guard still accepts a correct input. A guard that refuses everything looks
+  identical to a good one until it blocks real work.
 - **Everything prints its conditions** (date, corpus commit, workload, model) and
   writes a JSON artefact under `data/`. Nothing deletes its own output.
 - **Exit codes mean something:** 0 the measurement ran, 1 it ran and the thing

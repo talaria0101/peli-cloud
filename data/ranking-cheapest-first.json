@@ -2706,9 +2706,7 @@
    "all_in_month_usd": 6.0,
    "card_sha256_12": "df321a3e6d4e",
    "category": "agent-sandbox",
-   "compromises": [
-    "smallest usable size is 1 vCPU / 1 GiB"
-   ],
+   "compromises": [],
    "compute_month_usd": 6.0,
    "entry_month_usd": 0,
    "entry_plan": null,
@@ -6480,7 +6478,7 @@
    "vcpu_h": null
   }
  ],
- "ranked_at": "2026-10-02T01:44:35Z",
+ "ranked_at": "2026-10-02T01:53:10Z",
  "ranking_commit": "6215580ae1d4",
  "unrankable": [
   {
