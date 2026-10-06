@@ -24,10 +24,12 @@ So T2 and T3 are legitimate hits, not near-misses: the keepalive or the relay *i
 
 ## How much of this is measured
 
+Every row is counted exactly once, using the guard's own `provenance()` so these two tools cannot disagree about what a row's evidence is worth.
+
 | evidence weight | rows | means |
 |---|---|---|
 | first-hand | 22 | I fetched the page and read the quote out of the bytes |
-| carried | 20 | a research pass fetched it; the row says so |
+| carried | 18 | a research pass fetched it; the row says so, and names which parts I did not check |
 
 "First-hand" means the bytes were read, **not** that an account was created. No account exists anywhere in this census. The live probe below is the only measurement here that touches a real host.
 
@@ -78,7 +80,7 @@ So T2 and T3 are legitimate hits, not near-misses: the keepalive or the relay *i
 - **Source:** <https://ctrl-c.club/system_notice_long.html>
 - **Vendor says:** > Signups are closed for now! ... We're pausing signups to work on some scaling issues. You can still submit a signup to get on a waitlist.
   > One gigabyte storage limit (this is not a hard limit: brief, occasional overages are not a problem).
-- **Verified:** me, 2026-10-06 - fetched ctrl-c.club/, faq.html, signup.ctrl-c.club/, system_notice_long.html, motd.html directly (all 200). Confirmed /rules and /about 404; real rules are at system_notice.html.
+- **Verified:** me, 2026-10-06 - fetched ctrl-c.club/, faq.html, signup.ctrl-c.club/ and system_notice_long.html directly (all HTTP 200; captures under verify/pages/ as ctrlc_home, ctrlc_faq, ctrlc_signup, ctrlc_notice). Confirmed /rules and /about 404; the real rules are at system_notice.html. Live banner read by verify/probe.py.
 
 #### tilde.green
 
@@ -98,7 +100,7 @@ So T2 and T3 are legitimate hits, not near-misses: the keepalive or the relay *i
 - **Caveat:** T1 by ABSENCE of a stated policy. Signups no longer accept gmail.com addresses.
 - **Source:** <https://tilde.club/wiki/faq.html>
 - **Vendor says:** > Soft Limit: 1 GB - You'll get a heads-up if you go over this... Hard Limit: 3 GB - This is the max... Grace Period: 1 week
-- **Verified:** me, 2026-10-06 - re-fetched faq.html (Soft 1 GB / Hard 3 GB / 1-week grace) and netiquette.html; live banner SSH-2.0-OpenSSH_10.0
+- **Verified:** me, 2026-10-06 - re-fetched faq.html (Soft 1 GB / Hard 3 GB / 1-week grace) and wiki/netiquette.html; captures under verify/pages/ as tilde_club_faq. Live banner SSH-2.0-OpenSSH_10.0 read by verify/probe.py.
 
 #### tilde.guru
 
@@ -291,35 +293,37 @@ So T2 and T3 are legitimate hits, not near-misses: the keepalive or the relay *i
 
 ## Measured, not assumed: live reachability
 
-peli-cloud could not dial a single host: its sandbox egress proxy refuses port 22 (`CONNECT -> 403`), so every row in its census is documented-only. This census was probed from a **residential host** instead. **9/12 endpoints accepted a TCP connection and 8 returned an SSH identification string.**
+peli-cloud could not dial a single host: its sandbox egress proxy refuses port 22 (`CONNECT -> 403`), so every row in its census is documented-only. This census was probed from a **residential host** instead. **10/14 endpoints accepted a TCP connection and 9 returned an SSH identification string.**
 
 A banner is not a login. No credential was presented to any of these hosts.
 
 | endpoint | result | banner / error |
 |---|---|---|
+| `blinkenshell.org:443` | open, silent | `connected, no banner within timeout` |
 | `ctrl-c.club:22` | **banner** | `SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.17` |
 | `de1.hashbang.sh:22` | **banner** | `SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u10` |
 | `freeshell.org:22` | **banner** | `SSH-2.0-OpenSSH_10.4` |
 | `sdf.org:22` | **banner** | `SSH-2.0-OpenSSH_10.4` |
 | `tilde.club:22` | **banner** | `SSH-2.0-OpenSSH_10.0` |
 | `tilde.green:22` | **banner** | `SSH-2.0-OpenSSH_10.5p1 Debian-1` |
-| `tilde.guru:22` | open, silent | `connected, no banner within timeout` |
+| `tilde.guru:22` | **banner** | `SSH-2.0-OpenSSH_10.0 FreeBSD-20250801` |
 | `tilde.town:22` | **banner** | `SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4` |
 | `tilde.zone:22` | **banner** | `SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4` |
 | `blinkenshell.org:22` | no route | `connect timeout` |
 | `blinkenshell.org:2222` | no route | `connect timeout` |
+| `blinkenshell.org:6697` | no route | `connect timeout` |
 | `ssh.alwaysdata.com:22` | no route | `DNS: [Errno 11001] getaddrinfo failed` |
 
-Two results contradict prior claims and are the reason this probe was worth running:
+Two results contradict prior claims and are the reason this probe was worth running. Both bullets are computed from `verify/reachability.json`, so re-running the probe either reproduces them or falsifies them:
 
-- **Blinkenshell is filtered, not down.** From here its web ports answer (80 and 443 both open, HTTPS returns HTTP 200 with 55 KB) while every non-web port — 22, 2222 and its published 6697 — silently times out. peli-cloud blamed its sandbox's port-22 refusal, but 2222 was never port 22, so that excuse never covered this case. The host is alive and selectively filtered.
+- **Blinkenshell is filtered, not down.** Port 443 accepted a connection while 22, 2222, 6697 all timed out on the same host, in the same run. peli-cloud blamed its sandbox's port-22 refusal, but 2222 was never port 22, so that excuse never covered this case. The host is alive and filtering by protocol.
 - **tilde.zone answers SSH** with the *identical* OpenSSH build string as tilde.town (`10.0p2 Debian-7+deb13u4`), which is what a shared image or a mirror produces. peli-cloud demoted it for having no discoverable operator; it is demonstrably live. Still not counted as a free shell, because a banner is not evidence of a free tier.
 
-_Measured 2026-10-06T11:48:41+0545 from a residential Windows host (this machine)._
+_Measured 2026-10-06T12:23:02+0545 from a residential Windows host (this machine)._
 
 ## Dead ends, and the wall that killed each
 
-A relay and a keepalive were both tried against each of these.
+Nothing below was overcome in practice. Each wall is one a relay or a keepalive is argued *not* to defeat, from the vendor's own wording, and no relay or keepalive was actually run against any of them.
 
 | Provider | the hard wall |
 |---|---|
@@ -350,10 +354,8 @@ Read against first-party pages fetched on 2026-10-06.
 - GitHub Codespaces: peli-cloud DEMOTED this row for a quote that 'did not survive being fetched'. The 120 hrs figure IS on the cited page, in a table. The demotion was wrong (the row is still not always-on, for a different reason).
 - Azure App Service F1 is 1 GB RAM / 1.00 GB storage, not the 512 MB / 5 GB in every older guide.
 - Koyeb's free Instance IS published and documented with an explicit scale-to-zero rule. peli-cloud recorded it as 'changed/dead'.
-- Northflank: peli-cloud says card_required=false; a research pass read Northflank's docs as requiring a payment method for ALL users regardless of plan. Unresolved — the docs page is client-rendered and could not be adjudicated.
 - Blinkenshell free does NOT allow listening TCP ports, IRC bots, or bouncers. All three are Supporter-only. The flattened wiki table misleads; cell-by-cell parsing and the vendor's rules page both confirm.
 - Northflank: peli-cloud says card_required=false. Northflank's own docs require a payment method for ALL users regardless of plan. The free tier is real and genuinely never sleeps; the card requirement is real too.
-- hashbang (#!) has a DAILY 30-DAY IDLE PROCESS KILL (loginctl terminate-user) and PUBLISHED PER-USER QUOTAS (512 MB / 50% CPU / nproc 150). The purge is in /etc/cron.daily/clean-lurkers, not the root crontab, and the quotas are in the operator's Ansible config. A census that checks only /etc/crontab or the website wrongly reports 'no idle policy, no quota'.
 - Ctrl-C.club: signups are CLOSED (waitlist only) as of 2026-10-06. It publishes a 5-YEAR inactivity archive policy (the most generous in the census) but forbids Eggdrop bots and services duplicating its own.
 - ModelScope: modelscope.cn serves a 2v-cpu-8g-mem free tier while modelscope.ai serves 2v-cpu-16g-mem. Both verified, both stable across three runs. ModelScope's own docs still say 16g.
 - The ModelScope '~5 free instances per account' figure has NO first-party source anywhere and is withdrawn.
@@ -373,10 +375,11 @@ Stated plainly, because a census that hides its gaps is worse than no census.
 
 ```sh
 python tools/check-always-on-free.py           # guard the census
-python tools/check-always-on-free.py --mutate  # prove the guard can fail (9/9)
+python tools/check-always-on-free.py --mutate  # prove the guard can fail (13/13)
 python tools/render-always-on-free.py          # rewrite this page from the JSON
 python verify/fetch.py                         # re-fetch the vendor pages
-python verify/claim.py verify/c1.json          # re-check the quotes in the bytes
+python verify/claim.py                        # every quote, against the bytes it came from
+python verify/fetch.py --check                # is every capture re-fetchable by name?
 ```
 
 ## Method

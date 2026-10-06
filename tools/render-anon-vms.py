@@ -262,7 +262,14 @@ decoration. Three mutations, each restored afterwards:
 *We aim to provide the software that shapes the world of tomorrow.*
 """
 
-with open(OUT, "w") as f:
+# Encoding is explicit and newlines are pinned. Without them this writes in
+# whatever the platform's preferred encoding happens to be: run on a Windows
+# host it emitted cp1252, which turned 24 UTF-8 smart quotes into 25 raw 0x93
+# bytes, flipped LF to CRLF, and produced a file that is not valid UTF-8 at all.
+# The page carries vendor quotations with typographic punctuation in them, so a
+# locale-dependent write silently corrupts exactly the text this page exists to
+# preserve. `newline="\n"` keeps the diff readable on any host.
+with open(OUT, "w", encoding="utf-8", newline="\n") as f:
     f.write(md)
 print(f"wrote {OUT} rows={len(rows)} ssh={n_ssh} banner_verified={n_banner} anonymous={len(anon)}")
 sys.exit(0)

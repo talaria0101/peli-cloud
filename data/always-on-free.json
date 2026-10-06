@@ -375,7 +375,7 @@
       "cost": "0",
       "source": "https://ctrl-c.club/system_notice_long.html",
       "quote": "Signups are closed for now! ... We're pausing signups to work on some scaling issues. You can still submit a signup to get on a waitlist.",
-      "verified_by": "me, 2026-10-06 - fetched ctrl-c.club/, faq.html, signup.ctrl-c.club/, system_notice_long.html, motd.html directly (all 200). Confirmed /rules and /about 404; real rules are at system_notice.html.",
+      "verified_by": "me, 2026-10-06 - fetched ctrl-c.club/, faq.html, signup.ctrl-c.club/ and system_notice_long.html directly (all HTTP 200; captures under verify/pages/ as ctrlc_home, ctrlc_faq, ctrlc_signup, ctrlc_notice). Confirmed /rules and /about 404; the real rules are at system_notice.html. Live banner read by verify/probe.py.",
       "caveats": "SIGNUPS ARE CURRENTLY CLOSED, verified on the signup subdomain. The homepage carries a stale 2023 banner, but signup.ctrl-c.club and the live MOTD (dated 2026-10-06) reflect current state. Reachable today only by EXISTING members; a new person can only join a waitlist. The daemon ban is on Eggdrop bots and on services DUPLICATING Ctrl-C.club's own services (web/IRC/email/Gemini servers), not on all background processes.",
       "quote2": "One gigabyte storage limit (this is not a hard limit: brief, occasional overages are not a problem).",
       "quote3": "No Eggdrop bots. ... Any users that restart an eggdrop without prior discussion will be summarily removed."
@@ -411,7 +411,7 @@
       "cost": "0",
       "source": "https://tilde.club/wiki/faq.html",
       "quote": "Soft Limit: 1 GB - You'll get a heads-up if you go over this... Hard Limit: 3 GB - This is the max... Grace Period: 1 week",
-      "verified_by": "me, 2026-10-06 - re-fetched faq.html (Soft 1 GB / Hard 3 GB / 1-week grace) and netiquette.html; live banner SSH-2.0-OpenSSH_10.0",
+      "verified_by": "me, 2026-10-06 - re-fetched faq.html (Soft 1 GB / Hard 3 GB / 1-week grace) and wiki/netiquette.html; captures under verify/pages/ as tilde_club_faq. Live banner SSH-2.0-OpenSSH_10.0 read by verify/probe.py.",
       "caveats": "T1 by ABSENCE of a stated policy. Signups no longer accept gmail.com addresses."
     },
     {
@@ -639,10 +639,8 @@
     "GitHub Codespaces: peli-cloud DEMOTED this row for a quote that 'did not survive being fetched'. The 120 hrs figure IS on the cited page, in a table. The demotion was wrong (the row is still not always-on, for a different reason).",
     "Azure App Service F1 is 1 GB RAM / 1.00 GB storage, not the 512 MB / 5 GB in every older guide.",
     "Koyeb's free Instance IS published and documented with an explicit scale-to-zero rule. peli-cloud recorded it as 'changed/dead'.",
-    "Northflank: peli-cloud says card_required=false; a research pass read Northflank's docs as requiring a payment method for ALL users regardless of plan. Unresolved — the docs page is client-rendered and could not be adjudicated.",
     "Blinkenshell free does NOT allow listening TCP ports, IRC bots, or bouncers. All three are Supporter-only. The flattened wiki table misleads; cell-by-cell parsing and the vendor's rules page both confirm.",
     "Northflank: peli-cloud says card_required=false. Northflank's own docs require a payment method for ALL users regardless of plan. The free tier is real and genuinely never sleeps; the card requirement is real too.",
-    "hashbang (#!) has a DAILY 30-DAY IDLE PROCESS KILL (loginctl terminate-user) and PUBLISHED PER-USER QUOTAS (512 MB / 50% CPU / nproc 150). The purge is in /etc/cron.daily/clean-lurkers, not the root crontab, and the quotas are in the operator's Ansible config. A census that checks only /etc/crontab or the website wrongly reports 'no idle policy, no quota'.",
     "Ctrl-C.club: signups are CLOSED (waitlist only) as of 2026-10-06. It publishes a 5-YEAR inactivity archive policy (the most generous in the census) but forbids Eggdrop bots and services duplicating its own.",
     "ModelScope: modelscope.cn serves a 2v-cpu-8g-mem free tier while modelscope.ai serves 2v-cpu-16g-mem. Both verified, both stable across three runs. ModelScope's own docs still say 16g.",
     "The ModelScope '~5 free instances per account' figure has NO first-party source anywhere and is withdrawn."

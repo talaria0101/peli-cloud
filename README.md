@@ -213,7 +213,9 @@ process the next morning; a machine that never sleeps may carry a monthly quota
 that runs out on the twentieth. Neither fact shows up in a table of "free tiers".
 
 [`docs/ALWAYS-ON-FREE.md`](docs/ALWAYS-ON-FREE.md) prices neither, and holds
-neither: it records **22 providers whose machine stays up indefinitely at $0**,
+neither: it records **22 rows across 21 providers whose machine stays up
+indefinitely at $0** (two of the rows are the same Oracle tenancy, so they are
+one provider and are not counted twice),
 tiered by the wall each one has.
 
 - **T1** runs as-is. **T2** sleeps but a named keepalive beats it. **T3** runs

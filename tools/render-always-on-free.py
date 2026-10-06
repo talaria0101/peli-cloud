@@ -7,6 +7,7 @@ not be typed, because typed prose drifts the moment the data changes.
     python tools/render-always-on-free.py
 """
 
+import importlib.util
 import json
 import pathlib
 import subprocess
@@ -19,6 +20,19 @@ GUARD = ROOT / "tools" / "check-always-on-free.py"
 
 COUNTABLE = {"T1", "T2", "T3"}
 ORDER = ["T1", "T2", "T3", "DEAD", "UNVERIFIED"]
+
+
+def _load_guard():
+    """Import the guard so the page and the check can never disagree.
+
+    The provenance table and the mutation count are both derived from the guard
+    rather than typed. An earlier revision hardcoded "9/9" while the guard ran
+    11 mutations, which is the exact drift this file's docstring warns about.
+    """
+    spec = importlib.util.spec_from_file_location("always_on_guard", GUARD)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
 def cell(row, key, default="—"):
@@ -37,6 +51,9 @@ def main():
     doc = json.loads(DATA.read_text(encoding="utf-8"))
     rows = doc["rows"]
     counted = [r for r in rows if r["tier"] in COUNTABLE]
+    guard = _load_guard()
+    _provenance = guard.provenance
+    n_mutations = len(guard.MUTATIONS)
 
     L = []
     a = L.append
@@ -79,16 +96,18 @@ def main():
 
     a("## How much of this is measured")
     a("")
+    a("Every row is counted exactly once, using the guard's own `provenance()` "
+      "so these two tools cannot disagree about what a row's evidence is worth.")
+    a("")
     a("| evidence weight | rows | means |")
     a("|---|---|---|")
-    read = sum(1 for r in rows if (r.get("verified_by") or "").startswith("me, "))
-    carried = sum(
-        1 for r in rows
-        if "research pass" in (r.get("verified_by") or "")
-        or "unverified" in (r.get("verified_by") or "").lower()
-    )
-    a(f"| first-hand | {read} | I fetched the page and read the quote out of the bytes |")
-    a(f"| carried | {carried} | a research pass fetched it; the row says so |")
+    weights = {}
+    for r in rows:
+        weights.setdefault(_provenance(r), []).append(r["name"])
+    a(f"| first-hand | {len(weights.get('read', []))} | I fetched the page and read the "
+      f"quote out of the bytes |")
+    a(f"| carried | {len(weights.get('carried', []))} | a research pass fetched it; the "
+      f"row says so, and names which parts I did not check |")
     a("")
     a("\"First-hand\" means the bytes were read, **not** that an account was "
       "created. No account exists anywhere in this census. The live probe below "
@@ -150,14 +169,27 @@ def main():
             detail = r["banner"] or r["error"] or ""
             a(f"| `{key}` | {state} | `{detail}` |")
         a("")
-        a("Two results contradict prior claims and are the reason this probe was worth running:")
+        a("Two results contradict prior claims and are the reason this probe was worth running. "
+          "Both bullets are computed from `verify/reachability.json`, so re-running the probe "
+          "either reproduces them or falsifies them:")
         a("")
-        a("- **Blinkenshell is filtered, not down.** From here its web ports answer "
-          "(80 and 443 both open, HTTPS returns HTTP 200 with 55 KB) while every "
-          "non-web port — 22, 2222 and its published 6697 — silently times out. "
-          "peli-cloud blamed its sandbox's port-22 refusal, but 2222 was never port "
-          "22, so that excuse never covered this case. The host is alive and "
-          "selectively filtered.")
+
+        def _bs(port):
+            r = reach["results"].get(f"blinkenshell.org:{port}")
+            return r["reachable"] if r else None
+
+        web_up, ssh_up = _bs(443), _bs(2222)
+        if web_up is not None and ssh_up is not None:
+            down = [p for p in (22, 2222, 6697)
+                    if reach["results"].get(f"blinkenshell.org:{p}", {}).get("reachable") is False]
+            a(f"- **Blinkenshell is filtered, not down.** Port 443 accepted a connection "
+              f"while {', '.join(str(p) for p in down)} all timed out on the same host, in "
+              f"the same run. peli-cloud blamed its sandbox's port-22 refusal, but 2222 was "
+              f"never port 22, so that excuse never covered this case. The host is alive and "
+              f"filtering by protocol.")
+        else:
+            a("- **Blinkenshell:** this run did not measure both 443 and 2222, so no "
+              "filtered-or-down claim is made here.")
         a("- **tilde.zone answers SSH** with the *identical* OpenSSH build string as "
           "tilde.town (`10.0p2 Debian-7+deb13u4`), which is what a shared image or a "
           "mirror produces. peli-cloud demoted it for having no discoverable "
@@ -169,7 +201,9 @@ def main():
 
     a("## Dead ends, and the wall that killed each")
     a("")
-    a("A relay and a keepalive were both tried against each of these.")
+    a("Nothing below was overcome in practice. Each wall is one a relay or a "
+      "keepalive is argued *not* to defeat, from the vendor's own wording, and "
+      "no relay or keepalive was actually run against any of them.")
     a("")
     a("| Provider | the hard wall |")
     a("|---|---|")
@@ -197,10 +231,11 @@ def main():
     a("")
     a("```sh")
     a("python tools/check-always-on-free.py           # guard the census")
-    a("python tools/check-always-on-free.py --mutate  # prove the guard can fail (9/9)")
+    a(f"python tools/check-always-on-free.py --mutate  # prove the guard can fail ({n_mutations}/{n_mutations})")
     a("python tools/render-always-on-free.py          # rewrite this page from the JSON")
     a("python verify/fetch.py                         # re-fetch the vendor pages")
-    a("python verify/claim.py verify/c1.json          # re-check the quotes in the bytes")
+    a("python verify/claim.py                        # every quote, against the bytes it came from")
+    a("python verify/fetch.py --check                # is every capture re-fetchable by name?")
     a("```")
     a("")
     a("## Method")
