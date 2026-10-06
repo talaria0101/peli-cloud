@@ -25,6 +25,19 @@ three things ran first and can find them.
 | `95-reprobe-unpriced.py` | do the cards priced as unpriced still price nothing today? | `20`, network |
 | `61-period-model-guards.py` | can the period model's guards actually fail? | `70`, `80` |
 | `62-period-model-mutation.py` | do those guards catch the four defects that actually shipped? | `61` |
+| `96-always-on-corrections.py` | apply the 2026-10-06 corrections to the anonymous-VM census | none (edits `data/anonymous-vms.json` in place, idempotent) |
+
+The always-on free-compute census lives beside this one rather than inside the
+priced catalogue, because it answers a different question ("what stays up at $0",
+not "what is cheap") and is guarded separately:
+
+| script | question it answers | needs |
+|---|---|---|
+| `tools/check-always-on-free.py` | does the always-on census meet its own standard - ten hits, a quote and a source per hit, and no row that claims a keepalive or a relay it does not name? | python3 |
+| `tools/check-always-on-free.py --mutate` | can that guard actually fail? | `96` not required |
+| `tools/render-always-on-free.py` | render `docs/ALWAYS-ON-FREE.md` from `data/always-on-free.json` | python3 |
+| `verify/probe.py` | dial the free-shell hosts and read their SSH banners from a host that can reach port 22 | network |
+| `verify/claim.py` | does every quote survive being re-fetched into `verify/pages/`? | python3 |
 
 `poc/peli-cloud-query.py` queries the result. It does not re-price anything.
 
@@ -98,6 +111,23 @@ three things ran first and can find them.
   writes the catalogue from the same artefact. When they disagreed, GUARD F in
   `61` caught it; before GUARD F existed they had been disagreeing since the
   period model landed.
+- **A relay and a keepalive fix different walls, and only one of them is fixable.**
+  A keepalive defeats a *liveness* wall - idle sleep, scale-to-zero, a
+  no-inbound-ports policy. Nothing defeats a *quota* wall - a monthly
+  compute-hour cap that exhausts regardless, a 24-hour absolute lifetime, a trial
+  clock, a paid-plan gate at creation. `data/always-on-free.json` tiers every row
+  by which wall it has, and only a quota wall marks a row DEAD; the guard fails a
+  T2 row that names no keepalive and a T3 row that names no relay, so a
+  "workaroundable" claim always carries the workaround.
+- **A free tier that cannot be created is not a free tier.** Hugging Face kept
+  `cpu-basic` at $0 in its pricing table after it moved Space creation behind PRO.
+  The price stayed true and the offer stopped existing, which is why `96` demotes
+  that row on the strength of the creation gate, not the price.
+- **An unstated policy is evidence about documentation, not about the machine.**
+  Four tildeverse hosts are tiered from the absence of any published idle policy.
+  They are labelled that way rather than as though their operators had promised
+  anything, because silence is not a promise and a reader acting on it is taking a
+  risk the page does not disclose.
 
 ## The stated workload
 

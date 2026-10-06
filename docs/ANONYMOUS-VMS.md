@@ -79,14 +79,13 @@ and its files are deleted.
 | [tilde.guru](https://tilde.guru/) | yes (banner) | SSH; the site is a FreeBSD pubnix | FreeBSD pubnix, member of the tildeverse; every user's home is served as a public web page | free while active | 0 |
 | [tilde.town](https://tilde.town/) | yes (banner) | SSH; the site publishes the host ECDSA key | shared shell account | free while active | 0 |
 | [alwaysdata Free](https://www.alwaysdata.com/en/pricing/) | claimed | SSH to the account's user; alwaysdata documents SSH users, keys and 2FA | 1 GB SSD, 256 MB RAM, 1/4 CPU, shared hosting | the free offer is described as available for life | 0 |
-| [Blinkenshell](https://blinkenshell.org/wiki/FAQ) | claimed | SSH on the NON-STANDARD port 2222, which the project's own FAQ states | shared UNIX shell provider, online continuously since 2006 | free account; new members accepted | 0 |
+| [Blinkenshell](https://blinkenshell.org/wiki/FAQ) | claimed | SSH on the NON-STANDARD port 2222, which the project's own FAQ states | free: 100 MB disk, 128 MB memory limit, screen/tmux detach, max 2 background processes; listening TCP/UDP ports, IRC bots and bouncers are Supporter-only | free account; new members accepted | 0 |
 | [Google Cloud Shell](https://cloud.google.com/shell/docs/limitations) | yes (documented) | Open in the browser or connect with the gcloud CLI | temporary Compute Engine VM, 5 GB persistent $HOME | ephemeral VM per session; the 5 GB $HOME persists | 0 within the weekly quota |
-| [Hugging Face Spaces (CPU)](https://huggingface.co/pricing) | yes (documented) | Spaces Dev Mode exposes an SSH endpoint for a running Space | free CPU basic Space (2 vCPU / 16 GB) | while the Space exists and is built | 0 on the free CPU tier |
+| [Hugging Face Spaces](https://huggingface.co/docs/hub/en/spaces-overview) | yes (documented) | Dev Mode SSH is PRO/Team/Enterprise only; a free account reaches a Space through its public HTTPS URL and an outbound tunnel | no free CPU tier for new compute Spaces; a free account may host 2 ZeroGPU Spaces (Gradio SDK only) plus unlimited Static Spaces, which have no runtime | a compute Space sleeps after 48 h without a visitor and restarts on the next one; Dev Mode changes are discarded on sleep | $0 for Static and 2 ZeroGPU Spaces; PRO ($9/mo) to create a CPU or GPU Space |
 | [Modal Starter](https://modal.com/pricing) | yes (documented) | modal shell into a sandbox container from the Modal CLI | containers and sandboxes on Modal's pool; 1 TiB/month free egress | monthly credit reissued each month | 0 within $30/month of compute |
 | [AWS CloudShell](https://aws.amazon.com/cloudshell/) | no | Browser terminal only; no inbound SSH endpoint is published | 1 GB persistent storage per AWS Region | session persists within the Region; idle sessions end | 0 |
 | [Azure Cloud Shell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview) | no | Browser terminal only; no inbound SSH endpoint is published | cloud-hosted shell with a persistent Azure Files share | session times out after 20 minutes without interactive activity; files persist | 0 for the machine; storage costs apply |
 | [Killercoda](https://killercoda.com/pricing) | no | browser terminal; no inbound SSH published | Linux or Kubernetes scenario environment | FREE scenario runs up to 1 hour; PLUS up to 4 hours and 3 concurrent scenarios | 0 on the free tier |
-| [Northflank Sandbox tier](https://northflank.com/pricing) | no | No published inbound SSH; deploy services and use the web console or API | 2 free services, 1 free database, 2 free cron jobs, always-on | free while the account is used | 0 |
 | [Render Free compute](https://render.com/pricing) | no | No published inbound SSH for free web services | 512 MB RAM, less than 1 CPU | free compute plans have usage limits and are for exploration and previews | 0 |
 
 These are the durable free rows: shared shells that renew for as long as you
@@ -108,7 +107,8 @@ class of host as dead. That is the kind of finding a keyword search cannot make.
 | [AWS Free Tier](https://aws.amazon.com/free/) | yes (documented) | SSH key pair is chosen at instance launch | EC2 instances up to the plan's credit; the current free plan is credit-based (up to $200 over 6 months) | 6 months, or until the credits run out; the account then closes on its own unless converted to paid | 0 within the credits |
 | [Azure Free Account](https://azure.microsoft.com/en-us/free/) | yes (documented) | SSH keys are set at VM creation; the portal and the CLI both connect | 750 hours each of B1s, B2pts v2 (Arm) and B2ats v2 (AMD) burstable VMs, plus 65+ always-free services | the VM hours are 12 months for new customers; the $200 credit lasts 30 days; always-free services do not expire | 0 within the monthly amounts |
 | [Google Cloud Free Tier (e2-micro)](https://cloud.google.com/free/docs/free-cloud-features) | yes (documented) | SSH keys are added to the instance or its project metadata | 1 non-preemptible e2-micro, 30 GB standard persistent disk, 1 GB egress | every month, for the life of the account | 0 within the allowance |
-| [Oracle Cloud Always Free](https://www.oracle.com/cloud/free/) | yes (documented) | SSH key is installed at instance creation; the console and the CLI both connect | the page no longer states the A1 OCPU-hour allowance; a 4 OCPU / 24 GB Ampere A1 shape and 200 GB block storage are quoted in Oracle's own Always Free documentation, NOT on this page | Always Free, no time limit, while the tenancy qualifies | 0 on the Always Free shapes |
+| [Oracle Cloud Always Free](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm) | yes (documented) | SSH key is installed at instance creation; the console and the CLI both connect | VM.Standard.A1.Flex Ampere ARM: 1,500 OCPU-hours and 9,000 GB-hours per month, which Oracle states is equivalent to 2 OCPUs and 12 GB of memory. Plus up to two VM.Standard.E2.1.Micro instances and 200 GB of block volume. Home region only. | Always Free, no time limit, while the tenancy qualifies; Oracle may reclaim an instance idle over a 7-day window | 0 on the Always Free shapes |
+| [Northflank Sandbox tier](https://northflank.com/docs/v1/application/billing/pricing-on-northflank) | no | No published inbound SSH; deploy services and use the web console or API | Developer Sandbox: 2 always-on services, 2 cron jobs, 1 addon (billing docs) / 2 services, 1 database, 2 cron jobs (pricing page); smallest covered plan is 0.1 shared vCPU / 256 MB | no idle sleep; pausing is manual and deletes ephemeral data while volumes survive. No published expiry | $0/mo Sandbox tier; a payment method is required before any resource can be created |
 
 The largest machines on the page: Oracle's Always Free A1 allowance and
 Google's e2-micro are real 24/7 machines. AWS's free plan is now a six-month
@@ -122,9 +122,9 @@ months only.
 | Provider | SSH | How you get in | What you get | Lifetime | Cost |
 |---|---|---|---|---|---|
 | [tilde.zone](https://tilde.zone/) | yes (banner) | unknown: no operator page was found that documents how to get an account | unknown; a Debian host answering SSH, and a Mastodon instance on the same name | unknown | unknown |
-| [GitHub Codespaces](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces) | yes (documented) | gh codespace ssh -c CODESPACE-NAME; the default dev container runs an SSH server | 2-core default machine; choose 2/4/8/16/32-core | quota resets monthly; a codespace is deleted after its retention period of inactivity | unknown: the monthly core-hour figure could not be verified first-party from this host |
+| [GitHub Codespaces](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces) | yes (documented) | gh codespace ssh -c CODESPACE-NAME; the default dev container runs an SSH server | 2-core default machine (8 GB, 32 GB storage); 2/4/8/16/32-core available | 120 core-hours per month on GitHub Free; a codespace is auto-stopped after its retention period of inactivity and resume is blocked once quota is spent without a payment method | 0 for 120 core-hours/month, then blocked |
 | [Fly.io](https://fly.io/docs/about/pricing/) | no | fly ssh console reaches a running Machine, but there is no free allowance to run one | shared-CPU Machines; volumes first 10 GB free per month | pay-as-you-go | no free VM allowance; the only 'first free' is 10 GB of volume capacity |
-| [Koyeb](https://www.koyeb.com/pricing) | no | No published inbound SSH; the free plan is not in the published tiers | platform services and workers; included usage is a plan feature | included usage reissued monthly on paid plans | 0 only if a free tier is still offered; the published Starter/Pro plans carry included usage |
+| [Koyeb](https://www.koyeb.com/docs/run-and-scale/scale-to-zero) | no | No published inbound SSH; the free plan is not in the published tiers | free Instance: 1 shared vCPU (0.1 vCPU), 512 MB RAM, 2 GB SSD, no persistent volumes; fra and was regions only | scales to zero after 1 h without inbound traffic; the idle period cannot be changed on the free Instance | 0 on the free Instance; $0/month tier, scales to zero when idle |
 | [Microterm, LinuxOnTab](https://linuxontab.com/) | no | none: both run a Linux kernel inside the browser via WebAssembly (TinyEMU/RISC-V64 and v86) | Alpine userland in-browser, Microterm claims persistent local storage up to 40 GB; LinuxOnTab ships a real x86 kernel and calls itself 'Free, no signup' | runs in the reader's own browser tab | 0 |
 | [Play with Docker](https://labs.play-with-docker.com/) | no | browser terminal, never SSH | 4-hour Docker-in-Docker session (historical) | unavailable from 2026-03-01 | n/a |
 
@@ -165,121 +165,121 @@ public one. Neither row claims the service is dead.
 ## The detail behind every row
 
 **hashbang (#!)** - `free-account`, account=no, card=no
-- quote: ‚Äúcurl -d '{"user":"someuser","key":"'"$(cat ~/.ssh/id_rsa.pub)"'","host":"someHost.hashbang.sh"}' -H 'Content-Type: application/json' https://hashbang.sh/user/create‚Äù
+- quote: ìcurl -d '{"user":"someuser","key":"'"$(cat ~/.ssh/id_rsa.pub)"'","host":"someHost.hashbang.sh"}' -H 'Content-Type: application/json' https://hashbang.sh/user/createî
 - endpoint: `de1.hashbang.sh:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02; the node was named by hashbang's OWN https://hashbang.sh/server/stats API (de1.hashbang.sh) and the relay dialled de1.hashbang.sh:22, reading banner SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u10
 - caveats: CORRECTION to an earlier census: the host in the documented example, someHost.hashbang.sh, does not resolve (the relay: "no A/AAAA records"). The real node name comes from hashbang's own /server/stats. Account creation needs no account and no card - a public key IS the account - which makes it the closest thing to anonymous here besides Railway, but it is not classified anonymous because the operator reserves the right to refuse and the account has a human owner.
 
 **Railway Free VM** - `anonymous`, account=no, card=no
-- quote: ‚ÄúNo. Railway identifies you by your SSH key. If you don't have one, run ssh-keygen -t ed25519 and connect again. You only sign up if you want to keep the box.‚Äù
+- quote: ìNo. Railway identifies you by your SSH key. If you don't have one, run ssh-keygen -t ed25519 and connect again. You only sign up if you want to keep the box.î
 - endpoint: `railway.new:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02 (162,813 bytes, HTTP 200); relay /trace dialed railway.new:22 and read banner SSH-2.0-Go
 - caveats: The ONLY row here that needs no account at all. Anonymous trials are capped per region and can be disabled under demand (the page's own words: "Anonymous trials are temporarily disabled"); the preview URL is visible only from the creating IP until claimed; abuse protections and a shared AI budget apply. Reaching it FROM THIS SANDBOX over the relay gets as far as the SSH banner and then the relay link closes before key exchange completes, so a working login here is not established. See research/verification/ssh-relay-2026-10-02.md.
 
 **SDF Public Access UNIX System** - `free-account`, account=yes, card=no
-- quote: ‚ÄúCreate a Free UNIX Shell Account ... Linux/UNIX users can type 'ssh new@sdf.org' at their shell prompt.‚Äù
+- quote: ìCreate a Free UNIX Shell Account ... Linux/UNIX users can type 'ssh new@sdf.org' at their shell prompt.î
 - endpoint: `sdf.org:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py; relay /trace dialed sdf.org:22 and read banner SSH-2.0-OpenSSH_10.4
 - caveats: A shared shell, not a VM. The same site is reachable at freeshell.org and webstats.freeshell.org, which both resolve to this one system rather than being three providers.
 
 **tilde.club** - `free-account`, account=yes, card=no
-- quote: ‚ÄúSSH fingerprints: SHA256:M2URWy/QGPdn8K1XHA5KEWQs+7RtqKCkHCqp1NyxFyI (RSA)‚Äù
+- quote: ìSSH fingerprints: SHA256:M2URWy/QGPdn8K1XHA5KEWQs+7RtqKCkHCqp1NyxFyI (RSA)î
 - endpoint: `tilde.club:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02; relay /trace dialed tilde.club:22 and read banner SSH-2.0-OpenSSH_10.0
 - caveats: Shared shell, not a VM; signups no longer accept gmail.com addresses.
 
 **tilde.guru** - `free-account`, account=yes, card=no
-- quote: ‚Äúa FreeBSD pubnix ¬∑ est. 2021 ¬∑ member of the tildeverse‚Äù
+- quote: ìa FreeBSD pubnix ¬∑ est. 2021 ¬∑ member of the tildeverseî
 - endpoint: `tilde.guru:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02 (HTTP 200); relay /trace dialed tilde.guru:22 and read banner SSH-2.0-OpenSSH_10.0 FreeBSD-20250801
 - caveats: NEW ROW, not in the earlier census. FreeBSD, not Linux. Shared shell, not a VM. Signup and resource limits are on the site's own wiki, which returned 404 for /wiki/Join when fetched here.
 
 **tilde.town** - `free-account`, account=yes, card=no
-- quote: ‚Äúecdsa host key: SHA256:RNFVaXxh2wnrolcByZQBRxRZDFBb2HRCnNq/g9ZGRp0‚Äù
+- quote: ìecdsa host key: SHA256:RNFVaXxh2wnrolcByZQBRxRZDFBb2HRCnNq/g9ZGRp0î
 - endpoint: `tilde.town:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02; relay /trace dialed tilde.town:22 and read banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4
 - caveats: Shared shell; signup is by invitation/request; not a VM.
 
 **alwaysdata Free** - `free-account`, account=yes, card=no
-- quote: ‚Äúfree for personal needs, ad-free offer available for life‚Äù
+- quote: ìfree for personal needs, ad-free offer available for lifeî
 - endpoint: `ssh.<account>.alwaysdata.com (per-account, not a public host)` (not-verified)
 - checked: first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py. The earlier quote ('Free ... 0 EUR/month ... Disk space SSD 1 Go') did NOT survive being fetched and was replaced with the page's own current wording
 - caveats: Shared web-hosting account, not a root VM; the free quota is small and some services are restricted.
 
 **AWS Free Tier** - `free-tier-card`, account=yes, card=yes
-- quote: ‚ÄúWhen you create a new AWS Free Tier account, you get $100 in credits immediately. As you explore key services, you can earn up to $100 more. That's up to $200 over 6 months ... The account closes on its own 6 months after you open it or when your credits run out, whichever comes first.‚Äù
+- quote: ìWhen you create a new AWS Free Tier account, you get $100 in credits immediately. As you explore key services, you can earn up to $100 more. That's up to $200 over 6 months ... The account closes on its own 6 months after you open it or when your credits run out, whichever comes first.î
 - endpoint: `per-instance, public IP assigned by AWS` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: A card is required. The free plan is time-boxed and closes itself; the old 750-hours-for-12-months t2.micro offer is no longer the headline shape of the plan.
 
 **Azure Free Account** - `free-tier-card`, account=yes, card=yes
-- quote: ‚Äú12 months Azure Virtual Machines for Linux or Windows 750 hours each of B1s, B2pts v2 (Arm-based), and B2ats v2 (AMD-based) burstable VMs ... $200 credit to use on Azure services within 30 days‚Äù
+- quote: ì12 months Azure Virtual Machines for Linux or Windows 750 hours each of B1s, B2pts v2 (Arm-based), and B2ats v2 (AMD-based) burstable VMs ... $200 credit to use on Azure services within 30 daysî
 - endpoint: `per-instance, public IP assigned by Azure` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: A card is required and a temporary $1 authorization may be placed at signup. The 750-hour VM allowance is 12 months only; the $200 credit is 30 days.
 
 **Blinkenshell** - `free-account`, account=yes, card=no
-- quote: ‚ÄúBlinkenshell uses the non-standard port 2222 for SSH (instead of 22), so you need to specify this when connecting.‚Äù
+- quote: ìBlinkenshell uses the non-standard port 2222 for SSH (instead of 22), so you need to specify this when connecting.î
 - endpoint: `blinkenshell.org:2222` (not-verified)
-- checked: first-party-fetched 2026-10-02: the quote is verbatim on the cited wiki/FAQ page (HTTP 200, 61,633 bytes) and the root page does NOT contain it, so the citation points at the page that carries the sentence. The relay dialed blinkenshell.org on 22, 2222 and 443 and each answered with 0 bytes
-- caveats: NEW ROW. NOT reachable from here and the reason is measured, not assumed: the relay dialed blinkenshell.org on 22, 2222 and 443 and every one answered silent-or-unreachable at 0 bytes, so the host is refusing or filtering this network rather than being down. Signup is a multi-step process that ends in a VOUCH by an existing member, and the FAQ states you cannot SSH until you reach step 5. It is a shared shell, not a VM. The port-2222 fact is the useful part: a scanner that only tries 22 records every Blinkenshell-class host as dead.
+- checked: MEASURED 2026-10-06: the wiki page was fetched (HTTP 200) and its feature-comparison table parsed CELL BY CELL rather than flattened to text. The Free column is EMPTY for 'Bouncer (BNC, znc, weechat-relay)', 'IRC bots' and 'Listen TCP/UDP port (custom server)'; all three are Supporter-only. The operator's own rules page confirms independently: 'No IRC bots are allowed on free accounts' and 'You are not allowed to run any server/daemon on free accounts'. Re-dialed from a residential host on the same date: ports 80 and 443 answer (HTTPS 200, 55,375 bytes) while 22, 2222 and 6697 all time out.
+- caveats: CORRECTED 2026-10-06. A flattened text scrape of the wiki table makes the free tier look as though it includes IRC bots and listening TCP ports. The cells do not: those rows have no tick in the Free column. So a free Blinkenshell account is a screen/tmux bot host and NOT an endpoint host - which matters for anyone planning to run a daemon or tunnel there. On reachability, the earlier reading 'the host is refusing or filtering this network' is now measured rather than inferred: from a different network than the original sweep, the web ports answer and every non-web port times out, so the host is alive and filtering by protocol. The 2026-10-02 note that port 2222 must be dialled specifically stands and is confirmed by the vendor's FAQ.
 
 **Google Cloud Free Tier (e2-micro)** - `free-tier-card`, account=yes, card=yes
-- quote: ‚Äú1 non-preemptible e2-micro VM instance per month in one of the following US regions ... 30 GB-months standard persistent disk ... 1 GB of outbound data transfer ... per month.‚Äù
+- quote: ì1 non-preemptible e2-micro VM instance per month in one of the following US regions ... 30 GB-months standard persistent disk ... 1 GB of outbound data transfer ... per month.î
 - endpoint: `per-instance, external IP assigned by Google` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: A billing account with a card is required. The allowance is one e2-micro in us-west1, us-central1 or us-east1; the $300 signup credit is one-time and separate.
 
 **Google Cloud Shell** - `free-account`, account=yes, card=no
-- quote: ‚ÄúThe default weekly Cloud Shell quota is 50 hours.‚Äù
+- quote: ìThe default weekly Cloud Shell quota is 50 hours.î
 - endpoint: `published per-session by Google Cloud Shell` (provider-documented)
 - checked: provider-documented
 - caveats: Sign-in with a Google account is required. Exceeding the weekly quota suspends Cloud Shell until the next week. The VM is recreated, so only $HOME survives.
 
-**Hugging Face Spaces (CPU)** - `free-account`, account=yes, card=no
-- quote: ‚ÄúSpaces Hardware ... Starting at $0.‚Äù
+**Hugging Face Spaces** - `free-account`, account=yes, card=no
+- quote: ìStatic Spaces are free for everyone. Gradio and Docker Spaces run on compute and require a paid plan to create: PRO for personal accounts, Team or Enterprise for organizations. Free personal accounts in good standing can still host up to 2 Gradio Spaces running on ZeroGPU.î
 - endpoint: `per-Space, published while the Space runs` (provider-documented)
-- checked: first-party-fetched 2026-10-02
-- caveats: A free account is required. It is an app host, not a general VM; Dev Mode is the documented way to get a shell and its availability should be checked against the current docs.
+- checked: MEASURED 2026-10-06: the cited docs page was fetched (HTTP 200, 222,896 bytes) and the quoted sentence appears verbatim. The 48-hour sleep figure was read from spaces-gpus on the same date (HTTP 200, 221,818 bytes), which states a cpu-basic Space 'will go to sleep if inactive for more than a set time (currently, 48 hours)'. The change is traceable to a docs commit: huggingface/hub-docs@34ee0f00, 2026-07-21.
+- caveats: DEMOTED 2026-10-06 - the free CPU Basic Space (2 vCPU / 16 GB) this row advertised can no longer be created on a free account. The hardware still appears in HF's pricing table at $0, which is what makes the stale claim survive: the price is real, the CREATION is not. A paid-plan gate at creation is the one wall no keepalive or relay can defeat. A free account keeps Static Spaces (no runtime, so no daemon) and 2 ZeroGPU Spaces.
 
 **Modal Starter** - `free-account`, account=yes, card=no
-- quote: ‚Äú$0 + compute / month ... $30 / month free credits ... 1 TiB / month free network egress‚Äù
+- quote: ì$0 + compute / month ... $30 / month free credits ... 1 TiB / month free network egressî
 - endpoint: `not published; reached through the Modal CLI` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: An account is required; the $30 is a monthly credit, not a permanent free machine. It is a container sandbox, not a general VPS.
 
 **Oracle Cloud Always Free** - `free-tier-card`, account=yes, card=yes
-- quote: ‚ÄúBuild, test and deploy applications on the Cloud with Always Free cloud services and get $300 in credit towards other cloud services.‚Äù
+- quote: ìAll tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month for free for VM instances using the VM.Standard.A1.Flex shape, which has an Arm processor. For Always Free tenancies, this is equivalent to 2 OCPUs and 12 GB of memory.î
 - endpoint: `per-instance, public IP assigned by Oracle` (provider-documented)
-- checked: MEASURED 2026-10-02: https://www.oracle.com/cloud/free/ returns HTTP 200 with 79,448 bytes, so the 403 this host used to receive no longer happens. The page is CLIENT-RENDERED: the quoted sentence is its meta description, which is the only customer-visible text present, and the strings '1,500', 'OCPU' and '9,000' do NOT occur anywhere in the response. The A1 allowance figures this row used to quote are therefore UNVERIFIED against this page and are not presented as if they were
-- caveats: DEMOTED after review R23/R24. Two corrections, both measured. (1) The 403 that earlier revisions recorded for oracle.com from this host does not happen now - the page returns 200 - so the carried-figure excuse no longer applies. (2) With the page fetched, the OCPU-hour allowance this row quoted is NOT on it. What survives is Oracle's own always-free promise and a $300 trial credit, both from the page's own meta description. The A1 allowance remains the largest single understatement in the main catalogue and is carried there from the corpus card, not from this page; do not read this row as confirming it. A card is required at signup and A1 capacity can be reclaimed.
+- checked: MEASURED 2026-10-06: the cited docs page was fetched (HTTP 200, 53,867 bytes) and the quoted sentence appears verbatim in the response body. This resolves the open question the 2026-10-02 revision recorded: the A1 allowance figures are NOT on oracle.com/cloud/free, they are on the Always Free documentation page, which is now the cited source.
+- caveats: CORRECTED 2026-10-06 - the figure this row carried (4 OCPU / 24 GB) was WRONG BY 2x and came from the upstream corpus card, not from Oracle. Oracle's own sentence says 'equivalent to 2 OCPUs and 12 GB of memory', and the arithmetic agrees (1,500 OCPU-hours over a ~744-hour month is 2 OCPUs). Any catalogue figure derived from the 4/24 card is wrong and should be recomputed. Two further first-party facts now attached: a card is required at signup and is not charged on Always Free, and an idle instance may be reclaimed - Oracle deems a VM idle if, over a 7-day period, 95th-percentile CPU and network are both under 20% and memory is under 20% on A1 shapes. That is a utilisation threshold rather than a session cap, so sustained work defeats it.
 
 **AWS CloudShell** - `free-account`, account=yes, card=no
-- quote: ‚ÄúRun scripts and commands at no extra cost, with up to 1 GB of persistent storage per AWS Region.‚Äù
+- quote: ìRun scripts and commands at no extra cost, with up to 1 GB of persistent storage per AWS Region.î
 - endpoint: `none published` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: An AWS account is required. It is a browser shell, not a machine you can SSH into from elsewhere.
 
 **Azure Cloud Shell** - `free-account`, account=yes, card=no
-- quote: ‚ÄúUse of the machine hosting Cloud Shell is free. Cloud Shell requires a storage account to host the mounted Azure Files share. Regular storage costs apply.‚Äù
+- quote: ìUse of the machine hosting Cloud Shell is free. Cloud Shell requires a storage account to host the mounted Azure Files share. Regular storage costs apply.î
 - endpoint: `none published` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: An Azure account and a storage account are required; the storage share is billed normally.
 
 **Killercoda** - `free-account`, account=yes, card=no
-- quote: ‚ÄúMembership PLUS Includes all from FREE Use scenarios for up to 4 hours instead of just one ... Open up to 3 scenarios at the same time‚Äù
+- quote: ìMembership PLUS Includes all from FREE Use scenarios for up to 4 hours instead of just one ... Open up to 3 scenarios at the same timeî
 - endpoint: `none published` (not-verified)
 - checked: first-party-fetched 2026-10-02: the root page does NOT carry the quota text; it is on /pricing, which is now the cited source. Re-verified by tools/check-quotes.py
 - caveats: The page does not state whether a login is required to start a free scenario; treat 'anonymous' as unverified. Browser terminal only, no SSH.
 
-**Northflank Sandbox tier** - `free-account`, account=yes, card=no
-- quote: ‚ÄúAlways-on-compute - no sleeping :) 2√ó free services 1√ó free database 2√ó free cron jobs‚Äù
+**Northflank Sandbox tier** - `free-tier-card`, account=yes, card=yes
+- quote: ìall users must add a payment method to start creating resources on Northflank, regardless of plan selection. This is to verify user identity, and prevent malicious usage of the platform.î
 - endpoint: `none published` (provider-documented)
-- checked: first-party-fetched 2026-10-02; quote re-verified verbatim on the cited page by tools/check-quotes.py
-- caveats: A container platform, not a VM you SSH into; the free tier is for testing and building trust.
+- checked: MEASURED 2026-10-06: the billing docs page was fetched (HTTP 200, 346,968 bytes) and the quoted sentence appears verbatim. The pricing page was fetched separately (HTTP 200, 193,710 bytes) and states 'Always-on-compute - no sleeping :)' alongside 'Get started for free', which is why the card requirement is recorded as measured rather than read off the marketing.
+- caveats: CARD CORRECTION 2026-10-06: this row previously read card_required=false on the strength of the pricing page's 'Get started for free'. Northflank's own billing docs require a payment method for every user regardless of plan, to verify identity and prevent abuse, so the class moves free-account -> free-tier-card. It is kept rather than dropped because it is the cleanest no-sleep free container found: no idle timeout, no session cap, no expiry. No persistent volumes on free, no inbound SSH, and the docs say it should not be used for production. The two pages still disagree on the free-tier shape (pricing: 2 services, 1 database, 2 cron jobs; docs: 2 services, 2 jobs, 1 addon), which is unresolved.
 
 **Render Free compute** - `free-account`, account=yes, card=no
-- quote: ‚ÄúFree ( limitations apply ) $0/month 512 MB RAM free Less than 1 CPU‚Äù
+- quote: ìFree ( limitations apply ) $0/month 512 MB RAM free Less than 1 CPUî
 - endpoint: `none published` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: Web services, key-value and Postgres - not a VM. Free instances sleep and are not for production.
@@ -293,31 +293,31 @@ public one. Neither row claims the service is dead.
 - caveats: DEMOTED from the free-shell table after review, deliberately, and this row is the reason it is still here rather than deleted. A host answering SSH is EVIDENCE OF A HOST, NOT OF A FREE SHELL: fetched first-party, tilde.zone publishes nothing about free accounts, signup, or who operates it. A row that says 'free' on a banner alone is exactly the padding the guard exists to prevent, so it now reads 'unknown' where the three facts cannot be established and is classed `changed` to keep it out of the free tables while leaving the measurement visible. Same Debian build string as tilde.town, which is what a shared image or a mirror would produce - a reason to verify the operator, not a claim they are one host. Recovering the row requires a first-party page that names an operator and a signup path.
 
 **GitHub Codespaces** - `changed`, account=yes, card=no
-- quote: none taken; see the measurement note below
+- quote: ìAccount plan | Storage per month | Compute time per month | GitHub Free for personal accounts | 15 GB-month | 120 hrsî
 - endpoint: `published per-codespace by GitHub` (provider-documented)
-- checked: MEASURED absence, 2026-10-02: the cited page was fetched (HTTP 200, 196,281 bytes) and carries a 15 GB storage figure but NOT the "120 core hours or 60 hours" quota line this row used to quote. Four further GitHub pages were fetched to chase it (features/codespaces, the codespaces CLI page, managing-billing, about-codespaces) and none carries it. The number is therefore recorded as unverified rather than published
-- caveats: DEMOTED after review R23. The earlier row asserted a free quota of "120 core hours or 60 hours of run time on a 2 core codespace" with a citation that does not contain that sentence - the quote did not survive being fetched, which is the one thing a quote is for. The SSH mechanism is real and is GitHub's own documented gh codespace ssh; the FREE-TIER SIZE is what this row can no longer support, so it leaves the free tables until the figure is confirmed against a page that states it. Not a claim that the free tier is gone or that codespaces now cost money.
+- checked: MEASURED 2026-10-06: the cited page was fetched (HTTP 200, 196,324 bytes) and the quota table row quoted above is present in the response. The 2026-10-02 revision recorded that the '120 core hours' figure 'did not survive being fetched'; it does, in a table on the exact page cited. The earlier extraction missed the table rather than the sentence being absent.
+- caveats: PARTIALLY RESTORED 2026-10-06. The 120 core-hour figure is first-party again, so the row no longer reads cost unknown. It stays out of the free tables because 120 core-hours of 2-core compute is ~5 days of continuous uptime, which is a dev-environment quota rather than an always-on box. Note the asymmetry that ends it: with no payment method on file, exhausting the quota BLOCKS resume rather than billing, so there is no soft landing.
 
 **Fly.io** - `changed`, account=yes, card=yes
-- quote: ‚Äú$0.08/GB per month First 10GB free each month‚Äù
+- quote: ì$0.08/GB per month First 10GB free each monthî
 - endpoint: `per-Machine` (provider-documented)
 - checked: first-party-fetched 2026-10-02
 - caveats: The free Machine allowance Fly.io used to grant is gone from the pricing page. A card is required; the 10 GB is storage, not compute.
 
 **Koyeb** - `changed`, account=yes, card=no
-- quote: ‚ÄúIncluded Usage $10 ... Once you've consumed your included monthly free credit, we start billing you on a pay-per-use basis.‚Äù
+- quote: ìThe Koyeb Free Instance automatically scales down to zero when it doesn't receive any traffic for 1 hour. Scale-to-zero on this Instance cannot be disabled, and the idle period cannot be customized.î
 - endpoint: `none published` (provider-documented)
-- checked: first-party-fetched 2026-10-02
-- caveats: The old free 'Hobby' instance is not in the tiers shown on 2026-10-02; included usage is a paid-plan feature, so a free VM should not be assumed.
+- checked: MEASURED 2026-10-06: the cited docs page was fetched (HTTP 200, 296,380 bytes) and the quoted sentence appears verbatim, naming the free Instance directly.
+- caveats: RESTORED 2026-10-06. The 2026-10-02 revision recorded this as 'the free plan is not in the published tiers', checking the pricing page. The free Instance is documented on Koyeb's scale-to-zero docs page with its idle rule stated explicitly. It stays out of the free tables for the SSH question, not the free question: Koyeb publishes no inbound SSH, the idle period cannot be raised on the free tier, and there are no persistent volumes.
 
 **Microterm, LinuxOnTab** - `changed`, account=no, card=no
-- quote: ‚ÄúFree, no signup‚Äù
+- quote: ìFree, no signupî
 - endpoint: `none: there is no network path to these at all` (not-verified)
 - checked: first-party-fetched 2026-10-02: linuxontab.com carries the quoted phrase 'Free, no signup' verbatim. The companion project microterm.dev was fetched the same day (HTTP 200) and is described in the caveats; it is not the cited source because the quote is not on it
 - caveats: NEW ROW, and the category is new rather than the entries: these are 'anonymous free Linux' with no account and no card, but the machine is the READER'S OWN, there is no host to SSH to, and nothing runs while the tab is closed. Listing them beside a real remote VM would be a category error, which is why they are here rather than in the SSH table. Microterm is RISC-V64 emulated; LinuxOnTab ships a native WebAssembly x86 kernel.
 
 **Play with Docker** - `dead`, account=no, card=no
-- quote: ‚ÄúDeprecation notice: Play with Docker will be unavailable starting March 1, 2026.‚Äù
+- quote: ìDeprecation notice: Play with Docker will be unavailable starting March 1, 2026.î
 - endpoint: `none; the product is gone` (not-verified)
 - checked: first-party-fetched 2026-10-02
 - caveats: Recorded because it is the canonical 'anonymous free VM' many lists still cite. It is gone; Docker Docs now points at supported labs.

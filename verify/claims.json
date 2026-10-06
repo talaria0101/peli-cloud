@@ -1,0 +1,96 @@
+{
+  "_comment": "Phrase -> must appear in the fetched bytes of that page. verify/claim.py re-reads every page in verify/pages/ and reports HIT/MISS, so a quote cannot drift from its source without the tool noticing.",
+  "gcp_free": [
+    "e2-micro VM instance per month",
+    "Free Tier has no end date",
+    "by time, not by instance",
+    "GPUs and TPUs are not included"
+  ],
+  "oracle_alwaysfree": [
+    "1,500 OCPU hours",
+    "equivalent to 2 OCPUs and 12 GB",
+    "Idle Always Free compute instances may be reclaimed",
+    "95th percentile is less than 20%"
+  ],
+  "northflank_pricing": [
+    "Always-on-compute"
+  ],
+  "northflank_docs_billing": [
+    "all users must add a payment method",
+    "Developer Sandbox plan"
+  ],
+  "hf_spaces_overview": [
+    "require a paid plan to create",
+    "Static Spaces are free for everyone",
+    "2 Gradio Spaces running on ZeroGPU"
+  ],
+  "hf_spaces_gpus": [
+    "go to sleep if inactive"
+  ],
+  "render_free": [
+    "spins down a Free web service"
+  ],
+  "supabase_pricing": [
+    "paused after 1 week"
+  ],
+  "koyeb_szt": [
+    "automatically scales down to zero"
+  ],
+  "codespaces": [
+    "120 hrs"
+  ],
+  "google_cloud_shell": [
+    "12 hours",
+    "40 minutes"
+  ],
+  "azure_appservice_linux": [
+    "1.00 GB",
+    "60 CPU minutes"
+  ],
+  "sdf_members05": [
+    "2 year period"
+  ],
+  "sdf_members01": [
+    "20 MB disk quota for your home directory"
+  ],
+  "blinkenshell_wiki": [
+    "100 MB",
+    "Monthly Price"
+  ],
+  "serv00_offer": [
+    "3 GB"
+  ],
+  "neon_pricing": [
+    "100 CU-hrs monthly per project"
+  ],
+  "modelscope_hw": [
+    "2v-cpu-8g-mem",
+    "free"
+  ],
+  "modelscope.ai_openapi_v1_studios_hardware": [
+    "2v-cpu-16g-mem",
+    "free"
+  ],
+  "tilde_town": [
+    "we don't open any ports"
+  ],
+  "tilde_town_autokick": [
+    "one week"
+  ],
+  "ctrlc_ctrl-c.club": [
+    "free SSH and web accounts",
+    "5 years"
+  ],
+  "ctrlc_signup_ctrl-c_club_signup_ctrl-c_club": [
+    "Signups are closed for now",
+    "One gigabyte storage limit"
+  ],
+  "wiki.tilde.green_tos": [
+    "50 process",
+    "1gb"
+  ],
+  "tilde.club_wiki_netiquette": [
+    "host servers",
+    "run heavy processes"
+  ]
+}

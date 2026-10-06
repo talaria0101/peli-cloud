@@ -1,0 +1,21 @@
+{
+  "_comment": "Endpoints to probe. Ports come from vendor docs where published. Multi-port entries exist because a port-22-only sweep records an entire class of host as dead - the Blinkenshell FAQ states port 2222 explicitly, and peli-cloud recorded that dialling it on 22/2222/443 all returned 0 bytes from a sandbox that refuses 22 anyway.",
+  "targets": [
+    {"label": "SDF Public Access UNIX System", "host": "sdf.org", "port": 22, "docs": "http://sdf.org/?faq?MEMBERS?01"},
+    {"label": "SDF (freeshell.org alias)", "host": "freeshell.org", "port": 22, "docs": "http://sdf.org/"},
+    {"label": "hashbang #! node de1", "host": "de1.hashbang.sh", "port": 22, "docs": "https://hashbang.sh/server/stats"},
+    {"label": "tilde.club", "host": "tilde.club", "port": 22, "docs": "https://tilde.club/"},
+    {"label": "tilde.town", "host": "tilde.town", "port": 22, "docs": "https://tilde.town/"},
+    {"label": "tilde.guru", "host": "tilde.guru", "port": 22, "docs": "https://tilde.guru/"},
+    {"label": "tilde.green", "host": "tilde.green", "port": 22, "docs": "https://tilde.green/"},
+    {"label": "Ctrl-C.club", "host": "ctrl-c.club", "port": 22, "docs": "https://ctrl-c.club/"},
+    {"label": "Blinkenshell (non-standard port)", "host": "blinkenshell.org", "port": 2222, "docs": "https://blinkenshell.org/wiki/FAQ"},
+    {"label": "Blinkenshell (standard port, control)", "host": "blinkenshell.org", "port": 22, "docs": "https://blinkenshell.org/wiki/FAQ"},
+    {"label": "tilde.zone", "host": "tilde.zone", "port": 22, "docs": "https://tilde.zone/"},
+    {"label": "alwaysdata (per-account host, control)", "host": "ssh.alwaysdata.com", "port": 22, "docs": "https://www.alwaysdata.com/en/pricing/"}
+  ],
+  "expected_failures": {
+    "ssh.alwaysdata.com": "Per-account host: alwaysdata gives every account its own hostname, so a public name will not resolve or will not be the user's shell. Listed deliberately so the run proves that rather than asserting it.",
+    "blinkenshell.org:22": "Control. The vendor states 2222. If 2222 answers and 22 does not, that is the port-2222 finding reproduced from a residential host."
+  }
+}

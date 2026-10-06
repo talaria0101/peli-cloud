@@ -1,0 +1,121 @@
+{
+  "measured_from": "residential Windows host (this machine)",
+  "measured_at": "2026-10-06T11:48:41+0545",
+  "why": "peli-cloud could not dial any host: its sandbox egress proxy refuses port 22 with HTTP 403, so its census is documented-only. This runs from a residential host where port 22 is not proxied.",
+  "caveat": "A banner proves the host is up and speaking SSH. It does NOT prove a login completes, that an account can be created, or that a free tier exists. Those are separate claims requiring credentials.",
+  "summary": {
+    "total": 12,
+    "reachable": 9,
+    "banners": 8
+  },
+  "results": {
+    "sdf.org:22": {
+      "label": "SDF Public Access UNIX System",
+      "host": "sdf.org",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.4",
+      "error": null,
+      "latency_ms": 1392.7
+    },
+    "freeshell.org:22": {
+      "label": "SDF (freeshell.org alias)",
+      "host": "freeshell.org",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.4",
+      "error": null,
+      "latency_ms": 950.6
+    },
+    "de1.hashbang.sh:22": {
+      "label": "hashbang #! node de1",
+      "host": "de1.hashbang.sh",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u10",
+      "error": null,
+      "latency_ms": 431.0
+    },
+    "tilde.club:22": {
+      "label": "tilde.club",
+      "host": "tilde.club",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.0",
+      "error": null,
+      "latency_ms": 1640.0
+    },
+    "tilde.town:22": {
+      "label": "tilde.town",
+      "host": "tilde.town",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4",
+      "error": null,
+      "latency_ms": 663.2
+    },
+    "tilde.guru:22": {
+      "label": "tilde.guru",
+      "host": "tilde.guru",
+      "port": 22,
+      "reachable": true,
+      "banner": "",
+      "error": "connected, no banner within timeout",
+      "latency_ms": 8385.9
+    },
+    "tilde.green:22": {
+      "label": "tilde.green",
+      "host": "tilde.green",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.5p1 Debian-1",
+      "error": null,
+      "latency_ms": 416.2
+    },
+    "ctrl-c.club:22": {
+      "label": "Ctrl-C.club",
+      "host": "ctrl-c.club",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.17",
+      "error": null,
+      "latency_ms": 1560.1
+    },
+    "blinkenshell.org:2222": {
+      "label": "Blinkenshell (non-standard port)",
+      "host": "blinkenshell.org",
+      "port": 2222,
+      "reachable": false,
+      "banner": "",
+      "error": "connect timeout",
+      "latency_ms": null
+    },
+    "blinkenshell.org:22": {
+      "label": "Blinkenshell (standard port, control)",
+      "host": "blinkenshell.org",
+      "port": 22,
+      "reachable": false,
+      "banner": "",
+      "error": "connect timeout",
+      "latency_ms": null
+    },
+    "tilde.zone:22": {
+      "label": "tilde.zone",
+      "host": "tilde.zone",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4",
+      "error": null,
+      "latency_ms": 730.0
+    },
+    "ssh.alwaysdata.com:22": {
+      "label": "alwaysdata (per-account host, control)",
+      "host": "ssh.alwaysdata.com",
+      "port": 22,
+      "reachable": false,
+      "banner": "",
+      "error": "DNS: [Errno 11001] getaddrinfo failed",
+      "latency_ms": null
+    }
+  }
+}

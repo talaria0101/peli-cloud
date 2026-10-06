@@ -18,6 +18,8 @@ each in their own table, and every row linking to the page its numbers came from
 | ten minutes | [docs/CATALOGUE.md](docs/CATALOGUE.md) in full |
 | to buy something | table C, then the duty cycle that matches your agent |
 | **a shell with no card and no account** | **[docs/ANONYMOUS-VMS.md](docs/ANONYMOUS-VMS.md)** |
+| **a machine that stays UP at $0, indefinitely** | **[docs/ALWAYS-ON-FREE.md](docs/ALWAYS-ON-FREE.md)** - 22 rows, tiered by which wall they have |
+| **what that census could not settle** | **[docs/ALWAYS-ON-OPEN-QUESTIONS.md](docs/ALWAYS-ON-OPEN-QUESTIONS.md)** |
 | **to doubt the census** | **[research/deep-reviews-anon-vms.md](research/deep-reviews-anon-vms.md)** - five reviews; three of them removed rows |
 | **an SSH session into this sandbox from outside** | **[research/verification/ssh-relay-2026-10-02.md](research/verification/ssh-relay-2026-10-02.md)**, then `sh tools/ssh-relay-check.sh` |
 | **an SSH session OUT to Railway's anonymous VM** | `sh tools/poc-forward-relay.sh` - the relay's forward path works; dropssh v0.2.3's forward client does not |
@@ -202,6 +204,51 @@ redistributed here. See [`NOTICE`](NOTICE) for the evidence and for what that
 costs: every figure below is checkable by re-running, not diffable against a
 committed copy.
 
+## The third question: free, and up forever
+
+The anonymous census above answers *what can I get a shell on*. It is not the
+same question as *what stays up on its own*, and the gap between the two is where
+this market actually lives. A host that answers a banner may idle-kill your
+process the next morning; a machine that never sleeps may carry a monthly quota
+that runs out on the twentieth. Neither fact shows up in a table of "free tiers".
+
+[`docs/ALWAYS-ON-FREE.md`](docs/ALWAYS-ON-FREE.md) prices neither, and holds
+neither: it records **22 providers whose machine stays up indefinitely at $0**,
+tiered by the wall each one has.
+
+- **T1** runs as-is. **T2** sleeps but a named keepalive beats it. **T3** runs
+  fine but needs a named relay to be reached at all. **DEAD** is a quota or a
+  trial clock, and no relay fixes it.
+
+The distinction is load-bearing: a relay defeats a *liveness* wall and never a
+*quota* wall, so counting T2 and T3 as real hits is a claim about what a keepalive
+or a tunnel actually does, not a way of padding a list. Every T2 row names its
+keepalive and every T3 row names its relay, and the guard fails a row that
+claims one without naming it.
+
+    python3 tools/check-always-on-free.py           # guard the census
+    python3 tools/check-always-on-free.py --mutate  # prove the guard can fail (11/11)
+    python3 tools/render-always-on-free.py          # write docs/ALWAYS-ON-FREE.md
+    python3 verify/probe.py                         # dial the hosts, read their SSH banners
+    python3 verify/claim.py                         # every quote, against the bytes it came from
+
+Two things that page is careful about, for the same reason the anonymous census
+is:
+
+- **A banner is not a login, and it is not a free tier.** `verify/probe.py` dials
+  the shared-shell hosts from a host that can reach port 22, which the sandbox
+  this repository was written in cannot - its egress proxy refuses 22. Eight
+  hosts answered with a version string. That proves they are up; it says nothing
+  about whether an account exists or whether signup is open.
+- **Silence is not a promise.** Several hosts are tiered on the *absence* of a
+  published idle policy. They are labelled as such rather than as though the
+  operator had guaranteed anything, because silence is evidence about
+  documentation and not about the machine.
+
+The census is a snapshot with a 90-day shelf life;
+[`docs/ALWAYS-ON-OPEN-QUESTIONS.md`](docs/ALWAYS-ON-OPEN-QUESTIONS.md) carries
+what it did not settle, with the route that closes each gap.
+
 ## Layout
 
     references/battleships/   the source corpus, in-tree at its pinned commit
@@ -210,9 +257,11 @@ committed copy.
     poc/                       a query tool over the period model
     docs/CATALOGUE.md          the catalogue: four tables, every provider linked
     docs/ANONYMOUS-VMS.md      free/anonymous machines that answer SSH, generated from its JSON
+    docs/ALWAYS-ON-FREE.md     always-on free compute, tiered by which wall it has
     docs/FINDINGS.md           the write-up, opening with what it did not establish
-    tools/                     the anonymous-VM census guard and renderer, and the relay SSH check
+    tools/                     the guards and renderers for both censuses, and the relay SSH check
     tests/                     the relay SSH regressions, 11 clauses, each with a control
+    verify/                    first-party page captures, the reachability probe, and the quote re-check
     research/verification/     first-party notes behind the numbers
 
 ## Licence
