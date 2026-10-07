@@ -566,7 +566,44 @@ def quote_faults(row, caps, on_disk):
 # numbers instead of the vocabulary, and neither row fails on shipped data. An
 # earlier comment here said oracle failed this clause; it does not.
 EXPIRY_PHRASES = re.compile(
-    r"expir|retention|archiv|purge|self-clos|login[- ]expir|account[- ]clos", re.I
+    r"expir|retention|archiv|purge|self-clos|login[- ]expir|account[- ]clos",
+    re.I,
+)
+
+# The list above is six stems and it was closed, so a wall described any other
+# way went unseen. Measured against eleven descriptions of real walls, all
+# silent: "deleted 30 days after signup", "deleted after 30 days", "the free
+# trial clock stops after 30 days", "blocked at the edge when the trial ends",
+# "shuts down after the trial window closes", "torn down 7 days after you stop
+# paying", "you must renew within 30 days or it is removed", "the machine is
+# reclaimed", "counts against a monthly cap and then blocked", "100
+# requests/second, then HTTP 429", "20 GB/month of egress, then blocked".
+#
+# None of those is a T1 wall's job to have, so none of them may be silent. What
+# is added is the VERB and the DEADLINE, not a wider list of nouns: a T1 row
+# that says any of these has a wall whatever word it used to describe it.
+#
+# The deadline matters as much as the verb. "is deleted" alone would match
+# benign prose, so the wall needs a period attached - "30 days", "after signup",
+# "unless you upgrade" - which is what distinguishes an account-lifetime wall
+# from a sentence that happens to contain the word.
+LIFESPAN_VERBS = re.compile(
+    r"\b(?:delet|remov|destroy|shut ?down|terminat|tear ?down|kill|revoke|"
+    r"disable|block|stop|end|clos|reclaim|recycl|expire|archiv|purge|"
+    r"deprovision|unsuspend|pause|suspend|counts?\s+against|"
+    r"must\s+(?:renew|upgrade|pay|verify|re-?verify)|"
+    r"runs?\s+out|exhaust|used?\s+up|at\s+exhaustion)\w*\b",
+    re.I,
+)
+DEADLINE = re.compile(
+    r"\b\d+\s*(?:second|minute|hour|day|week|month|year)s?\b|"
+    r"\bper\s+(?:day|week|month|year)\b|"
+    r"\bafter\s+(?:sign-?up|creat|registr|purchase|payment|you\s+stop|"
+    r"the\s+(?:trial|free|intro|grace)|exhaustion|signup)\b|"
+    r"\bunless\s+you\b|\bif\s+you\s+do\s+not\b|\bthen\s+(?:billed|blocked|"
+    r"suspended|stopped|deleted|removed)\b|\bwhile\s+it\s+remains\b|"
+    r"\bthe\s+trial\b|\bfree\s+trial\b|\bquota\b|\ballowance\b",
+    re.I,
 )
 QUOTA_UNITS = re.compile(
     r"hrs/|hours?\s*(?:per|/|a\s+)\s*(?:day|month|week|year)|"
@@ -581,11 +618,15 @@ QUOTA_UNITS = re.compile(
 # requiring this file to re-derive them from prose is asking for the wrong kind
 # of trust.
 QUOTA_FITS_NOTE = re.compile(
+    # A number and a unit, and the number is compared to another number and
+    # unit. "1488 OCPU-h against 1500 OCPU-h" and "744 hours against 750
+    # instance-hours" are the sentences a reader uses to check the claim, so
+    # those are what count.
     r"\b\d[\d,]*\s*(?:ocpu[- ]?h|core[- ]?hours?|cu[- ]?hrs?|instance[- ]?hours?"
-    r"|gb[- ]?hours?|hours?)\b[^.]{0,80}?\bagainst\b|\bagainst\b[^.]{0,80}?"
+    r"|gb[- ]?hours?|hours?|cpu[- ]minutes?|minutes?)\b[^.]{0,100}?\bagainst\b"
+    r"|\bagainst\b[^.]{0,100}?"
     r"\b\d[\d,]*\s*(?:ocpu[- ]?h|core[- ]?hours?|cu[- ]?hrs?|instance[- ]?hours?"
-    r"|gb[- ]?hours?|hours?)\b|"
-    r"\bexactly one (?:fits|service fits|instance fits)\b|\bone always-on\b",
+    r"|gb[- ]?hours?|hours?|cpu[- ]?minutes?|minutes?)\b",
     re.I,
 )
 
@@ -684,6 +725,35 @@ def tier_faults(row):
                 f"{rid}: DEAD row carries a relay ({str(row['relay'])[:60]}...) - "
                 f"hard_wall says nothing a relay fixes, so the two cannot both be true"
             )
+        # A hard_wall that denies there is a wall is not a wall. The base guard
+        # requires the field to be non-empty, so "None. This row is DEAD only
+        # because a previous revision misread the table; there is no wall and
+        # the row should be T1" passed every clause while excluding the row from
+        # the count for no stated reason. A DEAD row must assert a wall, and it
+        # must not disclaim one.
+        wall = str(row.get("hard_wall") or "").strip()
+        # Only a wall that disclaims ITSELF counts, and only in the opening
+        # clause. A first version matched any "no"/"not"/"none" at the start of
+        # the string and failed two correct rows:
+        #
+        #   fly-io                 "no free Machine allowance. The only 'first
+        #                           free' left is 10 GB of volume capacity."
+        #   cloudflare-containers  "no free plan; the free tier is 'N/A'."
+        #
+        # Both assert a wall - there is no free machine, no free container - and
+        # a guard that fails them trains a reader to ignore it. The disclaimer
+        # has to say that there is NO WALL, not that there is no free tier, so
+        # the pattern requires the object to be a wall.
+        if wall and re.match(
+                r"\s*(?:none\b|no\s+(?:hard\s+)?wall\b|not\s+(?:a\s+)?wall\b|"
+                r"there\s+(?:is|are)\s+no\s+wall\b|this\s+row\s+has\s+no\s+wall\b)",
+                wall, re.I):
+            fails.append(
+                f"{rid}: DEAD row's hard_wall disclaims the wall it is filed for: "
+                f"{wall[:90]!r}. A DEAD row says what nothing a relay or a "
+                f"keepalive fixes; a row with no wall is a T1 candidate or a "
+                f"row that was never checked"
+            )
         # A DEAD verdict is a claim too. It excludes a provider from the count,
         # so it is the cheapest place in the file to assert something with no
         # evidence: a row nobody bothered to quote cannot be checked, and the
@@ -712,6 +782,20 @@ def tier_faults(row):
                 f"{rid}: tier T1 says no expiry, but idle_or_session_limit carries "
                 f"the expiry/retention phrase(s) {', '.join(repr(e) for e in expiries)}"
             )
+        # The same wall in other words. EXPIRY_PHRASES is six stems, so
+        # "deleted 30 days after signup" and eleven other real descriptions were
+        # all silent. A T1 row needs a VERB and a DEADLINE to describe no wall
+        # at all; carrying both is a wall whatever vocabulary it used.
+        wall_text = str(row.get("idle_or_session_limit") or "")
+        if not expiries and LIFESPAN_VERBS.search(wall_text) and DEADLINE.search(wall_text):
+            verb = LIFESPAN_VERBS.search(wall_text).group(0)
+            deadline = DEADLINE.search(wall_text).group(0)
+            fails.append(
+                f"{rid}: tier T1 says no expiry, but idle_or_session_limit "
+                f"describes a wall it does not name as one: {verb!r} together "
+                f"with {deadline!r}. The expiry list matches six stems, so this "
+                f"clause also reads the verb and the deadline"
+            )
 
     # A quota UNIT is not a quota WALL. The first version failed any counted row
     # whose text contained a quota unit, which failed two rows that are correct:
@@ -736,9 +820,19 @@ def tier_faults(row):
     else:
         quota = (walls_in(row.get("spec"), QUOTA_UNITS)
                  + walls_in(row.get("idle_or_session_limit"), QUOTA_UNITS))
-        if quota and not row.get("hard_wall") and not QUOTA_FITS_NOTE.search(
-                " ".join(str(row.get(k) or "") for k in ("spec", "idle_or_session_limit",
-                                                         "caveats", "keepalive"))):
+        # The exemption is searched ONLY in the fields that DECLARE the quota,
+        # not in caveats or keepalive. A caveat is commentary; a quota unit in
+        # spec is a claim. Measured: gcp-e2-micro's caveats contain "so exactly
+        # one always-on instance fits and a second would bill", which is about
+        # DISK, and that sentence was enough to exempt a lethal "capped at 30
+        # core-hours per month" added to the same row's spec. Searching the
+        # whole row lets one field vouch for another.
+        #
+        # render-free-web-service passes on arithmetic instead, which is the
+        # right way round: quota_arithmetic() prices its 744 h against 750.
+        declaring = " ".join(str(row.get(k) or "")
+                             for k in ("spec", "idle_or_session_limit"))
+        if quota and not row.get("hard_wall") and not QUOTA_FITS_NOTE.search(declaring):
             # tier_note: "A relay defeats LIVENESS walls ... but cannot defeat
             # QUOTA walls (120 core-hours, 24h caps, trial clocks, PRO gates)."
             fails.append(
@@ -874,6 +968,58 @@ def inventory_faults(rows):
 
 
 # --- the driver ----------------------------------------------------------
+def definition_faults(doc, rows):
+    """Clause 6: the tier DEFINITIONS themselves.
+
+    Every other clause checks rows against the definitions, which leaves the
+    definitions unchecked. Measured as an attack: rewriting
+    data/always-on-free.json's tiers.T1 to "MUST BE KEPT ALIVE BY HAND. Sleeps
+    after 30 minutes idle, is deleted 90 days after signup, and has a 12
+    core-hour monthly cap that a relay cannot defeat." left all five rendered-
+    page clauses reporting ok and check-all.py exiting 0, while five rows were
+    counted as T1 under a definition saying T1 rows sleep and are deleted. The
+    tier table's COUNT column was checked; its DESCRIPTION column was not, and
+    the description is the specification.
+
+    The check is deliberately one-directional and narrow: a definition that
+    itself asserts a wall its own tier cannot have. It does not police wording,
+    because the tier descriptions are prose and a guard that policed prose would
+    fire on every reword.
+    """
+    fails = []
+    tiers = doc.get("tiers")
+    if not isinstance(tiers, dict):
+        return [f"data has no 'tiers' object; the tier definitions cannot be read"]
+
+    # A tier that promises NO wall must not describe one. T1 is the tier that
+    # promises no wall, so T1 is the one that can be checked against its own
+    # definition without guessing what "no wall" means.
+    t1 = str(tiers.get("T1") or "")
+    if t1:
+        verb = LIFESPAN_VERBS.search(t1)
+        deadline = DEADLINE.search(t1)
+        # "No idle sleep, no hard session cap, no expiry. It just runs." contains
+        # "expires"-adjacent words by way of DENYING them, so a denial is not a
+        # wall. _NEGATED decides that, and it is already scoped to three words.
+        negated = _NEGATED.search(t1[:verb.start()] if verb else t1)
+        if verb and deadline and not negated:
+            fails.append(
+                f"tiers.T1 describes a wall: {verb.group(0)!r} together with "
+                f"{deadline.group(0)!r}. T1 is the tier that promises no idle "
+                f"sleep, no session cap and no expiry, so its own definition "
+                f"cannot assert one. {len([r for r in rows if r.get('tier') == 'T1'])} "
+                f"row(s) are counted under it"
+            )
+
+    # Every tier a row uses must be defined, and every defined tier that is
+    # counted must be one this guard knows how to reason about.
+    defined = {t for t in tiers}
+    used = {r.get("tier") for r in rows}
+    for t in sorted(x for x in used - defined if x is not None):
+        fails.append(f"tiers has no definition for {t!r}, which {sum(1 for r in rows if r.get('tier') == t)} row(s) use")
+    return fails
+
+
 def scan(doc):
     """Return (failures, unverifiable notes, trace lines, host lines).
 
@@ -900,6 +1046,7 @@ def scan(doc):
                  f"{'; '.join(bad)}; no clause can be evaluated"], notes, traces, hosts)
 
     fails = list(BASE.check(doc))
+    fails.extend(definition_faults(doc, rows if isinstance(rows, list) else []))
 
     if not isinstance(rows, list):
         fails.append("data has no 'rows' list; the extended checks cannot run")
@@ -1055,6 +1202,58 @@ _MODULE_RESTORE = [
     ("UNREACHABLE", dict(UNREACHABLE)),
 ]
 
+def _m_foreign_quote(d):
+    """Oracle's own sentence, quoted under Google's row. Every clause passed:
+    match_quote searched the union of all 35 captures and accepted any hit, so
+    the quote WAS found - in another provider's file. The published page read
+    "VM.Standard.A1.Flex shape, which has an Arm processor" under the heading
+    "Google Cloud Free Tier - Compute Engine e2-micro".
+    """
+    _row(d, "gcp-e2-micro")["quote"] = (
+        "All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per "
+        "month for free for VM instances using the VM.Standard.A1.Flex shape, "
+        "which has an Arm processor.")
+
+
+def _m_t1_wall_unnamed(d):
+    """A wall on a T1 row, described without any of the six stems the expiry
+    list matched. All eleven descriptions tried were silent before the verb and
+    deadline clause existed."""
+    _row(d, "gcp-e2-micro")["idle_or_session_limit"] = (
+        "30-day free trial clock: the instance is deleted 30 days after "
+        "signup unless you upgrade, and traffic is then blocked at the edge.")
+
+
+def _m_dead_disclaims_wall(d):
+    """A DEAD row that says there is no wall. The base guard requires the field
+    to be non-empty, so this excluded a provider from the count for no stated
+    reason and passed."""
+    _row(d, "github-codespaces")["hard_wall"] = (
+        "None. This row is DEAD only because a previous revision misread the "
+        "table; there is no wall and the row should be T1.")
+
+
+def _m_quota_exempted_by_caveat(d):
+    """A lethal quota in spec, exempted by a sentence in caveats about
+    DISK. The exemption was searched across the whole row, so one field vouched
+    for another. The wording used here is the one GCP's own caveats already
+    carry, so nothing was invented."""
+    _row(d, "gcp-e2-micro")["spec"] = (
+        "Free Tier compute is capped at 30 core-hours per month, which an "
+        "always-on node exhausts in about 15 hours.")
+
+
+def _m_rewrite_t1_definition(d):
+    """The specification rewritten. Every clause checks rows AGAINST the tier
+    definitions, which left the definitions themselves unchecked: this left all
+    five rendered-page clauses ok and check-all.py exiting 0, with five rows
+    counted as T1 under a definition saying T1 rows sleep and are deleted."""
+    d["tiers"]["T1"] = (
+        "MUST BE KEPT ALIVE BY HAND. Sleeps after 30 minutes idle, is deleted "
+        "90 days after signup, and has a 12 core-hour monthly cap that a relay "
+        "cannot defeat.")
+
+
 MUTATIONS = [
     ("clause 1: replace a verified quote with a fabricated sentence",
      _m_fabricated_quote, "quote is not traceable to any capture"),
@@ -1084,6 +1283,19 @@ MUTATIONS = [
      _m_delete_dead_rows, "manifest row id is missing from the rows array"),
     ("clause 5: invent a row id that is not in the manifest",
      _m_invent_row, "NOT in the committed manifest"),
+    # The next four are the attacks a deep review found AFTER this file was
+    # first written. Each was measured as passing every clause, so each is here
+    # to stay caught.
+    ("clause 1: quote another provider's page, verbatim from its capture",
+     _m_foreign_quote, "NOT this row's capture"),
+    ("clause 2: T1 row given a wall described only by verb and deadline",
+     _m_t1_wall_unnamed, "describes a wall it does not name as one"),
+    ("clause 2: DEAD row whose hard_wall disclaims the wall",
+     _m_dead_disclaims_wall, "disclaims the wall it is filed for"),
+    ("clause 2: a counted row's quota exempted by a caveat about something else",
+     _m_quota_exempted_by_caveat, "names a quota unit"),
+    ("clause 6: rewrite tiers.T1 so it asserts the wall it promises not to have",
+     _m_rewrite_t1_definition, "tiers.T1 describes a wall"),
 ]
 
 
