@@ -1,8 +1,10 @@
 # Always-on free compute, 2026-10-06
 
-**22 of 40 rows hold up indefinitely at $0.** The launch base ([talaria0101/peli-cloud](https://github.com/talaria0101/peli-cloud)) records **zero** — its free-VM page is a census of *shells*, and every row it carries that claims compute dies on a quota or an expiry.
+**20 of 40 rows hold up indefinitely at $0.** The starting corpus was [talaria0101/peli-cloud](https://github.com/talaria0101/peli-cloud), read before this census was written. Its own account of what it found, from `data["launch_base"]["note"]`:
 
-Generated from [`data/always-on-free.json`](../data/always-on-free.json) by `tools/render-always-on-free.py`. Guarded by `tools/check-always-on-free.py`.
+> peli-cloud's own docs/ANONYMOUS-VMS.md records ZERO rows that survive a strict always-on test. Its 6 banner-verified rows are shared public shells, and the machine rows it does carry (Railway, Codespaces, Fly, Koyeb) all fail on quota or expiry. This file exists because that page is a census of shells, not of persistent compute.
+
+Generated from [`data/always-on-free.json`](../data/always-on-free.json) by `tools/render-always-on-free.py`. Guarded by `tools/check-always-on-free.py`, and gated against its own output by `tools/check-rendered-page.py`.
 
 ## The distinction the taxonomy rests on
 
@@ -10,15 +12,17 @@ A relay cannot fix everything, and that is the whole design.
 
 | tier | what it means | count |
 |---|---|---|
-| **T1** | Always-on as-is. No idle sleep, no hard session cap, no expiry. It just runs. | 7 |
-| **T2** | Always-on WITH A KEEPALIVE. Sleeps, scales to zero, or is reclaimed when idle, but a periodic inbound ping, a held WebSocket, cron, or light sustained CPU defeats it. Each row names the exact keepalive. | 8 |
+| **T1** | Always-on as-is. No idle sleep, no hard session cap, no login expiry or archival. Nothing needs doing to keep it. | 5 |
+| **T2** | Always-on WITH A KEEPALIVE, or with an expiry long enough to schedule. Sleeps, scales to zero, is reclaimed when idle, or archives after a stated period of silence - but a periodic login, a held WebSocket, cron, or light sustained CPU defeats it. Each row names the exact keepalive. | 8 |
 | **T3** | NEEDS A RELAY. Runs fine but is unreachable: no inbound ports, egress restrictions, or browser-only. An outbound-initiated tunnel or held WebSocket to a free relay service makes it reachable. | 7 |
-| **DEAD** | Hard wall. Nothing a relay or keepalive fixes: a quota that exhausts regardless, a trial clock, a paid-plan gate on CREATION, or an account that self-closes. | 17 |
-| **UNVERIFIED** | Not counted. The shape looks right but no first-party page could be fetched, so it is recorded rather than claimed. | 1 |
+| **DEAD** | Hard wall. Nothing a relay or keepalive fixes: a quota that exhausts regardless, a trial clock, a paid-plan gate on CREATION, or an account that self-closes. | 18 |
+| **UNVERIFIED** | Not counted. The shape looks right but no first-party page could be fetched, so it is recorded rather than claimed. | 2 |
 
 **A relay defeats a LIVENESS wall** — idle sleep, scale-to-zero, no-inbound-ports, browser-only. You keep the machine alive, or you tunnel out of it, and it becomes reachable forever.
 
-**A relay cannot defeat a QUOTA wall** — a monthly compute-hour cap that exhausts regardless, a 24-hour absolute lifetime, a trial clock, or a paid-plan gate at creation time. Those rows are DEAD and are excluded.
+**A relay cannot defeat a QUOTA wall** — a monthly compute-hour cap that exhausts regardless, a trial clock, or a paid-plan gate at creation time. Those rows are DEAD and are excluded. The figures that sort the rows are in `data["tier_note"]`:
+
+> T1, T2 and T3 all count toward the goal of an always-on free node. A relay defeats LIVENESS walls (sleep, scale-to-zero, no-inbound-ports) but cannot defeat QUOTA walls (120 core-hours, 24h caps, trial clocks, PRO gates). That distinction is the whole taxonomy.
 
 So T2 and T3 are legitimate hits, not near-misses: the keepalive or the relay *is* the thing that makes them always-on. Only DEAD is a dead end.
 
@@ -28,14 +32,14 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 
 | evidence weight | rows | means |
 |---|---|---|
-| first-hand | 22 | I fetched the page and read the quote out of the bytes |
-| carried | 18 | a research pass fetched it; the row says so, and names which parts I did not check |
+| first-hand | 23 | I fetched the page and read the quote out of the bytes |
+| carried | 17 | a research pass fetched it; the row says so, and names which parts I did not check |
 
 "First-hand" means the bytes were read, **not** that an account was created. No account exists anywhere in this census. The live probe below is the only measurement here that touches a real host.
 
 ## The counted rows
 
-### T1 — Always-on as-is. No idle sleep, no hard session cap, no expiry. It just runs.
+### T1 — Always-on as-is. No idle sleep, no hard session cap, no login expiry or archival. Nothing needs doing to keep it.
 
 #### Google Cloud Free Tier — Compute Engine e2-micro
 
@@ -44,8 +48,12 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = True
 - **Caveat:** The one unambiguous always-on machine in the whole census. Shared-core throttles after ~30s of full CPU, so it is a bot/relay node, not a compute box. The allowance is a month's worth of hours (~730), so exactly one always-on instance fits and a second would bill. A $0.00-$1.00 temporary authorization hold is placed at signup and is not a charge. Overage is possible past 30 GB disk or 1 GB egress.
 - **Source:** <https://cloud.google.com/free/docs/free-cloud-features>
-- **Vendor says:** > 1 non-preemptible e2-micro VM instance per month in one of the following US regions: Oregon: us-west1. Iowa: us-central1. South Carolina: us-east1. 30 GB-months standard persistent disk.
-  > Your Free Tier e2-micro instance limit is by time, not by instance. Each month, eligible use of all of your e2-micro instances is free until you have used a number of hours equal to the total hours in the current month.
+- **Vendor says (quote, VERBATIM):**
+> 1 non-preemptible e2-micro VM instance per month in one of the following US regions: Oregon: us-west1. Iowa: us-central1. South Carolina: us-east1. 30 GB-months standard persistent disk.
+- **Vendor says (quote2, VERBATIM):**
+> Your Free Tier e2-micro instance limit is by time, not by instance. Each month, eligible use of all of your e2-micro instances is free until you have used a number of hours equal to the total hours in the current month.
+- **Vendor says (quote3, VERBATIM):**
+> The Free Tier has no end date, but Google reserves the right to change the offering, including changing or eliminating usage limits, with 30 days' advance notice.
 - **Verified:** me, 2026-10-06 — page fetched HTTP 200, 181337 bytes, all three quotes read from the fetched bytes at verify/pages/gcp_free.html
 
 #### Northflank Developer Sandbox
@@ -55,32 +63,13 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = True
 - **Caveat:** CARD IS REQUIRED — RESOLVED, NOT UNCONFIRMED. Northflank's own docs say a payment method is mandatory for every user regardless of plan: 'all users must add a payment method to start creating resources on Northflank, regardless of plan selection.' This contradicts the pricing page's 'Get started for free' and contradicts peli-cloud's card_required=false. The docs are the specific policy, so they win. The card is only verified, not charged, on the free tier. Also note the free-tier shape differs between the two pages: pricing says '2x free services / 1x free database / 2x free cron jobs', docs say '2 services, 2 jobs, 1 addon, up to 1 BYOC cluster'. No persistent volumes on free, no inbound SSH, and it 'should not be used for production applications'.
 - **Source:** <https://northflank.com/pricing>
-- **Vendor says:** > Always-on-compute - no sleeping :) 2x free services 1x free database 2x free cron jobs
-  > all users must add a payment method to start creating resources on Northflank, regardless of plan selection. This is to verify user identity, and prevent malicious usage of the platform.
+- **Vendor says (quote, VERBATIM):**
+> Always-on-compute - no sleeping :) 2x free services 1x free database 2x free cron jobs
+- **Vendor says (quote2, VERBATIM):**
+> all users must add a payment method to start creating resources on Northflank, regardless of plan selection. This is to verify user identity, and prevent malicious usage of the platform.
+- **Vendor says (quote3, VERBATIM):**
+> You can test out Northflank with our Developer Sandbox plan. This free plan allows you to deploy: 2 services 2 jobs 1 addon Up to 1 BYOC cluster
 - **Verified:** me, 2026-10-06 — pricing page fetched HTTP 200, 193710 bytes (verify/pages/northflank_pricing.html); docs page fetched HTTP 200, 346968 bytes (verify/pages/northflank_docs_billing.html). I re-fetched the docs page because the earlier research pass had reported it as unreadable; it rendered this time, which is how the card conflict got settled.
-
-#### SDF Public Access UNIX System
-
-- **What you get:** Shared multi-user FreeBSD/NetBSD pubnix, est. 1987. Free tier: 20 MB disk quota x4 filesystems (home, web, mail, gopher) plus a 500-file cap. No published RAM/CPU.
-- **The wall:** no process sleep. The only kill is account expiry: validated accounts expire after 2 years without a UNIX login; prevalidated accounts are purged at ~600 days.
-- **The keepalive:** one login per 2 years
-- **Account:** sign-up required = True, card required = False
-- **Caveat:** A SHARED HOST, NOT A PRIVATE VM — tens of thousands of users share one kernel. The 2-year login expiry is the gentlest idle policy in the census. Note https://sdf.org:443 is DOWN; plain HTTP on port 80 works, and port 22 is open. Note also that the login-expiry clock only resets on a real UNIX login, so a background job alone will not keep the account alive.
-- **Source:** <http://sdf.org/?faq?MEMBERS?05>
-- **Vendor says:** > Validated accounts will expire if the user does not login at least once during a 2 year period.
-  > 20 MB disk quota for your home directory
-- **Verified:** me, 2026-10-06 — both pages fetched HTTP 200; quotes read from fetched bytes at verify/pages/sdf_members05.html and sdf_members01.html
-
-#### Ctrl-C.club
-
-- **What you get:** Linux shared host on DigitalOcean, ~825 users, IRC (6667) and Gemini. Operator: Eric Budd, hosted by Mount Olive Software. 1 GB storage limit, stated as a soft limit. No RAM/CPU ceiling published.
-- **The wall:** 5-YEAR INACTIVITY ARCHIVE, the most generous policy in this census: 'we're archiving accounts that have not been logged into in 5 years or more', with a restore path via admin@ctrl-c.club. No session-level timeout stated.
-- **Account:** sign-up required = True, card required = False
-- **Caveat:** SIGNUPS ARE CURRENTLY CLOSED, verified on the signup subdomain. The homepage carries a stale 2023 banner, but signup.ctrl-c.club and the live MOTD (dated 2026-10-06) reflect current state. Reachable today only by EXISTING members; a new person can only join a waitlist. The daemon ban is on Eggdrop bots and on services DUPLICATING Ctrl-C.club's own services (web/IRC/email/Gemini servers), not on all background processes.
-- **Source:** <https://ctrl-c.club/system_notice_long.html>
-- **Vendor says:** > Signups are closed for now! ... We're pausing signups to work on some scaling issues. You can still submit a signup to get on a waitlist.
-  > One gigabyte storage limit (this is not a hard limit: brief, occasional overages are not a problem).
-- **Verified:** me, 2026-10-06 - fetched ctrl-c.club/, faq.html, signup.ctrl-c.club/ and system_notice_long.html directly (all HTTP 200; captures under verify/pages/ as ctrlc_home, ctrlc_faq, ctrlc_signup, ctrlc_notice). Confirmed /rules and /about 404; the real rules are at system_notice.html. Live banner read by verify/probe.py.
 
 #### tilde.green
 
@@ -89,8 +78,9 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** STRENGTHENED: the operator says 'we don't mind if you register and stay idle' - the only positive no-idle-kill promise in the tildeverse - AND the host now has a documented quota. Contact root@tilde.green, IRC #tilde.green. The ToS is self-labelled 'Work in Progress', so enforcement is not guaranteed.
 - **Source:** <https://tilde.green/>
-- **Vendor says:** > we don't mind if you register and stay idle, but we'd appreciate if possible if you could join our little community
-- **Verified:** me, 2026-10-06 - probed live (SSH-2.0-OpenSSH_10.5p1) and fetched the ToS on the wiki.tilde.green subdomain, which publishes hard limits the earlier pass recorded as unpublished
+- **Vendor says (quote, VERBATIM):**
+> we don't mind if you register and stay idle, but we'd appreciate if possible if you could join our little community
+- **Verified:** me, 2026-10-06 - probed live (banner SSH-2.0-OpenSSH_10.5p1 Debian-1, in verify/reachability.json) and fetched verify/pages/tilde_green.html and tilde_green_tos.html, which publishes the hard limits an earlier pass recorded as unpublished.
 
 #### tilde.club
 
@@ -99,7 +89,12 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** T1 by ABSENCE of a stated policy. Signups no longer accept gmail.com addresses.
 - **Source:** <https://tilde.club/wiki/faq.html>
-- **Vendor says:** > Soft Limit: 1 GB - You'll get a heads-up if you go over this... Hard Limit: 3 GB - This is the max... Grace Period: 1 week
+- **Vendor says (quote, RECONSTRUCTION - 3 fragments joined by `...`, not one contiguous quote):**
+> Soft Limit: 1 GB - You'll get a heads-up if you go over this... Hard Limit: 3 GB - This is the max... Grace Period: 1 week
+  - _Fragments:_
+  - 1. `Soft Limit: 1 GB - You'll get a heads-up if you go over this` -> `verify/pages/tilde_club_faq.html`
+  - 2. `Hard Limit: 3 GB - This is the max` -> `verify/pages/tilde_club_faq.html`
+  - 3. `Grace Period: 1 week` -> `verify/pages/tilde_club_faq.html`
 - **Verified:** me, 2026-10-06 - re-fetched faq.html (Soft 1 GB / Hard 3 GB / 1-week grace) and wiki/netiquette.html; captures under verify/pages/ as tilde_club_faq. Live banner SSH-2.0-OpenSSH_10.0 read by verify/probe.py.
 
 #### tilde.guru
@@ -109,10 +104,11 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** Signup is CURATED and was disabled at one point for abuse: 'Talk to sarmonsiill about getting an account'. The host is a human gate, not a cost or expiry defect. The wiki /wiki/Join returned 404.
 - **Source:** <https://tilde.guru/>
-- **Vendor says:** > a FreeBSD pubnix - est. 2021 - member of the tildeverse
+- **Vendor says (quote, VERBATIM):**
+> a FreeBSD pubnix - est. 2021 - member of the tildeverse
 - **Verified:** research pass, first-party fetch; I did not independently re-fetch
 
-### T2 — Always-on WITH A KEEPALIVE. Sleeps, scales to zero, or is reclaimed when idle, but a periodic inbound ping, a held WebSocket, cron, or light sustained CPU defeats it. Each row names the exact keepalive.
+### T2 — Always-on WITH A KEEPALIVE, or with an expiry long enough to schedule. Sleeps, scales to zero, is reclaimed when idle, or archives after a stated period of silence - but a periodic login, a held WebSocket, cron, or light sustained CPU defeats it. Each row names the exact keepalive.
 
 #### Oracle Cloud Always Free — VM.Standard.A1.Flex
 
@@ -122,8 +118,10 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = True
 - **Caveat:** CORRECTION TO THE LAUNCH BASE AND TO THE WIDELY-REPEATED FIGURE: it is 2 OCPU / 12 GB, not 4 OCPU / 24 GB. Oracle's own sentence 'this is equivalent to 2 OCPUs and 12 GB of memory' settles it, and the arithmetic agrees (1,500 OCPU-h / ~744 h = 2 OCPUs). Card required but never charged on Always Free. Capacity problems have caused account closures for some new tenancies; Oracle may reclaim A1 capacity outright. The marketing page says 'unlimited period of time' while the docs page carries the idle-reclaim rule — the docs page is the specific policy and is the one that governs.
 - **Source:** <https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm>
-- **Vendor says:** > All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month for free for VM instances using the VM.Standard.A1.Flex shape, which has an Arm processor. For Always Free tenancies, this is equivalent to 2 OCPUs and 12 GB of memory.
-  > Idle Always Free compute instances may be reclaimed by Oracle. Oracle will deem virtual machine and bare metal compute instances as idle if, during a 7-day period, the following are true: CPU utilization for the 95th percentile is less than 20%
+- **Vendor says (quote, VERBATIM):**
+> All tenancies get the first 1,500 OCPU hours and 9,000 GB hours per month for free for VM instances using the VM.Standard.A1.Flex shape, which has an Arm processor. For Always Free tenancies, this is equivalent to 2 OCPUs and 12 GB of memory.
+- **Vendor says (quote2, VERBATIM):**
+> Idle Always Free compute instances may be reclaimed by Oracle. Oracle will deem virtual machine and bare metal compute instances as idle if, during a 7-day period, the following are true: CPU utilization for the 95th percentile is less than 20%
 - **Verified:** me, 2026-10-06 — page fetched HTTP 200, 53867 bytes; both quotes read from the fetched bytes at verify/pages/oracle_alwaysfree.html
 
 #### Oracle Cloud Always Free — VM.Standard.E2.1.Micro
@@ -134,7 +132,8 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = True
 - **Caveat:** Shares the Oracle tenancy, so it is not an independent provider — it is the same account as the A1 row and cannot be counted twice toward a provider count. Listed separately because the shape and the reclamation rule differ (no memory clause).
 - **Source:** <https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm>
-- **Vendor says:** > All tenancies get up to two Always Free VM instances using the VM.Standard.E2.1.Micro shape, which has an AMD processor.
+- **Vendor says (quote, VERBATIM):**
+> All tenancies get up to two Always Free VM instances using the VM.Standard.E2.1.Micro shape, which has an AMD processor.
 - **Verified:** me, 2026-10-06 — read from the fetched bytes at verify/pages/oracle_alwaysfree.html
 
 #### Render — Free web service
@@ -145,20 +144,9 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** Ephemeral filesystem: 'any changes to its local filesystem are lost' on spin-down, so it is a relay endpoint, not a stateful node. Render may also restart a free service at any time. The 750 h/month workspace cap is the real ceiling — one always-on service is ~720 h, so exactly one fits.
 - **Source:** <https://render.com/docs/free>
-- **Vendor says:** > Render spins down a Free web service that goes 15 minutes without receiving any inbound traffic. This includes both HTTP requests and WebSocket messages from existing connections.
+- **Vendor says (quote, VERBATIM):**
+> Render spins down a Free web service that goes 15 minutes without receiving any inbound traffic. This includes both HTTP requests and WebSocket messages from existing connections.
 - **Verified:** me, 2026-10-06 — page fetched HTTP 200, 388859 bytes, quote read from fetched bytes at verify/pages/render_free.html
-
-#### Azure App Service — Free plan (F1)
-
-- **What you get:** Shared CPU, 60 CPU-minutes/day, 1 GB RAM, 1.00 GB storage, no SLA. Public *.azurewebsites.net endpoint. 10 Linux + 10 Windows free apps on the standard allowance.
-- **The wall:** 20 minutes of inactivity. 'Always On' is explicitly NOT available on F1.
-- **The keepalive:** An HTTP GET to the *.azurewebsites.net host every <20 min (10 min gives 2x margin). Microsoft states only direct requests to the app reset the timer — portal browsing does not. Confidence: high, and it needs no credentials.
-- **Account:** sign-up required = True, card required = True
-- **Caveat:** CORRECTION: the 512 MB / 5 GB F1 figures repeated in every older guide are OBSOLETE. The current vendor table says 1 GB RAM / 1.00 GB storage. The 20-minute idle figure has also disappeared from the main App Service docs pages; if your source cites learn.microsoft.com for it, that citation is stale. Because 'Always On' is unavailable on F1, an external ping is the only mechanism.
-- **Source:** <https://azure.microsoft.com/en-us/pricing/details/app-service/linux/>
-- **Vendor says:** > F1 Free Shared (60 CPU minutes / day) 1 GB 1.00 GB $-
-  > A web app can time out after 20 minutes of inactivity, and only requests to the actual web app can reset the timer.
-- **Verified:** me, 2026-10-06 — F1 row read from fetched bytes (HTTP 200, 826187 bytes) at verify/pages/azure_appservice_linux.html. The 20-minute timeout was NOT on that page; it comes from Microsoft's own WebJobs docs, quoted by a research pass, and I did not independently re-fetch it. Marked accordingly.
 
 #### Supabase — Free project
 
@@ -168,20 +156,56 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** Edge Functions give you a real always-on process runtime (Deno) with a public URL, which is what makes this a compute row rather than a database row. It is not a shell or a VM — you cannot get a login.
 - **Source:** <https://supabase.com/pricing>
-- **Vendor says:** > Free projects are paused after 1 week of inactivity. Limit of 2 active projects.
+- **Vendor says (quote, VERBATIM):**
+> Free projects are paused after 1 week of inactivity. Limit of 2 active projects.
 - **Verified:** me, 2026-10-06 — page fetched HTTP 200, 386813 bytes, quote read from fetched bytes at verify/pages/supabase_pricing.html
+
+#### SDF Public Access UNIX System
+
+- **What you get:** Shared multi-user FreeBSD/NetBSD pubnix, est. 1987. Free tier: 20 MB disk quota x4 filesystems (home, web, mail, gopher) plus a 500-file cap. No published RAM/CPU.
+- **The wall:** no process sleep. The only kill is account expiry: validated accounts expire after 2 years without a UNIX login; prevalidated accounts are purged at ~600 days.
+- **The keepalive:** one UNIX login per 2 years. The clock is lastlog, so a background job alone will not keep the account alive; it has to be a real login.
+- **Account:** sign-up required = True, card required = False
+- **Caveat:** A SHARED HOST, NOT A PRIVATE VM - tens of thousands of users share one kernel. RETIERED FROM T1: T1 is defined as 'no expiry', and this row carries a 2-year login expiry plus a keepalive, which is the file's own definition of T2. The 2-year expiry was also described here as 'the gentlest idle policy in the census', which was a claim about the other rows and was not this row's to make. Login expiry runs at ~600 days for prevalidated accounts. Live banner read by verify/probe.py (SSH-2.0-OpenSSH_10.4).
+- **Source:** <http://sdf.org/?faq?MEMBERS?05>
+- **Vendor says (quote, VERBATIM):**
+> Validated accounts will expire if the user does not login at least once during a 2 year period.
+- **Vendor says (quote2, VERBATIM):**
+> 20 MB disk quota for your home directory
+- **Verified:** me, 2026-10-06, quotes read from the fetched bytes at verify/pages/sdf_members05.html and sdf_members01.html; verify/claims.json holds both phrases. NOT RE-FETCHABLE FROM EVERY HOST: sdf.org returns 502/504 through some egress proxies, so on those hosts verify/claim.py reports both captures as absent. That is the honest state - the quotes were read from the bytes when they were fetched, and the bytes are not reproducible from here.
 
 #### Blinkenshell
 
-- **What you get:** Free: 100 MB disk (x4), 128 MB memory limit, screen/tmux detach allowed, max 2 background processes. Stockholm, online since 2006. SSH on port 2222, not 22.
+- **What you get:** Free account limits, from the vendor's own table: 128 MB RSS memory, 100 processes, 128 open files, 6 SSH sessions, 2 background processes. screen/tmux detach allowed. Stockholm, online since 2006. SSH on port 2222, not 22.
 - **The wall:** no documented idle kill and no login expiry. Social suspension risk instead: not visiting IRC is a rule violation.
 - **The keepalive:** keep a screen/tmux session running; max 2 background processes
 - **Account:** sign-up required = True, card required = False
-- **Caveat:** IMPORTANT CORRECTION TO A RESEARCH PASS THAT MARKED THIS T1: the flattened text of the wiki table makes it LOOK like free accounts get IRC bots and listening TCP ports. Parsing the actual cells shows the Free column is EMPTY for 'Bouncer', 'IRC bots', and 'Listen TCP/UDP port (custom server)' — all three are Supporter-only. The vendor's own rules page confirms: 'No IRC bots are allowed on free accounts' and 'You are not allowed to run any server/daemon on free accounts'. So free Blinkenshell is a screen/tmux bot host, not an endpoint host. Signup also requires a VOUCH by an existing member.
-- **Source:** <https://blinkenshell.org/wiki/>
-- **Vendor says:** > Disk Quota 100 MB (x4~) | Memory limit 128 MB | Detach (GNU Screen, tmux) ✔✔ | Monthly Price Free!
-  > You are not allowed to run any server/daemon on free accounts. This includes bouncers. (Available on Supporter Account only)
-- **Verified:** me, 2026-10-06 - fetched https://blinkenshell.org/wiki/, /docs/resource-limits/ and /docs/rules/ directly (all 200, bytes under verify/pages/) and parsed the wiki's feature-comparison TABLE CELL BY CELL, which is what settles the free-vs-supporter port question.
+- **Caveat:** CORRECTION TO BOTH THE LAUNCH BASE AND TO THIS ROW'S OWN EARLIER TEXT. Free Blinkenshell is a screen/tmux host, not an endpoint host: the limits table's Free column caps memory at 128 MB, processes at 100, SSH sessions at 6 and background processes at 2, and the rules page says in so many words that IRC bots, servers/daemons and bouncers are Supporter-only. The port fact the launch base got wrong is separate: the host is on 2222, not 22, which is why the launch base's port-22 excuse never covered it. Earlier revisions of this row quoted a 'Disk Quota 100 MB (x4~)' feature table that exists on no page in verify/pages/; that text was not in the captures and is not claimed here. Signup also requires a VOUCH by an existing member.
+- **Source:** <https://blinkenshell.org/docs/resource-limits/>
+- **Vendor says (quote, RECONSTRUCTION - 18 fragments joined by `|`, not one contiguous quote):**
+> Type | Free account limit | Supporter account limit | Memory usage (RSS) | 128 MB | 256 MB | Number of open files | 128 | 128 | Number of processes | 100 | 100 | SSH sessions | 6 | 6 | Background processes | 2 | 5
+  - _Fragments:_
+  - 1. `Type` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+17 more: this fragment is that common, so it is weak evidence on its own)
+  - 2. `Free account limit` -> `verify/pages/blinkenshell_limits.html`
+  - 3. `Supporter account limit` -> `verify/pages/blinkenshell_limits.html`
+  - 4. `Memory usage (RSS)` -> `verify/pages/blinkenshell_limits.html`
+  - 5. `128 MB` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html`
+  - 6. `256 MB` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/northflank_pricing.html`
+  - 7. `Number of open files` -> `verify/pages/blinkenshell_limits.html`
+  - 8. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
+  - 9. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
+  - 10. `Number of processes` -> `verify/pages/blinkenshell_limits.html`
+  - 11. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+13 more: this fragment is that common, so it is weak evidence on its own)
+  - 12. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+13 more: this fragment is that common, so it is weak evidence on its own)
+  - 13. `SSH sessions` -> `verify/pages/blinkenshell_limits.html`
+  - 14. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
+  - 15. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
+  - 16. `Background processes` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html`
+  - 17. `2` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
+  - 18. `5` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html` (+25 more: this fragment is that common, so it is weak evidence on its own)
+- **Vendor says (quote2, VERBATIM):**
+> No IRC bots are allowed on free accounts. (Available on Supporter Account only) You are not allowed to run any server/daemon on free accounts. This includes bouncers. (Available on Supporter Account only)
+- **Verified:** me, 2026-10-06 - fetched https://blinkenshell.org/docs/resource-limits/ and https://blinkenshell.org/docs/rules/ directly (both 200, under verify/pages/ as blinkenshell_limits and blinkenshell_rules) and read the Free column of the limits table cell by cell. The Free/Supporter table IS on /docs/resource-limits/; an earlier revision attributed it to the wiki root, which carries no table at all.
 
 #### hashbang (#!)
 
@@ -191,20 +215,32 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** CORRECTION: an earlier revision of this census said 'no idle kill, no account-purge cron' and 'NO published quota'. BOTH WERE WRONG. The purge lives in /etc/cron.daily/clean-lurkers, not the root crontab, so a reader checking only /etc/crontab misses it. The quotas live in the operator's Ansible config. Still the closest thing to anonymous: a public key IS the account, no signup form, no card. Live API shows ONE node (de1); the GitHub README listing four (da1/ny1/sf1/to1) is stale. Account creation POSTs your public key to https://hashbang.sh/user/create: a public key IS the account, no signup form, no card.
 - **Source:** <https://raw.githubusercontent.com/hashbang/shell-etc/master/cron.daily/clean-lurkers>
-- **Vendor says:** > DAYS=30 ... if [ ! -f "/home/${user}/.keep-account" ]; then loginctl terminate-user "$user"; fi
-  > systemctl set-property --runtime "user-${PAM_UID}.slice" CPUQuota=50% MemoryLimit=512M BlockIOWeight=10
-- **Verified:** me, 2026-10-06 - curl'd the operator's deployed config directly from GitHub raw (200). Read cron.daily/clean-lurkers and ansible/tasks/security/main.yml in hashbang/shell-server, and the live /server/stats API (200).
+- **Vendor says (quote, RECONSTRUCTION - 2 fragments joined by `...`, not one contiguous quote):**
+> DAYS=30 ... if [ ! -f "/home/${user}/.keep-account" ]; then loginctl terminate-user "$user"
+>         fi
+  - _Fragments:_
+  - 1. `DAYS=30` -> `verify/pages/hashbang_clean_lurkers.html`
+  - 2. `if [ ! -f "/home/${user}/.keep-account" ]; then loginctl terminate-user "$user"
+        fi` -> `verify/pages/hashbang_clean_lurkers.html`
+- **Vendor says (quote2, VERBATIM):**
+> /bin/systemctl set-property --runtime "user-${PAM_UID}.slice" \ CPUQuota=50% MemoryLimit=512M BlockIOWeight=10
+- **Verified:** me, 2026-10-06 - read cron.daily/clean-lurkers and ansible/tasks/security/main.yml from hashbang/shell-etc and hashbang/shell-server at GitHub raw (both 200, under verify/pages/ as hashbang_clean_lurkers and hashbang_limits) and the live /server/stats API (200, hashbang_stats). An earlier revision of this row quoted a tmux line that is in no capture; it is withdrawn rather than left as an unverifiable claim.
 
-#### Neon — Free Postgres
+#### Ctrl-C.club
 
-- **What you get:** 100 CU-hrs/month per project, 1 GB storage per project, scales to zero when idle.
-- **The wall:** 100 CU-hrs/month per project is an exhaustible monthly compute cap.
-- **The keepalive:** a workload well under 100 CU-hr/mo never exhausts it; auto-resume on query defeats scale-to-zero. Confidence: medium — the CU burn per idle instance was not measured.
+- **What you get:** Linux shared host on DigitalOcean, ~825 users, IRC (6667) and Gemini. Operator: Eric Budd, hosted by Mount Olive Software. 1 GB storage limit, stated as a soft limit. No RAM/CPU ceiling published.
+- **The wall:** 5-year inactivity archive: 'we're archiving accounts that have not been logged into in 5 years or more', restorable on request. No session-level timeout stated.
+- **The keepalive:** one login per 5 years. The homepage states the archive policy verbatim: 'we're archiving accounts that have not been logged into in 5 years or more', with a restore path via the admin address.
 - **Account:** sign-up required = True, card required = False
-- **Caveat:** Marketing says 'no time limits' while the table carries a hard 100 CU-hr monthly cap. Trust the cap. A database, not a compute node — listed because the scale-to-zero + quota shape is instructive, not because it is a VM.
-- **Source:** <https://neon.com/pricing>
-- **Vendor says:** > Free $0 Build and learn free with no time limits and no credit card required. 100 projects 100 CU-hrs monthly per project
-- **Verified:** research pass, first-party fetch; I did not independently re-fetch
+- **Caveat:** RETIERED FROM T1 ON REVIEW: T1 says 'no expiry' and this row archives at 5 years. Its quotes were also moved to the pages they are actually on - the closed-signups text and the 1 GB limit are both on signup.ctrl-c.club, not on system_notice_long.html, which words the storage limit differently and differently again. Signups are CURRENTLY CLOSED (waitlist only). Reachable today only by EXISTING members; a new person can only join a waitlist. The daemon ban is on Eggdrop bots and on services DUPLICATING Ctrl-C.club's own, not on all background processes.
+- **Source:** <https://ctrl-c.club/>
+- **Vendor says (quote, VERBATIM):**
+> To make room for our active and new users, we're archiving accounts that have not been logged into in 5 years or more.
+- **Vendor says (quote2, VERBATIM):**
+> Signups are closed for now! Thank you for your interest in Ctrl-C.club! We're pausing signups to work on some scaling issues. You can still submit a signup to get on a waitlist.
+- **Vendor says (quote3, VERBATIM):**
+> One gigabyte storage limit (this is not a hard limit: brief, occasional overages are not a problem).
+- **Verified:** me, 2026-10-06 - fetched ctrl-c.club/ (quote, and the 825-user population figure), faq.html, signup.ctrl-c.club/ (quote2, quote3) and system_notice_long.html directly, all HTTP 200, under verify/pages/ as ctrlc_home, ctrlc_faq, ctrlc_signup, ctrlc_notice. Live banner read by verify/probe.py.
 
 ### T3 — NEEDS A RELAY. Runs fine but is unreachable: no inbound ports, egress restrictions, or browser-only. An outbound-initiated tunnel or held WebSocket to a free relay service makes it reachable.
 
@@ -217,8 +253,11 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** THE '~5 FREE INSTANCES' FIGURE IS WITHDRAWN AS UNSOURCED. Three research passes searched every first-party surface (the official skills repo, all Studio docs, deploy_schema.json, the i18n bundle) and found NO per-account count. What is established is that a free Studio exists and that some cap exists; the value is never published. Do not quote '5' from this project. The idle-sleep timeout is likewise only qualitative ('Sleeping after a long period without access'); no hours figure is published for Studio (the published idle numbers belong to Notebook, not Studio). The operator's own measured Tailscale deployment proves it hosts a real userspace node despite /dev/net/tun being absent.
 - **Source:** <https://modelscope.cn/openapi/v1/studios/hardware>
-- **Vendor says:** > .cn: {"name": "platform/2v-cpu-8g-mem", "resource_type": "free"}  |  .ai: {"name": "platform/2v-cpu-16g-mem", "resource_type": "free"}
-- **Verified:** me, 2026-10-06 - fetched BOTH unauthenticated OpenAPIs: modelscope.cn/.../hardware returns the 8g tier, modelscope.ai/.../hardware returns 16g, each stable across 3 runs. Raw bytes under verify/pages/. ModelScope's own docs and skills repo still hardcode 16g, so .cn may under-report what you actually get.
+- **Vendor says (quote, VERBATIM):**
+> {"hardware":[{"name":"platform/2v-cpu-8g-mem","resource_type":"free","supported_sdk_types":["gradio","streamlit","docker","static"]}]}
+- **Vendor says (quote2, VERBATIM):**
+> {"hardware":[{"name":"platform/2v-cpu-16g-mem","resource_type":"free","supported_sdk_types":["gradio","streamlit","docker","static"]}]}
+- **Verified:** me, 2026-10-06 - fetched BOTH unauthenticated OpenAPIs. quote is the whole of modelscope.cn's response data.hardware[0], captured at verify/pages/modelscope_hw.html; quote2 is the same field from modelscope.ai, captured at verify/pages/modelscope_ai_hw.html; each was stable across 3 runs. The two are separate quotes because they are two separate responses from two separate sites - an earlier revision spliced them into one string, which no capture can match.
 
 #### Cloudflare Durable Objects (Free plan)
 
@@ -229,7 +268,12 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** A Durable Object IS a machine in the meaningful sense — in-memory, stateful, WebSocket-capable — but it is single-threaded with 128 MB and a 10 ms/request CPU budget. This is a relay-and-coordination substrate, not a general compute box. Cloudflare CONTAINERS (the actual machine product) are paid-only: the free plan is 'N/A'.
 - **Source:** <https://developers.cloudflare.com/workers/platform/limits/>
-- **Vendor says:** > Requests 100,000/day | CPU time 10 ms | Memory 128 MB
+- **Vendor says (quote, RECONSTRUCTION - 3 fragments joined by `|`, not one contiguous quote):**
+> Requests 100,000/day | CPU time 10 ms | Memory 128 MB
+  - _Fragments:_
+  - 1. `Requests 100,000/day` -> `verify/pages/cf_workers_limits.html`
+  - 2. `CPU time 10 ms` -> `verify/pages/cf_workers_limits.html`
+  - 3. `Memory 128 MB` -> `verify/pages/cf_workers_limits.html`
 - **Verified:** me, 2026-10-06 — Workers Free limits read from fetched bytes (HTTP 200, 248647 bytes) at verify/pages/cf_workers_limits.html
 
 #### tilde.town
@@ -240,8 +284,9 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** Pure T3 — the machine is perfect and the NETWORK is the wall, which is exactly what a relay fixes. Any admin may kill your processes under load. Signup is by invitation/request.
 - **Source:** <https://tilde.town/wiki/faq.html>
-- **Vendor says:** > can i run servers on tilde.town? sort of. currently, we don't open any ports for users to use; however, you can run simple services or cron jobs for local-only access.
-- **Verified:** me, 2026-10-06 - probed live (banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4) and re-fetched faq.html and administration.html
+- **Vendor says (quote, VERBATIM):**
+> can i run servers on tilde.town? sort of. currently, we don't open any ports for users to use; however, you can run simple services or cron jobs for local-only access.
+- **Verified:** me, 2026-10-06 - probed live (banner SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4, in verify/reachability.json) and re-fetched verify/pages/tilde_town.html, tilde_town_admin.html and tilde_town_autokick.html. The banner is the capture for the liveness claim; the pages are the capture for the port policy.
 
 #### serv00
 
@@ -252,8 +297,9 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** Resource limits beyond the 3 GB disk are not published on the pricing page. I did not verify the cron/daemon allowance first-party; the research pass that reported it read the panel docs.
 - **Source:** <https://serv00.com/pricing>
-- **Vendor says:** > Revolutionary hosting for FREE! 3 GB for free, no adverts, no hooks
-- **Verified:** me, 2026-10-06 — page fetched HTTP 200, 54173 bytes, quote read from fetched bytes at verify/pages/serv00.html
+- **Vendor says (quote, VERBATIM):**
+> Revolutionary hosting for FREE! 3 GB for free, no adverts, no hooks
+- **Verified:** me, 2026-10-06 - page fetched HTTP 200, 54173 bytes, quote read from the fetched bytes at verify/pages/serv00_offer.html (the key in verify/fetch.py; an earlier revision of this field named a serv00.html that does not exist, with the same byte count, so the fetch was real and only the path was wrong).
 
 #### alwaysdata — Free
 
@@ -264,7 +310,14 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** The free plan's own terms forbid 24/7 services, so this is a T3-by-relay-and-keepalive rather than a real compute node. Note the profile-suspension policy suspends the whole profile, not just the shell.
 - **Source:** <https://www.alwaysdata.com/en/pricing/>
-- **Vendor says:** > For personal needs, ad-free offer available for life | 0 EUR/month | Disk space SSD 1 Go | RAM 256 Mo | CPU 1/4
+- **Vendor says (quote, RECONSTRUCTION - 5 fragments joined by `|`, not one contiguous quote):**
+> For personal needs, ad-free offer available for life | 0 EUR/month | Disk space SSD 1 Go | RAM 256 Mo | CPU 1/4
+  - _Fragments:_
+  - 1. `For personal needs, ad-free offer available for life` -> NO CONTIGUOUS MATCH in any capture under `verify/pages/`
+  - 2. `0 EUR/month` -> NO CONTIGUOUS MATCH in any capture under `verify/pages/`
+  - 3. `Disk space SSD 1 Go` -> NO CONTIGUOUS MATCH in any capture under `verify/pages/`
+  - 4. `RAM 256 Mo` -> NO CONTIGUOUS MATCH in any capture under `verify/pages/`
+  - 5. `CPU 1/4` -> NO CONTIGUOUS MATCH in any capture under `verify/pages/`
 - **Verified:** research pass, first-party fetch
 
 #### Hugging Face Spaces — ZeroGPU (free allowance)
@@ -276,7 +329,8 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** MAJOR CORRECTION TO BOTH THE LAUNCH BASE AND THE USER'S PREMISE: the free CPU Basic Space (2 vCPU / 16 GB) that the launch base lists as a durable free row now REQUIRES PRO. The docs commit that moved it is huggingface/hub-docs@34ee0f00 (2026-07-21). What survives on a free account is Static Spaces (no runtime at all) and up to 2 ZeroGPU Spaces. Dev Mode SSH is PRO-only. So the launch base's 'Hugging Face Spaces (CPU), 2 vCPU/16 GB, free' row is no longer buildable on the tier it claims.
 - **Source:** <https://huggingface.co/docs/hub/en/spaces-overview>
-- **Vendor says:** > Gradio and Docker Spaces run on compute and require a paid plan to create: PRO for personal accounts, Team or Enterprise for organizations. Free personal accounts in good standing can still host up to 2 Gradio Spaces running on ZeroGPU.
+- **Vendor says (quote, VERBATIM):**
+> Gradio and Docker Spaces run on compute and require a paid plan to create: PRO for personal accounts, Team or Enterprise for organizations. Free personal accounts in good standing can still host up to 2 Gradio Spaces running on ZeroGPU.
 - **Verified:** me, 2026-10-06 — page fetched HTTP 200, 222896 bytes, quote read from fetched bytes at verify/pages/hf_spaces_overview.html; the 48h sleep read from hf_spaces_gpus.html (HTTP 200, 221818 bytes)
 
 #### Koyeb — Free Instance
@@ -288,7 +342,8 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Account:** sign-up required = True, card required = False
 - **Caveat:** CORRECTION TO THE LAUNCH BASE, which recorded Koyeb as 'changed/dead — the free Hobby instance is not in the published tiers'. A free Instance IS published and documented, with its scale-to-zero rule stated explicitly. No persistent volumes on free.
 - **Source:** <https://www.koyeb.com/docs/run-and-scale/scale-to-zero>
-- **Vendor says:** > The Koyeb Free Instance automatically scales down to zero when it doesn't receive any traffic for 1 hour. Scale-to-zero on this Instance cannot be disabled, and the idle period cannot be customized.
+- **Vendor says (quote, VERBATIM):**
+> The Koyeb Free Instance automatically scales down to zero when it doesn't receive any traffic for 1 hour. Scale-to-zero on this Instance cannot be disabled, and the idle period cannot be customized.
 - **Verified:** me, 2026-10-06 — page fetched HTTP 200, 296380 bytes, quote read from fetched bytes at verify/pages/koyeb_szt.html
 
 ## Measured, not assumed: live reachability
@@ -314,10 +369,10 @@ A banner is not a login. No credential was presented to any of these hosts.
 | `blinkenshell.org:6697` | no route | `connect timeout` |
 | `ssh.alwaysdata.com:22` | no route | `DNS: [Errno 11001] getaddrinfo failed` |
 
-Two results contradict prior claims and are the reason this probe was worth running. Both bullets are computed from `verify/reachability.json`, so re-running the probe either reproduces them or falsifies them:
+2 results contradict prior claims and are the reason this probe was worth running. Every bullet below is computed from `verify/reachability.json`, so re-running the probe either reproduces them or falsifies them:
 
-- **Blinkenshell is filtered, not down.** Port 443 accepted a connection while 22, 2222, 6697 all timed out on the same host, in the same run. peli-cloud blamed its sandbox's port-22 refusal, but 2222 was never port 22, so that excuse never covered this case. The host is alive and filtering by protocol.
-- **tilde.zone answers SSH** with the *identical* OpenSSH build string as tilde.town (`10.0p2 Debian-7+deb13u4`), which is what a shared image or a mirror produces. peli-cloud demoted it for having no discoverable operator; it is demonstrably live. Still not counted as a free shell, because a banner is not evidence of a free tier.
+- **Blinkenshell is filtered, not down.** Port 443 accepted a connection while 22, 2222, 6697 did not (connect timeout) on the same host, in the same run. peli-cloud blamed its sandbox's port-22 refusal, but 2222 was never port 22, so that excuse never covered this case. The host is alive and filtering by protocol.
+- **tilde.zone answers SSH** with the *identical* OpenSSH identification string as tilde.town: `SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4`, which is what a shared image or a mirror produces. peli-cloud demoted tilde.zone for having no discoverable operator. A banner is still not evidence of a free tier.
 
 _Measured 2026-10-06T12:23:02+0545 from a residential Windows host (this machine)._
 
@@ -327,6 +382,7 @@ Nothing below was overcome in practice. Each wall is one a relay or a keepalive 
 
 | Provider | the hard wall |
 |---|---|
+| **Neon — Free Postgres** | 100 CU-hrs/month per project, and the vendor's own page prices an always-on database above it: 'Once scale to zero is disabled, the minimum CU-hours a database can use in a month is about 182.5 (about 730 hours in a month x 0.25 minimum CU size)'. 'At 0.25 CU… |
 | **Railway Free VM** | 60-minute build window, then a 24-hour claim countdown. Unclaimed boxes and their files are DELETED. Claiming moves the box into an account where it bills normally. Anonymous trials can also be disabled under demand. |
 | **GitHub Codespaces (GitHub Free personal)** | 120 hrs of 2-core compute per month. One always-on 2-core codespace dies after ~5 days. At exhaustion, without a payment method, RESUME IS BLOCKED rather than billed. |
 | **Google Cloud Shell** | 12-hour absolute session cap AND a 40-minute inactivity termination, plus a 50-hour weekly quota. Two independent walls. |
@@ -377,6 +433,8 @@ Stated plainly, because a census that hides its gaps is worse than no census.
 python tools/check-always-on-free.py           # guard the census
 python tools/check-always-on-free.py --mutate  # prove the guard can fail (13/13)
 python tools/render-always-on-free.py          # rewrite this page from the JSON
+python tools/check-rendered-page.py            # the committed page matches this renderer
+python tools/check-rendered-page.py --mutate  # prove that gate can fail (13/13)
 python verify/fetch.py                         # re-fetch the vendor pages
 python verify/claim.py                        # every quote, against the bytes it came from
 python verify/fetch.py --check                # is every capture re-fetchable by name?
@@ -396,4 +454,3 @@ Fetches that failed (recorded, not silently substituted):
 - `https://huggingface.co/storage/pricing -> HTTP 401, auth-gated`
 - `northflank.com/docs/* -> HTTP 200 but client-rendered, ~274 bytes of text`
 - `modelscope.cn/code/workspace and modelscope.ai/docs -> HTTP 200 SPA shells with no readable content; doc search is CAPTCHA-gated`
-

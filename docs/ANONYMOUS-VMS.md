@@ -189,7 +189,7 @@ public one. Neither row claims the service is dead.
 - caveats: Shared shell, not a VM; signups no longer accept gmail.com addresses.
 
 **tilde.guru** - `free-account`, account=yes, card=no
-- quote: “a FreeBSD pubnix Â· est. 2021 Â· member of the tildeverse”
+- quote: “a FreeBSD pubnix · est. 2021 · member of the tildeverse”
 - endpoint: `tilde.guru:22` (banner-verified)
 - checked: first-party-fetched 2026-10-02 (HTTP 200); relay /trace dialed tilde.guru:22 and read banner SSH-2.0-OpenSSH_10.0 FreeBSD-20250801
 - caveats: NEW ROW, not in the earlier census. FreeBSD, not Linux. Shared shell, not a VM. Signup and resource limits are on the site's own wiki, which returned 404 for /wiki/Join when fetched here.
