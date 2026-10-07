@@ -9,6 +9,34 @@ always be re-fetched by the name its claim uses. `--check` is what proves that:
 a capture directory that cannot be regenerated from this file is a broken
 evidence store, and the failure mode it prevents is a quote that verifies against
 a stale copy nobody can reproduce.
+
+EXIT CODES, and why the first version needed them added:
+
+  0  every URL fetched 200, or --check found nothing wrong
+  1  at least one URL failed, OR --check found a claim with no capture
+  2  the store is unusable (a claim key has no URL here)
+
+The first version returned 0 from `fetch()` with the `return` sitting outside the
+`try`, with no reference to `ok`. Two consequences, both measured on 2026-10-07:
+
+  1. `python3 verify/fetch.py` printed "33/35 fetched" and exited 0.
+  2. A URL that failed left its PREVIOUS capture in place. verify/claim.py then
+     read those stale bytes and printed a HIT, exiting 0. So the pair
+
+         fetch.py  (exit 0)   claim.py  (exit 0)
+
+     was a fully green pipeline in which the quote had not been re-verified
+     against live bytes at all.
+
+The second is the same hazard this repo's .gitignore already names for
+.quote-cache/ ("a cache that goes stale silently would let the quote check pass
+against a page that has since changed"). verify/pages/ was given no such
+protection, so it gets one here: a URL that fails to fetch has its capture
+DELETED, so a stale copy cannot survive into a green run. The cost is that
+claim.py then reports the page as having no capture, which is the truth, and is
+also why verify/claim.py on a host that cannot resolve every vendor domain exits
+1 with a count that differs from another host's. That is the correct behaviour:
+the number that varies is the number of quotes that host could actually verify.
 """
 import json
 import os
@@ -73,6 +101,17 @@ urls = {
     "hashbang_limits": "https://raw.githubusercontent.com/hashbang/shell-server/master/ansible/tasks/security/main.yml",
 }
 
+# Pages known to be unreachable from SOME hosts. Recorded so that "could not be
+# fetched from here" and "does not exist" stay different claims, and so a
+# future run can tell whether a failure is new. This is deliberately NOT an
+# exemption: a page listed here still has its capture deleted when a fetch fails,
+# and claim.py still reports it unverified. It only labels the failure in the
+# output so a reader does not have to rediscover which failures are expected.
+KNOWN_UNREACHABLE = {
+    "sdf_members01": "sdf.org does not resolve through some egress proxies (502/504 observed)",
+    "sdf_members05": "sdf.org does not resolve through some egress proxies (502/504 observed)",
+}
+
 
 def check():
     """Which claims have no capture, and which captures have no URL."""
@@ -87,7 +126,8 @@ def check():
     if missing:
         print("claims with NO capture (run verify/fetch.py):")
         for m in missing:
-            print("  ", m)
+            note = f"   <- {KNOWN_UNREACHABLE[m]}" if m in KNOWN_UNREACHABLE else ""
+            print(f"    {m}{note}")
     if orphan:
         print("captures with no claim (harmless, but they are dead weight):")
         for o in sorted(orphan):
@@ -113,12 +153,37 @@ def fetch():
             out[k] = {"status": r.status, "bytes": len(b)}
         except Exception as e:
             out[k] = {"error": f"{type(e).__name__}: {str(e)[:80]}"}
+
     ok = sum(1 for v in out.values() if v.get("status") == 200)
+
+    # A URL that failed must not leave its previous capture behind, or
+    # verify/claim.py will read stale bytes and report the quote as a HIT.
+    # Deleting is the point: an absent capture is a state claim.py already
+    # reports honestly ("no capture"); a stale one is a silent lie.
+    dropped = []
+    for k, v in out.items():
+        if v.get("status") != 200:
+            p = os.path.join(PAGES, f"{k}.html")
+            if os.path.exists(p):
+                os.remove(p)
+                dropped.append(k)
+
     for k, v in sorted(out.items()):
         mark = "200" if v.get("status") == 200 else "ERR"
-        print(f"  {mark} {k:<32} {v.get('bytes', v.get('error', ''))}")
+        known = f"   <- known: {KNOWN_UNREACHABLE[k]}" if k in KNOWN_UNREACHABLE else ""
+        print(f"  {mark} {k:<32} {v.get('bytes', v.get('error', ''))}{known}")
+    if dropped:
+        print(f"\nstale capture(s) DELETED for {len(dropped)} page(s) that failed to fetch: "
+              f"{', '.join(sorted(dropped))}")
+        print("they are removed so verify/claim.py cannot report a quote as verified "
+              "against bytes that were never re-fetched")
     print(f"\n{ok}/{len(urls)} fetched")
-    return 0
+    if ok != len(urls):
+        print(f"EXIT 1: {len(urls) - ok} page(s) could not be re-fetched from this host, "
+              f"so their quotes are NOT verified here.")
+    # Non-zero unless every URL came back 200. A fetch that half fails has not
+    # verified anything for the pages that failed, and must not report success.
+    return 0 if ok == len(urls) else 1
 
 
 if __name__ == "__main__":
