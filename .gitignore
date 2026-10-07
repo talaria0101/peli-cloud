@@ -23,3 +23,12 @@ references/battleships/
 # stale silently would let the quote check pass against a page that has since
 # changed. Delete it to force a re-fetch.
 .quote-cache/
+
+# verify/pages/ holds the same kind of capture, for the same reason: the
+# first-party pages data/always-on-free.json quotes from, fetched by
+# verify/fetch.py and re-checked by verify/claim.py. They are third-party HTML
+# and are reproducible on demand, so they are build inputs rather than tracked
+# files. Deleting this directory costs one `python3 verify/fetch.py`; keeping it
+# in the tree would make every vendor page edit look like a change to this
+# repository, and would put ~3 MB of other people's markup in a 0BSD tree.
+verify/pages/

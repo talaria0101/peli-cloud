@@ -1,0 +1,141 @@
+{
+  "_comment": "Phrase -> must appear in the fetched bytes of that page, case-insensitively. Keys match verify/fetch.py, so every claim is re-fetchable by name; verify/fetch.py --check reports any key that drifts apart. Phrases avoid typographic punctuation on purpose: a literal U+00B7 read as a miss against a page serving &middot;, which is a false alarm about a quote that is in fact on the page.",
+  "oracle_alwaysfree": [
+    "1,500 OCPU hours",
+    "equivalent to 2 OCPUs and 12 GB",
+    "Idle Always Free compute instances may be reclaimed",
+    "95th percentile is less than 20%"
+  ],
+  "gcp_free": [
+    "e2-micro VM instance per month",
+    "Free Tier has no end date",
+    "by time, not by instance",
+    "GPUs and TPUs are not included"
+  ],
+  "northflank_pricing": [
+    "Always-on-compute",
+    "no sleeping"
+  ],
+  "northflank_docs_billing": [
+    "all users must add a payment method",
+    "Developer Sandbox plan"
+  ],
+  "hf_spaces_overview": [
+    "require a paid plan to create",
+    "Static Spaces are free for everyone",
+    "2 Gradio Spaces running on ZeroGPU"
+  ],
+  "hf_spaces_gpus": [
+    "go to sleep if inactive"
+  ],
+  "render_free": [
+    "spins down a Free web service",
+    "WebSocket messages from existing connections"
+  ],
+  "supabase_pricing": [
+    "paused after 1 week",
+    "500 MB"
+  ],
+  "koyeb_szt": [
+    "automatically scales down to zero",
+    "cannot be disabled"
+  ],
+  "codespaces": [
+    "120 hrs",
+    "15 GB-month"
+  ],
+  "google_cloud_shell": [
+    "12 hours",
+    "40 minutes"
+  ],
+  "azure_appservice_linux": [
+    "1.00 GB",
+    "60 CPU minutes"
+  ],
+  "cf_workers_limits": [
+    "100,000/day",
+    "10 ms"
+  ],
+  "neon_pricing": [
+    "100 CU-hrs monthly per project"
+  ],
+  "sdf_members01": [
+    "20 MB disk quota for your home directory"
+  ],
+  "sdf_members05": [
+    "2 year period",
+    "will expire if the user does not login"
+  ],
+  "blinkenshell_wiki": [
+    "non-standard port 2222",
+    "2222"
+  ],
+  "blinkenshell_rules": [
+    "No IRC bots are allowed on free accounts",
+    "not allowed to run any server/daemon on free accounts"
+  ],
+  "blinkenshell_limits": [
+    "Memory limit",
+    "128 MB"
+  ],
+  "serv00_offer": [
+    "3 GB for free"
+  ],
+  "tilde_town": [
+    "we don't open any ports"
+  ],
+  "tilde_town_autokick": [
+    "one week"
+  ],
+  "tilde_town_admin": [
+    "not monitored in any way"
+  ],
+  "tilde_green": [
+    "stay idle"
+  ],
+  "tilde_green_tos": [
+    "50 process",
+    "1gb"
+  ],
+  "ctrlc_home": [
+    "free SSH and web accounts",
+    "5 years"
+  ],
+  "ctrlc_signup": [
+    "Signups are closed for now",
+    "One gigabyte storage limit"
+  ],
+  "ctrlc_notice": [
+    "No Eggdrop bots",
+    "summarily removed"
+  ],
+  "hashbang_stats": [
+    "de1.hashbang.sh",
+    "maxusers"
+  ],
+  "hashbang_clean_lurkers": [
+    "DAYS=30",
+    "loginctl terminate-user",
+    "keep-account"
+  ],
+  "hashbang_limits": [
+    "CPUQuota=50%",
+    "MemoryLimit=512M"
+  ],
+  "modelscope_hw": [
+    "2v-cpu-8g-mem",
+    "free"
+  ],
+  "modelscope_ai_hw": [
+    "2v-cpu-16g-mem",
+    "free"
+  ],
+  "ctrlc_faq": [
+    "there are no",
+    "shared resource"
+  ],
+  "tilde_club_faq": [
+    "Soft Limit",
+    "Hard Limit"
+  ]
+}

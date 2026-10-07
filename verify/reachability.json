@@ -1,0 +1,139 @@
+{
+  "measured_from": "residential Windows host (this machine)",
+  "measured_at": "2026-10-06T12:23:02+0545",
+  "why": "peli-cloud could not dial any host: its sandbox egress proxy refuses port 22 with HTTP 403, so its census is documented-only. This runs from a residential host where port 22 is not proxied.",
+  "caveat": "A banner proves the host is up and speaking SSH. It does NOT prove a login completes, that an account can be created, or that a free tier exists. Those are separate claims requiring credentials.",
+  "summary": {
+    "total": 14,
+    "reachable": 10,
+    "banners": 9
+  },
+  "results": {
+    "sdf.org:22": {
+      "label": "SDF Public Access UNIX System",
+      "host": "sdf.org",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.4",
+      "error": null,
+      "latency_ms": 704.3
+    },
+    "freeshell.org:22": {
+      "label": "SDF (freeshell.org alias)",
+      "host": "freeshell.org",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.4",
+      "error": null,
+      "latency_ms": 648.9
+    },
+    "de1.hashbang.sh:22": {
+      "label": "hashbang #! node de1",
+      "host": "de1.hashbang.sh",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_9.2p1 Debian-2+deb12u10",
+      "error": null,
+      "latency_ms": 496.3
+    },
+    "tilde.club:22": {
+      "label": "tilde.club",
+      "host": "tilde.club",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.0",
+      "error": null,
+      "latency_ms": 560.4
+    },
+    "tilde.town:22": {
+      "label": "tilde.town",
+      "host": "tilde.town",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4",
+      "error": null,
+      "latency_ms": 702.1
+    },
+    "tilde.guru:22": {
+      "label": "tilde.guru",
+      "host": "tilde.guru",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.0 FreeBSD-20250801",
+      "error": null,
+      "latency_ms": 685.4
+    },
+    "tilde.green:22": {
+      "label": "tilde.green",
+      "host": "tilde.green",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.5p1 Debian-1",
+      "error": null,
+      "latency_ms": 535.9
+    },
+    "ctrl-c.club:22": {
+      "label": "Ctrl-C.club",
+      "host": "ctrl-c.club",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.17",
+      "error": null,
+      "latency_ms": 538.3
+    },
+    "blinkenshell.org:2222": {
+      "label": "Blinkenshell (non-standard port)",
+      "host": "blinkenshell.org",
+      "port": 2222,
+      "reachable": false,
+      "banner": "",
+      "error": "connect timeout",
+      "latency_ms": null
+    },
+    "blinkenshell.org:22": {
+      "label": "Blinkenshell (standard port, control)",
+      "host": "blinkenshell.org",
+      "port": 22,
+      "reachable": false,
+      "banner": "",
+      "error": "connect timeout",
+      "latency_ms": null
+    },
+    "tilde.zone:22": {
+      "label": "tilde.zone",
+      "host": "tilde.zone",
+      "port": 22,
+      "reachable": true,
+      "banner": "SSH-2.0-OpenSSH_10.0p2 Debian-7+deb13u4",
+      "error": null,
+      "latency_ms": 413.5
+    },
+    "ssh.alwaysdata.com:22": {
+      "label": "alwaysdata (per-account host, control)",
+      "host": "ssh.alwaysdata.com",
+      "port": 22,
+      "reachable": false,
+      "banner": "",
+      "error": "DNS: [Errno 11001] getaddrinfo failed",
+      "latency_ms": null
+    },
+    "blinkenshell.org:443": {
+      "label": "Blinkenshell (web, control)",
+      "host": "blinkenshell.org",
+      "port": 443,
+      "reachable": true,
+      "banner": "",
+      "error": "connected, no banner within timeout",
+      "latency_ms": 8203.5
+    },
+    "blinkenshell.org:6697": {
+      "label": "Blinkenshell (IRC port)",
+      "host": "blinkenshell.org",
+      "port": 6697,
+      "reachable": false,
+      "banner": "",
+      "error": "connect timeout",
+      "latency_ms": null
+    }
+  }
+}
