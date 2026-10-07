@@ -22,7 +22,7 @@ A relay cannot fix everything, and that is the whole design.
 
 **A relay cannot defeat a QUOTA wall** — a monthly compute-hour cap that exhausts regardless, a trial clock, or a paid-plan gate at creation time. Those rows are DEAD and are excluded. The figures that sort the rows are in `data["tier_note"]`:
 
-> T1, T2 and T3 all count toward the goal of an always-on free node. A relay defeats LIVENESS walls (sleep, scale-to-zero, no-inbound-ports) but cannot defeat QUOTA walls (120 core-hours, 24h caps, trial clocks, PRO gates). That distinction is the whole taxonomy.
+> T1, T2 and T3 all count toward the goal of an always-on free node. A relay defeats LIVENESS walls (sleep, scale-to-zero, no-inbound-ports) but cannot defeat QUOTA walls (60 core-hours (Codespaces' 120 hrs on a 2-core machine), 24h caps, trial clocks, PRO gates). That distinction is the whole taxonomy.
 
 So T2 and T3 are legitimate hits, not near-misses: the keepalive or the relay *is* the thing that makes them always-on. Only DEAD is a dead end.
 
@@ -172,7 +172,7 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 > Validated accounts will expire if the user does not login at least once during a 2 year period.
 - **Vendor says (quote2, VERBATIM):**
 > 20 MB disk quota for your home directory
-- **Verified:** me, 2026-10-06, quotes read from the fetched bytes at verify/pages/sdf_members05.html and sdf_members01.html; verify/claims.json holds both phrases. NOT RE-FETCHABLE FROM EVERY HOST: sdf.org returns 502/504 through some egress proxies, so on those hosts verify/claim.py reports both captures as absent. That is the honest state - the quotes were read from the bytes when they were fetched, and the bytes are not reproducible from here.
+- **Verified:** me, 2026-10-06, quotes read from the fetched bytes at verify/pages/sdf_members05.html and sdf_members01.html; verify/claims.json holds all three phrases. Re-verified 2026-10-07: both pages fetched HTTP 200 (7860 and 2972 bytes, stable across three runs) and both quotes are verbatim in the fetched bytes, so verify/claim.py reports 68 hit / 0 miss with all 35 captures present. An intermediate revision of this field claimed the bytes were 'not re-fetchable from every host' on the strength of one 502/504 pair; that was a transient upstream failure and the claim has been withdrawn.
 
 #### Blinkenshell
 
@@ -185,24 +185,24 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Vendor says (quote, RECONSTRUCTION - 18 fragments joined by `|`, not one contiguous quote):**
 > Type | Free account limit | Supporter account limit | Memory usage (RSS) | 128 MB | 256 MB | Number of open files | 128 | 128 | Number of processes | 100 | 100 | SSH sessions | 6 | 6 | Background processes | 2 | 5
   - _Fragments:_
-  - 1. `Type` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+18 more: this fragment is that common, so it is weak evidence on its own)
+  - 1. `Type` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+12 more: this fragment is that common, so it is weak evidence on its own)
   - 2. `Free account limit` -> `verify/pages/blinkenshell_limits.html`
   - 3. `Supporter account limit` -> `verify/pages/blinkenshell_limits.html`
   - 4. `Memory usage (RSS)` -> `verify/pages/blinkenshell_limits.html`
   - 5. `128 MB` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html`
   - 6. `256 MB` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/northflank_pricing.html`
   - 7. `Number of open files` -> `verify/pages/blinkenshell_limits.html`
-  - 8. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+4 more: this fragment is that common, so it is weak evidence on its own)
-  - 9. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+4 more: this fragment is that common, so it is weak evidence on its own)
+  - 8. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
+  - 9. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
   - 10. `Number of processes` -> `verify/pages/blinkenshell_limits.html`
-  - 11. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+14 more: this fragment is that common, so it is weak evidence on its own)
-  - 12. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+14 more: this fragment is that common, so it is weak evidence on its own)
+  - 11. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+9 more: this fragment is that common, so it is weak evidence on its own)
+  - 12. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+9 more: this fragment is that common, so it is weak evidence on its own)
   - 13. `SSH sessions` -> `verify/pages/blinkenshell_limits.html`
-  - 14. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+28 more: this fragment is that common, so it is weak evidence on its own)
-  - 15. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+28 more: this fragment is that common, so it is weak evidence on its own)
+  - 14. `6` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+8 more: this fragment is that common, so it is weak evidence on its own)
+  - 15. `6` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+8 more: this fragment is that common, so it is weak evidence on its own)
   - 16. `Background processes` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html`
-  - 17. `2` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+29 more: this fragment is that common, so it is weak evidence on its own)
-  - 18. `5` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
+  - 17. `2` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+18 more: this fragment is that common, so it is weak evidence on its own)
+  - 18. `5` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+13 more: this fragment is that common, so it is weak evidence on its own)
 - **Vendor says (quote2, VERBATIM):**
 > No IRC bots are allowed on free accounts. (Available on Supporter Account only) You are not allowed to run any server/daemon on free accounts. This includes bouncers. (Available on Supporter Account only)
 - **Verified:** me, 2026-10-06 - fetched https://blinkenshell.org/docs/resource-limits/ and https://blinkenshell.org/docs/rules/ directly (both 200, under verify/pages/ as blinkenshell_limits and blinkenshell_rules) and read the Free column of the limits table cell by cell. The Free/Supporter table IS on /docs/resource-limits/; an earlier revision attributed it to the wiki root, which carries no table at all.
@@ -384,7 +384,7 @@ Nothing below was overcome in practice. Each wall is one a relay or a keepalive 
 |---|---|
 | **Neon — Free Postgres** | 100 CU-hrs/month per project, and the vendor's own page prices an always-on database above it: 'Once scale to zero is disabled, the minimum CU-hours a database can use in a month is about 182.5 (about 730 hours in a month x 0.25 minimum CU size)'. 'At 0.25 CU… |
 | **Railway Free VM** | 60-minute build window, then a 24-hour claim countdown. Unclaimed boxes and their files are DELETED. Claiming moves the box into an account where it bills normally. Anonymous trials can also be disabled under demand. |
-| **GitHub Codespaces (GitHub Free personal)** | 120 hrs of 2-core compute per month. One always-on 2-core codespace dies after ~5 days. At exhaustion, without a payment method, RESUME IS BLOCKED rather than billed. |
+| **GitHub Codespaces (GitHub Free personal)** | 120 hrs/month of 2-core compute, which is 60 wall-clock hours because GitHub's own pricing table gives a 2-core machine an "Included usage multiplier" of 2 per hour. One always-on 2-core codespace therefore dies after ~2.5 days, not 5. At exhaustion, without … |
 | **Google Cloud Shell** | 12-hour absolute session cap AND a 40-minute inactivity termination, plus a 50-hour weekly quota. Two independent walls. |
 | **Modal Sandbox** | 24-hour absolute Sandbox lifetime cap, regardless of credit. Plus a 60-second default idle scaledown_window. |
 | **AWS Free Tier** | $200 of credit over 6 months, and the account CLOSES ITSELF when the credits run out or at 6 months, whichever comes first. The old 750-hour t2.micro/t3.micro always-free offer is gone. |

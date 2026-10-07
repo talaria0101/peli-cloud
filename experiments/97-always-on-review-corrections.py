@@ -100,6 +100,52 @@ def row(doc, rid):
 def apply(doc):
     changed = []
 
+    # 0. GitHub Codespaces: the 120 hrs is core-hours, not wall-clock hours, so
+    #    an always-on 2-core codespace dies in 2.5 days rather than 5.
+    #
+    #    The cited page carries BOTH halves and they are 2x apart. The free-tier
+    #    table's column is "Compute time per month | 120 hrs", and the same
+    #    page's pricing table gives the "Included usage multiplier" of a 2-core
+    #    machine as 2 per hour. So one wall-clock hour of a 2-core codespace
+    #    consumes 2 units of that 120: 120/2 = 60 hours = 2.5 days. Reading the
+    #    120 as wall-clock gives 5 days and is wrong by exactly 2x.
+    #
+    #    tier_note quotes the same 120 as "core-hours" in its list of quota
+    #    walls, so it was right there and wrong on the row. Corrected in all
+    #    three places rather than one, because a number that is right in the
+    #    note and wrong on the row is how a reader ends up believing both.
+    codes = row(doc, "github-codespaces")
+    _wall = ("120 hrs/month of 2-core compute, which is 60 wall-clock hours "
+             "because GitHub's own pricing table gives a 2-core machine an "
+             "\"Included usage multiplier\" of 2 per hour. One always-on 2-core "
+             "codespace therefore dies after ~2.5 days, not 5. At exhaustion, "
+             "without a payment method, RESUME IS BLOCKED rather than billed.")
+    if "~2.5 days" not in (codes.get("hard_wall") or ""):
+        codes["hard_wall"] = _wall
+        changed.append("github-codespaces: hard_wall 120 hrs -> 60 wall-clock hours (~2.5 days, was ~5)")
+    _cav = ("CORRECTION TO THE LAUNCH BASE IN THE OTHER DIRECTION: peli-cloud "
+            "demoted this row because its 120-hour quote 'did not survive being "
+            "fetched'. The quote IS on the exact page the base cites, in a table. "
+            "The base's demotion was wrong. The row is still not an always-on box, "
+            "and the reason is that 120 hrs - CORE-hours, not wall-clock hours, "
+            "because a 2-core machine carries a 2x usage multiplier on the same "
+            "page - is about 2.5 days of uptime. An earlier revision of this row "
+            "read the 120 as wall-clock and said 5 days, which is 2x too long. "
+            "Also: Codespaces auto-stops after a retention period of inactivity "
+            "(default 30 days).")
+    if "usage multiplier" not in (codes.get("caveats") or ""):
+        codes["caveats"] = _cav
+        changed.append("github-codespaces: caveats 120 core-hours -> 2x usage multiplier, ~2.5 days")
+    # The guard was inverted: it tested for the string it was about to insert.
+    # A correction that can only run once and then reports nothing is a
+    # correction that cannot be re-applied, which is what "idempotent" has to
+    # mean for it to be useful.
+    if "120 core-hours" in doc.get("tier_note", ""):
+        doc["tier_note"] = doc["tier_note"].replace(
+            "120 core-hours",
+            "60 core-hours (Codespaces' 120 hrs on a 2-core machine)")
+        changed.append("tier_note: 120 core-hours -> 60 core-hours for the Codespaces example")
+
     # 1. neon-free: a quota that exhausts, not a liveness wall.
     neon = row(doc, "neon-free")
     if neon["tier"] != "DEAD":

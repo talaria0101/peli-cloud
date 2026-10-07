@@ -120,6 +120,52 @@ def _squash(s):
     return re.sub(r"\s+", "", s)
 
 
+# A fragment shorter than this is matched on WORD BOUNDARIES, not as a bare
+# substring, and a fragment that is only a short token is reported as
+# uninformative rather than as evidence.
+#
+# Measured, and this is a correctness fix rather than cosmetics. Blinkenshell's
+# table quote has cells `6` and `5`, and locate() was substring-matching them
+# across all 35 captures: `6` matched 31 of them, because it is a substring of
+# any number containing a 6 and of any hex UUID. Two of the captures are
+# ModelScope API responses carrying a random `request_id` UUID, so a fresh fetch
+# produced a new UUID, the count moved from 31 to 32, and the rendered page's
+# "(+28 more)" became "(+29 more)". The committed page could not be reproduced
+# from a live fetch, and tools/check-rendered-page.py failed on a clean clone
+# for a reason that had nothing to do with the census. Isolated by swapping only
+# those two UUIDs back, which restored both counts.
+#
+# So: a bare digit is not a quotation of anything. `\b6\b` does not match inside
+# a UUID, inside `1,500`, or inside `26`. A fragment that survives that test but
+# is still shorter than the floor is reported as present-but-uninformative,
+# which is the truth: `6` does appear in blinkenshell_limits, and that fact does
+# not identify a page.
+FRAGMENT_FLOOR_CHARS = 8
+WORD_RE_CACHE = {}
+
+
+def _word_regex(fragment):
+    """A fragment as a word-boundary pattern, cached.
+
+    Every alphanumeric run is escaped and then the WHOLE thing is wrapped in
+    \\b...\\b, so `6` becomes `\\b6\\b`, `128` becomes `\\b128\\b`, and `2v-cpu-8g-mem`
+    becomes `\\b2v\\b-\\bcpu\\b-\\b8g\\b-\\bmem\\b`. An earlier version put \\b
+    between each run, which is wrong in both directions: `\\b6\\b` built that way
+    still matched `ipv6` on one side and nothing at all on the other.
+
+    A fragment with no alphanumeric run cannot be bounded, so it is matched
+    literally.
+    """
+    rx = WORD_RE_CACHE.get(fragment)
+    if rx is None:
+        if re.search(r"[0-9A-Za-z]", fragment):
+            rx = re.compile(r"\b" + re.escape(fragment) + r"\b")
+        else:
+            rx = re.compile(re.escape(fragment))
+        WORD_RE_CACHE[fragment] = rx
+    return rx
+
+
 def capture_texts():
     """stem -> text for every capture under verify/pages/, or {} if there are
     none. verify/pages/ is gitignored: a fresh clone has none, and a renderer
@@ -133,27 +179,42 @@ def capture_texts():
 
 
 def _fragment_fraction(fragment, text):
+    """Fraction of the fragment's 4-grams present in the text.
+
+    A fragment shorter than NGRAM words is decided by a word-boundary match
+    rather than by `in`. That is the same reason FRAGMENT_FLOOR_CHARS exists:
+    `fragment in text` on a bare digit finds it inside a UUID.
+    """
     words = fragment.split()
     if len(words) < NGRAM:
-        return 1.0 if fragment in text else 0.0
+        return 1.0 if _word_regex(fragment).search(text) else 0.0
     grams = [" ".join(words[i:i + NGRAM]) for i in range(len(words) - NGRAM + 1)]
-    return sum(1 for g in grams if g in text) / len(grams)
+    return sum(1 for g in grams if _word_regex(g).search(text)) / len(grams)
 
 
 def locate(fragment, texts):
     """Capture names whose bytes contain this fragment, verbatim or by n-gram.
 
-    Capped by the caller, and the cap is reported rather than hidden. A
-    one-word cell like `128` or `6` is in twenty captures, and printing all
-    twenty per fragment turned one attribution line into several kilobytes of
-    noise that buried the one fact a reader wants: whether the fragment was
-    found at all.
+    Short fragments are matched on word boundaries rather than as substrings,
+    because `6` as a substring is found in 31 of 35 captures including two
+    random UUIDs, and a page whose numbers move on every fetch is not
+    reproducible. See FRAGMENT_FLOOR_CHARS for the measurement.
+
+    Capped by the caller, and the cap is reported rather than hidden. A cell like
+    `128 MB` is still in several captures, and printing all of them per fragment
+    turned one attribution line into several kilobytes of noise that buried the
+    one fact a reader wants: whether the fragment was found at all.
     """
     want = fragment.lower()
     sq = _squash(want)
+    # The squash path is what forgives whitespace for a long fragment. It is not
+    # used for a short one: squashing `6` yields `6`, which is still a substring
+    # of a UUID, and squashing `a b c` yields `abc`, which is a substring of
+    # `gitlabci`. So a short fragment is decided by the word-boundary path alone.
+    squash_ok = len(want) >= FRAGMENT_FLOOR_CHARS
     hits = []
     for stem, text in texts.items():
-        if sq and sq in _squash(text):
+        if squash_ok and sq and sq in _squash(text):
             hits.append(stem)
         elif _fragment_fraction(want, text) >= MIN_FRACTION:
             hits.append(stem)

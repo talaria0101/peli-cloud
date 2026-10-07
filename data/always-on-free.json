@@ -13,7 +13,7 @@
     "DEAD": "Hard wall. Nothing a relay or keepalive fixes: a quota that exhausts regardless, a trial clock, a paid-plan gate on CREATION, or an account that self-closes.",
     "UNVERIFIED": "Not counted. The shape looks right but no first-party page could be fetched, so it is recorded rather than claimed."
   },
-  "tier_note": "T1, T2 and T3 all count toward the goal of an always-on free node. A relay defeats LIVENESS walls (sleep, scale-to-zero, no-inbound-ports) but cannot defeat QUOTA walls (120 core-hours, 24h caps, trial clocks, PRO gates). That distinction is the whole taxonomy.",
+  "tier_note": "T1, T2 and T3 all count toward the goal of an always-on free node. A relay defeats LIVENESS walls (sleep, scale-to-zero, no-inbound-ports) but cannot defeat QUOTA walls (60 core-hours (Codespaces' 120 hrs on a 2-core machine), 24h caps, trial clocks, PRO gates). That distinction is the whole taxonomy.",
   "counts": {
     "DEAD": 18,
     "T1": 5,
@@ -186,7 +186,7 @@
       "source": "http://sdf.org/?faq?MEMBERS?05",
       "quote": "Validated accounts will expire if the user does not login at least once during a 2 year period.",
       "quote2": "20 MB disk quota for your home directory",
-      "verified_by": "me, 2026-10-06, quotes read from the fetched bytes at verify/pages/sdf_members05.html and sdf_members01.html; verify/claims.json holds both phrases. NOT RE-FETCHABLE FROM EVERY HOST: sdf.org returns 502/504 through some egress proxies, so on those hosts verify/claim.py reports both captures as absent. That is the honest state - the quotes were read from the bytes when they were fetched, and the bytes are not reproducible from here.",
+      "verified_by": "me, 2026-10-06, quotes read from the fetched bytes at verify/pages/sdf_members05.html and sdf_members01.html; verify/claims.json holds all three phrases. Re-verified 2026-10-07: both pages fetched HTTP 200 (7860 and 2972 bytes, stable across three runs) and both quotes are verbatim in the fetched bytes, so verify/claim.py reports 68 hit / 0 miss with all 35 captures present. An intermediate revision of this field claimed the bytes were 'not re-fetchable from every host' on the strength of one 502/504 pair; that was a transient upstream failure and the claim has been withdrawn.",
       "caveats": "A SHARED HOST, NOT A PRIVATE VM - tens of thousands of users share one kernel. RETIERED FROM T1: T1 is defined as 'no expiry', and this row carries a 2-year login expiry plus a keepalive, which is the file's own definition of T2. The 2-year expiry was also described here as 'the gentlest idle policy in the census', which was a claim about the other rows and was not this row's to make. Login expiry runs at ~600 days for prevalidated accounts. Live banner read by verify/probe.py (SSH-2.0-OpenSSH_10.4)."
     },
     {
@@ -457,13 +457,13 @@
       "name": "GitHub Codespaces (GitHub Free personal)",
       "tier": "DEAD",
       "category": "devbox",
-      "hard_wall": "120 hrs of 2-core compute per month. One always-on 2-core codespace dies after ~5 days. At exhaustion, without a payment method, RESUME IS BLOCKED rather than billed.",
+      "hard_wall": "120 hrs/month of 2-core compute, which is 60 wall-clock hours because GitHub's own pricing table gives a 2-core machine an \"Included usage multiplier\" of 2 per hour. One always-on 2-core codespace therefore dies after ~2.5 days, not 5. At exhaustion, without a payment method, RESUME IS BLOCKED rather than billed.",
       "spec": "2-core / 8 GB / 32 GB default dev container; up to 32-core / 128 GB paid. 15 GB-month storage.",
       "cost": "0 then blocked",
       "source": "https://docs.github.com/en/billing/concepts/product-billing/github-codespaces",
       "quote": "Account plan | Storage per month | Compute time per month | GitHub Free for personal accounts | 15 GB-month | 120 hrs",
       "verified_by": "me, 2026-10-06 — page fetched HTTP 200, 196324 bytes; the table row is present in the fetched bytes at verify/pages/codespaces.html",
-      "caveats": "CORRECTION TO THE LAUNCH BASE IN THE OTHER DIRECTION: peli-cloud demoted this row because its 120-core-hour quote 'did not survive being fetched'. The quote IS on the exact page the base cites, in a table. The base's demotion was wrong. The row is still not an always-on box — 120 core-hours is the reason. Also: Codespaces auto-stops after a retention period of inactivity (default 30 days)."
+      "caveats": "CORRECTION TO THE LAUNCH BASE IN THE OTHER DIRECTION: peli-cloud demoted this row because its 120-hour quote 'did not survive being fetched'. The quote IS on the exact page the base cites, in a table. The base's demotion was wrong. The row is still not an always-on box, and the reason is that 120 hrs - CORE-hours, not wall-clock hours, because a 2-core machine carries a 2x usage multiplier on the same page - is about 2.5 days of uptime. An earlier revision of this row read the 120 as wall-clock and said 5 days, which is 2x too long. Also: Codespaces auto-stops after a retention period of inactivity (default 30 days)."
     },
     {
       "id": "google-cloud-shell",

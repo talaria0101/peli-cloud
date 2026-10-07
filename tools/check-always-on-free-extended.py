@@ -498,9 +498,36 @@ def quote_faults(row, caps, on_disk):
     checkable = on_disk_named + [n for n in on_disk_source if n not in on_disk_named]
 
     for field in present:
-        name, strategy = match_quote(row[field], caps)
+        # A row that HAS its own captures is held to them. Searching the union
+        # of all 35 captures and accepting any hit is how Oracle's A1 sentence
+        # ended up quoted under "Google Cloud Free Tier - Compute Engine
+        # e2-micro", with every gate green: the quote was found, just in the
+        # wrong provider's page. Measured as an attack and NOT caught before
+        # this clause.
+        #
+        # The rule is therefore: own captures first, and a hit outside them is
+        # a finding that names the foreign capture. Where the row has no
+        # capture of its own - a research-pass row with none, which is honestly
+        # labelled - the union search still runs and a hit is still a hit,
+        # because there is nothing to hold it to and failing it would fail an
+        # honestly-carried row for someone else's evidence.
+        own = {n: caps[n] for n in checkable if n in caps}
+        name, strategy = match_quote(row[field], own)
         if name:
             traces.append(f"{rid}.{field} -> {name} ({strategy})")
+            continue
+        foreign, how = match_quote(row[field], caps)
+        if foreign and foreign not in own:
+            fails.append(
+                f"{rid}.{field}: the quote is traceable only to "
+                f"verify/pages/{foreign}.html, which is NOT this row's capture "
+                f"(its own is {', '.join(sorted(own)) or 'none on disk'}); it "
+                f"matches by {how}, so the row is quoting another provider's page"
+            )
+            traces.append(f"{rid}.{field} -> {foreign} ({how}) FOREIGN")
+            continue
+        if foreign:
+            traces.append(f"{rid}.{field} -> {foreign} ({how})")
             continue
         if not checkable:
             notes.append(
