@@ -402,6 +402,13 @@ def main(argv):
             print("    run it yourself: %s" % hand_command(gate, None))
             if gate.get("reads_captures"):
                 print("    this gate reads verify/pages/ (%s)" % captures)
+                print("    On a host WITH the captures this gate is meaningful; here")
+                print("    it is being asked a question it cannot answer. It is left")
+                print("    in REQUIRED deliberately: a reader who has run "
+                      "`python3 verify/fetch.py`")
+                print("    and still sees this fail has a real problem, and that "
+                      "signal is worth more")
+                print("    than a green tick from a gate that skipped its own work.")
             for line in excerpt(out):
                 print("    | %s" % line)
         if opt_bad:
