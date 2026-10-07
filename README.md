@@ -177,6 +177,8 @@ shell on for nothing, and what it actually takes:
     sh      tests/ssh-relay-regressions.sh                # 11 clauses; each names the control it needs
     sh      tests/one-login.sh <name>                     # one login, passwd name drivable (PASSWD_NAME=<n>)
 
+    python3 tools/check-all.py                             # ALL of the above that is python, one pass
+
 [`docs/ANONYMOUS-VMS.md`](docs/ANONYMOUS-VMS.md) carries 26 rows: **15 free or
 anonymous machines that a provider says answer SSH, 6 of them dialled and
 banner-verified, 1 genuinely anonymous.** Railway's free VM is the only row
@@ -230,13 +232,27 @@ or a tunnel actually does, not a way of padding a list. Every T2 row names its
 keepalive and every T3 row names its relay, and the guard fails a row that
 claims one without naming it.
 
+    python3 verify/fetch.py                         # FIRST. Re-fetch the vendor pages; the gates below
+    #                                            read verify/pages/, which is gitignored, and the
+    #                                            renderer writes CAPTURES ABSENT without it.
+    python3 tools/check-all.py                     # every gate in this repo, one pass
     python3 tools/check-always-on-free.py           # guard the census
     python3 tools/check-always-on-free.py --mutate  # prove the guard can fail (13/13)
     python3 tools/check-always-on-free-extended.py  # is every quote in a capture? (19/19 mutations)
     python3 tools/render-always-on-free.py          # write docs/ALWAYS-ON-FREE.md
     python3 tools/check-rendered-page.py            # the committed page is what the renderer writes
     python3 verify/probe.py                         # dial the hosts, read their SSH banners
-    python3 verify/claim.py                         # every quote, against the bytes it came from
+    python3 verify/claim.py                         # every phrase, against the bytes it came from
+
+`verify/fetch.py` is first because the order matters and getting it wrong is
+silent: run the renderer on a fresh clone and it replaces 30 attribution lines
+with `CAPTURES ABSENT`, exits 0, and leaves you with a corrupted page. The page
+in `docs/ALWAYS-ON-FREE.md` says so in its own Reproduce block now.
+
+`tools/check-all.py` exists because at one point there were a dozen gates and
+nothing said which to run. It reports each gate's own exit code unpiped and
+separates a gate that could not run from one that ran and failed, so a red
+result on a host without captures is legible rather than permanent.
 
 Two things that page is careful about, for the same reason the anonymous census
 is:

@@ -418,13 +418,17 @@ Stated plainly, because a census that hides its gaps is worse than no census.
 ## Reproduce
 
 ```sh
+python verify/fetch.py                         # FIRST: re-fetch the vendor pages. The gates
+                                               # below read verify/pages/, which is gitignored, and
+                                               # the renderer writes CAPTURES ABSENT without it -
+                                               # so run this before them or you will rewrite this page.
+python tools/check-all.py                       # every gate in the repo, one pass, exit codes unpiped
 python tools/check-always-on-free.py           # guard the census
 python tools/check-always-on-free.py --mutate  # prove the guard can fail (13/13)
 python tools/render-always-on-free.py          # rewrite this page from the JSON
 python tools/check-rendered-page.py            # the committed page matches this renderer
 python tools/check-rendered-page.py --mutate  # prove that gate can fail (12/12)
-python verify/fetch.py                         # re-fetch the vendor pages
-python verify/claim.py                        # every quote, against the bytes it came from
+python verify/claim.py                        # every phrase, against the bytes it came from
 python verify/fetch.py --check                # is every capture re-fetchable by name?
 ```
 
