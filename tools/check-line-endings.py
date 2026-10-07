@@ -36,8 +36,22 @@ def tracked_files():
     out = subprocess.run(["git", "ls-files", "-z"], cwd=ROOT,
                          capture_output=True)
     if out.returncode != 0:
-        return None, "git ls-files failed; is this a git repository?"
-    return [f for f in out.stdout.decode("utf-8").split("\0") if f], None
+        # Two different situations produce this, and they need different words.
+        # A `git archive` extraction has no .git, so there is no index to ask
+        # and no tracked-file list exists to check - that is "could not run",
+        # exit 2. Everything else is a broken repository.
+        if not os.path.isdir(os.path.join(ROOT, ".git")):
+            return None, ("this is not a git working tree (no .git), so there is "
+                          "no tracked-file list to check. Clone the repository "
+                          "rather than extracting `git archive`, or run this "
+                          "inside a checkout.")
+        return None, ("git ls-files failed inside a git working tree; the "
+                      "repository is in a state this tool cannot read")
+    files = [f for f in out.stdout.decode("utf-8").split("\0") if f]
+    if not files:
+        return None, ("git ls-files returned nothing, so either the repository "
+                      "is empty or this is not its root")
+    return files, None
 
 
 def main():
