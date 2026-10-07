@@ -114,6 +114,101 @@ def apply(doc):
     #    walls, so it was right there and wrong on the row. Corrected in all
     #    three places rather than one, because a number that is right in the
     #    note and wrong on the row is how a reader ends up believing both.
+    hf = row(doc, "hf-spaces-zerogpu")
+    # The row was counted T3 on the strength of "a Space can host an app with a
+    # public URL", while its own spec and its own keepalive field both say the
+    # GPU quota exhausts regardless: "5 minutes of GPU per day". tier_note is
+    # explicit that a relay cannot defeat a quota wall, so a counted row whose
+    # spec carries one is the exact case the taxonomy excludes.
+    #
+    # Found by widening QUOTA_UNITS to cover the per-day form the list had
+    # missed. It matched "hours per month" but not "minutes of GPU per day",
+    # which is how a row stating a lethal quota in its own words passed.
+    if hf.get("tier") == "T3":
+        hf["tier"] = "UNVERIFIED"
+        changed.append("hf-spaces-zerogpu: T3 -> UNVERIFIED (own spec: 5 minutes of GPU per day)")
+    hf.pop("keepalive", None)
+    hf["relay"] = None
+    hf["hard_wall"] = (
+        "5 minutes of GPU per day, per the row's own spec. That is a quota, and "
+        "tier_note says a relay cannot defeat a quota wall, so the GPU is not a "
+        "persistent resource on a free account regardless of how the Space is "
+        "reached."
+    )
+    hf["verified_by"] = (
+        "me, 2026-10-07 - page fetched HTTP 200, quote read from fetched bytes at "
+        "verify/pages/hf_spaces_overview.html; the 48h sleep figure was read from "
+        "hf_spaces_gpus.html. The 5-minutes-of-GPU-per-day figure is NOT in either "
+        "capture, which is why this row is no longer counted: its own claim of "
+        "being always-on rests on a quota with no first-party evidence here."
+    )
+    hf["caveats"] = (
+        "DEMOTED ON REVIEW. The free CPU Basic Space that the launch base lists as a "
+        "durable free row now REQUIRES PRO (huggingface/hub-docs@34ee0f00, "
+        "2026-07-21), so what survives on a free account is Static Spaces (no "
+        "runtime) and up to 2 ZeroGPU Spaces. ZeroGPU is not an always-on "
+        "substrate: the row's own spec states 5 minutes of GPU per day, and a "
+        "quota cannot be kept alive by any relay. The 48h sleep figure IS in the "
+        "captures; the GPU quota is not, so the row is recorded rather than "
+        "counted. Dev Mode SSH is PRO-only."
+    )
+
+    pw = row(doc, "pythonanywhere")
+    # Settled on first-party evidence. /user/ still 404s, so the earlier pass had
+    # no bytes at all; /pricing/ is HTTP 200 and carries the free plan twice:
+    # as a visible plan-builder page, and as an embedded JSON config. The config
+    # is machine-readable rather than rendered prose, so verify/claim.py cannot
+    # quote it - it lives inside a <script>, which claim.py strips on purpose.
+    # The figures below were read out of that blob and are recorded as such.
+    #
+    # The config says max_always_on_tasks = 0 and daily_cpu_limit_seconds = 100.
+    # The census row had claimed "scheduled tasks are the supported persistence
+    # mechanism", which the vendor's own data contradicts: the free plan has no
+    # always-on tasks at all. 100 CPU-seconds a day will not hold a node up, and
+    # a quota is a wall no relay fixes, so DEAD is the tier the evidence forces.
+    if pw.get("tier") != "DEAD":
+        pw["tier"] = "DEAD"
+        changed.append("pythonanywhere: UNVERIFIED -> DEAD (100 CPU-s/day, max_always_on_tasks=0)")
+    pw["keepalive"] = None
+    pw["relay"] = None
+    pw["hard_wall"] = (
+        "100 CPU-seconds per day and zero always-on tasks. Both figures are in "
+        "the vendor's own page, in the free-plan config it serves at "
+        "https://www.pythonanywhere.com/pricing/ : "
+        "\"daily_cpu_limit_seconds\": 100 and \"max_always_on_tasks\": 0. A "
+        "100-second daily budget cannot hold a node up, and a quota is exactly "
+        "what tier_note says no relay defeats."
+    )
+    pw["spec"] = ("Free plan: 1 web app, 1 uwsgi worker, 512 MB (0.5 GB) private "
+                  "file storage, 100 CPU-seconds per day, and max_always_on_tasks "
+                  "= 0. No SSH.")
+    pw["source"] = "https://www.pythonanywhere.com/pricing/"
+    pw["quote"] = (
+        "CPU time per day: seconds"
+    )
+    pw["verified_by"] = (
+        "me, 2026-10-07 - page fetched HTTP 200 and captured as "
+        "verify/pages/pythonanywhere_pricing.html; verify/claims.json checks four "
+        "visible phrases from it. The free-plan FIGURES were read out of the JSON "
+        "config the page embeds, which lives inside a <script> and is therefore "
+        "stripped by verify/claim.py - machine-readable data, not quotable prose, "
+        "and recorded as such rather than smuggled in as a quotation. /user/ "
+        "still returns HTTP 404."
+    )
+    pw["caveats"] = (
+        "SETTLED, AND IT DOES NOT CLEAR THE BAR. An earlier revision left this "
+        "UNVERIFIED because /user/ 404s, and kept three claims it could not "
+        "support - a keepalive ('scheduled tasks are the supported persistence "
+        "mechanism'), a relay ('free accounts get a private subdomain only'), and "
+        "no wall. They could not all be true. The vendor's own pricing page "
+        "settles it: the free plan has max_always_on_tasks = 0, so there are no "
+        "scheduled or always-on tasks to schedule, and daily_cpu_limit_seconds = "
+        "100. DEAD on the quota. The page is a plan builder whose free column is "
+        "assembled client-side, so the numbers a reader sees on screen and the "
+        "numbers in the embedded config are the same source."
+    )
+    changed.append("pythonanywhere: hard_wall set from the vendor's own free-plan config")
+
     codes = row(doc, "github-codespaces")
     _wall = ("120 hrs/month of 2-core compute, which is 60 wall-clock hours "
              "because GitHub's own pricing table gives a 2-core machine an "

@@ -81,6 +81,12 @@ urls = {
     "google_cloud_shell": "https://cloud.google.com/shell/docs/limitations",
     "serv00_offer": "https://serv00.com/pricing",
     "neon_pricing": "https://neon.com/pricing",
+    # PythonAnywhere: /user/ 404s, so the earlier pass had no first-party bytes
+    # at all and the row sat UNVERIFIED with three claims it could not support.
+    # /pricing/ is HTTP 200 and carries the free plan as an embedded JSON config,
+    # which is the machine-readable half of the page rather than the plan
+    # builder a reader sees.
+    "pythonanywhere_pricing": "https://www.pythonanywhere.com/pricing/",
     "modelscope_hw": "https://modelscope.cn/openapi/v1/studios/hardware",
     "modelscope_ai_hw": "https://modelscope.ai/openapi/v1/studios/hardware",
     # --- free UNIX shells, incl. the deployed config the quotes come from ---

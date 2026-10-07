@@ -42,22 +42,31 @@ not "what is cheap") and is guarded separately:
 | `tools/check-rendered-page.py` | is `docs/ALWAYS-ON-FREE.md` still what the renderer would write, with every count re-derived from the data and every banner and quote attributed to a capture? | python3 (`verify/pages/` for two of its five clauses) |
 | `tools/check-rendered-page.py --mutate` | can that gate on the rendered page actually fail? | `96` not required; it refuses to run at all without `verify/pages/` |
 | `verify/probe.py` | dial the free-shell hosts and read their SSH banners from a host that can reach port 22 | network |
-| `verify/claim.py` | do the 68 phrases in `verify/claims.json` still appear in the captures `verify/fetch.py` already downloaded? | python3, and `verify/pages/` populated by `verify/fetch.py` |
+| `verify/claim.py` | do the 72 phrases in `verify/claims.json` still appear in the captures `verify/fetch.py` already downloaded? | python3, and `verify/pages/` populated by `verify/fetch.py` |
 | `tools/check-all.py` | run every gate in this repo in one pass and print each one's own exit code, reporting the gates that cannot pass here instead of counting them as defects | python3 |
 
 `verify/claim.py` is a phrase lookup against a capture store, and it is much
-narrower than the row above can make it look. It reads the 68 phrases in
+narrower than the row above can make it look. It reads the 72 phrases in
 `verify/claims.json` and finds each one in the HTML `verify/fetch.py` already
-downloaded; it fetches nothing itself, and on a host that cannot reach
-`sdf.org` it cannot check the three phrases on those two pages, so it exits 1
-there and the count that moves with the host is the number of captures that host
-has. Those 68 phrases were chosen by hand and are not generated from the
-census, so their coverage is uneven by construction: 21 of the 36 rows in
-`data/always-on-free.json` that carry a quote have a phrase drawn from their own
-quote, and 15 have none. Twelve of those 15 ship no capture at all, so nothing
-could have matched them. The other three, `neon-free`,
-`oracle-e2-micro-alwaysfree` and `render-postgres-free`, do have a capture that
-contains their quote and no phrase pointing at it.
+downloaded; it fetches nothing itself. On a host that cannot reach a vendor it
+exits 1, and the count that moves with the host is the number of captures that
+host has - which is the correct behaviour and the reason the count is a
+measurement rather than a constant. (An earlier revision of this paragraph named
+`sdf.org` as the host that could not be reached. It could; the limitation was a
+single 502/504 pair, and every one of its 72 phrases verifies here.)
+
+Those 72 phrases were chosen by hand and are not generated from the census, so
+their coverage is uneven by construction: of the 37 rows in
+`data/always-on-free.json` that carry a quote, 28 have a phrase drawn from their
+own quote and 9 have none - and all 9 of those 9 are rows that ship no capture at
+all, so nothing could have matched them. That is the honest shape of the gap: the
+rows `verify/claims.json` does not cover are the rows with no bytes to check.
+
+`tools/check-always-on-free-extended.py` closes most of that gap from the other
+direction. It reads the quotes themselves out of `data/always-on-free.json`
+rather than a hand-written phrase list, so a row whose quote is not in
+`verify/claims.json` is still checked, and it reports the rows it cannot check
+as UNVERIFIABLE with exit 0 rather than passing them silently.
 
 So a green `verify/claim.py` is a statement about 68 sentences somebody chose,
 not about the 36 quotes in the census. The quotes themselves are checked by

@@ -15,10 +15,10 @@
   },
   "tier_note": "T1, T2 and T3 all count toward the goal of an always-on free node. A relay defeats LIVENESS walls (sleep, scale-to-zero, no-inbound-ports) but cannot defeat QUOTA walls (60 core-hours (Codespaces' 120 hrs on a 2-core machine), 24h caps, trial clocks, PRO gates). That distinction is the whole taxonomy.",
   "counts": {
-    "DEAD": 18,
+    "DEAD": 19,
     "T1": 5,
     "T2": 8,
-    "T3": 7,
+    "T3": 6,
     "UNVERIFIED": 2
   },
   "rows": [
@@ -283,19 +283,20 @@
     {
       "id": "pythonanywhere",
       "name": "PythonAnywhere",
-      "tier": "UNVERIFIED",
+      "tier": "DEAD",
       "category": "shared-hosting",
       "account_required": true,
       "card_required": false,
-      "spec": "Free tier: one web app, one bash console, 512 MB storage. CPU-seconds metered daily on the free tier.",
+      "spec": "Free plan: 1 web app, 1 uwsgi worker, 512 MB (0.5 GB) private file storage, 100 CPU-seconds per day, and max_always_on_tasks = 0. No SSH.",
       "idle_or_session_limit": "daily CPU-seconds quota on the free tier; web app domain is yours permanently on free.",
-      "keepalive": "scheduled tasks are the supported persistence mechanism",
-      "relay": "free accounts get a private subdomain only — an outbound tunnel is the reachable path",
+      "keepalive": null,
+      "relay": null,
       "cost": "0",
-      "source": "https://www.pythonanywhere.com/",
-      "quote": null,
-      "verified_by": "NOT VERIFIED BY ME — my fetch of /user/ returned HTTP 404; these figures come from a research pass and are unconfirmed",
-      "caveats": "NOT COUNTED TOWARD THE GOAL. Moved to its own tier because a row I could not verify should not inflate the count. The shape (bash console + scheduled tasks + a private subdomain) would make it T3 if confirmed, but I fetched /user/ and got HTTP 404, so the free tier's current quota, RAM and idle policy are all unconfirmed. Fetch https://www.pythonanywhere.com/pricing/ to resolve it."
+      "source": "https://www.pythonanywhere.com/pricing/",
+      "quote": "CPU time per day: seconds",
+      "verified_by": "me, 2026-10-07 - page fetched HTTP 200 and captured as verify/pages/pythonanywhere_pricing.html; verify/claims.json checks four visible phrases from it. The free-plan FIGURES were read out of the JSON config the page embeds, which lives inside a <script> and is therefore stripped by verify/claim.py - machine-readable data, not quotable prose, and recorded as such rather than smuggled in as a quotation. /user/ still returns HTTP 404.",
+      "caveats": "SETTLED, AND IT DOES NOT CLEAR THE BAR. An earlier revision left this UNVERIFIED because /user/ 404s, and kept three claims it could not support - a keepalive ('scheduled tasks are the supported persistence mechanism'), a relay ('free accounts get a private subdomain only'), and no wall. They could not all be true. The vendor's own pricing page settles it: the free plan has max_always_on_tasks = 0, so there are no scheduled or always-on tasks to schedule, and daily_cpu_limit_seconds = 100. DEAD on the quota. The page is a plan builder whose free column is assembled client-side, so the numbers a reader sees on screen and the numbers in the embedded config are the same source.",
+      "hard_wall": "100 CPU-seconds per day and zero always-on tasks. Both figures are in the vendor's own page, in the free-plan config it serves at https://www.pythonanywhere.com/pricing/ : \"daily_cpu_limit_seconds\": 100 and \"max_always_on_tasks\": 0. A 100-second daily budget cannot hold a node up, and a quota is exactly what tier_note says no relay defeats."
     },
     {
       "id": "alwaysdata-free",
@@ -317,19 +318,19 @@
     {
       "id": "hf-spaces-zerogpu",
       "name": "Hugging Face Spaces — ZeroGPU (free allowance)",
-      "tier": "T3",
+      "tier": "UNVERIFIED",
       "category": "notebook-studio",
       "account_required": true,
       "card_required": false,
       "spec": "Free personal accounts in good standing (verified email, account older than 30 days) can host up to 2 ZeroGPU Spaces. 'large' = half an RTX PRO 6000 Blackwell, 48 GB VRAM; 'xlarge' = the full card, 96 GB. Gradio SDK only. 5 minutes of GPU per day.",
       "idle_or_session_limit": "48 hours of inactivity before the Space sleeps. Confirmed server-side: HF's runtime API reports gcTimeout 172800 on live Spaces, and the official client refuses space_sleep_time on cpu-basic.",
-      "keepalive": "unclear whether polling defeats the 48h timer, and the GPU quota (5 min/day) exhausts regardless — so the GPU is not a persistent resource",
-      "relay": "a Space can host an app with a public URL; an outbound tunnel to a free relay service is the reachable path",
+      "relay": null,
       "cost": "0",
       "source": "https://huggingface.co/docs/hub/en/spaces-overview",
       "quote": "Gradio and Docker Spaces run on compute and require a paid plan to create: PRO for personal accounts, Team or Enterprise for organizations. Free personal accounts in good standing can still host up to 2 Gradio Spaces running on ZeroGPU.",
-      "verified_by": "me, 2026-10-06 — page fetched HTTP 200, 222896 bytes, quote read from fetched bytes at verify/pages/hf_spaces_overview.html; the 48h sleep read from hf_spaces_gpus.html (HTTP 200, 221818 bytes)",
-      "caveats": "MAJOR CORRECTION TO BOTH THE LAUNCH BASE AND THE USER'S PREMISE: the free CPU Basic Space (2 vCPU / 16 GB) that the launch base lists as a durable free row now REQUIRES PRO. The docs commit that moved it is huggingface/hub-docs@34ee0f00 (2026-07-21). What survives on a free account is Static Spaces (no runtime at all) and up to 2 ZeroGPU Spaces. Dev Mode SSH is PRO-only. So the launch base's 'Hugging Face Spaces (CPU), 2 vCPU/16 GB, free' row is no longer buildable on the tier it claims."
+      "verified_by": "me, 2026-10-07 - page fetched HTTP 200, quote read from fetched bytes at verify/pages/hf_spaces_overview.html; the 48h sleep figure was read from hf_spaces_gpus.html. The 5-minutes-of-GPU-per-day figure is NOT in either capture, which is why this row is no longer counted: its own claim of being always-on rests on a quota with no first-party evidence here.",
+      "caveats": "DEMOTED ON REVIEW. The free CPU Basic Space that the launch base lists as a durable free row now REQUIRES PRO (huggingface/hub-docs@34ee0f00, 2026-07-21), so what survives on a free account is Static Spaces (no runtime) and up to 2 ZeroGPU Spaces. ZeroGPU is not an always-on substrate: the row's own spec states 5 minutes of GPU per day, and a quota cannot be kept alive by any relay. The 48h sleep figure IS in the captures; the GPU quota is not, so the row is recorded rather than counted. Dev Mode SSH is PRO-only.",
+      "hard_wall": "5 minutes of GPU per day, per the row's own spec. That is a quota, and tier_note says a relay cannot defeat a quota wall, so the GPU is not a persistent resource on a free account regardless of how the Space is reached."
     },
     {
       "id": "koyeb-free-instance",

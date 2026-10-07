@@ -607,8 +607,10 @@ DEADLINE = re.compile(
 )
 QUOTA_UNITS = re.compile(
     r"hrs/|hours?\s*(?:per|/|a\s+)\s*(?:day|month|week|year)|"
-    r"cu-?hrs?\b|core[- ]hours?\b|cpu[- ]minutes?\b|instance[- ]hours?\b|"
-    r"gb[- ]?months?\b|ocpu[- ]h\b|\$/mo\s*credit",
+    r"cu-?hrs?\b|core[- ]hours?\b|cpu[- ]minutes?\b|instance[- ]?hours?\b|"
+    r"gb[- ]?months?\b|ocpu[- ]h\b|\$/mo\s*credit|"
+    r"minutes?\s*(?:of\s+\w+\s+)?per\s+(?:day|week|month|year)|"
+    r"minutes?\s+of\s+(?:cpu|gpu|compute)\b",
     re.I,
 )
 
@@ -706,6 +708,26 @@ def tier_faults(row):
     fails = []
     rid = row.get("id", "<no id>")
     tier = row.get("tier")
+
+    # UNVERIFIED is not counted, so it is exempt from the quota rule: a row
+    # nobody could confirm may well carry a quota, and failing it would punish
+    # honesty. It is NOT exempt from coherence. Measured: an UNVERIFIED row given
+    # keepalive, relay AND hard_wall at once passed every clause, and the three
+    # tier definitions cannot be true together - UNVERIFIED means "recorded
+    # rather than claimed", a keepalive means "always-on with a keepalive", and
+    # a hard_wall means "nothing fixes this". Two of those contradict the tier.
+    if tier == "UNVERIFIED":
+        contradictory = [f for f in ("keepalive", "relay", "hard_wall")
+                         if row.get(f)]
+        if len(contradictory) >= 2:
+            fails.append(
+                f"{rid}: tier UNVERIFIED means 'recorded rather than claimed', "
+                f"but the row also carries {', '.join(contradictory)} - those "
+                f"are claims about what defeats the row, and they contradict "
+                f"each other and the tier"
+            )
+        return fails
+
     if tier not in COUNTABLE and tier != "DEAD":
         return fails
 

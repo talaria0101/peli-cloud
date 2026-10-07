@@ -1,6 +1,6 @@
 # Always-on free compute, 2026-10-06
 
-**20 of 40 rows hold up indefinitely at $0.** The starting corpus was [talaria0101/peli-cloud](https://github.com/talaria0101/peli-cloud), read before this census was written. Its own account of what it found, from `data["launch_base"]["note"]`:
+**19 of 40 rows hold up indefinitely at $0.** The starting corpus was [talaria0101/peli-cloud](https://github.com/talaria0101/peli-cloud), read before this census was written. Its own account of what it found, from `data["launch_base"]["note"]`:
 
 > peli-cloud's own docs/ANONYMOUS-VMS.md records ZERO rows that survive a strict always-on test. Its 6 banner-verified rows are shared public shells, and the machine rows it does carry (Railway, Codespaces, Fly, Koyeb) all fail on quota or expiry. This file exists because that page is a census of shells, not of persistent compute.
 
@@ -14,8 +14,8 @@ A relay cannot fix everything, and that is the whole design.
 |---|---|---|
 | **T1** | Always-on as-is. No idle sleep, no hard session cap, no login expiry or archival. Nothing needs doing to keep it. | 5 |
 | **T2** | Always-on WITH A KEEPALIVE, or with an expiry long enough to schedule. Sleeps, scales to zero, is reclaimed when idle, or archives after a stated period of silence - but a periodic login, a held WebSocket, cron, or light sustained CPU defeats it. Each row names the exact keepalive. | 8 |
-| **T3** | NEEDS A RELAY. Runs fine but is unreachable: no inbound ports, egress restrictions, or browser-only. An outbound-initiated tunnel or held WebSocket to a free relay service makes it reachable. | 7 |
-| **DEAD** | Hard wall. Nothing a relay or keepalive fixes: a quota that exhausts regardless, a trial clock, a paid-plan gate on CREATION, or an account that self-closes. | 18 |
+| **T3** | NEEDS A RELAY. Runs fine but is unreachable: no inbound ports, egress restrictions, or browser-only. An outbound-initiated tunnel or held WebSocket to a free relay service makes it reachable. | 6 |
+| **DEAD** | Hard wall. Nothing a relay or keepalive fixes: a quota that exhausts regardless, a trial clock, a paid-plan gate on CREATION, or an account that self-closes. | 19 |
 | **UNVERIFIED** | Not counted. The shape looks right but no first-party page could be fetched, so it is recorded rather than claimed. | 2 |
 
 **A relay defeats a LIVENESS wall** — idle sleep, scale-to-zero, no-inbound-ports, browser-only. You keep the machine alive, or you tunnel out of it, and it becomes reachable forever.
@@ -32,8 +32,8 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 
 | evidence weight | rows | means |
 |---|---|---|
-| first-hand | 23 | I fetched the page and read the quote out of the bytes |
-| carried | 17 | a research pass fetched it; the row says so, and names which parts I did not check |
+| first-hand | 24 | I fetched the page and read the quote out of the bytes |
+| carried | 16 | a research pass fetched it; the row says so, and names which parts I did not check |
 
 "First-hand" means the bytes were read, **not** that an account was created. No account exists anywhere in this census. The live probe below is the only measurement here that touches a real host.
 
@@ -195,14 +195,14 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
   - 8. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
   - 9. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
   - 10. `Number of processes` -> `verify/pages/blinkenshell_limits.html`
-  - 11. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+9 more: this fragment is that common, so it is weak evidence on its own)
-  - 12. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+9 more: this fragment is that common, so it is weak evidence on its own)
+  - 11. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+10 more: this fragment is that common, so it is weak evidence on its own)
+  - 12. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+10 more: this fragment is that common, so it is weak evidence on its own)
   - 13. `SSH sessions` -> `verify/pages/blinkenshell_limits.html`
   - 14. `6` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+8 more: this fragment is that common, so it is weak evidence on its own)
   - 15. `6` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+8 more: this fragment is that common, so it is weak evidence on its own)
   - 16. `Background processes` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html`
-  - 17. `2` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+18 more: this fragment is that common, so it is weak evidence on its own)
-  - 18. `5` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+13 more: this fragment is that common, so it is weak evidence on its own)
+  - 17. `2` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+19 more: this fragment is that common, so it is weak evidence on its own)
+  - 18. `5` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+14 more: this fragment is that common, so it is weak evidence on its own)
 - **Vendor says (quote2, VERBATIM):**
 > No IRC bots are allowed on free accounts. (Available on Supporter Account only) You are not allowed to run any server/daemon on free accounts. This includes bouncers. (Available on Supporter Account only)
 - **Verified:** me, 2026-10-06 - fetched https://blinkenshell.org/docs/resource-limits/ and https://blinkenshell.org/docs/rules/ directly (both 200, under verify/pages/ as blinkenshell_limits and blinkenshell_rules) and read the Free column of the limits table cell by cell. The Free/Supporter table IS on /docs/resource-limits/; an earlier revision attributed it to the wiki root, which carries no table at all.
@@ -320,19 +320,6 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
   - 5. `CPU 1/4` -> NO CONTIGUOUS MATCH in any capture under `verify/pages/`
 - **Verified:** research pass, first-party fetch
 
-#### Hugging Face Spaces — ZeroGPU (free allowance)
-
-- **What you get:** Free personal accounts in good standing (verified email, account older than 30 days) can host up to 2 ZeroGPU Spaces. 'large' = half an RTX PRO 6000 Blackwell, 48 GB VRAM; 'xlarge' = the full card, 96 GB. Gradio SDK only. 5 minutes of GPU per day.
-- **The wall:** 48 hours of inactivity before the Space sleeps. Confirmed server-side: HF's runtime API reports gcTimeout 172800 on live Spaces, and the official client refuses space_sleep_time on cpu-basic.
-- **The keepalive:** unclear whether polling defeats the 48h timer, and the GPU quota (5 min/day) exhausts regardless — so the GPU is not a persistent resource
-- **The relay:** a Space can host an app with a public URL; an outbound tunnel to a free relay service is the reachable path
-- **Account:** sign-up required = True, card required = False
-- **Caveat:** MAJOR CORRECTION TO BOTH THE LAUNCH BASE AND THE USER'S PREMISE: the free CPU Basic Space (2 vCPU / 16 GB) that the launch base lists as a durable free row now REQUIRES PRO. The docs commit that moved it is huggingface/hub-docs@34ee0f00 (2026-07-21). What survives on a free account is Static Spaces (no runtime at all) and up to 2 ZeroGPU Spaces. Dev Mode SSH is PRO-only. So the launch base's 'Hugging Face Spaces (CPU), 2 vCPU/16 GB, free' row is no longer buildable on the tier it claims.
-- **Source:** <https://huggingface.co/docs/hub/en/spaces-overview>
-- **Vendor says (quote, VERBATIM):**
-> Gradio and Docker Spaces run on compute and require a paid plan to create: PRO for personal accounts, Team or Enterprise for organizations. Free personal accounts in good standing can still host up to 2 Gradio Spaces running on ZeroGPU.
-- **Verified:** me, 2026-10-06 — page fetched HTTP 200, 222896 bytes, quote read from fetched bytes at verify/pages/hf_spaces_overview.html; the 48h sleep read from hf_spaces_gpus.html (HTTP 200, 221818 bytes)
-
 #### Koyeb — Free Instance
 
 - **What you get:** 1 vCPU share (0.1 vCPU), 512 MB RAM, 2 GB SSD, volumes_enabled: false. Regions fra and was only.
@@ -382,6 +369,7 @@ Nothing below was overcome in practice. Each wall is one a relay or a keepalive 
 
 | Provider | the hard wall |
 |---|---|
+| **PythonAnywhere** | 100 CPU-seconds per day and zero always-on tasks. Both figures are in the vendor's own page, in the free-plan config it serves at https://www.pythonanywhere.com/pricing/ : "daily_cpu_limit_seconds": 100 and "max_always_on_tasks": 0. A 100-second daily budget … |
 | **Neon — Free Postgres** | 100 CU-hrs/month per project, and the vendor's own page prices an always-on database above it: 'Once scale to zero is disabled, the minimum CU-hours a database can use in a month is about 182.5 (about 730 hours in a month x 0.25 minimum CU size)'. 'At 0.25 CU… |
 | **Railway Free VM** | 60-minute build window, then a 24-hour claim countdown. Unclaimed boxes and their files are DELETED. Claiming moves the box into an account where it bills normally. Anonymous trials can also be disabled under demand. |
 | **GitHub Codespaces (GitHub Free personal)** | 120 hrs/month of 2-core compute, which is 60 wall-clock hours because GitHub's own pricing table gives a 2-core machine an "Included usage multiplier" of 2 per hour. One always-on 2-core codespace therefore dies after ~2.5 days, not 5. At exhaustion, without … |

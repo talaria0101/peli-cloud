@@ -137,5 +137,11 @@
   "tilde_club_faq": [
     "Soft Limit",
     "Hard Limit"
+  ],
+  "pythonanywhere_pricing": [
+    "cpu time per day",
+    "number of web apps",
+    "private file storage",
+    "create a developer account"
   ]
 }

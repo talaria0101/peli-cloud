@@ -18,7 +18,7 @@ each in their own table, and every row linking to the page its numbers came from
 | ten minutes | [docs/CATALOGUE.md](docs/CATALOGUE.md) in full |
 | to buy something | table C, then the duty cycle that matches your agent |
 | **a shell with no card and no account** | **[docs/ANONYMOUS-VMS.md](docs/ANONYMOUS-VMS.md)** |
-| **a machine that stays UP at $0, indefinitely** | **[docs/ALWAYS-ON-FREE.md](docs/ALWAYS-ON-FREE.md)** - 20 counted rows, tiered by which wall they have |
+| **a machine that stays UP at $0, indefinitely** | **[docs/ALWAYS-ON-FREE.md](docs/ALWAYS-ON-FREE.md)** - 19 counted rows, tiered by which wall they have |
 | **what that census could not settle** | **[docs/ALWAYS-ON-OPEN-QUESTIONS.md](docs/ALWAYS-ON-OPEN-QUESTIONS.md)** |
 | **to doubt the census** | **[research/deep-reviews-anon-vms.md](research/deep-reviews-anon-vms.md)** - five reviews; three of them removed rows |
 | **an SSH session into this sandbox from outside** | **[research/verification/ssh-relay-2026-10-02.md](research/verification/ssh-relay-2026-10-02.md)**, then `sh tools/ssh-relay-check.sh` |
@@ -213,7 +213,7 @@ process the next morning; a machine that never sleeps may carry a monthly quota
 that runs out on the twentieth. Neither fact shows up in a table of "free tiers".
 
 [`docs/ALWAYS-ON-FREE.md`](docs/ALWAYS-ON-FREE.md) prices neither, and holds
-neither: it records **20 counted rows across 19 independent providers whose
+neither: it records **19 counted rows across 18 independent providers whose
 machine stays up indefinitely at $0**, out of 40 rows in all (two of the counted
 rows are the same Oracle tenancy, so they are one provider and are not counted
 twice),
@@ -232,7 +232,7 @@ claims one without naming it.
 
     python3 tools/check-always-on-free.py           # guard the census
     python3 tools/check-always-on-free.py --mutate  # prove the guard can fail (13/13)
-    python3 tools/check-always-on-free-extended.py  # is every quote in a capture? (14/14 mutations)
+    python3 tools/check-always-on-free-extended.py  # is every quote in a capture? (19/19 mutations)
     python3 tools/render-always-on-free.py          # write docs/ALWAYS-ON-FREE.md
     python3 tools/check-rendered-page.py            # the committed page is what the renderer writes
     python3 verify/probe.py                         # dial the hosts, read their SSH banners

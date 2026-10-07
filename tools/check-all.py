@@ -28,14 +28,18 @@ The untrackable ones are therefore OPTIONAL: reported, with the reason they
 could not pass, and counted only under --strict.
 
 On the specific case this was written for: verify/claim.py and
-verify/fetch.py --check exit 1 here because 2 of the 35 claims
-(sdf_members01, sdf_members05) have no capture in verify/pages/. That is an
-absent evidence store, not a broken guard. verify/fetch.py:110-113 records the
-cause in KNOWN_UNREACHABLE - "sdf.org does not resolve through some egress
-proxies (502/504 observed)" - and `check` prints that note beside each claim it
-cannot account for. This script does NOT assert that sdf.org is unreachable
-from wherever you are reading this: it reports what it measured, which is which
-claims have no capture, and points at fetch.py for the rest.
+verify/fetch.py --check exit 1 on a host that cannot reach every vendor. That
+is an absent evidence store, not a broken guard, so it is reported rather than
+counted. This script does NOT assert which pages are unreachable from wherever
+you are reading this: it reports what it measured, which is which claims have no
+capture, and `verify/fetch.py` prints the reason beside each one.
+
+An earlier version of this paragraph named sdf.org specifically, citing
+verify/fetch.py's KNOWN_UNREACHABLE. Both were wrong and both have been removed:
+the limitation was a single 502/504 pair that turned out to be transient, and
+KNOWN_UNREACHABLE is now empty on purpose. A script that names a specific cause
+in its own documentation sends a reader debugging a capture failure after
+something that has already been disproved.
 
 WHAT "COULD NOT RUN" MEANS, AND WHY --strict IS THE ANSWER
 

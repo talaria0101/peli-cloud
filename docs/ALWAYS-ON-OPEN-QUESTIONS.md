@@ -58,8 +58,8 @@ in the tildeverse: *"we don't mind if you register and stay idle."*
 
 ## What the last pass changed, and what it left measured
 
-Four rows were re-tiered by `experiments/97-always-on-review-corrections.py`.
-The counted total moved 22 -> 20.
+Seven rows were re-tiered by `experiments/97-always-on-review-corrections.py`.
+The counted total moved 22 -> 19.
 
 | row | was | now | why |
 | --- | --- | --- | --- |
@@ -67,9 +67,15 @@ The counted total moved 22 -> 20.
 | `neon-free` | T2 | **DEAD** | its own cited page prices an always-on database at ~182.5 CU-hours/month against a 100 CU-hour allowance |
 | `sdf-free-shell` | T1 | **T2** | carries a 2-year login expiry and a keepalive, and T1 is defined as "no expiry" |
 | `ctrl-c-club` | T1 | **T2** | archives accounts idle 5 years or more, which is an expiry |
+| `hf-spaces-zerogpu` | T3 | **UNVERIFIED** | its own spec says 5 minutes of GPU per day, and a quota is not defeated by any relay |
+| `pythonanywhere` | UNVERIFIED | **DEAD** | the vendor's own free-plan config sets `max_always_on_tasks` to 0 and `daily_cpu_limit_seconds` to 100 |
+
+The last two were found by a deep review that attacked the guard rather than
+reading the data: widening the quota-unit pattern to the per-day form it had
+missed made two rows fail on their own text, and both failures were true.
 
 Counts after the correction, from `python3 tools/check-always-on-free.py`
-(exit 0): 40 rows, 20 counted, `DEAD=18 T1=5 T2=8 T3=7 UNVERIFIED=2`.
+(exit 0): 40 rows, 19 counted, `DEAD=19 T1=5 T2=8 T3=6 UNVERIFIED=2`.
 
 **How many rows carry no capture.** The census has 13 rows whose `verified_by`
 quotes a byte count, in 15 byte-counted `(row, page)` pairs, and 23 rows
@@ -278,8 +284,9 @@ whether the console ever reclaimed it. **Re-check by 2026-11-07.**
 
 ### 9. Ingress was never completed
 
-The probe read a **banner** from 8 hosts. No login was attempted, because no
-account exists. A banner proves the host speaks SSH; it does not prove
+The probe read a **banner** from 9 endpoints, which is 9 hostnames but 8
+distinct operators: `sdf.org` and `freeshell.org` are the same host under two
+names. No login was attempted, because no account exists. A banner proves the host speaks SSH; it does not prove
 credentials work, that signup is open, or that a free tier exists.
 
 **Route:** create one T1 account and one T3 account, dial both from here.
@@ -291,67 +298,78 @@ build string as tilde.town. Not counted as a free shell: a banner is not
 evidence of a free tier, and no operator page was found. **Route:** find the
 operator, or a signup path, on the host itself.
 
-### 11. `sdf.org` captures are not reproducible from every host
+### 11. `sdf.org` was unreachable once, and the limitation has been withdrawn
 
-`sdf-free-shell` is labelled `read` and its quotes were read from real bytes.
-But `sdf_members01` and `sdf_members05` are in `verify/fetch.py`'s
-`KNOWN_UNREACHABLE` set, because sdf.org returns 502/504 through some egress
-proxies. On this host both are absent, so:
+**Resolved 2026-10-07. Nothing is open here.** An earlier revision recorded
+`sdf_members01` and `sdf_members05` in `verify/fetch.py`'s
+`KNOWN_UNREACHABLE` set on the strength of a single 502/504 pair, and this
+section carried the limitation forward as fact.
 
-- `python3 verify/fetch.py --check` exits **1**, 2 claims with no capture.
-- `python3 verify/claim.py` exits **1** with the same 2 problems, after
-  reporting 65 hits and 0 misses.
+Three consecutive fetches minutes later returned HTTP 200 for both pages (7860
+and 2972 bytes, byte-identical each run), both quotes are verbatim in the
+fetched bytes, and with all 35 captures present:
 
-That is the correct behaviour, recorded here so the exit-1 is not later
-mistaken for a broken quote. **Route:** re-fetch from a host whose egress
-resolves sdf.org and diff the captures. **Unknown:** which host classes can and
-cannot reach it.
+- `python3 verify/fetch.py` -> `35/35 fetched`, exit 0
+- `python3 verify/claim.py` -> `68 hit, 0 miss, 0 pages with no capture`, exit 0
+- `python3 verify/fetch.py --check` -> `35 claims, 35 captures`, exit 0
 
-### 12. PythonAnywhere: the free tier is readable now, and it does not clear the bar
+`KNOWN_UNREACHABLE` is now empty on purpose. A transient failure recorded as a
+standing limitation outlives its cause and is inherited by a later session as
+current; here it also marked two verifiable rows unverifiable on every host that
+could verify them.
 
-The route in the earlier revision of this file was to fetch `/pricing/`, because
-`/user/` returns HTTP 404. I did that on 2026-10-07 and the page is readable
-(HTTP 200, 35790 bytes), so the row's figures can be checked rather than taken
-on a research pass. `/user/` still 404s.
+**Route to reopen:** if a fetch fails, read the status and body before writing
+down why. Nothing here is a property of any host class.
 
-The free plan's column says: 1 web app, 1 web worker, up to 2 consoles, **no**
-SSH, **no** scheduled tasks, **no** always-on tasks, no MySQL, **100 CPU
-seconds/day**, low bandwidth, **512MB** private storage. The page's own embedded
-config agrees independently: `"free": {"daily_cpu_limit_seconds": 100,
-"disk_space_gb": 0.5, "max_webapps": 1, "uwsgi_workers": 1,
-"max_always_on_tasks": 0, ...}`.
+### 12. PythonAnywhere: settled on first-party evidence, and it is DEAD
 
-Not captured in `verify/pages/`, because I do not own the evidence store and
-adding a key to `verify/fetch.py` is outside this file. **These figures are
-unverified by this repository's pipeline** until someone captures them.
+**Closed 2026-10-07.** The earlier route was to fetch `/pricing/`, because
+`/user/` returns HTTP 404 and the row had no bytes at all. `/pricing/` is HTTP
+200, and the free plan appears there twice: as a visible plan-builder page, and
+as a JSON config the page embeds.
 
-**What this changes:** the row cannot become T3 on the strength of scheduled
-tasks, because the free plan says there are none. The census row's `keepalive:
-"scheduled tasks are the supported persistence mechanism"` is contradicted by
-the vendor's own table, and 100 CPU seconds/day will not sustain an always-on
-node. **Route:** capture `/pricing/`, then re-tier the row to DEAD on the CPU
-allowance, which is a quota wall. **Unknown:** whether the console itself
-persists between browser sessions with no scheduled task. **Re-check by
-2026-11-07.**
+The config is the machine-readable half, and it is unambiguous:
 
-## Found while checking, not fixed here
+    "free": {"daily_cpu_limit_seconds": 100, "disk_space_gb": 0.5,
+             "max_webapps": 1, "uwsgi_workers": 1,
+             "max_always_on_tasks": 0, "postgres_enabled": false,
+             "postgres_disk_space_gb": 1}
 
-- **`tools/check-always-on-free-extended.py:54` is stale.** Its docstring says
-  `neon-free is counted T2 today while its own cited page carries a 100 CU-hr
-  monthly allowance` (lines 54-56). `neon-free` is DEAD as of `d83f415`, so the
-  example predates the correction. The clause it describes is still a correct
-  rule; only the worked example is out of date.
-- **Branch `pr1` still carries the wrong Blinkenshell row** (item 4). It is not
-  an ancestor of `main`, so a dead branch rather than a live defect.
+Two of those numbers decide the row. `max_always_on_tasks` is **0**, so there
+are no scheduled or always-on tasks to schedule, and the census row's claim that
+"scheduled tasks are the supported persistence mechanism" was contradicted by the
+vendor's own data. `daily_cpu_limit_seconds` is **100**, a daily budget that will
+not hold a node up, and a quota is a wall no relay defeats. The row is DEAD.
 
-## Re-check cadence
+Captured as `verify/pages/pythonanywhere_pricing.html`, with four visible
+phrases in `verify/claims.json`. The two figures above are **not** in that
+phrase list, and the reason is worth recording: the config lives inside a
+`<script>` block, which `verify/claim.py` strips on purpose because script
+contents are not rendered text. A quotation drawn from a script blob would be a
+quotation of something a reader cannot see on the page. They are machine-readable
+data and are labelled as such rather than smuggled in as prose.
 
-The free-tier market turns over fast -- Hugging Face moved CPU Spaces behind PRO
-on 2026-07-21, and the launch base's Oracle figure was stale by 2x. Treat this
-as a snapshot with a **90-day shelf life**, so **2027-01-05** counted from the
-2026-10-06 open date. Re-run `python verify/fetch.py` and
-`python verify/probe.py` after that.
+**Unknown:** whether the browser console itself persists between sessions with no
+scheduled task. That is the one thing the config does not answer, and it does not
+change the verdict - 100 CPU-seconds a day is the wall either way.
 
-Item 2 asks whether 90 days is even the right interval for byte counts, and the
-answer is not known. One re-fetch cannot separate vendor-side noise from a typed
-figure that is simply wrong.
+## Found while checking, now fixed
+
+Both of these were reported by a deep review and both were fixed in
+`58f88a1` and the commit after it. They are kept here because a reader
+comparing this file against an older revision will hit them.
+
+- **`tools/check-always-on-free-extended.py`'s worked example was stale.** Its
+  docstring said `neon-free is counted T2 today`, which was true when written and
+  wrong after the correction. Corrected, along with the oracle example that
+  claimed the row failed its quota clause when it fits (1,488 against 1,500
+  OCPU-h), and three places that still said 17 DEAD rows when there are 19.
+
+- **A quoted limitation outlived its cause.** `sdf.org` was recorded as
+  unreachable from one 502/504 pair and the note was carried forward as fact by
+  three files at once. See section 11.
+
+- **`tools/check-all.py` described the withdrawn sdf limitation in its own
+  docstring**, quoting a `KNOWN_UNREACHABLE` entry that no longer exists. A
+  reader debugging a capture failure would have been sent after a cause that had
+  been disproved.
