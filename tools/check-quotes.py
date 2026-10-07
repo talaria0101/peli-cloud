@@ -167,7 +167,7 @@ def main():
     argv = sys.argv[1:]
     offline = "--offline" in argv
     ids = [a for a in argv if not a.startswith("--")]
-    rows = json.load(open(DATA))["rows"]
+    rows = json.load(open(DATA, encoding="utf-8"))["rows"]
     if ids:
         rows = [r for r in rows if r["id"] in ids]
 

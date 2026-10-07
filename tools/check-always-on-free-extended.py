@@ -7,7 +7,7 @@ whether a quote is TRUTHY, never whether it is REAL:
 
   oracle-a1-alwaysfree.quote   -> a fabricated sentence       PASSES
   a T2 row promoted to T1, keepalive and counts made consistent   PASSES
-  all 17 DEAD rows deleted, counts made consistent                PASSES
+  all DEAD rows deleted, counts made consistent                   PASSES
   gcp-e2-micro.source           -> https://example.com/not-real PASSES
   a "research pass" row relabelled first-hand                    PASSES
   a DEAD row's quote set to null                                 PASSES
@@ -51,9 +51,14 @@ here. Its clauses are not restated, only extended.
      QUOTA unit in spec or idle_or_session_limit: tier_note says a relay
      defeats liveness and networking walls but "cannot defeat QUOTA walls
      (120 core-hours, 24h caps, trial clocks, PRO gates)", so a row whose own
-     spec admits a monthly cap is not a row a relay rescues. neon-free is
-     counted T2 today while its own cited page carries a 100 CU-hr monthly
-     allowance.
+     spec admits a monthly cap is not a row a relay rescues. neon-free WAS
+     counted T2 on exactly this reasoning and its own cited page put a 24/7
+     database at ~182.5 CU-hr against a 100 CU-hr allowance; commit 940fb87
+     moved it to DEAD. A quota unit is not by itself a wall, though: see
+     quota_arithmetic(), because the two rows that quote an allowance larger
+     than their own usage (oracle 1,488 against 1,500 OCPU-h, render 744
+     against 750 instance-hours) fit, and failing them would be noise that
+     trains a reader to skip this clause.
 
   3. PROVENANCE HONESTY. A verified_by that starts with "me, " claims a human
      read bytes off a first-party page. That claim must resolve to a capture
@@ -70,9 +75,11 @@ here. Its clauses are not restated, only extended.
      is something a human can eyeball in a second and a regex cannot certify.
 
   5. ROW INVENTORY. The row ids are pinned to MANIFEST below. Without it,
-     deleting all 17 DEAD rows is invisible: the counted floor still holds and
-     the declared counts can be made consistent, which is exactly what a
-     mutation does. A census that can be quietly emptied is not a census.
+     deleting the DEAD rows is invisible: the counted floor still holds and the
+     declared counts can be made consistent, which is exactly what a mutation
+     does. A census that can be quietly emptied is not a census. (The DEAD count
+     is 18, not the 17 an earlier comment here said; this file's comments were
+     written before 940fb87 moved neon-free from T2 to DEAD.)
 
 WHAT IS *NOT* A FAILURE HERE - the distinction this file exists to keep
 
@@ -271,6 +278,29 @@ def folded(text):
     return _WS.sub("", _flatten(text)).lower()
 
 
+# Whitespace-forgiveness is not a licence to quote three letters. Measured on
+# the shipped corpus: `a b c` folds to `abc` and was ACCEPTED inside `gitlabci`
+# in cf_workers_limits, and `to to` folds to `toto` and was ACCEPTED inside
+# `backtotop` in blinkenshell_limits. Two of twelve invented quotes passed
+# because of it. Every shipped FOLDED quote is long, so this floor changes no
+# verdict on real data and closes the hole.
+#
+# 32 characters with no whitespace is roughly four words, which is below the
+# 4-gram rule this same file applies to contiguous text and above the 3-word
+# table-cell fragments that legitimately have no whitespace.
+FOLDED_MIN_CHARS = 32
+
+# A quote shorter than this is not accepted as VERBATIM on a substring hit
+# alone. Same measurement, different route: `to to` is a contiguous substring of
+# `backtotop` in blinkenshell_limits, so it matched VERBATIM and the fold floor
+# could not see it. Two floors, because there are two routes in.
+#
+# The real defence against a short quote is having a real quote: every shipped
+# counted row's primary quote is far longer than this, so no real row is
+# affected. What it removes is the ability to certify a two-word string.
+VERBATIM_MIN_CHARS = 24
+
+
 def _fragments(text, splitter):
     """Every fragment of a spliced quote, and whether any is long enough to
     count as evidence on its own.
@@ -322,10 +352,14 @@ def match_quote(quote, captures):
     if not isinstance(quote, str) or not quote.strip():
         return None, None
     fq = flat(quote)
-
-    for name, body in captures.items():
-        if fq in body["flat"]:
-            return name, "verbatim"
+    # A short quote can be a substring of an unrelated word - `to to` is a
+    # contiguous run inside `backtotop` - so a short string is not accepted as
+    # VERBATIM on containment alone. Every shipped counted row's primary quote is
+    # far longer than this, so no real row is affected.
+    if len(fq) >= VERBATIM_MIN_CHARS:
+        for name, body in captures.items():
+            if fq in body["flat"]:
+                return name, "verbatim"
     for splitter, strategy in ((_TABLE_SPLIT, "table"), (_ELISION, "elision")):
         parts = _reconstruction_parts(fq, splitter)
         if not parts:
@@ -334,9 +368,13 @@ def match_quote(quote, captures):
             if all(p in body["flat"] for p in parts):
                 return name, strategy
     fold_q = folded(quote)
-    for name, body in captures.items():
-        if fold_q and fold_q in body["folded"]:
-            return name, "folded"
+    # The floor is checked here rather than inside folded(), because folded() is
+    # also used to normalise the CAPTURES, where a short body legitimately folds
+    # to a short string. Only the quote side is held to the floor.
+    if fold_q and len(fold_q) >= FOLDED_MIN_CHARS:
+        for name, body in captures.items():
+            if fold_q in body["folded"]:
+                return name, "folded"
     return None, None
 
 
@@ -494,8 +532,12 @@ def quote_faults(row, caps, on_disk):
 # spelling in the same two families: "CU-hr"/"CU-hrs", "core-hours",
 # "CPU-minutes", "instance-hours", "GB-month", "hrs/", "hours per month",
 # "$/mo credit", and "OCPU-h" (Oracle's own spelling, spec line of
-# oracle-a1-alwaysfree). Adding OCPU-h is why oracle-a1-alwaysfree fails this
-# clause on shipped data; it is reported, not suppressed.
+# oracle-a1-alwaysfree). A first version of this file failed any counted row
+# naming a quota unit, which failed oracle-a1-alwaysfree (1,500 OCPU-h) and
+# render (750 instance-hours). Both FIT: 2 OCPU x 744 h = 1,488 against 1,500,
+# and the longest month is 744 h against 750. quota_arithmetic() now checks the
+# numbers instead of the vocabulary, and neither row fails on shipped data. An
+# earlier comment here said oracle failed this clause; it does not.
 EXPIRY_PHRASES = re.compile(
     r"expir|retention|archiv|purge|self-clos|login[- ]expir|account[- ]clos", re.I
 )
@@ -1011,7 +1053,7 @@ MUTATIONS = [
      _m_source_placeholder, "reserved placeholder host"),
     ("clause 4: give a counted row a non-http source",
      _m_source_not_http, "source is not an http(s) URL"),
-    ("clause 5: delete all 17 DEAD rows, counts made consistent",
+    ("clause 5: delete every DEAD row, counts made consistent",
      _m_delete_dead_rows, "manifest row id is missing from the rows array"),
     ("clause 5: invent a row id that is not in the manifest",
      _m_invent_row, "NOT in the committed manifest"),

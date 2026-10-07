@@ -77,8 +77,10 @@ WHAT CHANGED, and the artefact that decides each:
     contradict itself: T1 becomes "no expiry" with sdf moved out, and the two
     "most generous in this census" claims are removed.
 
-The counted total therefore moves from 22 to 20 (T1 7->5, T2 8->7, DEAD
-17->18). That is the point: three rows were counted that the taxonomy excludes.
+The counted total therefore moves from 22 to 20: T1 7->5, DEAD 17->18,
+UNVERIFIED 1->2, and T2 8->8 (sdf-free-shell and ctrl-c.club enter it while
+azure-appservice-f1 leaves it). Three rows were counted that the taxonomy
+excludes, and the counts are recomputed from the rows rather than edited.
 """
 import json
 import os
@@ -148,11 +150,13 @@ def apply(doc):
     sdf["verified_by"] = (
         "me, 2026-10-06, quotes read from the fetched bytes at "
         "verify/pages/sdf_members05.html and sdf_members01.html; "
-        "verify/claims.json holds both phrases. NOT RE-FETCHABLE FROM EVERY "
-        "HOST: sdf.org returns 502/504 through some egress proxies, so on those "
-        "hosts verify/claim.py reports both captures as absent. That is the "
-        "honest state - the quotes were read from the bytes when they were "
-        "fetched, and the bytes are not reproducible from here."
+        "verify/claims.json holds all three phrases. Re-verified 2026-10-07: "
+        "both pages fetched HTTP 200 (7860 and 2972 bytes, stable across three "
+        "runs) and both quotes are verbatim in the fetched bytes, so "
+        "verify/claim.py reports 68 hit / 0 miss with all 35 captures present. "
+        "An intermediate revision of this field claimed the bytes were 'not "
+        "re-fetchable from every host' on the strength of one 502/504 pair; that "
+        "was a transient upstream failure and the claim has been withdrawn."
     )
     sdf["caveats"] = (
         "A SHARED HOST, NOT A PRIVATE VM - tens of thousands of users share one "

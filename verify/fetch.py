@@ -102,15 +102,22 @@ urls = {
 }
 
 # Pages known to be unreachable from SOME hosts. Recorded so that "could not be
-# fetched from here" and "does not exist" stay different claims, and so a
-# future run can tell whether a failure is new. This is deliberately NOT an
-# exemption: a page listed here still has its capture deleted when a fetch fails,
-# and claim.py still reports it unverified. It only labels the failure in the
-# output so a reader does not have to rediscover which failures are expected.
-KNOWN_UNREACHABLE = {
-    "sdf_members01": "sdf.org does not resolve through some egress proxies (502/504 observed)",
-    "sdf_members05": "sdf.org does not resolve through some egress proxies (502/504 observed)",
-}
+# fetched from here" and "does not exist" stay different claims, and so a future
+# run can tell whether a failure is new. This is deliberately NOT an exemption: a
+# page listed here still has its capture deleted when a fetch fails, and
+# claim.py still reports it unverified. It only labels the failure in the output.
+#
+# sdf.org was in this dict between commits 4cfca5b and here, on the strength of a
+# 502/504 pair seen on 2026-10-07. That was a transient upstream failure, not a
+# property of any host: three consecutive fetches of both sdf pages minutes later
+# returned HTTP 200, and with the captures present verify/claim.py reports
+# 68 hit / 0 miss over all 68 phrases. The dict is now empty on purpose. A
+# temporary failure got written down as a standing limitation, which is how a
+# measured-once number turns into folklore that a later session inherits as
+# current - the failure mode this repo's own memory notes warn about. Leaving it
+# would have meant the two sdf rows stayed UNVERIFIABLE on every host that could
+# in fact verify them, and would have been reported as a host property forever.
+KNOWN_UNREACHABLE: dict[str, str] = {}
 
 
 def check():

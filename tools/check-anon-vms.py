@@ -44,7 +44,7 @@ MIN_SSH = 10
 MIN_ROWS = 20
 
 problems = []
-d = json.load(open(DATA))
+d = json.load(open(DATA, encoding="utf-8"))
 rows = d["rows"]
 
 if len(rows) < MIN_ROWS:

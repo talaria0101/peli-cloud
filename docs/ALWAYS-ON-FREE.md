@@ -185,24 +185,24 @@ Every row is counted exactly once, using the guard's own `provenance()` so these
 - **Vendor says (quote, RECONSTRUCTION - 18 fragments joined by `|`, not one contiguous quote):**
 > Type | Free account limit | Supporter account limit | Memory usage (RSS) | 128 MB | 256 MB | Number of open files | 128 | 128 | Number of processes | 100 | 100 | SSH sessions | 6 | 6 | Background processes | 2 | 5
   - _Fragments:_
-  - 1. `Type` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+17 more: this fragment is that common, so it is weak evidence on its own)
+  - 1. `Type` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+18 more: this fragment is that common, so it is weak evidence on its own)
   - 2. `Free account limit` -> `verify/pages/blinkenshell_limits.html`
   - 3. `Supporter account limit` -> `verify/pages/blinkenshell_limits.html`
   - 4. `Memory usage (RSS)` -> `verify/pages/blinkenshell_limits.html`
   - 5. `128 MB` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html`
   - 6. `256 MB` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/northflank_pricing.html`
   - 7. `Number of open files` -> `verify/pages/blinkenshell_limits.html`
-  - 8. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
-  - 9. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+3 more: this fragment is that common, so it is weak evidence on its own)
+  - 8. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+4 more: this fragment is that common, so it is weak evidence on its own)
+  - 9. `128` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/cf_workers_limits.html` (+4 more: this fragment is that common, so it is weak evidence on its own)
   - 10. `Number of processes` -> `verify/pages/blinkenshell_limits.html`
-  - 11. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+13 more: this fragment is that common, so it is weak evidence on its own)
-  - 12. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+13 more: this fragment is that common, so it is weak evidence on its own)
+  - 11. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+14 more: this fragment is that common, so it is weak evidence on its own)
+  - 12. `100` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html`, `verify/pages/cf_workers_limits.html` (+14 more: this fragment is that common, so it is weak evidence on its own)
   - 13. `SSH sessions` -> `verify/pages/blinkenshell_limits.html`
-  - 14. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
-  - 15. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
+  - 14. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+28 more: this fragment is that common, so it is weak evidence on its own)
+  - 15. `6` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+28 more: this fragment is that common, so it is weak evidence on its own)
   - 16. `Background processes` -> `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html`
-  - 17. `2` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
-  - 18. `5` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html` (+25 more: this fragment is that common, so it is weak evidence on its own)
+  - 17. `2` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_rules.html` (+29 more: this fragment is that common, so it is weak evidence on its own)
+  - 18. `5` -> `verify/pages/azure_appservice_linux.html`, `verify/pages/blinkenshell_limits.html`, `verify/pages/blinkenshell_wiki.html` (+27 more: this fragment is that common, so it is weak evidence on its own)
 - **Vendor says (quote2, VERBATIM):**
 > No IRC bots are allowed on free accounts. (Available on Supporter Account only) You are not allowed to run any server/daemon on free accounts. This includes bouncers. (Available on Supporter Account only)
 - **Verified:** me, 2026-10-06 - fetched https://blinkenshell.org/docs/resource-limits/ and https://blinkenshell.org/docs/rules/ directly (both 200, under verify/pages/ as blinkenshell_limits and blinkenshell_rules) and read the Free column of the limits table cell by cell. The Free/Supporter table IS on /docs/resource-limits/; an earlier revision attributed it to the wiki root, which carries no table at all.
@@ -434,7 +434,7 @@ python tools/check-always-on-free.py           # guard the census
 python tools/check-always-on-free.py --mutate  # prove the guard can fail (13/13)
 python tools/render-always-on-free.py          # rewrite this page from the JSON
 python tools/check-rendered-page.py            # the committed page matches this renderer
-python tools/check-rendered-page.py --mutate  # prove that gate can fail (13/13)
+python tools/check-rendered-page.py --mutate  # prove that gate can fail (12/12)
 python verify/fetch.py                         # re-fetch the vendor pages
 python verify/claim.py                        # every quote, against the bytes it came from
 python verify/fetch.py --check                # is every capture re-fetchable by name?

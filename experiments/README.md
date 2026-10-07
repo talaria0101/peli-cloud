@@ -26,6 +26,7 @@ three things ran first and can find them.
 | `61-period-model-guards.py` | can the period model's guards actually fail? | `70`, `80` |
 | `62-period-model-mutation.py` | do those guards catch the four defects that actually shipped? | `61` |
 | `96-always-on-corrections.py` | apply the 2026-10-06 corrections to the anonymous-VM census | none (edits `data/anonymous-vms.json` in place, idempotent) |
+| `97-always-on-review-corrections.py` | what did the review find that the first correction pass missed, and what does applying it do to the counted rows? | none (edits `data/always-on-free.json` in place, idempotent) |
 
 The always-on free-compute census lives beside this one rather than inside the
 priced catalogue, because it answers a different question ("what stays up at $0",
@@ -35,9 +36,36 @@ not "what is cheap") and is guarded separately:
 |---|---|---|
 | `tools/check-always-on-free.py` | does the always-on census meet its own standard - ten hits, a quote and a source per hit, and no row that claims a keepalive or a relay it does not name? | python3 |
 | `tools/check-always-on-free.py --mutate` | can that guard actually fail? | `96` not required |
+| `tools/check-always-on-free-extended.py` | is every quote in the census findable in a capture under `verify/pages/`, and do the tier definitions, the `verified_by` provenance and the row inventory hold? | python3, and `verify/pages/` populated by `verify/fetch.py` |
+| `tools/check-always-on-free-extended.py --mutate` | can that guard actually fail, and does it still accept a correct row? | `96` not required, but `verify/pages/` is |
 | `tools/render-always-on-free.py` | render `docs/ALWAYS-ON-FREE.md` from `data/always-on-free.json` | python3 |
+| `tools/check-rendered-page.py` | is `docs/ALWAYS-ON-FREE.md` still what the renderer would write, with every count re-derived from the data and every banner and quote attributed to a capture? | python3 (`verify/pages/` for two of its five clauses) |
+| `tools/check-rendered-page.py --mutate` | can that gate on the rendered page actually fail? | `96` not required; it refuses to run at all without `verify/pages/` |
 | `verify/probe.py` | dial the free-shell hosts and read their SSH banners from a host that can reach port 22 | network |
-| `verify/claim.py` | does every quote survive being re-fetched into `verify/pages/`? | python3 |
+| `verify/claim.py` | do the 68 phrases in `verify/claims.json` still appear in the captures `verify/fetch.py` already downloaded? | python3, and `verify/pages/` populated by `verify/fetch.py` |
+| `tools/check-all.py` | run every gate in this repo in one pass and print each one's own exit code, reporting the gates that cannot pass here instead of counting them as defects | python3 |
+
+`verify/claim.py` is a phrase lookup against a capture store, and it is much
+narrower than the row above can make it look. It reads the 68 phrases in
+`verify/claims.json` and finds each one in the HTML `verify/fetch.py` already
+downloaded; it fetches nothing itself, and on a host that cannot reach
+`sdf.org` it cannot check the three phrases on those two pages, so it exits 1
+there and the count that moves with the host is the number of captures that host
+has. Those 68 phrases were chosen by hand and are not generated from the
+census, so their coverage is uneven by construction: 21 of the 36 rows in
+`data/always-on-free.json` that carry a quote have a phrase drawn from their own
+quote, and 15 have none. Twelve of those 15 ship no capture at all, so nothing
+could have matched them. The other three, `neon-free`,
+`oracle-e2-micro-alwaysfree` and `render-postgres-free`, do have a capture that
+contains their quote and no phrase pointing at it.
+
+So a green `verify/claim.py` is a statement about 68 sentences somebody chose,
+not about the 36 quotes in the census. The quotes themselves are checked by
+`tools/check-always-on-free-extended.py`, which traces every quote it can to a
+capture and reports a row with no capture as UNVERIFIABLE rather than passing
+it. `verify/claim.py` is for a reader who has one sentence in hand and wants to
+know whether it is still on the vendor's page. It is not the gate on the
+census, and a green run must not be read as one.
 
 `poc/peli-cloud-query.py` queries the result. It does not re-price anything.
 

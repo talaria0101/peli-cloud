@@ -104,6 +104,16 @@ BANNER = re.compile(r"(?:SSH-2\.0-|OpenSSH_)[A-Za-z0-9_.:+@/=~^-]*")
 ATTRIB = re.compile(r"^\s*-\s+\d+\.\s+`(.+?)`\s+->\s+(.+)$", re.M)
 
 
+def self_mutations():
+    """This module's own MUTATIONS, read reflectively.
+
+    Counting `len(MUTATIONS)` inline would work and would also make the clause
+    tautological with the renderer, which imports this module and reads the same
+    list. Going through the name keeps one source of truth.
+    """
+    return MUTATIONS
+
+
 def load_module(path, name):
     spec = importlib.util.spec_from_file_location(name, path)
     mod = importlib.util.module_from_spec(spec)
@@ -181,6 +191,20 @@ def clause_counts(page, doc, guard, reach):
        "the numerator of the guard mutation count in Reproduce")
     at(MUT, 2, len(guard.MUTATIONS), "guard mutation count",
        "the denominator of the guard mutation count in Reproduce")
+
+    # This gate's OWN mutation count, anchored to its own command line.
+    #
+    # It used to be checked by nothing, and the page printed the census guard's
+    # 13 next to this gate's --mutate, which has 12 mutations. Measured: setting
+    # that line to 12/12, 99/99 or back to 13/13 all produced no failure. The
+    # anchor is the tool name, not a bare "(n/n)", so swapping the two counts
+    # between the two commands is caught too.
+    PAGE_MUT = r"check-rendered-page\.py --mutate\s+# prove that gate can fail \((\d+)/(\d+)\)"
+    own = len(self_mutations())
+    at(PAGE_MUT, 1, own, "page-gate mutation count",
+       "the numerator of this gate's own mutation count in Reproduce")
+    at(PAGE_MUT, 2, own, "page-gate mutation count",
+       "the denominator of this gate's own mutation count in Reproduce")
 
     if reach is None:
         fails.append("verify/reachability.json is missing; the reachability "

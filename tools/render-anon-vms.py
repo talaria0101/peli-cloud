@@ -24,7 +24,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data", "anonymous-vms.json")
 OUT = os.environ.get("ANON_VMS_OUT") or os.path.join(ROOT, "docs", "ANONYMOUS-VMS.md")
 
-d = json.load(open(DATA))
+d = json.load(open(DATA, encoding="utf-8"))
 rows = d["rows"]
 FREE = ("anonymous", "free-account", "free-tier-card")
 

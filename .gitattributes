@@ -1,0 +1,17 @@
+# Text files are LF in this repository, on every platform.
+#
+# Five files were committed with CRLF between 2026-10-06 and 2026-10-07 because
+# they were written from a Windows checkout. That is what turned a six-row
+# correction in data/anonymous-vms.json into a 988-line diff: every line changed
+# because its line ending did, and a diff that size is a diff nobody reads. It
+# will happen again to the next writer unless the boundary is mechanical.
+#
+# `text=auto` normalises on checkin; `eol=lf` pins what lands in the working
+# tree, so a Windows clone does not re-introduce the same problem locally.
+# `verify/pages/` is not listed: it is gitignored and holds third-party HTML
+# captured byte-for-byte, which must not be rewritten by a checkout.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.gz  binary

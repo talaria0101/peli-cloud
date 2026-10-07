@@ -18,7 +18,7 @@ each in their own table, and every row linking to the page its numbers came from
 | ten minutes | [docs/CATALOGUE.md](docs/CATALOGUE.md) in full |
 | to buy something | table C, then the duty cycle that matches your agent |
 | **a shell with no card and no account** | **[docs/ANONYMOUS-VMS.md](docs/ANONYMOUS-VMS.md)** |
-| **a machine that stays UP at $0, indefinitely** | **[docs/ALWAYS-ON-FREE.md](docs/ALWAYS-ON-FREE.md)** - 22 rows, tiered by which wall they have |
+| **a machine that stays UP at $0, indefinitely** | **[docs/ALWAYS-ON-FREE.md](docs/ALWAYS-ON-FREE.md)** - 20 counted rows, tiered by which wall they have |
 | **what that census could not settle** | **[docs/ALWAYS-ON-OPEN-QUESTIONS.md](docs/ALWAYS-ON-OPEN-QUESTIONS.md)** |
 | **to doubt the census** | **[research/deep-reviews-anon-vms.md](research/deep-reviews-anon-vms.md)** - five reviews; three of them removed rows |
 | **an SSH session into this sandbox from outside** | **[research/verification/ssh-relay-2026-10-02.md](research/verification/ssh-relay-2026-10-02.md)**, then `sh tools/ssh-relay-check.sh` |
@@ -213,14 +213,16 @@ process the next morning; a machine that never sleeps may carry a monthly quota
 that runs out on the twentieth. Neither fact shows up in a table of "free tiers".
 
 [`docs/ALWAYS-ON-FREE.md`](docs/ALWAYS-ON-FREE.md) prices neither, and holds
-neither: it records **22 rows across 21 providers whose machine stays up
-indefinitely at $0** (two of the rows are the same Oracle tenancy, so they are
-one provider and are not counted twice),
+neither: it records **20 counted rows across 19 independent providers whose
+machine stays up indefinitely at $0**, out of 40 rows in all (two of the counted
+rows are the same Oracle tenancy, so they are one provider and are not counted
+twice),
 tiered by the wall each one has.
 
 - **T1** runs as-is. **T2** sleeps but a named keepalive beats it. **T3** runs
   fine but needs a named relay to be reached at all. **DEAD** is a quota or a
-  trial clock, and no relay fixes it.
+  trial clock, and no relay fixes it. That is **T1=5, T2=8, T3=7, DEAD=18**,
+  with the remaining 2 rows UNVERIFIED and counted nowhere.
 
 The distinction is load-bearing: a relay defeats a *liveness* wall and never a
 *quota* wall, so counting T2 and T3 as real hits is a claim about what a keepalive
@@ -229,8 +231,10 @@ keepalive and every T3 row names its relay, and the guard fails a row that
 claims one without naming it.
 
     python3 tools/check-always-on-free.py           # guard the census
-    python3 tools/check-always-on-free.py --mutate  # prove the guard can fail (11/11)
+    python3 tools/check-always-on-free.py --mutate  # prove the guard can fail (13/13)
+    python3 tools/check-always-on-free-extended.py  # is every quote in a capture? (14/14 mutations)
     python3 tools/render-always-on-free.py          # write docs/ALWAYS-ON-FREE.md
+    python3 tools/check-rendered-page.py            # the committed page is what the renderer writes
     python3 verify/probe.py                         # dial the hosts, read their SSH banners
     python3 verify/claim.py                         # every quote, against the bytes it came from
 
@@ -239,8 +243,10 @@ is:
 
 - **A banner is not a login, and it is not a free tier.** `verify/probe.py` dials
   the shared-shell hosts from a host that can reach port 22, which the sandbox
-  this repository was written in cannot - its egress proxy refuses 22. Eight
-  hosts answered with a version string. That proves they are up; it says nothing
+  this repository was written in cannot - its egress proxy refuses 22. **Nine of
+  the fourteen endpoints dialled answered with a version string**, which is eight
+  distinct operators: `sdf.org` and `freeshell.org` are the same host under two
+  names. That proves they are up; it says nothing
   about whether an account exists or whether signup is open.
 - **Silence is not a promise.** Several hosts are tiered on the *absence* of a
   published idle policy. They are labelled as such rather than as though the
@@ -262,6 +268,8 @@ what it did not settle, with the route that closes each gap.
     docs/ALWAYS-ON-FREE.md     always-on free compute, tiered by which wall it has
     docs/FINDINGS.md           the write-up, opening with what it did not establish
     tools/                     the guards and renderers for both censuses, and the relay SSH check
+      check-always-on-free-extended.py   traces every counted quote back into a capture under verify/pages/
+      check-rendered-page.py             the gate on docs/ALWAYS-ON-FREE.md itself: the committed bytes, every count, every banner
     tests/                     the relay SSH regressions, 11 clauses, each with a control
     verify/                    first-party page captures, the reachability probe, and the quote re-check
     research/verification/     first-party notes behind the numbers

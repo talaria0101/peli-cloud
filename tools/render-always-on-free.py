@@ -23,6 +23,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "always-on-free.json"
 OUT = ROOT / "docs" / "ALWAYS-ON-FREE.md"
 GUARD = ROOT / "tools" / "check-always-on-free.py"
+PAGE_GATE = ROOT / "tools" / "check-rendered-page.py"
 PAGES = ROOT / "verify" / "pages"
 REACH = ROOT / "verify" / "reachability.json"
 
@@ -61,6 +62,20 @@ def _load_guard():
     11 mutations, which is the exact drift this file's docstring warns about.
     """
     spec = importlib.util.spec_from_file_location("always_on_guard", GUARD)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _load_page_gate():
+    """Import tools/check-rendered-page.py to read ITS mutation count.
+
+    Loading it here is safe even though it loads this renderer in turn:
+    importlib builds a fresh module object each time rather than consulting
+    sys.modules, so the pair cannot deadlock each other. Verified by running the
+    renderer, which needs this count to print it.
+    """
+    spec = importlib.util.spec_from_file_location("always_on_page_gate", PAGE_GATE)
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
@@ -321,6 +336,13 @@ def render():
     guard = _load_guard()
     _provenance = guard.provenance
     n_mutations = len(guard.MUTATIONS)
+    # The page names TWO mutation suites and their counts are different: the
+    # census guard's, and the rendered-page gate's. A single variable was used
+    # for both, so the page printed the census guard's count next to the page
+    # gate's command - 13/13 against a suite that has 12 mutations. The count is
+    # read from the tool it describes, which is the whole point of importing the
+    # guards rather than typing a number.
+    n_page_mutations = len(_load_page_gate().MUTATIONS)
     lb = doc["launch_base"]
     generated = doc["generated"]
     repo_label = lb["repo"].rstrip("/").removeprefix("https://github.com/")
@@ -519,7 +541,7 @@ def render():
     emit(f"python tools/check-always-on-free.py --mutate  # prove the guard can fail ({n_mutations}/{n_mutations})")
     emit("python tools/render-always-on-free.py          # rewrite this page from the JSON")
     emit("python tools/check-rendered-page.py            # the committed page matches this renderer")
-    emit(f"python tools/check-rendered-page.py --mutate  # prove that gate can fail ({n_mutations}/{n_mutations})")
+    emit(f"python tools/check-rendered-page.py --mutate  # prove that gate can fail ({n_page_mutations}/{n_page_mutations})")
     emit("python verify/fetch.py                         # re-fetch the vendor pages")
     emit("python verify/claim.py                        # every quote, against the bytes it came from")
     emit("python verify/fetch.py --check                # is every capture re-fetchable by name?")
