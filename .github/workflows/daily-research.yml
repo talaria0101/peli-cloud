@@ -1,0 +1,132 @@
+name: daily-research
+
+# Every day at 00:00 UTC, and on demand from the Actions tab. GitHub may start a
+# scheduled run several minutes late; the research window is computed from the
+# moment the job starts, not from midnight.
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-research
+  cancel-in-progress: false
+
+env:
+  KAGE_VERSION: "0.5.1"
+  OC_FREE_MODEL: oc-free-auto
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out
+        uses: actions/checkout@v7
+        with:
+          # The agent step runs a model with a shell. Keep the push token out
+          # of .git/config so that step cannot read it. The push step below
+          # supplies the token itself.
+          persist-credentials: false
+
+      - name: Require the inference key
+        env:
+          OC_FREE_API_KEY: ${{ secrets.OC_FREE_API_KEY }}
+        run: |
+          if [ -z "$OC_FREE_API_KEY" ]; then
+            echo "::error::Repository secret OC_FREE_API_KEY is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Install kage
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          archive=kage-x86_64-linux.tar.xz
+          curl -fsSLO "https://github.com/QaidVoid/kage/releases/download/v${KAGE_VERSION}/${archive}"
+          gh attestation verify "$archive" -R QaidVoid/kage
+          tar -xJf "$archive" --no-same-owner
+          mkdir -p "$HOME/.local/bin"
+          install -m 755 kage-x86_64-linux/kage "$HOME/.local/bin/kage"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+          "$HOME/.local/bin/kage" --version
+
+      - name: Install Deep-Research skills
+        run: .github/research/install-deep-research.sh
+
+      - name: Configure kage for the inference gateway
+        env:
+          OC_FREE_API_KEY: ${{ secrets.OC_FREE_API_KEY }}
+        run: |
+          python3 .github/research/write-kage-config.py
+          kage doctor
+
+      - name: Run the research prompt
+        env:
+          OC_FREE_API_KEY: ${{ secrets.OC_FREE_API_KEY }}
+        run: |
+          set -uo pipefail
+          date_utc="$(date -u +%F)"
+          since_utc="$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%MZ)"
+          sed -e "s/{{DATE}}/${date_utc}/g" -e "s/{{SINCE}}/${since_utc}/g" \
+            .github/research/prompt.md > "$RUNNER_TEMP/prompt.md"
+          echo "DATE_UTC=${date_utc}" >> "$GITHUB_ENV"
+          mkdir -p .research-work
+          kage -p "$(cat "$RUNNER_TEMP/prompt.md")" -m ocfree/${OC_FREE_MODEL} \
+            > "$RUNNER_TEMP/kage.log" 2>&1
+          rc=$?
+          tail -n 120 "$RUNNER_TEMP/kage.log"
+          echo "kage exit code: $rc"
+          exit "$rc"
+
+      - name: Check the report
+        run: |
+          set -euo pipefail
+          report="research/daily/${DATE_UTC}.md"
+          test -s "$report" || { echo "::error::$report was not written"; exit 1; }
+          head -n 1 "$report" | grep -qx "# Daily research ${DATE_UTC}" \
+            || { echo "::error::$report does not start with its title line"; exit 1; }
+          if grep -q $'\r' "$report"; then echo "::error::$report has CR characters"; exit 1; fi
+          if LC_ALL=C grep -qP '[^\x00-\x7F]' "$report"; then echo "::error::$report has non-ASCII characters"; exit 1; fi
+          # The agent may only have touched the report and the scratch directory.
+          unexpected="$(git status --porcelain --untracked-files=all | grep -v -e ' research/daily/' -e ' \.research-work/' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "::error::files changed outside research/daily/:"
+            echo "$unexpected"
+            exit 1
+          fi
+
+      - name: Commit and push the report
+        env:
+          GH_PUSH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/daily
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "Daily research ${DATE_UTC}"
+          auth="$(printf 'x-access-token:%s' "$GH_PUSH_TOKEN" | base64 -w0)"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic ${auth}" \
+            pull --rebase origin "${GITHUB_REF_NAME}"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic ${auth}" \
+            push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Keep the transcript
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: research-run-${{ github.run_id }}
+          path: |
+            .research-work/
+            ~/.local/share/kage/sessions/
+          if-no-files-found: ignore
+          retention-days: 14

@@ -32,3 +32,7 @@ references/battleships/
 # in the tree would make every vendor page edit look like a change to this
 # repository, and would put ~3 MB of other people's markup in a 0BSD tree.
 verify/pages/
+
+# The daily research job's scratch directory (outline, fields and per-item JSON).
+# Only research/daily/<date>.md is committed.
+.research-work/
